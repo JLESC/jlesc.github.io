@@ -1,0 +1,25 @@
+---
+layout: page
+title: Software
+date: 2014-06-11 14:37
+navbar: Research
+subnavbar: Software
+---
+
+<div id="group-index" class="card-columns">
+  {% for software in site.software | order: 'title' %}
+    <section class="card">
+      <div class="card-header">
+        <a href="{{ site.baseurl }}{{ software.url }}">{{ software.title }}</a>
+      </div>
+      {% if software.logo %}
+        <img class="img-fluid p-a-1" src="{{ site.baseurl }}/images/{{ software.logo }}" alt="{{ software.title }} Logo">
+      {% endif %}
+      <div class="card-block">
+        {% if software.short_desc %}{{ software.short_desc }}{% endif %}
+      </div>
+    </section>
+  {% endfor %}
+</div>
+
+{% include contribute_footer.html content='group' %}

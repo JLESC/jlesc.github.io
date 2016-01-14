@@ -1,0 +1,87 @@
+<section class="event-meta card">
+  <div class="card-header">Workshop Profile</div>
+  {% if page.logo %}
+  <img class="img-fluid p-a-1" src="{{ site.baseurl }}/images/{{ page.logo }}" alt="{{ page.title }} Logo" />
+  {% endif %}
+  <ul class="list-group list-group-flush">
+    {% if page.event_url %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Homepage</label>
+        <div class="col-sm-8">
+          <a href="{{ page.event_url }}">{% if page.event_short_url %}{{ page.event_short_url }}{% else %}{{ page.event_url | trim_url }}{% endif %}</a>
+        </div>
+      </li>
+    {% endif %}
+    {% if page.event_start and page.event_start == page.event_end %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Date</label>
+        <div class="col-sm-8">
+          {{ page.event_start | date_to_string }}
+        </div>
+      </li>
+    {% else %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Start Date</label>
+        <div class="col-sm-8">
+          {% if page.event_start %}{{ page.event_start | date_to_string }}{% else %}tba{% endif %}
+        </div>
+      </li>
+      <li class="list-group-item row">
+        <label class="col-sm-4">End Date</label>
+        <div class="col-sm-8">
+          {% if page.event_end %}{{ page.event_end | date_to_string }}{% else %}tba{% endif %}
+        </div>
+      </li>
+    {% endif %}
+    <li class="list-group-item row">
+      <label class="col-sm-4">Location</label>
+      <div class="col-sm-8">
+        {% if page.event_location %}{{ page.event_location }}{% else %}tba{% endif %}
+      </div>
+    </li>
+    {% if page.organizers %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Organizers</label>
+        <div class="col-sm-8">
+          {% for organizer in page.organizers %}
+            <span class="clearfix">
+              {{ organizer.name }}
+              {% if organizer.email or organizer.homepage %}
+                <span class="pull-right">
+                  {% if organizer.email %}
+                    <a href="mailto:{{ organizer.email }}" title="email: {{ organizer.email }}"><i class="fa fa-envelope-o fa-fw"></i></a>
+                  {% endif %}
+                  {% if organizer.homepage %}
+                    <a href="{{ organizer.homepage }}"><i class="fa fa-home fa-fw"></i></a>
+                  {% endif %}
+                </span>
+              {% endif %}
+            </span>
+          {% endfor %}
+        </div>
+      </li>
+    {% endif %}
+    {% if page.invited %}
+    <li class="list-group-item row">
+      <label class="col-sm-4">Invited</label>
+      <div class="col-sm-8">
+        {% for invited in page.invited %}
+            <span class="clearfix">
+              {{ invited.name }}
+              {% if invited.email or invited.homepage %}
+                <span class="pull-right">
+                  {% if invited.email %}
+                    <a href="mailto:{{ invited.email }}" title="email: {{ invited.email }}"><i class="fa fa-envelope-o fa-fw"></i></a>
+                  {% endif %}
+                  {% if invited.homepage %}
+                    <a href="{{ invited.homepage }}"><i class="fa fa-home fa-fw"></i></a>
+                  {% endif %}
+                </span>
+              {% endif %}
+            </span>
+        {% endfor %}
+      </div>
+    </li>
+    {% endif %}
+  </ul>
+</section>

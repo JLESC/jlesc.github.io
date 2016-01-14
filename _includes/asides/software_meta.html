@@ -1,0 +1,96 @@
+<section class="group-meta card">
+  <div class="card-header">Code Profile</div>
+  {% if page.logo %}
+    <img class="img-fluid p-a-1" src="{{ root_url }}/images/{{ page.logo }}" alt="{{ page.title }} Logo" />
+  {% endif %}
+  <ul class="list-group list-group-flush">
+    {% if page.code_url %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Homepage</label>
+        <div class="col-sm-8">
+          {% assign print_url = page.code_url %}
+          {% assign on_github = false %}
+          {% if page.code_url contains 'github' %}
+            {% capture print_url %}{{ page.code_url | remove: 'github.com' }}{% endcapture %}
+            {% assign on_github = true %}
+          {% endif %}
+          <a href="{{ page.code_url }}">
+            {% if on_github %}
+              <i class="fa fa-github fa-fw"></i>{{ print_url | trim_url }}
+            {% else %}
+              {{ print_url | trim_url }}
+            {% endif %}
+          </a>
+        </div>
+      </li>
+    {% endif %}
+    {% if page.language %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Language</label>
+        <div class="col-sm-8">
+          {{ page.language }}
+        </div>
+      </li>
+    {% endif %}
+    {% if page.license %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">License</label>
+        <div class="col-sm-8">
+          {{ page.license }}
+        </div>
+      </li>
+    {% endif %}
+    {% if page.releases %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Releases</label>
+        <div class="col-sm-8">
+          {% for release in page.releases %}
+            <span class="clearfix">
+              {{ release.version }}
+              {% if release.date %}
+                <small>&ensp;(<time datetime="{{ release.date }}">{{ release.date }}</time>)</small>
+              {% endif %}
+              <span class="pull-right">
+                {% if release.link %}
+                  <a href="{{ release.link }}" title="Release Page"><i class="fa fa-link fa-fw"></i></a>
+                {% endif %}
+                {% if release.download %}
+                  <a href="{{ release.download }}" title="Download Sources as zip"><i class="fa fa-download fa-fw"></i></a>
+                {% endif %}
+              </span>
+            </span>
+          {% endfor %}
+        </div>
+      </li>
+    {% endif %}
+    {% if page.developers %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Developers</label>
+        <div class="col-sm-8">
+          {% for developer in page.developers %}
+            <span class="clearfix">
+              {% if developer.link %}
+                {{ developer.link.name }}
+              {% else %}
+                {{ developer.name }}
+              {% endif %}
+              {% if developer.email or developer.lead_developer or developer.link.url %}
+                <span class="pull-right">
+                  {% if developer.lead_developer %}
+                    <a href="#" title="Lead Developer"><i class="fa fa-graduation-cap fa-fw"></i></a>
+                  {% endif %}
+                  {% if developer.email %}
+                    <a href="mailto:{{ developer.email }}" title="email: {{ developer.email }}"><i class="fa fa-envelope-o fa-fw"></i></a>
+                  {% endif %}
+                  {% if developer.link.url %}
+                    <a href="{{ developer.link.url }}" title="{{ developer.link.name }}"><i class="fa fa-link fa-fw"></i></a>
+                  {% endif %}
+                </span>
+              {% endif %}
+            </span>
+          {% endfor %}
+        </div>
+      </li>
+    {% endif %}
+  </ul>
+</section>

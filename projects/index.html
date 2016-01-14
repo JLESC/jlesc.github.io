@@ -1,0 +1,26 @@
+---
+layout: page
+title: Projects
+date: 2014-06-11 14:37
+navbar: Research
+subnavbar: Projects
+---
+
+<div id="project-index" class="card-columns">
+  {% for project in site.projects | order: 'title' %}
+    {% capture page %}{{ project }}{% endcapture %}
+    <section class="card">
+      <div class="card-header">
+        <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+      </div>
+      {% if project.logo %}
+        <img class="img-fluid p-a-1" src="{{ site.baseurl }}/images/{{ project.logo }}" alt="{{ project.title }} Logo">
+      {% endif %}
+      <div class="card-block">
+        {% if project.short_desc %}{{ project.short_desc }}{% endif %}
+      </div>
+    </section>
+  {% endfor %}
+</div>
+
+{% include contribute_footer.html content='project' %}

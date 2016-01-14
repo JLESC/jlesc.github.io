@@ -1,0 +1,7 @@
+@function fa-font-path($path) {
+  @return font_path($path);
+}
+
+$fa-sass-asset-helper: true;
+
+@import 'font-awesome';

@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'),
+  local('Roboto-Regular'),
+  url(font_path('Roboto-Regular.woff2')) format('woff2'),
+  url(font_path('Roboto-Regular.ttf')) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'),
+  local('RobotoMono-Regular'),
+  url(font_path('RobotoMono-Regular.woff2')) format('woff2'),
+  url(font_path('RobotoMono-Regular.ttf')) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'),
+  local('RobotoSlab-Regular'),
+  url(font_path('RobotoSlab-Regular.woff2')) format('woff2'),
+  url(font_path('RobotoSlab-Regular.ttf')) format('truetype');
+}
+
+@import "themes/cosmo";
+@import 'bootstrap';
+@import 'fontawesome';
+
+
+html {
+  body {
+    margin-top: 3.4rem;
+    margin-bottom: 3.4rem;
+
+    noscript {
+      .card {
+        margin-bottom: 0;
+      }
+      .card-block {
+        padding: 0;
+      }
+    }
+
+    main > .container {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .jumbotron {
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    #news-index {
+      section {
+        footer {
+          padding: 0.25rem 1.25rem !important;
+
+          ul {
+            margin: 0rem !important;
+          }
+        }
+      }
+    }
+
+    img.logo {
+      @include center-block;
+      @include img-fluid();
+      max-height: 7.5rem;
+    }
+
+    #institutes img.logo {
+      @extend .p-a-1;
+    }
+
+    #recent-news.card {
+      .list-group {
+        label {
+          line-height: inherit !important;
+        }
+      }
+      .card-footer {
+        padding: 0.25rem 1.25rem;
+      }
+    }
+
+    .bibtex-entry-container {
+      .bibtex-ref-raw {
+        pre code {
+          color: $text-muted !important;
+        }
+      }
+      .bibtex-ref-abstract {
+        color: $text-muted !important;
+      }
+    }
+
+    .ref-label {
+      width: 100%;
+      display: block !important;
+      font-size: 85% !important;
+      text-overflow: clip;
+      overflow: hidden;
+    }
+
+    .post {
+      article {
+        aside {
+          ul li.list-group-item.row {
+            margin: 0 !important;
+            padding: 0.2rem 0 0.2rem 0;
+            border-bottom-width: 0;
+
+            label {
+              margin-bottom: 0 !important;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      footer {
+        .card-block {
+          padding: .25rem;
+        }
+      }
+    }
+
+    #group-index, #project-index {
+      section.card {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    footer#site-footer {
+      color: $text-muted;
+
+      .navbar-nav {
+        .nav-link + .nav-link {
+          margin: 0 !important;
+        }
+      }
+
+      a.nav-link {
+        display: inline;
+        color: $text-muted;
+      }
+
+      a.nav-link:hover {
+        color: $link-hover-color !important;
+      }
+    }
+  }
+}

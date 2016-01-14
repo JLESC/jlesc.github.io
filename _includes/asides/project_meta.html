@@ -1,0 +1,46 @@
+<section class="group-meta card">
+  <div class="card-header">Project Profile</div>
+  {% if page.logo %}
+    <img class="img-fluid p-a-1" src="{{ site.baseurl }}/images/{{ page.logo }}" alt="{{ page.title }} Logo" />
+  {% endif %}
+  <ul class="list-group list-group-flush">
+    {% if page.project_url %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Homepage</label>
+        <div class="col-sm-8">
+          <a href="{{ page.project_url }}">{{ page.project_url | trim_url }}</a>
+        </div>
+      </li>
+    {% endif %}
+    {% if page.project_address %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Address</label>
+        <div class="col-sm-8">
+          <address>{{ page.project_address }}</address>
+        </div>
+      </li>
+    {% endif %}
+    {% if page.members %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          {% for member in page.members %}
+            <span class="clearfix">
+              {{ member.name }}
+              {% if member.email or member.corresponding %}
+                <span class="pull-right">
+                  {% if member.corresponding %}
+                    <a href="#" title="Group Head"><i class="fa fa-graduation-cap fa-fw"></i></a>
+                  {% endif %}
+                  {% if member.email %}
+                    <a href="mailto:{{ member.email }}" title="email: {{ member.email }}"><i class="fa fa-envelope-o fa-fw"></i></a>
+                  {% endif %}
+                </span>
+              {% endif %}
+            </span>
+          {% endfor %}
+        </div>
+      </li>
+    {% endif %}
+  </ul>
+</section>

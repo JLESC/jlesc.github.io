@@ -1,0 +1,41 @@
+<header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="{{ site.baseurl }}/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            {% include navs/about.html %}
+            {% include navs/news.html %}
+            <li class="nav-item">
+              <a class="nav-link{% if page.navbar == 'Events' %} active{% endif %}" href="{{ site.baseurl }}/events/index.html">Events</a>
+            </li>
+            {% include navs/research.html %}
+            <li class="nav-item">
+              <a class="nav-link{% if page.navbar == 'Education' %} active{% endif %}" href="{{ site.baseurl }}/education/index.html">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if page.navbar == 'References' %} active{% endif %}" href="{{ site.baseurl }}/references/index.html">References</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
