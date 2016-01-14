@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joint Laboratory on Extreme Scale Computing</title>
+    <description>The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+</description>
+    <link>https://jlesc.github.io/</link>
+    <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>
