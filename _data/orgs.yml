@@ -1,0 +1,27 @@
+# A 'database' of the organisations participating in JLESC.
+#
+#
+
+anl:
+  title: Argonne National Laboratory
+  logo: anl_logo.jpg
+
+bsc:
+  title: Barcelona Supercomputing Center
+  logo: bsc_logo.svg
+
+inria:
+  title: INRIA
+  logo: inria_logo.png
+
+jsc:
+  title: Jülich Supercomputing Centre
+  logo: jsc_logo.svg
+
+ncsa:
+  title: NCSA
+  logo: ncsa_vertical_logo.png
+
+riken:
+  title: RIKEN
+  logo: riken_logo.png

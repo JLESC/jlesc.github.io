@@ -1,0 +1,66 @@
+# A 'database' of people participating in the JLESC cooperation
+#
+# Each entry consists of a unique identifier and some fields:
+#
+#     identifier:
+#       sur_name: Doe
+#       given_name: John
+#       affiliation: affiliation_id
+#       email: official email
+#       homepage: link to homepage
+#
+# The identifier should be constructed from the surname and the initial letter of the first name,
+# all lower case and separated by an underscore.
+#
+# The affiliation must be an affiliation identifier as found in /_data/orgs.yml.
+#
+# The email should be the official 'work' email of the person, e.g. @fz-juelich.de.
+#
+# The homepage field can be left empty, but should point to a personal page with more details on
+# research interests, publications and contact data.
+#
+# !! NOTE !!
+# Please keep the entries below in alphanumerical order according to the identifier. Thanks!
+#
+
+cappello_f:
+  sur_name: Cappello
+  given_name: Franck
+  affiliation: anl
+  email: cappello@anl.gov
+  homepage:
+
+kramer_b:
+  sur_name: Kramer
+  given_name: Bill
+  affiliation: ncsa
+  email:
+  homepage:
+
+labarta_j:
+  sur_name: Labarta
+  given_name: Jesus
+  affiliation: bsc
+  email:
+  homepage:
+
+sato_m:
+  sur_name: Sato
+  given_name: Mitsuhisa
+  affiliation: riken
+  email:
+  homepage:
+
+speck_r:
+  sur_name: Speck
+  given_name: Robert
+  affiliation: jsc
+  email: r.speck@fz-juelich.de
+  homepage: http://www.fz-juelich.de/ias/jsc/speck_r
+
+yves_r:
+  sur_name: Yves
+  given_name: Robert
+  affiliation: inria
+  email:
+  homepage:
