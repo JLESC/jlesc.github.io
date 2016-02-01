@@ -59,8 +59,8 @@ speck_r:
   homepage: http://www.fz-juelich.de/ias/jsc/speck_r
 
 yves_r:
-  sur_name: Yves
-  given_name: Robert
+  sur_name: Robert
+  given_name: Yves
   affiliation: inria
   email:
   homepage:
