@@ -45,6 +45,11 @@ html {
       }
     }
 
+    .email-obfuscated {
+      unicode-bidi:bidi-override;
+      direction: rtl;
+    }
+
     main > .container {
       padding-top: 2rem;
       padding-bottom: 2rem;
