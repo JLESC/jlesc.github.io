@@ -1,5 +1,4 @@
 require 'jekyll/scholar'
-require 'uri'
 
 module Jekyll
   module TrimIEEECitation
@@ -9,12 +8,16 @@ module Jekyll
   end
 end
 
+require 'uri'
+
 # monkey patching filter to produce straight HTML link tags instead of markdown links
 module Jekyll
   class Scholar
     class Markdown < BibTeX::Filter
       def apply(value)
-        value.to_s.gsub(URI.regexp(['http','https','ftp'])) { |c| "<a href=\"#{$&}\">#{$&}</a>" }
+        value.to_s.gsub(URI.regexp(['http','https','ftp'])) do |c|
+          "<a href=\"#{$&}\" target=\"_blank\">#{$&}</a>"
+        end
       end
     end
   end
