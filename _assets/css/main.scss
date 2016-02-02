@@ -45,6 +45,33 @@ html {
       }
     }
 
+    #people-db {
+      .col-name {
+        min-width: 10rem;
+        max-width: 15rem;
+      }
+      .col-affiliation {
+
+      }
+      .col-position {
+        max-width: 10rem;
+      }
+      .col-topics {
+        max-width: 25rem;
+      }
+
+      .btn-group {
+        a {
+          padding: 0rem 0.2rem;
+        }
+      }
+    }
+
+    .email-obfuscated {
+      unicode-bidi:bidi-override;
+      direction: rtl;
+    }
+
     main > .container {
       padding-top: 2rem;
       padding-bottom: 2rem;

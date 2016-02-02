@@ -18,6 +18,8 @@ gem 'jekyll-feed'
 gem 'jekyll-assets'
 gem 'jekyll-sitemap'
 gem 'jekyll-scholar'
+gem 'jekyll-git_metadata', github: 'torbjoernk/jekyll-git_metadata',
+                           tag: 'v0.0.4-torbjoernk'
 
 gem 'jgd'
 
