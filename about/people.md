@@ -6,42 +6,55 @@ navbar: About
 subnavbar: People
 ---
 
-<table id="people-db" class="table table-striped">
-<thead class="thead-default">
-  <tr>
-    <th>Name</th>
-    <th>Affiliation</th>
-    <th>Email</th>
-    <th>Homepage</th>
-  </tr>
-</thead>
-<tbody>
-{% for person_hash in site.data.people %}
-  {% assign person = person_hash[1] %}
-  <tr>
-    <td><strong>{{ person.sur_name }}</strong>, {{ person.given_name }}</td>
-    <td>{{ site.data.orgs[person.affiliation].title }}</td>
-    <td>
-      {% if person.email %}
-        {% assign email = person.email | obfuscate_email %}
-        <a target="_blank"
-           class="email-obfuscated"
-           title="write an email to {{ person.given_name }} {{ person.sur_name }}"
-           data-email="{{ email }}">
-          {{ email }}
-        </a>
-      {% endif %}
-    </td>
-    <td>
-      {% if person.homepage %}
-        <a href="{{ person.homepage }}"
-           target="_blank"
-           title="{{ person.homepage }}">
-          <i class="fa fa-home fa-fw"></i>
-        </a>
-      {% endif %}
-    </td>
-  </tr>
-{% endfor %}
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table id="people-db" class="table table-striped">
+    <thead class="thead-default">
+      <tr>
+        <th class="col-name">Name</th>
+        <th class="col-affiliation">Affiliation</th>
+        <th class="col-position">Position</th>
+        <th class="col-topics">Topics</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for person_hash in site.data.people %}
+      {% assign person = person_hash[1] %}
+      <tr>
+        <td class="col-name">
+          <strong>{{ person.sur_name }}</strong>, {{ person.given_name }}
+          <div class="btn-group btn-group-sm pull-right" role="group">
+            {% if person.email %}
+              {% assign email = person.email | obfuscate_email %}
+              <a target="_blank"
+                 class="btn btn-link btn-sm email-obfuscated"
+                 title="write an email to {{ person.given_name }} {{ person.sur_name }}"
+                 data-email="{{ email }}"
+                 role="button">
+                <i class="fa fa-envelope fa-fw"></i>
+              </a>
+            {% endif %}
+            {% if person.homepage %}
+              <a href="{{ person.homepage }}"
+                 target="_blank"
+                 title="{{ person.homepage }}"
+                 class="btn btn-link btn-sm"
+                 role="button">
+                <i class="fa fa-home fa-fw"></i>
+              </a>
+            {% endif %}
+          </div>
+        </td>
+        <td class="col-affiliation">
+          {% if person.affiliation %}
+            <abbr title="{{ site.data.orgs[person.affiliation].title }}" class="initialism">
+              {{ site.data.orgs[person.affiliation].abbr }}
+            </abbr>
+          {% endif %}
+        </td>
+        <td class="col-position">{{ person.position }}</td>
+        <td class="col-topics">{{ person.topics }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>

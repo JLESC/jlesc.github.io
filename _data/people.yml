@@ -6,6 +6,8 @@
 #       sur_name: Doe
 #       given_name: John
 #       affiliation: affiliation_id
+#       position: Head of Department
+#       topics: awesome research
 #       email: official email
 #       homepage: link to homepage
 #
@@ -27,6 +29,10 @@ cappello_f:
   sur_name: Cappello
   given_name: Franck
   affiliation: anl
+  position:
+  topics: >#
+    this is a really long text for demonstration puroses of line breaks and not really the
+    actual research interests of Franck Cappello
   email: cappello@anl.gov
   homepage:
 
@@ -34,6 +40,8 @@ kramer_b:
   sur_name: Kramer
   given_name: Bill
   affiliation: ncsa
+  position: he is probably a very important person
+  topics: his position text is also a demo for long text
   email:
   homepage:
 
@@ -41,6 +49,8 @@ labarta_j:
   sur_name: Labarta
   given_name: Jesus
   affiliation: bsc
+  position:
+  topics:
   email:
   homepage:
 
@@ -48,6 +58,8 @@ sato_m:
   sur_name: Sato
   given_name: Mitsuhisa
   affiliation: riken
+  position:
+  topics:
   email:
   homepage:
 
@@ -55,6 +67,8 @@ speck_r:
   sur_name: Speck
   given_name: Robert
   affiliation: jsc
+  position: Permanent Post Doc
+  topics: Parallel-in-Time Methods
   email: r.speck@fz-juelich.de
   homepage: http://www.fz-juelich.de/ias/jsc/speck_r
 
@@ -62,5 +76,7 @@ yves_r:
   sur_name: Robert
   given_name: Yves
   affiliation: inria
+  position:
+  topics:
   email:
   homepage:

@@ -47,5 +47,14 @@ $(document).ready(function() {
         });
     });
 
-    $('#people-db').DataTable();
+    $('#people-db').DataTable({
+        "columnDefs": [
+            { "orderable": false, "targets": 3 } // column 'Topics' should not be sortable
+        ],
+        "lengthMenu": [ [5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]],
+        "pageLength": 25,
+        "language": {
+            "lengthMenu": "Display _MENU_ people"
+        }
+    });
 });
