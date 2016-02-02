@@ -25,6 +25,7 @@ This website is build with the following open source tools and libraries:
   - [jekyll-paginate](https://github.com/jekyll/jekyll-paginate)
 * trimmed [Twitter Bootstrap v4-dev](https://v4-alpha.getbootstrap.com)
 * theme based on [*Cosmo* Bootswatch](https://bootswatch.com/cosmo/)
+* minimal adjusted [DataTables.js](https://datatables.net/) to work with _Bootstrap v4-dev_
 * custom fonts
   - [font-awesome](https://fortawesome.github.io/Font-Awesome/) for icons
   - [Roboto Font Family](https://github.com/google/roboto)
