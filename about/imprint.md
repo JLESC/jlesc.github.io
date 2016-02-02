@@ -6,9 +6,15 @@ updated: 2015-06-10 11:00:00 +0200
 ---
 
 Design and implementation by [Torbjörn Klatt](https://github.com/torbjoernk).
-Contributions by [various](https://github.com/JLESC/jlesc.github.io/blob/source/CONTRIBUTORS).
+Contributions made by the following list of awesome people:
 
-Based on the following tools and libraries:
+<ul>
+{% for author in site.git.authors %}
+  <li>{{ author.name }} ({{ author.commits }} commit{% if author.commits > 1 %}s{% endif %})</li>
+{% endfor %}
+</ul>
+
+This website is build with the following open source tools and libraries:
 
 * [Jekyll](https://jekyllrb.com/)
   with the following plugins
