@@ -27,6 +27,11 @@ ncsa:
   abbr: NCSA
   logo: ncsa_vertical_logo.png
 
+uiuc:
+  title: UIUC
+  abbr: UIUC
+  logo:
+
 riken:
   title: RIKEN
   abbr: RIKEN

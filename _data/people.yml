@@ -15,6 +15,8 @@
 # all lower case and separated by an underscore.
 #
 # The affiliation must be an affiliation identifier as found in /_data/orgs.yml.
+# Multiple affiliations can be given in list/array syntax:
+#    [first, second]
 #
 # The email should be the official 'work' email of the person, e.g. @fz-juelich.de.
 #
@@ -39,7 +41,7 @@ cappello_f:
 kramer_b:
   sur_name: Kramer
   given_name: Bill
-  affiliation: ncsa
+  affiliation: [uiuc, ncsa]
   position: he is probably a very important person
   topics: his position text is also a demo for long text
   email:

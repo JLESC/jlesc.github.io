@@ -45,11 +45,14 @@ subnavbar: People
           </div>
         </td>
         <td class="col-affiliation">
-          {% if person.affiliation %}
-            <abbr title="{{ site.data.orgs[person.affiliation].title }}" class="initialism">
-              {{ site.data.orgs[person.affiliation].abbr }}
+          {% for affi in person.affiliation %}
+            <abbr title="{{ site.data.orgs[affi].title }}" class="initialism">
+              {{ site.data.orgs[affi].abbr }}
             </abbr>
-          {% endif %}
+            {% unless forloop.last %}
+              ,
+            {% endunless %}
+          {% endfor %}
         </td>
         <td class="col-position">{{ person.position }}</td>
         <td class="col-topics">{{ person.topics }}</td>
