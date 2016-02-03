@@ -81,7 +81,7 @@ scholar:
   locale: en
 
   sort_by: year, authors
-  order: ascending
+  order: descending, ascending
 
   source: ./_bibliography
   bibliography: jlesc.bib
