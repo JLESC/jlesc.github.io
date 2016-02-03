@@ -6,6 +6,15 @@ navbar: About
 subnavbar: People
 ---
 
+<p class="lead">
+  This is a list of people participating in the JLESC program.
+  In case you are part of JLESC and not yet listed here, feel free to add yourself through a
+  <a href="https://github.com/JLESC/jlesc.github.io/wiki/Adding-Modifying-Content#people"
+     target="_blank">
+    pull request on GitHub
+  </a>.
+</p>
+
 <div class="table-responsive">
   <table id="people-db" class="table table-striped">
     <thead class="thead-default">
