@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/torbjoernk/jekyll-git_metadata.git
-  revision: 0988e7de41a7ccedf50dac62dea687fef5924974
-  tag: v0.0.4-torbjoernk
+  revision: 61f9b2c0bd2ddcabc9274f28d4aa781cb67b2f6f
+  tag: v0.0.5-torbjoernk
   specs:
-    jekyll-git_metadata (0.0.4.pre.torbjoernk)
+    jekyll-git_metadata (0.0.5.pre.torbjoernk)
       jekyll (~> 3.0)
 
 GEM
@@ -13,7 +13,7 @@ GEM
     autoprefixer-rails (6.3.1)
       execjs
       json
-    bibtex-ruby (4.1.2)
+    bibtex-ruby (4.2.0)
       latex-decode (~> 0.0)
     citeproc (1.0.2)
       namae (~> 0.8)
@@ -55,7 +55,7 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.4.0)
       sass (~> 3.4)
-    jekyll-scholar (5.6.0)
+    jekyll-scholar (5.7.0)
       bibtex-ruby (~> 4.0, >= 4.0.13)
       citeproc-ruby (~> 1.0)
       csl-styles (~> 1.0)
