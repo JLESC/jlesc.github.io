@@ -3,11 +3,11 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Projects</title>
+  <title>JLESC &mdash; Scalability Enhancements to FMM for Molecular Dynamics Simulations</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
-  <link rel="canonical" href="https://jlesc.github.io/projects/">
+  <link rel="canonical" href="https://jlesc.github.io/projects/fmm_project.html">
 
   <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
   <link type="text/css" rel="stylesheet" href="/assets/vendor/dataTables.bootstrap.min-6da4fa53df0356b9d0b5c6cafed7c2fb8ef6057acc724f677b0b30e578cb085c.css">
@@ -62,7 +62,7 @@
             <li class="nav-item dropdown active">
   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
   <div class="dropdown-menu">
-    <a href="/projects/index.html" class="dropdown-item active">Projects</a>
+    <a href="/projects/index.html" class="dropdown-item">Projects</a>
     <a href="/software/index.html" class="dropdown-item">Software</a>
     <a href="/research/visits.html" class="dropdown-item">Visits</a>
   </div>
@@ -83,37 +83,109 @@
 
     <main>
       <div class="container">
-        <div class="post">
+        <div class="post post-project">
   <header class="post-header">
-    <h1>Projects</h1>
+    <h1>Scalability Enhancements to FMM for Molecular Dynamics Simulations</h1>
     
   </header>
   <article class="post-content">
-  <div id="project-index" class="card-columns">
+    <div class="row">
+      <div class="col-lg-7 content">
+        <!---
+Questions/requests:
+
+* we need a naming convention for the project_template...
+
+* what is "update" and "subnavbar"?
+
+* why do we need a date? If it's just the date of creation/change, this should
+not be changed by the author of this page. also: how do I know what format the
+date is required?
+
+* we need meta-data here, in particular the particiants/members of the project
+
+* how do I link to the people in the directory when I write text? The same will
+be important for affiliations and references.
+
+* probably remove "short_desc" in favor of other data like members and/or
+affiliations
+ 
+-->
+
+<h3 id="participants">Participants</h3>
+
+<ul>
+  <li>Pavan Balaji (ANL)</li>
+  <li>Ivo Kabadshow (JSC)</li>
+  <li>David Haensel (JSC)</li>
+</ul>
+
+<h3 id="research-topic-and-goals">Research topic and goals</h3>
+<p>The goal of this joint-lab cooperation covers the topic of parallel programming. We are especially interested in increasing the scalability (strong scaling) of the Fast Multipole Method (FMM) for very large numbers of ranks. FMSolvr is a high-performance FMM library being developed by JSC. However, the current intrinsic parallel scaling limitations stem from process synchronization on large-scale systems. We will investigate weak and delayed synchronization models, tasking approaches and other techniques with MPI-3 and upcoming MPI-4 extensions to alleviate some of these performance bottlenecks.</p>
+
+<h3 id="results-for-20142015">Results for 2014/2015</h3>
+<p>The project was initiated at the JLESC meeting in November 2014. To provide a consistent interface for measuring and tuning parallel code performance some profound changes had to be made to the code. We started implementing an abstract parallelization layer for the FMSolvr library. This includes a threading approach for intra-node communication as well as a parallelization approach for inter-node communication via MPI. The adopted abstraction layer allows easier re- placement/improvement of different synchronization strategies within the code.</p>
+
+<p>Since this is a starting cooperation no project publications are available at the moment.</p>
+
+<h3 id="visits-and-meetings">Visits and meetings</h3>
+<p>Since this is a starting cooperation no visits have been initiated. The upcoming JLESC meeting at BSC will be used as a first project meeting.</p>
+
+<h3 id="impact-and-publications">Impact and publications</h3>
+<p>none yet.</p>
+
+<h3 id="person-month-efforts-in-20142015">Person-Month efforts in 2014/2015</h3>
+<p>Since December 2014:</p>
+
+<ul>
+  <li>Pavan Balaji (ANL): 0.1 PM</li>
+  <li>Ivo Kabadshow, (JSC): 0.1 PM</li>
+  <li>David Haensel, (JSC): 1 PM</li>
+</ul>
+
+<p>The efforts are likely to increase, once the code base includes a near-complete parallelization layer.</p>
+
+<h3 id="future-plans">Future plans</h3>
+<p>Next, we want to setup an automatic testing framework for the FMM. This allows us to investigate the scaling bottlenecks of the method without the need to provide a real-world MD dataset. The framework will generate the corresponding input data as well as the required FMM parameter on the fly. After this step is finished an extensive scaling analysis on different HPC platforms will be performed. The results of this analysis are the foundation of all subsequent tuning efforts.</p>
+
+<h3 id="references">References</h3>
+<p>none yet.</p>
+
+      </div>
+      <aside class="col-lg-5">
+        <section class="group-meta card">
+  <div class="card-header">Project Profile</div>
   
+  <ul class="list-group list-group-flush">
     
-    <section class="card">
-      <div class="card-header">
-        <a href="/projects/fmm_project.html">Scalability Enhancements to FMM for Molecular Dynamics Simulations</a>
-      </div>
-      
-      <div class="card-block">
-        
-      </div>
-    </section>
-  
-</div>
-
-
-
-<footer id="contribute-footer">
-  <p>
-    Want your project to show up here? <a href="https://github.com/JLESC/jlesc.github.io/wiki">You can do it yourself</a>!
-  </p>
-</footer>
-
-
+    
+    
+  </ul>
+</section>
+      </aside>
+    </div>
   </article>
+  
+    <footer>
+      
+
+
+
+
+  
+    <div class="card card-block">
+  
+      <i class="fa fa-folder-o"></i> <span class="hidden-sm-down">Created on </span><time datetime="2016-01-01T00:00:00+00:00">01 Jan 2016</time>
+  
+    </div>
+  
+
+
+
+  
+
+
+    </footer>
   
 </div>
       </div>
