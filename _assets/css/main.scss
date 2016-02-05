@@ -100,6 +100,14 @@ html {
       max-height: 7.5rem;
     }
 
+    .person.given-name {
+    }
+    .person.sur-name {
+      font-weight: bold;
+    }
+    .person-affiliation {
+    }
+
     .project-preparation-bg {
       background-color: lighten($brand-info, 15%);
     }

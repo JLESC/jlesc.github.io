@@ -115,11 +115,11 @@ Since December 2014:
 
 Put it in the following form, each person on its own line
 
-| PERSON | X.Y PM |
+| {% person PERSON_ID %} | X.Y PM |
 
 e.g.:
 
-| Ivo Kabadshow | 0.1 PM |
+| {% person kabadshow_i %} | 0.1 PM |
 
 Above the very first person put the following:
 
