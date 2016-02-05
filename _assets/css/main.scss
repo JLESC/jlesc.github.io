@@ -100,6 +100,44 @@ html {
       max-height: 7.5rem;
     }
 
+    .project-preparation-bg {
+      background-color: lighten($brand-info, 15%);
+    }
+    .project-preparation-text {
+      color: $brand-info;
+    }
+    .project-starting-bg {
+      background-color: lighten($brand-info, 15%);
+    }
+    .project-starting-text {
+      color: $brand-info;
+    }
+    .project-running-bg {
+      background-color: lighten($brand-success, 25%);
+    }
+    .project-running-text {
+      color: $brand-success;
+    }
+    .project-closing-bg {
+      background-color: lighten($brand-warning, 15%);
+    }
+    .project-closing-text {
+      color: $brand-warning;
+    }
+    .project-finished-bg {
+    }
+    .project-finished-text {
+    }
+
+    #project-index {
+      .card-block {
+        padding: 1rem;
+      }
+      .card-footer, .card-header {
+        padding: 0.25rem 1rem;
+      }
+    }
+
     #institutes img.logo {
       @extend .p-a-1;
     }

@@ -1,0 +1,34 @@
+architectures:
+  title: Advanced Architectures
+  desc: >#
+    Some text
+
+apps:
+  title: Apps & Mini-Apps
+  desc: >#
+    Some text
+
+storage:
+  title: I/O, Storage and In-Situ Processing
+  desc: >#
+    Some text
+
+numerics:
+  title: Numerical Methods
+  desc: >#
+    Some text
+
+resilience:
+  title: Resilience
+  desc: >#
+    Some text
+
+perf_tools:
+  title: Performance Tools
+  desc: >#
+    Some text
+
+prog_lang:
+  title: Programming Languages and Runtimes
+  desc: >#
+    Some text
