@@ -40,7 +40,7 @@ Based on a non-production version of MPI, namely MPICH3, this goal has been achi
 ## Visits and meetings
 Beyond regular contacts via email the following meetings involving most of the participants took place:
 
-* Meeting of A. Chien, N. Dun and D. Pleiter at SC14 on November 17, 2014.
+* Meeting of {% person chien_a %}, {% person dun_n %} and {% person pleiter_d %} at SC14 on November 17, 2014.
 * Technical update meeting on February 5, 2015.
 
 We plan for the following meetings:
@@ -64,10 +64,10 @@ The project just started and thus did not result in any publications, yet.
 The efforts of the participants so far are as follows:
 
 {:.table.table-bordered.table-hover.table-sm}
-| Andrew Chien (ANL)   | 0.1 PM |
-| Dirk Pleiter, (JSC)  | 0.1 PM |
-| Nan Dun, (ANL)       | 2 PM   |
-| Nicholas Vandenbergen | 0.5 PM |
+| {% person chien_a %}        | 0.1 PM |
+| {% person pleiter_d %}      | 0.1 PM |
+| {% person dun_n %}          | 2 PM   |
+| {% person vandenbergen_n %} | 0.5 PM |
 
 
 ## Future plans

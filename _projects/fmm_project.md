@@ -33,7 +33,6 @@ This includes a threading approach for intra-node communication as well as a par
 The adopted abstraction layer allows easier re- placement/improvement of different synchronization strategies within the code.
 
 Since this is a starting cooperation no project publications are available at the moment.
-{% cite GainaruEtAl2013 --file external/fmm_project.bib %}
 
 ## Visits and meetings
 Since this is a starting cooperation no visits have been initiated.
@@ -67,4 +66,3 @@ The results of this analysis are the foundation of all subsequent tuning efforts
 
 ## References
 {% bibliography --file external/fmm_project.bib %}
-
