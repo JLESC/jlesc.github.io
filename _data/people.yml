@@ -27,6 +27,15 @@
 # Please keep the entries below in alphanumerical order according to the identifier. Thanks!
 #
 
+balaji_p:
+  sur_name: Balaji
+  given_name: Pavan
+  affiliation: anl
+  position:
+  topics:
+  email:
+  homepage:
+
 cappello_f:
   sur_name: Cappello
   given_name: Franck
@@ -38,6 +47,11 @@ cappello_f:
   email: cappello@anl.gov
   homepage:
 
+kabadshow_i:
+  sur_name: Kabadshow
+  given_name: Ivo
+  affiliation: jsc
+
 kramer_b:
   sur_name: Kramer
   given_name: Bill
@@ -46,6 +60,11 @@ kramer_b:
   topics: his position text is also a demo for long text
   email:
   homepage:
+
+haensel_d:
+  sur_name: Haensel
+  given_name: David
+  affiliation: jsc
 
 labarta_j:
   sur_name: Labarta
