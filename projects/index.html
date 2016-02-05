@@ -6,21 +6,48 @@ navbar: Research
 subnavbar: Projects
 ---
 
-<div id="project-index" class="card-columns">
-  {% for project in site.projects | order: 'title' %}
-    {% capture page %}{{ project }}{% endcapture %}
-    <section class="card">
-      <div class="card-header">
-        <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
-      </div>
-      {% if project.logo %}
-        <img class="img-fluid p-a-1" src="{{ site.baseurl }}/images/{{ project.logo }}" alt="{{ project.title }} Logo">
-      {% endif %}
-      <div class="card-block">
-        {% if project.short_desc %}{{ project.short_desc }}{% endif %}
-      </div>
-    </section>
-  {% endfor %}
-</div>
+{% for topic_hash in site.data.topics %}
+  {% assign topic_id = topic_hash[0] %}
+  {% assign topic = topic_hash[1] %}
+  <h2>{{ topic.title }}</h2>
+  <p class="lead">{{ topic.desc }}</p>
+
+  <div id="project-index" class="card-columns">
+    {% for project in site.projects | order: 'title' %}
+      {% unless project.topics contains topic_id %}
+        {% continue %}
+      {% endunless %}
+      <section class="card text-xs-center">
+        <div class="card-block">
+          <h4 class="card-title">
+            <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+          </h4>
+          <ul class="card-text list-inline members">
+          {% if project.head %}
+          {% assign head = site.data.people[project.head] %}
+            <li class="list-inline-item">
+              {{ head.given_name }}
+              {{ head.sur_name }}
+              ({{ site.data.orgs[head.affiliation].abbr }}){% if project.members %},{% endif %}
+            </li>
+          {% endif %}
+          {% for member_id in project.members %}
+            {% assign member = site.data.people[member_id] %}
+            <li class="list-inline-item">
+              {{ member.given_name }}
+              {{ member.sur_name }}
+              ({{ site.data.orgs[member.affiliation].abbr }}){% unless forloop.last %},{% endunless %}
+            </li>
+          {% endfor %}
+          </ul>
+        </div>
+        <div class="card-footer project-{{ project.status }}-bg">
+          Status: {{ site.data.project_stati[project.status].title }}
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+  {% unless forloop.last %}<hr>{% endunless %}
+{% endfor %}
 
 {% include contribute_footer.html content='project' %}

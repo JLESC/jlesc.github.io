@@ -19,8 +19,10 @@ layout: default
     </div>
   </article>
   {% if page.footer %}
-    <footer>
-      {% include post/date.html %}
+    <footer class="card-deck-wrapper text-muted small">
+      <div class="card-deck">
+        {% include post/date.html %}
+      </div>
     </footer>
   {% endif %}
 </div>

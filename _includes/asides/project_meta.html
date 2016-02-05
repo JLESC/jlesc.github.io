@@ -4,6 +4,27 @@
     <img class="img-fluid p-a-1" src="{{ site.baseurl }}/images/{{ page.logo }}" alt="{{ page.title }} Logo" />
   {% endif %}
   <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        {% for topic_id in page.topics %}
+          {% assign topic = site.data.topics[topic_id] %}
+          <span class="clearfix">
+            {{ topic.title }}
+          </span>
+        {% endfor %}
+      </div>
+    </li>
+    {% if page.keywords %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          {% for kw in page.keywords %}
+            <span class="clearfix">{{ kw }}</span>
+          {% endfor %}
+        </div>
+      </li>
+    {% endif %}
     {% if page.project_url %}
       <li class="list-group-item row">
         <label class="col-sm-4">Homepage</label>
@@ -12,35 +33,35 @@
         </div>
       </li>
     {% endif %}
-    {% if page.project_address %}
-      <li class="list-group-item row">
-        <label class="col-sm-4">Address</label>
-        <div class="col-sm-8">
-          <address>{{ page.project_address }}</address>
-        </div>
-      </li>
-    {% endif %}
     {% if page.members %}
       <li class="list-group-item row">
         <label class="col-sm-4">Members</label>
         <div class="col-sm-8">
-          {% for member in page.members %}
+          {% if page.head %}
+            {% assign head = site.data.people[page.head] %}
             <span class="clearfix">
-              {{ member.name }}
-              {% if member.email or member.corresponding %}
-                <span class="pull-right">
-                  {% if member.corresponding %}
-                    <a href="#" title="Group Head"><i class="fa fa-graduation-cap fa-fw"></i></a>
-                  {% endif %}
-                  {% if member.email %}
-                    <a href="mailto:{{ member.email }}" title="email: {{ member.email }}"><i class="fa fa-envelope-o fa-fw"></i></a>
-                  {% endif %}
-                </span>
-              {% endif %}
+              {{ head.given_name }} <strong>{{ head.sur_name }}</strong>{% if head.affiliation %} (<em>{{ site.data.orgs[head.affiliation].abbr }}</em>){% endif %}
+              <span class="pull-right">
+                <a title="Project Head"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          {% endif %}
+          {% for member_id in page.members %}
+            {% assign member = site.data.people[member_id] %}
+            <span class="clearfix">
+              {{ member.given_name }} <strong>{{ member.sur_name }}</strong>{% if member.affiliation %} (<em>{{ site.data.orgs[member.affiliation].abbr }}</em>){% endif %}
             </span>
           {% endfor %}
         </div>
       </li>
+    {% endif %}
+    {% if page.status %}
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8 project-{{ page.status }}-text">
+        {{ site.data.project_stati[page.status].title }}
+      </div>
+    </li>
     {% endif %}
   </ul>
 </section>
