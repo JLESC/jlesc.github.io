@@ -54,6 +54,11 @@ assets:
     - '*.jpg'
     - '*.jpeg'
     - '*.svg'
+    - '*.otf'
+    - '*.eot'
+    - '*.ttf'
+    - '*.woff'
+    - '*.woff2'
   digest: true
   features:
     liquid: false
