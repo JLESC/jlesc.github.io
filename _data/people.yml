@@ -40,24 +40,43 @@ cappello_f:
   sur_name: Cappello
   given_name: Franck
   affiliation: anl
-  position:
+  position: permanent
   topics: >#
     this is a really long text for demonstration puroses of line breaks and not really the
     actual research interests of Franck Cappello
   email: cappello@anl.gov
   homepage:
 
+chien_a:
+  sur_name: Chien
+  given_name: Andrew A.
+  affiliation: anl
+  position: permanent
+  topics:  Applications, system software, networking, and architecture
+  email: achien@cs.uchicago.edu
+  homepage: https://www.cs.uchicago.edu/directory/andrew-chien
+
+dun_n:
+  sur_name: Dun
+  given_name: Nan
+  affiliation: anl
+  email:
+  homepage:
+
 kabadshow_i:
   sur_name: Kabadshow
   given_name: Ivo
   affiliation: jsc
+  position: permanent
+  email: i.kabadshow@fz-juelich.de
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/kabadshow_i.html
 
 kramer_b:
   sur_name: Kramer
   given_name: Bill
   affiliation: [uiuc, ncsa]
-  position: he is probably a very important person
-  topics: his position text is also a demo for long text
+  position: permanent
+  topics:
   email:
   homepage:
 
@@ -65,21 +84,30 @@ haensel_d:
   sur_name: Haensel
   given_name: David
   affiliation: jsc
+  position: PhD student
 
 labarta_j:
   sur_name: Labarta
   given_name: Jesus
   affiliation: bsc
-  position:
+  position: permanent
   topics:
   email:
   homepage:
+
+pleiter_d:
+  sur_name: Pleiter
+  given_name: Dirk
+  affiliation: jsc
+  position: permanent
+  email: d.pleiter@fz-juelich.de
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/pleiter_d.html
 
 sato_m:
   sur_name: Sato
   given_name: Mitsuhisa
   affiliation: riken
-  position:
+  position: permanent
   topics:
   email:
   homepage:
@@ -88,16 +116,24 @@ speck_r:
   sur_name: Speck
   given_name: Robert
   affiliation: jsc
-  position: Permanent Post Doc
-  topics: Parallel-in-Time Methods
+  position: permanent
+  topics: Numerical methods, parallel-in-time integration
   email: r.speck@fz-juelich.de
   homepage: http://www.fz-juelich.de/ias/jsc/speck_r
+
+vandenbergen_n:
+  sur_name: Vandenbergen
+  given_name: Nicholas
+  affiliation: jsc
+  position: PhD student
+  email: n.vandenbergen@fz-juelich.de
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/vandenbergen_n.html
 
 yves_r:
   sur_name: Robert
   given_name: Yves
   affiliation: inria
-  position:
+  position: permanent
   topics:
   email:
   homepage:
