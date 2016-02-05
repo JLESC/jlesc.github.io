@@ -52,9 +52,9 @@ none yet.
 Since December 2014:
 
 {:.table.table-bordered.table-hover.table-sm}
-| Pavan Balaji (ANL)   | 0.1 PM |
-| Ivo Kabadshow, (JSC) | 0.1 PM |
-| David Haensel, (JSC) | 1 PM   |
+| {% person balaji_p %} | 0.1 PM |
+| {% person kabadshow_i %} | 0.1 PM |
+| {% person haensel_d %} | 1 PM   |
 
 The efforts are likely to increase, once the code base includes a near-complete parallelization layer.
 

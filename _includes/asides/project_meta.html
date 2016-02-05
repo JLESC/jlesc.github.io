@@ -38,18 +38,16 @@
         <label class="col-sm-4">Members</label>
         <div class="col-sm-8">
           {% if page.head %}
-            {% assign head = site.data.people[page.head] %}
             <span class="clearfix">
-              {{ head.given_name }} <strong>{{ head.sur_name }}</strong>{% if head.affiliation %} (<em>{{ site.data.orgs[head.affiliation].abbr }}</em>){% endif %}
+              {% person {{ page.head }} %}
               <span class="pull-right">
                 <a title="Project Head"><i class="fa fa-graduation-cap fa-fw"></i></a>
               </span>
             </span>
           {% endif %}
           {% for member_id in page.members %}
-            {% assign member = site.data.people[member_id] %}
             <span class="clearfix">
-              {{ member.given_name }} <strong>{{ member.sur_name }}</strong>{% if member.affiliation %} (<em>{{ site.data.orgs[member.affiliation].abbr }}</em>){% endif %}
+              {% person {{ member_id }} %}
             </span>
           {% endfor %}
         </div>

@@ -24,19 +24,13 @@ subnavbar: Projects
           </h4>
           <ul class="card-text list-inline members">
           {% if project.head %}
-          {% assign head = site.data.people[project.head] %}
             <li class="list-inline-item">
-              {{ head.given_name }}
-              {{ head.sur_name }}
-              ({{ site.data.orgs[head.affiliation].abbr }}){% if project.members %},{% endif %}
+              {% person {{ project.head }} %}
             </li>
           {% endif %}
           {% for member_id in project.members %}
-            {% assign member = site.data.people[member_id] %}
             <li class="list-inline-item">
-              {{ member.given_name }}
-              {{ member.sur_name }}
-              ({{ site.data.orgs[member.affiliation].abbr }}){% unless forloop.last %},{% endunless %}
+              {% person {{ member_id }} %}
             </li>
           {% endfor %}
           </ul>
