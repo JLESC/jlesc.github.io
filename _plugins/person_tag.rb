@@ -18,13 +18,13 @@ module Jekyll
       def get_person(context)
         @people = context.registers[:site].data['people']
 
-        if @people.has_key?(@person_id)
-          @person = @people[@person_id]
-        elsif @people.has_key?(Liquid::Template.parse(@person_id).render(context))
-          @person = @people[Liquid::Template.parse(@person_id).render(context)]
+        rendered = Liquid::Template.parse(@person_id).render(context)
+
+        if @people.has_key?(rendered)
+          @person = @people[rendered]
         else
           raise RenderPersonTagError.new \
-            "PersonID '#{@person_id}' not found. Typo? Otherwise add it to _data/people.yml."
+            "PersonID '#{rendered}' not found. Typo? Otherwise add it to _data/people.yml."
         end
 
       end

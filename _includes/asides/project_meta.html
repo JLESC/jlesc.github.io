@@ -8,9 +8,8 @@
       <label class="col-sm-4">Topics</label>
       <div class="col-sm-8">
         {% for topic_id in page.topics %}
-          {% assign topic = site.data.topics[topic_id] %}
           <span class="clearfix">
-            {{ topic.title }}
+            {% topic {{ topic_id }} %}
           </span>
         {% endfor %}
       </div>
