@@ -10,12 +10,12 @@ layout: default
   </header>
   <article class="post-content">
     <div class="row">
-      <div class="col-lg-7 content">
-        {{ content }}
-      </div>
-      <aside class="col-lg-5">
+      <aside class="col-lg-5 col-lg-push-7">
         {% include asides/event_meta.html %}
       </aside>
+      <div class="col-lg-7 col-lg-pull-5 content">
+        {{ content }}
+      </div>
     </div>
   </article>
   {% if page.footer %}
