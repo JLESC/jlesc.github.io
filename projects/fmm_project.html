@@ -11,7 +11,7 @@
 
   <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
   <link type="text/css" rel="stylesheet" href="/assets/vendor/dataTables.bootstrap.min-6da4fa53df0356b9d0b5c6cafed7c2fb8ef6057acc724f677b0b30e578cb085c.css">
-  <link type="text/css" rel="stylesheet" href="/assets/main-95ae3bb186e03ca4f0d481742ed479a0a970e19e66630ea3ed2232fe21891c1f.css">
+  <link type="text/css" rel="stylesheet" href="/assets/main-19de67f093ad75b31159973069091ef049213ed54188183dd50727f710fdb786.css">
   <script type="text/javascript" src="/assets/vendor/jquery-2.1.4.min-8133843eadf88d20841812250fd81944957760a8e817e53e3b86c0acd3f6d2e0.js"></script>
 </head>
 
@@ -90,69 +90,7 @@
   </header>
   <article class="post-content">
     <div class="row">
-      <div class="col-lg-7 content">
-        <h2 id="research-topic-and-goals">Research topic and goals</h2>
-<p>The goal of this joint-lab cooperation covers the topic of parallel programming.
-We are especially interested in increasing the scalability (strong scaling) of the Fast Multipole Method (FMM) for very large numbers of ranks.
-FMSolvr is a high-performance FMM library being developed by JSC.
-However, the current intrinsic parallel scaling limitations stem from process synchronization on large-scale systems.
-We will investigate weak and delayed synchronization models, tasking approaches and other techniques with MPI-3 and upcoming MPI-4 extensions to alleviate some of these performance bottlenecks.</p>
-
-<h2 id="results-for-20142015">Results for 2014/2015</h2>
-<p>The project was initiated at the JLESC meeting in November 2014.
-To provide a consistent interface for measuring and tuning parallel code performance some profound changes had to be made to the code.
-We started implementing an abstract parallelization layer for the FMSolvr library.
-This includes a threading approach for intra-node communication as well as a parallelization approach for inter-node communication via MPI.
-The adopted abstraction layer allows easier re- placement/improvement of different synchronization strategies within the code.</p>
-
-<p>Since this is a starting cooperation no project publications are available at the moment.</p>
-
-<h2 id="visits-and-meetings">Visits and meetings</h2>
-<p>Since this is a starting cooperation no visits have been initiated.
-The upcoming JLESC meeting at BSC will be used as a first project meeting.</p>
-
-<h2 id="impact-and-publications">Impact and publications</h2>
-<p>none yet.</p>
-
-<!--
-
--->
-<ol class="bibliography"></ol>
-
-<h2 id="person-month-efforts-in-20142015">Person-Month efforts in 2014/2015</h2>
-<p>Since December 2014:</p>
-
-<table class="table table-bordered table-hover table-sm">
-  <tbody>
-    <tr>
-      <td><span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr class="person affiliation" title="Argonne National Laboratory">ANL</abbr>)</td>
-      <td>0.1 PM</td>
-    </tr>
-    <tr>
-      <td><span class="person given-name">Ivo</span> <span class="person sur-name">Kabadshow</span> (<abbr class="person affiliation" title="Jülich Supercomputing Centre">JSC</abbr>)</td>
-      <td>0.1 PM</td>
-    </tr>
-    <tr>
-      <td><span class="person given-name">David</span> <span class="person sur-name">Haensel</span> (<abbr class="person affiliation" title="Jülich Supercomputing Centre">JSC</abbr>)</td>
-      <td>1 PM</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>The efforts are likely to increase, once the code base includes a near-complete parallelization layer.</p>
-
-<h2 id="future-plans">Future plans</h2>
-<p>Next, we want to setup an automatic testing framework for the FMM.
-This allows us to investigate the scaling bottlenecks of the method without the need to provide a real-world MD dataset.
-The framework will generate the corresponding input data as well as the required FMM parameter on the fly.
-After this step is finished an extensive scaling analysis on different HPC platforms will be performed.
-The results of this analysis are the foundation of all subsequent tuning efforts.</p>
-
-<h2 id="references">References</h2>
-<ol class="bibliography"></ol>
-
-      </div>
-      <aside class="col-lg-5">
+      <aside class="col-lg-5 col-lg-push-7">
         <section class="group-meta card">
   <div class="card-header">Project Profile</div>
   
@@ -219,6 +157,68 @@ The results of this analysis are the foundation of all subsequent tuning efforts
   </ul>
 </section>
       </aside>
+      <div class="col-lg-7 col-lg-pull-5 content">
+        <h2 id="research-topic-and-goals">Research topic and goals</h2>
+<p>The goal of this joint-lab cooperation covers the topic of parallel programming.
+We are especially interested in increasing the scalability (strong scaling) of the Fast Multipole Method (FMM) for very large numbers of ranks.
+FMSolvr is a high-performance FMM library being developed by JSC.
+However, the current intrinsic parallel scaling limitations stem from process synchronization on large-scale systems.
+We will investigate weak and delayed synchronization models, tasking approaches and other techniques with MPI-3 and upcoming MPI-4 extensions to alleviate some of these performance bottlenecks.</p>
+
+<h2 id="results-for-20142015">Results for 2014/2015</h2>
+<p>The project was initiated at the JLESC meeting in November 2014.
+To provide a consistent interface for measuring and tuning parallel code performance some profound changes had to be made to the code.
+We started implementing an abstract parallelization layer for the FMSolvr library.
+This includes a threading approach for intra-node communication as well as a parallelization approach for inter-node communication via MPI.
+The adopted abstraction layer allows easier re- placement/improvement of different synchronization strategies within the code.</p>
+
+<p>Since this is a starting cooperation no project publications are available at the moment.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+<p>Since this is a starting cooperation no visits have been initiated.
+The upcoming JLESC meeting at BSC will be used as a first project meeting.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+<p>none yet.</p>
+
+<!--
+
+-->
+<ol class="bibliography"></ol>
+
+<h2 id="person-month-efforts-in-20142015">Person-Month efforts in 2014/2015</h2>
+<p>Since December 2014:</p>
+
+<table class="table table-bordered table-hover table-sm">
+  <tbody>
+    <tr>
+      <td><span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr class="person affiliation" title="Argonne National Laboratory">ANL</abbr>)</td>
+      <td>0.1 PM</td>
+    </tr>
+    <tr>
+      <td><span class="person given-name">Ivo</span> <span class="person sur-name">Kabadshow</span> (<abbr class="person affiliation" title="Jülich Supercomputing Centre">JSC</abbr>)</td>
+      <td>0.1 PM</td>
+    </tr>
+    <tr>
+      <td><span class="person given-name">David</span> <span class="person sur-name">Haensel</span> (<abbr class="person affiliation" title="Jülich Supercomputing Centre">JSC</abbr>)</td>
+      <td>1 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The efforts are likely to increase, once the code base includes a near-complete parallelization layer.</p>
+
+<h2 id="future-plans">Future plans</h2>
+<p>Next, we want to setup an automatic testing framework for the FMM.
+This allows us to investigate the scaling bottlenecks of the method without the need to provide a real-world MD dataset.
+The framework will generate the corresponding input data as well as the required FMM parameter on the fly.
+After this step is finished an extensive scaling analysis on different HPC platforms will be performed.
+The results of this analysis are the foundation of all subsequent tuning efforts.</p>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"></ol>
+
+      </div>
     </div>
   </article>
   
