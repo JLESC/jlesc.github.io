@@ -57,4 +57,18 @@ $(document).ready(function() {
             "lengthMenu": "Display _MENU_ people"
         }
     });
+
+    $('#visits-db').DataTable({
+        "columns": [
+            null,
+            null,
+            { "type": "date" },
+            { "type": "date" }
+        ],
+        "lengthMenu": [ [5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]],
+        "pageLength": 25,
+        "language": {
+            "lengthMenu": "Display _MENU_ visits"
+        }
+    });
 });
