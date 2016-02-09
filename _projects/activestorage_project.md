@@ -63,7 +63,7 @@ The project just started and thus did not result in any publications, yet.
 
 The efforts of the participants so far are as follows:
 
-{:.table.table-bordered.table-hover.table-sm}
+{:.person-months-table.table.table-bordered.table-hover.table-sm}
 | {% person chien_a %}        | 0.1 PM |
 | {% person pleiter_d %}      | 0.1 PM |
 | {% person dun_n %}          | 2 PM   |
