@@ -27,10 +27,11 @@ subnavbar: People
     </thead>
     <tbody>
     {% for person_hash in site.data.people %}
+      {% assign person_id = person_hash[0] %}
       {% assign person = person_hash[1] %}
       <tr>
         <td class="col-name">
-          <strong>{{ person.sur_name }}</strong>, {{ person.given_name }}
+          {% person_noaffi_inverse {{ person_id }} %}
           <div class="btn-group btn-group-sm pull-right" role="group">
             {% if person.email %}
               {% assign email = person.email | obfuscate_email %}
