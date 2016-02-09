@@ -23,3 +23,6 @@ gem 'jekyll-git_metadata', github: 'torbjoernk/jekyll-git_metadata',
 
 gem 'jgd'
 
+group :report do
+  gem 'pandoc-ruby', require: false
+end

@@ -17,6 +17,7 @@ timezone: UTC
 encoding: utf-8
 
 exclude:
+  - bin/
   - vendor/
   - travis_deploy_rsa.enc
   - travis_deploy_rsa.pub

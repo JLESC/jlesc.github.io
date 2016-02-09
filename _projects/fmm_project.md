@@ -50,10 +50,10 @@ none yet.
 ## Person-Month efforts in 2014/2015
 Since December 2014:
 
-{:.table.table-bordered.table-hover.table-sm}
-| {% person balaji_p %} | 0.1 PM |
+{:.person-months-table.table.table-bordered.table-hover.table-sm}
+| {% person balaji_p %}    | 0.1 PM |
 | {% person kabadshow_i %} | 0.1 PM |
-| {% person haensel_d %} | 1 PM   |
+| {% person haensel_d %}   | 1 PM   |
 
 The efforts are likely to increase, once the code base includes a near-complete parallelization layer.
 
