@@ -161,14 +161,22 @@ html {
       }
     }
 
-    .bibtex-entry-container {
-      .bibtex-ref-raw {
-        pre code {
+    .bibliography {
+      margin-bottom: 1rem;
+
+      .bibtex-entry-container {
+        .bibtex-ref-raw, .bibtex-ref-abstract {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
           color: $text-muted !important;
+          pre {
+            color: inherit;
+            margin: 0;
+            code {
+              color: inherit;
+            }
+          }
         }
-      }
-      .bibtex-ref-abstract {
-        color: $text-muted !important;
       }
     }
 
