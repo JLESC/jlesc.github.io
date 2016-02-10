@@ -16,9 +16,16 @@ module Jekyll
 
       Jekyll::Hooks.trigger :site, :pre_render, self, payload
 
+      @topics = {}
+      data['topics'].each_pair do |topic_id, topic_hash|
+        topic_hash.update({projects: []})
+        @topics.update({topic_id.to_sym => topic_hash})
+      end
+
       collections['projects'].docs.each do |document|
         document.output = Jekyll::Renderer.new(self, document, payload).run
         document.trigger_hooks(:post_render)
+        @topics[document.data['topics'].first.to_sym][:projects] << document.data['slug']
       end
 
       Jekyll::Hooks.trigger :site, :post_render, self, payload
@@ -31,6 +38,20 @@ module Jekyll
       puts "writing LaTeX documents to #{dest} ..."
       collections['projects'].docs.each do |document|
         document.write(dest)
+      end
+
+      @topics.each_pair do |topic_id, topic_hash|
+        file = "#{topic_id.to_s}.tex"
+        puts "  #{file}"
+        File.open(File.join(dest, file), 'wb') do |f|
+          output = "\\subsection{#{topic_hash['title']}}\\label{topic-#{topic_id.to_s}}\n"
+          output += topic_hash['desc']
+          output += "\n"
+          topic_hash[:projects].each do |project|
+            output += "\\include{projects/#{project}}\n"
+          end
+          f.write(output)
+        end
       end
     end
   end
@@ -87,7 +108,7 @@ module Jekyll
         output = render_liquid(output, payload, info, document.path)
       end
 
-      output = PandocRuby.convert(output, :normalize, from: 'markdown+pipe_tables', to: :latex)
+      output = PandocRuby.convert(output, :normalize, :no_wrap, from: 'markdown+pipe_tables', to: :latex)
       document.content = output
 
       tex_cleanup
@@ -106,12 +127,18 @@ module Jekyll
       document.content.gsub! /{:\.person-months-table.*}/, "|   |   |\n|---+---|"
 
       document.content.gsub! /{%\scite\s(\w*)\s.*\s%}/, '\cite \1'
+
+      document.content = "# #{document.data['title']}\n#{document.content}"
     end
 
     private
     def tex_cleanup
       puts '    cleanup obsolete stuff in LaTeX'
       document.content.gsub! /\\itemsep.*\n/, ''
+
+      puts '    increase heading levels'
+      document.content.gsub! /\\section{(.*)}\\label/, '\subsubsection{\1}\label'
+      document.content.gsub! /\\subsection{(.*)}\\label/, '\paragraph{\1}~\\\label'
     end
   end
 
