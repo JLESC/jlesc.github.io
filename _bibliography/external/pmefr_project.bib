@@ -1,147 +1,37 @@
 ---
-layout: page_project
-title:
-date:
-updated:
-navbar: Projects
-footer: true
-project_url:
-status:
-topics:
-  -
-keywords:
-  -
-head:
-members:
-  -
 ---
-{% comment %}
-===============================
-=== HOWTO USE THIS TEMPLATE ===
-===============================
-
-Copy this file to `_projects` and rename it to a very short version of your project's title, e.g.
-the project "Scalability Enhancements to FMM for Molecular Dynamics Simulations" chooses
-"fmm_project.md".
-
-Also copy the file `_templates/project.bib` to `_bibliography/external` and name it exactly as this
-one, but the file extension, e.g. "fmm_project.bib".
-
-!IMPORTANT!
-Remember to adjust the file name of the BibTeX file at the very bottom of this file!!
-
-Then fill in the YAML header variables above.
-
-- title
-  The full title of the project
-
-- date
-  The date this page was created in the format: YYYY-MM-DD.
-  This will get displayed at the very bottom of the generated website.
-
-- updated
-  In case you or somebody else came back later and edited significant parts of the page, put in the
-  date (format: YYYY-MM-DD) of that change.
-  If present, this will get displayed at the very bottom of the generated website.
-
-- project_url
-  Optional URL to some external website of the project.
-
-- status
-  The current status of the project.
-  You have to use one of the keys defined in '_data/project_stati.yml'
-
-- topics
-  A list of topic keys (as defined in '_data/topics.yml') for this project.
-  Each topic on a new line with a leading dash.
-
-- keywords
-  Optional list of keywords for this project.
-  Each topic on a new line with a leading dash.
-
-- head
-  The dedicated project leader.
-  This is the identifier of a person as found in '_data/people.yml'.
-
-- members
-  A list of members of this project, i.e. the people doing the work.
-  Each member must be listed as its identifier as found in '_data/people.yml' on a new line with a
-  leading dash.
-{% endcomment %}
-
-## Research topic and goals
-
-
-## Results for 2014/2015
-
-
-## Visits and meetings
-
-
-## Impact and publications
-<!--
-{% comment %}
-=============================
-== CITING OWN PUBLICATIONS ==
-=============================
-
-To list your own publications produced within this project below this comment but still inside the
-HTML comment (`<!-- ... -->`).
-This will get displayed below without the need to cite them within the text, which you can still do.
-
-Use the Liquid citing syntax as explained in the wiki:
-https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publications
-
-=====================================
-== START HERE WITH YOUR REFERENCES ==
-{% endcomment %}
-
-
-
-{% comment %}
-== NO MORE BELOW THIS ==
-========================
-{% endcomment %}
--->
-{% bibliography --cited --file jlesc.bib %}
-
-
-## Person-Month efforts in 2014/2015
-Since December 2014:
-
-{% comment %}
-=========================================
-== ADD A TABLE OF PERSON-MONTH EFFORDS ==
-
-Put it in the following form, each person on its own line
-
-| {% person PERSON_ID %} | X.Y PM |
-
-e.g.:
-
-| {% person kabadshow_i %} | 0.1 PM |
-
-Above the very first person put the following:
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-
-==================================
-== START HERE ==
-{% endcomment %}
-
-
-## Future plans
-
-
-## References
-
-{% comment %}
-=================
-=== IMPORTANT ===
-=================
-
-Replace 'YOUR_BIBTEX_FILE_NAME_HERE' with the name of the BibTeX file with the external references!
-{% endcomment %}
-
-{% bibliography --file external/YOUR_BIBTEX_FILE_NAME_HERE %}
+%% NOTE
+%% The two lines above are required for Jekyll and the jekyll-scholar plugin to correctly parse
+%% and render the references on the web page.
+%% You may remove them when using this file with BibTeX natively in your publications to avoid nasty
+%% BibTeX errors.
+%
+%
+% 3rd-party references for the 'FMM Project'.
+%
+% The entries in this file are sorted by YEAR (ascending).
+% If inserting new entries, please put them accordingly.
+%
+%
+% ALSO NOTE:
+%
+% Please, stick to the following formatting convention to easy maintainability:
+%
+% - indent keys of entries with 2 spaces (NOT tabs!)
+%
+% - order the keys alphabetical
+%
+% - enclose all values within curly brakets '{...}'
+%
+% - do line breaks at 100 chars; this is ................................................. here -->|
+%
+% - put a colon ',' as well after the last key/value pair of an entry
+%
+%
+% Please, treat this file not different from usual source code files.
+%
+% Thus, stick to the concisely used formatting pattern with tab indention, lower cased keywords,
+% curly brackets for value enclosure and alphabetical sorted keywords within one BibTeX entry.
+%
+%
 
