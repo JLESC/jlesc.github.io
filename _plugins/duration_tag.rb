@@ -1,3 +1,9 @@
+class Float
+  def round_quarter
+    (self * 4).round / 4.0
+  end
+end
+
 module Jekyll
   module Tags
     class DurationTagError < StandardError
@@ -40,7 +46,7 @@ module Jekyll
     class DurationPMsTag < DurationTag
       def render(context)
         days = days_from_seconds(context)
-        "#{(days / 30.0).round(2)} PM"
+        "#{(days / 30.0).round_quarter} PM"
       end
     end
 
