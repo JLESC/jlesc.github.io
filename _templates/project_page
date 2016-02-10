@@ -79,6 +79,7 @@ Then fill in the YAML header variables above.
 
 
 ## Impact and publications
+
 <!--
 {% comment %}
 =============================
@@ -88,6 +89,7 @@ Then fill in the YAML header variables above.
 To list your own publications produced within this project below this comment but still inside the
 HTML comment (`<!-- ... -->`).
 This will get displayed below without the need to cite them within the text, which you can still do.
+Put a blank line before the `<!--`, otherwise the comment will show up in the html page.
 
 Use the Liquid citing syntax as explained in the wiki:
 https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publications
@@ -107,11 +109,10 @@ https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publ
 
 
 ## Person-Month efforts in 2014/2015
-Since December 2014:
 
 {% comment %}
 =========================================
-== ADD A TABLE OF PERSON-MONTH EFFORDS ==
+== ADD A TABLE OF PERSON-MONTH EFFORTS ==
 
 Put it in the following form, each person on its own line
 
@@ -144,4 +145,3 @@ Replace 'YOUR_BIBTEX_FILE_NAME_HERE' with the name of the BibTeX file with the e
 {% endcomment %}
 
 {% bibliography --file external/YOUR_BIBTEX_FILE_NAME_HERE %}
-
