@@ -1,3 +1,10 @@
+//= require 'vendor/bootstrap.min.js'
+//= require 'vendor/jquery.dataTables.min.js'
+//= require 'vendor/dataTables.bootstrap.min.js'
+//= require 'vendor/moment.min.js'
+//= require 'vendor/dataTables.plugins.datetime_moment.js'
+
+
 $(document).ready(function() {
     function reverse(value) {
         return value.split("").reverse().join("");
@@ -58,13 +65,8 @@ $(document).ready(function() {
         }
     });
 
+    $.fn.dataTable.moment('DD MMM YYYY');
     $('#visits-db').DataTable({
-        "columns": [
-            null,
-            null,
-            { "type": "date" },
-            { "type": "date" }
-        ],
         "lengthMenu": [ [5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]],
         "pageLength": 25,
         "language": {
