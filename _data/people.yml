@@ -27,6 +27,16 @@
 # Please keep the entries below in alphanumerical order according to the identifier. Thanks!
 #
 
+
+amer_a:
+  sur_name: Amer
+  given_name: Abdelhalim
+  affiliation: anl
+  position: 
+  topics:
+  email: aamer@anl.gov
+  homepage: http://www.mcs.anl.gov/~aamer/
+  
 balaji_p:
   sur_name: Balaji
   given_name: Pavan
@@ -36,6 +46,24 @@ balaji_p:
   email:
   homepage:
 
+beltran_v:
+  sur_name: Beltran
+  given_name: Vivenc
+  affiliation: bsc
+  position:
+  topics:
+  email: vbeltran@bsc.es
+  homepage:
+  
+casas_m:
+  sur_name: Casas
+  given_name: Marc
+  affiliation: bsc
+  position:
+  topics:
+  email: marc.casas@bsc.es
+  homepage:
+  
 cappello_f:
   sur_name: Cappello
   given_name: Franck
