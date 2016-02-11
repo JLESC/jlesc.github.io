@@ -12,12 +12,6 @@ BIBLIOGRAPHY_MATCHER_EXTERNAL = /{%\sbibliography\s.*--file\sexternal\/[\w\/]*\.
 CITATION_MATCHER = /{%\scite\s(?<bibtex_id>\w*)\s--file\s(?<bibfile>[\w\/]*)\.bib\s%}/
 
 
-LATEX_TEMPLATES = {
-    'report.tex': "report#{Date.today.year}.tex",
-    'executive_summary.tex': 'executive_summary.tex'
-}
-
-
 def sanitize_for_latex(content)
   content.gsub! '&', '\\\&'
 end
@@ -271,22 +265,15 @@ module Jekyll
       @site.render
       @site.write
 
-      LATEX_TEMPLATES.each_pair do |template, dest|
-        FileUtils.cp(File.join(@site.source, '_templates', 'report', template.to_s),
-                     File.join(@latex_path, dest))
+      report_dest = File.join(@latex_path, "report_#{Date.today.year}.tex")
+      unless test('e', report_dest)
+        FileUtils.cp(File.join(@site.source, '_templates', 'report', "report.tex"),
+                     report_dest)
       end
 
       FileUtils.cp(File.join(@site.source, '_assets', 'images', 'jlesc_logo.jpg'),
                    File.join(@latex_path, 'jlesc_logo.png'))
 
-      latexmk_log = 'latexmk.log'
-      puts "Compiling PDF via latexmk, storing its output in #{latexmk_log}"
-      if system("cd latex_out && latexmk -pdf report#{Date.today.year} &> #{File.join(@site.source, latexmk_log)}")
-        puts "Report should be in 'latex_out/report#{Date.today.year}.pdf'"
-        puts 'Done.'
-      else
-        puts 'WARNING: latexmk seems to have failed. See the log for details.'
-      end
     end
   end
 end
