@@ -4,6 +4,12 @@ require 'bundler/setup'
 Bundler.require(:default, :report)
 require 'jekyll'
 require 'pandoc-ruby'
+require 'bibtex'
+
+BIBLIOGRAPHY_MATCHER = /{%\sbibliography\s.*--file\s(?<bibfile>[\w\/]*)\.bib\s%}/
+BIBLIOGRAPHY_MATCHER_JLESC = /{%\sbibliography\s.*--file\sjlesc\.bib\s%}/
+BIBLIOGRAPHY_MATCHER_EXTERNAL = /{%\sbibliography\s.*--file\sexternal\/[\w\/]*\.bib\s%}/
+CITATION_MATCHER = /{%\scite\s(?<bibtex_id>\w*)\s--file\s(?<bibfile>[\w\/]*)\.bib\s%}/
 
 
 module Jekyll
@@ -40,9 +46,20 @@ module Jekyll
         document.write(dest)
       end
 
+      puts "writing BibTeX files to #{dest} ..."
+      collections['projects'].docs.each do |document|
+        unless document.bibtex
+          puts "WARNING: No BibTeX for #{document.data['slug']}"
+        end
+        bibtex_out = File.join('projects', document.data['slug'] + '.bib')
+        puts "  - #{bibtex_out}"
+        document.bibtex.save_to(File.join(dest, bibtex_out))
+      end
+
+      puts "writing Topics files to #{dest} ..."
       @topics.each_pair do |topic_id, topic_hash|
         file = "#{topic_id.to_s}.tex"
-        puts "  #{file}"
+        puts "  - #{file}"
         File.open(File.join(dest, file), 'wb') do |f|
           output = "\\subsection{#{topic_hash['title']}}\\label{topic-#{topic_id.to_s}}\n"
           output += topic_hash['desc']
@@ -57,8 +74,10 @@ module Jekyll
   end
 
   class Document
+    attr_accessor :bibtex
+
     def destination(dest)
-      puts "  #{URL.unescape_path(url)}"
+      puts "  - #{URL.unescape_path(url)}"
       path = File.join(dest, URL.unescape_path(url))
       path << output_ext unless path.end_with? output_ext
       path
@@ -79,6 +98,7 @@ module Jekyll
     def run
       puts "  Markdown file: #{document.relative_path}"
 
+      read_used_citations
       md_cleanup
 
       payload["page"] = document.to_liquid
@@ -121,14 +141,73 @@ module Jekyll
     end
 
     private
+    def gather_citations
+      @citations = []
+      document.content.scan CITATION_MATCHER do |bibtex_id, bibfile|
+        @citations << {:bibfile => bibfile, :bibtex_id => bibtex_id}
+      end
+      @citations
+    end
+
+    private
+    def get_bibfiles
+      puts '      reading in BibTeX files'
+      @bibfiles = {}
+      document.content.scan BIBLIOGRAPHY_MATCHER do |bibfile|
+        puts "        - #{bibfile[0]}.bib"
+        file = File.join(@site.source, '_bibliography', bibfile[0] + '.bib')
+        @bibfiles[bibfile[0]] = BibTeX.open(file)
+      end
+      @bibfiles
+    end
+
+    private
+    def read_used_citations
+      puts '    reading used citations'
+
+      @citations ||= gather_citations
+      @bibfiles ||= get_bibfiles
+
+      if @citations.length < 1
+        puts "WARNING: no citations for project #{document.data['slug']}"
+      else
+        @citations.each do |cite|
+          unless @bibfiles[cite[:bibfile]]
+            raise StandardError.new "Bibliography not included: #{cite[:bibfile]}"
+          end
+          bib_entry = @bibfiles[cite[:bibfile]][cite[:bibtex_id]]
+
+          unless bib_entry
+            puts "WARNING: BibTeX key '#{cite[:bibtex_id]}' not found in #{cite[:bibfile]}.bib."
+          end
+
+          cite[:bibtex] = BibTeX::Entry.new(bib_entry.to_hash)
+          cite[:bibtex].key = "#{cite[:bibtex].key}-#{document.data['slug'].gsub(/_/, '-')}"
+
+          if cite[:bibfile] =~ /jlesc/
+            cite[:bibtex].add :keywords => [] unless cite[:bibtex].has_field? :keywords
+            cite[:bibtex][:keywords] << 'own'
+          end
+        end
+
+        puts "      Found #{@citations.find_all {|e| e[:bibfile] =~ /jlesc/}.length} JLESC citations"
+        puts "      Found #{@citations.find_all {|e| e[:bibfile] !~ /jlesc/}.length} external citations"
+      end
+
+      document.bibtex = BibTeX::Bibliography.new
+      @citations.each do |cite|
+        document.bibtex << cite[:bibtex]
+      end
+    end
+
+    private
     def md_cleanup
       puts '    cleaning up obsolete stuff in Markdown'
-      document.content.gsub! /{%\sbibliography\s.*--file\s(.*)\.bib\s%}/, '\bibliography{\1}'
+      document.content.gsub! BIBLIOGRAPHY_MATCHER_JLESC, '\printbibliography[heading=none,keyword=own]'
+      document.content.gsub! BIBLIOGRAPHY_MATCHER_EXTERNAL, '\printbibliography[heading=none,notkeyword=own]'
       document.content.gsub! /{:\.person-months-table.*}/, "|   |   |\n|---+---|"
 
-      document.content.gsub! /{%\scite\s(\w*)\s.*\s%}/, '\cite \1'
-
-      document.content = "# #{document.data['title']}\n#{document.content}"
+      document.content.gsub! CITATION_MATCHER, "\\cite \\k<bibtex_id>-#{document.data['slug'].gsub(/_/, '-')}"
     end
 
     private
@@ -139,6 +218,11 @@ module Jekyll
       puts '    increase heading levels'
       document.content.gsub! /\\section{(.*)}\\label/, '\subsubsection{\1}\label'
       document.content.gsub! /\\subsection{(.*)}\\label/, '\paragraph{\1}~\\\label'
+
+      document.content.prepend("\\begin{refsection}[#{document.data['slug']}]\n\n")
+      document.content.prepend("\\subsubsection{#{document.data['title']}}\\label{#{document.data['title'].downcase.gsub(/\s/, '-')}}\n\n")
+
+      document.content += "\n\\end{refsection}\n"
     end
   end
 
