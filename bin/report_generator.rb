@@ -12,6 +12,17 @@ BIBLIOGRAPHY_MATCHER_EXTERNAL = /{%\sbibliography\s.*--file\sexternal\/[\w\/]*\.
 CITATION_MATCHER = /{%\scite\s(?<bibtex_id>\w*)\s--file\s(?<bibfile>[\w\/]*)\.bib\s%}/
 
 
+LATEX_TEMPLATES = {
+    'report.tex': "report#{Date.today.year}.tex",
+    'executive_summary.tex': 'executive_summary.tex'
+}
+
+
+def sanitize_for_latex(content)
+  content.gsub! '&', '\\\&'
+end
+
+
 module Jekyll
   class Site
     def render
@@ -47,14 +58,25 @@ module Jekyll
       end
 
       puts "writing BibTeX files to #{dest} ..."
+      bibfiles = []
       collections['projects'].docs.each do |document|
         unless document.bibtex
           puts "WARNING: No BibTeX for #{document.data['slug']}"
         end
-        bibtex_out = File.join('projects', document.data['slug'] + '.bib')
+        bibfile = document.data['slug'] + '.bib'
+        bibtex_out = File.join('projects', bibfile)
         puts "  - #{bibtex_out}"
         document.bibtex.save_to(File.join(dest, bibtex_out))
+        bibfiles << bibfile
       end
+
+      # bibfile = 'bibfiles.tex'
+      # puts "writing LaTeX include file for BibTeX files #{bibfile} ..."
+      # File.open(File.join(dest, bibfile), 'wb') do |f|
+      #   bibfiles.each do |bib|
+      #     f.write("\\addbibresource{project/#{bib}}\n")
+      #   end
+      # end
 
       puts "writing Topics files to #{dest} ..."
       @topics.each_pair do |topic_id, topic_hash|
@@ -67,6 +89,7 @@ module Jekyll
           topic_hash[:projects].each do |project|
             output += "\\include{projects/#{project}}\n"
           end
+          sanitize_for_latex(output)
           f.write(output)
         end
       end
@@ -207,7 +230,7 @@ module Jekyll
       document.content.gsub! BIBLIOGRAPHY_MATCHER_EXTERNAL, '\printbibliography[heading=none,notkeyword=own]'
       document.content.gsub! /{:\.person-months-table.*}/, "|   |   |\n|---+---|"
 
-      document.content.gsub! CITATION_MATCHER, "\\cite \\k<bibtex_id>-#{document.data['slug'].gsub(/_/, '-')}"
+      document.content.gsub! CITATION_MATCHER, "\\cite{\\k<bibtex_id>-#{document.data['slug'].gsub(/_/, '-')}}"
     end
 
     private
@@ -219,7 +242,9 @@ module Jekyll
       document.content.gsub! /\\section{(.*)}\\label/, '\subsubsection{\1}\label'
       document.content.gsub! /\\subsection{(.*)}\\label/, '\paragraph{\1}~\\\label'
 
-      document.content.prepend("\\begin{refsection}[#{document.data['slug']}]\n\n")
+      document.content.gsub! /\\label{([\w-]*)}/, "\\label{#{document.data['slug']}-\\1}"
+
+      document.content.prepend("\\begin{refsection}[projects/#{document.data['slug']}]\n\n")
       document.content.prepend("\\subsubsection{#{document.data['title']}}\\label{#{document.data['title'].downcase.gsub(/\s/, '-')}}\n\n")
 
       document.content += "\n\\end{refsection}\n"
@@ -236,6 +261,7 @@ module Jekyll
 
     def initialize
       @site = Jekyll::Site.new(Jekyll::Command.configuration_from_options({serving: false}))
+      @latex_path = File.join(@site.source, 'latex_out')
     end
 
     def run
@@ -244,6 +270,23 @@ module Jekyll
       @site.generate
       @site.render
       @site.write
+
+      LATEX_TEMPLATES.each_pair do |template, dest|
+        FileUtils.cp(File.join(@site.source, '_templates', 'report', template.to_s),
+                     File.join(@latex_path, dest))
+      end
+
+      FileUtils.cp(File.join(@site.source, '_assets', 'images', 'jlesc_logo.jpg'),
+                   File.join(@latex_path, 'jlesc_logo.png'))
+
+      latexmk_log = 'latexmk.log'
+      puts "Compiling PDF via latexmk, storing its output in #{latexmk_log}"
+      if system("cd latex_out && latexmk -pdf report#{Date.today.year} &> #{File.join(@site.source, latexmk_log)}")
+        puts "Report should be in 'latex_out/report#{Date.today.year}.pdf'"
+        puts 'Done.'
+      else
+        puts 'WARNING: latexmk seems to have failed. See the log for details.'
+      end
     end
   end
 end
