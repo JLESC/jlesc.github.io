@@ -82,28 +82,30 @@
         <div class="col-sm-8">
           {% for developer in page.developers %}
             <span class="clearfix">
-              {% if developer.link %}
-                {{ developer.link.name }}
-              {% else %}
-                {{ developer.name }}
-              {% endif %}
-              {% if developer.email or developer.lead_developer or developer.link.url %}
+              {% person {{ developer.id }} %}
+              {% if developer.email or developer.lead_developer %}
                 <span class="pull-right">
                   {% if developer.lead_developer %}
                     <a title="Lead Developer"><i class="fa fa-graduation-cap fa-fw"></i></a>
                   {% endif %}
-                  {% if developer.email %}
-                    {% assign email = developer.email | obfuscate_email %}
-                    <a target="_blank"
-                       class="email-obfuscated"
-                       title="write an email to {{ developer.name }}"
-                       data-email="{{ email }}"
-                       role="button">
-                      <i class="fa fa-envelope fa-fw"></i>
-                    </a>
-                  {% endif %}
-                  {% if developer.link.url %}
-                    <a href="{{ developer.link.url }}" title="{{ developer.link.name }}"><i class="fa fa-link fa-fw"></i></a>
+                </span>
+              {% endif %}
+            </span>
+          {% endfor %}
+        </div>
+      </li>
+    {% endif %}
+    {% if page.contributors %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Contributors</label>
+        <div class="col-sm-8">
+          {% for contributor in page.contributors %}
+            <span class="clearfix">
+              {{ contributor.name }}
+              {% if contributor.email or contributor.lead_developer %}
+                <span class="pull-right">
+                  {% if contributor.lead_developer %}
+                    <a title="Lead Developer"><i class="fa fa-graduation-cap fa-fw"></i></a>
                   {% endif %}
                 </span>
               {% endif %}

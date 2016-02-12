@@ -36,27 +36,17 @@ releases:
     link: https://github.com/Parallel-in-Time/PFASST/releases/tag/v0.1.0
     download: https://github.com/Parallel-in-Time/PFASST/archive/v0.1.0.zip
 developers:
+  - id: klatt_t
+    lead_developer: true
+  - id: speck_r
+contributors:
   - name: Matthew Emmett
-    email: matthew@emmett.ca
     lead_developer: true
-  - name: Torbjörn Klatt
-    email: t.klatt@fz-juelich.de
-    lead_developer: true
-  - name: Robert Speck
-    email: r.speck@fz-juelich.de
   - name: Daniel Ruprecht
-    email: daniel.ruprecht@usi.ch
   - name: Fabian Köhler
   - name: Selman Terzi
 short_desc: A C++ library for SDC, MLSDC and PFASST.
 ---
-{% raw %}
-<div class="alert alert-info">
-  This page is a demonstration on how a description page for a software can look like.
-  PFASST++ is not part of JLESC.
-</div>
-{% endraw %}
-
 A modern C++ library for the PFASST algorithm. 
 
 The PFASST project is a C++ implementation of the parallel full approximation 
