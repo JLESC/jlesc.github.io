@@ -99,6 +99,15 @@ kabadshow_i:
   email: i.kabadshow@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/kabadshow_i.html
 
+klatt_t:
+  sur_name: Klatt
+  given_name: Torbjörn
+  affiliation: jsc
+  position: PhD student
+  topics: parallel-in-time integration
+  email: t.klatt@fz-juelich.de
+  homepage:
+
 kramer_b:
   sur_name: Kramer
   given_name: Bill
