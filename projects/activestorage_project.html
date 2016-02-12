@@ -11,7 +11,7 @@
 
   <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
   <link type="text/css" rel="stylesheet" href="/assets/vendor/dataTables.bootstrap.min-6da4fa53df0356b9d0b5c6cafed7c2fb8ef6057acc724f677b0b30e578cb085c.css">
-  <link type="text/css" rel="stylesheet" href="/assets/main-19de67f093ad75b31159973069091ef049213ed54188183dd50727f710fdb786.css">
+  <link type="text/css" rel="stylesheet" href="/assets/main-495e4da0898b2692285ec2abaa9eff24c551c37efe372a1b81581752dbb8cab4.css">
   <script type="text/javascript" src="/assets/vendor/jquery-2.1.4.min-8133843eadf88d20841812250fd81944957760a8e817e53e3b86c0acd3f6d2e0.js"></script>
 </head>
 
@@ -124,7 +124,7 @@
         <div class="col-sm-8">
           
             <span class="clearfix">
-              <span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr class="person affiliation" title="Jülich Supercomputing Centre">JSC</abbr>)
+              <span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr title="Jülich Supercomputing Centre" class="initialism">JSC</abbr>)
               <span class="pull-right">
                 <a title="Project Head"><i class="fa fa-graduation-cap fa-fw"></i></a>
               </span>
@@ -132,15 +132,15 @@
           
           
             <span class="clearfix">
-              <span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr class="person affiliation" title="Argonne National Laboratory">ANL</abbr>)
+              <span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr title="Argonne National Laboratory" class="initialism">ANL</abbr>)
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr class="person affiliation" title="Argonne National Laboratory">ANL</abbr>)
+              <span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr title="Argonne National Laboratory" class="initialism">ANL</abbr>)
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Nicholas</span> <span class="person sur-name">Vandenbergen</span> (<abbr class="person affiliation" title="Jülich Supercomputing Centre">JSC</abbr>)
+              <span class="person given-name">Nicholas</span> <span class="person sur-name">Vandenbergen</span> (<abbr title="Jülich Supercomputing Centre" class="initialism">JSC</abbr>)
             </span>
           
         </div>
@@ -149,8 +149,8 @@
     
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
-      <div class="col-sm-8 project-closing-text">
-        closing
+      <div class="col-sm-8">
+        <span class="project-status project-status-closing">closing</span>
       </div>
     </li>
     
@@ -160,10 +160,10 @@
       <div class="col-lg-7 col-lg-pull-5 content">
         <h2 id="research-topic-and-goals">Research topic and goals</h2>
 <p>The research in this topic is based on a hardware and a software architecture, which both are currently under development: GVR and BGAS.
-GVR (Global View Resilience) is a user-level library that enables portable, efficient, application-controlled resilience <a href="#ChienEtAl2015">[1]</a>.
+GVR (Global View Resilience) is a user-level library that enables portable, efficient, application-controlled resilience <a href="#ChienEtAl2015">(Chien et al., 2015)</a>.
 It focusses on achieving scalability and maximization of error recovery.
 BGAS (Blue Gene Active Storage) is a realisation of an active storage architecture based on custom flash memory cards which are integrated into Blue Gene/Q I/O drawers.
-Here JSC continues previous work on integration of non-volatile memory <a href="#SayedEtAl2013">[2]</a>.
+Here JSC continues previous work on integration of non-volatile memory <a href="#SayedEtAl2013">(Sayed et al., 2013)</a>.
 In this subproject our goal is to explore the opportunities of both architectures by integrating them.
 More specifically the following research questions are addressed:</p>
 
@@ -181,7 +181,7 @@ Based on a non-production version of MPI, namely MPICH3, this goal has been achi
 <p>Beyond regular contacts via email the following meetings involving most of the participants took place:</p>
 
 <ul>
-  <li>Meeting of <span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr class="person affiliation" title="Argonne National Laboratory">ANL</abbr>), <span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr class="person affiliation" title="Argonne National Laboratory">ANL</abbr>) and <span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr class="person affiliation" title="Jülich Supercomputing Centre">JSC</abbr>) at SC14 on November 17, 2014.</li>
+  <li>Meeting of <span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr title="Argonne National Laboratory" class="initialism">ANL</abbr>), <span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr title="Argonne National Laboratory" class="initialism">ANL</abbr>) and <span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr title="Jülich Supercomputing Centre" class="initialism">JSC</abbr>) at SC14 on November 17, 2014.</li>
   <li>Technical update meeting on February 5, 2015.</li>
 </ul>
 
@@ -209,19 +209,19 @@ Based on a non-production version of MPI, namely MPICH3, this goal has been achi
 <table class="person-months-table table table-bordered table-hover table-sm">
   <tbody>
     <tr>
-      <td><span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr class="person affiliation" title="Argonne National Laboratory">ANL</abbr>)</td>
+      <td><span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr title="Argonne National Laboratory" class="initialism">ANL</abbr>)</td>
       <td>0.1 PM</td>
     </tr>
     <tr>
-      <td><span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr class="person affiliation" title="Jülich Supercomputing Centre">JSC</abbr>)</td>
+      <td><span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr title="Jülich Supercomputing Centre" class="initialism">JSC</abbr>)</td>
       <td>0.1 PM</td>
     </tr>
     <tr>
-      <td><span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr class="person affiliation" title="Argonne National Laboratory">ANL</abbr>)</td>
+      <td><span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr title="Argonne National Laboratory" class="initialism">ANL</abbr>)</td>
       <td>2 PM</td>
     </tr>
     <tr>
-      <td><span class="person given-name">Nicholas</span> <span class="person sur-name">Vandenbergen</span> (<abbr class="person affiliation" title="Jülich Supercomputing Centre">JSC</abbr>)</td>
+      <td><span class="person given-name">Nicholas</span> <span class="person sur-name">Vandenbergen</span> (<abbr title="Jülich Supercomputing Centre" class="initialism">JSC</abbr>)</td>
       <td>0.5 PM</td>
     </tr>
   </tbody>
@@ -256,8 +256,8 @@ Based on a non-production version of MPI, namely MPICH3, this goal has been achi
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="ChienEtAl2015">A. Chien, P. Balaji, P. Beckman, N. Dun, A. Fang, H. Fujita, K. Iskra, Z. Rubenstein, Z. Zheng, R. Schreiber, J. Hammond, J. Dinan, I. Laguna, D. Richards, A. Dubey, B. van Straalen, M. Hoemmen, M. Heroux, K. Teranishi, and A. Siegel, “Versioned Distributed Arrays for Resilience in Scientific Applications:
-    Global View Resilience,” <i>Procedia Computer Science</i>, vol. 51, pp. 29–38, 2015. </span>
+      <span id="ChienEtAl2015">Chien, A., Balaji, P., Beckman, P., Dun, N., Fang, A., Fujita, H., … Siegel, A. (2015). Versioned Distributed Arrays for Resilience in Scientific Applications:
+    Global View Resilience. <i>Procedia Computer Science</i>, <i>51</i>, 29–38. doi:<a href="http://dx.doi.org/10.1016/j.procs.2015.05.187" target="_blank">http://dx.doi.org/10.1016/j.procs.2015.05.187</a></span>
     </div>
   </div>
   <div class="collapse" id="collapseChienEtAl2015Bibtex">
@@ -301,8 +301,8 @@ Based on a non-production version of MPI, namely MPICH3, this goal has been achi
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="SayedEtAl2013">S. Sayed, S. Graf, M. Hennecke, D. Pleiter, G. Schwarz, H. Schick, and M. Stephan, “Supercomputing: 28th International Supercomputing Conference, ISC 2013,
-    Leipzig, Germany, June 16-20, 2013. Proceedings,” J. M. Kunkel, T. Ludwig, and H. W. Meuer, Eds. Berlin, Heidelberg: Springer Berlin Heidelberg, 2013, pp. 435–446. </span>
+      <span id="SayedEtAl2013">Sayed, S., Graf, S., Hennecke, M., Pleiter, D., Schwarz, G., Schick, H., &amp; Stephan, M. (2013). Supercomputing: 28th International Supercomputing Conference, ISC 2013,
+    Leipzig, Germany, June 16-20, 2013. Proceedings. In J. M. Kunkel, T. Ludwig, &amp; H. W. Meuer (Eds.), (pp. 435–446). Berlin, Heidelberg: Springer Berlin Heidelberg. doi:<a href="http://dx.doi.org/10.1007/978-3-642-38750-0_33" target="_blank">http://dx.doi.org/10.1007/978-3-642-38750-0_33</a></span>
     </div>
   </div>
   <div class="collapse" id="collapseSayedEtAl2013Bibtex">
