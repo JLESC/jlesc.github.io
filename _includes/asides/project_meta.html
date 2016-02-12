@@ -55,8 +55,8 @@
     {% if page.status %}
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
-      <div class="col-sm-8 project-{{ page.status }}-text">
-        {{ site.data.project_stati[page.status].title }}
+      <div class="col-sm-8">
+        {% project_status {{ page.status }} %}
       </div>
     </li>
     {% endif %}
