@@ -9,14 +9,24 @@ subnavbar: Software
 <div id="group-index" class="card-columns">
   {% for software in site.software | order: 'title' %}
     <section class="card">
-      <div class="card-header">
-        <a href="{{ site.baseurl }}{{ software.url }}">{{ software.title }}</a>
-      </div>
-      {% if software.logo %}
-        <img class="img-fluid p-a-1" src="{{ site.baseurl }}/images/{{ software.logo }}" alt="{{ software.title }} Logo">
-      {% endif %}
-      <div class="card-block">
-        {% if software.short_desc %}{{ software.short_desc }}{% endif %}
+      <div class="card-block text-xs-center">
+        <h4 class="card-title">
+          <a href="{{ site.baseurl }}{{ software.url }}">{{ software.title }}</a>
+        </h4>
+        <ul class="card-text list-inline topics text-muted">
+          {% for topic_id in software.topics %}
+          <li class="list-inline-item">
+            {{ site.data['topics'][topic_id].title }}
+          </li>
+          {% endfor %}
+        </ul>
+        <ul class="card-text list-inline institutes">
+          {% for org_id in software.institutes %}
+          <li class="list-inline-item">
+            {{ site.data['orgs'][org_id].title }}
+          </li>
+          {% endfor %}
+        </ul>
       </div>
     </section>
   {% endfor %}
