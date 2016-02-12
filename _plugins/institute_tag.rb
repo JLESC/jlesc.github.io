@@ -15,7 +15,7 @@ module Jekyll
       end
 
       def get_institute(context)
-        @institutes = context.registers[:site].data['orgs']
+        @institutes = context.registers[:site].data['institutes']
 
         @institute_id = Liquid::Template.parse(@markup).render(context)
 
@@ -23,7 +23,7 @@ module Jekyll
           @institute = @institutes[@institute_id]
         else
           raise RenderInstituteTagError.new \
-            "InstituteID '#{@institute_id}' not found. Probably a typo? See _data/orgs.yml."
+            "InstituteID '#{@institute_id}' not found. Probably a typo? See _data/institutes.yml."
         end
       end
 
