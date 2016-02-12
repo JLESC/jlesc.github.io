@@ -16,14 +16,14 @@ subnavbar: Software
         <ul class="card-text list-inline topics text-muted">
           {% for topic_id in software.topics %}
           <li class="list-inline-item">
-            {{ site.data['topics'][topic_id].title }}
+            {% topic {{ topic_id }} %}
           </li>
           {% endfor %}
         </ul>
         <ul class="card-text list-inline institutes">
-          {% for org_id in software.institutes %}
+          {% for institute_id in software.institutes %}
           <li class="list-inline-item">
-            {{ site.data['orgs'][org_id].title }}
+            {% institute {{ institute_id }} %}
           </li>
           {% endfor %}
         </ul>

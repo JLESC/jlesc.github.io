@@ -71,7 +71,7 @@
         <label class="col-sm-4">Institutes</label>
         <div class="col-sm-8">
           {% for institute_id in page.institutes %}
-            <span class="clearfix">{{ site.data['orgs'][institute_id].title }}</span>
+            <span class="clearfix">{% institute {{ institute_id }} %}</span>
           {% endfor %}
         </div>
       </li>
@@ -119,7 +119,7 @@
       <label class="col-sm-4">Topics</label>
       <div class="col-sm-8">
         {% for topic_id in page.topics %}
-          <span class="clearfix">{{ site.data['topics'][topic_id].title }}</span>
+          <span class="clearfix">{% topic {{ topic_id }} %}</span>
         {% endfor %}
       </div>
     </li>
