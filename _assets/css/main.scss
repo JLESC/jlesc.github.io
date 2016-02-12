@@ -108,33 +108,52 @@ html {
     .person-affiliation {
     }
 
-    .project-preparation-bg {
+    .project-status-preparation-bg {
       background-color: lighten($brand-info, 15%);
+      .project-status-preparation {
+        color: inherit;
+      }
     }
-    .project-preparation-text {
+    .project-status-preparation {
       color: $brand-info;
     }
-    .project-starting-bg {
+
+    .project-status-starting-bg {
       background-color: lighten($brand-info, 15%);
+      .project-status-starting {
+        color: inherit;
+      }
     }
-    .project-starting-text {
+    .project-status-starting {
       color: $brand-info;
     }
-    .project-running-bg {
+
+    .project-status-running-bg {
       background-color: lighten($brand-success, 25%);
+      .project-status-running {
+        color: inherit;
+      }
     }
-    .project-running-text {
+    .project-status-running {
       color: $brand-success;
     }
-    .project-closing-bg {
+
+    .project-status-closing-bg {
       background-color: lighten($brand-warning, 15%);
+      .project-status-closing {
+        color: inherit;
+      }
     }
-    .project-closing-text {
+    .project-status-closing {
       color: $brand-warning;
     }
+
     .project-finished-bg {
+      .project-status-finished {
+        color: inherit;
+      }
     }
-    .project-finished-text {
+    .project-status-finished {
     }
 
     #project-index {

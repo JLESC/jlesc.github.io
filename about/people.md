@@ -56,9 +56,7 @@ subnavbar: People
         </td>
         <td class="col-affiliation">
           {% for affi in person.affiliation %}
-            <abbr title="{{ site.data.orgs[affi].title }}" class="initialism">
-              {{ site.data.orgs[affi].abbr }}
-            </abbr>
+            {% institute_short {{ affi }} %}
             {% unless forloop.last %}
               ,
             {% endunless %}
