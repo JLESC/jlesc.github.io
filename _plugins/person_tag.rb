@@ -1,3 +1,6 @@
+require_relative './institute_tag'
+
+
 module Jekyll
   module Tags
     class RenderPersonTagError < StandardError
@@ -12,7 +15,6 @@ module Jekyll
         @person_id = markup.strip
         @person = nil
         @people
-        @affiliations = nil
       end
 
       def get_person(context)
@@ -43,22 +45,8 @@ module Jekyll
           raise RenderPersonTagError.new "PersonID '#{@person_id}' has no 'affiliation' defined."
         end
 
-        affies = context.registers[:site].data['orgs']
-
         if @person['affiliation'].is_a?(String)
-          person_affies = [@person['affiliation']]
-        else
-          person_affies = @person['affiliation']
-        end
-
-        @affiliations = []
-        for affi in person_affies
-          unless affies.has_key?(affi)
-            raise RenderPersonTagError.new \
-              "AffiliationID '#{affi}' not found. Type? Otherwise add it to _data/orgs.yml."
-          end
-
-          @affiliations << affies[affi]
+          @person['affiliation'] = [@person['affiliation']]
         end
       end
 
@@ -81,10 +69,10 @@ module Jekyll
     end
 
     module AffiliationsTrait
-      def construct_affiliation
+      def construct_affiliation(context)
         affies = []
-        for affi in @affiliations
-          affies << "<abbr class=\"person affiliation\" title=\"#{affi['title']}\">#{affi['abbr']}</abbr>"
+        for affi in @person['affiliation']
+          affies << Liquid::Template.parse("{% institute_short #{affi} %}").render(context)
         end
 
         affies.join(', ')
@@ -98,7 +86,7 @@ module Jekyll
 
       def render(context)
         super(context)
-        "#{construct_name} (#{construct_affiliation})"
+        "#{construct_name} (#{construct_affiliation(context)})"
       end
     end
 
@@ -117,7 +105,7 @@ module Jekyll
 
       def render(context)
         super(context)
-        "#{construct_name} (#{construct_affiliation})"
+        "#{construct_name} (#{construct_affiliation(context)})"
       end
     end
 

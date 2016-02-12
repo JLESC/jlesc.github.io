@@ -83,7 +83,7 @@ scholar:
     - latex
     - markdown
 
-  style: ieee-with-url
+  style: apa
   locale: en
 
   sort_by: year, authors

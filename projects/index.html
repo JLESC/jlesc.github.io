@@ -35,8 +35,8 @@ subnavbar: Projects
           {% endfor %}
           </ul>
         </div>
-        <div class="card-footer project-{{ project.status }}-bg">
-          Status: {{ site.data.project_stati[project.status].title }}
+        <div class="card-footer project-status-{{ project.status }}-bg">
+          Status: {% project_status {{ project.status }} %}
         </div>
       </section>
     {% endfor %}

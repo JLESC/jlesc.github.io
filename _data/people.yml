@@ -14,7 +14,7 @@
 # The identifier should be constructed from the surname and the initial letter of the first name,
 # all lower case and separated by an underscore.
 #
-# The affiliation must be an affiliation identifier as found in /_data/orgs.yml.
+# The affiliation must be an affiliation identifier as found in /_data/institutes.yml.
 # Multiple affiliations can be given in list/array syntax:
 #    [first, second]
 #
