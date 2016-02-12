@@ -37,6 +37,15 @@ amer_a:
   email: aamer@anl.gov
   homepage: http://www.mcs.anl.gov/~aamer/
   
+antoniu_g:
+  sur_name: Antoniu
+  given_name: Gabriel
+  affiliation: inria
+  position: 
+  topics:
+  email: gabriel.antoniu@inria.fr
+  homepage: https://team.inria.fr/kerdata/gabriel-antoniu/
+  
 balaji_p:
   sur_name: Balaji
   given_name: Pavan
@@ -54,6 +63,15 @@ beltran_v:
   topics:
   email: vbeltran@bsc.es
   homepage:
+  
+dorier_m:
+  sur_name: Dorier
+  given_name: Matthieu
+  affiliation: anl
+  position:
+  topics:
+  email: mdorier@anl.gov
+  homepage: https://people.irisa.fr/Matthieu.Dorier/wiki/doku.php
   
 casas_m:
   sur_name: Casas
@@ -90,6 +108,15 @@ dun_n:
   affiliation: anl
   email:
   homepage:
+  
+ibrahim_s:
+  sur_name: Ibrahim
+  given_name: Shadi
+  affiliation: inria
+  position: 
+  topics:  
+  email: 
+  homepage: https://team.inria.fr/kerdata/shadi-ibrahim/
 
 kabadshow_i:
   sur_name: Kabadshow
@@ -140,6 +167,15 @@ pleiter_d:
   email: d.pleiter@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/pleiter_d.html
 
+ross_r:
+  sur_name: Rob
+  given_name: Ross
+  affiliation: anl
+  position: 
+  topics:
+  email: rross@mcs.anl.gov
+  homepage: www.mcs.anl.gov/~rross
+  
 sato_m:
   sur_name: Sato
   given_name: Mitsuhisa
@@ -166,6 +202,16 @@ vandenbergen_n:
   email: n.vandenbergen@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/vandenbergen_n.html
 
+yildiz_o:
+  sur_name: Orcun
+  given_name: Yildiz
+  affiliation: inria
+  position: 
+  topics:
+  email: orcun.yildiz@inria.fr
+  homepage: https://team.inria.fr/kerdata/orcun-yildiz/
+
+  
 yves_r:
   sur_name: Robert
   given_name: Yves
