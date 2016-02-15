@@ -68,8 +68,6 @@ assets:
     automatic_img_alt: false
 
 collections:
-  education:
-    output: true
   events_upcoming:
     output: true
   events_past:
@@ -84,7 +82,7 @@ scholar:
     - latex
     - markdown
 
-  style: ieee-with-url
+  style: apa
   locale: en
 
   sort_by: year, authors

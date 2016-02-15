@@ -17,7 +17,7 @@ subnavbar: Projects
       {% unless project.topics contains topic_id %}
         {% continue %}
       {% endunless %}
-      <section class="card text-xs-center">
+      <section class="card text-xs-center{% if project.status == 'help_wanted' %} card-outline-primary{% endif %}">
         <div class="card-block">
           <h4 class="card-title">
             <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
@@ -35,8 +35,8 @@ subnavbar: Projects
           {% endfor %}
           </ul>
         </div>
-        <div class="card-footer project-{{ project.status }}-bg">
-          Status: {{ site.data.project_stati[project.status].title }}
+        <div class="card-footer project-status-{{ project.status }}-bg">
+          Status: {% project_status {{ project.status }} %}
         </div>
       </section>
     {% endfor %}

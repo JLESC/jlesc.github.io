@@ -3,7 +3,8 @@ layout: page_project
 title: Exploiting Active Storage for Resilience
 date: 2016-01-01
 updated: 2016-02-05
-navbar: Projects
+navbar: Research
+subnavbar: Projects
 footer: true
 project_url:
 status: closing

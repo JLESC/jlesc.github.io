@@ -1,5 +1,5 @@
 <section class="group-meta card">
-  <div class="card-header">Code Profile</div>
+  <div class="card-header">Software Profile</div>
   {% if page.logo %}
     <img class="img-fluid p-a-1" src="{{ root_url }}/images/{{ page.logo }}" alt="{{ page.title }} Logo" />
   {% endif %}
@@ -44,7 +44,10 @@
       <li class="list-group-item row">
         <label class="col-sm-4">Releases</label>
         <div class="col-sm-8">
-          {% for release in page.releases %}
+          {% if page.releases | size > 3 %}
+            <span class="text-muted small clearfix">recent 3 of {{ page.releases | size }}</span>
+          {% endif %}
+          {% for release in page.releases | limit:3 %}
             <span class="clearfix">
               {{ release.version }}
               {% if release.date %}
@@ -63,27 +66,27 @@
         </div>
       </li>
     {% endif %}
+    {% if page.institutes %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Institutes</label>
+        <div class="col-sm-8">
+          {% for institute_id in page.institutes %}
+            <span class="clearfix">{% institute {{ institute_id }} %}</span>
+          {% endfor %}
+        </div>
+      </li>
+    {% endif %}
     {% if page.developers %}
       <li class="list-group-item row">
         <label class="col-sm-4">Developers</label>
         <div class="col-sm-8">
           {% for developer in page.developers %}
             <span class="clearfix">
-              {% if developer.link %}
-                {{ developer.link.name }}
-              {% else %}
-                {{ developer.name }}
-              {% endif %}
-              {% if developer.email or developer.lead_developer or developer.link.url %}
+              {% person {{ developer.id }} %}
+              {% if developer.email or developer.lead_developer %}
                 <span class="pull-right">
                   {% if developer.lead_developer %}
-                    <a href="#" title="Lead Developer"><i class="fa fa-graduation-cap fa-fw"></i></a>
-                  {% endif %}
-                  {% if developer.email %}
-                    <a href="mailto:{{ developer.email }}" title="email: {{ developer.email }}"><i class="fa fa-envelope-o fa-fw"></i></a>
-                  {% endif %}
-                  {% if developer.link.url %}
-                    <a href="{{ developer.link.url }}" title="{{ developer.link.name }}"><i class="fa fa-link fa-fw"></i></a>
+                    <a title="Lead Developer"><i class="fa fa-graduation-cap fa-fw"></i></a>
                   {% endif %}
                 </span>
               {% endif %}
@@ -92,5 +95,38 @@
         </div>
       </li>
     {% endif %}
+    {% if page.contributors %}
+      <li class="list-group-item row">
+        <label class="col-sm-4">Contributors</label>
+        <div class="col-sm-8">
+          {% for contributor in page.contributors %}
+            <span class="clearfix">
+              {{ contributor.name }}
+              {% if contributor.email or contributor.lead_developer %}
+                <span class="pull-right">
+                  {% if contributor.lead_developer %}
+                    <a title="Lead Developer"><i class="fa fa-graduation-cap fa-fw"></i></a>
+                  {% endif %}
+                </span>
+              {% endif %}
+            </span>
+          {% endfor %}
+        </div>
+      </li>
+    {% endif %}
+    {% if page.topics %}
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        {% for topic_id in page.topics %}
+          <span class="clearfix">{% topic {{ topic_id }} %}</span>
+        {% endfor %}
+      </div>
+    </li>
+    {% endif %}
   </ul>
 </section>
+
+{% if page.github_repo %}
+<section class="github-widget" data-repo="{{ page.github_repo }}"></section>
+{% endif %}

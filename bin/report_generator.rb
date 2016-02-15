@@ -126,9 +126,11 @@ module Jekyll
       end
 
       collections['projects'].docs.each do |document|
-        document.output = Jekyll::Renderer.new(self, document, payload).run
-        document.trigger_hooks(:post_render)
-        @topics[document.data['topics'].first.to_sym][:projects] << document.data['slug']
+        unless document.data['status'] == 'help_wanted'
+          document.output = Jekyll::Renderer.new(self, document, payload).run
+          document.trigger_hooks(:post_render)
+          @topics[document.data['topics'].first.to_sym][:projects] << document.data['slug']
+        end
       end
 
       Jekyll::Hooks.trigger :site, :post_render, self, payload
@@ -146,6 +148,10 @@ module Jekyll
       puts "writing BibTeX files to #{dest} ..."
       bibfiles = []
       collections['projects'].docs.each do |document|
+        if document.data['status'] == 'help_wanted'
+          next
+        end
+
         unless document.bibtex
           puts "WARNING: No BibTeX for #{document.data['slug']}"
         end
