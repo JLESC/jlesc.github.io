@@ -328,7 +328,8 @@ module Jekyll
     def tex_cleanup
       puts '    cleanup obsolete stuff in LaTeX'
       # _Pandoc_ prepends each +enumeration+ with some layout settings; remove that
-      document.content.gsub! /\\itemsep.*\n/, ''
+      document.content.gsub! /\\itemsep.*\n/, ''  # until Pandoc version 1.14
+      document.content.gsub! /\\tightlist\n/, ''  # since Pandoc version 1.14
 
       puts '    increase heading levels'
       # for the annual report the level of headings of the project reports need to be increased
