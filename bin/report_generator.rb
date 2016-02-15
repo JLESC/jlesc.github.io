@@ -17,8 +17,10 @@ module Jekyll
       Jekyll::Hooks.trigger :site, :pre_render, self, payload
 
       collections['projects'].docs.each do |document|
-        document.output = Jekyll::Renderer.new(self, document, payload).run
-        document.trigger_hooks(:post_render)
+        unless document.data['status'] == 'colab'
+          document.output = Jekyll::Renderer.new(self, document, payload).run
+          document.trigger_hooks(:post_render)
+        end
       end
 
       Jekyll::Hooks.trigger :site, :post_render, self, payload
