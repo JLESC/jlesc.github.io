@@ -97,11 +97,19 @@ html {
       }
     }
 
-    img.logo {
-      @include center-block;
-      @include img-fluid();
-      max-height: 7.5rem;
+    img {
+      &.logo {
+        @include center-block;
+        @include img-fluid();
+        max-height: 7.5rem;
+      }
+
+      &.partners-logo {
+        max-width: 15rem;
+        max-height: 15rem;
+      }
     }
+
 
     .person.given-name {
     }

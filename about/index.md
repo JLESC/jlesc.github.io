@@ -40,26 +40,38 @@ The JLESC is still based at Illinois.
 
 <div id="institutes" class="card-columns">
   <div class="card">
-    {% image 'anl_logo.jpg' class:'logo' alt:'Logo of Argonne National Laboratory' %}
+    <a href="{{ site.baseurl }}/about/partners#partner-uiuc-ncsa">
+      {% image 'ncsa_vertical_logo.png' class:'logo' alt:'Logo of NCSA' %}
+    </a>
   </div>
 
   <div class="card">
-    {% image 'bsc_logo.svg' class:'logo' alt:'Logo of Barcelona Supercomputing Center' %}
+    <a href="{{ site.baseurl }}/about/partners#partner-inria">
+      {% image 'inria_logo.png' class:'logo' alt:'Logo of INRIA' %}
+    </a>
   </div>
 
   <div class="card">
-    {% image 'inria_logo.png' class:'logo' alt:'Logo of INRIA' %}
+    <a href="{{ site.baseurl }}/about/partners#partner-anl">
+      {% image 'anl_logo.jpg' class:'logo' alt:'Logo of Argonne National Laboratory' %}
+    </a>
   </div>
 
   <div class="card">
-    {% image 'jsc_logo.svg' class:'logo' alt:'Logo of Jülich Supercomputing Centre' %}
+    <a href="{{ site.baseurl }}/about/partners#partner-bsc">
+      {% image 'bsc_logo.svg' class:'logo' alt:'Logo of Barcelona Supercomputing Center' %}
+    </a>
   </div>
 
   <div class="card">
-    {% image 'ncsa_vertical_logo.png' class:'logo' alt:'Logo of NCSA' %}
+    <a href="{{ site.baseurl }}/about/partners#partner-jsc">
+      {% image 'jsc_logo.svg' class:'logo' alt:'Logo of Jülich Supercomputing Centre' %}
+    </a>
   </div>
 
   <div class="card">
-    {% image 'riken_logo.png' class:'logo' alt:'Logo of RIKEN' %}
+    <a href="{{ site.baseurl }}/about/partners#partner-riken">
+      {% image 'riken_logo.png' class:'logo' alt:'Logo of RIKEN' %}
+    </a>
   </div>
 </div>
