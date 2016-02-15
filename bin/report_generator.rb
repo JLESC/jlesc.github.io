@@ -309,6 +309,8 @@ module Jekyll
           cite[:bibtex] = BibTeX::Entry.new(bib_entry.to_hash)
           cite[:bibtex].key = "#{cite[:bibtex].key}-#{document.data['slug'].gsub(/_/, '-')}"
 
+          cite[:bibtex].delete 'url' if cite[:bibtex].has_field? 'url'
+
           if cite[:bibfile] =~ /jlesc/
             cite[:bibtex].add :keywords => [] unless cite[:bibtex].has_field? :keywords
             cite[:bibtex][:keywords] << 'own'
