@@ -67,7 +67,7 @@ assets:
     automatic_img_alt: false
 
 collections:
-  education:
+  summer_school:
     output: true
   events_upcoming:
     output: true
