@@ -111,6 +111,16 @@ html {
     }
 
 
+    .label-event-workshop {
+      @include label-variant($label-primary-bg);
+    }
+    .label-event-summer_school {
+      @include label-variant($label-default-bg);
+    }
+    .label-event-mini_sym {
+      @include label-variant($label-info-bg);
+    }
+
     .person.given-name {
     }
     .person.sur-name {
