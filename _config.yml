@@ -67,8 +67,6 @@ assets:
     automatic_img_alt: false
 
 collections:
-  education:
-    output: true
   events_upcoming:
     output: true
   events_past:
