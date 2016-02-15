@@ -3,7 +3,8 @@ layout: page_project
 title:
 date:
 updated:
-navbar: Projects
+navbar: Research
+subnavbar: Projects
 footer: true
 project_url:
 status:
