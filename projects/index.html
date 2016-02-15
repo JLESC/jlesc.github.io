@@ -17,7 +17,7 @@ subnavbar: Projects
       {% unless project.topics contains topic_id %}
         {% continue %}
       {% endunless %}
-      <section class="card text-xs-center">
+      <section class="card text-xs-center{% if project.status == 'help_wanted' %} card-outline-primary{% endif %}">
         <div class="card-block">
           <h4 class="card-title">
             <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
