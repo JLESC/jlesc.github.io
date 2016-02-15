@@ -111,6 +111,16 @@ html {
     .person-affiliation {
     }
 
+    .project-status-colab-bg {
+      background-color: lighten($brand-primary, 15%);
+      .project-status-colab {
+        color: inherit
+      }
+    }
+    .project-status-colab {
+      color: $brand-primary;
+    }
+
     .project-status-preparation-bg {
       background-color: lighten($brand-info, 15%);
       .project-status-preparation {
