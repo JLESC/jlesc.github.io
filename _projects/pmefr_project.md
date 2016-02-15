@@ -3,7 +3,8 @@ layout: page_project
 title: Programming Model Extensions for Resilience
 date: 2016-02-10
 updated:
-navbar: Projects
+navbar: Research
+subnavbar: Projects
 footer: true
 project_url:
 status: starting
