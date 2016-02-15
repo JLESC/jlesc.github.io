@@ -19,6 +19,7 @@ encoding: utf-8
 exclude:
   - bin/
   - vendor/
+  - latex_out/
   - travis_deploy_rsa.enc
   - travis_deploy_rsa.pub
   - .travis.yml

@@ -6,8 +6,6 @@ sudo: false
 # rvm:
 #   - 2.2.1
 
-bundler_args: --without report
-
 cache:
   - bundler
 
@@ -17,6 +15,7 @@ branches:
 
 script:
   - bundle exec jekyll build --trace
+  - bundle exec ./bin/report_generator.rb
   - if [[ "${TRAVIS_BRANCH}" == "source" && "${TRAVIS_PULL_REQUEST}" == "false" ]]; then
       openssl aes-256-cbc -K $encrypted_d352a8d3929a_key -iv $encrypted_d352a8d3929a_iv -in travis_deploy_rsa.enc -out travis_deploy_rsa -d;
       chmod 0600 travis_deploy_rsa;
