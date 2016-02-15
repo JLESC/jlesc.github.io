@@ -1,5 +1,5 @@
 <section class="event-meta card">
-  <div class="card-header">Workshop Profile</div>
+  <div class="card-header">{% event_kind {{ page.kind }} %} Profile</div>
   {% if page.logo %}
   <img class="img-fluid p-a-1" src="{{ site.baseurl }}/images/{{ page.logo }}" alt="{{ page.title }} Logo" />
   {% endif %}
