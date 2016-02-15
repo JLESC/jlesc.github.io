@@ -346,7 +346,7 @@ module Jekyll
       puts '    cleaning up Markdown after Liquid processing'
       document.content.gsub! /<span class="person given-name">(.*?)<\/span>/, '\1'
       document.content.gsub! /<span class="person sur-name">(.*?)<\/span>/, '\1'
-      document.content.gsub! /<abbr class="person affiliation" title=".*?">(.*?)<\/abbr>/, '\1'
+      document.content.gsub! /<abbr title=".*?" class="initialism">(.*?)<\/abbr>/, '\1'
     end
 
     private
@@ -356,7 +356,7 @@ module Jekyll
     def tex_cleanup
       puts '    cleanup obsolete stuff in LaTeX'
       document.content.gsub! /\\textbackslash\{}printbibliography/, '\printbibliography'
-      document.content.gsub! /\\textbackslash\{}cite\\\{(.*)\\}/, '\cite{\1}'
+      document.content.gsub! /\\textbackslash\{}cite\\\{(.*?)\\}/, '\cite{\1}'
 
       puts '    increase heading levels'
       # for the annual report the level of headings of the project reports need to be increased
