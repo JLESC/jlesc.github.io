@@ -17,7 +17,7 @@ module Jekyll
       Jekyll::Hooks.trigger :site, :pre_render, self, payload
 
       collections['projects'].docs.each do |document|
-        unless document.data['status'] == 'colab'
+        unless document.data['status'] == 'help_wanted'
           document.output = Jekyll::Renderer.new(self, document, payload).run
           document.trigger_hooks(:post_render)
         end

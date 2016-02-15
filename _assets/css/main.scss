@@ -119,13 +119,13 @@ html {
     .person-affiliation {
     }
 
-    .project-status-colab-bg {
+    .project-status-help_wanted-bg {
       background-color: lighten($brand-primary, 15%);
-      .project-status-colab {
+      .project-status-help_wanted {
         color: inherit
       }
     }
-    .project-status-colab {
+    .project-status-help_wanted {
       color: $brand-primary;
     }
 
