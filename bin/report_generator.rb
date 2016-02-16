@@ -98,6 +98,32 @@ def sanitize_for_latex(content)
 end
 
 
+def create_clean_bibtex_entry(entry, document, own=nil)
+  values = entry.to_hash
+
+  values.delete :url
+
+  values.each_pair do |field, value|
+    v = value.to_s
+
+    v.gsub! /^[\{"]*(.*?)[}"]*$/, '\1'
+
+    case field
+      when :bibtex_key
+        values[:bibtex_key] = "#{v}-#{document.data['slug'].gsub(/_/, '-')}"
+      when :keywords
+        words = value.split(',').each {|w| w.strip}
+        words << 'own'
+        values[:keywords] = words.join(', ')
+      else
+        values[field] = v
+    end
+  end
+
+  BibTeX::Entry.new(values)
+end
+
+
 module Jekyll
   module Converters
     class Markdown
@@ -306,15 +332,7 @@ module Jekyll
             puts "WARNING: BibTeX key '#{cite[:bibtex_id]}' not found in #{cite[:bibfile]}.bib."
           end
 
-          cite[:bibtex] = BibTeX::Entry.new(bib_entry.to_hash)
-          cite[:bibtex].key = "#{cite[:bibtex].key}-#{document.data['slug'].gsub(/_/, '-')}"
-
-          cite[:bibtex].delete 'url' if cite[:bibtex].has_field? 'url'
-
-          if cite[:bibfile] =~ /jlesc/
-            cite[:bibtex].add :keywords => [] unless cite[:bibtex].has_field? :keywords
-            cite[:bibtex][:keywords] << 'own'
-          end
+          cite[:bibtex] = create_clean_bibtex_entry(bib_entry, document, cite[:bibfile] =~ /jlesc/)
         end
 
         puts "      Found #{@citations.find_all {|e| e[:bibfile] =~ /jlesc/}.length} JLESC citations"
