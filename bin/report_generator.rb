@@ -193,7 +193,7 @@ module Jekyll
         file = "#{topic_id.to_s}.tex"
         puts "  - #{file}"
         File.open(File.join(dest, file), 'wb') do |f|
-          output = "\\subsection{#{topic_hash['title']}}\\label{topic-#{topic_id.to_s}}\n"
+          output = "\\section{#{topic_hash['title']}}\\label{topic-#{topic_id.to_s}}\n"
           output += topic_hash['desc']
           output += "\n"
           topic_hash[:projects].each do |project|
@@ -380,10 +380,10 @@ module Jekyll
 
       puts '    increase heading levels'
       # for the annual report the level of headings of the project reports need to be increased
-      # a) project titles need to be two levels down
-      document.content.gsub! /\\section{(.*)}\\label/, '\subsubsection{\1}\label'  # TODO: do we need that here?
-      # b) headings within a project need to be named paragraphs
-      document.content.gsub! /\\subsection{(.*)}\\label/, '\paragraph{\1}~\\\label'
+      # a) headings within a project need to be named paragraphs
+      document.content.gsub! /\\subsection{(.*)}\\label/, '\subsubsection{\1}~\\\label'
+      # b) project titles need to be two levels down
+      document.content.gsub! /\\section{(.*)}\\label/, '\subsection{\1}\label'  # TODO: do we need that here?
 
       # to fix multiple occurrences of labels in the aggregated report, we prepend each label with
       # the project's slug
@@ -394,7 +394,7 @@ module Jekyll
       document.content += "\n\\end{refsection}\n"
 
       # add the project's title
-      document.content.prepend("\\subsubsection{#{document.data['title']}}\\label{#{document.data['title'].downcase.gsub(/\s/, '-')}}\n\n")
+      document.content.prepend("\\subsection{#{document.data['title']}}\\label{#{document.data['title'].downcase.gsub(/\s/, '-')}}\n\n")
     end
   end
 

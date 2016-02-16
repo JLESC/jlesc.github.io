@@ -1,26 +1,38 @@
-\documentclass[12pt]{article}
+\documentclass[%
+  a4paper,
+  twoside,
+  12pt
+]{scrbook}
 
-\usepackage{times}
+\usepackage[%
+  a4paper,
+  top = 35mm,
+  bottom = 35mm,
+  inner = 35mm,
+  outer = 25mm
+]{geometry}
+
+\usepackage[rm,light]{roboto}
 \usepackage[utf8]{inputenc}
 \usepackage[american]{babel}
-\usepackage{fontenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[%
+  automark,
+  headsepline,
+%  footsepline,
+  markuppercase
+]{scrpage2}
+
 \usepackage{graphicx}
 \usepackage{amsfonts,amsthm,amsmath,amssymb}
 \usepackage{xspace}
 \usepackage{todonotes}
-\usepackage{fullpage}
-%\usepackage{paralist}
-%\usepackage{mdwlist}
-\usepackage{pdfpages}
-\usepackage{titling}
 \usepackage{longtable}
-%\usepackage{booktabs}
 \usepackage{color}
-
 
 %% REMOVE THIS FOR THE FINAL REPORT
 \usepackage{blindtext}
-
 
 \usepackage[backend=biber]{biblatex}
 
@@ -42,36 +54,91 @@
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
 
-\usepackage{hyperref}
+\usepackage[%
+  tocgraduated,
+  tocindentauto
+]{tocstyle}
 
-\pretitle{
-  \vspace*{-2cm}
-  \begin{center}
-  \includegraphics[width=\textwidth]{jlesc_logo.png}\\[2\bigskipamount]
-  \LARGE
-}
-\posttitle{\end{center}}
+\usepackage[%
+  pdfpagemode={UseOutlines},
+  bookmarks=true,
+  bookmarksopen=true,
+  bookmarksnumbered=true,
+  hypertexnames=false,
+  linktocpage=false,            % on TOC page: link text (false) or line numbers (true)
+  colorlinks=false,
+  allbordercolors={1 0 0},
+  pdfborder={0 0 .5},
+  pdfstartview={FitV},
+  unicode,
+  breaklinks=true
+]{hyperref}
 
-\title{JLESC -- Activity Report of this Year}
+\setlength{\emergencystretch}{3em}
+\doublehyphendemerits=10000       % No consecutive line hyphens.
+\brokenpenalty=10000              % No broken words across columns/pages.
+\widowpenalty=9999                % Almost no widows at bottom of page.
+\clubpenalty=9999                 % Almost no orphans at top of page.
+\interfootnotelinepenalty=9999    % Almost never break footnotes.
 
+\RedeclareSectionCommands[%
+  beforeskip=0\baselineskip,
+  afterskip=1\baselineskip
+]{section}
+\RedeclareSectionCommands[%
+  beforeskip=.5\baselineskip,
+  afterskip=-.1\baselineskip
+]{subsection,subsubsection}
+\RedeclareSectionCommands[%
+  beforeskip=.5\baselineskip,
+  afterskip=-1em
+]{paragraph,subparagraph}
+
+\lehead{\bfseries\headmark}    %% Top left on even pages
+\lohead{}                      %% Top left on odd pages
+\rehead{}                      %% Top right on even pages
+\rohead{\bfseries\headmark}    %% Top right on odd pages
+\chead{}                       %% Top center
+
+\lefoot{\pagemark}             %% Bottom left on even pages
+\lofoot{}                      %% Bottom left on odd pages
+\refoot{}                      %% Bottom right on even pages
+\rofoot{\pagemark}             %% Bottom right on odd pages
+\cfoot{}                       %% Bottom center
+
+\pagestyle{scrheadings}
+
+
+\titlehead{\centering\includegraphics[width=\textwidth]{jlesc_logo.png}}
+\title{Joint Laboratory on Extreme Scale Computing}
+\subtitle{Activity Report of this Year}
 \author{Ms. Bar, Mr. Foo}
-
 \date{Today}
-
 
 \begin{document}
 
+\newgeometry{
+  a4paper,
+  top = 15mm,
+  bottom = 15mm,
+  left = 5mm,
+  right = 5mm
+}
 \maketitle
-\thispagestyle{empty}
-\vspace*{0.5cm}
 
+\cleardoubleoddemptypage
+\restoregeometry
+\usetocstyle{KOMAlike}
+\setcounter{tocdepth}{2}
 \tableofcontents
 
-\newpage
-\section{Introduction}
+
+\cleardoubleoddemptypage
+\chapter{Introduction}
 \Blindtext
 
-\section{Scientific Activities}
+\cleardoubleoddemptypage
+\chapter{Scientific Activities}
 \input{apps}
 \input{architectures}
 \input{numerics}
@@ -80,8 +147,8 @@
 \input{resilience}
 \input{storage}
 
-\newpage
-\section{Financial report}
+\cleardoubleoddemptypage
+\chapter{Financial report}
 \blindtext
 
 
