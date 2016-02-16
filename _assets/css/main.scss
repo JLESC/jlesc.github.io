@@ -312,6 +312,14 @@ html {
       }
     }
 
+    footer#contribute {
+      margin-top: ($spacer-y * 2);
+
+      &.card-contribute {
+        @include card-variant(lighten($brand-primary, 35%), lighten($brand-primary, 35%));
+      }
+    }
+
     footer#site-footer {
       color: $text-muted;
 
