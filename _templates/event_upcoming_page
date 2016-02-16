@@ -1,10 +1,10 @@
 ---
 layout: page_event
-title: 
-date: 
+title:
+date:
 update:
 navbar: Events
-subnavbar: Upcomming
+subnavbar: Upcoming
 event_location:
 event_start:
 event_end:
