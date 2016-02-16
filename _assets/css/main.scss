@@ -206,9 +206,16 @@ html {
           line-height: inherit !important;
         }
       }
-      .card-footer {
-        padding: 0.25rem 1.25rem;
+    }
+
+    ul#next-events-index {
+      li {
+        padding: 0.75rem 0.25rem !important;
       }
+    }
+
+    .card-footer-slim  {
+      padding: 0.25rem 1.25rem;
     }
 
     .bibliography {
@@ -302,6 +309,14 @@ html {
     .card-header ~ .list-group {
       .list-group-item:first-of-type {
         border-top: 0;
+      }
+    }
+
+    footer#contribute {
+      margin-top: ($spacer-y * 2);
+
+      &.card-contribute {
+        @include card-variant(lighten($brand-primary, 35%), lighten($brand-primary, 35%));
       }
     }
 

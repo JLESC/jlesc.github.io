@@ -22,7 +22,7 @@ module Jekyll
         if @kinds.has_key?(rendered)
           @kind = @kinds[rendered]
         else
-          raise RenderEventKindError.new \
+          raise RenderEventKindTagError.new \
             "EventKindID '#{rendered}' not found. Probably a typo? See _data/event_kinds.yml."
         end
       end
