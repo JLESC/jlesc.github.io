@@ -103,6 +103,8 @@ def create_clean_bibtex_entry(entry, document, own=nil)
 
   values.delete :url
 
+  values.update(:keywords => '') unless values.has_key? :keywords
+
   values.each_pair do |field, value|
     v = value.to_s
 
@@ -113,12 +115,14 @@ def create_clean_bibtex_entry(entry, document, own=nil)
         values[:bibtex_key] = "#{v}-#{document.data['slug'].gsub(/_/, '-')}"
       when :keywords
         words = value.split(',').each {|w| w.strip}
-        words << 'own'
+        words << 'own' if own
         values[:keywords] = words.join(', ')
       else
         values[field] = v
     end
   end
+
+  values.delete :keywords if values[:keywords].length == 0
 
   BibTeX::Entry.new(values)
 end
@@ -197,7 +201,7 @@ module Jekyll
           output += topic_hash['desc']
           output += "\n"
           topic_hash[:projects].each do |project|
-            output += "\\include{projects/#{project}}\n"
+            output += "\\input{projects/#{project}}\n"
           end
           sanitize_for_latex(output)
           f.write(output)
