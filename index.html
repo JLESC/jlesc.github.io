@@ -2,40 +2,48 @@
 layout: landingpage
 ---
 
-<div class="card-columns">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">JLESC</h3>
-        <p class="card-text">
-          The Joint Laboratory for Extreme Scale Computing includes researchers from the
-          <a href="http://www.inria.fr/en/" target="_blank">French National Institute for Research in Computer Science and Control</a>
-          (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the
-          <a href="http://www.ncsa.illinois.edu/" target="_blank">National Center for Supercomputing Applications</a>,
-          <a href="http://www.anl.gov/" target="_blank">Argonne National Laboratory</a>,
-          <a href="http://www.bsc.es/" target="_blank">Barcelona Supercomputing Center</a>,
-          <a href="http://www.fz-juelich.de/ias/jsc/EN/Home/home_node.html" target="_blank">Julich Supercomputing Center</a> and
-          <a href="http://www.aics.riken.jp/en/" target="_blank">Riken/AICS</a>.
-        </p>
-        <p class="card-text">
-          The Joint Lab is part of
-          <a href="http://www.parallel.illinois.edu/" target="_blank">Parallel@Illinois</a>.
-        </p>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-lg-12 col-xl-4">
+    <h3>JLESC</h3>
+    <p>
+      The Joint Laboratory for Extreme Scale Computing includes researchers from the
+      <a href="http://www.inria.fr/en/" target="_blank">French National Institute for Research in Computer Science and Control</a>
+      (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the
+      <a href="http://www.ncsa.illinois.edu/" target="_blank">National Center for Supercomputing Applications</a>,
+      <a href="http://www.anl.gov/" target="_blank">Argonne National Laboratory</a>,
+      <a href="http://www.bsc.es/" target="_blank">Barcelona Supercomputing Center</a>,
+      <a href="http://www.fz-juelich.de/ias/jsc/EN/Home/home_node.html" target="_blank">Julich Supercomputing Center</a> and
+      <a href="http://www.aics.riken.jp/en/" target="_blank">Riken/AICS</a>.
+    </p>
+    <p>
+      The Joint Lab is part of
+      <a href="http://www.parallel.illinois.edu/" target="_blank">Parallel@Illinois</a>.
+    </p>
+  </div>
 
+  <div class="col-lg-6 col-xl-4">
     <div id="recent-news" class="card">
       <div class="card-header">News</div>
-      <ul class="list-group list-group-flush">
-        {% for post in site.posts limit: 5 %}
-        <li class="list-group-item">
-          <div class="row">
-            <label class="label label-default col-xs-12 col-sm-3 col-md-4">{{ post.date | date_to_string }}</label>
-            <a class="col-xs-12 col-sm-9 col-md-8" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | titlecase }}</a>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-      <div class="card-footer text-muted text-xs-center small">
+      {% assign num_posts = site.posts | size %}
+      {% if num_posts == 0 %}
+        <div class="card-block">
+          <p class="card-text">
+            Sadly, no news yet.
+          </p>
+        </div>
+      {% else %}
+        <ul class="list-group list-group-flush">
+          {% for post in site.posts limit: 5 %}
+          <li class="list-group-item">
+            <div class="row">
+              <label class="label label-default col-xs-12 col-sm-3 col-md-4">{{ post.date | date_to_string }}</label>
+              <a class="col-xs-12 col-sm-9 col-md-8" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | titlecase }}</a>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <div class="card-footer card-footer-slim text-muted text-xs-center small">
         <a class="col-xs-6" href="{{ site.baseurl }}/news/archive.html">News Archive</a>
         <a class="col-xs-6" href="{{ site.baseurl }}/feed.xml" title="subscribe via RSS">
           <i class="fa fa-rss"></i>
@@ -43,13 +51,39 @@ layout: landingpage
         </a>
       </div>
     </div>
+  </div>
 
+  <div class="col-lg-6 col-xl-4">
     <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">Even further boxes</h3>
-        <p class="card-text">
-          How to add? Read the source of <code>index.html</code>.
-        </p>
+      <div class="card-header">Upcoming Events</div>
+      {% assign num_events = site.events_upcoming | size %}
+      {% if num_events == 0 %}
+        <div class="card-block">
+          <p class="card-text">
+            No events planned.
+          </p>
+        </div>
+      {% else %}
+        <ul id="next-events-index" class="list-group list-group-flush">
+          {% for event in site.events_upcoming limit: 3 %}
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label class="label label-event-{{ event.kind }} pull-right">{% event_kind {{ event.kind }} %}</label>
+                  <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title | titlecase }}</a>
+                </div>
+              </div>
+              <div class="row small">
+                {% assign on_global_index = true %}
+                {% include event/meta.html %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <div class="card-footer card-footer-slim text-muted text-xs-center small">
+        <a href="{{ site.baseurl }}/events/index.html">All Events</a>
       </div>
     </div>
+  </div>
 </div>

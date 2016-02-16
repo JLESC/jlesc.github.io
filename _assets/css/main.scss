@@ -206,9 +206,16 @@ html {
           line-height: inherit !important;
         }
       }
-      .card-footer {
-        padding: 0.25rem 1.25rem;
+    }
+
+    ul#next-events-index {
+      li {
+        padding: 0.75rem 0.25rem !important;
       }
+    }
+
+    .card-footer-slim  {
+      padding: 0.25rem 1.25rem;
     }
 
     .bibliography {
