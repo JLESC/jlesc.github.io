@@ -101,8 +101,6 @@ end
 def create_clean_bibtex_entry(entry, document, own=nil)
   values = entry.to_hash
 
-  values.delete :url
-
   values.update(:keywords => '') unless values.has_key? :keywords
 
   values.each_pair do |field, value|
@@ -339,8 +337,21 @@ module Jekyll
           cite[:bibtex] = create_clean_bibtex_entry(bib_entry, document, cite[:bibfile] =~ /jlesc/)
         end
 
-        puts "      Found #{@citations.find_all {|e| e[:bibfile] =~ /jlesc/}.length} JLESC citations"
-        puts "      Found #{@citations.find_all {|e| e[:bibfile] !~ /jlesc/}.length} external citations"
+        num_ref_jlesc = @citations.find_all {|e| e[:bibfile] =~ /jlesc/}.length
+        num_ref_external = @citations.find_all {|e| e[:bibfile] !~ /jlesc/}.length
+        puts "      Found #{num_ref_jlesc} JLESC citations"
+        puts "      Found #{num_ref_external} external citations"
+      end
+
+      num_ref_jlesc ||= 0
+      num_ref_external ||= 0
+
+      if num_ref_jlesc == 0
+        document.content.gsub! BIBLIOGRAPHY_MATCHER_JLESC, "\nNo publication yet."
+      end
+
+      if num_ref_external == 0
+        document.content.gsub! BIBLIOGRAPHY_MATCHER_EXTERNAL, "\nNo external references."
       end
 
       document.bibtex = BibTeX::Bibliography.new
