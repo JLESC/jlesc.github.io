@@ -16,17 +16,49 @@ storage:
 numerics:
   title: Numerical Methods
   desc: >#
-    Some text
+    The efficient use of modern HPC systems has become one of the key challenges in computational
+    science.
+    Top HPC architectures already provide million-way concurrency, and current trends suggest that
+    processor counts will continue to grow rapidly.
+    There is a broad class of algorithms and methods that are common to several scientific or
+    engineering problems.
+    Ideally, the development of simulation programs follows a layered design in which generic
+    methods are applied to create or extend domain-specific solutions.
+    Such methods must therefore exploit the most efficient algorithms or parallel tools to avoid
+    becoming computational bottlenecks themselves.
+    Within JLESC, the following projects address critical issues in the field of numerical methods
+    and algorithms.
 
 resilience:
   title: Resilience
   desc: >#
-    Some text
+    Resilience is a major roadblock for HPC executions on future exascale systems.
+    Projections from current large systems and technology evolution predict errors will happen in
+    exascale systems many times per day.
+    These errors will propagate and generate various kinds of malfunctions, from simple process
+    crashes to result corruptions.
+    The past five years have seen extraordinary technical progress in many domains related to
+    exascale resilience.
+    Several technical options, initially considered inapplicable or unrealistic in the HPC context,
+    have demonstrated surprising successes.
+    Despite this progress, the exascale resilience problem is not solved, and the community is still
+    facing the difficult challenge of ensuring that exascale applications complete and generate
+    correct results while running on unstable systems.
+    Within JLESC, the following projects address critical issues in the field of resilience and
+    fault-tolerant HPC.
 
 perf_tools:
   title: Performance Tools
   desc: >#
-    Some text
+    Parallel architectures enable to target more complex and ambitious problems each year.
+    But in many cases, the achieved performance is far away from what the theoretical values
+    promised us.
+    Performance analysis tools allow application developers to identify and characterize the
+    inefficiencies that caused a poor performance.
+    We consider that this analysis must be the first step towards the optimization of an application.
+    Optimizing without a previous analysis could be like driving without directions as it could mean
+    wasting efforts improving parts of the code that were not the real performance bottlenecks.
+    Within JLESC, the following projects address critical issues in the performance tools and analysis.
 
 prog_lang:
   title: Programming Languages and Runtimes
