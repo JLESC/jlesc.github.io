@@ -6,19 +6,37 @@ navbar: Research
 subnavbar: Projects
 ---
 
+<p class="lead">
+  There are a total of {{ site.projects | size }} projects in JLESC with the following stages:
+</p>
+
+<ul class="list-inline text-xs-center" id="project-stati-stats-list">
+  {% for status in site.data.project_stati %}
+    {% assign status_id = status[0] %}
+    <li class="list-inline-item project-status-{{ status_id }}-bg">
+      {% project_status {{ status_id }} %}: {% stats_for_status {{ status_id }} %}
+    </li>
+  {% endfor %}
+</ul>
+
 <div id="project-categories-accordion" role="tablist" aria-multiselectable="false">
   {% for topic_hash in site.data.topics %}
     {% assign topic_id = topic_hash[0] %}
     {% assign topic = topic_hash[1] %}
     <div class="card">
       <div class="card-header" role="tab" id="category-heading-{{ topic_id }}">
-        <a data-toggle="collapse"
+        <a class="pull-left"
+           data-toggle="collapse"
            data-parent="#project-categories-accordion"
            href="#category-{{ topic_id }}"
            aria-expanded="true"
            aria-controls="category-{{ topic_id }}">
           <h4>{{ topic.title }}</h4>
         </a>
+        <label class="label label-default pull-right" title="number projects for {{ topic.title }}">
+          <i class="fa fa-fw fa-cubes"></i>
+          {% stats_for_topic_status {{ topic_id }} all %}
+        </label>
       </div>
       <div class="card-block collapse in"
            role="tabpanel"

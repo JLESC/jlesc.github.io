@@ -3,13 +3,17 @@ module JLESC
     institutes = site.data['institutes']
     positions = site.data['positions']
     people = site.data['people']
+    topics = site.data['topics']
+    stati = site.data['project_stati']
     projects = site.collections['projects'].docs
 
     statistics = {
         'people' => {
             'positions' => {},
         },
-        'institutes' => {}
+        'institutes' => {},
+        'topics' => {},
+        'stati' => {}
     }
 
     positions.each_key do |key|
@@ -22,6 +26,17 @@ module JLESC
           'leading' => 0,
           'people' => 0
       }
+    end
+
+    topics.each_key do |topic|
+      statistics['topics'][topic] = {}
+      stati.each_key do |status|
+        statistics['topics'][topic][status] = 0
+      end
+    end
+
+    stati.each_key do |status|
+      statistics['stati'][status] = 0
     end
 
     people.each do |id,person|
@@ -69,11 +84,20 @@ module JLESC
       inst.uniq.each do |institute|
         statistics['institutes'][institute]['projects'] += 1
       end
+
+      if project.data['topics'].is_a?(Array)
+        project.data['topics'].each do |topic|
+          statistics['topics'][topic][project.data['status']] += 1
+        end
+      else
+        statistics['topics'][project.data['topics']][project.data['status']] += 1
+      end
+
+      statistics['stati'][project.data['status']] += 1
     end
 
     JLESC.aggregate_ncsa_uiuc(statistics)
   end
-
 
   def self.aggregate_ncsa_uiuc(stats)
     stats['institutes']['ncsa'].each_pair do |key,value|
@@ -154,6 +178,53 @@ module Jekyll
         JLESC.get_stats(context.registers[:site])['people']['positions'][@markup]
       end
     end
+
+
+    class StatsForTopicStatusTag < Liquid::Tag
+      def initialize(tag_name, markup, tokens)
+        super
+        @markup = markup.strip
+      end
+
+      def split_keys(context)
+        @topic_id, @status_id = Liquid::Template.parse(@markup).render(context).split(' ')
+      end
+
+      def get_stats(context)
+        if @status_id == 'all'
+          sum = 0
+          JLESC.get_stats(context.registers[:site])['topics'][@topic_id].each_pair do |_,status|
+            sum += status
+          end
+          sum
+        else
+          JLESC.get_stats(context.registers[:site])['topics'][@topic_id][@status_id]
+        end
+      end
+
+      def render(context)
+        split_keys(context)
+        get_stats(context)
+      end
+    end
+
+
+    class StatsForStatusTag < Liquid::Tag
+      def initialize(tag_name, markup, tokens)
+        super
+        @markup = markup.strip
+      end
+
+      def get_stats(context)
+        JLESC.get_stats(context.registers[:site])['stati'][@status_id]
+      end
+
+      def render(context)
+        @status_id = Liquid::Template.parse(@markup).render(context)
+
+        get_stats(context)
+      end
+    end
   end
 end
 
@@ -165,3 +236,7 @@ Liquid::Template.register_tag('projects_for_person', Jekyll::Tags::ProjectsForPe
 Liquid::Template.register_tag('leading_for_person', Jekyll::Tags::LeadingForPersonTag)
 
 Liquid::Template.register_tag('stats_for_position', Jekyll::Tags::StatsForPositionTag)
+
+Liquid::Template.register_tag('stats_for_topic_status', Jekyll::Tags::StatsForTopicStatusTag)
+
+Liquid::Template.register_tag('stats_for_status', Jekyll::Tags::StatsForStatusTag)
