@@ -1,18 +1,20 @@
 module JLESC
   def self.get_stats(site)
     institutes = site.data['institutes']
+    positions = site.data['positions']
     people = site.data['people']
     projects = site.collections['projects'].docs
 
     statistics = {
         'people' => {
-            'positions' => {
-                'permanent' => 0,
-                'PhD student' => 0
-            },
+            'positions' => {},
         },
         'institutes' => {}
     }
+
+    positions.each_key do |key|
+      statistics['people']['positions'][key] = 0
+    end
 
     institutes.each_key do |key|
       statistics['institutes'][key] = {
@@ -140,6 +142,18 @@ module Jekyll
         get_stats(context)['projects']['leading']
       end
     end
+
+
+    class StatsForPositionTag < Liquid::Tag
+      def initialize(tag_name, markup, tokens)
+        super
+        @markup = markup.strip
+      end
+
+      def render(context)
+        JLESC.get_stats(context.registers[:site])['people']['positions'][@markup]
+      end
+    end
   end
 end
 
@@ -149,3 +163,5 @@ Liquid::Template.register_tag('leading_for_partner', Jekyll::Tags::LeadingForPar
 
 Liquid::Template.register_tag('projects_for_person', Jekyll::Tags::ProjectsForPersonTag)
 Liquid::Template.register_tag('leading_for_person', Jekyll::Tags::LeadingForPersonTag)
+
+Liquid::Template.register_tag('stats_for_position', Jekyll::Tags::StatsForPositionTag)

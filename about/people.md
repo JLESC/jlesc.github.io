@@ -15,6 +15,12 @@ subnavbar: People
   </a>.
 </p>
 
+<p>
+  There are {% stats_for_position permanent %} people with a permanent position,
+  {% stats_for_position post_doc %} post doctorates and {% stats_for_position phd %} PhD students
+  among the total of {{ site.data.people | size }} listed individuals within JLESC.
+</p>
+
 <div class="table-responsive">
   <table id="people-db" class="table table-striped">
     <thead class="thead-default">
@@ -64,7 +70,7 @@ subnavbar: People
             {% endunless %}
           {% endfor %}
         </td>
-        <td class="col-position">{{ person.position }}</td>
+        <td class="col-position">{% person_position {{ person.position }} %}</td>
         <td class="col-projects">{% projects_for_person {{ person_id }} %}</td>
         <td class="col-leading">{% leading_for_person {{ person_id }} %}</td>
         <td class="col-topics">{{ person.topics }}</td>
