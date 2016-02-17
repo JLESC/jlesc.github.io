@@ -22,6 +22,8 @@ subnavbar: People
         <th class="col-name">Name</th>
         <th class="col-affiliation">Affiliation</th>
         <th class="col-position">Position</th>
+        <th class="col-projects"><i class="fa fa-fw fa-cubes" title="participating in # projects"></i></th>
+        <th class="col-leading"><i class="fa fa-fw fa-graduation-cap" title="leading # projects"></i></th>
         <th class="col-topics">Topics</th>
       </tr>
     </thead>
@@ -63,6 +65,8 @@ subnavbar: People
           {% endfor %}
         </td>
         <td class="col-position">{{ person.position }}</td>
+        <td class="col-projects">{% projects_for_person {{ person_id }} %}</td>
+        <td class="col-leading">{% leading_for_person {{ person_id }} %}</td>
         <td class="col-topics">{{ person.topics }}</td>
       </tr>
     {% endfor %}

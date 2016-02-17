@@ -96,13 +96,25 @@ $(document).ready(function() {
 
     $('#people-db').DataTable({
         "columnDefs": [
-            { "orderable": false, "targets": 3 } // column 'Topics' should not be sortable
+            { "orderable": false, "targets": 5 } // column 'Topics' should not be sortable
         ],
         "lengthMenu": [ [5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]],
-        "pageLength": 25,
+        "pageLength": 10,
         "language": {
             "lengthMenu": "Display _MENU_ people"
         }
+    });
+
+    $('#stats-institutes').DataTable({
+        "info": false,
+        "paging": false,
+        "searching": false,
+        "columns": [
+            null,
+            {"type": "num"},
+            {"type": "num"},
+            {"type": "num"}
+        ]
     });
 
     $.fn.dataTable.moment('DD MMM YYYY');

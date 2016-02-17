@@ -276,6 +276,13 @@ html {
       }
     }
 
+    #statistics {
+      .spacer {
+        display: block;
+        height: ($spacer-y * 2);
+      }
+    }
+
     .github-box {
       .github-box-title {
         padding-left: ($spacer-x * 2) !important;
