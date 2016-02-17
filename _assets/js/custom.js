@@ -1,3 +1,4 @@
+//= require 'vendor/jquery-2.1.4.min.js'
 //= require 'vendor/bootstrap.min.js'
 //= require 'vendor/jquery.dataTables.min.js'
 //= require 'vendor/dataTables.bootstrap.min.js'
