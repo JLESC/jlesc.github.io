@@ -94,6 +94,10 @@ $(document).ready(function() {
         });
     });
 
+    $('#project-categories-accordion .collapse').each(function() {
+       $(this).collapse('hide');
+    });
+
     $('#people-db').DataTable({
         "columnDefs": [
             { "orderable": false, "targets": 5 } // column 'Topics' should not be sortable
