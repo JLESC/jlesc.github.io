@@ -24,7 +24,8 @@ The workshop featured sessions on these five central topics:
   * Big Data, I/O and visualization
   * Numerical methods and algorithms
 
-{% image 'jlesc-4-participants.jpg' class:'img-fluid center-block' alt:'Participants of the 4th JLESC Workshop' %}
+{% lightbox_image 'jlesc-4-participants.jpg'
+     class:'img-fluid center-block' alt:'Participants of the 4th JLESC Workshop' %}
 
 A key objective of the workshop is to identify new research collaborations and establish a roadmap
 for their implementation.
