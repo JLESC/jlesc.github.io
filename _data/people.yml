@@ -32,7 +32,7 @@ amer_a:
   sur_name: Amer
   given_name: Abdelhalim
   affiliation: anl
-  position: 
+  position:
   topics:
   email: aamer@anl.gov
   homepage: http://www.mcs.anl.gov/~aamer/
@@ -41,7 +41,7 @@ antoniu_g:
   sur_name: Antoniu
   given_name: Gabriel
   affiliation: inria
-  position: 
+  position:
   topics:
   email: gabriel.antoniu@inria.fr
   homepage: https://team.inria.fr/kerdata/gabriel-antoniu/
@@ -106,6 +106,7 @@ dun_n:
   sur_name: Dun
   given_name: Nan
   affiliation: anl
+  position:
   email:
   homepage:
   
@@ -113,7 +114,7 @@ ibrahim_s:
   sur_name: Ibrahim
   given_name: Shadi
   affiliation: inria
-  position: 
+  position:
   topics:  
   email: 
   homepage: https://team.inria.fr/kerdata/shadi-ibrahim/
@@ -130,7 +131,7 @@ klatt_t:
   sur_name: Klatt
   given_name: Torbjörn
   affiliation: jsc
-  position: PhD student
+  position: phd
   topics: parallel-in-time integration
   email: t.klatt@fz-juelich.de
   homepage:
@@ -148,7 +149,7 @@ haensel_d:
   sur_name: Haensel
   given_name: David
   affiliation: jsc
-  position: PhD student
+  position: phd
 
 labarta_j:
   sur_name: Labarta
@@ -198,7 +199,7 @@ vandenbergen_n:
   sur_name: Vandenbergen
   given_name: Nicholas
   affiliation: jsc
-  position: PhD student
+  position: phd
   email: n.vandenbergen@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/vandenbergen_n.html
 
