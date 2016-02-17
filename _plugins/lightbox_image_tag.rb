@@ -13,7 +13,7 @@ module Jekyll
       end
 
       def render(context)
-        image = Liquid::Template.parse("{% image #{@markup} %}").render(context)
+        image = Liquid::Template.parse("{% image #{@markup} magick:resize:1000> %}").render(context)
         image_path = Liquid::Template.parse("{% image_path #{@image} %}").render(context)
         "<a href=\"#\" data-featherlight=\"#{image_path}\">#{image}</a>"
       end
