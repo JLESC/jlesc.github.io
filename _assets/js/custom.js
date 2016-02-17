@@ -6,6 +6,7 @@
 //= require 'vendor/dataTables.plugins.datetime_moment.js'
 //= require 'vendor/jquery.githubRepoWidget.js'
 //= require 'vendor/jXHR.js'
+//= require 'vendor/featherlight.js'
 
 var github = (function(){
     function escapeHtml(str) {
