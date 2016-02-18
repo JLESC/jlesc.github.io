@@ -1,10 +1,10 @@
 #
-# Statuses of Projects
+# States of Projects
 #
 #
 # ## Purpose
 #
-# - validation of project statuses (c.f. `status` YAML field of projects)
+# - validation of project states (c.f. `status` YAML field of projects)
 #
 #
 # ## Identifier Format
