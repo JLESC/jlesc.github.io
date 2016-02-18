@@ -37,6 +37,8 @@
 #       multiple lines
 #     ...
 #
+# [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
+#
 
 anl:
   title: Argonne National Laboratory

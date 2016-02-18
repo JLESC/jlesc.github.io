@@ -36,6 +36,8 @@
 #       multiple lines
 #     ...
 #
+# [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
+#
 
 architectures:
   title: Advanced Architectures

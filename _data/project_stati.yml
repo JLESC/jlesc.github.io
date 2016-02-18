@@ -34,6 +34,8 @@
 #       multiple lines
 #     ...
 #
+# [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
+#
 
 help_wanted:
   title: help wanted
