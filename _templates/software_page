@@ -1,18 +1,123 @@
 ---
 layout: page_software
-title: 
-date: 
+title:
+date:
 updated:
 navbar: Software
-subnavbar:
 logo: 
-code_url: 
+code_url:
 language:
-license: 
+license:
+github_repo:
+releases:
+  -
+institutes:
+  -
+topics:
+  -
 developers:
-  - name: 
-    email: 
-    lead_developer: true
-short_desc: 
+  -
+contributors:
+  -
 ---
+{% comment %}
+================================
+=== HOW TO USE THIS TEMPLATE ===
+================================
 
+Copy this file to `_software` and rename it to a very short version of your software's name.
+
+Then fill in the YAML front matter above.
+Here are some details on the available fields and their format:
+
+- title
+  (required)
+  The name of the software.
+
+- date
+  (required)
+  The date this page was created in the format: YYYY-MM-DD.
+  This will get displayed at the very bottom of the generated website.
+
+- updated
+  (optional)
+  In case you or somebody else came back later and edited significant parts of the page, put in the date (format: YYYY-MM-DD) of that change.
+  If present, this will get displayed at the very bottom of the generated website.
+
+- logo
+  (optional)
+  In case your software has a logo, you can put here the file name relative to the assets path (_assets/images).
+
+- code_url
+  (optional)
+  The full link to the main website of the software, where one can find more information and the source code of the software.
+
+- language
+  (optional)
+  The programming language the software is written in
+
+- license
+  (optional)
+  The software license used for the software
+
+- github_repo
+  (optional)
+  In case the software's source code is hosted on GitHub, put in the USER/REPO slug, e.g.
+  JLESC/jlesc.github.io
+
+- releases
+  (optional)
+  A YAML list of official releases/versions of the software.
+  Each release is a YAML mapping with the following fields
+
+  - version
+    (required)
+    The version string of the release
+
+  - date
+    (optional)
+    The date of release in the form YYYY-MM-DD
+
+  - link
+    (optional)
+    Link to the release page with detailed information of the release, e.g. changelog
+
+  - download
+    (optional)
+    Link to the release archive, i.e. the packed source code of the release
+
+- institutes
+  (optional)
+  A YAML list of institute IDs (see _data/institutes.yml), which are funding the development of the software
+
+- topics
+  (optional)
+  A YAML list of JLESC topic IDs (see _data/topics.yml) this software can be categorized with
+
+- developers
+  (optional)
+  A YAML list of JLESCees developing the software
+  Each entry is a mapping with the following fields
+
+  - id
+    (required)
+    developer's person ID as in _data/people.yml
+
+  - lead_developer
+    (optional)
+    A value of 'true' indicates the person as a lead developer.
+
+- contributors
+  (optional)
+  A list of non-JLESC developers of the software
+  Each entry is a mapping with the following fields
+
+  - name
+    (required)
+    The name of developer
+
+  - lead_developer
+    (optional)
+    A value of 'true' indicates the person as a lead developer
+
+{% endcomment %}

@@ -1,7 +1,7 @@
 <section class="group-meta card">
   <div class="card-header">Software Profile</div>
   {% if page.logo %}
-    <img class="img-fluid p-a-1" src="{{ root_url }}/images/{{ page.logo }}" alt="{{ page.title }} Logo" />
+    {% image {{ page.logo }} class:"img-fluid p-a-1" alt:"{{ page.title }} Logo" %}
   {% endif %}
   <ul class="list-group list-group-flush">
     {% if page.code_url %}
