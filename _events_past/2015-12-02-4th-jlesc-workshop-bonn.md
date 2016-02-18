@@ -8,6 +8,9 @@ subnavbar: Past
 event_location: Bonn, Germany
 event_start: 2015-12-02
 event_end: 2015-12-04
+event_short_url:
+event_url: http://www.fz-juelich.de/ias/jsc/jlesc-4
+wayback_url: http://web.archive.org/web/20160218083107/http://www.fz-juelich.de/ias/jsc/EN/Expertise/Workshops/Conferences/JLESC-4/_node.html
 kind: workshop
 ---
 
