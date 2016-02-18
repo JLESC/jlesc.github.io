@@ -10,6 +10,7 @@ event_start: 2015-12-02
 event_end: 2015-12-04
 event_short_url:
 event_url:
+wayback_url:
 kind: workshop
 ---
 

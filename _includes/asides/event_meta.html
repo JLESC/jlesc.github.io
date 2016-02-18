@@ -9,6 +9,14 @@
         <label class="col-sm-4">Homepage</label>
         <div class="col-sm-8">
           <a href="{{ page.event_url }}" target="_blank">{% if page.event_short_url %}{{ page.event_short_url }}{% else %}{{ page.event_url | trim_url }}{% endif %}</a>
+          {% if page.wayback_url %}
+            <span class="pull-right">
+              <a href="{{ page.wayback_url }}" target="_blank"
+                 title="Event web site in Archive.org Wayback machine">
+                <i class="fa fa-history fa-fw"></i>
+              </a>
+            </span>
+          {% endif %}
         </div>
       </li>
     {% endif %}
