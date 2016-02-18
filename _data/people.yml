@@ -13,14 +13,14 @@
 # For the sake of uniqueness and uniformity, construct a person's identifier according to this
 # scheme:
 #
-#   SURNAME1_SURNAME2_GIVEN_NAME_INITIALS
+#   SURNAME1_SURNAME2_GIVEN_NAME_INITIAL
 #
 # Only use lower case letters, numbers and underscores!
 #
 # Examples:
 #
 #   "Jack Johnson"              -> johnson_j
-#   "Betty Katherine O'Connor"  -> oconnor_b_k
+#   "Betty Katherine O'Connor"  -> oconnor_b
 #   "Yin Wing Wang"              -> wing_wang_y
 #
 #
