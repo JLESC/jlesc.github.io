@@ -12,6 +12,7 @@ event_short_url:
 event_url:
 wayback_url:
 kind: summer_school
+institute: bsc
 ---
 
 Thursday Jul 2cd.

@@ -12,6 +12,7 @@ event_short_url:
 event_url:
 wayback_url:
 kind: workshop
+institute: inria
 ---
 
 The workshop will take place at END-Lyon and will gather top researchers in HPC from INRIA,
