@@ -1,21 +1,60 @@
+#
+# Official Research Topics in JLESC
+#
+#
+# ## Purpose
+#
+# - validation of project categories (c.f. `topics` YAML field of projects)
+#
+#
+# ## Identifier Format
+#
+# no additional restrictions to standard YAML's mappings
+#
+#
+# ## Require Attributes
+#
+#   title          the name of the kind as rendered on the website
+#   desc           a detailed description of the topic; shows up on the website and in the LaTeX
+#                  report
+#
+#
+# ## Optional Attributes
+#
+# -none-
+#
+#
+# ## Notes
+#
+# - stick to a total line length of 100 characters ................................ this is here ->|
+#   For longer text fields (e.g. 'topics') use YAML's "Folded style" [1]:
+#
+#   johnson_j:
+#     ...
+#     topics: >
+#       a really long description spanning
+#       multiple lines
+#     ...
+#
+
 architectures:
   title: Advanced Architectures
-  desc: >#
+  desc: >
     Some text
 
 apps:
   title: Apps & Mini-Apps
-  desc: >#
+  desc: >
     Some text
 
 storage:
   title: I/O, Storage and In-Situ Processing
-  desc: >#
+  desc: >
     Some text
 
 numerics:
   title: Numerical Methods
-  desc: >#
+  desc: >
     The efficient use of modern HPC systems has become one of the key challenges in computational
     science.
     Top HPC architectures already provide million-way concurrency, and current trends suggest that
@@ -31,7 +70,7 @@ numerics:
 
 resilience:
   title: Resilience
-  desc: >#
+  desc: >
     Resilience is a major roadblock for HPC executions on future exascale systems.
     Projections from current large systems and technology evolution predict errors will happen in
     exascale systems many times per day.
@@ -49,7 +88,7 @@ resilience:
 
 perf_tools:
   title: Performance Tools
-  desc: >#
+  desc: >
     Parallel architectures enable to target more complex and ambitious problems each year.
     But in many cases, the achieved performance is far away from what the theoretical values
     promised us.
@@ -62,5 +101,5 @@ perf_tools:
 
 prog_lang:
   title: Programming Languages and Runtimes
-  desc: >#
+  desc: >
     Some text
