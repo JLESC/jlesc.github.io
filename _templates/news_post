@@ -15,15 +15,21 @@ described in the JLESC website wiki: https://github.com/JLESC/jlesc.github.io/wi
 
 Then fill in the YAML front matter variables:
 
-  title            The title of the news post.
-                   Try to keep it short but descriptive.
-  date             The date the news post was written and published.
-                   Stick to the date format: YYYY-MM-DD HH:MM:SS +ZZZZ
-  updated          In case the news post has received a significant update, put in the date of the
-                   last update.
-                   Stick to the date format: YYYY-MM-DD HH:MM:SS +ZZZZ
-  author           The person ID of the author of the news post as defined in `_data/people.yml`
+  title            (required)
+                   the title of the news post;
+                   try to keep it short but descriptive
 
+  date             (required)
+                   the date the news post was written and published;
+                   stick to the date format: YYYY-MM-DD HH:MM:SS +ZZZZ
+
+  updated          (optional)
+                   in case the news post has received a significant update, put in the date of the
+                   last update;
+                   stick to the date format: YYYY-MM-DD HH:MM:SS +ZZZZ
+
+  author           (required)
+                   the person ID of the author of the news post as defined in `_data/people.yml`
 
 You can use
 
