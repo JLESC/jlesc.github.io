@@ -8,6 +8,8 @@ subnavbar: Past
 event_location: Barcelona, Spain
 event_start: 2015-07-02
 event_end: 2015-07-03
+event_short_url:
+event_url:
 kind: summer_school
 ---
 

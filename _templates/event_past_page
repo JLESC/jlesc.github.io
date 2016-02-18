@@ -8,5 +8,7 @@ subnavbar: Past
 event_location:
 event_start:
 event_end:
+event_short_url:
+event_url:
 kind:
 ---

@@ -8,6 +8,8 @@ subnavbar: Past
 event_location: Bonn, Germany
 event_start: 2015-12-02
 event_end: 2015-12-04
+event_short_url:
+event_url:
 kind: workshop
 ---
 
