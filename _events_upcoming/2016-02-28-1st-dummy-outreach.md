@@ -2,7 +2,7 @@
 layout: page_event
 title: 1st Dummy Outreach Event
 date: 2016-02-15
-update:
+updated:
 navbar: Events
 subnavbar: Upcoming
 event_location: Milky Way

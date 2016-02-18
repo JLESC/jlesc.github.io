@@ -2,7 +2,7 @@
 layout: page_event
 title: 2nd JLESC Summer School
 date: 2016-02-15
-update:
+updated:
 navbar: Events
 subnavbar: Past
 event_location: Barcelona, Spain
