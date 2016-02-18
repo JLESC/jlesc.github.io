@@ -4,7 +4,7 @@ module JLESC
     positions = site.data['positions']
     people = site.data['people']
     topics = site.data['topics']
-    statuses = site.data['project_statuses']
+    states = site.data['project_states']
     projects = site.collections['projects'].docs
 
     statistics = {
@@ -13,7 +13,7 @@ module JLESC
         },
         'institutes' => {},
         'topics' => {},
-        'statuses' => {}
+        'states' => {}
     }
 
     positions.each_key do |key|
@@ -30,13 +30,13 @@ module JLESC
 
     topics.each_key do |topic|
       statistics['topics'][topic] = {}
-      statuses.each_key do |status|
+      states.each_key do |status|
         statistics['topics'][topic][status] = 0
       end
     end
 
-    statuses.each_key do |status|
-      statistics['statuses'][status] = 0
+    states.each_key do |status|
+      statistics['states'][status] = 0
     end
 
     people.each do |id,person|
@@ -93,7 +93,7 @@ module JLESC
         statistics['topics'][project.data['topics']][project.data['status']] += 1
       end
 
-      statistics['statuses'][project.data['status']] += 1
+      statistics['states'][project.data['status']] += 1
     end
 
     JLESC.aggregate_ncsa_uiuc(statistics)
@@ -216,7 +216,7 @@ module Jekyll
       end
 
       def get_stats(context)
-        JLESC.get_stats(context.registers[:site])['statuses'][@status_id]
+        JLESC.get_stats(context.registers[:site])['states'][@status_id]
       end
 
       def render(context)
