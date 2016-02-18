@@ -1,3 +1,42 @@
+#
+# Positions of People
+#
+#
+# ## Purpose
+#
+# - validation of people's positions (c.f. `position` attribute of people, `_data/people.yml`)
+#
+#
+# ## Identifier Format
+#
+# no additional restrictions to standard YAML's mappings
+#
+#
+# ## Require Attributes
+#
+#   title          the name of the position as rendered on the website
+#
+#
+# ## Optional Attributes
+#
+# -none-
+#
+#
+# ## Notes
+#
+# - stick to a total line length of 100 characters ................................ this is here ->|
+#   For longer text fields (e.g. 'topics') use YAML's "Folded style" [1]:
+#
+#   johnson_j:
+#     ...
+#     topics: >
+#       a really long description spanning
+#       multiple lines
+#     ...
+#
+# [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
+#
+
 permanent:
   title: permanent
 

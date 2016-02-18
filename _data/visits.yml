@@ -1,3 +1,45 @@
+#
+# List of Visits conducted by People in JLESC
+#
+#
+# ## Purpose
+#
+# - data source for the table on `research/visits.html`
+#
+#
+# ## Identifier Format
+#
+# This is a unnamed list of entries, thus there are no identifiers.
+#
+#
+# ## Require Attributes
+#
+#   from           ID (`_data/people.yml`) of the person traveling
+#   to             ID (`_data/people.yml`) of the person in the role of the host
+#   start          date of the start of the visit; format: YYYY-MM-DD
+#   end            date of the end of the visit; format: YYYY-MM-DD
+#
+#
+# ## Optional Attributes
+#
+# -none-
+#
+#
+# ## Notes
+#
+# - stick to a total line length of 100 characters ................................ this is here ->|
+#   For longer text fields (e.g. 'topics') use YAML's "Folded style" [1]:
+#
+#   johnson_j:
+#     ...
+#     topics: >
+#       a really long description spanning
+#       multiple lines
+#     ...
+#
+# [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
+#
+
 - from: haensel_d
   to: balaji_p
   start: 2015-02-04

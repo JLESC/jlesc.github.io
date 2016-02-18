@@ -1,30 +1,63 @@
-# A 'database' of people participating in the JLESC cooperation
 #
-# Each entry consists of a unique identifier and some fields:
+# Database of People participating in JLESC
 #
-#     identifier:
-#       sur_name: Doe
-#       given_name: John
-#       affiliation: affiliation_id
-#       position: Head of Department
-#       topics: awesome research
-#       email: official email
-#       homepage: link to homepage
 #
-# The identifier should be constructed from the surname and the initial letter of the first name,
-# all lower case and separated by an underscore.
+# ## Purpose
 #
-# The affiliation must be an affiliation identifier as found in /_data/institutes.yml.
-# Multiple affiliations can be given in list/array syntax:
-#    [first, second]
+# - data source for the table on `about/people.html`
+# - data source for custom _person_ Liquid tags
 #
-# The email should be the official 'work' email of the person, e.g. @fz-juelich.de.
 #
-# The homepage field can be left empty, but should point to a personal page with more details on
-# research interests, publications and contact data.
+# ## Identifier Format
 #
-# !! NOTE !!
-# Please keep the entries below in alphanumerical order according to the identifier. Thanks!
+# For the sake of uniqueness and uniformity, construct a person's identifier according to this
+# scheme:
+#
+#   SURNAME1_SURNAME2_GIVEN_NAME_INITIAL
+#
+# Only use lower case letters, numbers and underscores!
+#
+# Examples:
+#
+#   "Jack Johnson"              -> johnson_j
+#   "Betty Katherine O'Connor"  -> oconnor_b
+#   "Yin Wing Wang"              -> wing_wang_y
+#
+#
+# ## Required Attributes
+#
+#   sur_name       surnames, e.g. "Johnson", "O'Conner", "Wing Wang"
+#   given_name     given names, e.g. "Jack", "Betty Katherine", "Yin"
+#   affiliation    institute ID as defined in `_data/institutes.yml`; either a single ID or a YAML
+#                  list of IDs
+#
+#
+# ## Optional Attributes
+#
+#   position       ID of the person's position at the first (or only) affiliation; ID must be an
+#                  entry in `_data/positions.yml`
+#   topics         free text describing the research interest (should be as short as possible!)
+#   email          official person's email address (should be of first (or only) affiliation)
+#   homepage       official private person's homepage (e.g. profile page at first (or only)
+#                  affiliation)
+#
+#
+# ## Notes
+#
+# - stick to a total line length of 100 characters ................................ this is here ->|
+#   For longer text fields (e.g. 'topics') use YAML's "Folded style" [1]:
+#
+#   johnson_j:
+#     ...
+#     topics: >
+#       a really long description spanning
+#       multiple lines
+#     ...
+#
+# - keep the entries in alphanumerical order with respect to the identifier
+#
+#
+# [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
 #
 
 
@@ -87,7 +120,7 @@ cappello_f:
   given_name: Franck
   affiliation: anl
   position: permanent
-  topics: >#
+  topics: >
     this is a really long text for demonstration puroses of line breaks and not really the
     actual research interests of Franck Cappello
   email: cappello@anl.gov
