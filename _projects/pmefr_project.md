@@ -5,7 +5,6 @@ date: 2016-02-10
 updated:
 navbar: Research
 subnavbar: Projects
-footer: true
 project_url:
 status: starting
 topics:

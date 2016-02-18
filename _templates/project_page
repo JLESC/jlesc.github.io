@@ -5,7 +5,6 @@ date:
 updated:
 navbar: Research
 subnavbar: Projects
-footer: true
 project_url:
 status:
 topics:
@@ -17,9 +16,9 @@ members:
   -
 ---
 {% comment %}
-===============================
-=== HOWTO USE THIS TEMPLATE ===
-===============================
+================================
+=== HOW TO USE THIS TEMPLATE ===
+================================
 
 Copy this file to `_projects` and rename it to a very short version of your project's title, e.g.
 the project "Scalability Enhancements to FMM for Molecular Dynamics Simulations" chooses
