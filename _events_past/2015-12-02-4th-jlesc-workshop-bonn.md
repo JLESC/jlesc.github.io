@@ -4,14 +4,15 @@ title: 4th JLESC Workshop
 date: 2016-02-15
 updated:
 navbar: Events
-subnavbar: Past
 event_location: Bonn, Germany
 event_start: 2015-12-02
 event_end: 2015-12-04
 event_short_url:
 event_url: http://www.fz-juelich.de/ias/jsc/jlesc-4
 wayback_url: http://web.archive.org/web/20160218083107/http://www.fz-juelich.de/ias/jsc/EN/Expertise/Workshops/Conferences/JLESC-4/_node.html
+logo: 4th-jlesc-logo.png
 kind: workshop
+institute: jsc
 ---
 
 The workshop gathered leading researchers in high-performance computing from the JLESC partners INRIA,

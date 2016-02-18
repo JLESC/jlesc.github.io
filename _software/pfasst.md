@@ -1,13 +1,13 @@
 ---
 layout: page_software
-title: "PFASST++"
+title: PFASST++
 date: 2014-06-15 16:45 +0200
 updated: 2016-02-12 10:00:00 +0200
 navbar: Software
-logo: 
+logo:
 code_url: https://github.com/Parallel-in-Time/PFASST
 language: C++
-github_repo: "Parallel-in-Time/PFASST"
+github_repo: Parallel-in-Time/PFASST
 license: BSD 2-clause
 institutes:
   - jsc
@@ -45,7 +45,6 @@ contributors:
   - name: Daniel Ruprecht
   - name: Fabian Köhler
   - name: Selman Terzi
-short_desc: A C++ library for SDC, MLSDC and PFASST.
 ---
 A modern C++ library for the PFASST algorithm. 
 

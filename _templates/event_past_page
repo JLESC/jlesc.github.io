@@ -1,15 +1,67 @@
 ---
 layout: page_event
-title: 
-date: 
+title:
+date:
 updated:
 navbar: Events
-subnavbar: Past
 event_location:
 event_start:
 event_end:
-event_short_url:
 event_url:
+event_short_url:
 wayback_url:
 kind:
+institute:
 ---
+{% comment %}
+================================
+=== HOW TO USE THIS TEMPLATE ===
+================================
+
+Copy this file to `_events_past/` and name it according to the naming convention of event pages as
+described in the JLESC website wiki: https://github.com/JLESC/jlesc.github.io/wiki/Conventions
+
+Then fill in the YAML front matter variables:
+
+  title            (required)
+                   full title of the event
+
+  date             (required)
+                   the date this page was created in the format: YYYY-MM-DD;
+                   this will get displayed at the very bottom of the generated website
+
+  updated          (optional)
+                   in case you or somebody else came back later and edited significant parts of the
+                   page, put in the date (format: YYYY-MM-DD) of that change;
+                   if present, this will get displayed at the very bottom of the generated website
+
+  event_location   (optional)
+                   where the event will take place;
+                   try not to be too specific; "City, Country" is sufficient here
+
+  event_start      (optional)
+                   the starting date of the event in the format: YYYY-MM-DD
+
+  event_end        (optional)
+                   the end date of the event in the format: YYYY-MM-DD
+
+  event_url        (optional)
+                   URL to an external homepage for the event
+
+  event_short_url  (optional)
+                   in case the above URL is very long and cryptic, you can give a short and readable
+                   URL here only to be displayed;
+                   this must not be an actual link
+
+  wayback_url      (optional)
+                   put here the URL to the snapshot of the event's URL as it is saved by the
+                   WaybackMachine of Archive.org: https://archive.org/web/
+
+  kind             (required)
+                   the kind of event this is;
+                   valid values are defined in _data/event_kinds.yml
+
+  institute        (optional)
+                   institute ID (see _data/institutes.yml) organizing and hosting the event
+
+{% endcomment %}
