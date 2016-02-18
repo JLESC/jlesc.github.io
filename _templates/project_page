@@ -50,7 +50,7 @@ Then fill in the YAML header variables above.
 
 - status
   The current status of the project.
-  You have to use one of the keys defined in '_data/project_statuses.yml'
+  You have to use one of the keys defined in '_data/project_states.yml'
 
 - topics
   A list of topic keys (as defined in '_data/topics.yml') for this project.
