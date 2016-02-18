@@ -10,8 +10,8 @@ subnavbar: Projects
   There are a total of {{ site.projects | size }} projects in JLESC with the following stages:
 </p>
 
-<ul class="list-inline text-xs-center" id="project-stati-stats-list">
-  {% for status in site.data.project_stati %}
+<ul class="list-inline text-xs-center" id="project-statuses-stats-list">
+  {% for status in site.data.project_statuses %}
     {% assign status_id = status[0] %}
     <li class="list-inline-item project-status-{{ status_id }}-bg">
       {% project_status {{ status_id }} %}: {% stats_for_status {{ status_id }} %}

@@ -11,19 +11,19 @@ module Jekyll
         super
         @markup = markup.strip
         @status = nil
-        @stati = nil
+        @statuses = nil
       end
 
       def get_status(context)
-        @stati = context.registers[:site].data['project_stati']
+        @statuses = context.registers[:site].data['project_statuses']
 
         @status_id = Liquid::Template.parse(@markup).render(context)
 
-        if @stati.has_key?(@status_id)
-          @status = @stati[@status_id]
+        if @statuses.has_key?(@status_id)
+          @status = @statuses[@status_id]
         else
           raise RenderProjectStatusTagError.new \
-            "ProjectStatusID '#{@status_id}' not found. Probably a typo? See _data/project_stati.yml."
+            "ProjectStatusID '#{@status_id}' not found. Probably a typo? See _data/project_statuses.yml."
         end
       end
 
