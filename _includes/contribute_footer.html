@@ -4,10 +4,16 @@
   {% assign content = 'content' %}
 {% endif %}
 
+{% if include.link %}
+  {% assign link = include.link %}
+{% else %}
+  {% assign link = 'https://github.com/JLESC/jlesc.github.io/wiki' %}
+{% endif %}
+
 <footer id="contribute" class="card card-contribute text-xs-center small">
   <div class="card-block">
     <p class="card-text">
-      Want your {{ content }} to show up here? <a href="https://github.com/JLESC/jlesc.github.io/wiki">You can do it yourself</a>!
+      Want your {{ content }} to show up here? <a href="{{ link }}">You can do it yourself</a>!
     </p>
   </div>
 </footer>
