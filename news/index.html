@@ -12,6 +12,11 @@ footer: false
   {% endfor %}
 </div>
 
+{% include contribute_footer.html
+  content='news'
+  link='https://github.com/JLESC/jlesc.github.io/wiki/Editing-Pages#editing-news'
+%}
+
 <nav class="row">
   <div class="col-xs-3 col-md-2">
     <a href="{% if paginator.next_page %}{{ paginator.next_page_path }}{% else %}#{% endif %}"
