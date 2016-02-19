@@ -23,9 +23,9 @@ subnavbar: Visits
       <tr>
         <th class="col-visitor">Visitor</th>
         <th class="col-host">Host</th>
-        <th class="col-start">From</th>
-        <th class="col-end">To</th>
-        <th class="col-pm"><abbr title="Person-Months">PM</abbr></th>
+        <th class="col-start">Start</th>
+        <th class="col-end">End</th>
+        <th class="col-pm"><abbr title="Person-Months (see note below)">PM</abbr></th>
       </tr>
     </thead>
     <tbody>
@@ -34,7 +34,13 @@ subnavbar: Visits
         {% assign visit_duration = visit.end | date:"%s" | minus:visit_start_stamp %}
         <tr>
           <td class="col-visitor">{% person_inverse {{ visit.from }} %}</td>
-          <td class="col-host">{% person_inverse {{ visit.to }} %}</td>
+          <td class="col-host">
+            {% if visit.to %}
+              {% person_inverse {{ visit.to }} %}
+            {% else %}
+              {% institute {{ visit.host }} %}
+            {% endif %}
+          </td>
           <td class="col-start">
             {{ visit.start | date_to_string }}
           </td>
@@ -42,7 +48,12 @@ subnavbar: Visits
             {{ visit.end | date_to_string }}
           </td>
           <td class="col-pm">
-            <abbr title="{% duration_humanized {{ visit_duration }} %}">
+            {% if visit.no_exact %}
+              <abbr title="start date and/or end date is not exact" class="pull-left">
+                <i class="fa fa-fw fa-exclamation"></i>
+              </abbr>
+            {% endif %}
+            <abbr title="{% if visit.no_exact %}roughly {% endif %}{% duration_humanized {{ visit_duration }} %}">
               {% duration_pms {{ visit_duration }} %}
             </abbr>
           </td>
@@ -55,4 +66,5 @@ subnavbar: Visits
 <p class="text-muted">
   The amount of <em>Person-Months</em> is computed from the start and end date of each visit with
   the assumption of 30 days per month.
+  The values are rounded to a quarter of a <em>PM</em>.
 </p>

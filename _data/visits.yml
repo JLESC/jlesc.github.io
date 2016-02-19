@@ -15,17 +15,35 @@
 # ## Require Attributes
 #
 #   from           ID (`_data/people.yml`) of the person traveling
-#   to             ID (`_data/people.yml`) of the person in the role of the host
-#   start          date of the start of the visit; format: YYYY-MM-DD
-#   end            date of the end of the visit; format: YYYY-MM-DD
+#   start          date of the start of the visit; format: YYYY-MM-DD; consult note below
+#   end            date of the end of the visit; format: YYYY-MM-DD; consult note below
+#
+#
+# ## Conditional Required Attributes
+#
+# exactly one of those has to be given:
+#
+#   to             ID (`_data/institutes.yml`) of the host institute
+#   invitee        ID (`_data/people.yml`) of the person inviting the visitor
+#
+# Whenever possible, the `invitee` form should be preferred.
+# Only in those cases, where there is no clear JLESCee individual inviting the traveling person the
+# first form stating the host institute should be used.
 #
 #
 # ## Optional Attributes
 #
-# -none-
+#   no_exact       give value 'true' if the start and/or end date is not the exact date;
+#                  see note blow on those dates
 #
 #
 # ## Notes
+#
+# - In those rare cases where the exact dates (exact day of month) of the travel can not be given
+#   we advice the following procedure:
+#     - specify the start date to be the first day of the month the visit started
+#     - specify the end date to be the last day of the month the visit ended
+#     - add the optional attribute 'no_exact' with a value of 'true'
 #
 # - stick to a total line length of 100 characters ................................ this is here ->|
 #   For longer text fields (e.g. 'topics') use YAML's "Folded style" [1]:
@@ -40,21 +58,26 @@
 # [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
 #
 
+# this is a dummy entry
 - from: haensel_d
   to: balaji_p
   start: 2015-02-04
   end: 2015-02-15
 
-- from: haensel_d
-  to: balaji_p
+# this is a dummy entry
+- from: speck_r
+  host: riken
   start: 2016-02-04
   end: 2016-02-8
 
-- from: haensel_d
-  to: balaji_p
-  start: 2015-02-04
-  end: 2016-02-15
+# this is a dummy entry
+- from: klatt_t
+  to: speck_r
+  start: 2015-11-01
+  end: 2016-03-31
+  no_exact: true
 
+# this is a dummy entry
 - from: haensel_d
   to: balaji_p
   start: 2015-12-04
