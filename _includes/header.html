@@ -22,7 +22,9 @@
         <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
           <ul class="nav navbar-nav">
             {% include navs/about.html %}
-            {% include navs/news.html %}
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}/news/index.html" class="nav-link{% if page.navbar == 'News' %} active{% endif %}">News</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link{% if page.navbar == 'Events' %} active{% endif %}" href="{{ site.baseurl }}/events/index.html">Events</a>
             </li>
