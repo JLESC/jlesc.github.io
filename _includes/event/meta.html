@@ -4,7 +4,7 @@
 
 {% if on_global_index %}
   {% if event.event_start == event.event_end %}
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-sm-6" title="Event's date" data-toggle="tooltip" data-placement="bottom">
       <i class="fa fa-play"></i> / <i class="fa fa-stop"></i>
       {% if event.event_start %}
         <time datetime="{{ event.event_start | datetime | date_to_xmlschema }}">{{ event.event_start | date_to_string }}</time>
@@ -12,20 +12,20 @@
         tba
       {% endif %}
     </div>
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-sm-6" title="Event's location" data-toggle="tooltip" data-placement="bottom">
       <i class="fa fa-map-marker fa-fw"></i>
       {% if event.event_location %}{{ event.event_location }}{% else %}tba{% endif %}
     </div>
   {% else %}
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-12 col-sm-4" title="Event's start date" data-toggle="tooltip" data-placement="bottom">
       <i class="fa fa-play fa-fw"></i>
       {% if event.event_start %}<time datetime="{{ event.event_start | datetime | date_to_xmlschema }}">{{ event.event_start | date_to_string }}</time>{% else %}tba{% endif %}
     </div>
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-12 col-sm-4" title="Event's end date" data-toggle="tooltip" data-placement="bottom">
       <i class="fa fa-stop fa-fw"></i>
       {% if event.event_end %}<time datetime="{{ event.event_end | datetime | date_to_xmlschema }}">{{ event.event_end | date_to_string }}</time>{% else %}tba{% endif %}
     </div>
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-12 col-sm-4" title="Event's location" data-toggle="tooltip" data-placement="bottom">
       <i class="fa fa-map-marker fa-fw"></i>
       {% if event.event_location %}{{ event.event_location }}{% else %}tba{% endif %}
     </div>
@@ -36,7 +36,7 @@
     <div class="card-deck">
       {% if event.event_start == event.event_end %}
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" title="Event's date" data-toggle="tooltip" data-placement="bottom">
             <i class="fa fa-play"></i> / <i class="fa fa-stop"></i>
             {% if event.event_start %}
               <time datetime="{{ event.event_start | datetime | date_to_xmlschema }}">{{ event.event_start | date_to_string }}</time>
@@ -47,20 +47,20 @@
         </div>
       {% else %}
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" title="Event's start date" data-toggle="tooltip" data-placement="bottom">
             <i class="fa fa-play fa-fw"></i>
             {% if event.event_start %}<time datetime="{{ event.event_start | datetime | date_to_xmlschema }}">{{ event.event_start | date_to_string }}</time>{% else %}tba{% endif %}
           </div>
         </div>
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" title="Event's end date" data-toggle="tooltip" data-placement="bottom">
             <i class="fa fa-stop fa-fw"></i>
             {% if event.event_end %}<time datetime="{{ event.event_end | datetime | date_to_xmlschema }}">{{ event.event_end | date_to_string }}</time>{% else %}tba{% endif %}
           </div>
         </div>
       {% endif %}
       <div class="card">
-        <div class="card-block">
+        <div class="card-block" title="Event's location" data-toggle="tooltip" data-placement="bottom">
           <i class="fa fa-map-marker fa-fw"></i>
           {% if event.event_location %}{{ event.event_location }}{% else %}tba{% endif %}
         </div>

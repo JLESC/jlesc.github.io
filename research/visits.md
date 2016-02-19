@@ -25,7 +25,9 @@ subnavbar: Visits
         <th class="col-host">Host</th>
         <th class="col-start">Start</th>
         <th class="col-end">End</th>
-        <th class="col-pm"><abbr title="Person-Months (see note below)">PM</abbr></th>
+        <th class="col-pm">
+          <abbr title="Person-Months (see note below)" data-toggle="tooltip">PM</abbr>
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -49,11 +51,12 @@ subnavbar: Visits
           </td>
           <td class="col-pm">
             {% if visit.no_exact %}
-              <abbr title="start date and/or end date is not exact" class="pull-left">
+              <span data-toggle="tooltip" title="start date and/or end date is not exact" class="pull-left">
                 <i class="fa fa-fw fa-exclamation"></i>
-              </abbr>
+              </span>
             {% endif %}
-            <abbr title="{% if visit.no_exact %}roughly {% endif %}{% duration_humanized {{ visit_duration }} %}">
+            <abbr title="{% if visit.no_exact %}roughly {% endif %}{% duration_humanized {{ visit_duration }} %}"
+                  data-toggle="tooltip">
               {% duration_pms {{ visit_duration }} %}
             </abbr>
           </td>

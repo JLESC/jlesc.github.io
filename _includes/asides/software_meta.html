@@ -55,10 +55,10 @@
               {% endif %}
               <span class="pull-right">
                 {% if release.link %}
-                  <a href="{{ release.link }}" title="Release Page"><i class="fa fa-link fa-fw"></i></a>
+                  <a href="{{ release.link }}" title="Release Page" data-toggle="tooltip"><i class="fa fa-link fa-fw"></i></a>
                 {% endif %}
                 {% if release.download %}
-                  <a href="{{ release.download }}" title="Download Sources as zip"><i class="fa fa-download fa-fw"></i></a>
+                  <a href="{{ release.download }}" title="Download Sources as zip" data-toggle="tooltip"><i class="fa fa-download fa-fw"></i></a>
                 {% endif %}
               </span>
             </span>
@@ -86,7 +86,7 @@
               {% if developer.email or developer.lead_developer %}
                 <span class="pull-right">
                   {% if developer.lead_developer %}
-                    <a title="Lead Developer"><i class="fa fa-graduation-cap fa-fw"></i></a>
+                    <a title="Lead Developer" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
                   {% endif %}
                 </span>
               {% endif %}
@@ -105,7 +105,7 @@
               {% if contributor.email or contributor.lead_developer %}
                 <span class="pull-right">
                   {% if contributor.lead_developer %}
-                    <a title="Lead Developer"><i class="fa fa-graduation-cap fa-fw"></i></a>
+                    <a title="Lead Developer" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
                   {% endif %}
                 </span>
               {% endif %}
