@@ -44,6 +44,9 @@
 #
 # ## Notes
 #
+# - The email addresses displayed on the 'People' page are obfuscated to prevent them being grabbed
+#   by (spam) bots.
+#
 # - stick to a total line length of 100 characters ................................ this is here ->|
 #   For longer text fields (e.g. 'topics') use YAML's "Folded style" [1]:
 #
