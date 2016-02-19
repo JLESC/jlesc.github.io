@@ -43,6 +43,9 @@ paginate_path: "/news/page:num/"
 
 excerpt_separator: '<!--more-->'
 
+# this is used for news posts
+permalink: /news/:year/:month/:day/:slug/
+
 assets:
   compress:
     css: true
@@ -70,8 +73,10 @@ assets:
 collections:
   events_upcoming:
     output: true
+    permalink: /events/:title/
   events_past:
     output: true
+    permalink: /events/:title/
   software:
     output: true
   projects:

@@ -11,6 +11,7 @@ event_short_url:
 event_url:
 wayback_url:
 kind: outreach
+page_type: event_page
 ---
 
 A dummy outreach event for demo.
