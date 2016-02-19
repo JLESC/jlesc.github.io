@@ -4,7 +4,7 @@ title: 5th JLESC Workshop
 date: 2016-02-16
 updated:
 navbar: Events
-event_location: ENS-Lyon
+event_location: Lyon, France
 event_start: 2016-06-27
 event_end: 2016-06-29
 event_short_url:
@@ -14,7 +14,7 @@ kind: workshop
 institute: inria
 ---
 
-The workshop will take place at END-Lyon and will gather top researchers in HPC from INRIA,
+The workshop will take place at ENS-Lyon and will gather top researchers in HPC from INRIA,
 the University of Illinois, Argonne National Laboratory, Barcelona Supercomputing Center,
 Jülich Supercomputing Centre and Riken-AICS to explore research problems related to
 post-Petascale / Exascale Supercomputers and present early results of their joint work.
