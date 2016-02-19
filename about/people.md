@@ -28,8 +28,14 @@ subnavbar: People
         <th class="col-name">Name</th>
         <th class="col-affiliation">Affiliation</th>
         <th class="col-position">Position</th>
-        <th class="col-projects"><i class="fa fa-fw fa-cubes" title="participating in # projects"></i></th>
-        <th class="col-leading"><i class="fa fa-fw fa-graduation-cap" title="leading # projects"></i></th>
+        <th class="col-projects">
+          <i class="fa fa-fw fa-cubes" title="participating in # projects"
+             data-toggle="tooltip"></i>
+        </th>
+        <th class="col-leading">
+          <i class="fa fa-fw fa-graduation-cap" title="leading # projects"
+             data-toggle="tooltip"></i>
+        </th>
         <th class="col-topics">Topics</th>
       </tr>
     </thead>
@@ -47,16 +53,18 @@ subnavbar: People
                  class="btn btn-link btn-sm email-obfuscated"
                  title="write an email to {{ person.given_name }} {{ person.sur_name }}"
                  data-email="{{ email }}"
-                 role="button">
+                 role="button"
+                 data-toggle="tooltip">
                 <i class="fa fa-envelope fa-fw"></i>
               </a>
             {% endif %}
             {% if person.homepage %}
               <a href="{{ person.homepage }}"
                  target="_blank"
-                 title="{{ person.homepage }}"
+                 title="Homepage of {{ person.given_name }} {{ person.sur_name }}"
                  class="btn btn-link btn-sm"
-                 role="button">
+                 role="button"
+                 data-toggle="tooltip">
                 <i class="fa fa-home fa-fw"></i>
               </a>
             {% endif %}

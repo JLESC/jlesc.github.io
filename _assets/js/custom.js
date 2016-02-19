@@ -1,12 +1,13 @@
-//= require 'vendor/jquery-2.1.4.min.js'
-//= require 'vendor/bootstrap.min.js'
-//= require 'vendor/jquery.dataTables.min.js'
-//= require 'vendor/dataTables.bootstrap.min.js'
-//= require 'vendor/moment.min.js'
-//= require 'vendor/dataTables.plugins.datetime_moment.js'
-//= require 'vendor/jquery.githubRepoWidget.js'
-//= require 'vendor/jXHR.js'
-//= require 'vendor/featherlight.js'
+//= require 'vendor/jquery-2.1.4.min'
+//= require 'vendor/tether'
+//= require 'vendor/bootstrap'
+//= require 'vendor/jquery.dataTables.min'
+//= require 'vendor/dataTables.bootstrap.min'
+//= require 'vendor/moment.min'
+//= require 'vendor/dataTables.plugins.datetime_moment'
+//= require 'vendor/jquery.githubRepoWidget'
+//= require 'vendor/jXHR'
+//= require 'vendor/featherlight'
 
 var github = (function(){
     function escapeHtml(str) {
@@ -51,6 +52,11 @@ $(document).ready(function() {
     function reverse(value) {
         return value.split("").reverse().join("");
     }
+
+    // activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
 
     // make those obfuscated email links clickable
     $('a.email-obfuscated').each(function() {
