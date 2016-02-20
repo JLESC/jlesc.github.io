@@ -106,6 +106,18 @@ $(document).ready(function() {
        $(this).collapse('hide');
     });
 
+    $('#hide-event-meta').click(function() {
+        $('#show-event-meta-wrapper').toggleClass('invisible');
+        $('#event-aside').toggleClass('in col-lg-5 col-sm-12');
+        $('#event-content').toggleClass('col-lg-7').toggleClass('col-lg-12');
+    });
+
+    $('#show-event-meta').click(function() {
+        $('#show-event-meta-wrapper').toggleClass('invisible');
+        $('#event-aside').toggleClass('in col-lg-5 col-sm-12');
+        $('#event-content').toggleClass('col-lg-7').toggleClass('col-lg-12');
+    });
+
     $('#people-db').DataTable({
         "columnDefs": [
             { "orderable": false, "targets": 5 } // column 'Topics' should not be sortable

@@ -1,5 +1,10 @@
 <section class="event-meta card">
-  <div class="card-header">{% event_kind {{ page.kind }} %} Profile</div>
+  <div class="card-header">
+    {% event_kind {{ page.kind }} %} Profile
+    <span class="small pull-right">
+      <a class="btn btn-sm" id="hide-event-meta" role="button">Hide</a>
+    </span>
+  </div>
   {% if page.logo %}
     {% image {{\ page.logo\ }} class:"img-fluid p-a-1" alt:"{{ page.title }} Logo" %}
   {% endif %}
