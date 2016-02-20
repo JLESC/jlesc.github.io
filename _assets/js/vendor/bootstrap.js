@@ -992,6 +992,263 @@ var Dropdown = (function ($) {
   return Dropdown;
 })(jQuery);
 
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (vv4-dev#48e62fd): tab.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var Tab = (function ($) {
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME = 'tab';
+  var VERSION = 'v4-dev#48e62fd';
+  var DATA_KEY = 'bs.tab';
+  var EVENT_KEY = '.' + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var TRANSITION_DURATION = 150;
+
+  var Event = {
+    HIDE: 'hide' + EVENT_KEY,
+    HIDDEN: 'hidden' + EVENT_KEY,
+    SHOW: 'show' + EVENT_KEY,
+    SHOWN: 'shown' + EVENT_KEY,
+    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+  };
+
+  var ClassName = {
+    DROPDOWN_MENU: 'dropdown-menu',
+    ACTIVE: 'active',
+    FADE: 'fade',
+    IN: 'in'
+  };
+
+  var Selector = {
+    A: 'a',
+    LI: 'li',
+    DROPDOWN: '.dropdown',
+    UL: 'ul:not(.dropdown-menu)',
+    FADE_CHILD: '> .nav-item .fade, > .fade',
+    ACTIVE: '.active',
+    ACTIVE_CHILD: '> .nav-item > .active, > .active',
+    DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"]',
+    DROPDOWN_TOGGLE: '.dropdown-toggle',
+    DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
+  };
+
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  var Tab = (function () {
+    function Tab(element) {
+      _classCallCheck(this, Tab);
+
+      this._element = element;
+    }
+
+    /**
+     * ------------------------------------------------------------------------
+     * Data Api implementation
+     * ------------------------------------------------------------------------
+     */
+
+    // getters
+
+    _createClass(Tab, [{
+      key: 'show',
+
+      // public
+
+      value: function show() {
+        var _this5 = this;
+
+        if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(ClassName.ACTIVE)) {
+          return;
+        }
+
+        var target = undefined;
+        var previous = undefined;
+        var ulElement = $(this._element).closest(Selector.UL)[0];
+        var selector = Util.getSelectorFromElement(this._element);
+
+        if (ulElement) {
+          previous = $.makeArray($(ulElement).find(Selector.ACTIVE));
+          previous = previous[previous.length - 1];
+        }
+
+        var hideEvent = $.Event(Event.HIDE, {
+          relatedTarget: this._element
+        });
+
+        var showEvent = $.Event(Event.SHOW, {
+          relatedTarget: previous
+        });
+
+        if (previous) {
+          $(previous).trigger(hideEvent);
+        }
+
+        $(this._element).trigger(showEvent);
+
+        if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
+          return;
+        }
+
+        if (selector) {
+          target = $(selector)[0];
+        }
+
+        this._activate(this._element, ulElement);
+
+        var complete = function complete() {
+          var hiddenEvent = $.Event(Event.HIDDEN, {
+            relatedTarget: _this5._element
+          });
+
+          var shownEvent = $.Event(Event.SHOWN, {
+            relatedTarget: previous
+          });
+
+          $(previous).trigger(hiddenEvent);
+          $(_this5._element).trigger(shownEvent);
+        };
+
+        if (target) {
+          this._activate(target, target.parentNode, complete);
+        } else {
+          complete();
+        }
+      }
+    }, {
+      key: 'dispose',
+      value: function dispose() {
+        $.removeClass(this._element, DATA_KEY);
+        this._element = null;
+      }
+
+      // private
+
+    }, {
+      key: '_activate',
+      value: function _activate(element, container, callback) {
+        var active = $(container).find(Selector.ACTIVE_CHILD)[0];
+        var isTransitioning = callback && Util.supportsTransitionEnd() && (active && $(active).hasClass(ClassName.FADE) || Boolean($(container).find(Selector.FADE_CHILD)[0]));
+
+        var complete = $.proxy(this._transitionComplete, this, element, active, isTransitioning, callback);
+
+        if (active && isTransitioning) {
+          $(active).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+        } else {
+          complete();
+        }
+
+        if (active) {
+          $(active).removeClass(ClassName.IN);
+        }
+      }
+    }, {
+      key: '_transitionComplete',
+      value: function _transitionComplete(element, active, isTransitioning, callback) {
+        if (active) {
+          $(active).removeClass(ClassName.ACTIVE);
+
+          var dropdownChild = $(active).find(Selector.DROPDOWN_ACTIVE_CHILD)[0];
+
+          if (dropdownChild) {
+            $(dropdownChild).removeClass(ClassName.ACTIVE);
+          }
+
+          active.setAttribute('aria-expanded', false);
+        }
+
+        $(element).addClass(ClassName.ACTIVE);
+        element.setAttribute('aria-expanded', true);
+
+        if (isTransitioning) {
+          Util.reflow(element);
+          $(element).addClass(ClassName.IN);
+        } else {
+          $(element).removeClass(ClassName.FADE);
+        }
+
+        if (element.parentNode && $(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
+
+          var dropdownElement = $(element).closest(Selector.DROPDOWN)[0];
+          if (dropdownElement) {
+            $(dropdownElement).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE);
+          }
+
+          element.setAttribute('aria-expanded', true);
+        }
+
+        if (callback) {
+          callback();
+        }
+      }
+
+      // static
+
+    }], [{
+      key: '_jQueryInterface',
+      value: function _jQueryInterface(config) {
+        return this.each(function () {
+          var $this = $(this);
+          var data = $this.data(DATA_KEY);
+
+          if (!data) {
+            data = data = new Tab(this);
+            $this.data(DATA_KEY, data);
+          }
+
+          if (typeof config === 'string') {
+            if (data[config] === undefined) {
+              throw new Error('No method named "' + config + '"');
+            }
+            data[config]();
+          }
+        });
+      }
+    }, {
+      key: 'VERSION',
+      get: function get() {
+        return VERSION;
+      }
+    }]);
+
+    return Tab;
+  })();
+
+  $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
+    event.preventDefault();
+    Tab._jQueryInterface.call($(this), 'show');
+  });
+
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $.fn[NAME] = Tab._jQueryInterface;
+  $.fn[NAME].Constructor = Tab;
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Tab._jQueryInterface;
+  };
+
+  return Tab;
+})(jQuery);
+
 /* global Tether */
 
 /**
@@ -1206,7 +1463,7 @@ var Tooltip = (function ($) {
     }, {
       key: 'show',
       value: function show() {
-        var _this5 = this;
+        var _this6 = this;
 
         var showEvent = $.Event(this.constructor.Event.SHOW);
 
@@ -1256,13 +1513,13 @@ var Tooltip = (function ($) {
           $(tip).addClass(ClassName.IN);
 
           var complete = function complete() {
-            var prevHoverState = _this5._hoverState;
-            _this5._hoverState = null;
+            var prevHoverState = _this6._hoverState;
+            _this6._hoverState = null;
 
-            $(_this5.element).trigger(_this5.constructor.Event.SHOWN);
+            $(_this6.element).trigger(_this6.constructor.Event.SHOWN);
 
             if (prevHoverState === HoverState.OUT) {
-              _this5._leave(null, _this5);
+              _this6._leave(null, _this6);
             }
           };
 
@@ -1277,18 +1534,18 @@ var Tooltip = (function ($) {
     }, {
       key: 'hide',
       value: function hide(callback) {
-        var _this6 = this;
+        var _this7 = this;
 
         var tip = this.getTipElement();
         var hideEvent = $.Event(this.constructor.Event.HIDE);
         var complete = function complete() {
-          if (_this6._hoverState !== HoverState.IN && tip.parentNode) {
+          if (_this7._hoverState !== HoverState.IN && tip.parentNode) {
             tip.parentNode.removeChild(tip);
           }
 
-          _this6.element.removeAttribute('aria-describedby');
-          $(_this6.element).trigger(_this6.constructor.Event.HIDDEN);
-          _this6.cleanupTether();
+          _this7.element.removeAttribute('aria-describedby');
+          $(_this7.element).trigger(_this7.constructor.Event.HIDDEN);
+          _this7.cleanupTether();
 
           if (callback) {
             callback();
@@ -1382,18 +1639,18 @@ var Tooltip = (function ($) {
     }, {
       key: '_setListeners',
       value: function _setListeners() {
-        var _this7 = this;
+        var _this8 = this;
 
         var triggers = this.config.trigger.split(' ');
 
         triggers.forEach(function (trigger) {
           if (trigger === 'click') {
-            $(_this7.element).on(_this7.constructor.Event.CLICK, _this7.config.selector, $.proxy(_this7.toggle, _this7));
+            $(_this8.element).on(_this8.constructor.Event.CLICK, _this8.config.selector, $.proxy(_this8.toggle, _this8));
           } else if (trigger !== Trigger.MANUAL) {
-            var eventIn = trigger === Trigger.HOVER ? _this7.constructor.Event.MOUSEENTER : _this7.constructor.Event.FOCUSIN;
-            var eventOut = trigger === Trigger.HOVER ? _this7.constructor.Event.MOUSELEAVE : _this7.constructor.Event.FOCUSOUT;
+            var eventIn = trigger === Trigger.HOVER ? _this8.constructor.Event.MOUSEENTER : _this8.constructor.Event.FOCUSIN;
+            var eventOut = trigger === Trigger.HOVER ? _this8.constructor.Event.MOUSELEAVE : _this8.constructor.Event.FOCUSOUT;
 
-            $(_this7.element).on(eventIn, _this7.config.selector, $.proxy(_this7._enter, _this7)).on(eventOut, _this7.config.selector, $.proxy(_this7._leave, _this7));
+            $(_this8.element).on(eventIn, _this8.config.selector, $.proxy(_this8._enter, _this8)).on(eventOut, _this8.config.selector, $.proxy(_this8._leave, _this8));
           }
         });
 
