@@ -113,6 +113,9 @@ html {
       }
     }
 
+    #event-subnav {
+      @extend .m-y-1;
+    }
 
     .label-event-workshop {
       @include label-variant($label-primary-bg);

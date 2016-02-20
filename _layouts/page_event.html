@@ -3,18 +3,18 @@ layout: default
 ---
 <div class="post post-event">
   <article class="post-content">
+    <header class="post-header">
+      <h1>{{ page.title }}</h1>
+    </header>
     <div class="row">
       <aside class="col-lg-5 col-lg-push-7">
         {% include asides/event_meta.html %}
-        {% include asides/event_subpages.html %}
       </aside>
       <div class="col-lg-7 col-lg-pull-5 content">
-        <header class="post-header">
-          <h1>{{ page.title }}</h1>
-          {% if page.subtitle %}
-            <h2>{{ page.subtitle }}</h2>
-          {% endif %}
-        </header>
+        {% include asides/event_subnav.html %}
+        {% if page.subtitle %}
+          <h2>{{ page.subtitle }}</h2>
+        {% endif %}
         {{ content }}
       </div>
     </div>
