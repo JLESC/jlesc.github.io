@@ -137,6 +137,12 @@ html {
     }
 
     #schedule-accordion {
+      a.abstract-btn {
+        @extend .label;
+        @extend .label-default;
+        //height: 18px;
+      }
+
       .card {
         .card-block {
           padding: 0;
@@ -148,6 +154,25 @@ html {
 
           table {
             margin-bottom: 0;
+
+            tr {
+              td {
+                &:first-child {
+                  @extend .col-sm-1;
+                }
+                &:nth-child(2) {
+                  @extend .col-sm-3;
+                }
+                &:last-child {
+                  @extend .col-sm-8;
+
+                  .abstract {
+                    @extend .text-muted;
+                    @extend small;
+                  }
+                }
+              }
+            }
           }
         }
 
