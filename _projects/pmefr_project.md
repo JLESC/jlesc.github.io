@@ -16,6 +16,7 @@ members:
   - balaji_p
   - beltran_v
   - casas_m
+page_type: project_page
 ---
 
 ## Research topic and goals

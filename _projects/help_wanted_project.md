@@ -14,6 +14,7 @@ keywords:
 head: klatt_t
 members:
   - speck_r
+page_type: project_page
 ---
 
 This is a demo for a project seeking collaboration partners.

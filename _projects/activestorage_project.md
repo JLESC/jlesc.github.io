@@ -17,6 +17,7 @@ members:
   - chien_a
   - dun_n
   - vandenbergen_n
+page_type: project_page
 ---
 
 ## Research topic and goals
