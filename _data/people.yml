@@ -72,7 +72,7 @@ amer_a:
   topics:
   email: aamer@anl.gov
   homepage: http://www.mcs.anl.gov/~aamer/
-  
+
 antoniu_g:
   sur_name: Antoniu
   given_name: Gabriel
@@ -81,7 +81,7 @@ antoniu_g:
   topics:
   email: gabriel.antoniu@inria.fr
   homepage: https://team.inria.fr/kerdata/gabriel-antoniu/
-  
+
 balaji_p:
   sur_name: Balaji
   given_name: Pavan
@@ -99,7 +99,7 @@ beltran_v:
   topics:
   email: vbeltran@bsc.es
   homepage:
-  
+
 dorier_m:
   sur_name: Dorier
   given_name: Matthieu
@@ -108,7 +108,7 @@ dorier_m:
   topics:
   email: mdorier@anl.gov
   homepage: https://people.irisa.fr/Matthieu.Dorier/wiki/doku.php
-  
+
 casas_m:
   sur_name: Casas
   given_name: Marc
@@ -117,7 +117,7 @@ casas_m:
   topics:
   email: marc.casas@bsc.es
   homepage:
-  
+
 cappello_f:
   sur_name: Cappello
   given_name: Franck
@@ -150,15 +150,24 @@ dun_n:
   position:
   email:
   homepage:
-  
+
 ibrahim_s:
   sur_name: Ibrahim
   given_name: Shadi
   affiliation: inria
   position:
-  topics:  
-  email: 
+  topics:
+  email:
   homepage: https://team.inria.fr/kerdata/shadi-ibrahim/
+
+kale_s:
+  sur_name: Kale
+  given_name: Sanjay
+  affiliation: uiuc
+  position:
+  topics:
+  email: kale@illinois.edu
+  homepage: http://charm.cs.uiuc.edu/~kale/
 
 jacob_r:
   sur_name: Jacob
@@ -172,6 +181,14 @@ kabadshow_i:
   position: permanent
   email: i.kabadshow@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/kabadshow_i.html
+
+keller_tesser_r:
+  sur_name: Keller Tesser
+  given_name: Raphael
+  affiliation: inria
+  position:
+  email: ktesser@inf.ufrgs.br
+  homepage:
 
 klatt_t:
   sur_name: Klatt
@@ -211,6 +228,42 @@ lippert_t:
   given_name: Thomas
   affiliation: jsc
 
+
+mehaut_j:
+  sur_name: Mehaut
+  given_name: Jean-Francois
+  affiliation: inria
+  position:
+  topics:
+  email:
+  homepage: https://team.inria.fr/corse/team-members/jean-francois-mehaut/
+
+mendes_c:
+  sur_name: Mendes
+  given_name: Celsco
+  affiliation: ncsa
+  position:
+  topics:
+  email:
+  homepage: http://charm.cs.uiuc.edu/people/cmendes
+
+navaux_p:
+  sur_name: Navaux
+  given_name: Phillipe
+  affiliation: inria
+  position:
+  topics:
+  email:
+  homepage: http://charm.cs.uiuc.edu/people/navaux
+
+padoin_e:
+  sur_name: Padoin
+  given_name: Edson Luiz
+  affiliation: inria
+  position:
+  email:  elpadoin@inf.ufrgs.br
+  homepage:
+
 petit_a:
   sur_name: Petit
   given_name: Antoine
@@ -228,11 +281,11 @@ ross_r:
   sur_name: Rob
   given_name: Ross
   affiliation: anl
-  position: 
+  position:
   topics:
   email: rross@mcs.anl.gov
   homepage: www.mcs.anl.gov/~rross
-  
+
 sato_m:
   sur_name: Sato
   given_name: Mitsuhisa
@@ -283,12 +336,12 @@ yildiz_o:
   sur_name: Orcun
   given_name: Yildiz
   affiliation: inria
-  position: 
+  position:
   topics:
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
 
-  
+
 yves_r:
   sur_name: Robert
   given_name: Yves
