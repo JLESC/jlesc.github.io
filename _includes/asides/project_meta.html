@@ -1,5 +1,10 @@
 <section class="group-meta card">
-  <div class="card-header">Project Profile</div>
+  <div class="card-header">
+    Project Profile
+    <span class="small pull-right">
+      <a class="btn btn-sm" id="hide-project-meta" role="button">Hide</a>
+    </span>
+  </div>
   {% if page.logo %}
     <img class="img-fluid p-a-1" src="{{ site.baseurl }}/images/{{ page.logo }}" alt="{{ page.title }} Logo" />
   {% endif %}

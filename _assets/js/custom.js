@@ -51,13 +51,27 @@ var toggle_event_meta = function(desired_state) {
     if (desired_state == 'show' && $('#event-aside', document).hasClass('invisible')) {
         // make aside meta visible again
         $('#show-event-meta-wrapper', document).addClass('invisible');
-        $('#event-aside').removeClass('invisible').addClass('in');
+        $('#event-aside', document).removeClass('invisible').addClass('in');
         $('#event-content', document).addClass('col-lg-7').removeClass('col-lg-12');
     } else if (desired_state == 'hide' && !$('#event-aside', document).hasClass('invisible')) {
         // make aside meta invisible
         $('#show-event-meta-wrapper', document).removeClass('invisible');
         $('#event-aside', document).addClass('invisible').removeClass('in');
         $('#event-content', document).removeClass('col-lg-7').addClass('col-lg-12');
+    }
+};
+
+var toggle_project_meta = function(desired_state) {
+    if (desired_state == 'show' && $('#project-aside', document).hasClass('invisible')) {
+        // make aside meta visible again
+        $('#show-project-meta-wrapper', document).addClass('invisible');
+        $('#project-aside', document).removeClass('invisible').addClass('in');
+        $('#project-content', document).addClass('col-lg-7').removeClass('col-lg-12');
+    } else if (desired_state == 'hide' && !$('#project-aside', document).hasClass('invisible')) {
+        // make aside meta invisible
+        $('#show-project-meta-wrapper', document).removeClass('invisible');
+        $('#project-aside', document).addClass('invisible').removeClass('in');
+        $('#project-content', document).removeClass('col-lg-7').addClass('col-lg-12');
     }
 };
 
@@ -118,6 +132,14 @@ $(document).ready(function() {
 
     $('#project-categories-accordion .collapse').each(function() {
        $(this).collapse('hide');
+    });
+
+    $('#hide-project-meta').click(function() {
+        toggle_project_meta('hide')
+    });
+
+    $('#show-project-meta').click(function() {
+        toggle_project_meta('show')
     });
 
     $('#hide-event-meta').click(function() {
