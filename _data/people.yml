@@ -138,6 +138,11 @@ chien_a:
   email: achien@cs.uchicago.edu
   homepage: https://www.cs.uchicago.edu/directory/andrew-chien
 
+doblas_reyes_f:
+  sur_name: Doblas-Reyes
+  given_name: Francisco
+  affiliation: bsc
+
 dun_n:
   sur_name: Dun
   given_name: Nan
@@ -154,6 +159,11 @@ ibrahim_s:
   topics:  
   email: 
   homepage: https://team.inria.fr/kerdata/shadi-ibrahim/
+
+jacob_r:
+  sur_name: Jacob
+  given_name: Rob
+  affiliation: anl
 
 kabadshow_i:
   sur_name: Kabadshow
@@ -196,6 +206,16 @@ labarta_j:
   email:
   homepage:
 
+lippert_t:
+  sur_name: Lippert
+  given_name: Thomas
+  affiliation: jsc
+
+petit_a:
+  sur_name: Petit
+  given_name: Antoine
+  affiliation: inria
+
 pleiter_d:
   sur_name: Pleiter
   given_name: Dirk
@@ -222,6 +242,11 @@ sato_m:
   email:
   homepage:
 
+snir_m:
+  sur_name: Snir
+  given_name: Marc
+  affiliation: anl
+
 speck_r:
   sur_name: Speck
   given_name: Robert
@@ -231,6 +256,11 @@ speck_r:
   email: r.speck@fz-juelich.de
   homepage: http://www.fz-juelich.de/ias/jsc/speck_r
 
+ukawa_a:
+  sur_name: Ukawa
+  given_name: Akira
+  affiliation: riken
+
 vandenbergen_n:
   sur_name: Vandenbergen
   given_name: Nicholas
@@ -238,6 +268,16 @@ vandenbergen_n:
   position: phd
   email: n.vandenbergen@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/vandenbergen_n.html
+
+valero_m:
+  sur_name: Valero
+  given_name: Mateo
+  affiliation: bsc
+
+yashiro_h:
+  sur_name: Yashiro
+  given_name: Hisashi
+  affiliation: riken
 
 yildiz_o:
   sur_name: Orcun

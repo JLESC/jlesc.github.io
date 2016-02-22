@@ -2,20 +2,22 @@
 layout: default
 ---
 <div class="post post-event">
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}
-      <h2>{{ page.subtitle }}</h2>
-    {% endif %}
-  </header>
   <article class="post-content">
-    <div class="row">
-      <aside class="col-lg-5 col-lg-push-7">
-        {% include asides/event_meta.html %}
-      </aside>
-      <div class="col-lg-7 col-lg-pull-5 content">
-        {{ content }}
-      </div>
+    <header class="post-header clearfix">
+      <h1 class="pull-left">{{ page.title }}</h1>
+      <span class="pull-right invisible" id="show-event-meta-wrapper">
+        <a class="btn btn-sm" id="show-event-meta" role="button">Show Profile</a>
+      </span>
+    </header>
+    <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="event-aside">
+      {% include asides/event_meta.html %}
+    </aside>
+    <div class="col-lg-7 col-sm-12 pull-lg-left content" id="event-content">
+      {% include asides/event_subnav.html %}
+      {% if page.subtitle %}
+        <h2>{{ page.subtitle }}</h2>
+      {% endif %}
+      {{ content }}
     </div>
   </article>
   {% if page.footer %}

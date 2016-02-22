@@ -13,6 +13,7 @@ wayback_url: http://web.archive.org/web/20160218083107/http://www.fz-juelich.de/
 logo: 4th-jlesc-logo.png
 kind: workshop
 institute: jsc
+page_type: event_page
 ---
 
 The workshop gathered leading researchers in high-performance computing from the JLESC partners INRIA,

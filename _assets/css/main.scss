@@ -36,6 +36,16 @@ $github-box-title-png: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAXCA
 @import 'vendor/featherlight';
 @import 'vendor/tether';
 
+table {
+  tr.table-separator {
+    @extend .table-active;
+    height: 0.25rem;
+    td {
+      padding: 0;
+    }
+  }
+}
+
 
 html {
   body {
@@ -68,7 +78,7 @@ html {
 
       .btn-group {
         a {
-          padding: 0rem 0.2rem;
+          padding: 0 0.2rem;
         }
       }
     }
@@ -113,6 +123,69 @@ html {
       }
     }
 
+    #event-subnav {
+      @extend .m-y-1;
+    }
+
+    aside {
+      .card-header {
+        .btn {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    #schedule-accordion {
+      a.abstract-btn {
+        @extend .label;
+        @extend .label-default;
+        //height: 18px;
+      }
+
+      .card {
+        .card-block {
+          padding: 0;
+
+          .card-text {
+            @extend .p-a-2;
+            margin-bottom: 0;
+          }
+
+          table {
+            margin-bottom: 0;
+
+            tr {
+              td {
+                &:first-child {
+                  @extend .col-sm-1;
+                }
+                &:nth-child(2) {
+                  @extend .col-sm-3;
+                }
+                &:last-child {
+                  @extend .col-sm-8;
+
+                  .abstract {
+                    @extend .text-muted;
+                    @extend small;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        dl {
+          dt {
+            @extend .col-sm-1;
+          }
+          dd {
+            @extend .col-sm-11;
+          }
+        }
+      }
+    }
 
     .label-event-workshop {
       @include label-variant($label-primary-bg);

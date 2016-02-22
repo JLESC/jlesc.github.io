@@ -12,6 +12,7 @@ event_url:
 wayback_url:
 kind: workshop
 institute: inria
+page_type: event_page
 ---
 
 The workshop will take place at ENS-Lyon and will gather top researchers in HPC from INRIA,
