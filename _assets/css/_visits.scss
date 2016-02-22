@@ -1,0 +1,11 @@
+#visits-db {
+  th.col-start,
+  th.col-end,
+  th.col-pm {
+    @extend .text-xs-center;
+  }
+
+  td.col-pm {
+    text-align: right;
+  }
+}

@@ -1,0 +1,65 @@
+@import 'theme';
+@import 'vendor/bootstrap/mixins/label';
+
+
+.label-event-workshop {
+  @include label-variant($label-primary-bg);
+}
+.label-event-summer_school {
+  @include label-variant($label-default-bg);
+}
+.label-event-outreach {
+  @include label-variant($label-info-bg);
+}
+
+
+#schedule-accordion {
+  a.abstract-btn {
+    @extend .label;
+    @extend .label-default;
+    //height: 18px;
+  }
+
+  .card {
+    .card-block {
+      padding: 0;
+
+      .card-text {
+        @extend .p-a-2;
+        margin-bottom: 0;
+      }
+
+      table {
+        margin-bottom: 0;
+
+        tr {
+          td {
+            &:first-child {
+              @extend .col-sm-1;
+            }
+            &:nth-child(2) {
+              @extend .col-sm-3;
+            }
+            &:last-child {
+              @extend .col-sm-8;
+
+              .abstract {
+                @extend .text-muted;
+                @extend small;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    dl {
+      dt {
+        @extend .col-sm-1;
+      }
+      dd {
+        @extend .col-sm-11;
+      }
+    }
+  }
+}

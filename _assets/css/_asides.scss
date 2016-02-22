@@ -1,0 +1,19 @@
+aside {
+  .card-header {
+    .btn {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  ul li.list-group-item.row {
+    margin: 0 !important;
+    padding: 0.2rem 0 0.2rem 0;
+    border-bottom-width: 0;
+
+    label {
+      margin-bottom: 0 !important;
+      font-weight: bold;
+    }
+  }
+}

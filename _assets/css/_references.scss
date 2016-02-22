@@ -1,0 +1,28 @@
+@import 'theme';
+
+.bibliography {
+  margin-bottom: 1rem;
+
+  .bibtex-entry-container {
+    .bibtex-ref-raw, .bibtex-ref-abstract {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      color: $text-muted !important;
+      pre {
+        color: inherit;
+        margin: 0;
+        code {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+.ref-label {
+  width: 100%;
+  display: block !important;
+  font-size: 85% !important;
+  text-overflow: clip;
+  overflow: hidden;
+}

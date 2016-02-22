@@ -13,3 +13,23 @@ $font-size-h5: 1rem !default;
 $font-size-h6: 1rem !default;
 
 @import "vendor/bootstrap/bootstrap";
+
+.card {
+  .card-header ~ .list-group {
+    .list-group-item:first-of-type {
+      border-top: 0;
+    }
+  }
+
+  .card-footer-slim  {
+    padding: 0.25rem 1.25rem;
+  }
+}
+
+.list-group {
+  .list-group-item {
+    label.label {
+      line-height: inherit !important;
+    }
+  }
+}

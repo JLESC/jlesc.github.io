@@ -3,7 +3,7 @@
 {% assign current_base_size = current_base | size %}
 {% capture project_index_url %}{% if current_base_size == 0 %}{{ page.url | strip }}{% else %}/projects/{{ current_base | strip }}/{% endif %}{% endcapture %}
 
-<nav id="project-subnav" role="navigation">
+<nav id="subnav" role="navigation">
   <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link{% if project_index_url == page.url %} active{% endif %}"

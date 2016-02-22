@@ -1,0 +1,34 @@
+.email-obfuscated {
+  unicode-bidi:bidi-override;
+  direction: rtl;
+}
+
+.person.given-name {}
+
+.person.sur-name {
+  font-weight: bold;
+}
+
+.person-affiliation {}
+
+#people-db {
+  .col-name {
+    min-width: 10rem;
+    max-width: 15rem;
+  }
+  .col-affiliation {
+
+  }
+  .col-position {
+    max-width: 10rem;
+  }
+  .col-topics {
+    max-width: 25rem;
+  }
+
+  .btn-group {
+    a {
+      padding: 0 0.2rem;
+    }
+  }
+}
