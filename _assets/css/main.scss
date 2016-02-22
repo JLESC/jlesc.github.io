@@ -448,5 +448,17 @@ html {
         color: $link-hover-color !important;
       }
     }
+    
+    dl#grants {
+      @extend .row;
+      dt {
+	@extend .col-sm-12;
+      }
+      dd {
+	@extend .col-sm-11;
+	@extend .col-sm-offset-1;
+      }
+    }
+    
   }
 }
