@@ -1,4 +1,4 @@
-{% assign current_base_arr = page.url | replace:'/events/' | split:'/' %}
+{% assign current_base_arr = page.url | replace:'/events/','' | split:'/' %}
 {% assign current_base = current_base_arr | first %}
 {% assign current_base_size = current_base | size %}
 
@@ -10,6 +10,17 @@
       <a class="nav-link{% if event_index_url == page.url %} active{% endif %}"
          href="{{ event_index_url }}">Event's Main Page</a>
     </li>
+    {% sorted_for subpage in site.events_upcoming %}
+      {% unless subpage.page_type == 'event_page' %}
+        {% assign subpage_url_arr = subpage.url | split:'/' %}
+        {% if subpage_url_arr contains current_base %}
+          <li class="nav-item">
+            <a class="nav-link{% if subpage.url == page.url %} active{% endif %}"
+               href="{{ subpage.url }}">{{ subpage.subtitle }}</a>
+          </li>
+        {% endif %}
+      {% endunless %}
+    {% endsorted_for %}
     {% sorted_for subpage in site.events_past %}
       {% unless subpage.page_type == 'event_page' %}
         {% assign subpage_url_arr = subpage.url | split:'/' %}

@@ -81,6 +81,7 @@ collections:
     output: true
   projects:
     output: true
+    permalink: /projects/:title/
 
 scholar:
   bibtex_filters:

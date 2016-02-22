@@ -40,6 +40,7 @@ table {
   tr.table-separator {
     @extend .table-active;
     height: 0.25rem;
+
     td {
       padding: 0;
     }
@@ -123,7 +124,8 @@ html {
       }
     }
 
-    #event-subnav {
+    #event-subnav,
+    #project-subnav {
       @extend .m-y-1;
     }
 

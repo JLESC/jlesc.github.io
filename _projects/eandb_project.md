@@ -19,6 +19,7 @@ members:
   - mendes_c
   - kale_s
   - mehaut_j
+page_type: project_page
 ---
 
 ## Research topic and goals
