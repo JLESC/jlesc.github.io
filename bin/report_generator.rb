@@ -82,7 +82,7 @@ For the full list refer to the +Gemfile.lock+ file on commit SHA +9afcb40fbda60c
 =end
 
 require 'bundler/setup'
-Bundler.require(:default, :report)
+Bundler.require(:default)
 require 'jekyll'
 require 'bibtex'
 

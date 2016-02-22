@@ -1,5 +1,43 @@
-# A 'database' of the organisations participating in JLESC.
 #
+# Institutes / Partners of JLESC
+#
+#
+# ## Purpose
+#
+# - unification of people's affiliation.
+#
+#
+# ## Identifier Format
+#
+# no additional restrictions to standard YAML's mappings
+#
+#
+# ## Required Attributes
+#
+#   title          the official full name of the institute to be rendered wherever the institute
+#                  is used on the website
+#   abbr           the institute's official abbreviation; this usually shows up behind people's
+#                  names to denote their affiliation
+#
+#
+# ## Optional Attributes
+#
+#   logo           file name of the institute's logo in `_assets/images`
+#
+#
+# ## Notes
+#
+# - stick to a total line length of 100 characters ................................ this is here ->|
+#   For longer text fields (e.g. 'topics') use YAML's "Folded style" [1]:
+#
+#   johnson_j:
+#     ...
+#     topics: >
+#       a really long description spanning
+#       multiple lines
+#     ...
+#
+# [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
 #
 
 anl:
@@ -8,12 +46,12 @@ anl:
   logo: anl_logo.jpg
 
 bsc:
-  title: Barcelona Supercomputing Center
+  title: Centro Nacional de Supercomputación
   abbr: BSC
   logo: bsc_logo.svg
 
 inria:
-  title: INRIA
+  title: Institut national de recherche en informatique et en automatique
   abbr: INRIA
   logo: inria_logo.png
 
@@ -23,16 +61,16 @@ jsc:
   logo: jsc_logo.svg
 
 ncsa:
-  title: NCSA
+  title: National Center for Supercomputing Applications
   abbr: NCSA
   logo: ncsa_vertical_logo.png
 
 uiuc:
-  title: UIUC
+  title: University of Illinois at Urbana-Champaign
   abbr: UIUC
   logo:
 
 riken:
-  title: RIKEN
+  title: RIKEN Advanced Institute for Computational Science
   abbr: RIKEN
   logo: riken_logo.png

@@ -2,8 +2,6 @@
 layout: page
 title: News
 navbar: News
-subnavbar: Overview
-footer: false
 ---
 
 <div id="news-index">
@@ -11,6 +9,11 @@ footer: false
     {% include article_index.html %}
   {% endfor %}
 </div>
+
+{% include contribute_footer.html
+  content='news'
+  link='https://github.com/JLESC/jlesc.github.io/wiki/Editing-Pages#editing-news'
+%}
 
 <nav class="row">
   <div class="col-xs-3 col-md-2">

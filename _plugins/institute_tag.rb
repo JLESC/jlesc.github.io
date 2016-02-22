@@ -55,7 +55,7 @@ module Jekyll
           raise RenderInstituteTagError.new "InstituteID '#{@institute_id}' has no 'abbr' defined."
         end
 
-        "<abbr title=\"#{@institute['title']}\" class=\"initialism\">#{@institute['abbr']}</abbr>"
+        "<abbr title=\"#{@institute['title']}\" class=\"initialism\" data-toggle=\"tooltip\">#{@institute['abbr']}</abbr>"
       end
     end
   end

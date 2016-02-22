@@ -11,7 +11,7 @@
   {% else %}
     <div class="card card-block">
   {% endif %}
-      <i class="fa fa-user"></i> <span class="hidden-sm-down">Posted by </span>{{ author }}
+      <i class="fa fa-user"></i> <span class="hidden-sm-down">Posted by </span>{% person {{ author }} %}
   {% if on_index %}
     </li>
   {% else %}

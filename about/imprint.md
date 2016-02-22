@@ -23,10 +23,15 @@ This website is build with the following open source tools and libraries:
   - [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
   - [jekyll-feed](https://github.com/jekyll/jekyll-feed)
   - [jekyll-paginate](https://github.com/jekyll/jekyll-paginate)
-* trimmed [Twitter Bootstrap v4-dev](https://v4-alpha.getbootstrap.com)
-* theme based on [*Cosmo* Bootswatch](https://bootswatch.com/cosmo/)
+* [jQuery 2.1.4](http://jquery.com/)
+* trimmed [Twitter Bootstrap v4-dev](https://v4-alpha.getbootstrap.com)  
+  - which depends on [Tether.js](http://tether.io/docs/welcome/) for tooltips
 * minimal adjusted [DataTables.js](https://datatables.net/) to work with _Bootstrap v4-dev_
-* custom fonts
+  - with [datetime plugin](https://datatables.net/blog/2014-12-18)
+    - which depends on [moment.js](http://momentjs.com/)
+* [Featherlight.js](https://noelboss.github.io/featherlight/) for lightbox effects (e.g. on some images)
+* theme based on [*Cosmo* Bootswatch](https://bootswatch.com/cosmo/)
+* special fonts
   - [font-awesome](https://fortawesome.github.io/Font-Awesome/) for icons
   - [Roboto Font Family](https://github.com/google/roboto)
 * deployment via [Travis CI][travis], [GitHub Pages][ghpages] and [jgd gem][jgd]

@@ -1,0 +1,56 @@
+#
+# States of Projects
+#
+#
+# ## Purpose
+#
+# - validation of project states (c.f. `status` YAML field of projects)
+#
+#
+# ## Identifier Format
+#
+# no additional restrictions to standard YAML's mappings
+#
+#
+# ## Require Attributes
+#
+#   title          the name of the status as rendered on the website
+#
+#
+# ## Optional Attributes
+#
+# -none-
+#
+#
+# ## Notes
+#
+# - stick to a total line length of 100 characters ................................ this is here ->|
+#   For longer text fields (e.g. 'topics') use YAML's "Folded style" [1]:
+#
+#   johnson_j:
+#     ...
+#     topics: >
+#       a really long description spanning
+#       multiple lines
+#     ...
+#
+# [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
+#
+
+help_wanted:
+  title: help wanted
+
+preparation:
+  title: in preparation
+
+starting:
+  title: starting
+
+running:
+  title: running
+
+closing:
+  title: closing
+
+finished:
+  title: finished

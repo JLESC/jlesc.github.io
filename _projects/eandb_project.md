@@ -48,7 +48,8 @@ to benefit from its load balancing framework. Our experimental results
 show that dynamic load balancers can adapt to load variations during the application’s execution
 and improve performance by 36%.
 This work was presented in the PDP 2014 conference {% cite KellerTesserEtAl2014 --file jlesc.bib %}. 
-An extended version will be publishedin the International Journal of High Performance Computing and Applications.
+An extended version will be publishedin the International Journal of High Performance Computing and Applications 
+([to appear](https://team.inria.fr/exase/international-journal-of-high-performance-computing-applications/)).
 Laercio Pilla described most of the load balancers in his PhD {% cite Pilla2014 --file external/eandb_project.bib %}.
 
 #### Power consumption  
@@ -61,9 +62,9 @@ and energy data from homogeneous and heterogeneous systems.
 Using this tool, it provides a detailed comparison between a low-power processor (ARM big.LITTLE) and a high performance
 processor (Intel Sandy Bridge-EP) using all applications from the NAS parallel benchmarks and
 a real-world soil irrigation simulator. 
-The results show that the average power demand of Intel Sandy Bridge-EP is within 12:6X to 152:4X higher than ARM big.
-LITTLE, whereas its average energy consumption is within 1:6X to 7:1x superior. 
-Overall, ARM big.LITTLE presented a better performance/energy trade-off when it takes less than 9:2X the execution 
+The results show that the average power demand of Intel Sandy Bridge-EP is within 12.6X to 152.4X higher than ARM big.
+LITTLE, whereas its average energy consumption is within 1.6X to 7.1x superior. 
+Overall, ARM big.LITTLE presented a better performance/energy trade-off when it takes less than 9.2X the execution 
 time of Intel Sandy Bridge-EP to solve the same problem.
 This work was published in {% cite PadoinEtAl2015 --file external/eandb_project.bib %} and {% cite FrancesquiniEtAl2015 --file external/eandb_project.bib %}.  
 Large-scale simulation of seismic wave propagation is an active research topic. 
@@ -91,7 +92,7 @@ The first one, called Fine- Grained EnergyLB (FG-ENERGYLB), is suitable for plat
 tens of cores that allow per-core DVFS. 
 The second one, called Coarse-Grained EnergyLB (CGENERGLB) is suitable for current HPC platforms composed of several 
 multi-core processors that feature per-chip DVFS.  
-This work was presented at the HiPC conference {% cite PadoinEtAl2014 --filse external/eandb_project.bib %}.
+This work was presented at the HiPC conference {% cite PadoinEtAl2014 --file external/eandb_project.bib %}.
 
 ## Visits and meetings
 
@@ -102,31 +103,7 @@ This work was presented at the HiPC conference {% cite PadoinEtAl2014 --filse ex
 
 ## Impact and publications
 
-<!--
-{% comment %}
-=============================
-== CITING OWN PUBLICATIONS ==
-=============================
 
-To list your own publications produced within this project below this comment but still inside the
-HTML comment (`<!-- ... -->`).
-This will get displayed below without the need to cite them within the text, which you can still do.
-Put a blank line before the `<!--`, otherwise the comment will show up in the html page.
-
-Use the Liquid citing syntax as explained in the wiki:
-https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publications
-
-=====================================
-== START HERE WITH YOUR REFERENCES ==
-{% endcomment %}
-
-
-
-{% comment %}
-== NO MORE BELOW THIS ==
-========================
-{% endcomment %}
--->
 {% bibliography --cited --file jlesc.bib %}
 
 
@@ -149,13 +126,5 @@ https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publ
     Philippe Navaux, Jean-Francois Mehaut)
 
 ## References
-
-{% comment %}
-=================
-=== IMPORTANT ===
-=================
-
-Replace 'YOUR_BIBTEX_FILE_NAME_HERE' with the name of the BibTeX file with the external references!
-{% endcomment %}
 
 {% bibliography --file external/eandb_project.bib %}

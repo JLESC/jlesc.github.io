@@ -5,7 +5,6 @@ date: 2016-02-15
 updated:
 navbar: Research
 subnavbar: Projects
-footer: true
 project_url:
 status: help_wanted
 topics:
