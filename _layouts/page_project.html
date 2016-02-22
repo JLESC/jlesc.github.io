@@ -5,14 +5,14 @@ layout: default
   <article class="post-content">
     <header class="post-header clearfix">
       <h1 class="pull-left">{{ page.title }}</h1>
-    <span class="pull-right invisible" id="show-project-meta-wrapper">
-      <a class="btn btn-sm" id="show-project-meta" role="button">Show Profile</a>
+    <span class="pull-right invisible" id="show-meta-aside-wrapper">
+      <a class="btn btn-sm" id="show-meta-aside" role="button">Show Profile</a>
     </span>
     </header>
-    <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="project-aside">
+    <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
       {% include asides/project_meta.html %}
     </aside>
-    <div class="col-lg-7 col-sm-12 pull-lg-left content" id="project-content">
+    <div class="col-lg-7 col-sm-12 pull-lg-left content">
       {% include asides/project_subnav.html %}
       {% if page.subtitle %}
         <h2>{{ page.subtitle }}</h2>
