@@ -332,6 +332,14 @@ ukawa_a:
   given_name: Akira
   affiliation: riken
 
+tsuji_m:
+  sur_name: Tsuji
+  given_name: Miwako
+  affiliation: riken
+  position: 
+  email: 
+  homepage:
+  
 vandenbergen_n:
   sur_name: Vandenbergen
   given_name: Nicholas
@@ -358,6 +366,15 @@ yildiz_o:
   topics:
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
+  
+wylie_b:
+  sur_name: Wylie
+  given_name: Brian J.N.
+  affiliation: jsc
+  position:
+  topics:
+  email:  b.wylie@fz-juelich.de
+  homepage: 
 
 
 yves_r:
