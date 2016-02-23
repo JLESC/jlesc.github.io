@@ -13,6 +13,7 @@ event_short_url:
 wayback_url:
 kind:
 institute:
+permalink:
 page_type: event_page
 ---
 {% comment %}
@@ -70,6 +71,10 @@ Then fill in the YAML front matter variables:
   institute        (optional)
                    institute ID (see _data/institutes.yml) organizing and hosting the event
 
+  permalink        (optional for main pages; require for sub-pages)
+                   for the main page, this has to be left empty (or deleted); for event's sub-pages
+                   this needs to match a certain pattern (see below)
+
   page_type        (required)
                    for the main page of an event (the default), this has field has to have the value
                    `event_page`; for subpages of an event this has to have the value `event_subpage`
@@ -94,6 +99,9 @@ To create a sub-page, do the following:
 3. Adjust YAML front matter fields for the sub-page:
    - `page_type` must be 'event_subpage'
    - `subtitle` must be given
+   - `permalink` must be of the following form: /events/TITLE/SUBTITLE
+     where `TITLE` and `SUBTITLE` are exactly as the file names, i.e. all lower case, dashes for
+     whitespaces and no special characters
 
 Example
 -------
@@ -103,7 +111,8 @@ To create a sub-page for the Christmas presents, we create a folder
 `presents.md`.
 Then, in `_events_upcoming/2015-12-24-jlesc-christmas/presents.md`, we copy the YAML front matter
 from `_events_upcoming/2015-12-24-jlesc-christmas.md` to replace the YAML front matter of
-`presents.md` and change the YAML fields `page_type` to 'event_subpage' and `subtitle` to 'Presents'.
+change the YAML fields `page_type` to 'event_subpage', `subtitle` to 'Presents' and `permalink` to
+'/events/christmas/presents/'
 
 Now, we have get a second tab on the 'Christmas' event page with the title 'Presents'.
 

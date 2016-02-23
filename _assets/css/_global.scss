@@ -65,7 +65,8 @@ img {
 }
 
 #subnav {
-  @extend .m-y-1;
+  @extend .m-b-1;
+  padding-top: ($spacer-y / 2);
 }
 
 .post {

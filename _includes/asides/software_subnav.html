@@ -1,16 +1,17 @@
-{% assign current_base_arr = page.url | replace:'/projects/','' | split:'/' %}
+{% assign current_base_arr = page.url | replace:'/software/','' | split:'/' %}
 {% assign current_base = current_base_arr | first %}
 {% assign current_base_size = current_base | size %}
-{% capture project_index_url %}{% if current_base_size == 0 %}{{ page.url | strip }}{% else %}/projects/{{ current_base | strip }}/{% endif %}{% endcapture %}
+
+{% capture software_index_url %}{% if current_base_size == 0 %}{{ page.url | strip }}{% else %}/software/{{ current_base | strip }}{% endif %}/{% endcapture %}
 
 <nav id="subnav" class="clearfix" role="navigation">
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link{% if project_index_url == page.url %} active{% endif %}"
-         href="{{ project_index_url }}">Project's Main Page</a>
+      <a class="nav-link{% if software_index_url == page.url %} active{% endif %}"
+         href="{{ software_index_url }}">Software's Main Page</a>
     </li>
-    {% sorted_for subpage in site.projects %}
-      {% unless subpage.page_type == 'project_page' %}
+    {% sorted_for subpage in site.software %}
+      {% unless subpage.page_type == 'software_page' %}
         {% assign subpage_url_arr = subpage.url | split:'/' %}
         {% if subpage_url_arr contains current_base %}
           <li class="nav-item">

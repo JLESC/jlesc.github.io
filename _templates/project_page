@@ -15,6 +15,7 @@ keywords:
 head:
 members:
   -
+permalink:
 page_type: project_page
 ---
 {% comment %}
@@ -73,6 +74,10 @@ Then fill in the YAML header variables above.
                    a YAML list of members of this project, i.e. the people doing the work;
                    each member must be listed as its identifier as found in '_data/people.yml'
 
+  permalink        (optional for main pages; require for sub-pages)
+                   for the main page, this has to be left empty (or deleted); for project's
+                   sub-pages this needs to match a certain pattern (see below)
+
   page_type        (required)
                    for the main page of a project (the default), this has field has to have the value
                    `project_page`; for subpages of a project this has to have the value
@@ -98,6 +103,9 @@ To create a sub-page, do the following:
 3. Adjust YAML front matter fields for the sub-page:
    - `page_type` must be 'project_subpage'
    - `subtitle` must be given
+   - `permalink` must be of the following form: /projects/TITLE/SUBTITLE
+     where `TITLE` and `SUBTITLE` are exactly as the file names, i.e. all lower case, dashes for
+     whitespaces and no special characters
 
 Example
 -------
@@ -106,10 +114,10 @@ To create a sub-page for the World Domination project, we create a folder
 `_projects/world-domination`, copy this template into that folder and rename it to `schedule.md`.
 Then, in `_projects/world-domination/schedule.md`, we copy the YAML front matter from
 `_projects/world-domination.md` to replace the YAML front matter of `schedule.md` and change the
-YAML fields `page_type` to 'project_subpage' and `subtitle` to 'Schedule'.
+YAML fields `page_type` to 'project_subpage', `subtitle` to 'Schedule' and `permalink` to
+'/projects/world-domination/schedule/'.
 
 Now, we have get a second tab on the 'World Domination' project page with the title 'Schedule'.
-
 
 {% endcomment %}
 

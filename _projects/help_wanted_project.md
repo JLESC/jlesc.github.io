@@ -14,6 +14,7 @@ keywords:
 head: klatt_t
 members:
   - speck_r
+permalink:
 page_type: project_page
 ---
 

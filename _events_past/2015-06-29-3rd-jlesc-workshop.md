@@ -12,6 +12,7 @@ event_short_url:
 wayback_url:
 kind: workshop
 institute: bsc
+permalink:
 page_type: event_page
 ---
 
