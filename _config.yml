@@ -79,6 +79,7 @@ collections:
     permalink: /events/:title/
   software:
     output: true
+    permalink: /software/:title/
   projects:
     output: true
     permalink: /projects/:title/

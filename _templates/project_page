@@ -110,7 +110,6 @@ YAML fields `page_type` to 'project_subpage' and `subtitle` to 'Schedule'.
 
 Now, we have get a second tab on the 'World Domination' project page with the title 'Schedule'.
 
-
 {% endcomment %}
 
 ## Research topic and goals

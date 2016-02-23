@@ -45,6 +45,7 @@ contributors:
   - name: Daniel Ruprecht
   - name: Fabian Köhler
   - name: Selman Terzi
+page_type: software_page
 ---
 A modern C++ library for the PFASST algorithm. 
 
