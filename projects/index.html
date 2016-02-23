@@ -50,6 +50,9 @@ subnavbar: Projects
             {% unless project.topics contains topic_id %}
               {% continue %}
             {% endunless %}
+            {% unless project.page_type == 'project_page' %}
+              {% continue %}
+            {% endunless %}
             <div class="card text-xs-center{% if project.status == 'help_wanted' %} card-outline-primary{% endif %}">
               <div class="card-block">
                 <h4 class="card-title">

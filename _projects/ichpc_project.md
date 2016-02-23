@@ -17,6 +17,8 @@ members:
   - ibrahim_s
   - yildiz_o
   - ross_r
+permalink:
+page_type: project_page
 ---
 
 ## Research topic and goals

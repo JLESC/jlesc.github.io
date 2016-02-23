@@ -1,6 +1,7 @@
 ---
 layout: page_project
 title:
+subtitle:
 date:
 updated:
 navbar: Research
@@ -14,6 +15,8 @@ keywords:
 head:
 members:
   -
+permalink:
+page_type: project_page
 ---
 {% comment %}
 ================================
@@ -34,6 +37,10 @@ Then fill in the YAML header variables above.
 
   title            (required)
                    the full title of the project
+
+  subtitle         (optional)
+                   for projectss with 'page_type=project_page' (see below) this is optional, for
+                   projects' subpages ('page_type=project_subpage') (see below) this is required
 
   date             (required)
                    the date this page was created in the format: YYYY-MM-DD; this will get displayed
@@ -66,6 +73,51 @@ Then fill in the YAML header variables above.
   members          (optional)
                    a YAML list of members of this project, i.e. the people doing the work;
                    each member must be listed as its identifier as found in '_data/people.yml'
+
+  permalink        (optional for main pages; require for sub-pages)
+                   for the main page, this has to be left empty (or deleted); for project's
+                   sub-pages this needs to match a certain pattern (see below)
+
+  page_type        (required)
+                   for the main page of a project (the default), this has field has to have the value
+                   `project_page`; for subpages of a project this has to have the value
+                   `project_subpage`
+
+======================================
+== Creating Sub Pages for a Project ==
+======================================
+Each project can have multiple sub-pages.
+These sub-pages are accessible via the tabbed sub-navigation just below the project's title on the
+project's page.
+
+To create a sub-page, do the following:
+
+1. Create a folder in `_projects` with the exact same name as the Markdown file of the project
+   (without the file extension).
+
+2. Copy this template into the folder and give it a descriptive name and Markdown file extension
+   (`.md`).
+
+3. Copy all the YAML front matter from the project's main page to the sub-page.
+
+3. Adjust YAML front matter fields for the sub-page:
+   - `page_type` must be 'project_subpage'
+   - `subtitle` must be given
+   - `permalink` must be of the following form: /projects/TITLE/SUBTITLE
+     where `TITLE` and `SUBTITLE` are exactly as the file names, i.e. all lower case, dashes for
+     whitespaces and no special characters
+
+Example
+-------
+Given an event Markdown file `_projects/world-domination.md`.
+To create a sub-page for the World Domination project, we create a folder
+`_projects/world-domination`, copy this template into that folder and rename it to `schedule.md`.
+Then, in `_projects/world-domination/schedule.md`, we copy the YAML front matter from
+`_projects/world-domination.md` to replace the YAML front matter of `schedule.md` and change the
+YAML fields `page_type` to 'project_subpage', `subtitle` to 'Schedule' and `permalink` to
+'/projects/world-domination/schedule/'.
+
+Now, we have get a second tab on the 'World Domination' project page with the title 'Schedule'.
 
 {% endcomment %}
 

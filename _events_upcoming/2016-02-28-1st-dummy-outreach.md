@@ -11,6 +11,7 @@ event_short_url:
 event_url:
 wayback_url:
 kind: outreach
+permalink:
 page_type: event_page
 ---
 

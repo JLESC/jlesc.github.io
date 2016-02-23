@@ -1,0 +1,12 @@
+
+#news-index {
+  section {
+    footer {
+      padding: 0.25rem 1.25rem !important;
+
+      ul {
+        @extend .m-a-0;
+      }
+    }
+  }
+}

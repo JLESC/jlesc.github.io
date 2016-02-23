@@ -54,7 +54,7 @@ assets:
   prefix: '/assets'
   assets:
     - 'main.scss'
-    - 'custom.js'
+    - 'main.js'
     - '*.png'
     - '*.jpg'
     - '*.jpeg'
@@ -79,8 +79,10 @@ collections:
     permalink: /events/:title/
   software:
     output: true
+    permalink: /software/:title/
   projects:
     output: true
+    permalink: /projects/:title/
 
 scholar:
   bibtex_filters:
