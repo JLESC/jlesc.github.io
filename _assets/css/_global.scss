@@ -1,5 +1,3 @@
-@import 'theme';
-
 html {
   body {
     margin-top: 3.4rem;
@@ -53,7 +51,7 @@ footer#site-footer {
 img {
   &.logo {
     @extend .p-y-1;
-    @include center-block();
+    @extend .m-x-auto;
     @include img-fluid();
     max-height: 7.5rem;
   }

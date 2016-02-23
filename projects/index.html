@@ -33,7 +33,7 @@ subnavbar: Projects
            aria-controls="category-{{ topic_id }}">
           <h4>{{ topic.title }}</h4>
         </a>
-        <label class="label label-default pull-right" title="number projects for {{ topic.title }}"
+        <label class="tag tag-default pull-right" title="number projects for {{ topic.title }}"
                data-toggle="tooltip">
           <i class="fa fa-fw fa-cubes"></i>
           {% stats_for_topic_status {{ topic_id }} all %}

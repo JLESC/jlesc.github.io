@@ -1,6 +1,6 @@
 <li class="list-group-item">
   <span class="list-group-item-heading">
-    <label class="label label-event-{{ event.kind }}">{% event_kind {{ event.kind }} %}</label>
+    <label class="tag tag-event-{{ event.kind }}">{% event_kind {{ event.kind }} %}</label>
     <a href="{{site.baseurl}}{{ event.url }}">{{ event.title }}</a>
   </span>
   {% include event/meta.html %}

@@ -1,17 +1,17 @@
 <ul class="list-inline partner-meta">
-  <li class="list-inline-item label label-default"
+  <li class="list-inline-item tag tag-default"
       title="{% people_for_partner {{ include.partner_id }} %} members in JLESC"
       data-toggle="tooltip" data-placement="left">
     <i class="fa fa-fw fa-users"></i>
     {% people_for_partner {{ include.partner_id }} %}
   </li>
-  <li class="list-inline-item label label-default"
+  <li class="list-inline-item tag tag-default"
       title="participating in {% projects_for_partner {{ include.partner_id }} %} projects"
       data-toggle="tooltip" data-placement="bottom">
     <i class="fa fa-fw fa-cubes"></i>
     {% projects_for_partner {{ include.partner_id }} %}
   </li>
-  <li class="list-inline-item label label-default"
+  <li class="list-inline-item tag tag-default"
       title="leading {% leading_for_partner {{ include.partner_id }} %} projects"
       data-toggle="tooltip" data-placement="right">
     <i class="fa fa-fw fa-graduation-cap"></i>

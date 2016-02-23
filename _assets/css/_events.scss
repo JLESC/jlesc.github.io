@@ -1,25 +1,27 @@
-@import 'theme';
-@import 'vendor/bootstrap/mixins/label';
-
-
-.label-event-workshop {
-  @include label-variant($label-primary-bg);
+.tag-event-workshop {
+  @include tag-variant($tag-primary-bg);
 }
-.label-event-summer_school {
-  @include label-variant($label-default-bg);
+.tag-event-summer_school {
+  @include tag-variant($tag-default-bg);
 }
-.label-event-outreach {
-  @include label-variant($label-info-bg);
+.tag-event-outreach {
+  @include tag-variant($tag-info-bg);
 }
 
 
 #schedule-accordion {
   a.abstract-btn {
-    @extend .label;
-    @extend .label-default;
+    @extend .tag;
+    @extend .tag-default;
   }
 
   .card {
+    .card-header {
+      h4 {
+        @extend .m-b-0;
+      }
+    }
+
     .card-block {
       @extend .p-a-0;
 

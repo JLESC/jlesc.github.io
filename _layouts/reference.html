@@ -4,7 +4,7 @@
   <div>
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
-        <div class="col-md-12 ref-label label label-default">
+        <div class="col-md-12 ref-label tag tag-default">
           {{ key }}
         </div>
       </div>
@@ -13,7 +13,7 @@
                 aria-expanded="false" aria-controls="collapse{{ key }}Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn{% unless entry.abstract %}-outline{% endunless %}-secondary col-xs-6"
+        <button class="btn btn-sm btn-secondary{% unless entry.abstract %}-outline{% endunless %} col-xs-6"
                 {% unless entry.abstract %} disabled="disabled"{% endunless %} data-toggle="collapse" data-target="#collapse{{ key }}Abstract"
                 aria-expanded="false" aria-controls="collapse{{ key }}Abstract">
           Abstract
@@ -27,7 +27,7 @@
   </div>
   <div class="collapse" id="collapse{{ key }}Bibtex">
     <div class="row bibtex-ref-raw">
-      <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-sm-10 offset-sm-1">
         <pre><code>{{ entry.bibtex }}</code></pre>
       </div>
     </div>
@@ -35,7 +35,7 @@
   {% if entry.abstract %}
   <div class="collapse" id="collapse{{ key }}Abstract">
     <div class="row bibtex-ref-abstract">
-      <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-sm-10 offset-sm-1">
         {{ entry.abstract }}
       </div>
     </div>
