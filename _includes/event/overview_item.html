@@ -1,7 +1,7 @@
 <li class="list-group-item">
-  <p class="list-group-item-heading">
-    <span class="label label-event-{{ event.kind }}">{% event_kind {{ event.kind }} %}</span>
+  <span class="list-group-item-heading">
+    <label class="label label-event-{{ event.kind }}">{% event_kind {{ event.kind }} %}</label>
     <a href="{{site.baseurl}}{{ event.url }}">{{ event.title }}</a>
-  </p>
+  </span>
   {% include event/meta.html %}
 </li>

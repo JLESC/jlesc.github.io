@@ -54,7 +54,7 @@ assets:
   prefix: '/assets'
   assets:
     - 'main.scss'
-    - 'custom.js'
+    - 'main.js'
     - '*.png'
     - '*.jpg'
     - '*.jpeg'

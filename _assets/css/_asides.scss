@@ -1,0 +1,20 @@
+aside {
+  .card-header {
+    .btn {
+      @extend .p-y-0;
+    }
+  }
+
+  ul li.list-group-item.row {
+    @extend .m-x-0;
+    @extend .p-x-0;
+    padding-top: ($spacer-y / 5);
+    padding-bottom: ($spacer-y / 5);
+    border-bottom-width: 0;
+
+    label {
+      @extend .m-b-0;
+      font-weight: bold;
+    }
+  }
+}
