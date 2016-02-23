@@ -1,9 +1,9 @@
 //= require 'vendor/jquery-2.1.4.min'
 
-//= require 'vendor/tether'
-//= require 'vendor/bootstrap'
+//= require 'vendor/tether.min'
+//= require 'vendor/bootstrap.min'
 
-//= require 'vendor/featherlight'
+//= require 'vendor/featherlight.min'
 
 //= require 'functions'
 //= require 'github_widget'
