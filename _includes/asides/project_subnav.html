@@ -3,7 +3,7 @@
 {% assign current_base_size = current_base | size %}
 {% capture project_index_url %}{% if current_base_size == 0 %}{{ page.url | strip }}{% else %}/projects/{{ current_base | strip }}/{% endif %}{% endcapture %}
 
-<nav id="subnav" role="navigation">
+<nav id="subnav" class="clearfix" role="navigation">
   <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link{% if project_index_url == page.url %} active{% endif %}"
@@ -20,5 +20,10 @@
         {% endif %}
       {% endunless %}
     {% endsorted_for %}
+    <li id="show-meta-aside-wrapper">
+      <a class="invisible" id="show-meta-aside" role="button" title="Show Profile" data-toggle="tooltip">
+        <i class="fa fa-fw fa-info"></i>
+      </a>
+    </li>
   </ul>
 </nav>

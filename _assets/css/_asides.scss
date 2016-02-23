@@ -1,7 +1,12 @@
 aside {
   .card-header {
-    .btn {
-      @extend .p-y-0;
+    #hide-meta-aside {
+      @extend .btn-outline-primary;
+      border: 0 !important;
+
+      i {
+        vertical-align: middle;
+      }
     }
   }
 
@@ -15,6 +20,29 @@ aside {
     label {
       @extend .m-b-0;
       font-weight: bold;
+    }
+  }
+}
+
+#subnav #show-meta-aside-wrapper {
+  @extend .nav-item;
+  @extend .nav-link;
+  @include pull-right();
+  @extend .text-xs-right;
+  border: 0 !important;
+
+  &:focus,
+  &:hover,
+  a {
+    border: 0 !important;
+  }
+
+  a {
+    @extend .btn-outline-primary;
+    @extend .p-y-0;
+
+    i {
+      vertical-align: middle;
     }
   }
 }
