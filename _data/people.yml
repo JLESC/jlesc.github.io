@@ -168,6 +168,15 @@ kale_s:
   topics:
   email: kale@illinois.edu
   homepage: http://charm.cs.uiuc.edu/~kale/
+  
+hovland_p:
+  sur_name: Hovland
+  given_name: Paul
+  affiliation: anl
+  position:
+  topics:
+  email: hovland@mcs.anl.gov
+  homepage:
 
 jacob_r:
   sur_name: Jacob
@@ -286,6 +295,15 @@ ross_r:
   email: rross@mcs.anl.gov
   homepage: www.mcs.anl.gov/~rross
 
+robert_y:
+  sur_name: Robert
+  given_name: Yves
+  affiliation: inria
+  position:
+  topics:
+  email: Yves.Robert@inria.fr
+  homepage: http://graal.ens-lyon.fr/~yrobert/
+  
 sato_m:
   sur_name: Sato
   given_name: Mitsuhisa
