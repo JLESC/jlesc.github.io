@@ -12,6 +12,7 @@ event_url:
 wayback_url:
 kind: workshop
 institute: inria
+permalink:
 page_type: event_page
 ---
 

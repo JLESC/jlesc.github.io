@@ -20,6 +20,7 @@ developers:
   -
 contributors:
   -
+permalink:
 page_type: software_page
 ---
 {% comment %}
@@ -102,6 +103,10 @@ Here are some details on the available fields and their format:
                    lead_developer (optional)
                                   a value of 'true' indicates the person as a lead developer
 
+  permalink        (optional for main pages; require for sub-pages)
+                   for the main page, this has to be left empty (or deleted); for software's
+                   sub-pages this needs to match a certain pattern (see below)
+
   page_type        (required)
                    for the main page of a project (the default), this has field has to have the value
                    `project_page`; for subpages of a project this has to have the value
@@ -127,6 +132,9 @@ To create a sub-page, do the following:
 3. Adjust YAML front matter fields for the sub-page:
    - `page_type` must be 'software_subpage'
    - `subtitle` must be given
+   - `permalink` must be of the following form: /software/TITLE/SUBTITLE
+     where `TITLE` and `SUBTITLE` are exactly as the file names, i.e. all lower case, dashes for
+     whitespaces and no special characters
 
 Example
 -------
@@ -135,7 +143,8 @@ To create a sub-page for the Linux Kernel software, we create a folder
 `_software/linux-kernel`, copy this template into that folder and rename it to `modules.md`.
 Then, in `_software/linux-kernel/modules.md`, we copy the YAML front matter from
 `_software/linux-kernel.md` to replace the YAML front matter of `modules.md` and change the
-YAML fields `page_type` to 'software_subpage' and `subtitle` to 'Modules'.
+YAML fields `page_type` to 'software_subpage', `subtitle` to 'Modules' and `permalink` to
+'/software/linux-kernel/modules/'.
 
 Now, we have get a second tab on the 'Linux Kernel' software page with the title 'Modules'.
 
