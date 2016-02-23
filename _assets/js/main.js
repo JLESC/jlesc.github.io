@@ -33,7 +33,7 @@ $(document).ready(function() {
         });
     });
 
-    $('#project-categories-accordion .collapse').each(function() {
+    $('#project-categories-accordion').find('.collapse').each(function() {
        $(this).collapse('hide');
     });
 
