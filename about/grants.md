@@ -7,34 +7,28 @@ subnavbar: Grants
 ---
 
 
-## PUF: Partnership University Fund NEXTGEN
+{:#grants}
+PUF: Partnership University Fund NEXTGEN
+: Lead for Inria: {% person robert_y %},<br />  lead for Argonne: {% person cappello_f %},<br />  lead for UIUC: {% person kramer_b %},<br />  lead for CNRS: Sylvie Joussaume
 
-Lead for Inria: Yves Robert, lead for Argonne: Franck Cappello, lead for UIUC: Bill Kramer, lead for CNRS: Sylvie Joussaume
+FP7 ESSI2: European Exascale Software Initiative
+: Lead for Resilience: {% person cappello_f %}
 
-## FP7 ESSI2: European Exascale Software Initiative
+FACCTS (France and Chicago Collaborating in the Sciences), Collaborative Tool Development for Adjoining MPI Codes
+: Lead: {% person hovland_p %}
 
-Lead for Resilience: Franck Cappello
+FACCTS (France and Chicago Collaborating in the Sciences), Seeding a Franco-Chicago Collaboration in Exascale Storage for Computational Science
+: Lead: {% person ross_r %}
 
-## FACCTS (France and Chicago Collaborating in the Sciences), Collaborative Tool Development for Adjoining MPI Codes
+[G8 Exascale: Enablig Climate Simulation at Extremescale](https://wiki.cites.illinois.edu/wiki/)
+: Lead: {% person cappello_f %}
 
-Lead: Paul Hovland
+ANR RESCUE
+: Lead: {% person robert_y %}
 
-## FACCTS (France and Chicago Collaborating in the Sciences), Seeding a Franco-Chicago Collaboration in Exascale Storage for Computational Science
+ANR MAPREDUCE
+: Lead: {% person antoniu_g %}
 
-Lead: Robert Ross
+FP7 ESSI: European Exascale Software Initiative
+: Lead for Software eco-system: {% person cappello_f %}
 
-## [G8 Exascale: Enablig Climate Simulation at Extremescale](https://wiki.cites.illinois.edu/wiki/)
-
-Lead: Franck Cappello
-
-## ANR RESCUE
-
-Lead: Yves Robert
-
-## ANR MAPREDUCE
-
-Lead: Gabriel Antoniu
-
-## FP7 ESSI: European Exascale Software Initiative
-
-Lead for Software eco-system: Franck Cappello
