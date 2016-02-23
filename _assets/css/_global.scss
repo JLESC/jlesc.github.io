@@ -13,17 +13,17 @@ table {
     height: 0.25rem;
 
     td {
-      padding: 0;
+      @extend .p-a-0;
     }
   }
 }
 
 noscript {
   .card {
-    margin-bottom: 0;
+    @extend .m-b-0;
   }
   .card-block {
-    padding: 0;
+    @extend .p-a-0;
   }
 }
 
@@ -36,7 +36,7 @@ footer#site-footer {
 
   .navbar-nav {
     .nav-link + .nav-link {
-      margin: 0 !important;
+      @extend .m-a-0;
     }
   }
 

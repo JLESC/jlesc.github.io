@@ -1,6 +1,6 @@
 .jumbotron {
-  margin-bottom: 0;
-  padding: 0;
+  @extend .m-b-0;
+  @extend .p-a-0;
 }
 
 ul#next-events-index {

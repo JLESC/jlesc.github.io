@@ -17,20 +17,19 @@
   a.abstract-btn {
     @extend .label;
     @extend .label-default;
-    //height: 18px;
   }
 
   .card {
     .card-block {
-      padding: 0;
+      @extend .p-a-0;
 
       .card-text {
         @extend .p-a-2;
-        margin-bottom: 0;
+        @extend .m-b-0;
       }
 
       table {
-        margin-bottom: 0;
+        @extend .m-b-0;
 
         tr {
           td {

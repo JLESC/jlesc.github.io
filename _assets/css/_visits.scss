@@ -6,6 +6,6 @@
   }
 
   td.col-pm {
-    text-align: right;
+    @extend .text-xs-right;
   }
 }

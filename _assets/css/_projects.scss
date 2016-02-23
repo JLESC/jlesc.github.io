@@ -11,7 +11,7 @@
 
 #project-categories-accordion {
   a h4 {
-    margin-bottom: 0;
+    @extend .m-b-0;
   }
 }
 
@@ -75,9 +75,17 @@
 
 #project-index {
   .card-block {
-    padding: 1rem;
+    @extend .p-a-1;
   }
   .card-footer, .card-header {
     padding: 0.25rem 1rem;
+  }
+}
+
+table.person-months-table {
+  tr {
+    td:last-of-type {
+      @extend .text-xs-right;
+    }
   }
 }

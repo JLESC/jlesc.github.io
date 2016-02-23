@@ -1,16 +1,25 @@
 @import 'theme';
 
 .bibliography {
-  margin-bottom: 1rem;
+  @extend .m-b-1;
 
   .bibtex-entry-container {
-    .bibtex-ref-raw, .bibtex-ref-abstract {
+    .bibtex-ref-entry {
+      span {
+        word-wrap: break-word;
+      }
+    }
+
+    .bibtex-ref-raw,
+    .bibtex-ref-abstract {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       color: $text-muted !important;
+
       pre {
+        @extend .m-a-0;
         color: inherit;
-        margin: 0;
+
         code {
           color: inherit;
         }

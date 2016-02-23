@@ -1,18 +1,19 @@
 aside {
   .card-header {
     .btn {
-      padding-top: 0;
-      padding-bottom: 0;
+      @extend .p-y-0;
     }
   }
 
   ul li.list-group-item.row {
-    margin: 0 !important;
-    padding: 0.2rem 0 0.2rem 0;
+    @extend .m-x-0;
+    @extend .p-x-0;
+    padding-top: ($spacer-y / 5);
+    padding-bottom: ($spacer-y / 5);
     border-bottom-width: 0;
 
     label {
-      margin-bottom: 0 !important;
+      @extend .m-b-0;
       font-weight: bold;
     }
   }
