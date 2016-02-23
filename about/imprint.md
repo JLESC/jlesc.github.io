@@ -24,7 +24,8 @@ This website is build with the following open source tools and libraries:
   - [jekyll-feed](https://github.com/jekyll/jekyll-feed)
   - [jekyll-paginate](https://github.com/jekyll/jekyll-paginate)
 * [jQuery 2.1.4](http://jquery.com/)
-* trimmed [Twitter Bootstrap v4-dev](https://v4-alpha.getbootstrap.com)  
+* [Twitter Bootstrap v4-dev](https://v4-alpha.getbootstrap.com)
+  _(at some commit between alpha.2 and alpha.3)_
   - which depends on [Tether.js](http://tether.io/docs/welcome/) for tooltips
 * minimal adjusted [DataTables.js](https://datatables.net/) to work with _Bootstrap v4-dev_
   - with [datetime plugin](https://datatables.net/blog/2014-12-18)

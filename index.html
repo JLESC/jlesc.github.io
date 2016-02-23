@@ -37,7 +37,7 @@ layout: landingpage
           {% for post in site.posts limit: 5 %}
           <li class="list-group-item">
             <div class="row">
-              <label class="label label-default col-xs-12 col-sm-3 col-md-4">{{ post.date | date_to_string }}</label>
+              <label class="tag tag-default col-xs-12 col-sm-3 col-md-4">{{ post.date | date_to_string }}</label>
               <a class="col-xs-12 col-sm-9 col-md-8" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | titlecase }}</a>
             </div>
           </li>
@@ -71,7 +71,7 @@ layout: landingpage
             <li class="list-group-item">
               <div class="row">
                 <div class="col-xs-12">
-                  <label class="label label-event-{{ event.kind }} pull-right">{% event_kind {{ event.kind }} %}</label>
+                  <label class="tag tag-event-{{ event.kind }} pull-right">{% event_kind {{ event.kind }} %}</label>
                   <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title | titlecase }}</a>
                 </div>
               </div>

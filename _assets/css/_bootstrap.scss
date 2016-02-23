@@ -33,3 +33,9 @@ $font-size-h6: 1rem !default;
     }
   }
 }
+
+select.form-control-sm {
+  &:not([size]):not([multiple]) {
+    height: $input-height-sm;
+  }
+}

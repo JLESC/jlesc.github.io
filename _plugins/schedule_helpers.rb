@@ -20,7 +20,7 @@ module Jekyll
       def render(context)
         css_class, text = @markup.split(' ')
 
-        "<span class=\"label label-#{css_class}\">#{text}</span>"
+        "<span class=\"tag tag-#{css_class}\">#{text}</span>"
       end
     end
 
