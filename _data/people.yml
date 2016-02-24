@@ -99,6 +99,15 @@ beltran_v:
   topics:
   email: vbeltran@bsc.es
   homepage:
+  
+bienz_a:
+  sur_name: Bienz
+  given_name: Amanda
+  affiliation: uiuc
+  position:
+  topics:
+  email: bienz2@illinois.edu
+  homepage: http://web.engr.illinois.edu/~bienz2/
 
 dorier_m:
   sur_name: Dorier
@@ -151,23 +160,25 @@ dun_n:
   email:
   homepage:
 
-ibrahim_s:
-  sur_name: Ibrahim
-  given_name: Shadi
+grigori_l:
+  sur_name: Grigori
+  given_name: Laura
   affiliation: inria
   position:
   topics:
-  email:
-  homepage: https://team.inria.fr/kerdata/shadi-ibrahim/
-
-kale_s:
-  sur_name: Kale
-  given_name: Sanjay
+  email:  laura.grigori@inria.fr
+  topics:
+  email: hovland@mcs.anl.gov
+  homepage:
+  
+gropp_b:
+  sur_name: Gropp
+  given_name: Bill
   affiliation: uiuc
   position:
   topics:
-  email: kale@illinois.edu
-  homepage: http://charm.cs.uiuc.edu/~kale/
+  email:  wgropp@illinois.edu
+  homepage: http://wgropp.cs.illinois.edu/
   
 hovland_p:
   sur_name: Hovland
@@ -178,10 +189,28 @@ hovland_p:
   email: hovland@mcs.anl.gov
   homepage:
 
+ibrahim_s:
+  sur_name: Ibrahim
+  given_name: Shadi
+  affiliation: inria
+  position:
+  topics:
+  email:
+  homepage: https://team.inria.fr/kerdata/shadi-ibrahim/
+  
 jacob_r:
   sur_name: Jacob
   given_name: Rob
   affiliation: anl
+
+kale_s:
+  sur_name: Kale
+  given_name: Sanjay
+  affiliation: uiuc
+  position:
+  topics:
+  email: kale@illinois.edu
+  homepage: http://charm.cs.uiuc.edu/~kale/
 
 kabadshow_i:
   sur_name: Kabadshow
@@ -264,6 +293,15 @@ navaux_p:
   topics:
   email:
   homepage: http://charm.cs.uiuc.edu/people/navaux
+  
+olson_l:
+  sur_name: Olson
+  given_name: Luke
+  affiliation: uiuc
+  position:
+  topics:
+  email: lukeo@illinois.edu
+  homepage: http://lukeo.cs.illinois.edu/ 
 
 padoin_e:
   sur_name: Padoin
