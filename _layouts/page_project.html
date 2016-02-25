@@ -11,12 +11,18 @@ layout: default
     <div class="row">
       <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
         {% include asides/project_meta.html %}
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          {{ content | toc_only }}
+        </section>
       </aside>
       <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
         {% if page.subtitle %}
           <h2>{{ page.subtitle }}</h2>
         {% endif %}
-        {{ content }}
+        {{ content | inject_anchors }}
       </div>
     </div>
   </article>
