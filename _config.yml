@@ -33,6 +33,7 @@ markdown: kramdown
 gems:
   - jekyll-assets
   - jekyll-paginate
+  - jekyll-toc
   - jekyll-feed
   - jekyll-git_metadata
   - jekyll/scholar
@@ -42,6 +43,13 @@ paginate: 5
 paginate_path: "/news/page:num/"
 
 excerpt_separator: '<!--more-->'
+
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      toc: true
 
 # this is used for news posts
 permalink: /news/:year/:month/:day/:slug/

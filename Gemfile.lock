@@ -6,6 +6,14 @@ GIT
     jekyll-git_metadata (0.0.5.pre.torbjoernk)
       jekyll (~> 3.0)
 
+GIT
+  remote: git://github.com/torbjoernk/jekyll-toc.git
+  revision: c5df2e5077ab55b39d7f084797a1d7894d4447ba
+  branch: feature/separate-filters
+  specs:
+    jekyll-toc (0.0.5)
+      nokogiri (~> 1.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -76,7 +84,10 @@ GEM
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
     mini_magick (4.3.6)
+    mini_portile2 (2.0.0)
     namae (0.10.1)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
     rack (1.6.4)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
@@ -110,6 +121,7 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-scholar
   jekyll-sitemap
+  jekyll-toc!
   jekyll-watch
   jgd
   mini_magick
