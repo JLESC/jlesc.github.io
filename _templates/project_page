@@ -30,6 +30,9 @@ the project "Scalability Enhancements to FMM for Molecular Dynamics Simulations"
 Also copy the file `_templates/project.bib` to `_bibliography/external` and name it exactly as this
 one, but the file extension, e.g. "fmm_project.bib".
 
+For citing references, use the Liquid citing syntax as explained in the wiki:
+https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publications
+
 !IMPORTANT!
 Remember to adjust the file name of the BibTeX file at the very bottom of this file!!
 
@@ -83,41 +86,9 @@ Then fill in the YAML header variables above.
                    `project_page`; for subpages of a project this has to have the value
                    `project_subpage`
 
-======================================
-== Creating Sub Pages for a Project ==
-======================================
-Each project can have multiple sub-pages.
-These sub-pages are accessible via the tabbed sub-navigation just below the project's title on the
-project's page.
-
-To create a sub-page, do the following:
-
-1. Create a folder in `_projects` with the exact same name as the Markdown file of the project
-   (without the file extension).
-
-2. Copy this template into the folder and give it a descriptive name and Markdown file extension
-   (`.md`).
-
-3. Copy all the YAML front matter from the project's main page to the sub-page.
-
-3. Adjust YAML front matter fields for the sub-page:
-   - `page_type` must be 'project_subpage'
-   - `subtitle` must be given
-   - `permalink` must be of the following form: /projects/TITLE/SUBTITLE
-     where `TITLE` and `SUBTITLE` are exactly as the file names, i.e. all lower case, dashes for
-     whitespaces and no special characters
-
-Example
--------
-Given an event Markdown file `_projects/world-domination.md`.
-To create a sub-page for the World Domination project, we create a folder
-`_projects/world-domination`, copy this template into that folder and rename it to `schedule.md`.
-Then, in `_projects/world-domination/schedule.md`, we copy the YAML front matter from
-`_projects/world-domination.md` to replace the YAML front matter of `schedule.md` and change the
-YAML fields `page_type` to 'project_subpage', `subtitle` to 'Schedule' and `permalink` to
-'/projects/world-domination/schedule/'.
-
-Now, we have get a second tab on the 'World Domination' project page with the title 'Schedule'.
+Now, fill in the details for the current report below. Please do not change headings, headings level
+or order.
+Read the comments carefully!
 
 {% endcomment %}
 
@@ -138,18 +109,14 @@ Now, we have get a second tab on the 'World Domination' project page with the ti
 == CITING OWN PUBLICATIONS ==
 =============================
 
-To list your own publications produced within this project below this comment but still inside the
-HTML comment (`<!-- ... -->`).
-This will get displayed below without the need to cite them within the text -- which you can still do.
-Put a blank line before the `<!--`, otherwise the comment will be visible to the page's visitor.
-
+You can list your own publications below in case you did not cite them in the text
+(which you should do, though).
 Use the Liquid citing syntax as explained in the wiki:
 https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publications
-
 Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 =====================================
-== START HERE WITH YOUR REFERENCES ==
+== START HERE WITH YOUR ADDITIONAL REFERENCES ==
 {% endcomment %}
 
 
@@ -163,7 +130,7 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2014/2015
+## Person-Month efforts in 2015/2016
 
 {% comment %}
 =========================================
@@ -175,7 +142,7 @@ Put it in the following form, each person on its own line
 
 e.g.:
 
-| {% person kabadshow_i %} | 0.1 PM |
+| {% person kabadshow_i %} | 2.0 PM |
 
 Above the very first person put the following line:
 
