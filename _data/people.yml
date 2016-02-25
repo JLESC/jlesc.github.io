@@ -99,7 +99,7 @@ beltran_v:
   topics:
   email: vbeltran@bsc.es
   homepage:
-  
+
 bienz_a:
   sur_name: Bienz
   given_name: Amanda
@@ -170,7 +170,7 @@ grigori_l:
   topics:
   email: hovland@mcs.anl.gov
   homepage:
-  
+
 gropp_b:
   sur_name: Gropp
   given_name: Bill
@@ -179,15 +179,24 @@ gropp_b:
   topics:
   email:  wgropp@illinois.edu
   homepage: http://wgropp.cs.illinois.edu/
-  
+
+hascoet_l:
+  sur_name: Hascoët
+  given_name: Laurent
+  affiliation: inria
+  position:
+  topics: automatic differentiation
+  email: Laurent.Hascoet@inria.fr
+  homepage: http://www-sop.inria.fr/members/Laurent.Hascoet/
+
 hovland_p:
   sur_name: Hovland
   given_name: Paul
   affiliation: anl
-  position:
-  topics:
+  position: permanent
+  topics: HPC, automatic differentiation, domain specific languages, performance engineering
   email: hovland@mcs.anl.gov
-  homepage:
+  homepage: http://www.mcs.anl.gov/~hovland/
 
 ibrahim_s:
   sur_name: Ibrahim
@@ -197,7 +206,7 @@ ibrahim_s:
   topics:
   email:
   homepage: https://team.inria.fr/kerdata/shadi-ibrahim/
-  
+
 jacob_r:
   sur_name: Jacob
   given_name: Rob
@@ -285,6 +294,16 @@ mendes_c:
   email:
   homepage: http://charm.cs.uiuc.edu/people/cmendes
 
+narayanan_s:
+  sur_name: Narayanan
+  given_name: Sri Hari Krishna
+  affiliation: anl
+  position:
+  topics: ADIC, Performance Bounds
+  email: snarayan@mcs.anl.gov
+  homepage: http://www.mcs.anl.gov/person/sri-hari-krishna-narayanan
+
+
 navaux_p:
   sur_name: Navaux
   given_name: Phillipe
@@ -293,7 +312,7 @@ navaux_p:
   topics:
   email:
   homepage: http://charm.cs.uiuc.edu/people/navaux
-  
+
 olson_l:
   sur_name: Olson
   given_name: Luke
@@ -301,7 +320,7 @@ olson_l:
   position:
   topics:
   email: lukeo@illinois.edu
-  homepage: http://lukeo.cs.illinois.edu/ 
+  homepage: http://lukeo.cs.illinois.edu/
 
 padoin_e:
   sur_name: Padoin
@@ -341,7 +360,7 @@ robert_y:
   topics:
   email: Yves.Robert@inria.fr
   homepage: http://graal.ens-lyon.fr/~yrobert/
-  
+
 sato_m:
   sur_name: Sato
   given_name: Mitsuhisa
@@ -374,10 +393,10 @@ tsuji_m:
   sur_name: Tsuji
   given_name: Miwako
   affiliation: riken
-  position: 
-  email: 
+  position:
+  email:
   homepage:
-  
+
 vandenbergen_n:
   sur_name: Vandenbergen
   given_name: Nicholas
@@ -404,7 +423,7 @@ yildiz_o:
   topics:
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
-  
+
 wylie_b:
   sur_name: Wylie
   given_name: Brian J.N.
@@ -412,7 +431,7 @@ wylie_b:
   position:
   topics:
   email:  b.wylie@fz-juelich.de
-  homepage: 
+  homepage:
 
 
 yves_r:
