@@ -17,11 +17,11 @@ page_type: event_page
 ---
 
 The 11th workshop of the INRIA-Illinois-ANL Joint Laboratory on Petascale Computing was
-also the first workshop of the NEXTGN Partnership University Fund project. This was also considered the 1st JLESC workshop.
+also the first workshop of the NEXTGN Partnership University Fund project. This was also considered the *1st JLESC Workshop*.
 
 It gathered top researchers in HPC from INRIA, the University of Illinois,
 the Argonne National Laboratory and Barcelona Supercomuting Center to explore research problems
-related to post Petascale Supercomputers and present early results of their joint work. T
+related to post Petascale Supercomputers and present early results of their joint work.
 The workshop presented an exceptional program with papers accepted or submitted to top level conferences.
 It exposed the results of the collaboration on Parallel Programming, Resilience,I/O and Cloud.
 Also, Exascale issues, research and activities were discussed.
