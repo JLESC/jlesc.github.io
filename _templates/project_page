@@ -1,7 +1,6 @@
 ---
 layout: page_project
 title:
-subtitle:
 date:
 updated:
 navbar: Research
@@ -15,8 +14,6 @@ keywords:
 head:
 members:
   -
-permalink:
-page_type: project_page
 ---
 {% comment %}
 ================================
@@ -40,10 +37,6 @@ Then fill in the YAML header variables above.
 
   title            (required)
                    the full title of the project
-
-  subtitle         (optional)
-                   for projectss with 'page_type=project_page' (see below) this is optional, for
-                   projects' subpages ('page_type=project_subpage') (see below) this is required
 
   date             (required)
                    the date this page was created in the format: YYYY-MM-DD; this will get displayed
@@ -76,15 +69,6 @@ Then fill in the YAML header variables above.
   members          (optional)
                    a YAML list of members of this project, i.e. the people doing the work;
                    each member must be listed as its identifier as found in '_data/people.yml'
-
-  permalink        (optional for main pages; require for sub-pages)
-                   for the main page, this has to be left empty (or deleted); for project's
-                   sub-pages this needs to match a certain pattern (see below)
-
-  page_type        (required)
-                   for the main page of a project (the default), this has field has to have the value
-                   `project_page`; for subpages of a project this has to have the value
-                   `project_subpage`
 
 Now, fill in the details for the current report below. Please do not change headings, headings level
 or order.

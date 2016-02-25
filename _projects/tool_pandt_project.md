@@ -15,8 +15,6 @@ keywords:
 head: wylie_b
 members:
   - tsuji_m
-permalink:
-page_type: project_page
 ---
 
 ## Research topic and goals
