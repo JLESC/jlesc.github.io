@@ -16,8 +16,6 @@ head: kabadshow_i
 members:
   - balaji_p
   - haensel_d
-permalink:
-page_type: project_page
 ---
 
 ## Research topic and goals

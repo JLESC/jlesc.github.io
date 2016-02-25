@@ -17,8 +17,6 @@ members:
   - olson_l
   - grigori_l
   - gropp_b
-permalink:
-page_type: project_page
 ---
 
 ## Research topic and goals
