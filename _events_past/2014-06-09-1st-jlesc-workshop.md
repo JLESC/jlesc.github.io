@@ -7,38 +7,38 @@ navbar: Events
 event_location: Sophia Antipolis, France
 event_start: 2014-06-09
 event_end: 2014-06-11
-event_url:
+event_url: http://jointlab-pc.ncsa.illinois.edu/events/workshop11/travel.html
 event_short_url:
-wayback_url:
+wayback_url: http://web.archive.org/web/20160225131710/http://jointlab-pc.ncsa.illinois.edu/events/workshop11/travel.html
 kind: workshop
 institute: inria
 permalink:
 page_type: event_page
 ---
 
-The 11th workshop of the INRIA-Illinois-ANL Joint Laboratory on Petascale Computing will 
-also be the first workshop of the NEXTGN Partnership University Fund project.
+The 11th workshop of the INRIA-Illinois-ANL Joint Laboratory on Petascale Computing was
+also the first workshop of the NEXTGN Partnership University Fund project.
 
-Il will gather top researchers in HPC from INRIA, the University of Illinois, 
+It gathered top researchers in HPC from INRIA, the University of Illinois, 
 the Argonne National Laboratory and Barcelona Supercomuting Center to explore research problems 
 related to post Petascale Supercomputers and present early results of their joint work.
 
-The workshop will present an exceptional program with papers accepted or submitted to top level conferences.
+The workshop presented an exceptional program with papers accepted or submitted to top level conferences.
 
-The workshop will expose the results of the collaboration on Parallel Programming, Resilience,I/O and Cloud.
+The workshop exposed the results of the collaboration on Parallel Programming, Resilience,I/O and Cloud.
 
-Exascale issues, research and activities will be discussed as well.
+Exascale issues, research and activities were discussed as well.
 
-A key objective of the workshop is to identify new research collaborations and establish a roadmap
+A key objective of the workshop was to identify new research collaborations and to establish a roadmap
 for their implementation.
 
-The workshop is open to Illinois, INRIA and ANL, faculties, researchers, engineers and students
-who want to learn more about Post Petascale Computing.
+The workshop was open to Illinois, INRIA and ANL, faculties, researchers, engineers and students
+who wanted to learn more about Post Petascale Computing.
 
 
 ## Workshop program
 
-The workshop will feature technical sessions on five main topics:
+The workshop featured technical sessions on five main topics:
 
 * Big systems
 * Parralel Programming (Hybrid, Hierarchical, Heterogeneous)
@@ -50,7 +50,7 @@ The workshop will feature technical sessions on five main topics:
 
 ## Workshop venue
 
-The workshop will take place in the Inria Sophia Antipolis Méditerranée research centre.
-The lodging for the workshop will be at Hotel Mercure and Hotel Ibis.
+The workshop tooke place in the Inria Sophia Antipolis Méditerranée research centre.
+The lodging for the workshop was at Hotel Mercure and Hotel Ibis.
 They are right next to each other and within reasonable walking distance to the conference venue. 
 
