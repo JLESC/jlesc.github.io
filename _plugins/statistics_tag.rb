@@ -67,6 +67,7 @@ module JLESC
           statistics['institutes'][head['affiliation']]['leading'] += 1
         end
         statistics['people'][project.data['head']]['projects']['leading'] += 1
+        statistics['people'][project.data['head']]['projects']['participating'] += 1
       end
 
       inst = []
