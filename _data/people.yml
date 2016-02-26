@@ -180,6 +180,12 @@ gropp_b:
   email:  wgropp@illinois.edu
   homepage: http://wgropp.cs.illinois.edu/
 
+haensel_d:
+  sur_name: Haensel
+  given_name: David
+  affiliation: jsc
+  position: phd
+
 hascoet_l:
   sur_name: Hascoët
   given_name: Laurent
@@ -254,12 +260,6 @@ kramer_b:
   topics:
   email:
   homepage:
-
-haensel_d:
-  sur_name: Haensel
-  given_name: David
-  affiliation: jsc
-  position: phd
 
 labarta_j:
   sur_name: Labarta
