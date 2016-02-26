@@ -34,6 +34,8 @@ for their implementation.
 The workshop is open to Illinois, INRIA, ANL, BSC, JSC and Riken AICS faculties, researchers,
 engineers and students who want to learn more about Post Petascale / Exascale Computing.
 
+{% lightbox_image '3rd-jlesc-group-photo.jpg'
+     class:'img-fluid center-block' alt:'Participants of the 3rd JLESC Workshop' %}
 
 ## Workshop program
 
@@ -41,15 +43,19 @@ The plenary session will present 3 keynotes, each from a different region (Ameri
 critical issues for Extreme Scale Computing and Data Analytics.
 
 The parallel sessions will cover the following topics:
-- Mini apps, Benchmarking, modeling
-- Resilience
-- Applications
-- Programming models
-- Performance tools
-- I/O, storage, Big data
-- in-situ data analytics, visualization
-- Numerical Methods/Algorithms.
-- Cloud for HPC
+
+* Mini apps, Benchmarking, modeling
+* Resilience
+* Applications
+* Programming models
+* Performance tools
+* I/O, storage, Big data
+* in-situ data analytics, visualization
+* Numerical Methods/Algorithms.
+* Cloud for HPC
+
+{% lightbox_image '3rd-jlesc-session.jpg'
+     class:'img-fluid center-block' alt:'Participants of the 3rd JLESC Workshop in a session' %}
 
 
 ## Workshop venue
