@@ -6,28 +6,48 @@ navbar: About
 subnavbar: People
 ---
 
-<p>
-<h3> JLESC Director: </h3>
-Franck Cappello (ANL)
-</p>
-<p>
-<h3> JLESC Executive Directors: </h3>
-Franck Cappello (ANL)<br>
-Bill Kramer (UIUC/NCSA)<br>
-Yves Robert (Inria)<br>
-Jesus Labarta (BSC)<br>
-Robert Speck (JSC)<br>
-Mitsuhisa Sato (Riken/AICS)
-</p>
-<p>
-<h3> JLESC Steering Committee: </h3>
-Head: Edward Siedel (UIUC/NCSA)<br>
-Bill Harrod (DoE)<br>
-Antoine Petit (Inria)<br>
-Mateo Valero (BSC)<br>
-Thomas Lippert (JSC)<br>
-Kimihiko Hirao (Riken/AICS)
-</p>
+<div class="row">
+  <div class="col-xs-12 col-lg-4">
+    <div class="card">
+      <h3 class="card-header">JLESC Director</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{% person cappello_f %}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6 col-lg-4">
+    <div class="card">
+      <h3 class="card-header">JLESC Executive Directors</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{% person cappello_f %}</li>
+        <li class="list-group-item">{% person kramer_b %}</li>
+        <li class="list-group-item">{% person robert_y %}</li>
+        <li class="list-group-item">{% person labarta_j %}</li>
+        <li class="list-group-item">{% person speck_r %}</li>
+        <li class="list-group-item">{% person sato_m %}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6 col-lg-4">
+    <div class="card">
+      <h3 class="card-header">JLESC Steering Committee</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          Edward Siedel (UIUC/NCSA) <label class="tag tag-default">Head</label>
+        </li>
+        <li class="list-group-item">Bill Harrod (DoE)</li>
+        <li class="list-group-item">Antoine Petit (Inria)</li>
+        <li class="list-group-item">Mateo Valero (BSC)</li>
+        <li class="list-group-item">{% person lippert_t %}</li>
+        <li class="list-group-item">Kimihiko Hirao (Riken/AICS)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr />
 
 <p class="lead">
   This is a list of people participating in the JLESC program.
@@ -37,8 +57,6 @@ Kimihiko Hirao (Riken/AICS)
     pull request on GitHub
   </a>.
 </p>
-
-
 
 <p>
   There are {% stats_for_position permanent %} people with a permanent position,

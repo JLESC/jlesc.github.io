@@ -11,6 +11,10 @@
 
 .person-affiliation {}
 
+.card ul li .tag {
+  @extend .m-b-0;
+}
+
 #people-db_length,
 #people-db_filter {
   @extend .form-group;
