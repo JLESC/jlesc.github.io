@@ -11,23 +11,35 @@
     {% image {{\ page.logo\ }} class:"img-fluid p-a-1" alt:"{{ page.title }} Logo" %}
   {% endif %}
   <ul class="list-group list-group-flush">
-    {% if page.event_url %}
-      <li class="list-group-item row">
-        <label class="col-sm-4">Homepage</label>
-        <div class="col-sm-8">
-          <a href="{{ page.event_url }}" target="_blank">{% if page.event_short_url %}{{ page.event_short_url }}{% else %}{{ page.event_url | trim_url }}{% endif %}</a>
-          {% if page.wayback_url %}
-            <span class="pull-right">
-              <a href="{{ page.wayback_url }}" target="_blank"
-                 title="Event web site in Archive.org Wayback machine"
-                 data-toggle="tooltip">
-                <i class="fa fa-history fa-fw"></i>
-              </a>
-            </span>
-          {% endif %}
-        </div>
-      </li>
-    {% endif %}
+    <li class="list-group-item row">
+      <label class="col-sm-4">Homepage</label>
+      <div class="col-sm-8">
+        <a {% if page.event_url | size > 0 %}
+             href="{{ page.event_url }}" target="_blank"
+             class="btn btn-sm btn-link"
+             title="Event's homepage"
+           {% else %}
+             aria-disabled="true"
+             class="btn btn-sm btn-link disabled"
+             title="Event's homepage not available"
+           {% endif %}
+           data-toggle="tooltip"
+           role="button">
+          <i class="fa fa-fw fa-globe"></i></a>
+        <a {% if page.wayback_url | size > 0 %}
+             href="{{ page.wayback_url }}" target="_blank"
+             class="btn btn-sm btn-link"
+             title="Event's homepage in Archive.org Wayback machine"
+           {% else %}
+             aria-disabled="true"
+             class="btn btn-sm btn-link disabled"
+             title="Event's homepage not available in Archive.org's Wayback machine"
+           {% endif %}
+           role="button"
+           data-toggle="tooltip">
+          <i class="fa fa-history fa-fw"></i></a>
+      </div>
+    </li>
     {% if page.event_start and page.event_start == page.event_end %}
       <li class="list-group-item row">
         <label class="col-sm-4">Date</label>
@@ -52,7 +64,15 @@
     <li class="list-group-item row">
       <label class="col-sm-4">Location</label>
       <div class="col-sm-8">
-        {% if page.event_location %}{{ page.event_location }}{% else %}tba{% endif %}
+        {% if page.event_location %}
+          <a href="https://google.com/maps/search/{{ page.event_location | replace:' ','+' }}"
+             target="_blank" class="btn btn-sm btn-link"
+             role="button" title="Search on Google Maps" data-toggle="tooltip">
+            <i class="fa fa-fw fa-map-marker"></i></a>
+          {{ page.event_location }}
+        {% else %}
+          <span title="to be announced" data-toggle="tooltip">tba</span>
+        {% endif %}
       </div>
     </li>
     {% if page.institute %}
