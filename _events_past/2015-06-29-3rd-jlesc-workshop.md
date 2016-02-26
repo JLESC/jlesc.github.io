@@ -7,9 +7,9 @@ navbar: Events
 event_location: Barcelo Sant Hotel, Barcelona, Spain
 event_start: 2015-06-29
 event_end: 2015-07-01
-event_url:
+event_url: http://jlesc.bsc.es/
 event_short_url:
-wayback_url:
+wayback_url: http://web.archive.org/web/20151016223451/http://jlesc.bsc.es/
 kind: workshop
 institute: bsc
 permalink:
