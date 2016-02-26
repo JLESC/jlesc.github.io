@@ -10,13 +10,13 @@
 
 
 footer.event-meta {
-  .card:last-child {
-    .card-block {
-      white-space: nowrap;
-      word-break: keep-all;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+  @extend small;
+
+  div:last-child {
+    white-space: nowrap;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
