@@ -34,9 +34,6 @@ for their implementation.
 The workshop is open to Illinois, INRIA, ANL, BSC, JSC and Riken AICS faculties, researchers,
 engineers and students who want to learn more about Post Petascale / Exascale Computing.
 
-{% lightbox_image '3rd-jlesc-group-photo.jpg'
-     class:'img-fluid center-block' alt:'Participants of the 3rd JLESC Workshop' %}
-
 ## Workshop program
 
 The plenary session will present 3 keynotes, each from a different region (America, Europe, Asia) on
@@ -54,9 +51,6 @@ The parallel sessions will cover the following topics:
 * Numerical Methods/Algorithms.
 * Cloud for HPC
 
-{% lightbox_image '3rd-jlesc-session.jpg'
-     class:'img-fluid center-block' alt:'Participants of the 3rd JLESC Workshop in a session' %}
-
 
 ## Workshop venue
 
@@ -65,3 +59,6 @@ The lodging for the workshop will also be at the Barcelo Sant hotel (Do not cont
 book your room, just mention your check-in and check-out date in the workshop registration page).
 
 [hotel_homepage]: http://www.barcelo.com/BarceloHotels/en_US/hotels/Spain/Barcelona/hotel-barcelo-sants/general-description.aspx
+
+{% lightbox_image '3rd-jlesc-group-photo.jpg'
+     class:'img-fluid center-block' alt:'Participants of the 3rd JLESC Workshop' %}
