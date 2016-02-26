@@ -4,7 +4,7 @@ title: 3rd JLESC Workshop
 date: 2016-02-19
 updated:
 navbar: Events
-event_location: Barcelona, Spain
+event_location: Barcelo Sant Hotel, Barcelona, Spain
 event_start: 2015-06-29
 event_end: 2015-07-01
 event_url:

@@ -4,7 +4,7 @@ title: 5th JLESC Workshop
 date: 2016-02-16
 updated:
 navbar: Events
-event_location: Lyon, France
+event_location: ENS, Lyon, France
 event_start: 2016-06-27
 event_end: 2016-06-29
 event_short_url:

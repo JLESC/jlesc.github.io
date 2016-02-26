@@ -4,7 +4,7 @@ title: 2nd JLESC Workshop
 date: 2016-02-19
 updated:
 navbar: Events
-event_location: Chicago, USA
+event_location: Blackstone Hotel, Chicago, USA
 event_start: 2014-11-24
 event_end: 2014-11-26
 event_url: http://publish.illinois.edu/jointlab-esc/2cd-jlesc-workshop-nov-24-26-chicago/
@@ -16,14 +16,14 @@ permalink:
 page_type: event_page
 ---
 
-The workshop took place at Chicago, it gathered top researchers in HPC from INRIA, 
-the University of Illinois, Argonne National Laboratory, Barcelona Supercomuting Center, 
-Juelich Supercomputing Center and Riken AICS to explore research problems related to post 
+The workshop took place at Chicago, it gathered top researchers in HPC from INRIA,
+the University of Illinois, Argonne National Laboratory, Barcelona Supercomuting Center,
+Juelich Supercomputing Center and Riken AICS to explore research problems related to post
 Petascale / Exascale Supercomputers and present early results of their joint work.
 
 The workshop presented an exceptional program with papers accepted or submitted to top level conferences.
 
-A key objective of the workshop was to identify new research collaborations and establish 
+A key objective of the workshop was to identify new research collaborations and establish
 a roadmap for their implementation.
 
 The workshop was open to Illinois, INRIA, ANL and BSC, faculties, researchers, engineers and
@@ -44,4 +44,3 @@ The workshop featured technical sessions on five main topics:
 ## Workshop venue
 
 The workshop took place at the [Blackstone hotel](http://www.blackstonerenaissance.com/ ) in Chicago downtown.
-

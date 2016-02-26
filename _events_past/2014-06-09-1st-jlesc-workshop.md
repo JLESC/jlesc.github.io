@@ -4,7 +4,7 @@ title: 1st JLESC Workshop
 date: 2016-02-19
 updated:
 navbar: Events
-event_location: Sophia Antipolis, France
+event_location: Méditerranée research centre, Sophia Antipolis, France
 event_start: 2014-06-09
 event_end: 2014-06-11
 event_url: http://jointlab-pc.ncsa.illinois.edu/events/workshop11/index.html

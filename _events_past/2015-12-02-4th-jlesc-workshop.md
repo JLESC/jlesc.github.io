@@ -4,7 +4,7 @@ title: 4th JLESC Workshop
 date: 2016-02-15
 updated:
 navbar: Events
-event_location: Bonn, Germany
+event_location: GSI, Bonn, Germany
 event_start: 2015-12-02
 event_end: 2015-12-04
 event_short_url:

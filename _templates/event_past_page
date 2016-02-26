@@ -43,8 +43,8 @@ Then fill in the YAML front matter variables:
                    if present, this will get displayed at the very bottom of the generated website
 
   event_location   (optional)
-                   where the event will take place;
-                   try not to be too specific; "City, Country" is sufficient here
+                   where the event will take place; try to be as short as possible,
+                   "Building, City, Country" is sufficient here
 
   event_start      (optional)
                    the starting date of the event in the format: YYYY-MM-DD
