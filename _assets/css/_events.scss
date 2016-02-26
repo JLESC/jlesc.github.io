@@ -9,6 +9,18 @@
 }
 
 
+footer.event-meta {
+  .card:last-child {
+    .card-block {
+      white-space: nowrap;
+      word-break: keep-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+
 #schedule-accordion {
   a.abstract-btn {
     @extend .tag;

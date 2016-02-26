@@ -25,9 +25,13 @@
       <i class="fa fa-stop fa-fw"></i>
       {% if event.event_end %}<time datetime="{{ event.event_end | datetime | date_to_xmlschema }}">{{ event.event_end | date_to_string }}</time>{% else %}tba{% endif %}
     </div>
-    <div class="col-xs-12 col-sm-4" title="Event's location" data-toggle="tooltip" data-placement="bottom">
+    <div class="col-xs-12 col-sm-4" title="Event's location{% if event.event_location %}. Find on Google Maps!{% endif %}" data-toggle="tooltip" data-placement="bottom">
+      {% if event.event_location %}
+      <a href="https://google.com/maps/search/{{ event.event_location | replace:' ','+' }}" target="_blank">
+        {% endif %}
       <i class="fa fa-map-marker fa-fw"></i>
       {% if event.event_location %}{{ event.event_location }}{% else %}tba{% endif %}
+        {% if event.event_location %}</a>{% endif %}
     </div>
   {% endif %}
 
@@ -60,9 +64,13 @@
         </div>
       {% endif %}
       <div class="card">
-        <div class="card-block" title="Event's location" data-toggle="tooltip" data-placement="bottom">
+        <div class="card-block" title="Event's location{% if event.event_location %}. Find on Google Maps!{% endif %}" data-toggle="tooltip" data-placement="bottom">
+          {% if event.event_location %}
+            <a href="https://google.com/maps/search/{{ event.event_location | replace:' ','+' }}" target="_blank">
+          {% endif %}
           <i class="fa fa-map-marker fa-fw"></i>
           {% if event.event_location %}{{ event.event_location }}{% else %}tba{% endif %}
+          {% if event.event_location %}</a>{% endif %}
         </div>
       </div>
     </div>
