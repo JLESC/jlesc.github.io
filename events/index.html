@@ -6,7 +6,7 @@ navbar: Events
 ---
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-xs-12 col-md-6">
     <h2>Upcoming</h2>
     <ul class="list-group">
       {% sorted_for event in site.events_upcoming sort_by:event_start %}
@@ -16,7 +16,7 @@ navbar: Events
       {% endsorted_for %}
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="col-xs-12 col-md-6">
     <h2>Past</h2>
     <ul class="list-group">
       {% sorted_for event in site.events_past reversed sort_by:event_start %}
