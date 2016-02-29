@@ -61,4 +61,4 @@ book your room, just mention your check-in and check-out date in the workshop re
 [hotel_homepage]: http://www.barcelo.com/BarceloHotels/en_US/hotels/Spain/Barcelona/hotel-barcelo-sants/general-description.aspx
 
 {% lightbox_image '3rd-jlesc-group-photo.jpg'
-     class:'img-fluid center-block' alt:'Participants of the 3rd JLESC Workshop' %}
+     class:'img-fluid' alt:'Participants of the 3rd JLESC Workshop' %}

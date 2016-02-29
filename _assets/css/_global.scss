@@ -62,6 +62,18 @@ img {
   }
 }
 
+.lightbox-container {
+  a.lightbox-link {
+    @extend .col-xs-12;
+    @extend .text-xs-center;
+
+    img {
+      @extend .m-x-auto;
+      max-height: 30rem;
+    }
+  }
+}
+
 #subnav {
   @extend .m-b-1;
   padding-top: ($spacer-y / 2);
