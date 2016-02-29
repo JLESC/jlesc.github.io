@@ -34,22 +34,22 @@ for their implementation.
 The workshop is open to Illinois, INRIA, ANL, BSC, JSC and Riken AICS faculties, researchers,
 engineers and students who want to learn more about Post Petascale / Exascale Computing.
 
-
 ## Workshop program
 
 The plenary session will present 3 keynotes, each from a different region (America, Europe, Asia) on
 critical issues for Extreme Scale Computing and Data Analytics.
 
 The parallel sessions will cover the following topics:
-- Mini apps, Benchmarking, modeling
-- Resilience
-- Applications
-- Programming models
-- Performance tools
-- I/O, storage, Big data
-- in-situ data analytics, visualization
-- Numerical Methods/Algorithms.
-- Cloud for HPC
+
+* Mini apps, Benchmarking, modeling
+* Resilience
+* Applications
+* Programming models
+* Performance tools
+* I/O, storage, Big data
+* in-situ data analytics, visualization
+* Numerical Methods/Algorithms.
+* Cloud for HPC
 
 
 ## Workshop venue
@@ -59,3 +59,6 @@ The lodging for the workshop will also be at the Barcelo Sant hotel (Do not cont
 book your room, just mention your check-in and check-out date in the workshop registration page).
 
 [hotel_homepage]: http://www.barcelo.com/BarceloHotels/en_US/hotels/Spain/Barcelona/hotel-barcelo-sants/general-description.aspx
+
+{% lightbox_image '3rd-jlesc-group-photo.jpg'
+     class:'img-fluid' alt:'Participants of the 3rd JLESC Workshop' %}
