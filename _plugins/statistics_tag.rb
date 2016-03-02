@@ -1,3 +1,4 @@
+
 module JLESC
   def self.get_stats(site)
     institutes = site.data['institutes']
