@@ -32,7 +32,8 @@ module JLESC
         raise StatisticsError.new 'Position not found. Typo? Look at data/institutes.yml!'
       end
     end
-    
+
+
     positions.each_key do |key|
       statistics['people']['positions'][key] = 0
     end
@@ -58,12 +59,23 @@ module JLESC
 
     people.each do |id,person|
       if person['affiliation'].is_a? Array
+        unless institutes.has_key?(person['affiliation'].first)
+          raise StatisticsError.new 'Institute not found. Typo? Look at data/institutes.yml!'
+        end
         statistics['institutes'][person['affiliation'].first]['people'] += 1
       else
+        unless institutes.has_key?(person['affiliation'])
+          raise StatisticsError.new 'Institute not found. Typo? Look at data/institutes.yml!'
+        end
         statistics['institutes'][person['affiliation']]['people'] += 1
       end
 
       if statistics['people']['positions'].has_key?(person['position'])
+        unless person['position'].is_nil?
+          unless positions.has key?(person['position'])
+            raise StatisticsError.new 'Position not found. Typo? Look at data/institutes.yml!'
+          end
+        end
         statistics['people']['positions'][person['position']] += 1
       end
 
