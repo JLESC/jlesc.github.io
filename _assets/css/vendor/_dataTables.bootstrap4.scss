@@ -66,14 +66,6 @@ div.dataTables_wrapper div {
     ul.pagination {
       margin: 2px 0;
       white-space: nowrap;
-
-      li {
-        @extend .page-item;
-
-        a {
-          @extend .page-link;
-        }
-      }
     }
   }
 
