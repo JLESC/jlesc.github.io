@@ -61,7 +61,7 @@ module JLESC
       end
 
       if statistics['people']['positions'].has_key?(person['position'])
-        unless person['position'].is_nil?
+        unless person['position'].nil?
           unless positions.has_key?(person['position'])
             raise StatisticsError.new "Person: '#{@person_id}' --> Position not found. Typo? Look at data/institutes.yml!"
           end
