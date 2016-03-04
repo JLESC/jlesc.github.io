@@ -1,7 +1,7 @@
 //= require 'vendor/jquery-2.1.4.min'
 //= require 'vendor/bootstrap.min'
 //= require 'vendor/jquery.dataTables.min'
-//= require 'vendor/dataTables.bootstrap.min'
+//= require 'vendor/dataTables.bootstrap4.min'
 //= require 'vendor/moment.min'
 //= require 'vendor/dataTables.plugins.datetime_moment'
 

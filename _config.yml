@@ -97,7 +97,7 @@ scholar:
     - latex
     - markdown
 
-  style: apa
+  style: chicago-author-date
   locale: en
 
   sort_by: year, authors

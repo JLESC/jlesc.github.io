@@ -1,3 +1,4 @@
+
 module JLESC
 
   class StatisticsError < StandardError

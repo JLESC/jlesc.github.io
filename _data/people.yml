@@ -63,13 +63,31 @@
 # [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
 #
 
+allen_g:
+  sur_name: Allen
+  given_name: Gabrielle
+  affiliation: uiuc
+  position:
+  topics:
+  email: gallen@ncsa.illinois.edu
+  homepage: http://www.astro.illinois.edu/people/gdallen
+
+alvarez_c:
+  sur_name: Alvarez
+  given_name: Carlos
+  affiliation: bsc
+  position:
+  topics: FPGAs
+  email: calvarez@ac.upc.edu
+  homepage:
+
 
 amer_a:
   sur_name: Amer
   given_name: Abdelhalim
   affiliation: anl
-  position: 
-  topics:
+  position:
+  topics: Programming Models
   email: aamer@anl.gov
   homepage: http://www.mcs.anl.gov/~aamer/
 
@@ -78,9 +96,18 @@ antoniu_g:
   given_name: Gabriel
   affiliation: inria
   position:
-  topics:
+  topics: Big Data & I/O
   email: gabriel.antoniu@inria.fr
   homepage: https://team.inria.fr/kerdata/gabriel-antoniu/
+
+badia_r:
+  sur_name: Badia
+  given_name: Rosa M.
+  affiliation: bsc
+  position:
+  topics:
+  email: rosa.m.badia@bsc.es
+  homepage: https://sites.google.com/site/rosambadia/
 
 balaji_p:
   sur_name: Balaji
@@ -91,12 +118,39 @@ balaji_p:
   email:
   homepage:
 
+barcelo_a:
+  sur_name: Barcelo
+  given_name: Alex
+  affiliation: bsc
+  position:
+  topics: Big Data & I/O
+  email: alex.barcelo@bsc.es
+  homepage:
+
+bautista_gomez_l:
+  sur_name: Bautista Gomez
+  given_name: Leonard
+  affiliation: anl
+  position:
+  topics: Resilience
+  email: leobago@anl.gov
+  homepage: leobago.com
+
+baumeister_p:
+  sur_name: Baumeister
+  given_name: Paul
+  affiliation: jsc
+  position:
+  topics:
+  email: p.baumeister@fz-juelich.de
+  homepage:
+
 beltran_v:
   sur_name: Beltran
   given_name: Vivenc
   affiliation: bsc
   position:
-  topics:
+  topics: Programming Models, Resilience
   email: vbeltran@bsc.es
   homepage:
 
@@ -105,27 +159,27 @@ bienz_a:
   given_name: Amanda
   affiliation: uiuc
   position:
-  topics:
+  topics: Numerics
   email: bienz2@illinois.edu
   homepage: http://web.engr.illinois.edu/~bienz2/
 
-dorier_m:
-  sur_name: Dorier
-  given_name: Matthieu
-  affiliation: anl
+broemmel_d:
+  sur_name: Broemmel
+  given_name: Dirk
+  affiliation: jsc
   position:
   topics:
-  email: mdorier@anl.gov
-  homepage: https://people.irisa.fr/Matthieu.Dorier/wiki/doku.php
-
-casas_m:
-  sur_name: Casas
-  given_name: Marc
-  affiliation: bsc
-  position:
-  topics:
-  email: marc.casas@bsc.es
+  email: d.broemmel@fz-juelich.de
   homepage:
+
+calhoun_j:
+  sur_name: Calhoun
+  given_name: Jon
+  affiliation: uiuc
+  position:
+  topics: HPC, Resilience
+  email: jccalho2@illinois.edu
+  homepage: http://web.engr.illinois.edu/~jccalho2/
 
 cappello_f:
   sur_name: Cappello
@@ -138,6 +192,15 @@ cappello_f:
   email: cappello@anl.gov
   homepage:
 
+casas_m:
+  sur_name: Casas
+  given_name: Marc
+  affiliation: bsc
+  position:
+  topics: Programming Models
+  email: marc.casas@bsc.es
+  homepage:
+
 chien_a:
   sur_name: Chien
   given_name: Andrew A.
@@ -147,10 +210,73 @@ chien_a:
   email: achien@cs.uchicago.edu
   homepage: https://www.cs.uchicago.edu/directory/andrew-chien
 
+conejero_f:
+  sur_name: Conejero
+  given_name: Francisco Javier
+  affiliation: bsc
+  position:
+  topics:
+  email: marc.casas@bsc.es
+  homepage:
+
+coullon_h:
+  sur_name: Coullon
+  given_name: Helene
+  affiliation: inria
+  position:
+  topics:
+  email: helene.coullon@inria.fr
+  homepage: http://www.univ-orleans.fr/lifo/Members/Helene.Coullon/
+
+denis_a:
+  sur_name: Denis
+  given_name: Alexandre
+  affiliation: inria
+  position:
+  topics:
+  email: alexandre.denis@inria.fr
+  homepage: http://people.bordeaux.inria.fr/adenis/
+
+di_napoli_e:
+  sur_name: Di Napoli
+  given_name: Edoardo
+  affiliation: jsc
+  position:
+  topics:
+  email: e.di.napoli@fz-juelich.de
+  homepage:
+
+dirand_e:
+  sur_name: Dirand
+  given_name: Estelle
+  affiliation: inria
+  position:
+  topics:
+  email: estelle.dirand@gmail.com
+  homepage: https://about.me/estelle_dirand
+
 doblas_reyes_f:
   sur_name: Doblas-Reyes
   given_name: Francisco
   affiliation: bsc
+
+dorier_m:
+  sur_name: Dorier
+  given_name: Matthieu
+  affiliation: anl
+  position:
+  topics: Big Data & I/O
+  email: mdorier@anl.gov
+  homepage: https://people.irisa.fr/Matthieu.Dorier/wiki/doku.php
+
+dreher_m:
+  sur_name: Dreher
+  given_name: Matthieu
+  affiliation: anl
+  position:
+  topics: Programming Models
+  email: mdorier@anl.gov
+  homepage: https://people.irisa.fr/Matthieu.Dorier/wiki/doku.php
 
 dun_n:
   sur_name: Dun
@@ -160,6 +286,41 @@ dun_n:
   email:
   homepage:
 
+estrada_j:
+  sur_name: Estrada
+  given_name: Jorge
+  affiliation: bsc
+  position:
+  topics: Molecular Dynamics
+  email: jorge.estrada@bsc.es
+  homepage:
+
+frings_w:
+  sur_name: Frings
+  given_name: Wofgang
+  affiliation: jsc
+  position:
+  topics:
+  email: w.frings@fz-juelich.de
+  homepage:
+
+gibbon_p:
+  sur_name: Gibbon
+  given_name: Paul
+  affiliation: jsc
+  position:
+  topics:
+  email: p.gibbon@fz-juelich.de
+
+girona_s:
+  sur_name: Girona
+  given_name: Sergi
+  affiliation: bsc
+  position:
+  topics:
+  email: sergi.girona@bsc.es
+  homepage: https://sites.google.com/site/sergigirona/
+
 grigori_l:
   sur_name: Grigori
   given_name: Laura
@@ -167,8 +328,14 @@ grigori_l:
   position:
   topics:
   email:  laura.grigori@inria.fr
+
+gutheil_i:
+  sur_name: Gutheil
+  given_name: Inge
+  affiliation: jsc
+  position:
   topics:
-  email: hovland@mcs.anl.gov
+  email: i.gutheil@fz-juelich.de
   homepage:
 
 gropp_b:
@@ -195,6 +362,24 @@ hascoet_l:
   email: Laurent.Hascoet@inria.fr
   homepage: http://www-sop.inria.fr/members/Laurent.Hascoet/
 
+heinrich_c:
+  sur_name: Heinrich
+  given_name: Christian
+  affiliation: inria
+  position:
+  topics: Performance Tools
+  email: franz-christian.heinrich@inria.fr
+  homepage:
+
+hori_a:
+  sur_name: Hori
+  given_name: Atsushi
+  affiliation: riken
+  position:
+  topics: Resilience
+  email: ahori@riken.jp
+  homepage:
+
 hovland_p:
   sur_name: Hovland
   given_name: Paul
@@ -213,19 +398,28 @@ ibrahim_s:
   email:
   homepage: https://team.inria.fr/kerdata/shadi-ibrahim/
 
+imamura_t:
+  sur_name: Imamura
+  given_name: Toshiyuki
+  affiliation: riken
+  position:
+  topics: Numerics
+  email: imamura.toshiyuki@riken.jp
+  homepage:
+
 jacob_r:
   sur_name: Jacob
   given_name: Rob
   affiliation: anl
 
-kale_s:
-  sur_name: Kale
-  given_name: Sanjay
-  affiliation: uiuc
+jung_j:
+  sur_name: Jung
+  given_name: Jaewoon
+  affiliation: riken
   position:
-  topics:
-  email: kale@illinois.edu
-  homepage: http://charm.cs.uiuc.edu/~kale/
+  topics: Molecular Dynamics
+  email: jung@riken.jp
+  homepage: http://www.riken.jp/TMS2012/cbp/en/member/profile/jaewoon_jung.html
 
 kabadshow_i:
   sur_name: Kabadshow
@@ -234,6 +428,23 @@ kabadshow_i:
   position: permanent
   email: i.kabadshow@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/kabadshow_i.html
+
+kalbarczyk,_z:
+  sur_name: Kalbarczyk
+  given_name: Zbigniew
+  affiliation: uiuc
+  position:
+  email: kalbarcz@illinois.edu
+  homepage: https://www.ece.illinois.edu/directory/profile/kalbarcz
+
+kale_s:
+  sur_name: Kale
+  given_name: Sanjay
+  affiliation: uiuc
+  position:
+  topics: Programming Models
+  email: kale@illinois.edu
+  homepage: http://charm.cs.uiuc.edu/~kale/
 
 keller_tesser_r:
   sur_name: Keller Tesser
@@ -258,7 +469,7 @@ kramer_b:
   affiliation: [uiuc, ncsa]
   position: permanent
   topics:
-  email:
+  email: wtkramer@illinois.edu
   homepage:
 
 labarta_j:
@@ -267,14 +478,71 @@ labarta_j:
   affiliation: bsc
   position: permanent
   topics:
-  email:
+  email: nuria.sirvent@bsc.es
   homepage:
+
+lefevre_l:
+  sur_name: Lefevre
+  given_name: Laurent
+  affiliation: inria
+  position: permanent
+  topics:
+  email: laurent.lefevre@inria.fr
+  homepage: http://perso.ens-lyon.fr/laurent.lefevre/
+
+lintermann_a:
+  sur_name: Lintermann
+  given_name: Andreas
+  affiliation: jsc
+  position: post_doc
+  topics: CFD, meshing
+  email: A.Lintermann@fz-juelich.de
+  homepage: http://www.jara.org/de/research/jara-hpc/forschung/details/simlab-fas/andreas-lintermann/?S=0
 
 lippert_t:
   sur_name: Lippert
   given_name: Thomas
   affiliation: jsc
+  position:
+  topics:
+  email: th.lippert@fz-juelich.de
+  homepage:
 
+llort_g:
+  sur_name: Llort
+  given_name: German
+  affiliation: bsc
+  position:
+  topics: Performance Tools
+  email: gllort@bsc.es
+  homepage:
+
+luehrs_s:
+  sur_name: Lührs
+  given_name: Sebastian
+  affiliation: jsc
+  position:
+  topics: Performance Tools
+  email: s.luehrs@fz-juelich.de
+  homepage:
+
+maruyama_n:
+  sur_name: Maruyama
+  given_name: Naoya
+  affiliation: riken
+  position:
+  topics: HPC, FPGAs
+  email: nmaruyama@riken.jp
+  homepage: http://mt.aics.riken.jp/~nmaruyama/
+
+maruyama_y:
+  sur_name: Maruyama
+  given_name: Yutaka
+  affiliation: riken
+  position:
+  topics:
+  email: yutaka.maruyama.ur@riken.jp
+  homepage:
 
 mehaut_j:
   sur_name: Mehaut
@@ -285,6 +553,15 @@ mehaut_j:
   email:
   homepage: https://team.inria.fr/corse/team-members/jean-francois-mehaut/
 
+meinke_j:
+  sur_name: Meinke
+  given_name: Jan
+  affiliation: jsc
+  position:
+  topics:
+  email: j.meinke@fz-juelich.de
+  homepage:
+
 mendes_c:
   sur_name: Mendes
   given_name: Celsco
@@ -293,6 +570,33 @@ mendes_c:
   topics:
   email:
   homepage: http://charm.cs.uiuc.edu/people/cmendes
+
+mohr_b:
+  sur_name: Mohr
+  given_name: Bernd
+  affiliation: jsc
+  position:
+  topics: HPC, Performance Tools
+  email: b.mohr@fz-juelich.de
+  homepage:
+
+murai_h:
+  sur_name: Murai
+  given_name: Hitoshi
+  affiliation: riken
+  position:
+  topics:
+  email: h-murai@riken.jp
+  homepage:
+
+nakamura_y:
+  sur_name: Nakamura
+  given_name: Yoshifumi
+  affiliation: riken
+  position:
+  topics: Numerics
+  email: nakamura@riken.jp
+  homepage:
 
 narayanan_s:
   sur_name: Narayanan
@@ -322,26 +626,100 @@ olson_l:
   email: lukeo@illinois.edu
   homepage: http://lukeo.cs.illinois.edu/
 
+ozen_g:
+  sur_name: Ozen
+  given_name: Guray
+  affiliation: bsc
+  position:
+  topics: Programming Models
+  email: guray.ozen@bsc.es
+  homepage:
+
 padoin_e:
   sur_name: Padoin
   given_name: Edson Luiz
   affiliation: inria
   position:
+  topics:
   email:  elpadoin@inf.ufrgs.br
   homepage:
+
+pena_a:
+  sur_name: Pena
+  given_name: Antonio J.
+  affiliation: bsc
+  position:
+  topics: Performance Tools
+  email:  antonio.pena@bsc.es
+  homepage: https://www.bsc.es/es/about-bsc/staff-directory/pena-antonio
 
 petit_a:
   sur_name: Petit
   given_name: Antoine
   affiliation: inria
 
+pineda_morales_l:
+  sur_name: Pineda Morales
+  given_name: Luis
+  affiliation: inria
+  position:
+  topics: Big Data & I/O
+  email: luis.pineda-morales@inria.fr
+  homepage:
+
 pleiter_d:
   sur_name: Pleiter
   given_name: Dirk
   affiliation: jsc
   position: permanent
+  topics:
   email: d.pleiter@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/pleiter_d.html
+
+polo_j:
+  sur_name: Polo
+  given_name: Jorda
+  affiliation: bsc
+  position:
+  topics: Big Data & I/O
+  email: jorda.polo@bsc.es
+  homepage: http://people.ac.upc.edu/jordap/
+
+poole_s:
+  sur_name: Poole
+  given_name: Scott
+  affiliation: uiuc
+  position:
+  topics:
+  email: mspoole@illinois.edu
+  homepage: http://www.communication.illinois.edu/people/mspoole
+
+pouget_k:
+  sur_name: Pouget
+  given_name: Kevin
+  affiliation: inria
+  position:
+  topics: Programming Models
+  email: kevin.pouget@imag.fr
+  homepage:
+
+raffin_b:
+  sur_name: Raffin
+  given_name: Bruno
+  affiliation: inria
+  position:
+  topics: Big Data & I/O
+  email: bruno.raffin@inria.fr
+  homepage: http://moais.imag.fr/membres/bruno.raffin/
+
+riedel_m:
+  sur_name: Riedel
+  given_name: Morris
+  affiliation: jsc
+  position:
+  topics: Big Data & I/O
+  email: m.riedel@fz-juelich.de
+  homepage:
 
 ross_r:
   sur_name: Rob
@@ -357,18 +735,90 @@ robert_y:
   given_name: Yves
   affiliation: inria
   position:
-  topics:
+  topics: Resilience
   email: Yves.Robert@inria.fr
   homepage: http://graal.ens-lyon.fr/~yrobert/
+
+robson_m:
+  sur_name: Robson
+  given_name: Michael
+  affiliation: uiuc
+  position:
+  topics:
+  email: mprobson@illinois.edu
+  homepage:
+
+sakai_y:
+  sur_name: Sakai
+  given_name: Yasuhiro
+  affiliation: riken
+  position:
+  topics:
+  email: yasuhiro.sakai.gv@riken.jp
+  homepage:
+
+sankaranarayanan_s:
+  sur_name: Sankaranarayanan
+  given_name: Subramanian
+  affiliation: anl
+  position:
+  topics: Molecular Dynamics
+  email: skrssank@anl.gov
+  homepage:
 
 sato_m:
   sur_name: Sato
   given_name: Mitsuhisa
   affiliation: riken
   position: permanent
-  topics:
-  email:
+  topics: Programming Models, FPGAs
+  email: msato@riken.jp
   homepage:
+
+schanen_m:
+  sur_name: Schanen
+  given_name: Michael
+  affiliation: anl
+  position:
+  topics: Resilience, Numerics
+  email: mschanen@anl.gov
+  homepage:
+
+schleife_a:
+  sur_name: Schleife
+  given_name: Andre
+  affiliation: uiuc
+  position:
+  topics:
+  email: schleife@illinois.edu
+  homepage: http://schleife.matse.illinois.edu/user/1.html
+
+seidel_ed:
+  sur_name: Seidel
+  given_name: Ed
+  affiliation: ncsa
+  position:
+  topics:
+  email: eseidel@ncsa.illinois.edu
+  homepage: http://www.ncsa.illinois.edu/about/org/ed_seidel
+
+seo_s:
+  sur_name: Seo
+  given_name: Sangminn
+  affiliation: anl
+  position:
+  topics:
+  email: sseo@anl.gov
+  homepage:
+
+sisneros_r:
+  sur_name: Sisneros
+  given_name: Rob
+  affiliation: uiuc
+  position:
+  topics: Big Data & I/O
+  email: sisneros@illinois.edu
+  homepage: http://www.ncsa.illinois.edu/People/sisneros/
 
 snir_m:
   sur_name: Snir
@@ -384,17 +834,90 @@ speck_r:
   email: r.speck@fz-juelich.de
   homepage: http://www.fz-juelich.de/ias/jsc/speck_r
 
-ukawa_a:
-  sur_name: Ukawa
-  given_name: Akira
+steinbusch_b:
+  sur_name: Steinbusch
+  given_name: Benedikt
+  affiliation: jsc
+  position:
+  topics: Numerics
+  email: b.steinbusch@fz-juelich.de
+  homepage:
+
+subasi_o:
+  sur_name: Subasi
+  given_name: Omer
+  affiliation: bsc
+  position:
+  topics: Resilience
+  email: omer.subasi@bsc.es
+  homepage: https://www.linkedin.com/in/omer-subasi-b089643a
+
+subramaniam_b:
+  sur_name: Subramaniam
+  given_name: Balaji
+  affiliation: anl
+  position:
+  topics: Big Data & I/O
+  email: bsubramaniam@anl.gov
+  homepage:
+
+suno_b:
+  sur_name: Subramaniam
+  given_name: Balaji
+  affiliation: anl
+  position:
+  topics: Numerics
+  email: bsubramaniam@anl.gov
+  homepage:
+
+sutmann_g:
+  sur_name: Sutmann
+  given_name: Godehard
+  affiliation: jsc
+  position:
+  topics: Molecular Dynamics
+  email: g.sutmann@fz-juelich.de
+  homepage:
+
+tanaka_m:
+  sur_name: Tanaka
+  given_name: Mihoko
   affiliation: riken
+  position:
+  topics:
+  email: mihoko.tanaka@riken.jp
+  homepage:
+
+tsubokura_m:
+  sur_name: Tsubokura
+  given_name: Makoto
+  affiliation: riken
+  position:
+  topics:
+  email: mtsubo@riken.jp
+  homepage: http://labs.aics.riken.jp/tsubokura.html
 
 tsuji_m:
   sur_name: Tsuji
   given_name: Miwako
   affiliation: riken
   position:
+  topics:
   email:
+  homepage:
+
+ukawa_a:
+  sur_name: Ukawa
+  given_name: Akira
+  affiliation: riken
+
+unsal_o:
+  sur_name: Unsal
+  given_name: Osman
+  affiliation: bsc
+  position:
+  topics: FPGAs
+  email: osman.unsal@bsc.es
   homepage:
 
 vandenbergen_n:
@@ -402,6 +925,7 @@ vandenbergen_n:
   given_name: Nicholas
   affiliation: jsc
   position: phd
+  topics:
   email: n.vandenbergen@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/vandenbergen_n.html
 
@@ -409,6 +933,15 @@ valero_m:
   sur_name: Valero
   given_name: Mateo
   affiliation: bsc
+
+vivien_f:
+  sur_name: Vivien
+  given_name: Frederic
+  affiliation: inria
+  position:
+  topics:
+  email: frederic.vivien@inria.fr
+  homepage: http://perso.ens-lyon.fr/frederic.vivien/
 
 yashiro_h:
   sur_name: Yashiro
@@ -424,15 +957,41 @@ yildiz_o:
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
 
+wilson_j:
+  sur_name: Wilson
+  given_name: James
+  affiliation: uiuc
+  position:
+  topics: Molecular Dynamics
+  email: wilsja@illinois.edu
+  homepage:
+
+wozniak_j:
+  sur_name: Wozniak
+  given_name: Justin
+  affiliation: anl
+  position:
+  topics: Big Data & I/O
+  email:  wozniak@mcs.anl.gov
+  homepage: http://www.mcs.anl.gov/~wozniak/
+
 wylie_b:
   sur_name: Wylie
   given_name: Brian J.N.
   affiliation: jsc
   position:
-  topics:
+  topics: Performance Tools
   email:  b.wylie@fz-juelich.de
   homepage:
 
+yildiz_o:
+  sur_name: Yildiz
+  given_name: Orcun
+  affiliation: inria
+  position:
+  topics: Big Data & I/O
+  email: orcun.yildiz@inria.fr
+  homepage: https://team.inria.fr/kerdata/orcun-yildiz/
 
 yves_r:
   sur_name: Robert
@@ -442,3 +1001,4 @@ yves_r:
   topics:
   email:
   homepage:
+ 
