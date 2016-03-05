@@ -2,7 +2,7 @@
 layout: page_project
 title: Exploiting Active Storage for Resilience
 date: 2016-01-01
-updated: 2016-02-05
+updated: 2016-03-04
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -32,26 +32,25 @@ More specifically the following research questions are addressed:
 * How efficiently can both architectures be exploited?
 * What is the value of active storage for a which classes of large-scale scientific computing?
 
+## Results for 2015/2016
+GVR has been successfully installed by the ANL team on Jülich's BG/Q system JUQUEEN exploiting the attached BGAS nodes. This setup had been the basis for an extensive performance analysis, where results will be published at ISC16.
 
-## Results for 2014/2015
-The project only started early this year and focussed on reaching the first milestone, i.e. completing the port of GVR to BGAS.
-Based on a non-production version of MPI, namely MPICH3, this goal has been achieved with both GVR running on the Blue Gene/Q system at JSC and the BGAS run-time system adapted and recompiled for this version of MPI.
+The conclusions was that the NVM-based BGAS system provides a more efficient basis and opportunities for GVR versioning comparing to an traditional external storage systems attached to the same system, especially for flexible error recovery using random version access.
+Equipped with additional compute resource, e.g., idle cores on the I/O node (ION), in-situ analysis could be off-loaded to the ION. 
+Such active storage concepts can potentially be exploited for enabling algorithm-based fault-tolerance (ABFT) error- checking.
+Further performance improvements might be attainable using the Direct Storage Access (DSA) interface instead of the local file system that was used within this project.
+
+With the presentation of the paper this project will come to an end.
 
 ## Visits and meetings
 Beyond regular contacts via email the following meetings involving most of the participants took place:
 
 * Meeting of {% person chien_a %}, {% person dun_n %} and {% person pleiter_d %} at SC14 on November 17, 2014.
 * Technical update meeting on February 5, 2015.
-
-We plan for the following meetings:
-
-* Monthly telephone conferences starting from May 2015.
-* Technical update meeting at JLESC workshop, June/July 2015.
-* Architecture evaluation meeting at the end of July 2015.
-* Data transport analysis and technical update meeting during SC15, November 2015.
+* Regular technical meetings thereafter until December 2015
 
 ## Impact and publications
-The project just started and thus did not result in any publications, yet.
+The project has submitted a publication to ISC16 that has been accepted.
 
 <!--
 
@@ -59,7 +58,7 @@ The project just started and thus did not result in any publications, yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2014/2015
+## Person-Month efforts in 2015/2016
 
 The efforts of the participants so far are as follows:
 
@@ -71,11 +70,7 @@ The efforts of the participants so far are as follows:
 
 
 ## Future plans
-Within this subproject the next steps will be:
-
-* Complete the already started performance evaluation and perform a scalability analysis.
-* Explore possible changes to both the GVR software architecture as well as the BGAS architecture (DSA interface to the flash memory, run-time system services).
-* Explore and evaluate different data transport mechanisms including optimized RDMA protocols for compute node to I/O node as well as I/O node to flash memory communication.
+None
 
 
 ## References
