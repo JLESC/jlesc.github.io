@@ -154,6 +154,15 @@ beltran_v:
   email: vbeltran@bsc.es
   homepage:
 
+benoit_a:
+  sur_name: Benoit
+  given_name: Anne
+  affiliation: inria
+  position:
+  topics: Resilience
+  email: Anne.Benoit@ens-lyon.fr
+  homepage: http://graal.ens-lyon.fr/~abenoit/
+
 bienz_a:
   sur_name: Bienz
   given_name: Amanda
