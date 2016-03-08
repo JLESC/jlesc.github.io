@@ -172,6 +172,15 @@ bienz_a:
   email: bienz2@illinois.edu
   homepage: http://web.engr.illinois.edu/~bienz2/
 
+bouge_l:
+  sur_name: Bouge
+  given_name: Luc
+  affiliation: inria
+  position:
+  topics: Big Data & I/O
+  email: luc.bouge@ens-rennes.fr
+  homepage: 
+
 broemmel_d:
   sur_name: Broemmel
   given_name: Dirk
@@ -209,6 +218,15 @@ casas_m:
   topics: Programming Models
   email: marc.casas@bsc.es
   homepage:
+
+cheriere_n:
+  sur_name: Cheriere
+  given_name: Nathanael
+  affiliation: inria
+  position:
+  topics: Big Data & I/O
+  email: nathanael.cheriere@ens-rennes.fr
+  homepage: http://perso.eleves.ens-rennes.fr/~ncherier/
 
 chien_a:
   sur_name: Chien
@@ -284,8 +302,8 @@ dreher_m:
   affiliation: anl
   position:
   topics: Programming Models
-  email: mdorier@anl.gov
-  homepage: https://people.irisa.fr/Matthieu.Dorier/wiki/doku.php
+  email: mdreher@anl.gov
+  homepage: http://www.mcs.anl.gov/person/matthieu-dreher
 
 dun_n:
   sur_name: Dun
@@ -720,6 +738,15 @@ raffin_b:
   topics: Big Data & I/O
   email: bruno.raffin@inria.fr
   homepage: http://moais.imag.fr/membres/bruno.raffin/
+
+rahmani_l:
+  sur_name: Rahmani
+  given_name: Lokman
+  affiliation: inria
+  position:
+  topics: Big Data & I/O
+  email: lokman.rahmani@irisa.fr
+  homepage:
 
 riedel_m:
   sur_name: Riedel
