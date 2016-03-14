@@ -50,7 +50,7 @@ module JLESC
     people.each do |id,person|
       if person['affiliation'].is_a? Array
         unless institutes.has_key?(person['affiliation'].first)
-          raise StatisticsError.new  "Institute '#{person['affiliation']}' of person '#{id}' not found. Typo? See '_data/institutes.yml'."
+          raise StatisticsError.new  "Institute '#{person['affiliation'].first}' of person '#{id}' not found. Typo? See '_data/institutes.yml'."
         end
         statistics['institutes'][person['affiliation'].first]['people'] += 1
       else
