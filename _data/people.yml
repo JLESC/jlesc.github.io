@@ -86,7 +86,7 @@ amer_a:
   sur_name: Amer
   given_name: Abdelhalim
   affiliation: anl
-  position:
+  position: post_doc
   topics: Programming Models
   email: aamer@anl.gov
   homepage: http://www.mcs.anl.gov/~aamer/
@@ -104,8 +104,8 @@ badia_r:
   sur_name: Badia
   given_name: Rosa M.
   affiliation: bsc
-  position:
-  topics:
+  position: permanent
+  topics: Programming Models
   email: rosa.m.badia@bsc.es
   homepage: https://sites.google.com/site/rosambadia/
 
@@ -113,10 +113,10 @@ balaji_p:
   sur_name: Balaji
   given_name: Pavan
   affiliation: anl
-  position:
-  topics:
-  email:
-  homepage:
+  position: permanent
+  topics: Programming Models, Resilience
+  email: balaji@anl.gov
+  homepage: http://www.mcs.anl.gov/~balaji/
 
 barcelo_a:
   sur_name: Barcelo
@@ -147,9 +147,9 @@ baumeister_p:
 
 beltran_v:
   sur_name: Beltran
-  given_name: Vivenc
+  given_name: Vicenc
   affiliation: bsc
-  position:
+  position: permanent
   topics: Programming Models, Resilience
   email: vbeltran@bsc.es
   homepage:
@@ -513,7 +513,7 @@ labarta_j:
   given_name: Jesus
   affiliation: bsc
   position: permanent
-  topics:
+  topics: Programming Models
   email: nuria.sirvent@bsc.es
   homepage:
 
@@ -849,12 +849,12 @@ seidel_ed:
 
 seo_s:
   sur_name: Seo
-  given_name: Sangminn
+  given_name: Sangmin
   affiliation: anl
-  position:
-  topics:
+  position: permanent
+  topics: Programming Models
   email: sseo@anl.gov
-  homepage:
+  homepage: http://www.mcs.anl.gov/~sseo/
 
 sisneros_r:
   sur_name: Sisneros
@@ -931,6 +931,15 @@ tanaka_m:
   position:
   topics:
   email: mihoko.tanaka@riken.jp
+  homepage:
+
+teruel_x:
+  sur_name: Teruel
+  given_name: Xavier
+  affiliation: bsc
+  position: permanent
+  topics: Programming Models
+  email: xavier.teruel@bsc.es
   homepage:
 
 tsubokura_m:
