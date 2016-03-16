@@ -3,11 +3,11 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Programming Model Extensions for Resilience</title>
+  <title>JLESC &mdash; Enhancing Asynchronous Parallelism in OmpSs with Argobots</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
-  <link rel="canonical" href="https://jlesc.github.io/projects/pmefr_project/">
+  <link rel="canonical" href="https://jlesc.github.io/projects/ompss_argobots_project/">
 
   <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
   <link type="text/css" rel="stylesheet" href="/assets/main-9cfa91629f11e0f53e59e4fb06f7e325fa783273df905c0a34d9169a62af389c.css">
@@ -93,7 +93,7 @@
   <article class="post-content">
     <div class="row">
       <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Programming Model Extensions for Resilience</h1>
+        <h1 class="pull-left">Enhancing Asynchronous Parallelism in OmpSs with Argobots</h1>
       </header>
     </div>
     <div class="row">
@@ -109,7 +109,7 @@
       <div class="col-sm-8">
         
           <span class="clearfix">
-            <span class="topic topic-title">Resilience</span>
+            <span class="topic topic-title">Programming Languages and Runtimes</span>
           </span>
         
       </div>
@@ -119,7 +119,15 @@
         <label class="col-sm-4">Keywords</label>
         <div class="col-sm-8">
           
-            <span class="clearfix"></span>
+            <span class="clearfix">OmpSs</span>
+          
+            <span class="clearfix">Argobots</span>
+          
+            <span class="clearfix">thread</span>
+          
+            <span class="clearfix">task</span>
+          
+            <span class="clearfix">asynchronous parallelism</span>
           
         </div>
       </li>
@@ -131,7 +139,7 @@
         <div class="col-sm-8">
           
             <span class="clearfix">
-              <span class="person given-name">Abdelhalim</span> <span class="person sur-name">Amer</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
               <span class="pull-right">
                 <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
               </span>
@@ -139,15 +147,27 @@
           
           
             <span class="clearfix">
-              <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Sangmin</span> <span class="person sur-name">Seo</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Abdelhalim</span> <span class="person sur-name">Amer</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Rosa M.</span> <span class="person sur-name">Badia</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Jesus</span> <span class="person sur-name">Labarta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Xavier</span> <span class="person sur-name">Teruel</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
             </span>
           
             <span class="clearfix">
               <span class="person given-name">Vicenc</span> <span class="person sur-name">Beltran</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Marc</span> <span class="person sur-name">Casas</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
             </span>
           
         </div>
@@ -157,7 +177,7 @@
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
       <div class="col-sm-8">
-        <span class="project-status project-status-starting">starting</span>
+        <span class="project-status project-status-running">running</span>
       </div>
     </li>
     
@@ -169,10 +189,11 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20142015">Results for 2014/2015</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20142015">Person-Month efforts in 2014/2015</a></li>
+<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
 </ul>
@@ -183,70 +204,125 @@
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>The reliability of high performance computing systems is predicted to worsen given current
-technology trends, where several errors per day are expected to occur in exascale systems.
-Consequently, the software stack that targets HPC systems needs to tolerate faults in order to cope with
-the instability of such systems.
-Particularly, current parallel programming models, which assume that applications will execute on
-failure-free systems, require resilience extensions.
-The most popular models used to program parallel systems are MPI for distributed memory
-and thread-based models, such as OpenMP, for shared-memory.
-Several works have studied faulttolerance methods for MPI applications at the process level such as
-the User-Level Fault Mitigation (ULFM) effort at ANL.
-Recently, the need for finer-grained levels of resilience arose in the community
-because of the space and time overheads of coarse-grained approaches.
-Consequently, research in this direction has become more active leading to new methods such as the rollbackrecovery
-method applied to asynchronous tasks in the OmpSs programming model.
-Despite recent advances, there exists no programming model that offers high degrees of resilience
-and low overheads for hybrid MPI+threads applications.
-This collaboration aims at providing resilience extensions for hybrid MPI+threads programming models at multiple levels.
-At the thread-level, errors are contained within the failing threads except if recovery is not possible,
-in which case propagating the failure to the MPI process will be necessary.
-The system then will rely on process-level fault-tolerance techniques to mitigate the failure.</p>
+<p>As future applications on exascale systems are expected to contain billions of
+threads or tasks to exploit concurrency provided by the underlying hardware,
+parallel programming models need to evolve to efficiently support massive
+parallelism with low overhead. OmpSs is a programming model that extends OpenMP
+with new directives to support asynchronous parallelism. It enables
+asynchronous parallelism by using data-dependencies between different tasks of
+the application. Argobots is a low-level infrastructure that supports
+lightweight user-level threads (ULTs) and tasks for massive concurrency.
+It directly leverages the lowest-level constructs in the hardware and OS,
+such as lightweight notification mechanisms, data movement engines, memory
+mapping, and data placement strategies.</p>
+
+<p>In this project, we aim at improving asynchronous parallelism support in OmpSs
+with Argobots. As a first step, we will evaluate the possible integration of
+Argobots into the OmpSs runtime. Since Argobots provides two kinds of work
+units (one is a ULT that has context-switching ability, and the other is a
+tasklet that is suitable for atomic execution), efficient mapping between OmpSs
+tasks and Argobots’ work units will be beneficial to improve performance.
+If this evaluation is positive, we will proceed to a prototype implementation
+of the integration. Also, we will investigate how OmpSs can take advantage of
+two-level parallelism and deterministic threading model in Argobots. Argobots
+abstracts its execution model with hierarchical constructs and exposes their
+execution to users. OmpSs can exploit this model to optimize multi-level
+parallelism required for recursive algorithms. Finally, we will explore
+scheduling capability of Argobots in OmpSs. Argobots allows users to write
+their own scheduler and to stack different schedulers with different scheduling
+strategies. We will implement a locality-aware scheduler in Argobots, which
+will boost the execution performance of OmpSs tasks.</p>
+
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+
+<p>We started working on the implementation of the OmpSs runtime on top of
+Argobots.  We have integrated Argobots into the Nanos++ runtime (Nanos6) and
+implemented a prototype runtime that is compatible with the existing one and
+can work with the Mercurium compiler.  We have also tested basic functionalities
+including <code class="highlighter-rouge">#pragma omp task</code>, <code class="highlighter-rouge">#pragma omp taskwait</code>, and task dependencies.
+From the collaboration, we found some functionalities that need to be supported
+by Argobots (e.g., retrieving the work unit argument at run-time) and
+implemented them in Argobots as well.</p>
 
 <h2 id="results-for-20142015">
 <a id="results-for-20142015" class="anchor" href="#results-for-20142015" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2014/2015</h2>
 
-<p>There were interactions through telecon between the collaborators which involved discussions
-about ULFM for process-level resilience and the feasibility of thread-level fault-tolerance extensions.</p>
+<p>We have discussed the feasibility of integrating OmpSs and Argobots. We reviewed
+both runtimes and compared their functionalities. The first observation is that
+Argobots and OmpSs runtime are overlapped in some basic functionalities and
+components, which are strongly embedded in the OmpSs runtime, and thus porting
+directly OmpSs runtime on top of Argobots ULTs will add many layers of
+components and scheduler overheads. We think that it needs more time and results
+to evaluate both runtimes and to come up with appropriate integration
+approaches.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>There were frequent telecon meetings since the beginning of the collaboration. There are no
-planned visits yet.</p>
+<p>We had a telecon meeting on December 15, 2014, where we discussed the current
+status of Argobots and OmpSs and interaction between two runtimes. We started
+our collaboration after this meeting.  In 2015, we had F2F meetings at SC 2015
+and the 4th JLESC workshop in Bonn and discussed implementation issues (e.g.,
+retrieving the work unit argument) and interoperability between different
+programming models.  We have also exchanged emails to discuss the integration
+between Argobots and OmpSs runtime, current issues, and implementation plans.
+We will schedule more telecon meetings for discussion and plan visits as needed.
+There are no planned visits yet.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<p>None yet.</p>
+<p>This project will have the future impact and contributions as follows:</p>
+
+<ul>
+  <li>Improving the OmpSs programming model with a new lightweight threading/tasking library, Argobots</li>
+  <li>Exploring lightweight user-level threads to support asynchronous parallelism and enhancing asynchronous parallelism support in directive-based programming models</li>
+  <li>Implementing a runtime prototype that integrates Argobots and supports OmpSs</li>
+  <li>Performance evaluation of the runtime prototype</li>
+</ul>
 
 <ol class="bibliography"></ol>
 
-<h2 id="person-month-efforts-in-20142015">
-<a id="person-month-efforts-in-20142015" class="anchor" href="#person-month-efforts-in-20142015" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2014/2015</h2>
+<h2 id="person-month-efforts-in-20152016">
+<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
 
 <table class="person-months-table table table-bordered table-hover table-sm">
   <tbody>
     <tr>
       <td>
-<span class="person given-name">Abdelhalim</span> <span class="person sur-name">Amer</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
+<span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
       <td>0.5 PM</td>
     </tr>
     <tr>
       <td>
-<span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
-      <td>1 PM</td>
+<span class="person given-name">Sangmin</span> <span class="person sur-name">Seo</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
+      <td>1.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Abdelhalim</span> <span class="person sur-name">Amer</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
+      <td>1.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Rosa M.</span> <span class="person sur-name">Badia</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Jesus</span> <span class="person sur-name">Labarta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Xavier</span> <span class="person sur-name">Teruel</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>1.5 PM</td>
     </tr>
     <tr>
       <td>
 <span class="person given-name">Vicenc</span> <span class="person sur-name">Beltran</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
-      <td>1 PM</td>
-    </tr>
-    <tr>
-      <td>
-<span class="person given-name">Marc</span> <span class="person sur-name">Casas</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
-      <td>1 PM</td>
+      <td>0.5 PM</td>
     </tr>
   </tbody>
 </table>
@@ -254,12 +330,12 @@ planned visits yet.</p>
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>We plan to push further the investigation of fine-grained fault-tolerance support in hybrid MPI+threads programming models.
-The goal is to answer several open questions including, but not limited to, the degree of granularity suitable for the
-fine-grained level (threads or tasks), define the interaction between the coarse-grained and fine-grained levels of
-fault-tolerance, the way communication issued by a failed thread should be handled (flushed or ignored), and investigate
-the role and necessity of using robust synchronization mechanisms, such as robust mutexes, by the
-underlying multithreaded runtime system.</p>
+<p>Next steps in this project are to have a more complete implementation of
+the Nanos++ runtime over Argobots, to evaluate the performance of our
+implementation with OmpSs applications, and to optimize the runtime.
+We also plan to publish one or two papers to share our work on interaction
+between OmpSs and Argobots with the HPC community and to make our runtime
+prototype open source software at the end of the project.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
