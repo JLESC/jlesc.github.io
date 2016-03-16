@@ -1,6 +1,6 @@
 ---
 layout: page_project
-title: Optimization of fault tolerance strategy for workflow
+title: Optimization of Fault-Tolerance Strategies for Workflow Applications
 date: 2016-03-16
 updated:
 navbar: Research
