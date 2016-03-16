@@ -15,6 +15,7 @@ head: benoit_a
 members:
   - cappello_f
   - robert_y
+  - cavelan_a
 ---
 {% comment %}
 ================================

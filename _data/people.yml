@@ -219,6 +219,15 @@ casas_m:
   email: marc.casas@bsc.es
   homepage:
 
+cavelan_a:
+  sur_name: Cavelan
+  given_name: Aurélien
+  affiliation: inria
+  position: phd
+  topics: Resilience
+  email: aurelien.cavelan@inria.fr
+  homepage: http://perso.ens-lyon.fr/aurelien.cavelan/
+
 cheriere_n:
   sur_name: Cheriere
   given_name: Nathanael
