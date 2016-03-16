@@ -90,7 +90,7 @@ to decide when to checkpoint/replicate a task.
 
 
 ## Results for 2015/2016
-
+-
 
 ## Visits and meetings
 
@@ -99,6 +99,7 @@ to initiate this project. We are working in close collaboration to make progress
 
 
 ## Impact and publications
+-
 
 <!--
 {% comment %}
@@ -129,6 +130,9 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 ## Person-Month efforts in 2015/2016
 
+{:.person-months-table.table.table-bordered.table-hover.table-sm}
+| {% person cavelan_a %} | 3.0 PM |
+
 {% comment %}
 =========================================
 == ADD A TABLE OF PERSON-MONTH EFFORTS ==
@@ -149,11 +153,11 @@ Above the very first person put the following line:
 == START HERE ==
 {% endcomment %}
 
-
 ## Future plans
-
+-
 
 ## References
+-
 
 {% comment %}
 =================
