@@ -1,5 +1,10 @@
-
 module JLESC
+  class StatisticsError < StandardError
+    def initialize(msg)
+      super(msg)
+    end
+  end
+
   def self.get_stats(site)
     institutes = site.data['institutes']
     positions = site.data['positions']
@@ -42,12 +47,26 @@ module JLESC
 
     people.each do |id,person|
       if person['affiliation'].is_a? Array
+        unless institutes.has_key?(person['affiliation'].first)
+          raise StatisticsError.new \
+            "Institute '#{person['affiliation'].first}' of person '#{id}' not found. Typo? See '_data/institutes.yml'."
+        end
         statistics['institutes'][person['affiliation'].first]['people'] += 1
       else
+        unless institutes.has_key?(person['affiliation'])
+          raise StatisticsError.new \
+            "Institute '#{person['affiliation']}' of person '#{id}' not found. Typo? See '_data/institutes.yml'."
+        end
         statistics['institutes'][person['affiliation']]['people'] += 1
       end
 
       if statistics['people']['positions'].has_key?(person['position'])
+        unless person['position'].nil?
+          unless positions.has_key?(person['position'])
+            raise StatisticsError.new \
+              "Position '#{person['position']}' of person '#{id}' not found. Typo? See '_data/positions.yml'."
+          end
+        end
         statistics['people']['positions'][person['position']] += 1
       end
 
