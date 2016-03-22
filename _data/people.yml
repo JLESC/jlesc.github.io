@@ -707,6 +707,15 @@ pena_a:
   email:  antonio.pena@bsc.es
   homepage: https://www.bsc.es/es/about-bsc/staff-directory/pena-antonio
 
+peterka_t:
+  sur_name: Peterka
+  given_name: Tom
+  affiliation: anl
+  position:
+  topics: Big Data & I/O
+  email: tpeterka@anl.gov
+  homepage: http://www.mcs.anl.gov/~tpeterka/
+
 petit_a:
   sur_name: Petit
   given_name: Antoine
