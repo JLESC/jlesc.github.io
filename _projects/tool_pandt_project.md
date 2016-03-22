@@ -2,7 +2,7 @@
 layout: page_project
 title: Developer tools for porting & tuning parallel applications on extreme-scale parallel systems
 date: 2016-02-17
-updated: 2016-03-22
+updated:
 navbar: Research
 subnavbar: Projects
 footer: true
@@ -15,9 +15,6 @@ keywords:
 head: wylie_b
 members:
   - tsuji_m
-  - murai_h
-  - feld_c
-  - gimenez_j
 ---
 
 ## Research topic and goals
@@ -33,60 +30,54 @@ measurement and analysis tools {% cite GeimerEtAl2010 --file external/tool_pandt
 {% cite FringsEtAl2009 --file external/tool_pandt_project.bib  %}) are two notable examples of 
 tools developed by RIKEN and JSC for this purpose. This project proposes to extend their support for 
 JLESC HPC systems and exploit their capabilities in an integrated work flow.  
-Existing training material will be adapted to collaborators large-scale HPC systems, augmented
+Existing training material will be adapted to collaborators’ large-scale HPC systems, augmented
 with newly prepared material, and refined for better uptake based on participant evaluations
 and feedback. Travel and accommodation expenses of training presenters to participate in
-joint training events (such as VI-HPS Tuning Workshops {% cite VIHPSTWS --file external/tool_pandt_project.bib %}) will be supported. 
+joint training events (such as VI-HPS Tuning Workshops {% cite ViHPS --file external/tool_pandt_project.bib  %}) will be supported. 
 Collaborative work with application developers will assess the effectiveness of the current (and revised) tools,
 and help direct development of new tool capabilities.
 
-## Results for 2015/2016
+## Results for 2014/2015
 
-* XcalableMP tutorial held at JSC (2015-12-01).
-* Organisation of 20th VI-HPS Tuning Workshop hosted by RIKEN AICS (2016/02/24-26) {% cite VIHPSTWS --file external/tool_pandt_project.bib %} covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) on K computer and local Fujitsu FX10 (pi).  
-* Performance analysis of RIKEN FIBER mini-app ntchem on pi/K.  
-* Performance analysis of ABySS-P {% cite KitayamaEtAl2015 --file external/tool_pandt_project.bib %} and NEST neuronal network simulation tool on K computer.
+JLESC project proposed (and accepted) in April 2015, and planning commenced for initial presentation
+at 3rd JLESCWorkshop (Barcelona) in June 2015. 
+RIKEN AICS applied to join VI-HPS with a view to contributing to VI-HPS Tuning Workshops 
+{% cite ViHPS --file external/tool_pandt_project.bib  %} and Tools Guide {% cite ViHPS2015 --file external/tool_pandt_project.bib  %}. 
+XcalableMP training material being translated into English, and Scalasca/Score-P training material being translated
+into Japanese.
 
 ## Visits and meetings
 
-Initial face-to-face meeting at 3rd JLESC Workshop (Barcelona, 2015-06), followed
-by meetings at ISC-HPC (Frankfurt am Main, 2015-07), ParCo (Edinburgh, 2015-09),
-SC15 (Austin, 2015-11), JSC (Juelich, 2015-12), 4th JLESC Workshop (Bonn,
-2015-12) and 6th AICS International Symposium (Kobe, 2016-02).
+Initial face-to-face meeting planned as part of 3rd JLESCWorkshop (Barcelona) and follow-up
+at ISC-HPC (Frankfurt am Main) in July.
 
-Visits planned for the next 12 months:
+## Visits planned for the next 12 months
 
-* Visit of RIKEN AICS researcher to JSC perhaps around ISC-HPC or 5th JLESC Workshop (1-2 weeks, 2016-02). 
-* Visit of JSC researcher to RIKEN perhaps around 6th JLESC Workshop (2016-12).
+Visit of RIKEN AICS researcher to JSC perhaps after ISC-HPC or in December 2015 (1–2
+weeks). Visit of JSC researcher to RIKEN considered for 2016 (perhaps 4 weeks).
 
 ## Impact and publications
+
+The project just started and thus did not result in any publications, yet.
 
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
+## Person-Month efforts in 2014/2015
 
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person feld_c %} | 1.0 PM |
-| {% person gimenez_j %} | 1.0 PM |
-| {% person murai_h %} | 1.0 PM |
-| {% person tsuji_m %} | 1.0 PM |
-| {% person wylie_b %} | 1.0 PM |
+The project just started and no PMs could be spent so far.
 
 
 ## Future plans
 
-The existing integration of XcalableMP and Scalasca will be updated to the latest
-community-developed Score-P instrumentation and measurement infrastructure, and made
-available for use on JUQUEEN BG/Q and Kei K computer.  Investigate Score-P support
-required for XcalableMP using Argobots and for native threading/autoparallelisation.
-Documentation for use of Scalasca/Score-P on K computer including example batch scripts
-(e.g., to stage-in/out configuration and analysis files). 
-Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN FIBER mini-apps.
-Address terminology inconsistencies between JSC and BSC tools in their analyses and documentation.
-Workshops and training organised under the auspices of VI-HPS 
-{% cite VIHPS --file external/tool_pandt_project.bib %} 
-or the POP Centre of Excellence {% cite POP --file external/tool_pandt_project.bib %}.
+The existing integration of XscalableMP and Scalasca will be updated to the latest communitydeveloped
+Score-P instrumentation and measurement infrastructure, and made available for use on
+JUQUEEN BG/Q and Kei K computer. 
+Example batch scripts (e.g., to stage-in/out configuration and analysis files) and associated user 
+documentation will be provided.
+XcalableMP to be included in VI-HPS TuningWorkshop as part of PRACE Advanced Training
+Centre (PATC) curriculum to be held in Germany in spring 2016. 
+VI-HPS Tuning Workshop to be hosted by RIKEN AICS in Japan tentatively scheduled for February 2016.
 
 ## References
 
