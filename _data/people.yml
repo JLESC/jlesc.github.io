@@ -340,9 +340,18 @@ estrada_j:
   email: jorge.estrada@bsc.es
   homepage:
 
+feld_c:
+  sur_name: Feld
+  given_name: Christian
+  affiliation: jsc
+  position:
+  topics: Performance Tools
+  email: c.feld@fz-juelich.de
+  homepage:
+
 frings_w:
   sur_name: Frings
-  given_name: Wofgang
+  given_name: Wolfgang
   affiliation: jsc
   position:
   topics:
@@ -356,6 +365,15 @@ gibbon_p:
   position:
   topics:
   email: p.gibbon@fz-juelich.de
+
+gimenez_j:
+  sur_name: Gimenez
+  given_name: Judit
+  affiliation: bsc
+  position:
+  topics: Performance Tools
+  email: judit@bsc.es
+  homepage:
 
 girona_s:
   sur_name: Girona
