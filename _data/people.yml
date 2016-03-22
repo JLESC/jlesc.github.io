@@ -434,6 +434,15 @@ hori_a:
   email: ahori@riken.jp
   homepage:
 
+houzeaux_g:
+  sur_name: Houzeaux
+  given_name: Guillaume
+  affiliation: bsc
+  position:
+  topics: 
+  email: guillaume.houzeaux@bsc.es
+  homepage: https://www.bsc.es/about-bsc/staff-directory/houzeaux-guillaume
+
 hovland_p:
   sur_name: Hovland
   given_name: Paul
@@ -544,6 +553,15 @@ labarta_j:
   email: nuria.sirvent@bsc.es
   homepage:
 
+lachat_c:
+  sur_name: Lachat
+  given_name: Cédric
+  affiliation: inria
+  position: 
+  topics:
+  email: cedric.lachat@inria.fr
+  homepage: 
+
 lefevre_l:
   sur_name: Lefevre
   given_name: Laurent
@@ -615,6 +633,15 @@ mehaut_j:
   topics:
   email:
   homepage: https://team.inria.fr/corse/team-members/jean-francois-mehaut/
+  
+mehta_v:
+  sur_name: Mehta
+  given_name: Vishal
+  affiliation: bsc
+  position:
+  topics:
+  email: vishal.mehta@bsc.es
+  homepage: https://www.bsc.es/es/about-bsc/staff-directory/mehta-vishal
 
 meinke_j:
   sur_name: Meinke
@@ -1050,6 +1077,15 @@ valero_m:
   sur_name: Valero
   given_name: Mateo
   affiliation: bsc
+  
+vazquez_m:
+  sur_name: Vázquez
+  given_name: Mariano
+  affiliation: bsc
+  position:
+  topics: Alya System for Large Scale Computational Mechanics
+  email: mariano.vazquez@bsc.es
+  homepage: https://www.bsc.es/about-bsc/staff-directory/vazquez-mariano
 
 vishwanath_v:
   sur_name: Vishwanath
