@@ -131,7 +131,11 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 ## Person-Month efforts in 2015/2016
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
+| {% person benoit_a %} | 1.0 PM |
+| {% person cappello_f %} | 1.0 PM |
+| {% person robert_y %} | 1.0 PM |
 | {% person cavelan_a %} | 3.0 PM |
+
 
 {% comment %}
 =========================================
