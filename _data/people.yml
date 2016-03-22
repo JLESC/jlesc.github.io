@@ -589,6 +589,15 @@ luehrs_s:
   email: s.luehrs@fz-juelich.de
   homepage:
 
+martsinkevich_t:
+  sur_name: Martsinkevich
+  given_name: Tatiana V.
+  affiliation: inria
+  position:
+  topics: 
+  email: tatiana.mar@inria.fr
+  homepage:
+
 maruyama_n:
   sur_name: Maruyama
   given_name: Naoya
@@ -1118,13 +1127,4 @@ yildiz_o:
   topics: Big Data & I/O
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
-
-yves_r:
-  sur_name: Robert
-  given_name: Yves
-  affiliation: inria
-  position: permanent
-  topics:
-  email:
-  homepage:
  
