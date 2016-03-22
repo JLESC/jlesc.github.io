@@ -37,9 +37,25 @@ module Jekyll
         super
       end
     end
+
+    class TalkLabelTag < ScheduleLabelTag
+      def render(context)
+        @markup = 'info Talk'
+        super
+      end
+    end
+
+    class HandsonLabelTag < ScheduleLabelTag
+      def render(context)
+        @markup = 'default Hands-On'
+        super
+      end
+    end
   end
 end
 
 Liquid::Template.register_tag('table_separator', Jekyll::Tags::TableSeparatorTag)
 Liquid::Template.register_tag('keynote_label', Jekyll::Tags::KeynoteLabelTag)
 Liquid::Template.register_tag('research_label', Jekyll::Tags::ResearchLabelTag)
+Liquid::Template.register_tag('talk_label', Jekyll::Tags::TalkLabelTag)
+Liquid::Template.register_tag('handson_label', Jekyll::Tags::HandsonLabelTag)

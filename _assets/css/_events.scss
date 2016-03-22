@@ -64,6 +64,15 @@ footer.event-meta {
           }
         }
       }
+
+      dl {
+        dd {
+          .abstract {
+            @extend .text-muted;
+            @extend small;
+          }
+        }
+      }
     }
 
     dl {

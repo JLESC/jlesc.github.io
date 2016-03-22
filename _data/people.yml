@@ -366,6 +366,15 @@ girona_s:
   email: sergi.girona@bsc.es
   homepage: https://sites.google.com/site/sergigirona/
 
+gomez_l:
+  sur_name: Gomez
+  given_name: Leonardo Bautista
+  affiliation: bsc
+  position:
+  topics:
+  email:
+  homepage:
+
 grigori_l:
   sur_name: Grigori
   given_name: Laura
@@ -811,6 +820,15 @@ robson_m:
   email: mprobson@illinois.edu
   homepage:
 
+ropars_t:
+  sur_name: Ropars
+  given_name: Thomas
+  affiliation: inria
+  position:
+  topics:
+  email:
+  homepage:
+
 sakai_y:
   sur_name: Sakai
   given_name: Yasuhiro
@@ -922,6 +940,15 @@ subramaniam_b:
   position:
   topics: Big Data & I/O
   email: bsubramaniam@anl.gov
+  homepage:
+
+sun_h:
+  sur_name: Sun
+  given_name: Hongyang
+  affiliation: inria
+  position:
+  topics:
+  email:
   homepage:
 
 suno_b:
