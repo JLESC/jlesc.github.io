@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://jlesc.github.io/news/2016/02/16/3rd-summerschool/</loc>
-<lastmod>2016-02-16T00:00:00+00:00</lastmod>
+<loc>https://jlesc.github.io/news/2016/03/22/3rd-summerschool/</loc>
+<lastmod>2016-03-22T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>https://jlesc.github.io/news/archive/</loc>
@@ -51,6 +51,12 @@
 </url>
 <url>
 <loc>https://jlesc.github.io/events/5th-jlesc-workshop/</loc>
+</url>
+<url>
+<loc>https://jlesc.github.io/events/3rd-jlesc-summer-school/</loc>
+</url>
+<url>
+<loc>https://jlesc.github.io/events/3rd-jlesc-summer-school/schedule/</loc>
 </url>
 <url>
 <loc>https://jlesc.github.io/events/1st-jlesc-summer-school/</loc>
