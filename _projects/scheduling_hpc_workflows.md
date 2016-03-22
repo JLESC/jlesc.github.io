@@ -7,7 +7,8 @@ navbar: Research
 subnavbar: Projects
 project_url:
 status: starting
-topics: storage
+topics: 
+  - storage
 keywords:
 head: ibrahim_s
 members:

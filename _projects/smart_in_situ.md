@@ -7,7 +7,8 @@ navbar: Research
 subnavbar: Projects
 project_url:
 status: running
-topics: storage
+topics: 
+  - storage
 keywords:
 head: antoniu_g
 members:

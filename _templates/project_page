@@ -54,7 +54,7 @@ Then fill in the YAML header variables above.
                    the current status of the project;
                    you have to use one of the keys defined in '_data/project_states.yml'
 
-  topics           (optional)
+  topics           (required)
                    a YAML list of topic keys (as defined in '_data/topics.yml') for this project;
                    each topic on a new line with a leading dash
 
