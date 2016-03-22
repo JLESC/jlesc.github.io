@@ -23,7 +23,7 @@ members:
 ---
 
 ## Research topic and goals
-The objective of this project is to use a runtime repartitioning library PAMPA {% cite lachat2014parallel --file external/pampa_project.bib %}, {% cite mbengoue2013comparison --file external/pampa_project.bib %} to dynamically load balance a high performance computational mechanics code Alya {% cite GHouzeaux_MVazquez08a --file external/pampa_project.bib %}, {% cite GHouzeaux_RAubry_MVazquez09 --file external/pampa_project.bib %}, {% cite Vazquez15d --file external/pampa_project.bib %}. 
+The objective of this project is to use a runtime repartitioning library PAMPA {% cite LachatEtAl2014 --file external/pampa_project.bib %}, {% cite MbengoueEtAl2013 --file external/pampa_project.bib %} to dynamically load balance a high performance computational mechanics code Alya {% cite HouzeauxEtAl2009 --file external/pampa_project.bib %}, {% cite HouzeauxEtAl2011 --file external/pampa_project.bib %}, {% cite VazquezEtAl2015 --file external/pampa_project.bib %}. 
 The main application is the particle transport in a fluid. 
  
 In Alya, the transport of particles in a fluid is achieved using two parallel instances of the code. 
