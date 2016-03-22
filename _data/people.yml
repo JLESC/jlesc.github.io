@@ -457,6 +457,15 @@ jacob_r:
   given_name: Rob
   affiliation: anl
 
+jeannot_e:
+  sur_name: Jeannot
+  given_name: Emmanuel
+  affiliation: inria
+  position:
+  topics: Runtime Systems
+  email: emmanuel.jeannot@inria.fr
+  homepage: http://www.labri.fr/perso/ejeannot/
+
 jung_j:
   sur_name: Jung
   given_name: Jaewoon
@@ -951,6 +960,15 @@ teruel_x:
   email: xavier.teruel@bsc.es
   homepage:
 
+tessier_f:
+  sur_name: Tessier
+  given_name: Francois
+  affiliation: anl
+  position: postdoc
+  topics:
+  email: ftessier@anl.gov
+  homepage: http://www.francoistessier.info/
+
 tsubokura_m:
   sur_name: Tsubokura
   given_name: Makoto
@@ -996,6 +1014,15 @@ valero_m:
   sur_name: Valero
   given_name: Mateo
   affiliation: bsc
+
+vishwanath_v:
+  sur_name: Vishwanath
+  given_name: Venkatram
+  affiliation: anl
+  position: 
+  topics:
+  email: venkat@anl.gov
+  homepage: https://www.alcf.anl.gov/staff-directory/venkatram-vishwanath
 
 vivien_f:
   sur_name: Vivien
