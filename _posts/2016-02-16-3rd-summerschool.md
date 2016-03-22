@@ -1,9 +1,13 @@
 ---
 layout: post
 title: JLESC Summer School on Resilience
-date: 2016-02-16
+date: 2016-03-22
 updated:
 author: speck_r
 ---
 The next JLESC Summer School will take place in Lyon from June 30 to July 1,
-right after the 5th JLESC Workshop. Stay tuned for more information!
+right after the 5th JLESC Workshop. 
+
+<!--more-->
+
+Click [here](/events/3rd-jlesc-summer-school) for more information!

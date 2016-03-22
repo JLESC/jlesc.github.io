@@ -21,7 +21,7 @@ page_type: event_page
 === HOW TO USE THIS TEMPLATE ===
 ================================
 
-Copy this file to `_events_past/` and name it according to the naming convention of event pages as
+Copy this file to `_events_upcoming/` and name it according to the naming convention of event pages as
 described in the JLESC website wiki: https://github.com/JLESC/jlesc.github.io/wiki/Conventions
 
 Then fill in the YAML front matter variables:
@@ -100,7 +100,7 @@ To create a sub-page, do the following:
    - `page_type` must be 'event_subpage'
    - `subtitle` must be given
    - `permalink` must be of the following form: /events/TITLE/SUBTITLE
-     where `TITLE` and `SUBTITLE` are exactly as the file names, i.e. all lower case, dashes for
+     where `TITLE` and `SUBTITLE` are exactly as the file names without the dates, i.e. all lower case, dashes for
      whitespaces and no special characters
 
 Example
