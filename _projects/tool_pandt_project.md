@@ -44,8 +44,8 @@ and help direct development of new tool capabilities.
 
 * XcalableMP tutorial held at JSC (2015-12-01).
 * Organisation of 20th VI-HPS Tuning Workshop hosted by RIKEN AICS (2016/02/24-26) {% cite VIHPSTWS --file external/tool_pandt_project.bib %} covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) on K computer and local Fujitsu FX10 (pi).
-* Performance analysis of RIKEN FIBER mini-app ntchem on pi/K.
-* Performance analysis of ABySS-P {% cite KitayamaEtAl2015 --file external/tool_pandt_project.bib %} and NEST neuronal network simulation tool on K computer.
+* Performance analysis of RIKEN FIBER {% cite FIBER -- file external/tool_pandt_project.bib %} mini-app NTChem on pi/K.
+* Performance analysis of ABySS-P {% cite KitayamaEtAl2015 --file external/tool_pandt_project.bib %} and NEST neuronal network simulation tool {% cite NEST --file external/tool_pandt_project.bib %} on K computer.
 
 ## Visits and meetings
 
@@ -56,8 +56,7 @@ SC15 (Austin, 2015-11), JSC (Juelich, 2015-12), 4th JLESC Workshop (Bonn,
 
 Visits planned for the next 12 months:
 
-* Visit of RIKEN AICS researcher to JSC perhaps around ISC-HPC or 5th JLESC Workshop (1-2
-weeks, 2016-02)
+* Visit of RIKEN AICS researcher to JSC perhaps around ISC-HPC or 5th JLESC Workshop (1-2 weeks, 2016-06)
 * Visit of JSC researcher to RIKEN perhaps around 6th JLESC Workshop (2016-12).
 
 ## Impact and publications
