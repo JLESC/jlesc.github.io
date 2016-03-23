@@ -40,15 +40,6 @@ joint training events (such as VI-HPS Tuning Workshops {% cite VIHPSTWS --file e
 Collaborative work with application developers will assess the effectiveness of the current (and revised) tools,
 and help direct development of new tool capabilities.
 
-## Results for 2014/2015
-
-JLESC project proposed (and accepted) in April 2015, and planning commenced for initial presentation
-at 3rd JLESC Workshop (Barcelona) in June 2015. 
-RIKEN AICS applied to join VI-HPS with a view to contributing to VI-HPS Tuning Workshops 
-{% cite VIHPSTWS --file external/tool_pandt_project.bib %} and Tools Guide {% cite VIHPS2015 --file external/tool_pandt_project.bib %}. 
-XcalableMP training material being translated into English, and Scalasca/Score-P training material being translated
-into Japanese.
-
 ## Results for 2015/2016
 
 * XcalableMP tutorial held at JSC (2015-12-01).
