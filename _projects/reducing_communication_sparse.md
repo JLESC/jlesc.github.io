@@ -94,4 +94,4 @@ meeting again at SIAM PP in Paris as well as the Joint Lab meeting in Lyon.
 
 No references.
 
-{% bibliography --file external/topology_aware_project.bib %}
+{% bibliography --file external/reducing_communication_sparse.bib %}
