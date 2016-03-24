@@ -1,6 +1,6 @@
 ---
 layout: page_project
-title: Study the use of the Folding hardware-based profiler to assist on data distribution for heterogeneous memory systems in HPC
+title: Use of the Folding profiler to assist on data distribution for heterogeneous memory systems
 date: 2016-03-22
 updated:
 navbar: Research
