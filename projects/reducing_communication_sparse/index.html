@@ -3,11 +3,11 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Topology-aware sparse solvers</title>
+  <title>JLESC &mdash; Reducing Communication in Sparse Iterative and Direct Solvers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
-  <link rel="canonical" href="https://jlesc.github.io/projects/topology_aware_project/">
+  <link rel="canonical" href="https://jlesc.github.io/projects/reducing_communication_sparse/">
 
   <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
   <link type="text/css" rel="stylesheet" href="/assets/main-3413740817a90033b04fff22a4c93860666231ab6120539f0a6fe147d21dd1ad.css">
@@ -93,7 +93,7 @@
   <article class="post-content">
     <div class="row">
       <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Topology-aware sparse solvers</h1>
+        <h1 class="pull-left">Reducing Communication in Sparse Iterative and Direct Solvers</h1>
       </header>
     </div>
     <div class="row">
@@ -131,7 +131,7 @@
         <div class="col-sm-8">
           
             <span class="clearfix">
-              <span class="person given-name">Amanda</span> <span class="person sur-name">Bienz</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+              <span class="person given-name">Luke</span> <span class="person sur-name">Olson</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
               <span class="pull-right">
                 <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
               </span>
@@ -139,7 +139,7 @@
           
           
             <span class="clearfix">
-              <span class="person given-name">Luke</span> <span class="person sur-name">Olson</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+              <span class="person given-name">Amanda</span> <span class="person sur-name">Bienz</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
             </span>
           
             <span class="clearfix">
@@ -169,7 +169,7 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20142015">Results for 2014/2015</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20142015">Person-Month efforts in 2014/2015</a></li>
@@ -194,9 +194,6 @@ decisions to efficient paths in the topology.
 The primary goal is to develop solvers in this direction. The partnership between Illinois and
 INRIA through the JointLab will directly enhance this effort.</p>
 
-<h2 id="results-for-20142015">
-<a id="results-for-20142015" class="anchor" href="#results-for-20142015" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2014/2015</h2>
-
 <p>The project involves Illinois graduate student Amanda Bienz, Illinois professors Bill Gropp
 and Luke Olson, and INRIA professor Laura Grigori. Amanda Bienz presented initial results at
 the Copper Mountain Conference on Multigrid Methods in March 2015. The work highlighted
@@ -209,11 +206,28 @@ network. The result is a model that may help make point-wise decisions in the al
 example, sparse entries could be strengthened or weakened depending on their communication
 burden.</p>
 
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+
+<p>Recent efforts have focused on overlapping communication with computation in the
+sparse matrix-vector multiplication operation.  This work led to an
+asynchronous SpMV operation that was presented at Supercomputing15 in November
+2015 as well as the Copper Mountain Conference on Iterative Methods in March
+2016.</p>
+
+<p>The next steps of the collaboration include incorporating the sparsification
+strategies that we have developed for algebraic multigrid (AMG) into low-rank
+preconditioners.  To this end, we are also focussed on developed topology-based
+decisions into the sparsification process.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>Planned: JointLab Meeting in Barcelona, June 2015. Planned: Amanda Bienz visit to INRIA,
-Spring 2016 for 3 months</p>
+<p>Completed: JointLab Meeting in Barcelona, June 2015.</p>
+
+<p>Completed: JointLab Meeting in Bonn, December 2015.</p>
+
+<p>Planned: Amanda Bienz visit to INRIA, Spring 2016 for 4 months</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -253,12 +267,11 @@ Spring 2016 for 3 months</p>
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>Going forward, we have outlined a plan to work with a broader collection of sparse solvers
-by collaborating with the expertise at INRIA. Amanda Bienz has submitted an application
-for the NSF Grow project which would support a longer visit to INRIA to work with Grigori
-and others on these topics. A decision on the funding is immanent. We will be attending the
-JointLab meetings in Barcelona to present initial findings and to outline the next steps in the
-project before Amanda Bienz visits in the coming year.</p>
+<p>Going forward, we have outlined a plan to work with a broader collection of
+sparse solvers by collaborating with the expertise at INRIA. Amanda Bienz will
+be supported through the NSF Grow project for a four-month visit to INRIA to
+work with Grigori and others on these topics.   We continue to anticipate
+meeting again at SIAM PP in Paris as well as the Joint Lab meeting in Lyon.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
@@ -281,7 +294,7 @@ project before Amanda Bienz visits in the coming year.</p>
   
     <div class="card card-block">
   
-      <i class="fa fa-folder-o"></i> <span class="hidden-sm-down">Created on </span><time datetime="2016-02-24T00:00:00+00:00">24 Feb 2016</time>
+      <i class="fa fa-folder-o"></i> <span class="hidden-sm-down">Created on </span><time datetime="2016-03-23T00:00:00+00:00">23 Mar 2016</time>
   
     </div>
   

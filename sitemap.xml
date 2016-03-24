@@ -107,9 +107,6 @@
 <loc>https://jlesc.github.io/projects/eandb_project/</loc>
 </url>
 <url>
-<loc>https://jlesc.github.io/projects/topology_aware_project/</loc>
-</url>
-<url>
 <loc>https://jlesc.github.io/projects/ad_project/</loc>
 </url>
 <url>
@@ -159,5 +156,8 @@
 </url>
 <url>
 <loc>https://jlesc.github.io/projects/dense_eigen_project/</loc>
+</url>
+<url>
+<loc>https://jlesc.github.io/projects/reducing_communication_sparse/</loc>
 </url>
 </urlset>
