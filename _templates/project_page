@@ -62,12 +62,12 @@ Then fill in the YAML header variables above.
                    a YAML list of keywords for this project;
                    each topic on a new line with a leading dash.
 
-  head             (optional)
+  head             (required)
                    the dedicated project leader;
                    this is the identifier of a person as found in '_data/people.yml'
 
   members          (optional)
-                   a YAML list of members of this project, i.e. the people doing the work;
+                   a YAML list of members of this project excluding the head;
                    each member must be listed as its identifier as found in '_data/people.yml'
 
 Now, fill in the details for the current report below. Please do not change headings, headings level

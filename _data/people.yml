@@ -955,6 +955,15 @@ seo_s:
   email: sseo@anl.gov
   homepage: http://www.mcs.anl.gov/~sseo/
 
+servat_h:
+  sur_name: Servat
+  given_name: Harald
+  affiliation: bsc
+  position:
+  topics: Performance Tools
+  email: harald.servat@bsc.es
+  homepage:
+
 sisneros_r:
   sur_name: Sisneros
   given_name: Rob
