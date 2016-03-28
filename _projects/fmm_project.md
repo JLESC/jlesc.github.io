@@ -2,7 +2,7 @@
 layout: page_project
 title: Scalability Enhancements to FMM for Molecular Dynamics Simulations
 date: 2016-01-01
-updated: 2016-02-05
+updated: 2016-03-30
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -11,7 +11,7 @@ topics:
   - numerics
   - prog_lang
 keywords:
-  - awesomeness
+  - Fast Multipole Method, MPI-3, MPI-4
 head: kabadshow_i
 members:
   - balaji_p
@@ -29,14 +29,14 @@ We will investigate weak and delayed synchronization models, tasking approaches 
 The project was initiated at the JLESC meeting in November 2014.
 To provide a consistent interface for measuring and tuning parallel code performance some profound changes had to be made to the code.
 We started implementing an abstract parallelization layer for the FMSolvr library.
-This includes a threading approach for intra-node communication as well as a parallelization approach for inter-node communication via MPI.
-The adopted abstraction layer allows easier re- placement/improvement of different synchronization strategies within the code.
+This especially includes a parallelization approach for inter-node communication via MPI.
+The adopted abstraction layer allows easier replacement/improvement of different synchronization strategies within the code.
+Besides the structural changes, a latency-avoiding communication scheme was implemented to improve the strong scaling.
+Together with the automatic testing framework, scaling bottlenecks of the method can be investigated much easier.
 
-Since this is a starting cooperation no project publications are available at the moment.
 
 ## Visits and meetings
-Since this is a starting cooperation no visits have been initiated.
-The upcoming JLESC meeting at BSC will be used as a first project meeting.
+David Haensel will join the group of Pavan Balaji in Mai/June 2016 to develop a tasking scheme for the FMM based on Argobots.
 
 ## Impact and publications
 none yet.
@@ -58,11 +58,8 @@ Since December 2014:
 The efforts are likely to increase, once the code base includes a near-complete parallelization layer.
 
 ## Future plans
-Next, we want to setup an automatic testing framework for the FMM.
-This allows us to investigate the scaling bottlenecks of the method without the need to provide a real-world MD dataset.
-The framework will generate the corresponding input data as well as the required FMM parameter on the fly.
-After this step is finished an extensive scaling analysis on different HPC platforms will be performed.
-The results of this analysis are the foundation of all subsequent tuning efforts.
+The next step will be the development of a task-based scheme for the intranode communication.
+This will also help to reduce load imbalances due to non-homogeneous particle distributions.
 
 ## References
 {% bibliography --file external/fmm_project.bib %}
