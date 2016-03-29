@@ -63,6 +63,15 @@
 # [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
 #
 
+agullo_e:
+  sur_name: Agullo
+  given_name: Emmanuel
+  affiliation: inria
+  position:
+  topics:
+  email:
+  homepage:
+
 allen_g:
   sur_name: Allen
   given_name: Gabrielle
@@ -81,7 +90,6 @@ alvarez_c:
   email: calvarez@ac.upc.edu
   homepage:
 
-
 amer_a:
   sur_name: Amer
   given_name: Abdelhalim
@@ -99,6 +107,14 @@ antoniu_g:
   topics: Big Data & I/O
   email: gabriel.antoniu@inria.fr
   homepage: https://team.inria.fr/kerdata/gabriel-antoniu/
+
+artigues_t:
+  sur_name: Artigues
+  given_name: T
+  affiliation: bsc
+  position:
+  email:
+  homepage:
 
 badia_r:
   sur_name: Badia
@@ -856,6 +872,15 @@ rahmani_l:
   email: lokman.rahmani@irisa.fr
   homepage:
 
+ramet_p:
+  sur_name: Ramet
+  given_name: Pierre
+  affiliation: inria
+  position:
+  topics:
+  email:
+  homepage:
+
 riedel_m:
   sur_name: Riedel
   given_name: Morris
@@ -1122,7 +1147,7 @@ valero_m:
   sur_name: Valero
   given_name: Mateo
   affiliation: bsc
-  
+
 vazquez_m:
   sur_name: Vázquez
   given_name: Mariano
