@@ -14,7 +14,7 @@ keywords:
 head: ramet_p
 members:
   - agullo_e
-  - artigues_t
+  - artigues_a
   - houzeaux_g
   - vazquez_m
 ---
@@ -33,7 +33,8 @@ This activity has just started in February 2016, preliminary validation experime
 
 ## Visits and meetings
 
-None yet.
+* {% person houzeaux_g %} and {% person vazquez_m %} met INRIA team at Bordeaux, 14-15 Oct. 2016.
+* {% person houzeaux_g %} met INRIA team at Bordeaux, 24-26 Feb. 2016. 
 
 
 ## Impact and publications
@@ -51,7 +52,7 @@ None yet.
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
 | {% person agullo_e %} | 0.25 PM |
-| {% person artigues_t %} | 2 PM |
+| {% person artigues_a %} | 2 PM |
 | {% person houzeaux_g %} | 2 PM |
 | {% person ramet_p %} | 0.25 PM |
 | {% person vazquez_m %} | 0.5 PM |
