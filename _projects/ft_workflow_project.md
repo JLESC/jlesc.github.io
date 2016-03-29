@@ -90,16 +90,15 @@ to decide when to checkpoint/replicate a task.
 
 
 ## Results for 2015/2016
--
+None yet.
 
 ## Visits and meetings
 
-Aurélien Cavelan (Inria) is visiting Franck Cappello at ANL for three months (march-april-may 2016)
-to initiate this project. We are working in close collaboration to make progress. 
+{% person cavelan_a %} is visiting {% person cappello_f %} in Chicago for three months (march-april-may 2016) to initiate this project. We are working in close collaboration to make progress.
 
 
 ## Impact and publications
--
+None yet.
 
 <!--
 {% comment %}
@@ -158,10 +157,9 @@ Above the very first person put the following line:
 {% endcomment %}
 
 ## Future plans
--
+None yet.
 
 ## References
--
 
 {% comment %}
 =================
