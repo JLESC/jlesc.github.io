@@ -16,7 +16,7 @@ permalink:
 page_type: event_page
 ---
 
-The third JLESC Summer School will be held at [ENS-Lyon](http://www.ens-lyon.fr/en/english-ens-de-lyon-269761.kjsp), from June 30 to July 1, 2016, following the at [5th JLESC Worksphop](/events/5th-jlesc-workshop).
+The third JLESC Summer School will be held at [ENS-Lyon](http://www.ens-lyon.fr/en/english-ens-de-lyon-269761.kjsp), from June 30 to July 1, 2016, following the [5th JLESC Worksphop](/events/5th-jlesc-workshop).
 
 The topic of this summer school is resilience and it is jointly organized by {% person cappello_f %}, {% person cavelan_a %}, {% person bautista_gomez_l %} and {% person robert_y %}.
 The school is offered to students (mainly PhD students and post-docs) of the collaboration and open
