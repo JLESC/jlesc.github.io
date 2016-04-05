@@ -31,7 +31,7 @@ their performance.
 Our research explores dynamic load balancing, low power manycore platforms and DVFS techniques in
 order to reduce power consumption.
 
-## Results for 2014/2015
+## Results for 2015/2016
 
 #### Load Balancing  
 In this work we propose the improvement of the performance and scalability of parallel seismic
@@ -107,7 +107,7 @@ This work was presented at the HiPC conference {% cite PadoinEtAl2014 --file ext
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2014/2015
+## Person-Month efforts in 2015/2016
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
 | {% person keller_tesser_r %}    | 6 PM |

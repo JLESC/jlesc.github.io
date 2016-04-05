@@ -27,7 +27,7 @@ FMSolvr is a high-performance FMM library being developed by JSC.
 However, the current intrinsic parallel scaling limitations stem from process synchronization on large-scale systems.
 We will investigate weak and delayed synchronization models, tasking approaches and other techniques with MPI-3 and upcoming MPI-4 extensions to alleviate some of these performance bottlenecks.
 
-## Results for 2014/2015
+## Results for 2015/2016
 The project was initiated at the JLESC meeting in November 2014.
 To provide a consistent interface for measuring and tuning parallel code performance some profound changes had to be made to the code.
 We started implementing an abstract parallelization layer for the FMSolvr library.
@@ -50,8 +50,7 @@ none yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2014/2015
-Since December 2014:
+## Person-Month efforts in 2015/2016
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
 | {% person balaji_p %}    | 0.1 PM |

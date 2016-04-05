@@ -30,7 +30,7 @@ interference phenomena, and to the implementation of a prototype of the CALCioM 
 currently includes 3 scheduling strategies.
 As a result of this work, a paper was accepted at IEEE IPDPS 2014 {% cite DorierEtAl2014a --file jlesc.bib %}.
 
-## Results for 2014/2015
+## Results for 2015/2016
 
 #### Sub-goal 1:
 Having exemplified the interference phenomenon on synthetic benchmarks, we
@@ -68,7 +68,7 @@ at SC’14 {% cite DorierEtAl2014b --file jlesc.bib %}.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2014/2015
+## Person-Month efforts in 2015/2016
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
 | {% person antoniu_g %}    | 1 PM |
