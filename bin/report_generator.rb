@@ -212,8 +212,14 @@ module Jekyll
     attr_accessor :bibtex
 
     def destination(dest)
-      puts "  - #{URL.unescape_path(url)}"
-      path = File.join(dest, URL.unescape_path(url))
+      raw_url = URL.unescape_path(url)
+      if raw_url.end_with? '/'
+        tex_file = raw_url[0, raw_url.length - 1]
+      else
+        tex_file = raw_url
+      end
+      puts "  - #{tex_file}"
+      path = File.join(dest, tex_file)
       path << output_ext unless path.end_with? output_ext
       path
     end
