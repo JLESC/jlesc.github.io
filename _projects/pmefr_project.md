@@ -41,7 +41,7 @@ At the thread-level, errors are contained within the failing threads except if r
 in which case propagating the failure to the MPI process will be necessary.
 The system then will rely on process-level fault-tolerance techniques to mitigate the failure.
 
-## Results for 2014/2015
+## Results for 2015/2016
 
 There were interactions through telecon between the collaborators which involved discussions
 about ULFM for process-level resilience and the feasibility of thread-level fault-tolerance extensions.
@@ -58,7 +58,7 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2014/2015
+## Person-Month efforts in 2015/2016
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
 | {% person amer_a %}    | 0.5 PM |
