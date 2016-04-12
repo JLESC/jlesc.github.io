@@ -387,7 +387,7 @@ module Jekyll
       puts '    cleaning up Markdown after Liquid processing'
       document.content.gsub! /<span class="person given-name">(.*?)<\/span>/, '\1'
       document.content.gsub! /<span class="person sur-name">(.*?)<\/span>/, '\1'
-      document.content.gsub! /<abbr title=".*?" class="initialism">(.*?)<\/abbr>/, '\1'
+      document.content.gsub! /<abbr title=".*?" class="initialism" data-toggle="tooltip">(.*?)<\/abbr>/, '\1'
     end
 
     private
