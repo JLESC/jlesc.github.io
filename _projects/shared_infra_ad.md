@@ -7,10 +7,10 @@ navbar: Research
 subnavbar: Projects
 project_url:
 status: running
-topics: Numerical Methods
-  -
+topics: 
+  - numerics
 keywords:
-  -
+  - 
 head: hovland_p
 members: 
   - hascoet_l
