@@ -111,9 +111,6 @@
 <loc>https://jlesc.github.io/projects/eandb_project/</loc>
 </url>
 <url>
-<loc>https://jlesc.github.io/projects/ad_project/</loc>
-</url>
-<url>
 <loc>https://jlesc.github.io/projects/mcfd_cmp_project/</loc>
 </url>
 <url>
@@ -169,5 +166,8 @@
 </url>
 <url>
 <loc>https://jlesc.github.io/projects/alya_project/</loc>
+</url>
+<url>
+<loc>https://jlesc.github.io/projects/shared_infra_ad/</loc>
 </url>
 </urlset>
