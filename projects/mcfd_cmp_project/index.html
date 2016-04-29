@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Comparison of Meshing and CFD Methods for Accurate Flow Simulations on HPC systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/mcfd_cmp_project/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Comparison of Meshing and CFD Methods for Accurate Flow Simulations on HPC systems</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Apps & Mini-Apps</span>
+          </span>
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Numerical Methods</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">meshing</span>
+          
+            <span class="clearfix">CFD</span>
+          
+            <span class="clearfix">accuracy analysis</span>
+          
+            <span class="clearfix">performance analysis</span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Andreas</span> <span class="person sur-name">Lintermann</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Makoto</span> <span class="person sur-name">Tsubokura</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-starting">starting</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+
+<p>The expertise of the collaborators at the two centers AICS and JSC lies in the development of methods for Computational Fluid Dynamics (CFD) simulations on HPC systems.
+Despite the high efficiency of the simulation codes developed within the two groups on the K-computer and the JUQUEEN, respectively, the methods for the computation of the flow and meshing are quite different and have their advantages and disadvantages.
+While the AICS code relies on the Building Cube Method <a href="#Ishikawa2011">(Ishikawa, Sasaki, and Nakahashi 2011)</a>, <a href="#Onishi2014">(Onishi et al. 2014)</a> to generate the mesh and uses a structured solver with a Finite Difference method, the JSC code solves for the flow variables on hierarchical Cartesian meshes <a href="#Lintermann2014">(Lintermann et al. 2014)</a> using a Finite Volume <a href="#Hartmann2010">(Hartmann, Meinke, and Schröder 2011)</a>, <a href="#Schneiders2016">(Schneiders et al. 2016)</a> or a Lattice-Boltzmann method <a href="#Lintermann2013">(Lintermann, Meinke, and Schröder 2013)</a>.
+The aim of the proposed JLESC cooperation is to compare the accuracy and efficiency of the applied methods in the two CFD simulation codes on the two hardware architectures based on predefined benchmark cases.
+Within this scope, porting of the simulation software to both HPC systems, the K-computer and the JUQUEEN, is planned.
+This project will not only help to further develop an understanding for computational methods for large-scale CFD simulations for the next supercomputer generation, but will also characterize the efficiency of the current codes on different hardware architectures.
+That is, by a performance analysis of both codes on both machines drawbacks in current implementations will be exposed and architectural features will be explored for code acceleration.
+Such a cooperation is only possible by bilateral support activities which will lead to a knowledge exchange on the hardware side, in CFD methods, parallelization, and the associated meshing techniques.
+Hence, expertises of the centers in these fields will strongly be enhanced in the course of this project.
+To foster the cooperation, mutual short-time stays of the involved scientists are planned.</p>
+
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+
+<p>The project has just started and hence there are no results available, yet.
+However, both parties are about to create accounts on both machines such that the first task, i.e., the porting of the individual codes can be performed.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<p>-</p>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<p>-</p>
+
+<ol class="bibliography"></ol>
+
+<h2 id="person-month-efforts-in-20152016">
+<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
+
+<table class="person-months-table table table-bordered table-hover table-sm">
+  <tbody>
+    <tr>
+      <td>
+<span class="person given-name">Andreas</span> <span class="person sur-name">Lintermann</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Makoto</span> <span class="person sur-name">Tsubokura</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>After accounts have been created on both machines, both groups will start to port their own codes to the according machines.
+Meanwhile, benchmarking cases for the performance and the accuracy analysis will be defined.
+Subsequently, simulations will be run to test the performance and accuracy.
+Finally, best-practice methods for high-performance CFD simulations will be defined, i.e., the results of the simulations will be evaluated to find optimal numerical methods for future CFD applications.</p>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Schneiders2016
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSchneiders2016Bibtex" aria-expanded="false" aria-controls="collapseSchneiders2016Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSchneiders2016Abstract" aria-expanded="false" aria-controls="collapseSchneiders2016Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Schneiders2016">Schneiders, Lennart, Claudia Günther, Matthias Meinke, and Wolfgang Schröder. 2016. “An Efficient Conservative Cut-Cell Method for Rigid Bodies Interacting with Viscous Compressible Flows.” <i>Journal Of Computational Physics</i> 311 (April): 62–86. doi:10.1016/j.jcp.2016.01.026.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseSchneiders2016Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Schneiders2016,
+  author = {Schneiders, Lennart and G{\"{u}}nther, Claudia and Meinke, Matthias and Schr{\"{o}}der, Wolfgang},
+  doi = {10.1016/j.jcp.2016.01.026},
+  journal = {Journal of Computational Physics},
+  month = apr,
+  pages = {62--86},
+  title = {{An efficient conservative cut-cell method for rigid bodies interacting with viscous compressible flows}},
+  url = {http://linkinghub.elsevier.com/retrieve/pii/S0021999116000346},
+  volume = {311},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseSchneiders2016Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        A Cartesian cut-cell method for viscous flows interacting with freely moving boundaries is presented. The method enables a sharp resolution of the embedded boundaries and strictly conserves mass, momentum, and energy. A new explicit Runge–Kutta scheme (PC-RK) is introduced by which the overall computational time is reduced by a factor of up to 2.5. The new scheme is a predictor–corrector type reformulation of a popular class of Runge–Kutta methods which substantially reduces the computational effort for tracking the moving boundaries and subsequently reinitializing the solver impairing neither stability nor accuracy. The structural motion is computed by an implicit scheme with good stability properties due to a strong-coupling strategy and the conservative discretization of the flow solver at the material interfaces. A new formulation for the treatment of small cut cells is proposed with high accuracy and robustness for arbitrary geometries based on a weighted Taylor-series approach solved via singular-value decomposition. The efficiency and the accuracy of the new method are demonstrated for several three-dimensional cases of laminar and turbulent particulate flow. It is shown that the new method remains fully conservative even for large displacements of the boundaries leading to a fast convergence of the fluid–solid coupling while spurious force oscillations inherent to this class of methods are effectively suppressed. The results substantiate the good stability and accuracy properties of the scheme even on relatively coarse meshes.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Lintermann2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2014Bibtex" aria-expanded="false" aria-controls="collapseLintermann2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2014Abstract" aria-expanded="false" aria-controls="collapseLintermann2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Lintermann2014">Lintermann, Andreas, Stephan Schlimpert, J.H. Grimmen, Claudia Günther, Matthias Meinke, and Wolfgang Schröder. 2014. “Massively Parallel Grid Generation on HPC Systems.” <i>Computer Methods In Applied Mechanics and Engineering</i> 277 (May): 131–53. doi:10.1016/j.cma.2014.04.009.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLintermann2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Lintermann2014,
+  author = {Lintermann, Andreas and Schlimpert, Stephan and Grimmen, J.H. and G{\"{u}}nther, Claudia and Meinke, Matthias and Schr{\"{o}}der, Wolfgang},
+  doi = {10.1016/j.cma.2014.04.009},
+  journal = {Computer Methods in Applied Mechanics and Engineering},
+  month = may,
+  pages = {131--153},
+  title = {{Massively parallel grid generation on HPC systems}},
+  url = {http://linkinghub.elsevier.com/retrieve/pii/S0045782514001340},
+  volume = {277},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseLintermann2014Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        The automatic grid generation on high performance computers is a challenging task under the restriction of computational power and memory availability. The increasing demand for high grid resolutions to simulate complex flow configurations necessitates parallel grid generation on multicore machines with distributed memory. In this study, a new robust algorithm to automatically generate hierarchical Cartesian meshes on distributed multicore HPC systems with multiple levels of refinement is presented. The number of cells is only restricted by the number of available cores and memory. The algorithm efficiently realizes a computational domain decompositioning for an arbitrary number of cores based on a Hilbert curve. The grids are efficiently stored and accessed via a high capacity parallel I/O method. The efficiency of the approach is demonstrated by considering human nasal cavity and internal combustion engine flow problems.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Onishi2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseOnishi2014Bibtex" aria-expanded="false" aria-controls="collapseOnishi2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseOnishi2014Abstract" aria-expanded="false" aria-controls="collapseOnishi2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Onishi2014">Onishi, Keiji, Makoto Tsubokura, Shigeru Obayashi, and Kazuhiro Nakahashi. 2014. “Vehicle Aerodynamics Simulation For the Next Generation on the K Computer: Part 2 Use of Dirty CAD Data with Modified Cartesian Grid Approach.” <i>SAE International Journal Of Passenger Cars - Mechanical Systems</i> 7 (2): 2014–01–0580. doi:10.4271/2014-01-0580.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseOnishi2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Onishi2014,
+  author = {Onishi, Keiji and Tsubokura, Makoto and Obayashi, Shigeru and Nakahashi, Kazuhiro},
+  doi = {10.4271/2014-01-0580},
+  journal = {SAE International Journal of Passenger Cars - Mechanical Systems},
+  month = apr,
+  number = {2},
+  pages = {2014--01--0580},
+  title = {{Vehicle Aerodynamics Simulation for the Next Generation on the K Computer: Part 2 Use of Dirty CAD Data with Modified Cartesian Grid Approach}},
+  url = {http://www.sae.org/technical/papers/2014-01-0580 http://papers.sae.org/2014-01-0580/},
+  volume = {7},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseOnishi2014Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        The applicability of high-performance computing (HPC) to vehicle aerodynamics is presented using a Cartesian grid approach of computational fluid dynamics. Methodology that allows the user to avoid a large amount of manual work in preparing geometry is indispensable in HPC simulation whereas conventional methodologies require much manual work. The new frame work allowing a solver to treat ‘dirty’ computer-aided-design data directly was developed with a modified immersed boundary method. The efficiency of the calculation of the vehicle aerodynamics using HPC is discussed. The validation case of flow with a high Reynolds number around a sphere is presented. The preparation time for the calculation is approximately 10 minutes. The calculation time for flow computation is approximately one-tenth of that of conventional unstructured code. Results of large eddy simulation with a coarse grid differ greatly from experimental results, but there is an improvement in the prediction of the drag coefficient prediction when using 23 billion cells. A vehicle aerodynamics simulation was conducted using dirty computer-aided-design data and approximately 19 billion cells. The preparation for the calculation can be completed within a couple of hours. The calculation time for flow computation is approximately one-fifth of that of conventional unstructured code. Reasonable flow results around a vehicle were observed, and there is an improvement in the prediction of the drag coefficient prediction when using 19 billion cells. The possibility of the proposed methodology being an innovative scheme in computational fluid dynamics is shown.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Lintermann2013
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2013Bibtex" aria-expanded="false" aria-controls="collapseLintermann2013Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2013Abstract" aria-expanded="false" aria-controls="collapseLintermann2013Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Lintermann2013">Lintermann, Andreas, Matthias Meinke, and Wolfgang Schröder. 2013. “Fluid Mechanics Based Classification of the Respiratory Efficiency of Several Nasal Cavities.” <i>Computers In Biology and Medicine</i> 43 (11): 1833–52. doi:10.1016/j.compbiomed.2013.09.003.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLintermann2013Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Lintermann2013,
+  author = {Lintermann, Andreas and Meinke, Matthias and Schr{\"{o}}der, Wolfgang},
+  doi = {10.1016/j.compbiomed.2013.09.003},
+  journal = {Computers in Biology and Medicine},
+  keywords = {Heating capability,Lattice Boltzmann,Nasal cavity flows,Respiration capability,Thermal Lattice Boltzmann},
+  month = nov,
+  number = {11},
+  pages = {1833--1852},
+  title = {{Fluid mechanics based classification of the respiratory efficiency of several nasal cavities}},
+  url = {http://linkinghub.elsevier.com/retrieve/pii/S0010482513002540},
+  volume = {43},
+  year = {2013}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseLintermann2013Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        The flow in the human nasal cavity is of great importance to understand rhinologic pathologies like impaired respiration or heating capabilities, a diminished sense of taste and smell, and the presence of dry mucous membranes. To numerically analyze this flow problem a highly efficient and scalable Thermal Lattice-BGK (TLBGK) solver is used, which is very well suited for flows in intricate geometries. The generation of the computational mesh is completely automatic and highly parallelized such that it can be executed efficiently on High Performance Computers (HPC). An evaluation of the functionality of nasal cavities is based on an analysis of pressure drop, secondary flow structures, wall-shear stress distributions, and temperature variations from the nostrils to the pharynx. The results of the flow fields of three completely different nasal cavities allow their classification into ability groups and support the a priori decision process on surgical interventions.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Ishikawa2011
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseIshikawa2011Bibtex" aria-expanded="false" aria-controls="collapseIshikawa2011Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseIshikawa2011Abstract" aria-expanded="false" aria-controls="collapseIshikawa2011Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Ishikawa2011">Ishikawa, Noriyoshi, Disuke Sasaki, and Kazuhiro Nakahashi. 2011. “Large-Scale Distributed Computation Using Building-Cube Method.” In <i>49th AIAA Aerospace Sciences Meeting Including the New Horizons Forum and Aerospace Exposition</i>, 1–11. Reston, Virigina: American Institute of Aeronautics and Astronautics. doi:10.2514/6.2011-754.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseIshikawa2011Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Ishikawa2011,
+  address = {Reston, Virigina},
+  author = {Ishikawa, Noriyoshi and Sasaki, Disuke and Nakahashi, Kazuhiro},
+  booktitle = {49th AIAA Aerospace Sciences Meeting including the New Horizons Forum and Aerospace Exposition},
+  doi = {10.2514/6.2011-754},
+  month = jan,
+  number = {January},
+  pages = {1--11},
+  publisher = {American Institute of Aeronautics and Astronautics},
+  title = {{Large-scale Distributed Computation Using Building-Cube Method}},
+  url = {http://arc.aiaa.org/doi/abs/10.2514/6.2011-754},
+  year = {2011}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseIshikawa2011Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        This paper describes the development of a new parallel flow solver framework designed for Cartesian mesh with an Octree/Quadtree data structure. This framework is applied to a block-structured Cartesian mesh flow solver, the Building Cube Method to be parallelized on distributed-memory processors. In this approach, Hilbert curve, one of Space-filling Curve, is employed for domain decomposition to prevent discrete computational domains on a processor. The present approach demonstrated a scaled parallel efficiency on vector- parallel supercomputers of NEC SX-9.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Hartmann2010
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHartmann2010Bibtex" aria-expanded="false" aria-controls="collapseHartmann2010Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHartmann2010Abstract" aria-expanded="false" aria-controls="collapseHartmann2010Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Hartmann2010">Hartmann, Daniel, Matthias Meinke, and Wolfgang Schröder. 2011. “A Strictly Conservative Cartesian Cut-Cell Method for Compressible Viscous Flows on Adaptive Grids.” <i>Computer Methods In Applied Mechanics and Engineering</i> 200 (9-12): 1038–52. doi:10.1016/j.cma.2010.05.015.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHartmann2010Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Hartmann2010,
+  author = {Hartmann, Daniel and Meinke, Matthias and Schr{\"{o}}der, Wolfgang},
+  doi = {10.1016/j.cma.2010.05.015},
+  journal = {Computer Methods in Applied Mechanics and Engineering},
+  keywords = {Cartesian grid Cartesian grid methods,compressible Navier-Stokes equations,cut-cell method,finite-volume method,immersed boundary methods},
+  number = {9-12},
+  pages = {1038--1052},
+  title = {{A strictly conservative Cartesian cut-cell method for compressible viscous flows on adaptive grids}},
+  url = {http://www.sciencedirect.com/science/article/pii/S0045782510001647},
+  volume = {200},
+  year = {2011}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseHartmann2010Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        A Cartesian cut-cell method which allows the solution of two- and three-dimensional viscous, compressible flow problems on arbitrarily refined graded meshes is presented. The finite-volume method uses cut cells at the boundaries rendering the method strictly conservative in terms of mass, momentum, and energy. For threedimensional compressible flows, such a method has not been presented in the literature, yet. Since ghost cells can be arbitrarily positioned in space the proposed method is flexible in terms of shape and size of embedded boundaries. A key issue for Cartesian grid methods is the discretization at mesh interfaces and boundaries and the specification of boundary conditions. A linear least-squares method is used to reconstruct the cell center gradients in irregular regions of the mesh, which are used to formulate the surface ux. Expressions to impose boundary conditions and to compute the viscous terms on the boundary are derived. The overall discretization is shown to be second-order accurate in L1. The accuracy of the method and the quality of the solutions are demonstrated in several two- and three-dimensional test cases of steady and unsteady flows.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>

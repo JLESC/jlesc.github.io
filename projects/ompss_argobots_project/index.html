@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Enhancing Asynchronous Parallelism in OmpSs with Argobots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/ompss_argobots_project/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Enhancing Asynchronous Parallelism in OmpSs with Argobots</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Programming Languages and Runtimes</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">OmpSs</span>
+          
+            <span class="clearfix">Argobots</span>
+          
+            <span class="clearfix">thread</span>
+          
+            <span class="clearfix">task</span>
+          
+            <span class="clearfix">asynchronous parallelism</span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Sangmin</span> <span class="person sur-name">Seo</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Abdelhalim</span> <span class="person sur-name">Amer</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Rosa M.</span> <span class="person sur-name">Badia</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Jesus</span> <span class="person sur-name">Labarta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Xavier</span> <span class="person sur-name">Teruel</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Vicenc</span> <span class="person sur-name">Beltran</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-running">running</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016-1">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+
+<p>As future applications on exascale systems are expected to contain billions of
+threads or tasks to exploit concurrency provided by the underlying hardware,
+parallel programming models need to evolve to efficiently support massive
+parallelism with low overhead. OmpSs is a programming model that extends OpenMP
+with new directives to support asynchronous parallelism. It enables
+asynchronous parallelism by using data-dependencies between different tasks of
+the application. Argobots is a low-level infrastructure that supports
+lightweight user-level threads (ULTs) and tasks for massive concurrency.
+It directly leverages the lowest-level constructs in the hardware and OS,
+such as lightweight notification mechanisms, data movement engines, memory
+mapping, and data placement strategies.</p>
+
+<p>In this project, we aim at improving asynchronous parallelism support in OmpSs
+with Argobots. As a first step, we will evaluate the possible integration of
+Argobots into the OmpSs runtime. Since Argobots provides two kinds of work
+units (one is a ULT that has context-switching ability, and the other is a
+tasklet that is suitable for atomic execution), efficient mapping between OmpSs
+tasks and Argobots’ work units will be beneficial to improve performance.
+If this evaluation is positive, we will proceed to a prototype implementation
+of the integration. Also, we will investigate how OmpSs can take advantage of
+two-level parallelism and deterministic threading model in Argobots. Argobots
+abstracts its execution model with hierarchical constructs and exposes their
+execution to users. OmpSs can exploit this model to optimize multi-level
+parallelism required for recursive algorithms. Finally, we will explore
+scheduling capability of Argobots in OmpSs. Argobots allows users to write
+their own scheduler and to stack different schedulers with different scheduling
+strategies. We will implement a locality-aware scheduler in Argobots, which
+will boost the execution performance of OmpSs tasks.</p>
+
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+
+<p>We started working on the implementation of the OmpSs runtime on top of
+Argobots.  We have integrated Argobots into the Nanos++ runtime (Nanos6) and
+implemented a prototype runtime that is compatible with the existing one and
+can work with the Mercurium compiler.  We have also tested basic functionalities
+including <code class="highlighter-rouge">#pragma omp task</code>, <code class="highlighter-rouge">#pragma omp taskwait</code>, and task dependencies.
+From the collaboration, we found some functionalities that need to be supported
+by Argobots (e.g., retrieving the work unit argument at run-time) and
+implemented them in Argobots as well.</p>
+
+<h2 id="results-for-20152016-1">
+<a id="results-for-20152016-1" class="anchor" href="#results-for-20152016-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+
+<p>We have discussed the feasibility of integrating OmpSs and Argobots. We reviewed
+both runtimes and compared their functionalities. The first observation is that
+Argobots and OmpSs runtime are overlapped in some basic functionalities and
+components, which are strongly embedded in the OmpSs runtime, and thus porting
+directly OmpSs runtime on top of Argobots ULTs will add many layers of
+components and scheduler overheads. We think that it needs more time and results
+to evaluate both runtimes and to come up with appropriate integration
+approaches.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+
+<p>We had a telecon meeting on December 15, 2014, where we discussed the current
+status of Argobots and OmpSs and interaction between two runtimes. We started
+our collaboration after this meeting.  In 2015, we had F2F meetings at SC 2015
+and the 4th JLESC workshop in Bonn and discussed implementation issues (e.g.,
+retrieving the work unit argument) and interoperability between different
+programming models.  We have also exchanged emails to discuss the integration
+between Argobots and OmpSs runtime, current issues, and implementation plans.
+We will schedule more telecon meetings for discussion and plan visits as needed.
+There are no planned visits yet.</p>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+
+<p>This project will have the future impact and contributions as follows:</p>
+
+<ul>
+  <li>Improving the OmpSs programming model with a new lightweight threading/tasking library, Argobots</li>
+  <li>Exploring lightweight user-level threads to support asynchronous parallelism and enhancing asynchronous parallelism support in directive-based programming models</li>
+  <li>Implementing a runtime prototype that integrates Argobots and supports OmpSs</li>
+  <li>Performance evaluation of the runtime prototype</li>
+</ul>
+
+<ol class="bibliography"></ol>
+
+<h2 id="person-month-efforts-in-20152016">
+<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
+
+<table class="person-months-table table table-bordered table-hover table-sm">
+  <tbody>
+    <tr>
+      <td>
+<span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Sangmin</span> <span class="person sur-name">Seo</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
+      <td>1.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Abdelhalim</span> <span class="person sur-name">Amer</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
+      <td>1.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Rosa M.</span> <span class="person sur-name">Badia</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Jesus</span> <span class="person sur-name">Labarta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Xavier</span> <span class="person sur-name">Teruel</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>1.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Vicenc</span> <span class="person sur-name">Beltran</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>Next steps in this project are to have a more complete implementation of
+the Nanos++ runtime over Argobots, to evaluate the performance of our
+implementation with OmpSs applications, and to optimize the runtime.
+We also plan to publish one or two papers to share our work on interaction
+between OmpSs and Argobots with the HPC community and to make our runtime
+prototype open source software at the end of the project.</p>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ol class="bibliography"></ol>
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Exploiting Active Storage for Resilience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/activestorage_project/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Exploiting Active Storage for Resilience</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Resilience</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">Blue Gene Active Storage</span>
+          
+            <span class="clearfix">Global View Resilience</span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Nicholas</span> <span class="person sur-name">Vandenbergen</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-closing">closing</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+<p>The research in this topic is based on a hardware and a software architecture, which both are currently under development: GVR and BGAS.
+GVR (Global View Resilience) is a user-level library that enables portable, efficient, application-controlled resilience <a href="#ChienEtAl2015">(Chien et al. 2015)</a>.
+It focusses on achieving scalability and maximization of error recovery.
+BGAS (Blue Gene Active Storage) is a realisation of an active storage architecture based on custom flash memory cards which are integrated into Blue Gene/Q I/O drawers.
+Here JSC continues previous work on integration of non-volatile memory <a href="#SayedEtAl2013">(Sayed et al. 2013)</a>.
+In this subproject our goal is to explore the opportunities of both architectures by integrating them.
+More specifically the following research questions are addressed:</p>
+
+<ul>
+  <li>How well can the software architecture of GVR exploit the BGAS hardware architecture?</li>
+  <li>How efficiently can both architectures be exploited?</li>
+  <li>What is the value of active storage for a which classes of large-scale scientific computing?</li>
+</ul>
+
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<p>GVR has been successfully installed by the ANL team on Jülich’s BG/Q system JUQUEEN exploiting the attached BGAS nodes. This setup had been the basis for an extensive performance analysis, where results will be published at ISC16.</p>
+
+<p>The conclusions was that the NVM-based BGAS system provides a more efficient basis and opportunities for GVR versioning comparing to an traditional external storage systems attached to the same system, especially for flexible error recovery using random version access.
+Equipped with additional compute resource, e.g., idle cores on the I/O node (ION), in-situ analysis could be off-loaded to the ION. 
+Such active storage concepts can potentially be exploited for enabling algorithm-based fault-tolerance (ABFT) error- checking.
+Further performance improvements might be attainable using the Direct Storage Access (DSA) interface instead of the local file system that was used within this project.</p>
+
+<p>With the presentation of the paper this project will come to an end.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<p>Beyond regular contacts via email the following meetings involving most of the participants took place:</p>
+
+<ul>
+  <li>Meeting of <span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>), <span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) and <span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>) at SC14 on November 17, 2014.</li>
+  <li>Technical update meeting on February 5, 2015.</li>
+  <li>Regular technical meetings thereafter until December 2015</li>
+</ul>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<p>The project has submitted a publication to ISC16 that has been accepted.</p>
+
+<!--
+
+-->
+<ol class="bibliography"></ol>
+
+<h2 id="person-month-efforts-in-20152016">
+<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
+
+<p>The efforts of the participants so far are as follows:</p>
+
+<table class="person-months-table table table-bordered table-hover table-sm">
+  <tbody>
+    <tr>
+      <td>
+<span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
+      <td>0.1 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)</td>
+      <td>0.1 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
+      <td>2.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Nicholas</span> <span class="person sur-name">Vandenbergen</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+<p>None</p>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ChienEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseChienEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseChienEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseChienEtAl2015Abstract" aria-expanded="false" aria-controls="collapseChienEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ChienEtAl2015">Chien, A., P. Balaji, P. Beckman, N. Dun, A. Fang, H. Fujita, K. Iskra, et al. 2015. “Versioned Distributed Arrays For Resilience in Scientific Applications: Global View
+    Resilience.” <i>Procedia Computer Science</i> 51: 29–38. doi:10.1016/j.procs.2015.05.187.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseChienEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{ChienEtAl2015,
+  author = {Chien, A. and Balaji, P. and Beckman, P. and Dun, N. and Fang, A. and Fujita, H. and Iskra, K. and Rubenstein, Z. and Zheng, Z. and Schreiber, R. and Hammond, J. and Dinan, J. and Laguna, I. and Richards, D. and Dubey, A. and van Straalen, B. and Hoemmen, M. and Heroux, M. and Teranishi, K. and Siegel, A.},
+  doi = {10.1016/j.procs.2015.05.187},
+  journal = {Procedia Computer Science},
+  note = {International Conference On Computational Science,
+      {ICCS} 2015 Computational Science at the Gates of Nature},
+  pages = {29 - 38},
+  title = {Versioned Distributed Arrays for Resilience in Scientific Applications: Global View
+      Resilience},
+  volume = {51},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          SayedEtAl2013
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSayedEtAl2013Bibtex" aria-expanded="false" aria-controls="collapseSayedEtAl2013Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseSayedEtAl2013Abstract" aria-expanded="false" aria-controls="collapseSayedEtAl2013Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="SayedEtAl2013">Sayed, Salem, Stephan Graf, Michael Hennecke, Dirk Pleiter, Georg Schwarz, Heiko Schick, and Michael Stephan. 2013. “Supercomputing: 28th International Supercomputing Conference, ISC 2013, Leipzig, Germany,
+    June 16-20, 2013. Proceedings.” In , edited by Julian Martin Kunkel, Thomas Ludwig, and Hans Werner Meuer, 435–46. Berlin, Heidelberg: Springer Berlin Heidelberg. doi:10.1007/978-3-642-38750-0_33.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseSayedEtAl2013Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inbook{SayedEtAl2013,
+  address = {Berlin, Heidelberg},
+  author = {Sayed, Salem and Graf, Stephan and Hennecke, Michael and Pleiter, Dirk and Schwarz, Georg and Schick, Heiko and Stephan, Michael},
+  chapter = {Using GPFS to Manage NVRAM-Based Storage Cache},
+  doi = {10.1007/978-3-642-38750-0_33},
+  editor = {Kunkel, Julian Martin and Ludwig, Thomas and Meuer, Hans Werner},
+  pages = {435--446},
+  publisher = {Springer Berlin Heidelberg},
+  title = {Supercomputing: 28th International Supercomputing Conference, ISC 2013, Leipzig, Germany,
+      June 16-20, 2013. Proceedings},
+  year = {2013}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>
