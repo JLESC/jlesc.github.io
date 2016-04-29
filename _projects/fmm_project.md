@@ -36,7 +36,7 @@ Besides the structural changes, a latency-avoiding communication scheme was impl
 Together with the automatic testing framework, scaling bottlenecks of the method can be investigated much easier.
 
 ## Visits and meetings
-David Haensel will join the group of Pavan Balaji in Mai/June 2016 to develop a tasking scheme for the FMM based on Argobots. This visit is vital to the success of this project, since we require a very flexible andfine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).
+David Haensel will join the group of Pavan Balaji in Mai/June 2016 to develop a tasking scheme for FMSolvr on Argobots. This visit is vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).
 
 ## Impact and publications
 none yet.
