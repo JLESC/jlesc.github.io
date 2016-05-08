@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Checkpoint/Restart of/from lossy state</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/Lossy_checkpoint_restart/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Checkpoint/Restart of/from lossy state</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Resilience</span>
+          </span>
+        
+      </div>
+    </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Luke</span> <span class="person sur-name">Olson</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Jon</span> <span class="person sur-name">Calhoun</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Marc</span> <span class="person sur-name">Snir</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-starting">starting</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+
+<p>State compression is an important technique for reducing the problem posed by the bandwidth plateauing of the HDD-based storage systems.</p>
+
+<p>The state saved by HPC executions in checkpoints is composed mostly of floating-point data (single or double precision). Two types of compressors have been developed for floating-point data. Lossless compressors keep all the initial information and try to reduce the size occupied by this information. Sophisticated lossless compression techniques may use entropy analysis, duplicate string elimination, or bit reduction, for example <a href="#LindstromETAl2006">(Lindstrom and Isenburg 2006)</a>, <a href="#IbteshamETAl2012">(Ibtesham et al. 2012)</a>. 
+The compression factor generally observed with lossless compression is 1.2 to 4 (the compressed data set is 1.2 to 4 times smaller than the original). Lossy compressors deliberately lose information in order to reduce the size of the initial data set further. Lossy compressors reach very variable compression ratios depending on the application. This could be from 3 to 4 for difficult-to-compress data sets (lossless compressors would achieve a compression ratio of 1.5 to 2 on those data sets) to x100 for easier-to-compress data sets. Lossy compressors can be error bounded or not. Lossy compressors that are not error bounded simply compress the data set as much as they can, with no guarantee on the error on each decompressed data. Their applicability is limited in HPC because users have expectations in terms of accuracy. Error bounded lossy compressors allow users to set a maximum (or relative) compression/decompression error. The maximum error is the maximum of the difference between any initial data in the data set and its decompressed version (from its lossy compressed version). The user has a guarantee of a maximum loss of information quantified by the maximum compression/decompression errors. Users will set the maximum error to match their accuracy expectations. Note that all lossy compressors keep all data points of the initial data set (none of the lossy compressors drop data points).</p>
+
+<p>Few studies have been done on checkpointing and restart from lossy compressed states <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a>. 
+These studies are limited in scope by studying only one application and one type of lossy compressor: NICAM with a lossy compressor based on wavelet and quantization [Sas15] and ChaNGa with the fpzip lossy compressor <a href="#NiETAl2014">(Ni et al. 2014)</a>. 
+They already reveal two interesting points/First, checkpoints are composed of different variables that present different sensitivity to lossy compression. The correctness of the execution after restart depends on how each variable is compressed. In the cosmology simulation (ChaNGa), lossy compression of particle positions lead the execution to hang for a high compression level, while this does not happen when compressing other variable at the same level. Second, for the study of NICAM, the authors consider that an error of 1 percent on the final result is acceptable when restarting from lossy checkpoints. The rationale is that this magnitude of error is similar to those of sensor errors and model errors, while the compression factor exceeds 5.</p>
+
+<p>In contrary to previous research that concentrated on few applications, we focus on simple problems used by many applications and try to understand how they behave. We are exploring diffusion and advection problems. The diffusion problem simulates the heat diffusion on a one-dimensional rod. The advection problem simulates a sine wave advecting to the right with periodic boundaries.</p>
+
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+
+<p>From our observations of restart from lossy checkpoints in dynamic simulations, we have observed that diffusion and advection problems are reacting differently. We are currently characterizing and formalizing this difference. We suspect that lossyness may be increased as the execution progresses: restarting from a lossy checkpoint near the beginning of the execution seems to affect much more the end results compared with restarting from a lossy checkpoint near the end of the execution. Moreover, we note that in a given variable field, some regions of the field are more chaotic than others. Some applications may not tolerate lossy compression on the entire field. But we suspect that they may tolerate lossy compression in the nonchaotic regions of the variable field.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+
+<p>Franck Cappello visits UIUC almost every week. We have a 30 minutes-1hour meeting almost each time.</p>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+
+<ol class="bibliography"></ol>
+
+<h2 id="person-month-efforts-in-20152016">
+<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
+
+<table class="person-months-table table table-bordered table-hover table-sm">
+  <tbody>
+    <tr>
+      <td>
+<span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
+      <td>1 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Luke</span> <span class="person sur-name">Olson</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)</td>
+      <td>1 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Jon</span> <span class="person sur-name">Calhoun</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)</td>
+      <td>3 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>Jon Calhoun will spend the summer at ANL with Franck Cappello for an internship.
+A paper is in preparation for a submission in a conference with a deadline in the 1/2 half of 2016.</p>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          SasakiETAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSasakiETAl2015Bibtex" aria-expanded="false" aria-controls="collapseSasakiETAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseSasakiETAl2015Abstract" aria-expanded="false" aria-controls="collapseSasakiETAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="SasakiETAl2015">Sasaki, N., K. Sato, T. Endo, and S. Matsuoka. 2015. “Exploration Of Lossy Compression for Application-Level Checkpoint/Restart.” In <i>Parallel And Distributed Processing Symposium (IPDPS), 2015 IEEE International</i>, 914–22.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseSasakiETAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{SasakiETAl2015,
+  author = {Sasaki, N. and Sato, K. and Endo, T. and Matsuoka, S.},
+  booktitle = {Parallel and Distributed Processing Symposium (IPDPS), 2015 IEEE International},
+  title = {Exploration of Lossy Compression for Application-Level Checkpoint/Restart},
+  year = {2015},
+  pages = {914-922},
+  month = may
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          NiETAl2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseNiETAl2014Bibtex" aria-expanded="false" aria-controls="collapseNiETAl2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseNiETAl2014Abstract" aria-expanded="false" aria-controls="collapseNiETAl2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="NiETAl2014">Ni, Xiang, Tanzima Islam, Kathryn Mohror, Adam Moody, and Laxmikant V Kale. 2014. “Lossy Compression for Checkpointing: Fallible or Feasible?” In <i>International Conference For High Performance Computing, Networking, Storage and Analysis (SC)</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseNiETAl2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{NiETAl2014,
+  title = {Lossy compression for checkpointing: Fallible or feasible?},
+  author = {Ni, Xiang and Islam, Tanzima and Mohror, Kathryn and Moody, Adam and Kale, Laxmikant V},
+  booktitle = {International Conference for High Performance Computing, Networking, Storage and Analysis (SC)},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          IbteshamETAl2012
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseIbteshamETAl2012Bibtex" aria-expanded="false" aria-controls="collapseIbteshamETAl2012Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseIbteshamETAl2012Abstract" aria-expanded="false" aria-controls="collapseIbteshamETAl2012Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="IbteshamETAl2012">Ibtesham, Dewan, Dorian Arnold, Kurt B. Ferreira, and Patrick G. Bridges. 2012. “On The Viability of Checkpoint Compression for Extreme Scale Fault Tolerance.” In <i>Proceedings Of the 2011 International Conference on Parallel Processing - Volume 2</i>, 302–11. Euro-Par’11. Berlin, Heidelberg: Springer-Verlag. doi:10.1007/978-3-642-29740-3_34.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseIbteshamETAl2012Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{IbteshamETAl2012,
+  author = {Ibtesham, Dewan and Arnold, Dorian and Ferreira, Kurt B. and Bridges, Patrick G.},
+  title = {On the Viability of Checkpoint Compression for Extreme Scale Fault Tolerance},
+  booktitle = {Proceedings of the 2011 International Conference on Parallel Processing - Volume 2},
+  series = {Euro-Par'11},
+  year = {2012},
+  isbn = {978-3-642-29739-7},
+  location = {Bordeaux, France},
+  pages = {302--311},
+  numpages = {10},
+  url = {http://dx.doi.org/10.1007/978-3-642-29740-3_34},
+  doi = {10.1007/978-3-642-29740-3_34},
+  acmid = {2238474},
+  publisher = {Springer-Verlag},
+  address = {Berlin, Heidelberg},
+  keywords = {checkpoint data compression, checkpoint/restart, extreme scale fault-tolerance}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          LindstromETAl2006
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLindstromETAl2006Bibtex" aria-expanded="false" aria-controls="collapseLindstromETAl2006Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLindstromETAl2006Abstract" aria-expanded="false" aria-controls="collapseLindstromETAl2006Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="LindstromETAl2006">Lindstrom, P., and M. Isenburg. 2006. “Fast And Efficient Compression of Floating-Point Data.” <i>IEEE Transactions On Visualization and Computer Graphics</i> 12 (5): 1245–50.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLindstromETAl2006Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{LindstromETAl2006,
+  author = {Lindstrom, P. and Isenburg, M.},
+  journal = {IEEE Transactions on Visualization and Computer Graphics},
+  title = {Fast and Efficient Compression of Floating-Point Data},
+  year = {2006},
+  volume = {12},
+  number = {5},
+  pages = {1245-1250},
+  month = sep
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>

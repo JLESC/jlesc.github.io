@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Dynamic load balancing with Pampa in Alya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/pampa_project/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Dynamic load balancing with Pampa in Alya</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Numerical Methods</span>
+          </span>
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Programming Languages and Runtimes</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">dynamic load balance with MPI</span>
+          
+            <span class="clearfix">parallel mesh partitioning</span>
+          
+            <span class="clearfix">Alya</span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Vishal</span> <span class="person sur-name">Mehta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Emmanuel</span> <span class="person sur-name">Jeannot</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Cédric</span> <span class="person sur-name">Lachat</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-starting">starting</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+<p>The objective of this project is to use a runtime repartitioning library PAMPA <a href="#LachatEtAl2014">(Lachat, Dobrzynski, and Pellegrini 2014)</a>, <a href="#MbengoueEtAl2013">(Mbengoue et al. 2013)</a> to dynamically load balance a high performance computational mechanics code Alya <a href="#HouzeauxEtAl2009">(Houzeaux et al. 2009)</a>, <a href="#HouzeauxEtAl2011">(Houzeaux, Aubry, and Vázquez 2011)</a>, <a href="#VazquezEtAl2015">(Vázquez et al. 2015)</a>. 
+The main application is the particle transport in a fluid.</p>
+
+<p>In Alya, the transport of particles in a fluid is achieved using two parallel instances of the code. 
+One instance is in charge of solving the flow equation and the other one of transporting the particles. 
+The velocity field is sent from the first to the second one at the end of each time step through MPI. 
+If a classical mesh partitioning based on the balancing of the number of elements is performed, the particles are likely to be located in very few subdomains, which obviously leads to a very poor load balance. 
+In this project we aim at implementing the Pampa library in Alya in order to redistribute the elements among the MPI processes
+in order to dynamically balance the computation of particle transport.</p>
+
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<p>The work have just started. 
+The data structure required by Pampa was coded in Alya and Pampa was interfaced with Alya.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+
+<ul>
+  <li>
+<span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) and <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 14-15 Oct. 2016.</li>
+  <li>
+<span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) and <span class="person given-name">Vishal</span> <span class="person sur-name">Mehta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 24-26 Feb. 2016.</li>
+  <li>Visit of <span class="person given-name">Cédric</span> <span class="person sur-name">Lachat</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) and <span class="person given-name">Emmanuel</span> <span class="person sur-name">Jeannot</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) at BSC forecast for spring.</li>
+</ul>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<p>The first objective of this project is to dynamically load balance the particle transport.
+To achieve this, many efforts are required to reorganize the data structure in Alya to fit with Pampa’s. 
+But among other features, Pampa allows parallel mesh adaptation and redistribution. 
+Therefore all these efforts will enable to further use Pampa to perform mesh adaptation in Alya:</p>
+
+<ul>
+  <li>Dynamic load balance for other physical modules</li>
+  <li>Mesh adaptivity</li>
+</ul>
+
+<h2 id="person-month-efforts-in-20152016">
+<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
+
+<p>The efforts of the participants so far are as follows:</p>
+
+<table class="person-months-table table table-bordered table-hover table-sm">
+  <tbody>
+    <tr>
+      <td>
+<span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>3.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>2.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Vishal</span> <span class="person sur-name">Mehta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>3.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Emmanuel</span> <span class="person sur-name">Jeannot</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<ul>
+  <li>Implementation</li>
+  <li>Continuous validation</li>
+  <li>Application to particle transport</li>
+  <li>Scalability tests and performance analysis</li>
+</ul>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          VazquezEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVazquezEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseVazquezEtAl2015Abstract" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="VazquezEtAl2015">Vázquez, M., G. Houzeaux, S. Koric, A. Artigues, J. Aguado-Sierra, Arı́s R., D. Mira, et al. 2015. “Alya: Multiphysics Engineering Simulation Towards Exascale.” <i>J. Comput. Sci.</i></span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseVazquezEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{VazquezEtAl2015,
+  author = {V\'azquez, M. and Houzeaux, G. and Koric, S. and Artigues, A. and Aguado-Sierra, J. and Ar\'{\i}s, R. and Mira, D. and Calmet, H. and Cucchietti, F. and Owen, H. and Taha, A. and Burness, E.D. and Cela, J.M. and Valero, M.},
+  journal = {J. Comput. Sci.},
+  keywords = {Alya},
+  title = {Alya: Multiphysics Engineering Simulation Towards Exascale},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          LachatEtAl2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLachatEtAl2014Bibtex" aria-expanded="false" aria-controls="collapseLachatEtAl2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLachatEtAl2014Abstract" aria-expanded="false" aria-controls="collapseLachatEtAl2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="LachatEtAl2014">Lachat, Cédric, Cécile Dobrzynski, and François Pellegrini. 2014. “Parallel Mesh Adaptation Using Parallel Graph Partitioning.” In <i>5th European Conference On Computational Mechanics (ECCM V)</i>, 3:2612–23. CIMNE-International Center for Numerical Methods in Engineering.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLachatEtAl2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{LachatEtAl2014,
+  title = {Parallel mesh adaptation using parallel graph partitioning},
+  author = {Lachat, C{\'e}dric and Dobrzynski, C{\'e}cile and Pellegrini, Fran{\c{c}}ois},
+  booktitle = {5th European Conference on Computational Mechanics (ECCM V)},
+  volume = {3},
+  pages = {2612--2623},
+  year = {2014},
+  organization = {CIMNE-International Center for Numerical Methods in Engineering}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          MbengoueEtAl2013
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMbengoueEtAl2013Bibtex" aria-expanded="false" aria-controls="collapseMbengoueEtAl2013Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseMbengoueEtAl2013Abstract" aria-expanded="false" aria-controls="collapseMbengoueEtAl2013Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="MbengoueEtAl2013">Mbengoue, Dragan Amenga, Damien Genet, Cedric Lachat, Emeric Martin, Maxime Mogé, Vincent Perrier, Florent Renac, François Rue, and Mario Ricchiuto. 2013. “Comparison Of Algorithm in Aerosol and Aghora for Compressible Flows.”</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseMbengoueEtAl2013Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{MbengoueEtAl2013,
+  title = {Comparison of algorithm in Aerosol and Aghora for compressible flows},
+  author = {Mbengoue, Dragan Amenga and Genet, Damien and Lachat, Cedric and Martin, Emeric and Mog{\'e}, Maxime and Perrier, Vincent and Renac, Florent and Rue, Fran{\c{c}}ois and Ricchiuto, Mario},
+  year = {2013}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HouzeauxEtAl2011
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2011Bibtex" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2011Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHouzeauxEtAl2011Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2011Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="HouzeauxEtAl2011">Houzeaux, G, R Aubry, and M Vázquez. 2011. “Extension Of Fractional Step Techniques for Incompressible Flows: The Preconditioned Orthomin(1) for the Pressure Schur Complement.” <i>Cf</i> 44: 297–313.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHouzeauxEtAl2011Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{HouzeauxEtAl2011,
+  author = {Houzeaux, G and Aubry, R and V\'azquez, M},
+  journal = cf,
+  keywords = {Orthomin(1) iteration},
+  pages = {297-313},
+  title = {Extension of fractional step techniques for incompressible flows: The preconditioned Orthomin(1) for the pressure Schur complement},
+  volume = {44},
+  year = {2011}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HouzeauxEtAl2009
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2009Bibtex" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2009Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHouzeauxEtAl2009Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2009Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="HouzeauxEtAl2009">Houzeaux, G, M Vázquez, R Aubry, and JM Cela. 2009. “A Massively Parallel Fractional Step Solver For Incompressible Flows.” <i>Jcp</i> 228 (17): 6316–32.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHouzeauxEtAl2009Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{HouzeauxEtAl2009,
+  author = {Houzeaux, G and V\'azquez, M and Aubry, R and Cela, JM},
+  journal = jcp,
+  number = {17},
+  pages = {6316-6332},
+  title = {A Massively Parallel Fractional Step Solver for Incompressible Flows},
+  volume = {228},
+  year = {2009}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>
