@@ -31,9 +31,10 @@ their performance.
 Our research explores dynamic load balancing, low power manycore platforms and DVFS techniques in
 order to reduce power consumption.
 
-## Results for 2014/2015
+## Results for 2015/2016
 
-#### Load Balancing  
+### Load Balancing
+
 In this work we propose the improvement of the performance and scalability of parallel seismic
 wave models through dynamic load balancing.
 These models suffer from load imbalance for two reasons.
@@ -52,7 +53,8 @@ An extended version will be published in the International Journal of High Perfo
 {% cite KellerTesserEtAl2014a --file jlesc.bib %}
 Laercio Pilla described most of the load balancers in his PhD {% cite Pilla2014 --file external/eandb_project.bib %}.
 
-#### Power consumption  
+### Power consumption
+
 Power consumption is one of the main challenges to achieve Exascale performance.
 Current research trends aim at overcoming power consumption constraints using low-power processors.
 Although new processors feature sensors that enable precise power measurements, they provide
@@ -81,7 +83,8 @@ it can indeed be used as an energy efficient alternative to current HPC platform
 than a GPU and a general-purpose processor, respectively.  
 This work was presented at the SBAC PAD conference in Paris {% cite CastroEtAl2014 --file external/eandb_project.bib %}.
 
-#### Load Balancing and Power Saving  
+### Load Balancing and Power Saving
+
 In this work, we focus on reducing the energy consumption of imbalanced applications through a
 combination of load balancing and Dynamic Voltage and Frequency Scaling (DVFS).
 Our strategy employs an Energy Daemon Tool to gather power information and a load balancing module
@@ -107,7 +110,7 @@ This work was presented at the HiPC conference {% cite PadoinEtAl2014 --file ext
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2014/2015
+## Person-Month efforts in 2015/2016
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
 | {% person keller_tesser_r %}    | 6 PM |

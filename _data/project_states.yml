@@ -49,6 +49,9 @@ starting:
 running:
   title: running
 
+suspended:
+  title: suspended
+
 closing:
   title: closing
 

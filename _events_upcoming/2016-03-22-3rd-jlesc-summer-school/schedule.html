@@ -48,10 +48,41 @@ page_type: event_subpage
              aria-expanded="false" aria-controls="abstract-d0-0845-cappello">
             <i class="fa fa-fw fa-paragraph"></i>
           </a>
-          <strong>{% talk_label %} Trustworthy Computing</strong><br />
+          <strong>{% talk_label %} Improving the Trust in Results of Numerical Simulations and Scientific Data Analytics</strong><br />
           <small>{% person cappello_f %}</small>
           <div class="abstract collapse" id="abstract-d0-0845-cappello">
-            Soon ...
+            Since the introduction of fault tolerance in HPC, fault tolerance
+            papers have been dealing mainly with process crashes, network
+            dysfunctions, and radiation induced bit flips. This orientation
+            comes directly from the generic fault tolerance problems and
+            solutions seen in distributed systems. Thus, the main objective
+            has been to protect the execution - and that mostly in an
+            application-agnostic way.
+
+            Many real-life examples, however, demonstrate that application
+            results can also be disrupted by hardware and software bugs.
+            The risk of cyber attack is also taken seriously. Unfortunately,
+            fault tolerance and resilience techniques currently used in HPC
+            have not been designed for these types of disruptions; and in
+            practice most fail to provide useful solutions.
+
+            What matter is not only to protect HPC executions; it is also to
+            protect the correctness of the results such executions produce.
+
+            The scientific problem behind this statement is the trustworthiness
+            of HPC application results. And to improve the trustworthiness, we
+            must start from the results of the execution, as opposed to how the
+            execution is implemented with processes and communications. The main
+            objective is to avoid influential data corruptions related to the
+            user-expected accuracy.
+
+            This talk will review the notion of trust, the different types of
+            disruptions leading to corruption of results, the ways that users
+            build trust in application results, and the limitations of current
+            techniques (fault tolerance/resilience, validation and verification,
+            uncertainty quantification). We will present examples of results
+            corruptions, some leading to catastrophic consequences, as well as
+            an approach to improve result trustworthiness.
           </div>
         </dd>
 
@@ -67,10 +98,30 @@ page_type: event_subpage
              aria-expanded="false" aria-controls="abstract-d0-1000-kramer">
             <i class="fa fa-fw fa-paragraph"></i>
           </a>
-          <strong>{% talk_label %} Error Sources and Strategies for Resilience</strong><br />
+          <strong>{% talk_label %} Expected and Unexpected Challenges to Extreme Scale Reliability</strong><br />
           <small>{% person kramer_b %}</small>
           <div class="abstract collapse" id="abstract-d0-1000-kramer">
-            Soon ...
+            Extreme scale systems of today and tomorrow have on the order of a million
+            to ten million processing elements, tens of millions of memory components
+            and kilometers of interconnection cables. But these extreme scale systems,
+            such as Blue Waters, are executing potentially billions of lines of
+            software at any given instant in time.
+            
+            Studies of reliability traditionally focus on the many hardware
+            components, their failure rates and the steps an application might take to
+            mitigate such failures. While hardware failures are important to address,
+            it is increasingly obvious many, some argue most, of system failures are
+            software based.  Equally concerning is that recovery time (MTTR) from
+            software errors takes longer and means the probability of double and
+            triple faults having to be addressed simultaneously makes recovery and
+            resiliency much more challenging.
+            
+            This talk will exam recent trends in reliability and performance analysis
+            using most the data collected over more than two years of Blue Waters
+            service.   It will draw insights as to the failure causes and possible
+            solutions to make systems and applications more resilient. It will also
+            offer comments on how to use today's insights into designing and
+            implementing better systems and applications in the future.
           </div>
         </dd>
 
@@ -81,10 +132,21 @@ page_type: event_subpage
              aria-expanded="false" aria-controls="abstract-d0-1100-ropars">
             <i class="fa fa-fw fa-paragraph"></i>
           </a>
-          <strong>{% talk_label %} Checkpointing Protocols</strong><br />
+          <strong>{% talk_label %} Checkpointing HPC applications</strong><br />
           <small>{% person ropars_t %}</small>
           <div class="abstract collapse" id="abstract-d0-1100-ropars">
-            Soon ...
+            The goal of this talk is to give an overview of checkpointing
+            techniques for HPC applications. It will present the main problems
+            that need to be solved to ensure the successful execution of
+            distributed applications despite crash failures. We will start by
+            reviewing the basics of rollback-recovery techniques for
+            message-passing applications (happened-before relation, consistent
+            global state, etc.). We will then describe the main families of
+            rollback-recovery protocols (checkpointing and message logging) and
+            discuss their applicability in the HPC context.  Finally we will
+            present the most recent advances (multi-level checkpointing,
+            hierarchical protocols, etc.) in this area to cope with challenges
+            raised by very large scale HPC systems.
           </div>
         </dd>
 
@@ -100,10 +162,17 @@ page_type: event_subpage
              aria-expanded="false" aria-controls="abstract-d0-1330-benoit">
             <i class="fa fa-fw fa-paragraph"></i>
           </a>
-          <strong>{% talk_label %} Probabilistic Models: Young/Daly, prediction, replication, detectors, in-memory, multi-level</strong><br />
+          <strong>{% talk_label %} Optimal checkpointing periods with fail-stop and silent errors</strong><br />
           <small>{% person benoit_a %}</small>
           <div class="abstract collapse" id="abstract-d0-1330-benoit">
-            Soon ...
+            In this talk, we introduce probabilistic models to determine
+            the optimal checkpointing periods (Young approximation and Daly’s
+            formula) when the platform is confronted to fail-stop errors, both in
+            the coordinated protocol and in the hierarchical one. Also, we extend
+            these classical results to in-memory checkpointing, and discuss the
+            impact of prediction and replication. Finally, we tackle silent errors
+            by proposing models to deal with both fail-stop and silent errors, and
+            we derive the optimal checkpointing periods in realistic frameworks. 
           </div>
         </dd>
 
@@ -122,7 +191,8 @@ page_type: event_subpage
           <strong>{% handson_label %} Mathematical Exercises on Daly and Extensions</strong><br />
           <small>{% person cavelan_a %}, {% person sun_h %}</small>
           <div class="abstract collapse" id="abstract-d0-1445-cavelan">
-            Soon ...
+            In this talk, we will demonstrate the mathematical derivations of the classic Young/Daly formula on the optimal checkpointing interval for fail-stop errors.
+            Also, we will introduce verification mechanisms (partial or guaranteed) to cope with silent errors, as well as multi-level checkpointing protocols for dealing with both error sources. Finally, we will show how to extend the results when also condisering the optimization of energy-consumption.
           </div>
         </dd>
 
@@ -146,14 +216,21 @@ page_type: event_subpage
         <dt>08:45</dt>
         <dd>
           <a class="abstract-btn" role="button"
-             href="#abstract-d1-0845-unsal" data-toggle="collapse"
-             aria-expanded="false" aria-controls="abstract-d1-0845-unsal">
+             href="#abstract-d1-0845-casas" data-toggle="collapse"
+             aria-expanded="false" aria-controls="abstract-d1-0845-casas">
             <i class="fa fa-fw fa-paragraph"></i>
           </a>
           <strong>{% talk_label %} Resilience for Task-Graph Scheduling: OMPSS</strong><br />
-          <small>{% person unsal_o %}</small>
-          <div class="abstract collapse" id="abstract-d1-0845-unsal">
-            Soon ...
+          <small>{% person casas_m %}</small>
+          <div class="abstract collapse" id="abstract-d1-0845-casas">
+            In this talk we will describe in detail the opportunities that
+            task-based programming models offer in terms of resilience. We will show
+            how tasking enables asynchronous checkpoint/restart mechanisms,
+            selective replication or cheap and easy to derive forward recoveries.
+            Also, we will describe how resilience techniques exploiting the task
+            parallel concept, which are typically deployed at the shared memory
+            level, can be combined with fault tolerant approaches for MPI codes to
+            reduce their overheads and increase their effectiveness.
           </div>
         </dd>
 
@@ -169,10 +246,13 @@ page_type: event_subpage
              aria-expanded="false" aria-controls="abstract-d1-1100-vivien">
             <i class="fa fa-fw fa-paragraph"></i>
           </a>
-          <strong>{% talk_label %} ABFT</strong><br />
+          <strong>{% talk_label %} ABFT techniques</strong><br />
           <small>{% person vivien_f %}</small>
           <div class="abstract collapse" id="abstract-d1-1000-vivien">
-            Soon ...
+            This talk will describe ABFT (Algorithm-based Fault-Tolerance) techniques.
+            ABFT is a forward-recovery method: the application can continue its progress without rollback after a failure, owing to redundant information computed and stored during execution. 
+            ABFT essentially applies to dense and sparse linear algebra kernels.
+            We will give several examples and applications.
           </div>
         </dd>
 
@@ -186,7 +266,7 @@ page_type: event_subpage
           <strong>{% talk_label %} Robustness of Interconnection Networks</strong><br />
           <small>{% person hori_a %}</small>
           <div class="abstract collapse" id="abstract-d1-1100-hori">
-            Soon ...
+            Fundamental characteristics of interconnect networks used and proposed for high performance computing will be introduced and some insights from the viewpoint of failure and recovery will be presented.
           </div>
         </dd>
 
@@ -202,10 +282,25 @@ page_type: event_subpage
              aria-expanded="false" aria-controls="abstract-d1-1330-gomez">
             <i class="fa fa-fw fa-paragraph"></i>
           </a>
-          <strong>{% handson_label %} FTI</strong><br />
+          <strong>{% handson_label %} Efficient Multilevel Checkpointing with FTI for Large Scale Systems</strong><br />
           <small>{% person gomez_l %}</small>
           <div class="abstract collapse" id="abstract-d1-1330-gomez">
-            Soon ...
+            Large scale supercomputers experience several failures per
+            day. Fault tolerance and in particular, scalable multilevel
+            checkpointing, are critical for the efficiency of high performance
+            system. In this talk, we focus on how to guarantee high reliability for
+            scientific applications running in large infrastructures. In particular,
+            we cover all the technical content necessary to implement scalable
+            multilevel checkpointing in large supercomputers. This course will
+            present the internals of the FTI library, to demonstrate how multilevel
+            checkpointing is implemented today. This includes code analysis and
+            execution traces to help the attendees grasp the fundamental parts of
+            this technique. In addition, we will have hands-on examples that the
+            attendees can analyse in their own laptops, so that they learn how to
+            use FTI in practice, and lately transfer that knowledge to their
+            production runs.  By the end of the talk, the attendees will be able to
+            implement multilevel checkpointing in their production codes running in
+            large scale platforms.
           </div>
         </dd>
 
@@ -221,10 +316,16 @@ page_type: event_subpage
              aria-expanded="false" aria-controls="abstract-d1-1515-calhoun">
             <i class="fa fa-fw fa-paragraph"></i>
           </a>
-          <strong>{% handson_label %} On Error Injection</strong><br />
+          <strong>{% handson_label %} Overview of Fault Injection Techniques for HPC</strong><br />
           <small>{% person calhoun_j %}</small>
           <div class="abstract collapse" id="abstract-d1-1515-calhoun">
-            Soon ...
+            In this session, we will overview several methods for HPC fault
+            injection covering both fail-stop and fail-silent faults. In particular,
+            we will have a hand on with the fault injector FlipIt. FlipIt is a
+            compiler based silent error injector that allows a high degree of user
+            customization when injecting faults. In addition, we demonstrate
+            FlipIt’s analysis tool to greatly simplify visualization of fault
+            injection results.
           </div>
         </dd>
 
@@ -235,7 +336,7 @@ page_type: event_subpage
 
         <dt>17:00</dt>
         <dd>
-          <strong>End of Day 1</strong>
+          <strong>End of Day 2</strong>
         </dd>
       </dl>
     </div>

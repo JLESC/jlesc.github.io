@@ -53,6 +53,16 @@
   color: $brand-success;
 }
 
+.project-status-suspended-bg {
+  background-color: lighten($gray, 25%);
+  .project-status-suspended {
+    color: inherit;
+  }
+}
+.project-status-suspended {
+  color: $gray;
+}
+
 .project-status-closing-bg {
   background-color: lighten($brand-warning, 15%);
   .project-status-closing {

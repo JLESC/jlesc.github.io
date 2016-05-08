@@ -47,7 +47,7 @@ none yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2014/2015
+## Person-Month efforts in 2015/2016
 Since December 2014:
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
