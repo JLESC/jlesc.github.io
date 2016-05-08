@@ -1,18 +1,111 @@
----
-layout: landingpage
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Joint Laboratory on Extreme Scale Computing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/">
 
-<div class="row">
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <img src="/assets/jlesc_logo-3bb85e5bb16d042f2147626ac6db56f845e3654fb66fe81f4376283484a2c35c.jpg" class="img-fluid center-block" alt="Joint Laboratory on Extreme Scale Computing">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
   <div class="col-lg-12 col-xl-4">
     <h3>JLESC</h3>
     <p>
       The purpose of the <strong>Joint Laboratory for Extreme Scale Computing (JLESC)</strong> is to
       be an international, virtual organization whose goal is to enhance the ability of member
       organizations and investigators to make the bridge between Petascale and Extreme computing.
-      The founding partners of the JLESC are {% institute_short inria %} and
-      {% institute_short uiuc %}.
-      Further members are {% institute_short anl %}, {% institute_short bsc %},
-      {% institute_short jsc %} and {% institute_short riken %}-AICS.
+      The founding partners of the JLESC are <abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr> and
+      <abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>.
+      Further members are <abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>, <abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>,
+      <abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr> and <abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>-AICS.
     </p>
     <p>
       JLESC involves computer scientists, engineers and scientists from other disciplines as well as
@@ -25,29 +118,30 @@ layout: landingpage
   <div class="col-lg-6 col-xl-4">
     <div id="recent-news" class="card">
       <div class="card-header">News</div>
-      {% assign num_posts = site.posts | size %}
-      {% if num_posts == 0 %}
-        <div class="card-block">
-          <p class="card-text">
-            Sadly, no news yet.
-          </p>
-        </div>
-      {% else %}
+      
+      
         <ul class="list-group list-group-flush">
-          {% for post in site.posts limit: 5 %}
+          
           <li class="list-group-item">
             <div class="row">
-              <label class="tag tag-default col-xs-12 col-sm-3 col-md-4">{{ post.date | date_to_string }}</label>
-              <a class="col-xs-12 col-sm-9 col-md-8" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | titlecase }}</a>
+              <label class="tag tag-default col-xs-12 col-sm-3 col-md-4">04 Apr 2016</label>
+              <a class="col-xs-12 col-sm-9 col-md-8" href="/news/2016/04/04/5th-workshop/">5th JLESC Workshop</a>
             </div>
           </li>
-          {% endfor %}
+          
+          <li class="list-group-item">
+            <div class="row">
+              <label class="tag tag-default col-xs-12 col-sm-3 col-md-4">22 Mar 2016</label>
+              <a class="col-xs-12 col-sm-9 col-md-8" href="/news/2016/03/22/3rd-summerschool/">3rd JLESC Summer School on Resilience</a>
+            </div>
+          </li>
+          
         </ul>
-      {% endif %}
+      
       <div class="card-footer card-footer-slim text-muted text-xs-center small">
-        <a class="col-xs-4" href="{{ site.baseurl }}/news/">All</a>
-        <a class="col-xs-4" href="{{ site.baseurl }}/news/archive/">Archive</a>
-        <a class="col-xs-4" href="{{ site.baseurl }}/feed.xml" title="subscribe via RSS">
+        <a class="col-xs-4" href="/news/">All</a>
+        <a class="col-xs-4" href="/news/archive/">Archive</a>
+        <a class="col-xs-4" href="/feed.xml" title="subscribe via RSS">
           <i class="fa fa-rss"></i>
           <span class="hidden-sm-down">RSS</span>
         </a>
@@ -58,34 +152,185 @@ layout: landingpage
   <div class="col-lg-6 col-xl-4">
     <div class="card">
       <div class="card-header">Upcoming Events</div>
-      {% assign num_events = site.events_upcoming | size %}
-      {% if num_events == 0 %}
-        <div class="card-block">
-          <p class="card-text">
-            No events planned.
-          </p>
-        </div>
-      {% else %}
+      
+      
         <ul id="next-events-index" class="list-group list-group-flush">
-          {% for event in site.events_upcoming limit: 3 %}
+          
             <li class="list-group-item">
               <div class="row">
                 <div class="col-xs-12">
-                  <label class="tag tag-event-{{ event.kind }} pull-right">{% event_kind {{ event.kind }} %}</label>
-                  <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title | titlecase }}</a>
+                  <label class="tag tag-event-outreach pull-right"><span class="event-kind">Outreach</span></label>
+                  <a href="/events/1st-dummy-outreach/">1st Dummy Outreach Event</a>
                 </div>
               </div>
               <div class="row small">
-                {% assign on_global_index = true %}
-                {% include event/meta.html %}
+                
+                
+
+
+  <div class="col-xs-6 col-sm-4"
+       title="Event's start date" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-play fa-fw"></i>
+    
+      <time datetime="2016-02-28T00:00:00+00:00">28 Feb 2016</time>
+    
+  </div>
+  <div class="col-xs-6 col-sm-4" title="Event's end date" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-stop fa-fw"></i>
+    
+      <time datetime="2016-03-01T00:00:00+00:00">01 Mar 2016</time>
+    
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    
+      <a href="https://google.com/maps/search/Milky+Way,+The+Galaxy" target="_blank"
+         title="Event's location: Milky Way, The Galaxy. Find on Google Maps!"
+         data-toggle="tooltip" data-placement="bottom">
+    
+    <i class="fa fa-map-marker fa-fw"></i>
+    
+      Milky Way, The Galaxy
+    
+    </a>
+  </div>
+
+
               </div>
             </li>
-          {% endfor %}
+          
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label class="tag tag-event-workshop pull-right"><span class="event-kind">Workshop</span></label>
+                  <a href="/events/5th-jlesc-workshop/">5th JLESC Workshop</a>
+                </div>
+              </div>
+              <div class="row small">
+                
+                
+
+
+  <div class="col-xs-6 col-sm-4"
+       title="Event's start date" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-play fa-fw"></i>
+    
+      <time datetime="2016-06-27T00:00:00+00:00">27 Jun 2016</time>
+    
+  </div>
+  <div class="col-xs-6 col-sm-4" title="Event's end date" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-stop fa-fw"></i>
+    
+      <time datetime="2016-06-29T00:00:00+00:00">29 Jun 2016</time>
+    
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    
+      <a href="https://google.com/maps/search/ENS,+Lyon,+France" target="_blank"
+         title="Event's location: ENS, Lyon, France. Find on Google Maps!"
+         data-toggle="tooltip" data-placement="bottom">
+    
+    <i class="fa fa-map-marker fa-fw"></i>
+    
+      ENS, Lyon, France
+    
+    </a>
+  </div>
+
+
+              </div>
+            </li>
+          
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label class="tag tag-event-summer_school pull-right"><span class="event-kind">Summer School</span></label>
+                  <a href="/events/3rd-jlesc-summer-school/">3rd JLESC Summer School</a>
+                </div>
+              </div>
+              <div class="row small">
+                
+                
+
+
+  <div class="col-xs-6 col-sm-4"
+       title="Event's start date" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-play fa-fw"></i>
+    
+      <time datetime="2016-06-30T00:00:00+00:00">30 Jun 2016</time>
+    
+  </div>
+  <div class="col-xs-6 col-sm-4" title="Event's end date" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-stop fa-fw"></i>
+    
+      <time datetime="2016-07-01T00:00:00+00:00">01 Jul 2016</time>
+    
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    
+      <a href="https://google.com/maps/search/ENS,+Lyon,+France" target="_blank"
+         title="Event's location: ENS, Lyon, France. Find on Google Maps!"
+         data-toggle="tooltip" data-placement="bottom">
+    
+    <i class="fa fa-map-marker fa-fw"></i>
+    
+      ENS, Lyon, France
+    
+    </a>
+  </div>
+
+
+              </div>
+            </li>
+          
         </ul>
-      {% endif %}
+      
       <div class="card-footer card-footer-slim text-muted text-xs-center small">
-        <a href="{{ site.baseurl }}/events/">All Events</a>
+        <a href="/events/">All Events</a>
       </div>
     </div>
   </div>
 </div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>

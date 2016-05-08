@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Energy Efficiency and Load Balancing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/eandb_project/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Energy Efficiency and Load Balancing</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Programming Languages and Runtimes</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix"></span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Raphael</span> <span class="person sur-name">Keller Tesser</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Edson Luiz</span> <span class="person sur-name">Padoin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Phillipe</span> <span class="person sur-name">Navaux</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Celsco</span> <span class="person sur-name">Mendes</span> (<abbr title="National Center for Supercomputing Applications" class="initialism" data-toggle="tooltip">NCSA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Sanjay</span> <span class="person sur-name">Kale</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Jean-Francois</span> <span class="person sur-name">Mehaut</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-running">running</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h3"><a href="#load-balancing">Load Balancing</a></li>
+<li class="toc-entry toc-h3"><a href="#power-consumption">Power consumption</a></li>
+<li class="toc-entry toc-h3"><a href="#load-balancing-and-power-saving">Load Balancing and Power Saving</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+
+<p>The power consumption of High Performance Computing (HPC) systems is an increasing concern
+as large-scale systems grow in size and, consequently, consume more energy.
+In response to this challenge, we propose new energy-aware load balancers that aim at reducing the
+energy consumption of parallel platforms running imbalanced scientific applications without degrading
+their performance.
+Our research explores dynamic load balancing, low power manycore platforms and DVFS techniques in
+order to reduce power consumption.</p>
+
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+
+<h3 id="load-balancing">
+<a id="load-balancing" class="anchor" href="#load-balancing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load Balancing</h3>
+
+<p>In this work we propose the improvement of the performance and scalability of parallel seismic
+wave models through dynamic load balancing.
+These models suffer from load imbalance for two reasons.
+First, they add a specific numerical condition at the borders of the domain, in order to
+absorb the outgoing energy.
+The decomposition of the domain into a grid of subdomains, which are distributed among tasks, creates
+load differences between the tasks that simulate the borders and those responsible for the central subdomains.
+Second, the propagation of waves in the simulated area changes the workload on the subdomains on different time-steps.
+Therefore causing dynamic load imbalance.
+In order to evaluate the use of dynamic load balancing, we ported a seismic wave simulator to Adaptive MPI,
+to benefit from its load balancing framework. Our experimental results
+show that dynamic load balancers can adapt to load variations during the application’s execution
+and improve performance by 36%.
+This work was presented in the PDP 2014 conference <a href="#KellerTesserEtAl2014">(Tesser et al. 2014)</a>.
+An extended version will be published in the International Journal of High Performance Computing and Applications
+<a href="#KellerTesserEtAl2014a">(Tesser et al. 2014)</a>
+Laercio Pilla described most of the load balancers in his PhD <a href="#Pilla2014">(Pilla 2014)</a>.</p>
+
+<h3 id="power-consumption">
+<a id="power-consumption" class="anchor" href="#power-consumption" aria-hidden="true"><span class="octicon octicon-link"></span></a>Power consumption</h3>
+
+<p>Power consumption is one of the main challenges to achieve Exascale performance.
+Current research trends aim at overcoming power consumption constraints using low-power processors.
+Although new processors feature sensors that enable precise power measurements, they provide
+different interfaces to collect data, making it difficult to correlate performance with energy consumption.
+To overcome this issue, we developed a platform-independent tool that collects power
+and energy data from homogeneous and heterogeneous systems.
+Using this tool, it provides a detailed comparison between a low-power processor (ARM big.LITTLE) and a high performance
+processor (Intel Sandy Bridge-EP) using all applications from the NAS parallel benchmarks and
+a real-world soil irrigation simulator.
+The results show that the average power demand of Intel Sandy Bridge-EP is within 12.6X to 152.4X higher than ARM big.
+LITTLE, whereas its average energy consumption is within 1.6X to 7.1x superior.
+Overall, ARM big.LITTLE presented a better performance/energy trade-off when it takes less than 9.2X the execution
+time of Intel Sandy Bridge-EP to solve the same problem.
+This work was published in <a href="#PadoinEtAl2015">(Padoin et al. 2015)</a> and <a href="#FrancesquiniEtAl2015">(Francesquini et al. 2015)</a>.<br>
+Large-scale simulation of seismic wave propagation is an active research topic.
+Its high demand for processing power makes it a good match for High Performance Computing (HPC).
+Although we have observed a steady increase on the processing capabilities of HPC platforms, their energy
+efficiency is still lacking behind.
+In this work, we analyze the use of a low-power manycore processor, the MPPA-256, for seismic wave propagation simulations.
+First we look at its peculiar characteristics such as limited amount of on-chip memory and describe the intricate solution we
+brought forth to deal with this processor’s idiosyn- crasies.
+Next, we compare the performance and energy efficiency of seismic wave propagation on MPPA-256 to other common- place
+platforms such as general-purpose processors and a GPU.
+Finally, we wrap up with the conclusion that, even if MPPA-256 presents an increased software development complexity,
+it can indeed be used as an energy efficient alternative to current HPC platforms, resulting in up to 71% and 81% less energy
+than a GPU and a general-purpose processor, respectively.<br>
+This work was presented at the SBAC PAD conference in Paris <a href="#CastroEtAl2014">(Castro et al. 2014)</a>.</p>
+
+<h3 id="load-balancing-and-power-saving">
+<a id="load-balancing-and-power-saving" class="anchor" href="#load-balancing-and-power-saving" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load Balancing and Power Saving</h3>
+
+<p>In this work, we focus on reducing the energy consumption of imbalanced applications through a
+combination of load balancing and Dynamic Voltage and Frequency Scaling (DVFS).
+Our strategy employs an Energy Daemon Tool to gather power information and a load balancing module
+that benefits from the load balancing framework available in the CHARM++ runtime system.
+We propose two variants of our energy-aware load balancer (ENERGYLB) to save energy on imbalanced
+workloads without considerably impacting the overall system performance.
+The first one, called Fine- Grained EnergyLB (FG-ENERGYLB), is suitable for plat- forms composed of few
+tens of cores that allow per-core DVFS.
+The second one, called Coarse-Grained EnergyLB (CGENERGLB) is suitable for current HPC platforms composed of several
+multi-core processors that feature per-chip DVFS.<br>
+This work was presented at the HiPC conference <a href="#PadoinEtAl2014">(Padoin et al. 2014)</a>.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+
+<ul>
+  <li>Edson Padoin, November 2014, JLESC Workshop, Chicago</li>
+  <li>Jean-Francois Mehaut, November Z014, JLESC Workshop, Chicago</li>
+  <li>Brice Videau, June 2015, JLESC Workshop, Barcelona</li>
+  <li>Jean-Francois Mehaut, June 2015, JLESC Workshop, Barcelona</li>
+</ul>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          KellerTesserEtAl2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseKellerTesserEtAl2014Bibtex" aria-expanded="false" aria-controls="collapseKellerTesserEtAl2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseKellerTesserEtAl2014Abstract" aria-expanded="false" aria-controls="collapseKellerTesserEtAl2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="KellerTesserEtAl2014">Tesser, Rafael Keller, Laercio Lima Pilla, Fabrice Dupros, Philippe Olivier Alexandre Navaux, Jean-Francois Mehaut, and Celso L. Mendes. 2014. “Improving The Performance of Seismic Wave Simulations with Dynamic
+   Load Balancing.” In <i>22nd Euromicro International Conference On Parallel, Distributed,
+   and Network-Based Processing, PDP 2014, Torino, Italy, February 12-14, 2014</i>, 196–203. doi:10.1109/PDP.2014.37.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseKellerTesserEtAl2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{KellerTesserEtAl2014,
+  author = {Tesser, Rafael Keller and Pilla, Laercio Lima and Dupros, Fabrice and Navaux, Philippe Olivier Alexandre and Mehaut, Jean-Francois and Mendes, Celso L.},
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  biburl = {http://dblp.uni-trier.de/rec/bib/conf/pdp/TesserPDNMM14},
+  booktitle = {22nd Euromicro International Conference on Parallel, Distributed,
+     and Network-Based Processing, {PDP} 2014, Torino, Italy, February 12-14, 2014},
+  crossref = {DBLP:conf/pdp/2014},
+  doi = {10.1109/PDP.2014.37},
+  pages = {196--203},
+  timestamp = {Tue, 03 Feb 2015 17:12:45 +0100},
+  title = {Improving the Performance of Seismic Wave Simulations with Dynamic
+     Load Balancing},
+  url = {http://dx.doi.org/10.1109/PDP.2014.37},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          KellerTesserEtAl2014a
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseKellerTesserEtAl2014aBibtex" aria-expanded="false" aria-controls="collapseKellerTesserEtAl2014aBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseKellerTesserEtAl2014aAbstract" aria-expanded="false" aria-controls="collapseKellerTesserEtAl2014aAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="KellerTesserEtAl2014a">———. 2014. “Dynamic Load Balancing for Seismic Wave Propagation Models.” <i>International Journal Of High Performance Computing Applications (Accepted)</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseKellerTesserEtAl2014aBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{KellerTesserEtAl2014a,
+  title = {Dynamic load balancing for seismic wave propagation models},
+  journal = {International Journal of High Performance Computing Applications (accepted)},
+  author = {Tesser, Rafael Keller and Pilla, Laercio Lima and Dupros, Fabrice and Navaux, Philippe Olivier Alexandre and Mehaut, Jean-Francois and Mendes, Celso L.},
+  year = {2014},
+  note = {accepted}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+<h2 id="person-month-efforts-in-20152016">
+<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
+
+<table class="person-months-table table table-bordered table-hover table-sm">
+  <tbody>
+    <tr>
+      <td>
+<span class="person given-name">Raphael</span> <span class="person sur-name">Keller Tesser</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)</td>
+      <td>6 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Edson Luiz</span> <span class="person sur-name">Padoin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)</td>
+      <td>4 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Phillipe</span> <span class="person sur-name">Navaux</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)</td>
+      <td>1 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Celsco</span> <span class="person sur-name">Mendes</span> (<abbr title="National Center for Supercomputing Applications" class="initialism" data-toggle="tooltip">NCSA</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Sanjay</span> <span class="person sur-name">Kale</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)</td>
+      <td>0.25 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Jean-Francois</span> <span class="person sur-name">Mehaut</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)</td>
+      <td>1 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<ul>
+  <li>Using simulations (SimGrid, BigSim, Dimemas) for the design and analysis of load balancers
+  (Rafael Tesser, Philippe Navaux, Arnaud Legrand, Celso Mendes)</li>
+  <li>Load Balancing and heterogenous platforms/processors (Victor Martinez, Fabrice Dupros/BRGM,
+  Philippe Navaux, Jean-Francois Mehaut)</li>
+</ul>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          FrancesquiniEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseFrancesquiniEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseFrancesquiniEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseFrancesquiniEtAl2015Abstract" aria-expanded="false" aria-controls="collapseFrancesquiniEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="FrancesquiniEtAl2015">Francesquini, Emilio, Marcio Castro, Pedro H. Penna, Fabrice Dupros, Henrique C. Freitas, Philippe O.A. Navaux, and Jean-Francois Mehaut. 2015. “On The Energy Efficiency and Performance of Irregular Application Executions on Multicore, 
+   NUMA and Manycore Platforms.” <i>J. Parallel Distrib. Comput.</i> 76 (C). Orlando, FL, USA: Academic Press, Inc.: 32–48. doi:10.1016/j.jpdc.2014.11.002.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseFrancesquiniEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{FrancesquiniEtAl2015,
+  acmid = {2780859},
+  address = {Orlando, FL, USA},
+  author = {Francesquini, Emilio and Castro, Marcio and Penna, Pedro H. and Dupros, Fabrice and Freitas, Henrique C. and Navaux, Philippe O.A. and Mehaut, Jean-Francois},
+  doi = {10.1016/j.jpdc.2014.11.002},
+  issn = {0743-7315},
+  issue_date = {February 2015},
+  journal = {J. Parallel Distrib. Comput.},
+  keywords = {Energy efficiency, K-Means, Manycore, Multicore, NUMA, Performance, 
+     Seismic wave propagation, TSP},
+  month = feb,
+  number = {C},
+  pages = {32--48},
+  publisher = {Academic Press, Inc.},
+  title = {On the Energy Efficiency and Performance of Irregular Application Executions on Multicore, 
+     NUMA and Manycore Platforms},
+  url = {http://dx.doi.org/10.1016/j.jpdc.2014.11.002},
+  volume = {76},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          PadoinEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePadoinEtAl2015Bibtex" aria-expanded="false" aria-controls="collapsePadoinEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePadoinEtAl2015Abstract" aria-expanded="false" aria-controls="collapsePadoinEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="PadoinEtAl2015">Padoin, Edson L., Laercio Lima Pilla, Marcio Bastos Castro, Francieli Zanon Boito, Philippe Olivier Alexandre Navaux, and Jean-Francois Mehaut. 2015. “Performance/Energy Trade-off in Scientific Computing: the Case Of
+   ARM Big.LITTLE and Intel Sandy Bridge.” <i>IET Computers And Digital Techniques</i> 9 (1): 27–35. doi:10.1049/iet-cdt.2014.0074.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsePadoinEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{PadoinEtAl2015,
+  author = {Padoin, Edson L. and Pilla, Laercio Lima and Castro, Marcio Bastos and Boito, Francieli Zanon and Navaux, Philippe Olivier Alexandre and Mehaut, Jean-Francois},
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  biburl = {http://dblp.uni-trier.de/rec/bib/journals/iet-cdt/PadoinPCBNM15},
+  doi = {10.1049/iet-cdt.2014.0074},
+  journal = {IET Computers and Digital Techniques},
+  number = {1},
+  pages = {27--35},
+  timestamp = {Fri, 10 Apr 2015 01:00:00 +0200},
+  title = {Performance/energy trade-off in scientific computing: the case of
+     ARM big.LITTLE and Intel Sandy Bridge},
+  url = {http://dx.doi.org/10.1049/iet-cdt.2014.0074},
+  volume = {9},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          CastroEtAl2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCastroEtAl2014Bibtex" aria-expanded="false" aria-controls="collapseCastroEtAl2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCastroEtAl2014Abstract" aria-expanded="false" aria-controls="collapseCastroEtAl2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="CastroEtAl2014">Castro, Marcio Bastos, Fabrice Dupros, Emilio Francesquini, Jean-Francois Mehaut, and Philippe Olivier Alexandre Navaux. 2014. “Energy Efficient Seismic Wave Propagation Simulation On a Low-Power
+               Manycore Processor.” In <i>26th IEEE International Symposium On Computer Architecture and High
+   Performance Computing, SBAC-PAD 2014, Paris, France, October 22-24, 2014</i>, 57–64. doi:10.1109/SBAC-PAD.2014.28.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCastroEtAl2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{CastroEtAl2014,
+  author = {Castro, Marcio Bastos and Dupros, Fabrice and Francesquini, Emilio and Mehaut, Jean-Francois and Navaux, Philippe Olivier Alexandre},
+  biburl = {http://dblp.uni-trier.de/rec/bib/conf/sbac-pad/CastroDFMN14},
+  bibsource = {dblp computessr science bibliography, http://dblp.org},
+  booktitle = {26th {IEEE} International Symposium on Computer Architecture and High
+     Performance Computing, {SBAC-PAD} 2014, Paris, France, October 22-24, 2014},
+  crossref = {DBLP:conf/sbac-pad/2014},
+  doi = {10.1109/SBAC-PAD.2014.28},
+  pages = {57--64},
+  timestamp = {Wed, 22 Apr 2015 16:41:58 +0200},
+  title = {Energy Efficient Seismic Wave Propagation Simulation on a Low-Power
+                 Manycore Processor},
+  url = {http://dx.doi.org/10.1109/SBAC-PAD.2014.28},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          PadoinEtAl2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePadoinEtAl2014Bibtex" aria-expanded="false" aria-controls="collapsePadoinEtAl2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePadoinEtAl2014Abstract" aria-expanded="false" aria-controls="collapsePadoinEtAl2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="PadoinEtAl2014">Padoin, Edson L., Marcio Bastos Castro, Laercio Lima Pilla, Philippe Olivier Alexandre Navaux, and Jean-Francois Mehaut. 2014. “Saving Energy by Exploiting Residual Imbalances on Iterative Applications.” In <i>21st International Conference On High Performance Computing, HiPC 2014, Goa, India, 
+   December 17-20, 2014</i>, 1–10. doi:10.1109/HiPC.2014.7116895.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsePadoinEtAl2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{PadoinEtAl2014,
+  author = {Padoin, Edson L. and Castro, Marcio Bastos and Pilla, Laercio Lima and Navaux, Philippe Olivier Alexandre and Mehaut, Jean-Francois},
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  biburl = {http://dblp2.uni-trier.de/rec/bib/conf/hipc/PadoinCPNM14},
+  booktitle = {21st International Conference on High Performance Computing, HiPC 2014, Goa, India, 
+     December 17-20, 2014},
+  doi = {10.1109/HiPC.2014.7116895},
+  crossref = {DBLP:conf/hipc/2014},
+  pages = {1--10},
+  timestamp = {Wed, 10 Jun 2015 07:47:46 +0200},
+  title = {Saving energy by exploiting residual imbalances on iterative applications},
+  url = {http://dx.doi.org/10.1109/HiPC.2014.7116895},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Pilla2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePilla2014Bibtex" aria-expanded="false" aria-controls="collapsePilla2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePilla2014Abstract" aria-expanded="false" aria-controls="collapsePilla2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Pilla2014">Pilla, Laercio L. 2014. “Topology-Aware Load Balancing For Performance Portability over Parallel High Performance Systems.” Theses, Universite de Grenoble ; UFRGS. <a href="https://tel.archives-ouvertes.fr/tel-00981136" target="_blank">https://tel.archives-ouvertes.fr/tel-00981136</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsePilla2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@phdthesis{Pilla2014,
+  author = {Pilla, Laercio L.},
+  hal_id = {tel-00981136},
+  hal_version = {v1},
+  keywords = {Computer architecture ; Parallel programming ; Scheduling ; Programmation Parallele ; Profiling ; Ordonnancement ; Architecture des ordinateurs},
+  month = apr,
+  pdf = {https://tel.archives-ouvertes.fr/tel-00981136/file/ThA_se_LaA_rcio_LIMA_PILLA_2014-1.pdf},
+  school = {Universite de Grenoble ; UFRGS},
+  title = {Topology-Aware Load Balancing for Performance Portability over Parallel High Performance Systems},
+  type = {Theses},
+  url = {https://tel.archives-ouvertes.fr/tel-00981136},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </article>
+  
+    <footer class="card-deck-wrapper text-muted small">
+      <div class="card-deck">
+        
+
+
+
+
+  
+    <div class="card card-block">
+  
+      <i class="fa fa-folder-o"></i> <span class="hidden-sm-down">Created on </span><time datetime="2016-02-17T00:00:00+00:00">17 Feb 2016</time>
+  
+    </div>
+  
+
+
+
+  
+
+
+      </div>
+    </footer>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Developer tools for porting and tuning parallel applications on extreme-scale parallel systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/tool_pandt_project/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Developer tools for porting and tuning parallel applications on extreme-scale parallel systems</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Performance Tools</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix"></span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Brian J.N.</span> <span class="person sur-name">Wylie</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Miwako</span> <span class="person sur-name">Tsuji</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Hitoshi</span> <span class="person sur-name">Murai</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Christian</span> <span class="person sur-name">Feld</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Judit</span> <span class="person sur-name">Gimenez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-running">running</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+
+<p>Application developers targeting extreme-scale HPC systems such as JUQUEEN (BG/Q) and
+Kei (K computer) need effective tools to assist with porting and tuning for these unusual systems
+(e.g., where measurement configuration and analysis result files must be explicitly staged in and out
+of batch job partitions). 
+The XcalableMP compilation system (and directive-based language) <a href="#LeeSato2010">(Lee and Sato 2010)</a>
+<a href="#TsujiEtAl2013">(Tsuji et al. 2013)</a> and Scalasca/Score-P execution
+measurement and analysis tools <a href="#GeimerEtAl2010">(Geimer et al. 2010)</a>
+<a href="#KnuepferEtAl2012">(Knüpfer et al. 2012)</a> (using SIONlib scalable file I/O 
+<a href="#FringsEtAl2009">(Frings, Wolf, and Petkov 2009)</a>) are two notable examples of 
+tools developed by RIKEN and JSC for this purpose. This project proposes to extend their support for 
+JLESC HPC systems and exploit their capabilities in an integrated work flow.<br>
+Existing training material will be adapted to collaborators large-scale HPC systems, augmented
+with newly prepared material, and refined for better uptake based on participant evaluations
+and feedback. Travel and accommodation expenses of training presenters to participate in
+joint training events (such as VI-HPS Tuning Workshops <a href="#VIHPSTWS">(“VI-HPS Tuning Workshop Series” 2016)</a>) will be supported. 
+Collaborative work with application developers will assess the effectiveness of the current (and revised) tools,
+and help direct development of new tool capabilities.</p>
+
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+
+<ul>
+  <li>XcalableMP tutorial held at JSC (2015-12-01).</li>
+  <li>Organisation of 20th VI-HPS Tuning Workshop hosted by RIKEN AICS (2016/02/24-26) <a href="#VIHPSTWS">(“VI-HPS Tuning Workshop Series” 2016)</a> covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) on K computer and local Fujitsu FX10 (pi).</li>
+  <li>Performance analysis of RIKEN FIBER <a href="#FIBER">(“FIBER Mini-App Suite” 2016)</a> mini-app NTChem on pi/K.</li>
+  <li>Performance analysis of ABySS-P <a href="#KitayamaEtAl2015">(Kitayama, Wylie, and Maeda 2015)</a> and NEST neuronal network simulation tool <a href="#NEST">(“NEST Neural Simulation Tool” 2016)</a> on K computer.</li>
+</ul>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+
+<p>Initial face-to-face meeting at 3rd JLESC Workshop (Barcelona, 2015-06), followed
+by meetings at ISC-HPC (Frankfurt am Main, 2015-07), ParCo (Edinburgh, 2015-09),
+SC15 (Austin, 2015-11), JSC (Juelich, 2015-12), 4th JLESC Workshop (Bonn,
+2015-12) and 6th AICS International Symposium (Kobe, 2016-02).</p>
+
+<p>Visits planned for the next 12 months:</p>
+
+<ul>
+  <li>Visit of RIKEN AICS researcher to JSC perhaps around ISC-HPC or 5th JLESC Workshop (1-2 weeks, 2016-06)</li>
+  <li>Visit of JSC researcher to RIKEN perhaps around 6th JLESC Workshop (2016-12).</li>
+</ul>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+
+<ol class="bibliography"></ol>
+
+<h2 id="person-month-efforts-in-20152016">
+<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
+
+<table class="person-months-table table table-bordered table-hover table-sm">
+  <tbody>
+    <tr>
+      <td>
+<span class="person given-name">Christian</span> <span class="person sur-name">Feld</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)</td>
+      <td>1.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Judit</span> <span class="person sur-name">Gimenez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)</td>
+      <td>1.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Hitoshi</span> <span class="person sur-name">Murai</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)</td>
+      <td>1.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Miwako</span> <span class="person sur-name">Tsuji</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)</td>
+      <td>1.0 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Brian J.N.</span> <span class="person sur-name">Wylie</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)</td>
+      <td>1.0 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>The existing integration of XcalableMP and Scalasca will be updated to the latest
+community-developed Score-P instrumentation and measurement infrastructure, and made
+available for use on JUQUEEN BG/Q and Kei K computer.  Investigate Score-P support
+required for XcalableMP using Argobots and for native threading/autoparallelisation.
+Documentation for use of Scalasca/Score-P on K computer including example batch scripts
+(e.g., to stage-in/out configuration and analysis files). 
+Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN FIBER mini-apps.
+Address terminology inconsistencies between JSC and BSC tools in their analyses and documentation.
+Workshops and training organised under the auspices of VI-HPS 
+<a href="#VIHPS">(“Virtual Institute – High Productivity Supercomputing” 2016)</a> 
+or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation And Productivity: EU Centre of Excellence” 2015)</a>.</p>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          FIBER
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseFIBERBibtex" aria-expanded="false" aria-controls="collapseFIBERBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseFIBERAbstract" aria-expanded="false" aria-controls="collapseFIBERAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="FIBER">“FIBER Mini-App Suite.” 2016. fiber-miniapp.github.io/.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseFIBERBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{FIBER,
+  title = {FIBER Mini-app Suite},
+  url = {fiber-miniapp.github.io/},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          NEST
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseNESTBibtex" aria-expanded="false" aria-controls="collapseNESTBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseNESTAbstract" aria-expanded="false" aria-controls="collapseNESTAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="NEST">“NEST Neural Simulation Tool.” 2016. www.nest-simulator.org/.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseNESTBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{NEST,
+  title = {NEST Neural Simulation Tool},
+  url = {www.nest-simulator.org/},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          VIHPSTWS
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVIHPSTWSBibtex" aria-expanded="false" aria-controls="collapseVIHPSTWSBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseVIHPSTWSAbstract" aria-expanded="false" aria-controls="collapseVIHPSTWSAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="VIHPSTWS">“VI-HPS Tuning Workshop Series.” 2016. www.vi-hps.org/training/tws/.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseVIHPSTWSBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{VIHPSTWS,
+  title = {VI-HPS Tuning Workshop Series},
+  url = {www.vi-hps.org/training/tws/},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          VIHPS
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVIHPSBibtex" aria-expanded="false" aria-controls="collapseVIHPSBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseVIHPSAbstract" aria-expanded="false" aria-controls="collapseVIHPSAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="VIHPS">“Virtual Institute – High Productivity Supercomputing.” 2016. www.vi-hps.org/.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseVIHPSBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{VIHPS,
+  title = {Virtual Institute -- High Productivity Supercomputing},
+  url = {www.vi-hps.org/},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          KitayamaEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseKitayamaEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseKitayamaEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseKitayamaEtAl2015Abstract" aria-expanded="false" aria-controls="collapseKitayamaEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="KitayamaEtAl2015">Kitayama, Itaru, Brian J. N. Wylie, and Toshiyuki Maeda. 2015. “Execution Performance Analysis Of the ABySS Genome Sequence Assembler Using Scalasca on the K Computer.” In <i>Proc. Int’l Conf. On Parallel Computing (ParCo, Edinburgh, Scotland)</i>. IOS Press. <a href="https://juser.fz-juelich.de/record/279895" target="_blank">https://juser.fz-juelich.de/record/279895</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseKitayamaEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{KitayamaEtAl2015,
+  author = {Kitayama, Itaru and Wylie, Brian J. N. and Maeda, Toshiyuki},
+  booktitle = {Proc. Int'l Conf. on Parallel Computing (ParCo, Edinburgh, Scotland)},
+  month = sep,
+  publisher = {IOS Press},
+  title = {Execution Performance Analysis of the {ABySS} Genome Sequence Assembler using {Scalasca} on the {K} computer},
+  url = {https://juser.fz-juelich.de/record/279895},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          VIHPS2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVIHPS2015Bibtex" aria-expanded="false" aria-controls="collapseVIHPS2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseVIHPS2015Abstract" aria-expanded="false" aria-controls="collapseVIHPS2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="VIHPS2015">“VI-HPS Tools Guide.” 2015. www.vi-hps.org/upload/material/general/ToolsGuide.pdf.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseVIHPS2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{VIHPS2015,
+  title = {VI-HPS Tools Guide},
+  url = {www.vi-hps.org/upload/material/general/ToolsGuide.pdf},
+  month = oct,
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          POP
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePOPBibtex" aria-expanded="false" aria-controls="collapsePOPBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePOPAbstract" aria-expanded="false" aria-controls="collapsePOPAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="POP">“Performance Optimisation And Productivity: EU Centre of Excellence.” 2015. www.pop-coe.eu/.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsePOPBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{POP,
+  title = {Performance Optimisation and Productivity: EU Centre of Excellence},
+  url = {www.pop-coe.eu/},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          TsujiEtAl2013
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTsujiEtAl2013Bibtex" aria-expanded="false" aria-controls="collapseTsujiEtAl2013Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTsujiEtAl2013Abstract" aria-expanded="false" aria-controls="collapseTsujiEtAl2013Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="TsujiEtAl2013">Tsuji, Miwako, Mitsuhisa Sato, Maxime R. Hugues, and Serge G. Petiton. 2013. “Multiple-SPMD Programming Environment Based On PGAS and Workflow
+    toward Post-Petascale Computing.” In <i>42nd International Conference On Parallel Processing, ICPP 2013,
+    Lyon, France, October 1-4, 2013</i>, 480–85. doi:10.1109/ICPP.2013.58.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseTsujiEtAl2013Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{TsujiEtAl2013,
+  author = {Tsuji, Miwako and Sato, Mitsuhisa and Hugues, Maxime R. and Petiton, Serge G.},
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  biburl = {http://dblp.uni-trier.de/rec/bib/conf/icpp/TsujiSHP13},
+  booktitle = {42nd International Conference on Parallel Processing, {ICPP} 2013,
+      Lyon, France, October 1-4, 2013},
+  crossref = {DBLP:conf/icpp/2013},
+  doi = {10.1109/ICPP.2013.58},
+  timestamp = {Tue, 02 Dec 2014 17:13:28 +0100},
+  title = {Multiple-SPMD Programming Environment Based on {PGAS} and Workflow
+      toward Post-petascale Computing},
+  pages = {480--485},
+  url = {http://dx.doi.org/10.1109/ICPP.2013.58},
+  year = {2013}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          KnuepferEtAl2012
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseKnuepferEtAl2012Bibtex" aria-expanded="false" aria-controls="collapseKnuepferEtAl2012Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseKnuepferEtAl2012Abstract" aria-expanded="false" aria-controls="collapseKnuepferEtAl2012Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="KnuepferEtAl2012">Knüpfer, A., C. Rössel, D. an Mey, S. Biersdorff, K. Diethelm, D. Eschweiler, M. Geimer, et al. 2012. “Score-P: A Joint Performance Measurement Run-Time Infrastructure For Periscope,
+    Scalasca, TAU, and Vampir.” In <i>Tools For High Performance Computing 2011, Proceedings of the 5th
+    International Workshop on Parallel Tools for High Performance Computing (Dresden, September 2011)</i>. doi:10.1007/978-3-642-31476-6_7.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseKnuepferEtAl2012Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{KnuepferEtAl2012,
+  author = {Kn{\"{u}}pfer, A. and R{\"{o}}ssel, C. and an Mey, D. and Biersdorff, S. and Diethelm, K. and Eschweiler, D. and Geimer, M. and Gerndt, M. and Lorenz, D. and Malony, A.D. and Nagel, W.E. and Oleynik, Y. and Philippen, P. and Saviankou, P. and Schmidl, D. and Shende, S.S. and Tsch{\"{u}}ter, R. and Wagner, M. and Wesarg, B. and Wolf, F.},
+  booktitle = {Tools for High Performance Computing 2011, Proceedings of the 5th
+      International Workshop on Parallel Tools for High Performance Computing (Dresden, September 2011)},
+  cin = {JSC},
+  cid = {I:(DE-Juel1)JSC-20090406},
+  comment = {Tools for High Performance Computing 2011, Proceedings of the 5th International 
+      Workshop on Parallel Tools for High Performance Computing, September 2011, Dresden},
+  doi = {$10.1007/978-3-642-31476-6_7$},
+  note = {Record converted from VDB: 12.11.2012},
+  pid = {G:(DE-Juel1)FUEK411 / G:(DE-HGF)POF2-411},
+  pnm = {Scientific Computing / 411 - Computational Science and Mathematical Methods 
+      (POF2-411)},
+  title = {Score-P: A Joint Performance Measurement Run-Time Infrastructure for Periscope,
+      Scalasca, TAU, and Vampir},
+  typ = {PUB:(DE-HGF)8 / PUB:(DE-HGF)7},
+  url = {http://juser.fz-juelich.de/record/23267},
+  year = {2012}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          GeimerEtAl2010
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseGeimerEtAl2010Bibtex" aria-expanded="false" aria-controls="collapseGeimerEtAl2010Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseGeimerEtAl2010Abstract" aria-expanded="false" aria-controls="collapseGeimerEtAl2010Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="GeimerEtAl2010">Geimer, Markus, Felix Wolf, Brian J. N. Wylie, Erika Ábrahám, Daniel Becker, and Bernd Mohr. 2010. “The Scalasca Performance Toolset Architecture.” <i>Concurr. Comput. : Pract. Exper.</i> 22 (6). John Wiley and Sons Ltd.: 702–19. doi:10.1002/cpe.v22:6.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseGeimerEtAl2010Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{GeimerEtAl2010,
+  author = {Geimer, Markus and Wolf, Felix and Wylie, Brian J. N. and {\'{A}}brah{\'{a}}m, Erika and Becker, Daniel and Mohr, Bernd},
+  acmid = {1753234},
+  doi = {10.1002/cpe.v22:6},
+  issn = {1532-0626},
+  issue_date = {April 2010},
+  journal = {Concurr. Comput. : Pract. Exper.},
+  keywords = {parallel computing, performance analysis, scalability},
+  month = apr,
+  number = {6},
+  numpages = {18},
+  pages = {702--719},
+  publisher = {John Wiley and Sons Ltd.},
+  title = {The Scalasca Performance Toolset Architecture},
+  url = {http://dx.doi.org/10.1002/cpe.v22:6},
+  volume = {22},
+  year = {2010}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          LeeSato2010
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLeeSato2010Bibtex" aria-expanded="false" aria-controls="collapseLeeSato2010Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLeeSato2010Abstract" aria-expanded="false" aria-controls="collapseLeeSato2010Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="LeeSato2010">Lee, Jinpil, and Mitsuhisa Sato. 2010. “Implementation And Performance Evaluation of XcalableMP: A Parallel
+    Programming Language for Distributed Memory Systems.” In <i>39th International Conference On Parallel Processing, ICPP Workshops
+     2010, San Diego, California, USA, 13-16 September 2010</i>, 413–20. doi:10.1109/ICPPW.2010.62.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLeeSato2010Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{LeeSato2010,
+  author = {Lee, Jinpil and Sato, Mitsuhisa},
+  booktitle = {39th International Conference on Parallel Processing, {ICPP} Workshops
+       2010, San Diego, California, USA, 13-16 September 2010},
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  biburl = {http://dblp.uni-trier.de/rec/bib/conf/icppw/LeeS10},
+  doi = {10.1109/ICPPW.2010.62},
+  crossref = {DBLP:conf/icppw/2010},
+  pages = {413--420},
+  timestamp = {Fri, 25 Jul 2014 14:09:13 +0200},
+  title = {Implementation and Performance Evaluation of XcalableMP: {A} Parallel
+      Programming Language for Distributed Memory Systems},
+  url = {http://dx.doi.org/10.1109/ICPPW.2010.62},
+  year = {2010}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          FringsEtAl2009
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseFringsEtAl2009Bibtex" aria-expanded="false" aria-controls="collapseFringsEtAl2009Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseFringsEtAl2009Abstract" aria-expanded="false" aria-controls="collapseFringsEtAl2009Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="FringsEtAl2009">Frings, Wolfgang, Felix Wolf, and Ventsislav Petkov. 2009. “Scalable Massively Parallel I/O To Task-Local Files.” In <i>Proceedings Of the Conference on High Performance Computing Networking, Storage and 
+    Analysis</i>, 17:1–17:11. SC ’09. ACM. doi:10.1145/1654059.1654077.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseFringsEtAl2009Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{FringsEtAl2009,
+  acmid = {1654077},
+  articleno = {17},
+  author = {Frings, Wolfgang and Wolf, Felix and Petkov, Ventsislav},
+  booktitle = {Proceedings of the Conference on High Performance Computing Networking, Storage and 
+      Analysis},
+  doi = {10.1145/1654059.1654077},
+  isbn = {978-1-60558-744-8},
+  location = {Portland, Oregon},
+  numpages = {11},
+  pages = {17:1--17:11},
+  publisher = {ACM},
+  series = {SC '09},
+  title = {Scalable Massively Parallel I/O to Task-local Files},
+  url = {http://doi.acm.org/10.1145/1654059.1654077},
+  year = {2009}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </article>
+  
+    <footer class="card-deck-wrapper text-muted small">
+      <div class="card-deck">
+        
+
+
+
+
+  
+    <div class="card card-block">
+  
+      <i class="fa fa-folder-o"></i> <span class="hidden-sm-down">Created on </span><time datetime="2016-03-22T00:00:00+00:00">22 Mar 2016</time>
+  
+    </div>
+  
+
+
+
+  
+    <div class="card card-block">
+  
+      <i class="fa fa-pencil"></i> <span class="hidden-sm-down">Updated on </span><time datetime="2016-03-22T00:00:00+00:00" data-updated="true">22 Mar 2016</time>
+  
+    </div>
+  
+
+
+      </div>
+    </footer>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>

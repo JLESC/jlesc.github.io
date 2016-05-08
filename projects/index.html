@@ -1,85 +1,1708 @@
----
-layout: page
-title: Projects
-date: 2014-06-11 14:37
-navbar: Research
-subnavbar: Projects
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/">
 
-<p class="lead">
-  There are a total of {{ site.projects | size }} projects in JLESC with the following stages:
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post">
+  <header class="post-header">
+    <h1>Projects</h1>
+    
+  </header>
+  <article class="post-content">
+  <p class="lead">
+  There are a total of 26 projects in JLESC with the following stages:
 </p>
 
 <ul class="list-inline text-xs-center" id="project-states-stats-list">
-  {% for status in site.data.project_states %}
-    {% assign status_id = status[0] %}
-    <li class="list-inline-item project-status-{{ status_id }}-bg">
-      {% project_status {{ status_id }} %}: {% stats_for_status {{ status_id }} %}
+  
+    
+    <li class="list-inline-item project-status-help_wanted-bg">
+      <span class="project-status project-status-help_wanted">help wanted</span>: 1
     </li>
-  {% endfor %}
+  
+    
+    <li class="list-inline-item project-status-preparation-bg">
+      <span class="project-status project-status-preparation">in preparation</span>: 0
+    </li>
+  
+    
+    <li class="list-inline-item project-status-starting-bg">
+      <span class="project-status project-status-starting">starting</span>: 10
+    </li>
+  
+    
+    <li class="list-inline-item project-status-running-bg">
+      <span class="project-status project-status-running">running</span>: 13
+    </li>
+  
+    
+    <li class="list-inline-item project-status-suspended-bg">
+      <span class="project-status project-status-suspended">suspended</span>: 0
+    </li>
+  
+    
+    <li class="list-inline-item project-status-closing-bg">
+      <span class="project-status project-status-closing">closing</span>: 1
+    </li>
+  
+    
+    <li class="list-inline-item project-status-finished-bg">
+      <span class="project-status project-status-finished">finished</span>: 1
+    </li>
+  
 </ul>
 
 <div id="project-categories-accordion" role="tablist" aria-multiselectable="false">
-  {% for topic_hash in site.data.topics %}
-    {% assign topic_id = topic_hash[0] %}
-    {% assign topic = topic_hash[1] %}
+  
+    
+    
     <div class="card">
-      <div class="card-header" role="tab" id="category-heading-{{ topic_id }}">
+      <div class="card-header" role="tab" id="category-heading-architectures">
         <a class="pull-left"
            data-toggle="collapse"
            data-parent="#project-categories-accordion"
-           href="#category-{{ topic_id }}"
+           href="#category-architectures"
            aria-expanded="true"
-           aria-controls="category-{{ topic_id }}">
-          <h4>{{ topic.title }}</h4>
+           aria-controls="category-architectures">
+          <h4>Advanced Architectures</h4>
         </a>
-        <label class="tag tag-default pull-right" title="number projects for {{ topic.title }}"
+        <label class="tag tag-default pull-right" title="number projects for Advanced Architectures"
                data-toggle="tooltip">
           <i class="fa fa-fw fa-cubes"></i>
-          {% stats_for_topic_status {{ topic_id }} all %}
+          0
         </label>
       </div>
       <div class="card-block collapse in"
            role="tabpanel"
-           id="category-{{ topic_id }}"
-           aria-labelledby="category-heading-{{ topic_id }}">
-        <p class="card-text">{{ topic.desc }}</p>
+           id="category-architectures"
+           aria-labelledby="category-heading-architectures">
+        <p class="card-text">Some text
+</p>
 
         <div id="project-index" class="card-columns">
-          {% for project in site.projects | order: 'title' %}
-            {% unless project.topics contains topic_id %}
-              {% continue %}
-            {% endunless %}
-            <div class="card text-xs-center{% if project.status == 'help_wanted' %} card-outline-primary{% endif %}">
-              <div class="card-block">
-                <h4 class="card-title">
-                  <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
-                </h4>
-                <ul class="card-text list-inline members">
-                {% if project.head %}
-                  <li class="list-inline-item">
-                    {% person {{ project.head }} %}
-                  </li>
-                {% endif %}
-                {% for member_id in project.members %}
-                  <li class="list-inline-item">
-                    {% person {{ member_id }} %}
-                  </li>
-                {% endfor %}
-                </ul>
-              </div>
-              <div class="card-footer project-status-{{ project.status }}-bg">
-                Status: {% project_status {{ project.status }} %}
-              </div>
-            </div>
-          {% endfor %}
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
         </div>
       </div>
     </div>
-  {% endfor %}
+  
+    
+    
+    <div class="card">
+      <div class="card-header" role="tab" id="category-heading-apps">
+        <a class="pull-left"
+           data-toggle="collapse"
+           data-parent="#project-categories-accordion"
+           href="#category-apps"
+           aria-expanded="true"
+           aria-controls="category-apps">
+          <h4>Apps & Mini-Apps</h4>
+        </a>
+        <label class="tag tag-default pull-right" title="number projects for Apps & Mini-Apps"
+               data-toggle="tooltip">
+          <i class="fa fa-fw fa-cubes"></i>
+          3
+        </label>
+      </div>
+      <div class="card-block collapse in"
+           role="tabpanel"
+           id="category-apps"
+           aria-labelledby="category-heading-apps">
+        <p class="card-text">Some text
+</p>
+
+        <div id="project-index" class="card-columns">
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center card-outline-primary">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/help_wanted_project/">Help Wanted Demo Project</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Torbjörn</span> <span class="person sur-name">Klatt</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Robert</span> <span class="person sur-name">Speck</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-help_wanted-bg">
+                Status: <span class="project-status project-status-help_wanted">help wanted</span>
+              </div>
+            </div>
+          
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/mcfd_cmp_project/">Comparison of Meshing and CFD Methods for Accurate Flow Simulations on HPC systems</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Andreas</span> <span class="person sur-name">Lintermann</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Makoto</span> <span class="person sur-name">Tsubokura</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/chase_bse_project/">Optimizing ChASE eigensolver for Bethe-Salpeter computations on multi-GPUs</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Andre</span> <span class="person sur-name">Schleife</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Edoardo</span> <span class="person sur-name">Di Napoli</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+        </div>
+      </div>
+    </div>
+  
+    
+    
+    <div class="card">
+      <div class="card-header" role="tab" id="category-heading-storage">
+        <a class="pull-left"
+           data-toggle="collapse"
+           data-parent="#project-categories-accordion"
+           href="#category-storage"
+           aria-expanded="true"
+           aria-controls="category-storage">
+          <h4>I/O, Storage and In-Situ Processing</h4>
+        </a>
+        <label class="tag tag-default pull-right" title="number projects for I/O, Storage and In-Situ Processing"
+               data-toggle="tooltip">
+          <i class="fa fa-fw fa-cubes"></i>
+          7
+        </label>
+      </div>
+      <div class="card-block collapse in"
+           role="tabpanel"
+           id="category-storage"
+           aria-labelledby="category-heading-storage">
+        <p class="card-text">Some text
+</p>
+
+        <div id="project-index" class="card-columns">
+          
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/ichpc_project/">Mitigating I/O Interference in Concurrent HPC Applications</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Shadi</span> <span class="person sur-name">Ibrahim</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Orcun</span> <span class="person sur-name">Yildiz</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Ross</span> <span class="person sur-name">Rob</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/aggregator-placement/">Toward taming large and complex data flows in data-centric supercomputing</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Emmanuel</span> <span class="person sur-name">Jeannot</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Venkatram</span> <span class="person sur-name">Vishwanath</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Francois</span> <span class="person sur-name">Tessier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/extreme_scale_workflows/">Extreme-Scale Workflow Tools: Swift, Decaf, Damaris, FlowVR</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Tom</span> <span class="person sur-name">Peterka</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Justin</span> <span class="person sur-name">Wozniak</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Matthieu</span> <span class="person sur-name">Dreher</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Ross</span> <span class="person sur-name">Rob</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Shadi</span> <span class="person sur-name">Ibrahim</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Bruno</span> <span class="person sur-name">Raffin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/interf_aware_sched/">Towards Interference-aware scheduling in HPC systems</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Ross</span> <span class="person sur-name">Rob</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Shadi</span> <span class="person sur-name">Ibrahim</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Orcun</span> <span class="person sur-name">Yildiz</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/omniscio/">Exploiting Omnisc'IO to improve scheduling, prefetching and caching in Exascale systems</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Ross</span> <span class="person sur-name">Rob</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Shadi</span> <span class="person sur-name">Ibrahim</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/scheduling_hpc_workflows/">Resource Management and Scheduling for Data-Intensive HPC Workflows</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Shadi</span> <span class="person sur-name">Ibrahim</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Nathanael</span> <span class="person sur-name">Cheriere</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Ross</span> <span class="person sur-name">Rob</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/smart_in_situ/">Smart In Situ Visualization</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Tom</span> <span class="person sur-name">Peterka</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Ross</span> <span class="person sur-name">Rob</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Rob</span> <span class="person sur-name">Sisneros</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Lokman</span> <span class="person sur-name">Rahmani</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Leonard</span> <span class="person sur-name">Bautista Gomez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Luc</span> <span class="person sur-name">Bouge</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+        </div>
+      </div>
+    </div>
+  
+    
+    
+    <div class="card">
+      <div class="card-header" role="tab" id="category-heading-numerics">
+        <a class="pull-left"
+           data-toggle="collapse"
+           data-parent="#project-categories-accordion"
+           href="#category-numerics"
+           aria-expanded="true"
+           aria-controls="category-numerics">
+          <h4>Numerical Methods</h4>
+        </a>
+        <label class="tag tag-default pull-right" title="number projects for Numerical Methods"
+               data-toggle="tooltip">
+          <i class="fa fa-fw fa-cubes"></i>
+          9
+        </label>
+      </div>
+      <div class="card-block collapse in"
+           role="tabpanel"
+           id="category-numerics"
+           aria-labelledby="category-heading-numerics">
+        <p class="card-text">The efficient use of modern HPC systems has become one of the key challenges in computational science. Top HPC architectures already provide million-way concurrency, and current trends suggest that processor counts will continue to grow rapidly. There is a broad class of algorithms and methods that are common to several scientific or engineering problems. Ideally, the development of simulation programs follows a layered design in which generic methods are applied to create or extend domain-specific solutions. Such methods must therefore exploit the most efficient algorithms or parallel tools to avoid becoming computational bottlenecks themselves. Within JLESC, the following projects address critical issues in the field of numerical methods and algorithms.
+</p>
+
+        <div id="project-index" class="card-columns">
+          
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/fmm_project/">Scalability Enhancements to FMM for Molecular Dynamics Simulations</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Ivo</span> <span class="person sur-name">Kabadshow</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">David</span> <span class="person sur-name">Haensel</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/mcfd_cmp_project/">Comparison of Meshing and CFD Methods for Accurate Flow Simulations on HPC systems</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Andreas</span> <span class="person sur-name">Lintermann</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Makoto</span> <span class="person sur-name">Tsubokura</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/qmd_project/">Fast Integrators for Scalable Quantum Molecular Dynamics</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Emil</span> <span class="person sur-name">Constantinescu</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Andre</span> <span class="person sur-name">Schleife</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/chase_bse_project/">Optimizing ChASE eigensolver for Bethe-Salpeter computations on multi-GPUs</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Andre</span> <span class="person sur-name">Schleife</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Edoardo</span> <span class="person sur-name">Di Napoli</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/pampa_project/">Dynamic load balancing with Pampa in Alya</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Vishal</span> <span class="person sur-name">Mehta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Emmanuel</span> <span class="person sur-name">Jeannot</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Cédric</span> <span class="person sur-name">Lachat</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/dense_eigen_project/">HPC libraries for solving dense symmetric eigenvalue problems</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Toshiyuki</span> <span class="person sur-name">Imamura</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Inge</span> <span class="person sur-name">Gutheil</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/reducing_communication_sparse/">Reducing Communication in Sparse Iterative and Direct Solvers</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Luke</span> <span class="person sur-name">Olson</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Amanda</span> <span class="person sur-name">Bienz</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Laura</span> <span class="person sur-name">Grigori</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Bill</span> <span class="person sur-name">Gropp</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/alya_project/">Iterative and direct parallel linear solvers in a hybrid MPI/OpenMP high performance computational engineering simulations</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Pierre</span> <span class="person sur-name">Ramet</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Emmanuel</span> <span class="person sur-name">Agullo</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Antoni</span> <span class="person sur-name">Artigues</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/shared_infra_ad/">Shared Infrastructure for Source Transformation Automatic Differentiation</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Paul</span> <span class="person sur-name">Hovland</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Paul</span> <span class="person sur-name">Hovland</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    
+    
+    <div class="card">
+      <div class="card-header" role="tab" id="category-heading-resilience">
+        <a class="pull-left"
+           data-toggle="collapse"
+           data-parent="#project-categories-accordion"
+           href="#category-resilience"
+           aria-expanded="true"
+           aria-controls="category-resilience">
+          <h4>Resilience</h4>
+        </a>
+        <label class="tag tag-default pull-right" title="number projects for Resilience"
+               data-toggle="tooltip">
+          <i class="fa fa-fw fa-cubes"></i>
+          5
+        </label>
+      </div>
+      <div class="card-block collapse in"
+           role="tabpanel"
+           id="category-resilience"
+           aria-labelledby="category-heading-resilience">
+        <p class="card-text">Resilience is a major roadblock for HPC executions on future exascale systems. Projections from current large systems and technology evolution predict errors will happen in exascale systems many times per day. These errors will propagate and generate various kinds of malfunctions, from simple process crashes to result corruptions. The past five years have seen extraordinary technical progress in many domains related to exascale resilience. Several technical options, initially considered inapplicable or unrealistic in the HPC context, have demonstrated surprising successes. Despite this progress, the exascale resilience problem is not solved, and the community is still facing the difficult challenge of ensuring that exascale applications complete and generate correct results while running on unstable systems. Within JLESC, the following projects address critical issues in the field of resilience and fault-tolerant HPC.
+</p>
+
+        <div id="project-index" class="card-columns">
+          
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/activestorage_project/">Exploiting Active Storage for Resilience</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Nicholas</span> <span class="person sur-name">Vandenbergen</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-closing-bg">
+                Status: <span class="project-status project-status-closing">closing</span>
+              </div>
+            </div>
+          
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/pmefr_project/">Programming Model Extensions for Resilience</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Abdelhalim</span> <span class="person sur-name">Amer</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Vicenc</span> <span class="person sur-name">Beltran</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Marc</span> <span class="person sur-name">Casas</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/ft_workflow_project/">Optimization of Fault-Tolerance Strategies for Workflow Applications</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Anne</span> <span class="person sur-name">Benoit</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/ompss_mpi_project/">Hybrid resilience for MPI + tasks codes</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Omer</span> <span class="person sur-name">Subasi</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Tatiana V.</span> <span class="person sur-name">Martsinkevich</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Jesus</span> <span class="person sur-name">Labarta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Osman</span> <span class="person sur-name">Unsal</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-finished-bg">
+                Status: <span class="project-status project-status-finished">finished</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/Lossy_checkpoint_restart/">Checkpoint/Restart of/from lossy state</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Luke</span> <span class="person sur-name">Olson</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Jon</span> <span class="person sur-name">Calhoun</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Marc</span> <span class="person sur-name">Snir</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+        </div>
+      </div>
+    </div>
+  
+    
+    
+    <div class="card">
+      <div class="card-header" role="tab" id="category-heading-perf_tools">
+        <a class="pull-left"
+           data-toggle="collapse"
+           data-parent="#project-categories-accordion"
+           href="#category-perf_tools"
+           aria-expanded="true"
+           aria-controls="category-perf_tools">
+          <h4>Performance Tools</h4>
+        </a>
+        <label class="tag tag-default pull-right" title="number projects for Performance Tools"
+               data-toggle="tooltip">
+          <i class="fa fa-fw fa-cubes"></i>
+          2
+        </label>
+      </div>
+      <div class="card-block collapse in"
+           role="tabpanel"
+           id="category-perf_tools"
+           aria-labelledby="category-heading-perf_tools">
+        <p class="card-text">Parallel architectures enable to target more complex and ambitious problems each year. But in many cases, the achieved performance is far away from what the theoretical values promised us. Performance analysis tools allow application developers to identify and characterize the inefficiencies that caused a poor performance. We consider that this analysis must be the first step towards the optimization of an application. Optimizing without a previous analysis could be like driving without directions as it could mean wasting efforts improving parts of the code that were not the real performance bottlenecks. Within JLESC, the following projects address critical issues in the performance tools and analysis.
+</p>
+
+        <div id="project-index" class="card-columns">
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/folding_hmem/">Use of the Folding profiler to assist on data distribution for heterogeneous memory systems</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Antonio J.</span> <span class="person sur-name">Peña</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Harald</span> <span class="person sur-name">Servat</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Lena</span> <span class="person sur-name">Oden</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Judit</span> <span class="person sur-name">Gimenez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Jesus</span> <span class="person sur-name">Labarta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/tool_pandt_project/">Developer tools for porting and tuning parallel applications on extreme-scale parallel systems</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Brian J.N.</span> <span class="person sur-name">Wylie</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Miwako</span> <span class="person sur-name">Tsuji</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Hitoshi</span> <span class="person sur-name">Murai</span> (<abbr title="RIKEN Advanced Institute for Computational Science" class="initialism" data-toggle="tooltip">RIKEN</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Christian</span> <span class="person sur-name">Feld</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Judit</span> <span class="person sur-name">Gimenez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+        </div>
+      </div>
+    </div>
+  
+    
+    
+    <div class="card">
+      <div class="card-header" role="tab" id="category-heading-prog_lang">
+        <a class="pull-left"
+           data-toggle="collapse"
+           data-parent="#project-categories-accordion"
+           href="#category-prog_lang"
+           aria-expanded="true"
+           aria-controls="category-prog_lang">
+          <h4>Programming Languages and Runtimes</h4>
+        </a>
+        <label class="tag tag-default pull-right" title="number projects for Programming Languages and Runtimes"
+               data-toggle="tooltip">
+          <i class="fa fa-fw fa-cubes"></i>
+          4
+        </label>
+      </div>
+      <div class="card-block collapse in"
+           role="tabpanel"
+           id="category-prog_lang"
+           aria-labelledby="category-heading-prog_lang">
+        <p class="card-text">Some text
+</p>
+
+        <div id="project-index" class="card-columns">
+          
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/fmm_project/">Scalability Enhancements to FMM for Molecular Dynamics Simulations</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Ivo</span> <span class="person sur-name">Kabadshow</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">David</span> <span class="person sur-name">Haensel</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/eandb_project/">Energy Efficiency and Load Balancing</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Raphael</span> <span class="person sur-name">Keller Tesser</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Edson Luiz</span> <span class="person sur-name">Padoin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Phillipe</span> <span class="person sur-name">Navaux</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Celsco</span> <span class="person sur-name">Mendes</span> (<abbr title="National Center for Supercomputing Applications" class="initialism" data-toggle="tooltip">NCSA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Sanjay</span> <span class="person sur-name">Kale</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Jean-Francois</span> <span class="person sur-name">Mehaut</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/ompss_argobots_project/">Enhancing Asynchronous Parallelism in OmpSs with Argobots</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Sangmin</span> <span class="person sur-name">Seo</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Abdelhalim</span> <span class="person sur-name">Amer</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Rosa M.</span> <span class="person sur-name">Badia</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Jesus</span> <span class="person sur-name">Labarta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Xavier</span> <span class="person sur-name">Teruel</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Vicenc</span> <span class="person sur-name">Beltran</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-running-bg">
+                Status: <span class="project-status project-status-running">running</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            <div class="card text-xs-center">
+              <div class="card-block">
+                <h4 class="card-title">
+                  <a href="/projects/pampa_project/">Dynamic load balancing with Pampa in Alya</a>
+                </h4>
+                <ul class="card-text list-inline members">
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Vishal</span> <span class="person sur-name">Mehta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Emmanuel</span> <span class="person sur-name">Jeannot</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                  <li class="list-inline-item">
+                    <span class="person given-name">Cédric</span> <span class="person sur-name">Lachat</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+                  </li>
+                
+                </ul>
+              </div>
+              <div class="card-footer project-status-starting-bg">
+                Status: <span class="project-status project-status-starting">starting</span>
+              </div>
+            </div>
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+        </div>
+      </div>
+    </div>
+  
 </div>
 
-{% include contribute_footer.html
-  content='project'
-  link='https://github.com/JLESC/jlesc.github.io/wiki/Editing-Pages#editing-projects'
-%}
+
+
+
+
+<footer id="contribute" class="card card-contribute text-xs-center small">
+  <div class="card-block">
+    <p class="card-text">
+      Want your project to show up here? <a href="https://github.com/JLESC/jlesc.github.io/wiki/Editing-Pages#editing-projects">You can do it yourself</a>!
+    </p>
+  </div>
+</footer>
+
+
+  </article>
+  
+</div>
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>

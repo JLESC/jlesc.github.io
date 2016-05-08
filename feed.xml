@@ -1,20 +1,38 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Joint Laboratory on Extreme Scale Computing</title>
+    <description>The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+</description>
+    <link>https://jlesc.github.io/</link>
+    <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        <title>5th JLESC Workshop</title>
+        <description>&lt;p&gt;The next JLESC Workshop will be held in Lyon, at ENS de Lyon, from June 27th (afternoon) to 29th.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;/events/5th-jlesc-workshop&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2016/04/04/5th-workshop/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2016/04/04/5th-workshop/</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>3rd JLESC Summer School on Resilience</title>
+        <description>&lt;p&gt;The next JLESC Summer School will take place in Lyon from June 30 to July 1,
+right after the 5th JLESC Workshop.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;/events/3rd-jlesc-summer-school&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2016/03/22/3rd-summerschool/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2016/03/22/3rd-summerschool/</guid>
+      </item>
+    
   </channel>
 </rss>
