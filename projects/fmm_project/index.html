@@ -123,11 +123,7 @@
         <label class="col-sm-4">Keywords</label>
         <div class="col-sm-8">
           
-            <span class="clearfix">Fast Multipole Method</span>
-          
-            <span class="clearfix">MPI-3</span>
-          
-            <span class="clearfix">MPI-4</span>
+            <span class="clearfix">Fast Multipole Method, tasking, MPI-3, MPI-4</span>
           
         </div>
       </li>
@@ -173,7 +169,7 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20142015">Results for 2014/2015</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
@@ -186,25 +182,26 @@
         
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
-<p>The goal of this joint-lab cooperation covers the topic of parallel programming.
+<p>This joint-lab cooperation covers the topic of parallel programming and numerical algorithms.
 We are especially interested in increasing the scalability (strong scaling) of the Fast Multipole Method (FMM) for very large numbers of ranks.
-FMSolvr is a high-performance FMM library being developed by JSC.
-However, the current intrinsic parallel scaling limitations stem from process synchronization on large-scale systems.
-We will investigate weak and delayed synchronization models, tasking approaches and other techniques with MPI-3 and upcoming MPI-4 extensions to alleviate some of these performance bottlenecks.</p>
+Therefore, we will examine and extend the JSC-developed, high-performance FMM library called FMSolvr.
+This will allow us to improve the usability of the FMM Coulomb solver in molecular dynamics simulations with only a few particles per rank.
+Initial research already discovered, that the current intrinsic parallel scaling limitations stem from thread synchronization (intranode) and process synchronization (internode) on large-scale systems.
+We will investigate weak and delayed synchronization models, as well as node-level tasking approaches and other techniques with MPI-3 and upcoming MPI-4 extensions to alleviate some of these performance bottlenecks.</p>
 
-<h2 id="results-for-20152016">
-<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
-<p>The project was initiated at the JLESC meeting in November 2014.
+<h2 id="results-for-20142015">
+<a id="results-for-20142015" class="anchor" href="#results-for-20142015" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2014/2015</h2>
+<p>The project was initiated at the JLESC meeting in November 2014 between ANL and JSC.
 To provide a consistent interface for measuring and tuning parallel code performance some profound changes had to be made to the code.
 We started implementing an abstract parallelization layer for the FMSolvr library.
-This especially includes a parallelization approach for inter-node communication via MPI.
+This especially includes a flexible parallelization approach for inter-node communication via MPI.
 The adopted abstraction layer allows easier replacement/improvement of different synchronization strategies within the code.
 Besides the structural changes, a latency-avoiding communication scheme was implemented to improve the strong scaling.
 Together with the automatic testing framework, scaling bottlenecks of the method can be investigated much easier.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
-<p>David Haensel will join the group of Pavan Balaji in Mai/June 2016 to develop a tasking scheme for the FMM based on Argobots.</p>
+<p>David Haensel will join the group of Pavan Balaji in Mai/June 2016 to develop a tasking scheme for FMSolvr on Argobots. This visit is vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -223,17 +220,17 @@ Together with the automatic testing framework, scaling bottlenecks of the method
     <tr>
       <td>
 <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)</td>
-      <td>0.1 PM</td>
+      <td>0.25 PM</td>
     </tr>
     <tr>
       <td>
 <span class="person given-name">Ivo</span> <span class="person sur-name">Kabadshow</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)</td>
-      <td>0.1 PM</td>
+      <td>0.25 PM</td>
     </tr>
     <tr>
       <td>
 <span class="person given-name">David</span> <span class="person sur-name">Haensel</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)</td>
-      <td>1 PM</td>
+      <td>3 PM</td>
     </tr>
   </tbody>
 </table>
@@ -242,7 +239,8 @@ Together with the automatic testing framework, scaling bottlenecks of the method
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
-<p>The next step will be the development of a task-based scheme for the intranode communication.
+<p>Currently we are developing a task-based scheme to simplify the use of shared memory and to improve intranode load-balancing. Therefore, the FMM software layout has to be extended to support asynchronous execution, task-dependency resolvability and tasking itself.
+In a second step the FMM will be coupled with currently available low-level tasking frameworks like Argobots.
 This will also help to reduce load imbalances due to non-homogeneous particle distributions.</p>
 
 <h2 id="references">
