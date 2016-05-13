@@ -403,6 +403,7 @@ module Jekyll
 
       puts '    increase heading levels'
       # for the annual report the level of headings of the project reports need to be increased
+      document.content.gsub! /\\subsubsection{(.*)}\\label/, '\paragraph{\1}~\\\label'
       # a) headings within a project need to be named paragraphs
       document.content.gsub! /\\subsection{(.*)}\\label/, '\subsubsection{\1}~\\\label'
       # b) project titles need to be two levels down
