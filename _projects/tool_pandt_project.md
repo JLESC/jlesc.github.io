@@ -60,7 +60,7 @@ Visits planned for the next 12 months:
 * Visit of JSC researcher to RIKEN perhaps around 6th JLESC Workshop (2016-12).
 
 ## Impact and publications
-
+None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 

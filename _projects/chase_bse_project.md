@@ -80,30 +80,7 @@ All exchanges after the JLESC meeting in Bonn were handled via
 email. Visits may happen in the future as deemed necessary.
 
 ## Impact and publications
-
-<!--
-{% comment %}
-=============================
-== CITING OWN PUBLICATIONS ==
-=============================
-
-You can list your own publications below in case you did not cite them in the text
-(which you should do, though).
-Use the Liquid citing syntax as explained in the wiki:
-https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publications
-Remember to use the `--file jlesc.bib` with the `cite` tag.
-
-=====================================
-== START HERE WITH YOUR ADDITIONAL REFERENCES ==
-{% endcomment %}
-
-
-
-{% comment %}
-== NO MORE BELOW THIS ==
-========================
-{% endcomment %}
--->
+None yet.
 
 {% bibliography --cited --file jlesc.bib %}
 

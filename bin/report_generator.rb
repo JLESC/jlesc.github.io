@@ -352,10 +352,10 @@ module Jekyll
       num_ref_jlesc ||= 0
       num_ref_external ||= 0
 
-      if num_ref_jlesc == 0
-        document.content.gsub! BIBLIOGRAPHY_MATCHER_JLESC, "\nNo publication yet."
-      end
-
+      # if num_ref_jlesc == 0
+      #   document.content.gsub! BIBLIOGRAPHY_MATCHER_JLESC, "\nNo publication yet."
+      # end
+      # 
       if num_ref_external == 0
         document.content.gsub! BIBLIOGRAPHY_MATCHER_EXTERNAL, "\nNo external references."
       end
@@ -398,6 +398,8 @@ module Jekyll
       puts '    cleanup obsolete stuff in LaTeX'
       document.content.gsub! /\\textbackslash\{}printbibliography/, '\printbibliography'
       document.content.gsub! /\\textbackslash\{}cite\\\{(.*?)\\}/, '\cite{\1}'
+      document.content.gsub! /\\begin{itemize}/, '\begin{itemize*}'
+      document.content.gsub! /\\end{itemize}/, '\end{itemize*}'
 
       puts '    increase heading levels'
       # for the annual report the level of headings of the project reports need to be increased
