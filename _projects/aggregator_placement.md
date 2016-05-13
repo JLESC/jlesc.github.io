@@ -94,3 +94,5 @@ Additionally, we plan to implement the topology-aware aggregator placement once 
 A new visit could be organized to that purpose. 
 
 ## References
+
+{% bibliography --file external/aggregator_placement.bib %}

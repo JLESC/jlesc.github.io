@@ -351,7 +351,7 @@ module Jekyll
 
       num_ref_jlesc ||= 0
       num_ref_external ||= 0
-
+      puts "      Found #{num_ref_external} external citations"
       # if num_ref_jlesc == 0
       #   document.content.gsub! BIBLIOGRAPHY_MATCHER_JLESC, "\nNo publication yet."
       # end

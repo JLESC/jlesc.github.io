@@ -51,3 +51,5 @@ This project effectively started in 2016.
 This project started in 2016. Currently we are investigating the limitations of the current static allocations of the HPC resources when running HPC workflows (i.e., allocating a fixed set of cores for a fixed duration) and the resulting resource waste. Our goal is to introduce new dynamic resource management techniques for workflow-type jobs running on HPC platforms. 
 
 ## References
+
+{% bibliography --file external/scheduling_hpc_workflows.bib %}
