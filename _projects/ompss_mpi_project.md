@@ -60,3 +60,5 @@ A paper {% cite MartsinkevichEtAl2015 %} has been published in Cluster 2015 proc
 There will be a journal submission based on this work.
 
 ## References
+
+{% bibliography --file external/ompss_mpi_project.bib %}
