@@ -38,19 +38,20 @@ future supercomputers.
 ## Results for 2015/2016
 
 During the previous year we tackled several challenges related to silent
-corruption. The first question we answered was related to the use of multiple
-SDC detectors with different characteristics. We designed a strategy that
-allows users to decide which SDC detector use and at which frequency, having
-the choice among several SDC detectors with different performance, recall and
-precision. This research was published as a full paper at HiPC2015 and we wrote
-an extention full of details and new result and submitted to IJHPCA. In
-addition, we investigated how to create SDC detectors based on support vector
-machines (SVM) and compare them with the state-of-the-art SDC detectors. Our
-evaluation with multiple large-scale HPC applications shows that SVM is a good
-technique that can learn about the behaviour of the datasets and detect the
-vast majority of anomalies while imposing a negligible overhead. Our technique
-proforms better than the existent ones in most of the cases. We published this
-results at CCGrid2016.
+corruption {% cite BautEtAl2015 %}. The first question we answered
+was related to the use of multiple SDC detectors with different
+characteristics. We designed a strategy that allows users to decide which SDC
+detector use and at which frequency, having the choice among several SDC
+detectors with different performance, recall and precision. This research was
+published as a full paper at HiPC2015 {% cite BautEtAl2015b %} and we wrote an
+extention full of details and new result and submitted to IJHPCA. In addition,
+we investigated how to create SDC detectors based on support vector machines
+(SVM) and compare them with the state-of-the-art SDC detectors. Our evaluation
+with multiple large-scale HPC applications shows that SVM is a good technique
+that can learn about the behaviour of the datasets and detect the vast majority
+of anomalies while imposing a negligible overhead. Our technique proforms
+better than the existent ones in most of the cases. We published this results
+at CCGrid2016 {% cite SubaEtAl2016 %}.
 
 
 ## Visits and meetings
