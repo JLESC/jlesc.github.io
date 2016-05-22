@@ -198,8 +198,15 @@ module Jekyll
           output = "\\section{#{topic_hash['title']}}\\label{topic-#{topic_id.to_s}}\n"
           output += topic_hash['desc']
           output += "\n"
-          topic_hash[:projects].each do |project|
-            output += "\\input{projects/#{project}}\n"
+          # Note: reorder the status keywords here to enforce a different ordering in the report
+          %w(running help_wanted preparation starting suspended closing finished).each do |status|
+            topic_hash[:projects].each do |project|
+              collections['projects'].docs.each do |project_doc|
+                if project_doc.data['status'] == status and project_doc.data['slug'] == project
+                  output += "\\input{projects/#{project}}\n"
+                end
+              end
+            end
           end
           sanitize_for_latex(output)
           f.write(output)
