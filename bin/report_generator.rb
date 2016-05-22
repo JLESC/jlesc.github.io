@@ -229,6 +229,7 @@ module Jekyll
     def run
       puts "  Markdown file: #{document.relative_path}"
 
+      add_project_members
       read_used_citations
       md_cleanup
 
@@ -272,6 +273,42 @@ module Jekyll
 
     def output_ext
       '.tex'
+    end
+
+    private
+    def add_project_members
+      no_members = true
+      no_head = true
+      member_str = ''
+      head_str = ''
+
+      unless @document.data['members'].nil?
+        member_str = "Members\n : "
+        if @document.data['members'].length == 0
+          member_str += 'no members'
+        else
+          members = []
+          @document.data['members'].each do |member|
+            members << "{% person #{member} %}"
+          end
+          member_str += members.join(', ')
+        end
+        no_members = false
+      end
+      unless @document.data['head'].nil?
+        head_str = "Head\n : "
+        head_str += "{% person #{@document.data['head']} %}"
+        no_head = false
+      end
+
+      head_member_str = ''
+      unless no_head
+        head_member_str += head_str + "\n\n"
+      end
+      unless no_members
+        head_member_str += member_str
+      end
+      @document.content.prepend("\n\n" + head_member_str + "\n\n")
     end
 
     private
