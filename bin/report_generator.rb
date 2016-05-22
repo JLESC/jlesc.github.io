@@ -198,8 +198,15 @@ module Jekyll
           output = "\\section{#{topic_hash['title']}}\\label{topic-#{topic_id.to_s}}\n"
           output += topic_hash['desc']
           output += "\n"
-          topic_hash[:projects].each do |project|
-            output += "\\input{projects/#{project}}\n"
+          # Note: reorder the status keywords here to enforce a different ordering in the report
+          %w(running starting suspended closing finished).each do |status|
+            topic_hash[:projects].each do |project|
+              collections['projects'].docs.each do |project_doc|
+                if project_doc.data['status'] == status and project_doc.data['slug'] == project
+                  output += "\\input{projects/#{project}}\n"
+                end
+              end
+            end
           end
           sanitize_for_latex(output)
           f.write(output)
@@ -229,6 +236,8 @@ module Jekyll
     def run
       puts "  Markdown file: #{document.relative_path}"
 
+      add_project_members
+      add_project_status
       read_used_citations
       md_cleanup
 
@@ -272,6 +281,58 @@ module Jekyll
 
     def output_ext
       '.tex'
+    end
+
+    private
+    def add_project_status
+      status_str = "Status\n : "
+      case @document.data['status']
+        when 'help_wanted'
+          status_str += 'Help Wanted'
+        when 'preparation'
+          status_str += 'In Preparation'
+        else
+          status_str += @document.data['status'].capitalize
+      end
+      # note: not appending double line break because member list is following in the same
+      #       description list
+      @document.content.prepend("\n\n" + status_str)
+    end
+
+    private
+    def add_project_members
+      no_members = true
+      no_head = true
+      member_str = ''
+      head_str = ''
+
+      unless @document.data['members'].nil?
+        member_str = "Further Members\n : "
+        if @document.data['members'].length == 0
+          member_str += 'no members'
+        else
+          members = []
+          @document.data['members'].each do |member|
+            members << "{% person #{member} %}"
+          end
+          member_str += members.join(', ')
+        end
+        no_members = false
+      end
+      unless @document.data['head'].nil?
+        head_str = "Head\n : "
+        head_str += "{% person #{@document.data['head']} %}"
+        no_head = false
+      end
+
+      head_member_str = ''
+      unless no_head
+        head_member_str += head_str + "\n\n"
+      end
+      unless no_members
+        head_member_str += member_str
+      end
+      @document.content.prepend("\n\n" + head_member_str + "\n\n")
     end
 
     private
