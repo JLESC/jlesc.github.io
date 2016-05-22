@@ -230,6 +230,7 @@ module Jekyll
       puts "  Markdown file: #{document.relative_path}"
 
       add_project_members
+      add_project_status
       read_used_citations
       md_cleanup
 
@@ -273,6 +274,22 @@ module Jekyll
 
     def output_ext
       '.tex'
+    end
+
+    private
+    def add_project_status
+      status_str = "Status\n : "
+      case @document.data['status']
+        when 'help_wanted'
+          status_str += 'Help Wanted'
+        when 'preparation'
+          status_str += 'In Preparation'
+        else
+          status_str += @document.data['status'].capitalize
+      end
+      # note: not appending double line break because member list is following in the same
+      #       description list
+      @document.content.prepend("\n\n" + status_str)
     end
 
     private
