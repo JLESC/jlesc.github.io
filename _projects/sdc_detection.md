@@ -20,6 +20,7 @@ members:
   - subasi_o
   - sun_h
   - unsal_o
+  - di_s
 ---
 
 ## Research topic and goals
@@ -75,6 +76,7 @@ None
 | {% person subasi_o %} | 3 PM |
 | {% person sun_h %} | 3 PM |
 | {% person unsal_o %} | 1 PM |
+| {% person di_s %} | 1 PM |
 
 
 ## Future plans
