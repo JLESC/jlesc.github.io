@@ -23,8 +23,8 @@
 #
 # exactly one of those has to be given:
 #
-#   to             ID (`_data/institutes.yml`) of the host institute
-#   invitee        ID (`_data/people.yml`) of the person inviting the visitor
+#   host             ID (`_data/institutes.yml`) of the host institute
+#   to               ID (`_data/people.yml`) of the person inviting the visitor
 #
 # Whenever possible, the `invitee` form should be preferred.
 # Only in those cases, where there is no clear JLESCee individual inviting the traveling person the
@@ -58,30 +58,15 @@
 # [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
 #
 
-# this is a dummy entry
-- from: haensel_d
-  to: balaji_p
-  start: 2015-02-04
-  end: 2015-02-15
-
-# this is a dummy entry
-- from: speck_r
+- from: feld_c
   host: riken
-  start: 2016-02-04
-  end: 2016-02-8
+  start: 2016-02-21
+  end: 2016-02-27
 
-# this is a dummy entry
-- from: klatt_t
-  to: speck_r
-  start: 2015-11-01
-  end: 2016-03-31
-  no_exact: true
-
-# this is a dummy entry
 - from: haensel_d
   to: balaji_p
-  start: 2015-12-04
-  end: 2016-01-25
+  start: 2016-05-15
+  end: 2016-06-19
 
 - from: cavelan_a
   to: cappello_f
