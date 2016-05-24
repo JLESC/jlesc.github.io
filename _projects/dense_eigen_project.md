@@ -95,25 +95,9 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 ## Person-Month efforts in 2015/2016
 
-{% comment %}
-=========================================
-== ADD A TABLE OF PERSON-MONTH EFFORTS ==
-
-Put it in the following form, each person on its own line
-
-| {% person PERSON_ID %} | X.Y PM |
-
-e.g.:
-
-| {% person kabadshow_i %} | 2.0 PM |
-
-Above the very first person put the following line:
-
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
-
-==================================
-== START HERE ==
-{% endcomment %}
+| {% person imamura_t %}    | 0.5 PM |
+| {% person gutheil_i %} | 0.5 PM |
 
 
 ## Future plans
