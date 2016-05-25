@@ -180,7 +180,7 @@
 The compression factor generally observed with lossless compression is 1.2 to 4 (the compressed data set is 1.2 to 4 times smaller than the original). Lossy compressors deliberately lose information in order to reduce the size of the initial data set further. Lossy compressors reach very variable compression ratios depending on the application. This could be from 3 to 4 for difficult-to-compress data sets (lossless compressors would achieve a compression ratio of 1.5 to 2 on those data sets) to x100 for easier-to-compress data sets. Lossy compressors can be error bounded or not. Lossy compressors that are not error bounded simply compress the data set as much as they can, with no guarantee on the error on each decompressed data. Their applicability is limited in HPC because users have expectations in terms of accuracy. Error bounded lossy compressors allow users to set a maximum (or relative) compression/decompression error. The maximum error is the maximum of the difference between any initial data in the data set and its decompressed version (from its lossy compressed version). The user has a guarantee of a maximum loss of information quantified by the maximum compression/decompression errors. Users will set the maximum error to match their accuracy expectations. Note that all lossy compressors keep all data points of the initial data set (none of the lossy compressors drop data points).</p>
 
 <p>Few studies have been done on checkpointing and restart from lossy compressed states <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a>. 
-These studies are limited in scope by studying only one application and one type of lossy compressor: NICAM with a lossy compressor based on wavelet and quantization [Sas15] and ChaNGa with the fpzip lossy compressor <a href="#NiETAl2014">(Ni et al. 2014)</a>. 
+These studies are limited in scope by studying only one application and one type of lossy compressor: NICAM with a lossy compressor based on wavelet and quantization <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a> and ChaNGa with the fpzip lossy compressor <a href="#NiETAl2014">(Ni et al. 2014)</a>. 
 They already reveal two interesting points/First, checkpoints are composed of different variables that present different sensitivity to lossy compression. The correctness of the execution after restart depends on how each variable is compressed. In the cosmology simulation (ChaNGa), lossy compression of particle positions lead the execution to hang for a high compression level, while this does not happen when compressing other variable at the same level. Second, for the study of NICAM, the authors consider that an error of 1 percent on the final result is acceptable when restarting from lossy checkpoints. The rationale is that this magnitude of error is similar to those of sensor errors and model errors, while the compression factor exceeds 5.</p>
 
 <p>In contrary to previous research that concentrated on few applications, we focus on simple problems used by many applications and try to understand how they behave. We are exploring diffusion and advection problems. The diffusion problem simulates the heat diffusion on a one-dimensional rod. The advection problem simulates a sine wave advecting to the right with periodic boundaries.</p>
@@ -193,11 +193,11 @@ They already reveal two interesting points/First, checkpoints are composed of di
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>Franck Cappello visits UIUC almost every week. We have a 30 minutes-1hour meeting almost each time.</p>
+<p>Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
-
+<p>None yet.</p>
 <ol class="bibliography"></ol>
 
 <h2 id="person-month-efforts-in-20152016">
