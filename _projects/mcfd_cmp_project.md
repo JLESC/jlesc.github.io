@@ -39,10 +39,10 @@ The project has just started and hence there are no results available, yet.
 However, both parties are about to create accounts on both machines such that the first task, i.e., the porting of the individual codes can be performed.
 
 ## Visits and meetings
--
+No visits yet.
 
 ## Impact and publications
--
+No publications yet.
 
 {% bibliography --cited --file jlesc.bib %}
 

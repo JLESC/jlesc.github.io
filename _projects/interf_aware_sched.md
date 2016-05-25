@@ -24,7 +24,7 @@ Performance variability in HPC systems remains a challenge. I/O interference, a 
 
 ## Results for 2015/2016
 
-We conducted an extensive experimental campaign to explore the various root causes of I/O interference in HPC storage systems. We used microbenchmarks on the Grid'5000 testbed to evaluate how the applications' access pattern, the network components, the file system's configuration, and the backend storage devices influence I/O interference. The results of this campaign have been accepted for publication at the IPDPS 2016 conference {% cite YildizIPDPS2016 %}.
+We conducted an extensive experimental campaign to explore the various root causes of I/O interference in HPC storage systems. We used microbenchmarks on the Grid'5000 testbed to evaluate how the applications' access pattern, the network components, the file system's configuration, and the backend storage devices influence I/O interference. The results of this campaign have been accepted for publication at the IPDPS 2016 conference {% cite YildizIPDPS2016 --file jlesc.bib %}.
 
 
 ## Visits and meetings
@@ -50,3 +50,5 @@ Internship of Orcun Yildiz at ANL from June to September 2015.
 We plan to further investigate the interference issue in the context of read workloads and mixed read/write workloads, as a way to extend our IPDPS 2016 paper.
 
 ## References
+
+{% bibliography --file external/interf_aware_sched.bib %}

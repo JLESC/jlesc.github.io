@@ -68,9 +68,6 @@ From the collaboration, we found some functionalities that need to be supported
 by Argobots (e.g., retrieving the work unit argument at run-time) and
 implemented them in Argobots as well.
 
-
-## Results for 2015/2016
-
 We have discussed the feasibility of integrating OmpSs and Argobots. We reviewed
 both runtimes and compared their functionalities. The first observation is that
 Argobots and OmpSs runtime are overlapped in some basic functionalities and

@@ -23,12 +23,12 @@ Many techniques used in data management such as scheduling of I/O requests, pref
 
 ## Results for 2015/2016
 
-The Omnisc'IO approach was presented at SC 14 {% cite DorierEtAl2014a %}. An extension of the approach was published in the TPDS journal {% cite DorierTPDS2015 %}.
+The Omnisc'IO approach was presented at SC 14 {% cite DorierEtAl2014a --file jlesc.bib %}. An extension of the approach was published in the TPDS journal {% cite DorierTPDS2015 --file jlesc.bib %}.
 
 
 ## Visits and meetings
 
-None
+None yet.
 
 ## Impact and publications
 

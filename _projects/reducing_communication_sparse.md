@@ -90,6 +90,4 @@ meeting again at SIAM PP in Paris as well as the Joint Lab meeting in Lyon.
 
 ## References
 
-No references.
-
 {% bibliography --file external/reducing_communication_sparse.bib %}

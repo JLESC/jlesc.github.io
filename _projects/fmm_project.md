@@ -26,7 +26,7 @@ This will allow us to improve the usability of the FMM Coulomb solver in molecul
 Initial research already discovered, that the current intrinsic parallel scaling limitations stem from thread synchronization (intranode) and process synchronization (internode) on large-scale systems.
 We will investigate weak and delayed synchronization models, as well as node-level tasking approaches and other techniques with MPI-3 and upcoming MPI-4 extensions to alleviate some of these performance bottlenecks.
 
-## Results for 2014/2015
+## Results for 2015/2016
 The project was initiated at the JLESC meeting in November 2014 between ANL and JSC.
 To provide a consistent interface for measuring and tuning parallel code performance some profound changes had to be made to the code.
 We started implementing an abstract parallelization layer for the FMSolvr library.
@@ -36,10 +36,10 @@ Besides the structural changes, a latency-avoiding communication scheme was impl
 Together with the automatic testing framework, scaling bottlenecks of the method can be investigated much easier.
 
 ## Visits and meetings
-David Haensel will join the group of Pavan Balaji in Mai/June 2016 to develop a tasking scheme for FMSolvr on Argobots. This visit is vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).
+{% person haensel_d %} will join the group of {% person balaji_p %} in Mai/June 2016 to develop a tasking scheme for FMSolvr on Argobots. This visit is vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).
 
 ## Impact and publications
-none yet.
+None yet.
 
 <!--
 
@@ -63,4 +63,5 @@ In a second step the FMM will be coupled with currently available low-level task
 This will also help to reduce load imbalances due to non-homogeneous particle distributions.
 
 ## References
+
 {% bibliography --file external/fmm_project.bib %}

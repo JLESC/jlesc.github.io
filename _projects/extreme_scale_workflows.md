@@ -27,7 +27,7 @@ The goal of the Swift/Decaf/Damaris/FlowVR collaboration is to enhance the progr
 
 ## Results for 2015/2016
 
- * M. Dorier led the authorship of the ISAV 2015 workshop paper on lessons learned developing all four tools {% cite DorierEtAl2015 %}.
+ * M. Dorier led the authorship of the ISAV 2015 workshop paper on lessons learned developing all four tools {% cite DorierEtAl2015 --file jlesc.bib %}.
  * M. Dreher and J. Wozniak developed an initial integration plan for Swift and Decaf.
  * M. Dreher presented an initial suite of workflows at the December 2015 meeting.
  * T. Peterka co-organized SC15 BOF on scientific workflows.
@@ -36,7 +36,7 @@ The goal of the Swift/Decaf/Damaris/FlowVR collaboration is to enhance the progr
 
 ## Visits and meetings
 
-None
+None yet.
 
 ## Impact and publications
 
@@ -60,3 +60,5 @@ None
 This summer we will implement the main integration between Decaf and Swift. A paper about the MPI details of integration between Swift and Decaf would be a good submission to EuroMPI. A paper about realistic LAMMPS or HACC simulation/analysis workflows would be a good submission to SC.
 
 ## References
+
+{% bibliography --file external/extreme_scale_workflows.bib %}

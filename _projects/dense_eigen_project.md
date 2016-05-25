@@ -105,11 +105,9 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 In 2016, we divide the first year into 1st and 2nd halves on the management of this project.
 For each half, we plan to do as follow.
 
-1st 6 months
-  : Performance measurements on the available resources
+* 1st 6 months: performance measurements on the available resources
 
-2nd 6 months
-  : tuning the existing libraries on the available computers
+* 2nd 6 months: tuning the existing libraries on the available computers
 
 
 ## References

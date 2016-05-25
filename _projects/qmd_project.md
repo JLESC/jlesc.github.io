@@ -34,33 +34,15 @@ Contributions:
 * analysis of numerical scaling and cost per time step for different time-stepping schemes for quantum dynamics based on time-dependent Kohn-Sham equations
 * numerical study of electron dynamics in model systems
 
-Timeline:
-
-* month 1-6: analysis of the Hamiltonian to determine what is required for the integrator
-* month 7-12: implementation of SSPRK schemes
-* month 13-18: interface Qbox/Qb@ll with PETSc
-* month 19-24: development and implementation of better-suited integrators
-
-Computer resource needs:
-
-* 50-100k node hours on Mira or BlueWaters
-
-Expected results:
-
-* internal report on the results
-* scientific paper, if a more efficient integrator can be found/developed
-* code implementation into Qbox/Qb@ll
-
-
-## Results for 2016/2017
-
+## Results for 2015/2016
+None yet, the project has just started.
 
 ## Visits and meetings
 Since this is a starting cooperation no visits have been initiated.
 
 
 ## Impact and publications
-none yet.
+None yet.
 
 <!--
 
@@ -69,6 +51,20 @@ none yet.
 
 ## Future plans
 
+Timeline:
+
+* month 1-6: analysis of the Hamiltonian to determine what is required for the integrator
+* month 7-12: implementation of SSPRK schemes
+* month 13-18: interface Qbox/Qb@ll with PETSc
+* month 19-24: development and implementation of better-suited integrators
+
+Expected results:
+
+* internal report on the results
+* scientific paper, if a more efficient integrator can be found/developed
+* code implementation into Qbox/Qb@ll
+
 ## References
+
 {% bibliography --file external/qmd_project.bib %}
   
