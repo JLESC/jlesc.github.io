@@ -42,17 +42,17 @@
 architectures:
   title: Advanced Architectures
   desc: >
-    Some text
+    The convergence between HPC, Cloud and bigdata as well as the technology trends, in particular the end of the Moore’s law, call for research in new architecture at the large scale level and at the device level. The convergence between HPC, Cloud and bigdata is a central research topic in the community as shown by the BDEC meetings organized by the leaders of the community and by the orientation taken by vendors (HPC system providers). What type of resources are needed, what architecture, what system software, what programming models, what new applications are some of the questions this convergence raises. The end of the Moore's law is another factor of transformation in the HPC domain. It becomes clear that the CMOS integration progress will come to an end in the mid 2020's. It is also very unlikely that any new technology will provide four decades of progress that CMOS gave us. This opens a very exciting era of research for microarchitecture, system architecture and all the software stack: if performance progress does not come anymore from the technology then architecture and software will play a major role.
 
 apps:
   title: Apps & Mini-Apps
   desc: >
-    Some text
+    Science needs and constraints in terms of simulation, analytics, communication and storage are the ultimate drivers of the research in the JLESC. Applications are the tangible instances of scientific problems on which the joint-lab can provide contributions. It is important in the joint-lab to understand trends and anticipate significant evolutions. How to model scientific problems and map them into efficient applications, what type of numerical methods these applications use and what are the attractive numerical methods for future extreme scale systems, what are the motifs (in the sense of Berkeley motifs) used in these applications, are there any new emerging motifs, how new constraints such as data reduction and in-situ data analytics change application design, how to map applications to mini-apps that are more tractable for computer science research purpose are among the questions that the JLESC address in this topic.
 
 storage:
   title: I/O, Storage and In-Situ Processing
   desc: >
-    Some text
+    Data communication and storage is becoming the main performance bottleneck for extreme scale systems. File system bandwidth for the largest systems seems plateauing around 1TB/s.  This raises several new problems concerning the I/O infrastructure, the software of the storage system, visualization, how to perform analytics before storing the data produced by the simulation. New research domains have emerged in HPC system the past 2-5 years: Burst buffers, in-situ data analytics, workflows and new abstractions for storage. This topic of the JLESC oversees all these questions considering performance (I/O overheads and interference for example), scalability and reliability as critical.  
 
 numerics:
   title: Numerical Methods
@@ -104,4 +104,4 @@ perf_tools:
 prog_lang:
   title: Programming Languages and Runtimes
   desc: >
-    Some text
+    The community has converged since more than a decade towards the model of MPI+OpenMP. While other programming models have been proposed, ultimately the relevant new features proposed by these models were integrated into MPI (RMA for example) and OpenMP (accelerator directives for example). So it is remarkable that MPI and OpenMP are continuously evolving to adapt to changes in architectures. The next generation of systems and the future Exascale systems pose new problems with the non-volatile memory, many cores CPUs and the needs to manage power, to better load balance the execution and to handle a variety of accelerators. In particular, tasks based programming models and runtimes are attractive and need to be refined for these new systems.
