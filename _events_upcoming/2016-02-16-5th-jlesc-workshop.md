@@ -39,3 +39,5 @@ engineers and students who want to learn more about Post Petascale / Exascale Co
 This workshop is supported by the PUF in the context of the NEXTGN project.
 
 Registration will take place at [http://jlesc2016.sciencesconf.org](http://jlesc2016.sciencesconf.org/).
+
+To go there, please follow these [instructions](http://jlesc2016.sciencesconf.org/resource/page/id/1).
