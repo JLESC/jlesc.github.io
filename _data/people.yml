@@ -145,7 +145,7 @@ barcelo_a:
 
 bautista_gomez_l:
   sur_name: Bautista Gomez
-  given_name: Leonard
+  given_name: Leonardo
   affiliation: bsc
   position:
   topics: Resilience
@@ -195,7 +195,7 @@ bouge_l:
   position:
   topics: Big Data & I/O
   email: luc.bouge@ens-rennes.fr
-  homepage: 
+  homepage:
 
 broemmel_d:
   sur_name: Broemmel
@@ -205,7 +205,7 @@ broemmel_d:
   topics:
   email: d.broemmel@fz-juelich.de
   homepage:
-    
+
 brown_m:
   sur_name: Maxine D.
   given_name: Brown
@@ -387,7 +387,7 @@ finkel_h:
   given_name: Hal
   affiliation: anl
   position:
-  topics: 
+  topics:
   email: hfinkel@anl.gov
   homepage: https://www.alcf.anl.gov/staff-directory/hal-finkel
 
@@ -426,15 +426,6 @@ girona_s:
   email: sergi.girona@bsc.es
   homepage: https://sites.google.com/site/sergigirona/
 
-gomez_l:
-  sur_name: Gomez
-  given_name: Leonardo Bautista
-  affiliation: bsc
-  position:
-  topics:
-  email:
-  homepage:
-
 grigori_l:
   sur_name: Grigori
   given_name: Laura
@@ -460,7 +451,7 @@ gropp_b:
   topics:
   email:  wgropp@illinois.edu
   homepage: http://wgropp.cs.illinois.edu/
-  
+
 habib_s:
   sur_name: Habib
   given_name: Salman
@@ -493,7 +484,7 @@ heinrich_c:
   topics: Performance Tools
   email: franz-christian.heinrich@inria.fr
   homepage:
-    
+
 heitmann_k:
   sur_name: Heitmann
   given_name: Katrin
@@ -515,7 +506,7 @@ houzeaux_g:
   given_name: Guillaume
   affiliation: bsc
   position:
-  topics: 
+  topics:
   email: guillaume.houzeaux@bsc.es
   homepage: https://www.bsc.es/about-bsc/staff-directory/houzeaux-guillaume
 
@@ -581,7 +572,7 @@ kalbarczyk_z:
   sur_name: Kalbarczyk
   given_name: Zbigniew
   affiliation: uiuc
-  position: 
+  position:
   email: kalbarcz@illinois.edu
   homepage: https://www.ece.illinois.edu/directory/profile/kalbarcz
 
@@ -641,10 +632,10 @@ lachat_c:
   sur_name: Lachat
   given_name: Cédric
   affiliation: inria
-  position: 
+  position:
   topics:
   email: cedric.lachat@inria.fr
-  homepage: 
+  homepage:
 
 lefevre_l:
   sur_name: Lefevre
@@ -696,7 +687,7 @@ martsinkevich_t:
   given_name: Tatiana V.
   affiliation: inria
   position:
-  topics: 
+  topics:
   email: tatiana.mar@inria.fr
   homepage:
 
@@ -726,7 +717,7 @@ mehaut_j:
   topics:
   email:
   homepage: https://team.inria.fr/corse/team-members/jean-francois-mehaut/
-  
+
 mehta_v:
   sur_name: Mehta
   given_name: Vishal
@@ -1027,8 +1018,8 @@ schmitz_c:
   affiliation: anl
   position:
   topics:
-  email: 
-  homepage: 
+  email:
+  homepage:
 
 seidel_ed:
   sur_name: Seidel
@@ -1088,7 +1079,7 @@ steinbusch_b:
   topics: Numerics
   email: b.steinbusch@fz-juelich.de
   homepage:
-    
+
 stevens_s:
   sur_name: Stevens
   given_name: Sean R.
@@ -1183,7 +1174,7 @@ tsuji_m:
   topics:
   email:
   homepage:
-    
+
 turk_m:
   sur_name: Turk
   given_name: Matthew J.
@@ -1212,7 +1203,7 @@ uram_t:
   given_name: Thomas D.
   affiliation: anl
   position:
-  topics: 
+  topics:
   email: turam@anl.gov
   homepage: https://www.alcf.anl.gov/staff-directory/thomas-d-uram
 
@@ -1243,7 +1234,7 @@ vishwanath_v:
   sur_name: Vishwanath
   given_name: Venkatram
   affiliation: anl
-  position: 
+  position:
   topics:
   email: venkat@anl.gov
   homepage: https://www.alcf.anl.gov/staff-directory/venkatram-vishwanath
@@ -1270,7 +1261,7 @@ yildiz_o:
   topics:
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
-  
+
 wheeler_d:
   sur_name: Wheeler
   given_name: David
@@ -1279,13 +1270,13 @@ wheeler_d:
   topics:
   email: dwheeler@illinois.edu
   homepage: http://www.ncsa.illinois.edu/assets/php/directory/contact.php?contact=dwheeler
-  
+
 wilde_m:
   sur_name: Wilde
   given_name: Michael J.
   affiliation: anl
   position:
-  topics: 
+  topics:
   email: wilde@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~wilde/
 
@@ -1331,6 +1322,6 @@ yoshii_k:
   given_name: Kazutomo
   affiliation: anl
   position:
-  topics: 
+  topics:
   email: okazutomo@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/person/kazutomo-yoshii
