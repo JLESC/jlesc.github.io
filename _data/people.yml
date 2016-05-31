@@ -280,6 +280,15 @@ conejero_f:
   email: marc.casas@bsc.es
   homepage:
 
+costan_a:
+  sur_name: Costan
+  given_name: Alexandru
+  affiliation: inria
+  position:
+  topics:
+  email: alexandru.costan@inria.fr
+  homepage: https://team.inria.fr/kerdata/alexandru-costan/
+
 constantinescu_e:
   sur_name: Constantinescu
   given_name: Emil
@@ -584,6 +593,15 @@ kale_s:
   topics: Programming Models
   email: kale@illinois.edu
   homepage: http://charm.cs.uiuc.edu/~kale/
+  
+keahey_k:
+  sur_name: Keahey
+  given_name: Kate
+  affiliation: anl
+  position:
+  topics:
+  email: keahey@mcs.anl.gov
+  homepage: www.mcs.anl.gov/~keahey
 
 keller_tesser_r:
   sur_name: Keller Tesser
