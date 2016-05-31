@@ -205,6 +205,15 @@ broemmel_d:
   topics:
   email: d.broemmel@fz-juelich.de
   homepage:
+    
+brown_m:
+  sur_name: Maxine D.
+  given_name: Brown
+  affiliation: uiuc
+  position:
+  topics:
+  email: maxine@uic.edu
+  homepage: https://www.evl.uic.edu/maxine/
 
 calhoun_j:
   sur_name: Calhoun
@@ -442,6 +451,15 @@ gropp_b:
   topics:
   email:  wgropp@illinois.edu
   homepage: http://wgropp.cs.illinois.edu/
+  
+habib_s:
+  sur_name: Habib
+  given_name: Salman
+  affiliation: anl
+  position:
+  topics:
+  email: habib@anl.gov
+  homepage: http://www.mcs.anl.gov/person/salman-habib
 
 haensel_d:
   sur_name: Haensel
@@ -466,6 +484,13 @@ heinrich_c:
   topics: Performance Tools
   email: franz-christian.heinrich@inria.fr
   homepage:
+    
+heitmann_k:
+  sur_name: heitmann_k
+  given_name: Katrin
+  affiliation: anl
+  email: heitmann@anl.gov
+  homepage: http://www.ci.anl.gov/profile/212
 
 hori_a:
   sur_name: Hori
@@ -567,6 +592,14 @@ keller_tesser_r:
   position:
   email: ktesser@inf.ufrgs.br
   homepage:
+
+kettimuthu_r:
+  sur_name: Kettimuthu
+  given_name: Rajkumar
+  affiliation: anl
+  position:
+  email: kettimut@mcs.anl.gov
+  homepage: http://www.mcs.anl.gov/~kettimut/
 
 klatt_t:
   sur_name: Klatt
@@ -979,6 +1012,15 @@ schleife_a:
   email: schleife@illinois.edu
   homepage: http://schleife.matse.illinois.edu/user/1.html
 
+schmitz_c:
+  sur_name: Schmitz
+  given_name: Corby B.
+  affiliation: anl
+  position:
+  topics:
+  email: 
+  homepage: 
+
 seidel_ed:
   sur_name: Seidel
   given_name: Ed
@@ -1037,6 +1079,11 @@ steinbusch_b:
   topics: Numerics
   email: b.steinbusch@fz-juelich.de
   homepage:
+    
+stevens_s:
+  sur_name: Stevens
+  given_name: Sean R.
+  affiliation: uiuc
 
 subasi_o:
   sur_name: Subasi
@@ -1127,6 +1174,15 @@ tsuji_m:
   topics:
   email:
   homepage:
+    
+turk_m:
+  sur_name: Turk
+  given_name: Matthew J.
+  affiliation: uiuc
+  position:
+  topics:
+  email: mjturk@illinois.edu
+  homepage: http://www.astro.illinois.edu/people/mjturk
 
 ukawa_a:
   sur_name: Ukawa
@@ -1141,6 +1197,15 @@ unsal_o:
   topics: FPGAs
   email: osman.unsal@bsc.es
   homepage:
+
+uram_t:
+  sur_name: Uram
+  given_name: Thomas D.
+  affiliation: anl
+  position:
+  topics: 
+  email: turam@anl.gov
+  homepage: https://www.alcf.anl.gov/staff-directory/thomas-d-uram
 
 vandenbergen_n:
   sur_name: Vandenbergen
@@ -1196,6 +1261,25 @@ yildiz_o:
   topics:
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
+  
+wheeler_d:
+  sur_name: Wheeler
+  given_name: David
+  affiliation: ncsa
+  position:
+  topics:
+  email: dwheeler@illinois.edu
+  homepage: http://www.ncsa.illinois.edu/assets/php/directory/contact.php?contact=dwheeler
+  
+wilde_m:
+  sur_name: Wilde
+  given_name: Michael J.
+  affiliation: anl
+  position:
+  topics: 
+  email: wilde@mcs.anl.gov
+  homepage: http://www.mcs.anl.gov/~wilde/
+
 
 wilson_j:
   sur_name: Wilson
