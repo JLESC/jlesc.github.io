@@ -9,6 +9,7 @@ project_url:
 status: running
 topics: 
   - architectures
+  - storage
 keywords:
   - cloud computing
 head: keahey_k
