@@ -74,3 +74,8 @@ riken:
   title: RIKEN Advanced Institute for Computational Science
   abbr: RIKEN
   logo: riken_logo.png
+  
+external:
+  title: External partner
+  abbr: EXT
+  logo:
