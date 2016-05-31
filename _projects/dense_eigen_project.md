@@ -113,5 +113,3 @@ For each half, we plan to do as follow.
 ## References
 
 {% bibliography --file external/dense_eigen_project.bib %}
-
----

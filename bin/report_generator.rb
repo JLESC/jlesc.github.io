@@ -459,8 +459,6 @@ module Jekyll
       puts '    cleanup obsolete stuff in LaTeX'
       document.content.gsub! /\\textbackslash\{}printbibliography/, '\printbibliography'
       document.content.gsub! /\\textbackslash\{}cite\\\{(.*?)\\}/, '\cite{\1}'
-      document.content.gsub! /\\begin{itemize}/, '\begin{itemize*}'
-      document.content.gsub! /\\end{itemize}/, '\end{itemize*}'
 
       puts '    increase heading levels'
       # for the annual report the level of headings of the project reports need to be increased

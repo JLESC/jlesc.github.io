@@ -30,7 +30,9 @@
 \usepackage{todonotes}
 \usepackage{longtable}
 \usepackage{color}
-\usepackage{mdwlist}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,topsep=0pt}
 
 %% REMOVE THIS FOR THE FINAL REPORT
 \usepackage{blindtext}
@@ -82,17 +84,16 @@
 \clubpenalty=9999                 % Almost no orphans at top of page.
 \interfootnotelinepenalty=9999    % Almost never break footnotes.
 
-\RedeclareSectionCommands[%
-  beforeskip=0\baselineskip,
-  afterskip=1\baselineskip
-]{section}
-\RedeclareSectionCommands[%
-  beforeskip=.5\baselineskip,
-  afterskip=-.1\baselineskip
-]{subsection,subsubsection}
+\usepackage{setspace}
+\setstretch{1.05}
+
 \RedeclareSectionCommands[%
   beforeskip=.5\baselineskip,
-  afterskip=-1em
+  afterskip=0\baselineskip
+]{subsubsection}
+\RedeclareSectionCommands[%
+  beforeskip=.5\baselineskip,
+  afterskip=0\baselineskip
 ]{paragraph,subparagraph}
 
 \lehead{\bfseries\headmark}    %% Top left on even pages
