@@ -382,6 +382,15 @@ feld_c:
   email: c.feld@fz-juelich.de
   homepage:
 
+finkel_h:
+  sur_name: Finkel
+  given_name: Hal
+  affiliation: anl
+  position:
+  topics: 
+  email: hfinkel@anl.gov
+  homepage: https://www.alcf.anl.gov/staff-directory/hal-finkel
+
 frings_w:
   sur_name: Frings
   given_name: Wolfgang
@@ -1316,4 +1325,12 @@ yildiz_o:
   topics: Big Data & I/O
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
- 
+
+yoshii_k:
+  sur_name: Yoshii
+  given_name: Kazutomo
+  affiliation: anl
+  position:
+  topics: 
+  email: okazutomo@mcs.anl.gov
+  homepage: http://www.mcs.anl.gov/person/kazutomo-yoshii
