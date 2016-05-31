@@ -174,7 +174,7 @@ benoit_a:
   sur_name: Benoit
   given_name: Anne
   affiliation: inria
-  position: Permanent
+  position: permanent
   topics: Resilience
   email: Anne.Benoit@ens-lyon.fr
   homepage: http://graal.ens-lyon.fr/~abenoit/
@@ -192,7 +192,7 @@ bouge_l:
   sur_name: Bouge
   given_name: Luc
   affiliation: inria
-  position: Permanent
+  position: permanent
   topics: Big Data & I/O
   email: luc.bouge@ens-rennes.fr
   homepage:
@@ -210,7 +210,7 @@ brown_m:
   sur_name: Maxine D.
   given_name: Brown
   affiliation: uiuc
-  position: Permanent
+  position: permanent
   topics:
   email: maxine@uic.edu
   homepage: https://www.evl.uic.edu/maxine/
@@ -311,7 +311,7 @@ denis_a:
   sur_name: Denis
   given_name: Alexandre
   affiliation: inria
-  position:
+  position: permanent
   topics:
   email: alexandre.denis@inria.fr
   homepage: http://people.bordeaux.inria.fr/adenis/
@@ -351,7 +351,7 @@ dorier_m:
   sur_name: Dorier
   given_name: Matthieu
   affiliation: anl
-  position:
+  position: post_doc
   topics: Big Data & I/O
   email: mdorier@anl.gov
   homepage: https://people.irisa.fr/Matthieu.Dorier/wiki/doku.php
@@ -360,7 +360,7 @@ dreher_m:
   sur_name: Dreher
   given_name: Matthieu
   affiliation: anl
-  position:
+  position: post_doc
   topics: Programming Models
   email: mdreher@anl.gov
   homepage: http://www.mcs.anl.gov/person/matthieu-dreher
@@ -395,7 +395,7 @@ finkel_h:
   sur_name: Finkel
   given_name: Hal
   affiliation: anl
-  position:
+  position: permanent
   topics:
   email: hfinkel@anl.gov
   homepage: https://www.alcf.anl.gov/staff-directory/hal-finkel
@@ -404,7 +404,7 @@ frings_w:
   sur_name: Frings
   given_name: Wolfgang
   affiliation: jsc
-  position:
+  position: permanent
   topics:
   email: w.frings@fz-juelich.de
   homepage:
@@ -413,7 +413,7 @@ gibbon_p:
   sur_name: Gibbon
   given_name: Paul
   affiliation: jsc
-  position:
+  position: permanent
   topics:
   email: p.gibbon@fz-juelich.de
 
@@ -421,7 +421,7 @@ gimenez_j:
   sur_name: Gimenez
   given_name: Judit
   affiliation: bsc
-  position:
+  position: permanent
   topics: Performance Tools
   email: judit@bsc.es
   homepage:
@@ -706,7 +706,7 @@ martsinkevich_t:
   sur_name: Martsinkevich
   given_name: Tatiana V.
   affiliation: inria
-  position: 
+  position: phd
   topics:
   email: tatiana.mar@inria.fr
   homepage:
@@ -715,7 +715,7 @@ maruyama_n:
   sur_name: Maruyama
   given_name: Naoya
   affiliation: riken
-  position:
+  position: permanent
   topics: HPC, FPGAs
   email: nmaruyama@riken.jp
   homepage: http://mt.aics.riken.jp/~nmaruyama/
@@ -733,7 +733,7 @@ mehaut_j:
   sur_name: Mehaut
   given_name: Jean-Francois
   affiliation: inria
-  position:
+  position: permanent
   topics:
   email:
   homepage: https://team.inria.fr/corse/team-members/jean-francois-mehaut/
@@ -760,7 +760,7 @@ mendes_c:
   sur_name: Mendes
   given_name: Celsco
   affiliation: ncsa
-  position:
+  position: permanent
   topics:
   email:
   homepage: http://charm.cs.uiuc.edu/people/cmendes
@@ -815,7 +815,7 @@ oden_l:
   sur_name: Oden
   given_name: Lena
   affiliation: anl
-  position:
+  position: post_doc
   topics:
   email: loden@anl.gov
   homepage:
@@ -868,6 +868,7 @@ peterka_t:
 petit_a:
   sur_name: Petit
   given_name: Antoine
+  position: permanent
   affiliation: inria
 
 pineda_morales_l:
@@ -1110,7 +1111,7 @@ subasi_o:
   sur_name: Subasi
   given_name: Omer
   affiliation: bsc
-  position:
+  position: phd
   topics: Resilience
   email: omer.subasi@bsc.es
   homepage: https://www.linkedin.com/in/omer-subasi-b089643a
@@ -1257,7 +1258,7 @@ vishwanath_v:
   sur_name: Vishwanath
   given_name: Venkatram
   affiliation: anl
-  position:
+  position: permanent
   topics:
   email: venkat@anl.gov
   homepage: https://www.alcf.anl.gov/staff-directory/venkatram-vishwanath
@@ -1280,7 +1281,7 @@ yildiz_o:
   sur_name: Orcun
   given_name: Yildiz
   affiliation: inria
-  position:
+  position: phd
   topics:
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
@@ -1335,7 +1336,7 @@ yildiz_o:
   sur_name: Yildiz
   given_name: Orcun
   affiliation: inria
-  position:
+  position: phd
   topics: Big Data & I/O
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
