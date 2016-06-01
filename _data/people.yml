@@ -143,6 +143,15 @@ barcelo_a:
   email: alex.barcelo@bsc.es
   homepage:
 
+bauer_g:
+  sur_name: Bauer
+  given_name: Greg
+  affiliation: ncsa
+  position: permanent
+  topics: 
+  email: gbauer@ncsa.illinois.edu
+  homepage:
+
 bautista_gomez_l:
   sur_name: Bautista Gomez
   given_name: Leonardo
@@ -187,6 +196,16 @@ bienz_a:
   topics: Numerics
   email: bienz2@illinois.edu
   homepage: http://web.engr.illinois.edu/~bienz2/
+
+bleuse_r:
+  sur_name: Bleuse
+  given_name: Raphaël
+  affiliation: inria
+  position: phd
+  topics: 
+  email: raphael.bleuse@imag.fr
+  homepage: 
+ 
 
 bouge_l:
   sur_name: Bouge
@@ -705,6 +724,15 @@ llort_g:
   topics: Performance Tools
   email: gllort@bsc.es
   homepage:
+    
+lucarelli_g:
+  sur_name: Lucarelli
+  given_name: Giorgo
+  affiliation: inria
+  position: post_doc
+  topics: 
+  email: giorgio.lucarelli@inria.fr
+  homepage: http://moais.imag.fr/membres/giorgio.lucarelli/
 
 luehrs_s:
   sur_name: Lührs
@@ -1201,6 +1229,15 @@ tessier_f:
   topics:
   email: ftessier@anl.gov
   homepage: http://www.francoistessier.info/
+  
+trystram_d:
+  sur_name: Trystram
+  given_name: Denis
+  affiliation: inria
+  position: permanent
+  topics:
+  email: trystram@imag.fr
+  homepage: http://moais.imag.fr/membres/denis.trystram/
 
 tsubokura_m:
   sur_name: Tsubokura
@@ -1318,6 +1355,15 @@ yildiz_o:
   topics:
   email: orcun.yildiz@inria.fr
   homepage: https://team.inria.fr/kerdata/orcun-yildiz/
+
+wagner_f:
+  sur_name: Wagner
+  given_name: Frederic
+  affiliation: inria
+  position: permanent
+  topics:
+  email: wagnerf@imag.fr
+  homepage: http://www-id.imag.fr/Laboratoire/Membres/Wagner_Frederic/perso.html
 
 wheeler_d:
   sur_name: Wheeler
