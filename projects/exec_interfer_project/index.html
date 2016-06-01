@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Modeling and avoiding execution interferences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/exec_interfer_project/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Modeling and avoiding execution interferences</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Advanced Architectures</span>
+          </span>
+        
+          <span class="clearfix">
+            <span class="topic topic-title">I/O, Storage and In-Situ Processing</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix"></span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Greg</span> <span class="person sur-name">Bauer</span> (<abbr title="National Center for Supercomputing Applications" class="initialism" data-toggle="tooltip">NCSA</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Raphaël</span> <span class="person sur-name">Bleuse</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Giorgo</span> <span class="person sur-name">Lucarelli</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Denis</span> <span class="person sur-name">Trystram</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Frederic</span> <span class="person sur-name">Wagner</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-running">running</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+
+<p>The recent architectural evolutions of the interconnection network pose two main challenges: first, the community is proposing new
+topologies <a href="#BestaM2014Slim">(Besta and Hoefler 2014)</a>, <a href="#TuncerO2015PaC">(Tuncer, Leung, and Coskun 2015)</a>; and second, the network is now unique within the machine.
+Sharing a unique, multi-purpose interconnection network begets complex interactions between running applications, and it has a strong impact on the
+performances. More precisely, one can identify two main types of interleaved flows: flows induced by data exchanges for computations, and I/O flows.
+This collaboration aims at designing new scheduling algorithms that better take into account the challenges of interconnecting compute nodes with a
+unique and multiple-purpose network.</p>
+
+<h2 id="results-for-20152016">
+<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+
+<p>Blue~Waters’s network topology makes scheduling at the machine’s scale a real challenge <a href="#EnosJ2014Topology">(Enos et al. 2014)</a>. 
+We studied the execution of jobs on Blue~Waters, and derived a generic model of such machines <a href="#BleuseR2016Scheduling">(Bleuse et al. 2016)</a>.
+For example, the new topologies are built using local heterarchic (contrary of hierarchical) networks that are interconnected by a low depth hierarchy <a href="#BestaM2014Slim">(Besta and Hoefler 2014)</a>, <a href="#TuncerO2015PaC">(Tuncer, Leung, and Coskun 2015)</a>.
+The constraints arise from the distribution of the heterogeneous nodes within the topology.
+Heterogeneity may come from various architecture of computing nodes, or mixed workloads of computing and analysis, or nodes dedicated to I/O.
+We do not take such constraints into account in a quantitative manner.
+We rather translate these constraints in geometric properties: allocations have to be convex (in order to limit interferences between different jobs), or need to embed specific designated nodes.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+
+<p><span class="person given-name">Raphaël</span> <span class="person sur-name">Bleuse</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) spent 3 weeks at NCSA in winter 2015</p>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+
+<ol class="bibliography"><li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BleuseR2016Scheduling
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBleuseR2016SchedulingBibtex" aria-expanded="false" aria-controls="collapseBleuseR2016SchedulingBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBleuseR2016SchedulingAbstract" aria-expanded="false" aria-controls="collapseBleuseR2016SchedulingAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BleuseR2016Scheduling">Bleuse, Raphal, Sascha Hunold, Safia Kedad-Sidhoum, Florence Monna, Gregory Mounie, and Denis Trystram. 2016. “Scheduling Independent Moldable Tasks On Multi-Cores with GPUs.” <i>Manuscript Submitted for Publication</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBleuseR2016SchedulingBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{BleuseR2016Scheduling,
+  author = {Bleuse, Raphal and Hunold, Sascha and Kedad-Sidhoum, Safia and Monna, Florence and Mounie, Gregory and Trystram, Denis},
+  title = {{Scheduling Independent Moldable Tasks on Multi-Cores with GPUs}},
+  journal = {{Manuscript submitted for publication}},
+  year = {2016},
+  keywords = {own}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="person-month-efforts-in-20152016">
+<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
+
+<table class="person-months-table table table-bordered table-hover table-sm">
+  <tbody>
+    <tr>
+      <td>
+<span class="person given-name">Denis</span> <span class="person sur-name">Trystram</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Frederic</span> <span class="person sur-name">Wagner</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Giorgo</span> <span class="person sur-name">Lucarelli</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)</td>
+      <td>0.5 PM</td>
+    </tr>
+    <tr>
+      <td>
+<span class="person given-name">Raphaël</span> <span class="person sur-name">Bleuse</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)</td>
+      <td>1.5 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>The model detailed above has been welcomed with interest by the scheduling community.
+We identified two ideas we would like to explore.
+The interleaved flows hinder the overall performances of the applications.
+The convexity constraint (with respect to the underlying network topology) allows to tackle some interferences.
+Furthermore, constraining applications to be allocated near the I/O nodes they are using might be a way to completely remove interferences.
+Which strategy can be used to enforce such constraints at a reasonable cost?
+What is the impact of such constraints on machines’ utilization?</p>
+
+<p>On the other hand, given a requested amount of computing nodes, many convex shapes are valid allocations.
+We are interested in studying how to choose a shape in order to better exploit the machines.
+Similarly, we are also interested in studying if allocating more resources than requested may simplify the allocation phase without losing too much computation
+power.</p>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          TuncerO2015PaC
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTuncerO2015PaCBibtex" aria-expanded="false" aria-controls="collapseTuncerO2015PaCBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTuncerO2015PaCAbstract" aria-expanded="false" aria-controls="collapseTuncerO2015PaCAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="TuncerO2015PaC">Tuncer, Ozan, Vitus J. Leung, and Ayse K. Coskun. 2015. “PaCMap: Topology Mapping Of Unstructured Communication Patterns Onto Non-Contiguous Allocations.” In <i>Proceedings Of the 29th ACM on International Conference on Supercomputing</i>, 37–46. ICS â15. New York, NY, USA: ACM. doi:10.1145/2751205.2751225.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseTuncerO2015PaCBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{TuncerO2015PaC,
+  address = {{New York, NY, USA}},
+  booktitle = {{Proceedings of the 29th ACM on International Conference on Supercomputing}},
+  publisher = {{ACM}},
+  series = {{ICS â15}},
+  author = {Tuncer, Ozan and Leung, Vitus J. and Coskun, Ayse K.},
+  title = {{PaCMap: Topology Mapping of Unstructured Communication Patterns Onto Non-contiguous Allocations}},
+  pages = {37-46},
+  year = {2015},
+  doi = {10.1145/2751205.2751225},
+  tags = {topology, TO_READ}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BestaM2014Slim
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBestaM2014SlimBibtex" aria-expanded="false" aria-controls="collapseBestaM2014SlimBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBestaM2014SlimAbstract" aria-expanded="false" aria-controls="collapseBestaM2014SlimAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BestaM2014Slim">Besta, Maciej, and Torsten Hoefler. 2014. “Slim Fly: A Cost Effective Low-Diameter Network Topology.” In <i>Proceedings Of the International Conference for High Performance Computing, Networking, Storage and Analysis</i>, 348–59. SC â14. Piscataway, NJ, USA: IEEE Press. doi:10.1109/SC.2014.34.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBestaM2014SlimBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{BestaM2014Slim,
+  address = {{Piscataway, NJ, USA}},
+  booktitle = {{Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis}},
+  publisher = {{IEEE Press}},
+  series = {{SC â14}},
+  author = {Besta, Maciej and Hoefler, Torsten},
+  title = {{Slim Fly: A Cost Effective Low-diameter Network Topology}},
+  pages = {348-359},
+  year = {2014},
+  doi = {10.1109/SC.2014.34}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          EnosJ2014Topology
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseEnosJ2014TopologyBibtex" aria-expanded="false" aria-controls="collapseEnosJ2014TopologyBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseEnosJ2014TopologyAbstract" aria-expanded="false" aria-controls="collapseEnosJ2014TopologyAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="EnosJ2014Topology">Enos, Jeremy, Gregory H. Bauer, Robert Brunner, Sharif Islam, M. Steed, D. Jackson, and R. Fiedler. 2014. “Topology-Aware Job Scheduling Strategies For Torus Networks.” <i>Cray User Group</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseEnosJ2014TopologyBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{EnosJ2014Topology,
+  author = {Enos, Jeremy and Bauer, Gregory H. and Brunner, Robert and Islam, Sharif and Steed, M. and Jackson, D. and Fiedler, R.},
+  title = {{Topology-Aware Job Scheduling Strategies for Torus Networks}},
+  journal = {{Cray User Group}},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <div class="nav navbar-nav">
+            <a class="nav-link" href="/about/imprint/">
+              <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+
+  </body>
+</html>
