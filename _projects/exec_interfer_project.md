@@ -8,7 +8,6 @@ subnavbar: Projects
 project_url:
 status: running
 topics:
-  - architectures
   - storage
 keywords:
   -
