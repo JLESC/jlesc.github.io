@@ -38,10 +38,13 @@
 #
 
 permanent:
-  title: permanent
+  title: Permanent
 
 post_doc:
   title: Post Doctorate
 
 phd:
   title: PhD Student
+  
+master:
+  title: Master student 
