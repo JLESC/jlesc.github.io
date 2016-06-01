@@ -69,8 +69,8 @@ agullo_e:
   affiliation: inria
   position:
   topics:
-  email:
-  homepage:
+  email: Emmanuel.Agullo@inria.fr
+  homepage: https://team.inria.fr/hiepacs/team-members/emmanuel-agullo/
 
 allen_g:
   sur_name: Allen
@@ -113,8 +113,8 @@ artigues_a:
   given_name: Antoni
   affiliation: bsc
   position:
-  email:
-  homepage:
+  email: antoni.artigues@bsc.es
+  homepage: https://www.bsc.es/about-bsc/staff-directory/artigues-antoni
 
 badia_r:
   sur_name: Badia
@@ -149,7 +149,7 @@ bautista_gomez_l:
   affiliation: bsc
   position:
   topics: Resilience
-  email: leonardo.bautista%40bsc.es
+  email: leonardo.bautista@bsc.es
   homepage: leobago.com
 
 baumeister_p:
@@ -229,9 +229,7 @@ cappello_f:
   given_name: Franck
   affiliation: anl
   position: permanent
-  topics: >
-    this is a really long text for demonstration puroses of line breaks and not really the
-    actual research interests of Franck Cappello
+  topics: 
   email: cappello@anl.gov
   homepage:
 
@@ -295,8 +293,8 @@ constantinescu_e:
   affiliation: anl
   position:
   topics:
-  email:
-  homepage:
+  email: emconsta@mcs.anl.gov
+  homepage: http://www.mcs.anl.gov/~emconsta/
 
 coullon_h:
   sur_name: Coullon
@@ -346,6 +344,10 @@ doblas_reyes_f:
   sur_name: Doblas-Reyes
   given_name: Francisco
   affiliation: bsc
+  position:
+  topics: 
+  email: francisco.doblas-reyes@bsc.es
+  homepage: https://www.bsc.es/about-bsc/staff-directory/doblas-reyes-francisco-j
 
 dorier_m:
   sur_name: Dorier
@@ -416,6 +418,7 @@ gibbon_p:
   position: permanent
   topics:
   email: p.gibbon@fz-juelich.de
+  homepage: 
 
 gimenez_j:
   sur_name: Gimenez
@@ -475,6 +478,9 @@ haensel_d:
   given_name: David
   affiliation: jsc
   position: phd
+  topics:
+  email: d.haensel@fz-juelich.de
+  homepage: 
 
 hascoet_l:
   sur_name: Hascoët
@@ -549,9 +555,12 @@ imamura_t:
 
 jacob_r:
   sur_name: Jacob
-  given_name: Rob
+  given_name: Robert
   position: permanent
   affiliation: anl
+  topics:
+  email: jacob@mcs.anl.gov
+  homepage: http://www.mcs.anl.gov/~jacob/
 
 jeannot_e:
   sur_name: Jeannot
@@ -575,6 +584,7 @@ kabadshow_i:
   sur_name: Kabadshow
   given_name: Ivo
   affiliation: jsc
+  topics: 
   position: permanent
   email: i.kabadshow@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/kabadshow_i.html
@@ -583,6 +593,7 @@ kalbarczyk_z:
   sur_name: Kalbarczyk
   given_name: Zbigniew
   affiliation: uiuc
+  topics: 
   position: permanent
   email: kalbarcz@illinois.edu
   homepage: https://www.ece.illinois.edu/directory/profile/kalbarcz
@@ -609,6 +620,7 @@ keller_tesser_r:
   sur_name: Keller Tesser
   given_name: Raphael
   affiliation: inria
+  topics: 
   position:
   email: ktesser@inf.ufrgs.br
   homepage:
@@ -617,6 +629,7 @@ kettimuthu_r:
   sur_name: Kettimuthu
   given_name: Rajkumar
   affiliation: anl
+  topics: 
   position:
   email: kettimut@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~kettimut/
@@ -735,7 +748,7 @@ mehaut_j:
   affiliation: inria
   position: permanent
   topics:
-  email:
+  email: Jean-Francois.Mehaut@imag.fr
   homepage: https://team.inria.fr/corse/team-members/jean-francois-mehaut/
 
 mehta_v:
@@ -762,7 +775,7 @@ mendes_c:
   affiliation: ncsa
   position: permanent
   topics:
-  email:
+  email: cmendes@illinois.edu
   homepage: http://charm.cs.uiuc.edu/people/cmendes
 
 mohr_b:
@@ -805,7 +818,7 @@ narayanan_s:
 navaux_p:
   sur_name: Navaux
   given_name: Phillipe
-  affiliation: inria
+  affiliation: uiuc
   position: permanent
   topics:
   email:
@@ -870,6 +883,9 @@ petit_a:
   given_name: Antoine
   position: permanent
   affiliation: inria
+  topics:
+  email: Antoine.Petit@inria.fr
+  homepage: http://www.inria.fr/en/institute/organisation/management-team/antoine-petit-ceo
 
 pineda_morales_l:
   sur_name: Pineda Morales
@@ -940,8 +956,8 @@ ramet_p:
   affiliation: inria
   position:
   topics:
-  email:
-  homepage:
+  email: ramet@labri.fr
+  homepage: http://www.labri.fr/perso/ramet/
 
 riedel_m:
   sur_name: Riedel
@@ -985,8 +1001,8 @@ ropars_t:
   affiliation: inria
   position: permanent
   topics:
-  email:
-  homepage:
+  email: thomas.ropars@inria.fr
+  homepage: http://people.bordeaux.inria.fr/tropars/
 
 sakai_y:
   sur_name: Sakai
@@ -1039,7 +1055,7 @@ schmitz_c:
   affiliation: anl
   position: permanent
   topics:
-  email:
+  email: schmitz@anl.gov
   homepage:
 
 seidel_ed:
@@ -1083,6 +1099,9 @@ snir_m:
   given_name: Marc
   position: permanent
   affiliation: anl
+  topics:
+  email: snir@anl.gov
+  homepage: http://snir.cs.illinois.edu/
 
 speck_r:
   sur_name: Speck
@@ -1105,7 +1124,11 @@ steinbusch_b:
 stevens_s:
   sur_name: Stevens
   given_name: Sean R.
-  affiliation: uiuc
+  affiliation: ncsa
+  position:
+  topcis:
+  email: seans@ncsa.illinois.edu
+  homepage:
 
 subasi_o:
   sur_name: Subasi
@@ -1131,8 +1154,8 @@ sun_h:
   affiliation: inria
   position:
   topics:
-  email:
-  homepage:
+  email: hongyang.sun@ens-lyon.fr
+  homepage: http://perso.ens-lyon.fr/hongyang.sun/
 
 suno_b:
   sur_name: Subramaniam
@@ -1211,6 +1234,9 @@ ukawa_a:
   given_name: Akira
   position: permanent
   affiliation: riken
+  topcis:
+  email: ukawa@ccs.tsukuba.ac.jp
+  homepage: http://www2.ccs.tsukuba.ac.jp/people/ukawa/
 
 unsal_o:
   sur_name: Unsal
@@ -1244,6 +1270,9 @@ valero_m:
   given_name: Mateo
   position: permanent
   affiliation: bsc
+  topics:
+  email: mateo.valero@bsc.es
+  homepage: https://www.bsc.es/cv-mateo/1-summary
 
 vazquez_m:
   sur_name: Vázquez
@@ -1276,6 +1305,10 @@ yashiro_h:
   sur_name: Yashiro
   given_name: Hisashi
   affiliation: riken
+  position:
+  topics:
+  email: h.yashiro@riken.jp
+  homepage: http://aics-research.riken.jp/tomitat_top/members/yashiro/
 
 yildiz_o:
   sur_name: Orcun
