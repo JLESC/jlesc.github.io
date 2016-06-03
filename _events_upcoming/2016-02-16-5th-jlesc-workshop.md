@@ -41,3 +41,54 @@ This workshop is supported by the PUF in the context of the NEXTGN project.
 Registration will take place at [http://jlesc2016.sciencesconf.org](http://jlesc2016.sciencesconf.org/).
 
 To go there, please follow these [instructions](http://jlesc2016.sciencesconf.org/resource/page/id/1).
+
+
+<div id="institutes" class="card-columns">
+  <div class="card">
+    <a href="{{ site.baseurl }}/about/partners#partner-uiuc-ncsa">
+      {% image 'ncsa_vertical_logo.png' class:'logo' alt:'Logo of NCSA' %}
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="{{ site.baseurl }}/about/partners#partner-inria">
+      {% image 'inria_logo.png' class:'logo' alt:'Logo of INRIA' %}
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="{{ site.baseurl }}/about/partners#partner-anl">
+      {% image 'anl_logo.jpg' class:'logo' alt:'Logo of Argonne National Laboratory' %}
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="{{ site.baseurl }}/about/partners#partner-bsc">
+      {% image 'bsc_logo.svg' class:'logo' alt:'Logo of Barcelona Supercomputing Center' %}
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="{{ site.baseurl }}/about/partners#partner-jsc">
+      {% image 'jsc_logo.svg' class:'logo' alt:'Logo of Jülich Supercomputing Centre' %}
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="{{ site.baseurl }}/about/partners#partner-riken">
+      {% image 'riken_logo.png' class:'logo' alt:'Logo of RIKEN' %}
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="{{ site.baseurl }}/about/partners#partner-jsc">
+      {% image 'milyon_logo.png' class:'logo' alt:'Logo of Jülich Supercomputing Centre' %}
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="{{ site.baseurl }}/about/partners#partner-riken">
+      {% image 'gdr_rsd_logo.png' class:'logo' alt:'Logo of RIKEN' %}
+    </a>
+  </div>
+</div>
