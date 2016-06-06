@@ -919,10 +919,10 @@ pineda_morales_l:
   sur_name: Pineda Morales
   given_name: Luis
   affiliation: inria
-  position:
+  position: phd
   topics: Big Data & I/O
   email: luis.pineda-morales@inria.fr
-  homepage:
+  homepage: https://team.inria.fr/kerdata/luis.pineda/
 
 pleiter_d:
   sur_name: Pleiter
