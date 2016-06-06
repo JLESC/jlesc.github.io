@@ -398,10 +398,10 @@ estrada_j:
   sur_name: Estrada
   given_name: Jorge
   affiliation: bsc
-  position:
-  topics: Molecular Dynamics
+  position: post_doc
+  topics: Protein Biophysics, Monte Carlo
   email: jorge.estrada@bsc.es
-  homepage:
+  homepage: https://www.bsc.es/about-bsc/staff-directory/estrada-jorge
 
 feld_c:
   sur_name: Feld
