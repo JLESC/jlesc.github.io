@@ -208,13 +208,13 @@ bleuse_r:
  
 
 bouge_l:
-  sur_name: Bouge
+  sur_name: Bougé
   given_name: Luc
-  affiliation: inria
+  affiliation: INRIA (IRISA, ENS Rennes)
   position: permanent
   topics: Big Data & I/O
   email: luc.bouge@ens-rennes.fr
-  homepage:
+  homepage: https://team.inria.fr/kerdata/luc-bouge/
 
 broemmel_d:
   sur_name: Broemmel
