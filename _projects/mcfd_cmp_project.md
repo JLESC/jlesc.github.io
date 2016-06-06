@@ -18,6 +18,7 @@ keywords:
 head: lintermann_a
 members:
   - tsubokura_m
+  - onishi_k
 ---
 
 ## Research topic and goals
@@ -35,10 +36,15 @@ To foster the cooperation, mutual short-time stays of the involved scientists ar
 
 ## Results for 2015/2016
 
-The project has just started and hence there are no results available, yet.
-However, both parties are about to create accounts on both machines such that the first task, i.e., the porting of the individual codes can be performed.
+Both parties are about to create accounts on both machines such that the first task, i.e., the porting of the individual codes can be performed:
+
+* accounts have been created on K computer and JUQUEEN
+* AICS code has been ported to JUQUEEN
+* Scalability analysis of the AICS code has been performed on JUQUEEN
+* JSC C++11 code does not compile on K computer using the Fujitsu compiler, error messages will be collected and reported to AICS for compiler improvements
 
 ## Visits and meetings
+
 No visits yet.
 
 ## Impact and publications
@@ -52,6 +58,7 @@ No publications yet.
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
 | {% person lintermann_a %} | 0.5 PM |
 | {% person tsubokura_m %} | 0.5 PM |
+| {% person onishi_k %} | 1.0 PM |
 
 
 ## Future plans

@@ -703,7 +703,7 @@ lintermann_a:
   given_name: Andreas
   affiliation: jsc
   position: post_doc
-  topics: CFD, meshing
+  topics: CFD, parallel meshing and geometry, lattice boltzmann
   email: A.Lintermann@fz-juelich.de
   homepage: http://www.jara.org/de/research/jara-hpc/forschung/details/simlab-fas/andreas-lintermann/?S=0
 
@@ -869,6 +869,15 @@ olson_l:
   topics:
   email: lukeo@illinois.edu
   homepage: http://lukeo.cs.illinois.edu/
+
+onishi_k:
+  sur_name: Onishi
+  given_name: Keiji
+  affiliation: riken
+  position: post_doc
+  topics:
+  email: keiji.onishi@riken.jp
+  homepage: 
 
 ozen_g:
   sur_name: Ozen
