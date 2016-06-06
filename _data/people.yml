@@ -256,10 +256,10 @@ casas_m:
   sur_name: Casas
   given_name: Marc
   affiliation: bsc
-  position:
-  topics: Programming Models
+  position: permanent
+  topics: HPC, Programming Models, Resilience
   email: marc.casas@bsc.es
-  homepage:
+  homepage: http://www.bsc.es/about-bsc/staff-directory/casas-marc
 
 cavelan_a:
   sur_name: Cavelan
