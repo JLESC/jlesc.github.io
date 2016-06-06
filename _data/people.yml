@@ -319,8 +319,8 @@ coullon_h:
   sur_name: Coullon
   given_name: Helene
   affiliation: inria
-  position:
-  topics:
+  position: post_doc
+  topics: domain specific languages, parallel and high performance programming models, component-based programming models, numerical simulation
   email: helene.coullon@inria.fr
   homepage: http://www.univ-orleans.fr/lifo/Members/Helene.Coullon/
 
