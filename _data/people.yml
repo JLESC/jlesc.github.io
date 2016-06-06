@@ -476,10 +476,10 @@ gutheil_i:
 
 gropp_b:
   sur_name: Gropp
-  given_name: Bill
+  given_name: William
   affiliation: uiuc
   position: permanent
-  topics:
+  topics: Scalable numerical algorithms, programming models, parallel I/O, performance tools
   email:  wgropp@illinois.edu
   homepage: http://wgropp.cs.illinois.edu/
 
