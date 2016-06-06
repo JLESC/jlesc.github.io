@@ -1018,10 +1018,10 @@ robson_m:
   sur_name: Robson
   given_name: Michael
   affiliation: uiuc
-  position:
-  topics:
+  position: phd
+  topics: Runtimes
   email: mprobson@illinois.edu
-  homepage:
+  homepage: http://charm.cs.illinois.edu/people/mprobson
 
 ropars_t:
   sur_name: Ropars
