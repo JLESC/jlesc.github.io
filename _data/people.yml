@@ -345,10 +345,10 @@ di_napoli_e:
   sur_name: Di Napoli
   given_name: Edoardo
   affiliation: jsc
-  position:
-  topics:
+  position: post_doc
+  topics: numerical linear algebra, materials science
   email: e.di.napoli@fz-juelich.de
-  homepage:
+  homepage: http://www.jara.org/index.php?id=1314
 
 dirand_e:
   sur_name: Dirand
