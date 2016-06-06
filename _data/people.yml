@@ -319,8 +319,8 @@ coullon_h:
   sur_name: Coullon
   given_name: Helene
   affiliation: inria
-  position:
-  topics:
+  position: postdoc
+  topics: domain specific languages, parallel and high performance programming models, component-based programming models, numerical simulation
   email: helene.coullon@inria.fr
   homepage: http://www.univ-orleans.fr/lifo/Members/Helene.Coullon/
 
@@ -919,10 +919,10 @@ pineda_morales_l:
   sur_name: Pineda Morales
   given_name: Luis
   affiliation: inria
-  position: phd
+  position:
   topics: Big Data & I/O
   email: luis.pineda-morales@inria.fr
-  homepage: https://team.inria.fr/kerdata/luis.pineda/
+  homepage:
 
 pleiter_d:
   sur_name: Pleiter
