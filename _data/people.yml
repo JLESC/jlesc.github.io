@@ -720,7 +720,7 @@ llort_g:
   sur_name: Llort
   given_name: German
   affiliation: bsc
-  position: post_doc
+  position:
   topics: Performance Tools
   email: gllort@bsc.es
   homepage:
@@ -965,7 +965,7 @@ raffin_b:
   given_name: Bruno
   affiliation: inria
   position: permanent
-  topics: Big Data & I/O
+  topics: In-Situ Analytics and Visualization
   email: bruno.raffin@inria.fr
   homepage: http://moais.imag.fr/membres/bruno.raffin/
 
