@@ -897,6 +897,15 @@ pena_a:
   email:  antonio.pena@bsc.es
   homepage: https://www.bsc.es/es/about-bsc/staff-directory/pena-antonio
 
+perez_c:
+  sur_name: Perez
+  given_name: Christian
+  position: permanent
+  affiliation: inria
+  topics: Programming Models, HPC, Clouds
+  email: christian.perez@inria.fr
+  homepage : http://avalon.ens-lyon.fr/~cperez
+
 peterka_t:
   sur_name: Peterka
   given_name: Tom
