@@ -469,8 +469,8 @@ gutheil_i:
   sur_name: Gutheil
   given_name: Inge
   affiliation: jsc
-  position:
-  topics:
+  position: permanent
+  topics: Mathematical libraries, dense eigensolvers
   email: i.gutheil@fz-juelich.de
   homepage:
 
