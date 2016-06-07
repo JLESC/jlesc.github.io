@@ -407,7 +407,7 @@ feld_c:
   sur_name: Feld
   given_name: Christian
   affiliation: jsc
-  position:
+  position: permanent
   topics: Performance Tools
   email: c.feld@fz-juelich.de
   homepage:
@@ -1424,7 +1424,7 @@ wylie_b:
   sur_name: Wylie
   given_name: Brian J.N.
   affiliation: jsc
-  position:
+  position: permanent
   topics: Performance Tools
   email:  b.wylie@fz-juelich.de
   homepage:
