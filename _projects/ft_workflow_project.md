@@ -82,20 +82,42 @@ Read the comments carefully!
 
 In this project, we aim at finding efficient fault-tolerant scheduling schemes 
 for workflow applications that can be expressed as a directed acyclic graph (DAG) 
-of tasks. A task can be checkpointed and/or replicated, so that if a single replica fails,
-no recovery is needed. 
+of tasks. 
 
-We propose a model of process replication for tasks, and a theoretical analysis allowing us
-to decide when to checkpoint/replicate a task. 
+Checkpointing-recovery is the traditional fault-tolerance technique when it comes 
+to resilience for large-scale platforms. Unfortunately, as platform scale increases, 
+checkpoints must become more frequent to accommodate with the increasing 
+Mean Time Between Failure (MTBF). As such, it is expected that checkpoint-recovery 
+will become a major bottleneck for applications running on post-petascale platforms.
 
+We first focus on replication as a way of mitigating the checkpointing-recovery 
+overhead. A task can be checkpointed and/or replicated, so that if a single replica 
+fails, no recovery is needed. Our goal is to decide which task to checkpoint, 
+which task to replicate, and how much resource should be allocated to each task 
+for the execution of general workflow applications. For that, we first need to 
+derive a clear model for replication, as there are many ways to implement it, 
+even for a single task.
 
 ## Results for 2015/2016
-None yet.
+
+We start by investigating the impact of replication on the execution of a single task.
+Replication can be done at different application level. We investigate both 
+process-replication, where each process can be replicated several times, 
+and group replication, where an entire group of processes is replicated. 
+For each level, we consider a passive approach: waiting for the application 
+to either succeed or fail; and an active approach: checkpointing all living 
+replicas as soon as a failure occurs.
+
+Furthermore, we consider both fail-stop and silent errors. We derive closed-form 
+formulas for the expected execution time and first-order approximations for the overhead 
+and the optimal checkpoint interval. Finally, we compare both approaches to the 
+checkpointing-only solution.
 
 ## Visits and meetings
 
-{% person cavelan_a %} is visiting {% person cappello_f %} in Chicago for three months (march-april-may 2016) to initiate this project. We are working in close collaboration to make progress.
-
+{% person cavelan_a %} is visiting {% person cappello_f %} in Chicago for three 
+months (march-april-may 2016) to initiate this project. We are working 
+in close collaboration to make progress.
 
 ## Impact and publications
 
@@ -159,7 +181,8 @@ Above the very first person put the following line:
 
 ## Future plans
 
-None yet.
+We have several results for replication with a single task. Our plan is now to 
+extend these results to more general workflows.
 
 
 ## References
