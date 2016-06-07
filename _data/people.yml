@@ -694,7 +694,7 @@ lefevre_l:
   given_name: Laurent
   affiliation: inria
   position: permanent
-  topics:
+  topics: energy efficiency,  energy proportionality, datacenters, clouds, high performance networks
   email: laurent.lefevre@inria.fr
   homepage: http://perso.ens-lyon.fr/laurent.lefevre/
 
