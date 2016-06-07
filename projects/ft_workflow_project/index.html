@@ -186,20 +186,44 @@
 
 <p>In this project, we aim at finding efficient fault-tolerant scheduling schemes 
 for workflow applications that can be expressed as a directed acyclic graph (DAG) 
-of tasks. A task can be checkpointed and/or replicated, so that if a single replica fails,
-no recovery is needed.</p>
+of tasks.</p>
 
-<p>We propose a model of process replication for tasks, and a theoretical analysis allowing us
-to decide when to checkpoint/replicate a task.</p>
+<p>Checkpointing-recovery is the traditional fault-tolerance technique when it comes 
+to resilience for large-scale platforms. Unfortunately, as platform scale increases, 
+checkpoints must become more frequent to accommodate with the increasing 
+Mean Time Between Failure (MTBF). As such, it is expected that checkpoint-recovery 
+will become a major bottleneck for applications running on post-petascale platforms.</p>
+
+<p>We first focus on replication as a way of mitigating the checkpointing-recovery 
+overhead. A task can be checkpointed and/or replicated, so that if a single replica 
+fails, no recovery is needed. Our goal is to decide which task to checkpoint, 
+which task to replicate, and how much resource should be allocated to each task 
+for the execution of general workflow applications. For that, we first need to 
+derive a clear model for replication, as there are many ways to implement it, 
+even for a single task.</p>
 
 <h2 id="results-for-20152016">
 <a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
-<p>None yet.</p>
+
+<p>We start by investigating the impact of replication on the execution of a single task.
+Replication can be done at different application level. We investigate both 
+process-replication, where each process can be replicated several times, 
+and group replication, where an entire group of processes is replicated. 
+For each level, we consider a passive approach: waiting for the application 
+to either succeed or fail; and an active approach: checkpointing all living 
+replicas as soon as a failure occurs.</p>
+
+<p>Furthermore, we consider both fail-stop and silent errors. We derive closed-form 
+formulas for the expected execution time and first-order approximations for the overhead 
+and the optimal checkpoint interval. Finally, we compare both approaches to the 
+checkpointing-only solution.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) is visiting <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) in Chicago for three months (march-april-may 2016) to initiate this project. We are working in close collaboration to make progress.</p>
+<p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) is visiting <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) in Chicago for three 
+months (march-april-may 2016) to initiate this project. We are working 
+in close collaboration to make progress.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -247,12 +271,61 @@ to decide when to checkpoint/replicate a task.</p>
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>None yet.</p>
+<p>We have several results for replication with a single task. Our plan is now to 
+extend these results to more general workflows.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          CasanovaEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCasanovaEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseCasanovaEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCasanovaEtAl2015Abstract" aria-expanded="false" aria-controls="collapseCasanovaEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="CasanovaEtAl2015">Casanova, Henri, Yves Robert, Frédéric Vivien, and Dounia Zaidouni. 2015. “On The Impact of Process Replication on Executions of Large-Scale
+               Parallel Applications with Coordinated Checkpointing.” <i>Future Generation Comp. Syst.</i> 51: 7–19. doi:10.1016/j.future.2015.04.003.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCasanovaEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{CasanovaEtAl2015,
+  author = {Casanova, Henri and Robert, Yves and Vivien, Fr{\'{e}}d{\'{e}}ric and Zaidouni, Dounia},
+  title = {On the impact of process replication on executions of large-scale
+                 parallel applications with coordinated checkpointing},
+  journal = {Future Generation Comp. Syst.},
+  volume = {51},
+  pages = {7--19},
+  year = {2015},
+  url = {http://dx.doi.org/10.1016/j.future.2015.04.003},
+  doi = {10.1016/j.future.2015.04.003},
+  timestamp = {Thu, 31 Mar 2016 15:45:29 +0200},
+  biburl = {http://dblp.uni-trier.de/rec/bib/journals/fgcs/CasanovaRVZ15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -332,6 +405,56 @@ to decide when to checkpoint/replicate a task.</p>
   doi = {10.1177/1094342013505348},
   timestamp = {Mon, 02 Jun 2014 09:36:01 +0200},
   biburl = {http://dblp.uni-trier.de/rec/bib/journals/ijhpca/BougeretCRVZ14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          FerreiraEtAl2011
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseFerreiraEtAl2011Bibtex" aria-expanded="false" aria-controls="collapseFerreiraEtAl2011Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseFerreiraEtAl2011Abstract" aria-expanded="false" aria-controls="collapseFerreiraEtAl2011Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="FerreiraEtAl2011">Ferreira, Kurt B., Jon Stearley, James H. Laros III, Ron Oldfield, Kevin T. Pedretti, Ron Brightwell, Rolf Riesen, Patrick G. Bridges, and Dorian C. Arnold. 2011. “Evaluating The Viability of Process Replication Reliability for Exascale
+               Systems.” In <i>Conference On High Performance Computing Networking, Storage and Analysis,
+               SC 2011, Seattle, WA, USA, November 12-18, 2011</i>, 44:1–44:12. doi:10.1145/2063384.2063443.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseFerreiraEtAl2011Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{FerreiraEtAl2011,
+  author = {Ferreira, Kurt B. and Stearley, Jon and III, James H. Laros and Oldfield, Ron and Pedretti, Kevin T. and Brightwell, Ron and Riesen, Rolf and Bridges, Patrick G. and Arnold, Dorian C.},
+  title = {Evaluating the viability of process replication reliability for exascale
+                 systems},
+  booktitle = {Conference on High Performance Computing Networking, Storage and Analysis,
+                 {SC} 2011, Seattle, WA, USA, November 12-18, 2011},
+  pages = {44:1--44:12},
+  year = {2011},
+  crossref = {DBLP:conf/sc/2011},
+  url = {http://doi.acm.org/10.1145/2063384.2063443},
+  doi = {10.1145/2063384.2063443},
+  timestamp = {Tue, 30 Jun 2015 16:34:04 +0200},
+  biburl = {http://dblp.uni-trier.de/rec/bib/conf/sc/FerreiraSLOPBRBA11},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 </code></pre>
