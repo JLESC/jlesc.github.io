@@ -1079,10 +1079,10 @@ sato_m:
 
 schanen_m:
   sur_name: Schanen
-  given_name: Michael
+  given_name: Michel
   affiliation: anl
   position:
-  topics: Resilience, Numerics
+  topics: Adjoints, Checkpointing, Large-Scale
   email: mschanen@anl.gov
   homepage:
 
