@@ -77,9 +77,9 @@ allen_g:
   given_name: Gabrielle
   affiliation: uiuc
   position: permanent
-  topics:
+  topics: Applications & Software Frameworks & Astrophysics
   email: gallen@ncsa.illinois.edu
-  homepage: http://www.astro.illinois.edu/people/gdallen
+  homepage: http://www.ncsa.illinois.edu/assets/php/directory/contact.php?contact=gdallen
 
 alvarez_c:
   sur_name: Alvarez
@@ -1118,7 +1118,7 @@ seidel_ed:
   given_name: Ed
   affiliation: ncsa
   position: permanent
-  topics:
+  topics: Applications & Astrophysics
   email: eseidel@ncsa.illinois.edu
   homepage: http://www.ncsa.illinois.edu/about/org/ed_seidel
 
