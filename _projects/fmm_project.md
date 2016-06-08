@@ -16,6 +16,7 @@ head: kabadshow_i
 members:
   - balaji_p
   - haensel_d
+  - amer_a
 ---
 
 ## Research topic and goals
@@ -53,6 +54,7 @@ None yet.
 | {% person balaji_p %}    | 0.25 PM |
 | {% person kabadshow_i %} | 0.25 PM |
 | {% person haensel_d %}   | 3 PM   |
+| {% person amer_a %}   | 1 PM   |
 
 The efforts are likely to increase, once the code base includes a near-complete parallelization layer.
 
