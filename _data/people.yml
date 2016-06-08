@@ -688,6 +688,15 @@ lachat_c:
   topics:
   email: cedric.lachat@inria.fr
   homepage:
+  
+legrand_a:
+  sur_name: Legrand
+  given_name: Arnaud
+  affiliation: inria
+  position: permanent
+  topics: Performance Evaluation
+  email: arnaud.legrand@imag.fr
+  homepage: https://team.inria.fr/polaris/members/arnaud-legrand/
 
 lefevre_l:
   sur_name: Lefevre
