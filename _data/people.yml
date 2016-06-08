@@ -165,10 +165,10 @@ baumeister_p:
   sur_name: Baumeister
   given_name: Paul
   affiliation: jsc
-  position:
-  topics:
+  position: post_doc
+  topics: performance optimization and analysis, applications, advanced architectures
   email: p.baumeister@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/baumeister_p.html
 
 beltran_v:
   sur_name: Beltran
@@ -221,16 +221,16 @@ broemmel_d:
   given_name: Dirk
   affiliation: jsc
   position: permanent
-  topics:
+  topics: applications, programming models, extreme scaling
   email: d.broemmel@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/broemmel_d.html
 
 brown_m:
   sur_name: Maxine D.
   given_name: Brown
   affiliation: uiuc
   position: permanent
-  topics:
+  topics: 
   email: maxine@uic.edu
   homepage: https://www.evl.uic.edu/maxine/
 
@@ -410,7 +410,7 @@ feld_c:
   position: permanent
   topics: Performance Tools
   email: c.feld@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/feld_c.html
 
 finkel_h:
   sur_name: Finkel
@@ -426,18 +426,18 @@ frings_w:
   given_name: Wolfgang
   affiliation: jsc
   position: permanent
-  topics:
+  topics: I/O, benchmarking, HPC
   email: w.frings@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/frings_w.html
 
 gibbon_p:
   sur_name: Gibbon
   given_name: Paul
   affiliation: jsc
   position: permanent
-  topics:
+  topics: applications, plasma physics
   email: p.gibbon@fz-juelich.de
-  homepage: 
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/gibbon_p.html
 
 gimenez_j:
   sur_name: Gimenez
@@ -472,7 +472,7 @@ gutheil_i:
   position: permanent
   topics: Mathematical libraries, dense eigensolvers
   email: i.gutheil@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/gutheil_i.html
 
 gropp_b:
   sur_name: Gropp
@@ -497,9 +497,9 @@ haensel_d:
   given_name: David
   affiliation: jsc
   position: phd
-  topics:
+  topics: programming models, FMM
   email: d.haensel@fz-juelich.de
-  homepage: 
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/haensel_d.html
 
 hascoet_l:
   sur_name: Hascoët
@@ -603,7 +603,7 @@ kabadshow_i:
   sur_name: Kabadshow
   given_name: Ivo
   affiliation: jsc
-  topics: 
+  topics: programming models, FMM
   position: permanent
   email: i.kabadshow@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/kabadshow_i.html
@@ -657,7 +657,7 @@ klatt_t:
   sur_name: Klatt
   given_name: Torbjörn
   affiliation: jsc
-  position: phd
+  position: alumnus
   topics: parallel-in-time integration
   email: t.klatt@fz-juelich.de
   homepage:
@@ -714,7 +714,7 @@ lippert_t:
   position: permanent
   topics:
   email: th.lippert@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/lippert_th.html
 
 llort_g:
   sur_name: Llort
@@ -741,7 +741,7 @@ luehrs_s:
   position:
   topics: Performance Tools
   email: s.luehrs@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/luehrs_s.html
 
 martsinkevich_t:
   sur_name: Martsinkevich
@@ -793,9 +793,9 @@ meinke_j:
   given_name: Jan
   affiliation: jsc
   position: permanent
-  topics:
+  topics: applications, Monte Carlo, protein folding
   email: j.meinke@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/meinke_j.html
 
 mendes_c:
   sur_name: Mendes
@@ -1012,7 +1012,7 @@ riedel_m:
   position: permanent
   topics: Big Data & I/O
   email: m.riedel@fz-juelich.de
-  homepage:
+  homepage: http://www.morrisriedel.de/
 
 ross_r:
   sur_name: Rob
@@ -1163,9 +1163,9 @@ steinbusch_b:
   given_name: Benedikt
   affiliation: jsc
   position: phd
-  topics: Numerics
+  topics: Numerics, plasma physics, performance optimization
   email: b.steinbusch@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/steinbusch_b.html
 
 stevens_s:
   sur_name: Stevens
@@ -1217,9 +1217,9 @@ sutmann_g:
   given_name: Godehard
   affiliation: jsc
   position: permanent
-  topics: Molecular Dynamics
+  topics: Molecular Dynamics, HPC
   email: g.sutmann@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/sutmann_g.html
 
 tanaka_m:
   sur_name: Tanaka
@@ -1316,7 +1316,7 @@ vandenbergen_n:
   given_name: Nicholas
   affiliation: jsc
   position: phd
-  topics:
+  topics: resilience, advanced architectures
   email: n.vandenbergen@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/vandenbergen_n.html
 
@@ -1426,8 +1426,8 @@ wylie_b:
   affiliation: jsc
   position: permanent
   topics: Performance Tools
-  email:  b.wylie@fz-juelich.de
-  homepage:
+  email: b.wylie@fz-juelich.de
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/wylie_b.html
 
 yildiz_o:
   sur_name: Yildiz
