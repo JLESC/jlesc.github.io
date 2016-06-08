@@ -1315,7 +1315,7 @@ uram_t:
   sur_name: Uram
   given_name: Thomas D.
   affiliation: anl
-  position:
+  position: permanent
   topics:
   email: turam@anl.gov
   homepage: https://www.alcf.anl.gov/staff-directory/thomas-d-uram
