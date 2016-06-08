@@ -68,18 +68,20 @@ layout: landingpage
       {% else %}
         <ul id="next-events-index" class="list-group list-group-flush">
           {% for event in site.events_upcoming limit: 3 %}
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-xs-12">
-                  <label class="tag tag-event-{{ event.kind }} pull-right">{% event_kind {{ event.kind }} %}</label>
-                  <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title | titlecase }}</a>
+            {% if event.page_type == 'event_page' %}
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <label class="tag tag-event-{{ event.kind }} pull-right">{% event_kind {{ event.kind }} %}</label>
+                    <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title | titlecase }}</a>
+                  </div>
                 </div>
-              </div>
-              <div class="row small">
-                {% assign on_global_index = true %}
-                {% include event/meta.html %}
-              </div>
-            </li>
+                <div class="row small">
+                  {% assign on_global_index = true %}
+                  {% include event/meta.html %}
+                </div>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
       {% endif %}
