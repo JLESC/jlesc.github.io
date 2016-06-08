@@ -67,7 +67,8 @@ layout: landingpage
         </div>
       {% else %}
         <ul id="next-events-index" class="list-group list-group-flush">
-          {% for event in site.events_upcoming limit: 3 %}
+          {% assign j = 0 %}
+          {% for event in site.events_upcoming %}
             {% if event.page_type == 'event_page' %}
               <li class="list-group-item">
                 <div class="row">
@@ -81,6 +82,10 @@ layout: landingpage
                   {% include event/meta.html %}
                 </div>
               </li>
+              {% assign j = j | plus: 1 %}
+            {% endif %}
+            {% if j == 3 %}
+              {% break %}
             {% endif %}
           {% endfor %}
         </ul>
