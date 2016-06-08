@@ -310,8 +310,8 @@ constantinescu_e:
   sur_name: Constantinescu
   given_name: Emil
   affiliation: anl
-  position:
-  topics:
+  position: permanent
+  topics: applied mathematics
   email: emconsta@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~emconsta/
 
@@ -452,7 +452,7 @@ girona_s:
   sur_name: Girona
   given_name: Sergi
   affiliation: bsc
-  position:
+  position: permanent
   topics:
   email: sergi.girona@bsc.es
   homepage: https://sites.google.com/site/sergigirona/
@@ -558,7 +558,7 @@ ibrahim_s:
   sur_name: Ibrahim
   given_name: Shadi
   affiliation: inria
-  position:
+  position: permanent
   topics:
   email:
   homepage: https://team.inria.fr/kerdata/shadi-ibrahim/
@@ -577,7 +577,7 @@ jacob_r:
   given_name: Robert
   position: permanent
   affiliation: anl
-  topics:
+  topics: application
   email: jacob@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~jacob/
 
@@ -649,7 +649,7 @@ kettimuthu_r:
   given_name: Rajkumar
   affiliation: anl
   topics: 
-  position:
+  position: permanent
   email: kettimut@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~kettimut/
 
