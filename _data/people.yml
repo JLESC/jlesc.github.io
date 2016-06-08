@@ -354,10 +354,10 @@ dirand_e:
   sur_name: Dirand
   given_name: Estelle
   affiliation: inria
-  position:
-  topics:
+  position: phd
+  topics: In-Situ Analytics and Visualization
   email: estelle.dirand@gmail.com
-  homepage: https://about.me/estelle_dirand
+  homepage:
 
 doblas_reyes_f:
   sur_name: Doblas-Reyes
