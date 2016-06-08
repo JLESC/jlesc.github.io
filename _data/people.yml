@@ -220,7 +220,7 @@ broemmel_d:
   sur_name: Broemmel
   given_name: Dirk
   affiliation: jsc
-  position:
+  position: permanent
   topics:
   email: d.broemmel@fz-juelich.de
   homepage:
@@ -792,7 +792,7 @@ meinke_j:
   sur_name: Meinke
   given_name: Jan
   affiliation: jsc
-  position:
+  position: permanent
   topics:
   email: j.meinke@fz-juelich.de
   homepage:
@@ -813,7 +813,7 @@ mohr_b:
   position: permanent
   topics: HPC, Performance Tools
   email: b.mohr@fz-juelich.de
-  homepage:
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/mohr_b.html
 
 murai_h:
   sur_name: Murai
@@ -892,7 +892,7 @@ padoin_e:
   sur_name: Padoin
   given_name: Edson Luiz
   affiliation: inria
-  position: alumnus
+  position: 
   topics:
   email:  elpadoin@inf.ufrgs.br
   homepage:
@@ -1009,7 +1009,7 @@ riedel_m:
   sur_name: Riedel
   given_name: Morris
   affiliation: jsc
-  position:
+  position: permanent
   topics: Big Data & I/O
   email: m.riedel@fz-juelich.de
   homepage:
@@ -1162,7 +1162,7 @@ steinbusch_b:
   sur_name: Steinbusch
   given_name: Benedikt
   affiliation: jsc
-  position:
+  position: phd
   topics: Numerics
   email: b.steinbusch@fz-juelich.de
   homepage:
@@ -1216,7 +1216,7 @@ sutmann_g:
   sur_name: Sutmann
   given_name: Godehard
   affiliation: jsc
-  position:
+  position: permanent
   topics: Molecular Dynamics
   email: g.sutmann@fz-juelich.de
   homepage:
