@@ -430,6 +430,15 @@ frings_w:
   email: w.frings@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/frings_w.html
 
+gautier_t:
+  sur_name: Gautier
+  given_name: Thierry
+  affiliation: inria
+  position: permanent
+  topics:  Programming Models
+  email: thierry.gautier@inrialpes.fr
+  homepage: http://avalon.ens-lyon.fr/members/tgautier
+
 gibbon_p:
   sur_name: Gibbon
   given_name: Paul
