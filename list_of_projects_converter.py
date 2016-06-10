@@ -14,6 +14,7 @@ for sFile in filecut:
     filename = ''
     membersfound = 0
     members = ''
+    count = 0
     for line in content:
         if line.find('title:')!= -1:
             filename = line.replace('title: ', '')
@@ -26,10 +27,14 @@ for sFile in filecut:
             members = members + line
         elif membersfound == 1 and line.find('  -')== -1:
             membersfound = 0
+        elif line.find('---') != -1:
+            count = count +1
+            if count == 2:
+                break
     name = sFile.replace('.md', '')
     members = members.replace("\n", '')
     members = members.replace("  -", '')
-    file.write(name +" , " + filename  +" , " + members +"\n")
+    file.write(name +", " + filename  +", " + members +"\n")
 
 file.close()
 content.close()
