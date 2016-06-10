@@ -39,20 +39,30 @@ future supercomputers.
 ## Results for 2015/2016
 
 During the previous year we tackled several challenges related to silent
-corruption {% cite BautEtAl2015 --file jlesc.bib %}. The first question we answered
-was related to the use of multiple SDC detectors with different
+corruption {% cite BautEtAl2015 --file jlesc.bib %}.  We developed a
+lightweight, adaptive, impact-driven detector for detecting the silent data
+corruptions{% cite ShengEtCappello2016 --file jlesc.bib %}. (1) We carefully
+characterize 18 HPC applications/benchmarks and discuss the runtime data
+features, as well as the impact of the SDCs on their execution results. (2) We
+propose an impact-driven detection model that does not blindly improve the
+prediction accuracy, but instead detects only influential SDCs to guarantee
+user-acceptable execution results. (3) Our solution can adapt to dynamic
+prediction errors based on local runtime data and can automatically tune
+detection ranges for guaranteeing low false alarms. Another question we
+answered was related to the use of multiple SDC detectors with different
 characteristics. We designed a strategy that allows users to decide which SDC
 detector use and at which frequency, having the choice among several SDC
 detectors with different performance, recall and precision. This research was
-published as a full paper at HiPC2015 {% cite BautEtAl2015b --file jlesc.bib %} and we wrote an
-extension full of details and new result and submitted to IJHPCA. In addition,
-we investigated how to create SDC detectors based on support vector machines
-(SVM) and compare them with the state-of-the-art SDC detectors. Our evaluation
-with multiple large-scale HPC applications shows that SVM is a good technique
-that can learn about the behavior of the datasets and detect the vast majority
-of anomalies while imposing a negligible overhead. Our technique preforms
-better than the existent ones in most of the cases. We published this results
-at CCGrid2016 {% cite SubasiEtAl2016 --file jlesc.bib %}.
+published as a full paper at HiPC2015 {% cite BautEtAl2015b --file jlesc.bib %}
+and we wrote an extension full of details and new result and submitted to
+IJHPCA. In addition, we investigated how to create SDC detectors based on
+support vector machines (SVM) and compare them with the state-of-the-art SDC
+detectors. Our evaluation with multiple large-scale HPC applications shows that
+SVM is a good technique that can learn about the behavior of the datasets and
+detect the vast majority of anomalies while imposing a negligible overhead. Our
+technique preforms better than the existent ones in most of the cases. We
+published this results at CCGrid2016 {% cite SubasiEtAl2016 --file jlesc.bib
+%}.
 
 
 ## Visits and meetings
