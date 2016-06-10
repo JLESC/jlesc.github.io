@@ -20,6 +20,9 @@ FACCTS (France and Chicago Collaborating in the Sciences), Collaborative Tool De
 FACCTS (France and Chicago Collaborating in the Sciences), Seeding a Franco-Chicago Collaboration in Exascale Storage for Computational Science
 : Lead: {% person ross_r %}
 
+FACCTS (France and Chicago Collaborating in the Sciences), ANL/INRIA Success Story
+: Lead: {% person chien_a %}
+
 [G8 Exascale: Enablig Climate Simulation at Extremescale](https://wiki.cites.illinois.edu/wiki/)
 : Lead: {% person cappello_f %}
 
