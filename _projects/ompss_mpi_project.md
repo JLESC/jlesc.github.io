@@ -49,12 +49,6 @@ A paper {% cite MartsinkevichEtAl2015 --file jlesc.bib %} has been published in 
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person martsinkevich_t %} | 5.0 PM |
-| {% person subasi_o %} | 2.0 PM |
-
 ## Future plans
 
 There will be a journal submission based on this work.

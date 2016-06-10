@@ -36,15 +36,6 @@ This project effectively started in 2016.
 
 {% bibliography --cited --file jlesc.bib %}
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person cheriere_n %} | 6 PM |
-| {% person dorier_m %}   | 2 PM |
-| {% person ross_r %}     | 1 PM |
-| {% person ibrahim_s %}  | 2 PM |
-| {% person antoniu_g %}  | 1 PM |
-
 
 ## Future plans
 

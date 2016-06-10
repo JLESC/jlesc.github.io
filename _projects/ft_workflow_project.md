@@ -150,35 +150,6 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person benoit_a %} | 1.0 PM |
-| {% person cappello_f %} | 1.0 PM |
-| {% person robert_y %} | 1.0 PM |
-| {% person cavelan_a %} | 3.0 PM |
-
-
-{% comment %}
-=========================================
-== ADD A TABLE OF PERSON-MONTH EFFORTS ==
-
-Put it in the following form, each person on its own line
-
-| {% person PERSON_ID %} | X.Y PM |
-
-e.g.:
-
-| {% person kabadshow_i %} | 2.0 PM |
-
-Above the very first person put the following line:
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-
-==================================
-== START HERE ==
-{% endcomment %}
-
 ## Future plans
 
 We have several results for replication with a single task. Our plan is now to 

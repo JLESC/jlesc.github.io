@@ -43,13 +43,6 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person cappello_f %} | 1 PM |
-| {% person olson_l %} | 1 PM |
-| {% person calhoun_j %} | 3 PM |
-
 ## Future plans
 
 Jon Calhoun will spend the summer at ANL with Franck Cappello for an internship.

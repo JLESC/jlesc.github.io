@@ -38,15 +38,6 @@ We carried out a set of experiments using an application relying on input from s
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person keahey_k %} | 0.5 PM |
-| {% person antoniu_g %} | 0.5 PM |
-| {% person pineda_morales_l %} | 4.0 PM |
-| {% person subramaniam_b %} | 4.0 PM |
-| {% person costan_a %} | 4.0 PM |
-
 ## Future plans
 
 Next steps include experimenting with Phantom auto-scaling service {% cite KeaheyEtAl2012 --file external/elastic_prov.bib %} in the Chameleon cloud to elastically provision resources for our use case application.

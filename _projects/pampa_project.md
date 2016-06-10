@@ -53,17 +53,6 @@ Therefore all these efforts will enable to further use Pampa to perform mesh ada
 * Mesh adaptivity
 
 
-## Person-Month efforts in 2015/2016
-
-The efforts of the participants so far are as follows:
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person houzeaux_g %}   | 3.0 PM |
-| {% person vazquez_m %}    | 2.0 PM |
-| {% person mehta_v %}      | 3.0 PM |
-| {% person jeannot_e %}    | 0.5 PM |
-
-
 ## Future plans
 
 * Implementation

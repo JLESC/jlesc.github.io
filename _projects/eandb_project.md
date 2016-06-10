@@ -110,17 +110,6 @@ This work was presented at the HiPC conference {% cite PadoinEtAl2014 --file ext
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person keller_tesser_r %}    | 6 PM |
-| {% person padoin_e %} | 4 PM |
-| {% person navaux_p %}   | 1 PM   |
-| {% person mendes_c %} | 0.5 PM |
-| {% person kale_s %}   | 0.25 PM   |
-| {% person mehaut_j %}   | 1 PM   |
-
-
 ## Future plans
 
 * Using simulations (SimGrid, BigSim, Dimemas) for the design and analysis of load balancers

@@ -43,15 +43,6 @@ The team is submitting a proposal to DOE on this topic.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person cappello_f %} | 1 PM |
-| {% person finkel_h %} | 0.5 PM |
-| {% person yoshii_k %} | 0.5 PM |
-| {% person alvarez_c %} | 0.2 PM |
-
-
 ## Future plans
 
 Building on the results, we plan to hold FPGA workshops every six months. The next workshop will be hosted at UIUC on October 10-11, 2016. We will leverage these workshops to share the progress of our project, get feedback, and extend collaborations to other leading research groups.

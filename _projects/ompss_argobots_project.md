@@ -105,18 +105,6 @@ This project will have the future impact and contributions as follows:
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person balaji_p %}  | 0.5 PM |
-| {% person seo_s %}     | 1.0 PM |
-| {% person amer_a %}    | 1.0 PM |
-| {% person badia_r %}   | 0.5 PM |
-| {% person labarta_j %} | 0.5 PM |
-| {% person teruel_x %}  | 1.5 PM |
-| {% person beltran_v %} | 0.5 PM |
-
-
 ## Future plans
 
 Next steps in this project are to have a more complete implementation of

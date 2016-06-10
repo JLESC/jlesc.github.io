@@ -52,21 +52,6 @@ A 2 page white paper has been submitted to the BDEC workshop.
 
 {% bibliography --cited --file jlesc.bib %}
 
-
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person cappello_f %} | 1 PM |
-| {% person heitmann_k %} | 0.2 PM |
-| {% person allen_g %} | 0.1 PM |
-| {% person kettimuthu_r %} | 0.2 PM |
-| {% person sisneros_r %} | 0.2 PM |
-| {% person stevens_s %} | 0.1 PM |
-| {% person turk_m %} | 0.1 PM |
-| {% person wheeler_d %} | 0.2 PM |
-| {% person wilde_m %} | 0.1 PM |
-| {% person wozniak_j %} | 0.2 PM |
-
 ## Future plans
 See "Results" section.
 

@@ -57,18 +57,6 @@ The project has submitted a publication to ISC16 that has been accepted.
 -->
 {% bibliography --cited --file jlesc.bib %}
 
-
-## Person-Month efforts in 2015/2016
-
-The efforts of the participants so far are as follows:
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person chien_a %}        | 0.1 PM |
-| {% person pleiter_d %}      | 0.1 PM |
-| {% person dun_n %}          | 2.0 PM |
-| {% person vandenbergen_n %} | 0.5 PM |
-
-
 ## Future plans
 None
 

@@ -67,16 +67,6 @@ at SC’14 {% cite DorierEtAl2014b --file jlesc.bib %}.
 
 {% bibliography --cited --file jlesc.bib %}
 
-
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person antoniu_g %}    | 1 PM |
-| {% person ibrahim_s %} | 2 PM |
-| {% person dorier_m %}   | 1 PM   |
-| {% person yildiz_o %} | 10 PM |
-| {% person ross_r %}   | 1 PM   |
-
 ## Future plans
 
 ### Sub-goal 1:

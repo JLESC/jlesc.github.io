@@ -35,16 +35,6 @@ Internship of Orcun Yildiz at ANL from June to September 2015.
 
 {% bibliography --cited --file jlesc.bib %}
 
-
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person yildiz_o %} | 4 PM |
-| {% person dorier_m %} | 4 PM |
-| {% person ross_r %} | 1 PM |
-| {% person antoniu_g %} | 1 PM |
-| {% person ibrahim_s %} | 3 PM |
-
 ## Future plans
 
 We plan to further investigate the interference issue in the context of read workloads and mixed read/write workloads, as a way to extend our IPDPS 2016 paper.

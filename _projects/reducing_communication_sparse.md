@@ -72,13 +72,6 @@ None yet.
 
 {% bibliography --cited --file jlesc.bib %}
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person bienz_a %}    | 0.1 PM |
-| {% person olson_l %}    | 0.1 PM |
-| {% person grigori_l %}  | 0.1 PM |
-| {% person gropp_b %}    | 0.1 PM |
 
 ## Future plans
 
