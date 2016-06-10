@@ -49,14 +49,6 @@ We rather translate these constraints in geometric properties: allocations have 
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person trystram_d %} | 0.5 PM |
-| {% person wagner_f %} | 0.5 PM |
-| {% person lucarelli_g %} | 0.5 PM |
-| {% person bleuse_r %} | 1.5 PM |
-
 
 ## Future plans
 

@@ -77,16 +77,6 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person jeannot_e %} | 0.5 PM |
-| {% person tessier_f %} | 3.0 PM |
-| {% person vishwanath_v %} | 0.5 PM |
-
-
-
 ## Future plans
 
 The next step will be to determine the parameters to consider to compute a near-optimal number of aggregators.

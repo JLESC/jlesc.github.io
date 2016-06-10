@@ -93,13 +93,6 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person imamura_t %}    | 0.5 PM |
-| {% person gutheil_i %} | 0.5 PM |
-
-
 ## Future plans
 
 In 2016, we divide the first year into 1st and 2nd halves on the management of this project.

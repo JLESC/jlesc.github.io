@@ -58,14 +58,6 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person amer_a %}    | 0.5 PM |
-| {% person balaji_p %}    | 1 PM |
-| {% person beltran_v %} | 1 PM |
-| {% person casas_m %}   | 1 PM   |
-
 ## Future plans
 
 We plan to push further the investigation of fine-grained fault-tolerance support in hybrid MPI+threads programming models.

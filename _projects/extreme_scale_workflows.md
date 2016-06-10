@@ -43,18 +43,6 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person wozniak_j %} | 1 PM |
-| {% person peterka_t %} | 1 PM |
-| {% person dreher_m %} | 1 PM |
-| {% person ross_r %} | 1 PM |
-| {% person antoniu_g %} | 1 PM |
-| {% person ibrahim_s %} | 1 PM |
-| {% person dorier_m %} | 1 PM |
-| {% person raffin_b %} | 1 PM |
-
 ## Future plans
 
 This summer we will implement the main integration between Decaf and Swift. A paper about the MPI details of integration between Swift and Decaf would be a good submission to EuroMPI. A paper about realistic LAMMPS or HACC simulation/analysis workflows would be a good submission to SC.

@@ -47,17 +47,6 @@ We are writing a paper and seeking further funding.
 
 {% bibliography --cited --file jlesc.bib %}
 
-
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person pena_a %} | 1.0 PM |
-| {% person servat_h %} | 1.0 PM |
-| {% person oden_l %} | 0.5 PM |
-| {% person gimenez_j %} | 0.5 PM |
-| {% person labarta_j %} | 0.5 PM |
-| {% person balaji_p %} | 0.5 PM |
-
 ## Future plans
 Validate the sampling technique for data distribution by implementing and evaluating sampling on EVOP.
 Joint software release.

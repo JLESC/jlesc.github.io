@@ -52,15 +52,6 @@ No publications yet.
 
 {% bibliography --cited --file jlesc.bib %}
 
-
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person lintermann_a %} | 0.5 PM |
-| {% person tsubokura_m %} | 0.5 PM |
-| {% person onishi_k %} | 1.0 PM |
-
-
 ## Future plans
 
 After accounts have been created on both machines, both groups will start to port their own codes to the according machines.

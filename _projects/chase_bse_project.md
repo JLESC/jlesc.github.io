@@ -85,32 +85,6 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-The steps carried out so far to prepare this project have not taken
-significant person-month efforts (on the order of 1 person-day).
-
-{% comment %}
-=========================================
-== ADD A TABLE OF PERSON-MONTH EFFORTS ==
-
-Put it in the following form, each person on its own line
-
-| {% person PERSON_ID %} | X.Y PM |
-
-e.g.:
-
-| {% person kabadshow_i %} | 2.0 PM |
-
-Above the very first person put the following line:
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-
-==================================
-== START HERE ==
-{% endcomment %}
-
-
 ## Future plans
 
 The next step is to implement the ChASE library into the Jena BSE code

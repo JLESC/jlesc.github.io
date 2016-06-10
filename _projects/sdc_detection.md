@@ -65,19 +65,6 @@ None
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person bautista_gomez_l %} | 2.5 PM |
-| {% person benoit_a %} | 2 PM |
-| {% person cappello_f %} | 1 PM |
-| {% person cavelan_a %} | 3 PM |
-| {% person robert_y %} | 1.5 PM |
-| {% person subasi_o %} | 3 PM |
-| {% person sun_h %} | 3 PM |
-| {% person unsal_o %} | 1 PM |
-| {% person di_s %} | 1 PM |
-
 
 ## Future plans
 

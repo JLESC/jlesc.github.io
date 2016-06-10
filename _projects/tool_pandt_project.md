@@ -64,16 +64,6 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person feld_c %} | 1.0 PM |
-| {% person gimenez_j %} | 1.0 PM |
-| {% person murai_h %} | 1.0 PM |
-| {% person tsuji_m %} | 1.0 PM |
-| {% person wylie_b %} | 1.0 PM |
-
-
 ## Future plans
 
 The existing integration of XcalableMP and Scalasca will be updated to the latest

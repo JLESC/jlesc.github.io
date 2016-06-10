@@ -48,16 +48,6 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person agullo_e %} | 0.25 PM |
-| {% person artigues_a %} | 2 PM |
-| {% person houzeaux_g %} | 2 PM |
-| {% person ramet_p %} | 0.25 PM |
-| {% person vazquez_m %} | 0.5 PM |
-
-
 ## Future plans
 We intend to complete the full integration of the Inria solvers with their current individual API in the Alya code so that scalability studies on different applications representative of Alya simulations can be performed (incompressible/compressible fluid, structure mechanics).
 Hopefully some of them will reveal numerical or software features to be further studied.

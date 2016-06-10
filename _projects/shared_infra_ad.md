@@ -61,34 +61,6 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person hovland_p %} | 0.5 PM |
-| {% person narayanan_s %} | 1.0 PM |
-| {% person hascoet_l %} | 1.0 PM |
-
-{% comment %}
-=========================================
-== ADD A TABLE OF PERSON-MONTH EFFORTS ==
-
-Put it in the following form, each person on its own line
-
-| {% person PERSON_ID %} | X.Y PM |
-
-e.g.:
-
-| {% person kabadshow_i %} | 2.0 PM |
-
-Above the very first person put the following line:
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-
-==================================
-== START HERE ==
-{% endcomment %}
-
-
 ## Future plans
 We plan to continue to integrate Tapenade and OpenAD infrastructures. Additionally, we plan to explore other
 topics in the field of algorithmic differentiation.

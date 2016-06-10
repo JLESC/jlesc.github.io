@@ -48,17 +48,6 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person balaji_p %}    | 0.25 PM |
-| {% person kabadshow_i %} | 0.25 PM |
-| {% person haensel_d %}   | 3 PM   |
-| {% person amer_a %}   | 1 PM   |
-
-The efforts are likely to increase, once the code base includes a near-complete parallelization layer.
-
-
 ## Future plans
 Currently we are developing a task-based scheme to simplify the use of shared memory and to improve intranode load-balancing. Therefore, the FMM software layout has to be extended to support asynchronous execution, task-dependency resolvability and tasking itself.
 In a second step the FMM will be coupled with currently available low-level tasking frameworks like Argobots.

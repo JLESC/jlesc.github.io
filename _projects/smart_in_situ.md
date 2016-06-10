@@ -39,18 +39,6 @@ None
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person peterka_t %} | 1.5 PM |
-| {% person ross_r %} | 1 PM |
-| {% person antoniu_g %} | 1.5 PM |
-| {% person dorier_m %} | 3 PM |
-| {% person sisneros_r %} | 1.5 PM |
-| {% person bautista_gomez_l %} | 1.5 PM |
-| {% person rahmani_l %} | 3 PM |
-| {% person bouge_l %} | 1.5 PM |
-
 ## Future plans
 
 Our short term plan is to extend our submitted Cluster paper into a journal paper including more experiments and more use cases.

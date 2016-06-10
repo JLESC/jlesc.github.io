@@ -35,14 +35,6 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person dorier_m %} | 2 PM |
-| {% person ross_r %} | 1 PM |
-| {% person antoniu_g %} | 1 PM |
-| {% person ibrahim_s %} | 1 PM |
-
 ## Future plans
 
 We plan to leverage Omnisc'IO first in the context of scheduling of I/O requests.
