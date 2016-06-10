@@ -217,20 +217,29 @@ future supercomputers.</p>
 <a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
 
 <p>During the previous year we tackled several challenges related to silent
-corruption <a href="#BautEtAl2015">(Bautista-Gomez and Cappello 2015)</a>. The first question we answered
-was related to the use of multiple SDC detectors with different
+corruption <a href="#BautEtAl2015">(Bautista-Gomez and Cappello 2015)</a>.  We developed a
+lightweight, adaptive, impact-driven detector for detecting the silent data
+corruptions<a href="#ShengEtCappello2016">(Di and Cappello 2016)</a>. (1) We carefully
+characterize 18 HPC applications/benchmarks and discuss the runtime data
+features, as well as the impact of the SDCs on their execution results. (2) We
+propose an impact-driven detection model that does not blindly improve the
+prediction accuracy, but instead detects only influential SDCs to guarantee
+user-acceptable execution results. (3) Our solution can adapt to dynamic
+prediction errors based on local runtime data and can automatically tune
+detection ranges for guaranteeing low false alarms. Another question we
+answered was related to the use of multiple SDC detectors with different
 characteristics. We designed a strategy that allows users to decide which SDC
 detector use and at which frequency, having the choice among several SDC
 detectors with different performance, recall and precision. This research was
-published as a full paper at HiPC2015 <a href="#BautEtAl2015b">(Bautista-Gomez et al. 2015)</a> and we wrote an
-extension full of details and new result and submitted to IJHPCA. In addition,
-we investigated how to create SDC detectors based on support vector machines
-(SVM) and compare them with the state-of-the-art SDC detectors. Our evaluation
-with multiple large-scale HPC applications shows that SVM is a good technique
-that can learn about the behavior of the datasets and detect the vast majority
-of anomalies while imposing a negligible overhead. Our technique preforms
-better than the existent ones in most of the cases. We published this results
-at CCGrid2016 <a href="#SubasiEtAl2016">(Subasi et al. 2016)</a>.</p>
+published as a full paper at HiPC2015 <a href="#BautEtAl2015b">(Bautista-Gomez et al. 2015)</a>
+and we wrote an extension full of details and new result and submitted to
+IJHPCA. In addition, we investigated how to create SDC detectors based on
+support vector machines (SVM) and compare them with the state-of-the-art SDC
+detectors. Our evaluation with multiple large-scale HPC applications shows that
+SVM is a good technique that can learn about the behavior of the datasets and
+detect the vast majority of anomalies while imposing a negligible overhead. Our
+technique preforms better than the existent ones in most of the cases. We
+published this results at CCGrid2016 <a href="#SubasiEtAl2016">(Subasi et al. 2016)</a>.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -241,6 +250,46 @@ at CCGrid2016 <a href="#SubasiEtAl2016">(Subasi et al. 2016)</a>.</p>
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ShengEtCappello2016
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseShengEtCappello2016Bibtex" aria-expanded="false" aria-controls="collapseShengEtCappello2016Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseShengEtCappello2016Abstract" aria-expanded="false" aria-controls="collapseShengEtCappello2016Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ShengEtCappello2016">Di, Sheng, and Franck Cappello. 2016. “ Adaptive-Impact Driven Detection Of Silent Data Corruption for HPC Applications.” <i>IEEE Transactions On Parallel and Distributed Computing</i>. Phoenix, United States.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseShengEtCappello2016Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{ShengEtCappello2016,
+  address = {Phoenix, United States},
+  author = {Di, Sheng and Cappello, Franck},
+  booktitle = {IEEE Transactions on Parallel and Distributed Computing},
+  title = { Adaptive-Impact Driven Detection of Silent Data Corruption for HPC Applications},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
