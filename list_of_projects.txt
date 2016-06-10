@@ -1,0 +1,31 @@
+fmm_project, Scalability Enhancements to FMM for Molecular Dynamics Simulations, kabadshow_i balaji_p haensel_d amer_a
+activestorage_project, Exploiting Active Storage for Resilience, pleiter_d chien_a dun_n vandenbergen_n
+pmefr_project, Programming Model Extensions for Resilience, amer_a balaji_p beltran_v casas_m
+ichpc_project, Mitigating I/O Interference in Concurrent HPC Applications, dorier_m antoniu_g ibrahim_s yildiz_o ross_r
+help_wanted_project, Help Wanted Demo Project, klatt_t speck_r
+eandb_project, Energy Efficiency and Load Balancing, keller_tesser_r padoin_e navaux_p mendes_c kale_s mehaut_j
+tool_pandt_project, Developer tools for porting and tuning parallel applications on extreme-scale parallel systems, wylie_b tsuji_m murai_h feld_c gimenez_j
+Lossy_checkpoint_restart, Checkpoint/Restart of/from lossy state, cappello_f olson_l calhoun_j snir_m
+alya_project, Iterative and direct parallel linear solvers in a hybrid MPI/OpenMP high performance computational engineering simulations, ramet_p agullo_e artigues_a houzeaux_g vazquez_m
+mcfd_cmp_project, Comparison of Meshing and CFD Methods for Accurate Flow Simulations on HPC systems, lintermann_a tsubokura_m onishi_k
+aggregator_placement, Toward taming large and complex data flows in data-centric supercomputing, jeannot_e vishwanath_v tessier_f
+chase_bse_project, Optimizing ChASE eigensolver for Bethe-Salpeter computations on multi-GPUs, schleife_a di_napoli_e
+dense_eigen_project, HPC libraries for solving dense symmetric eigenvalue problems, imamura_t gutheil_i
+elastic_prov, Elastic provisioning for data streams, keahey_k antoniu_g pineda_morales_l subramaniam_b costan_a
+exec_interfer_project, Modeling and avoiding execution interferences, bauer_g bleuse_r cappello_f lucarelli_g trystram_d wagner_f
+extreme_scale_workflows, "Extreme-Scale Workflow Tools: Swift, Decaf, Damaris, FlowVR", peterka_t wozniak_j dreher_m ross_r antoniu_g ibrahim_s dorier_m raffin_b
+folding_hmem, Use of the Folding profiler to assist on data distribution for heterogeneous memory systems, pena_a servat_h oden_l gimenez_j labarta_j balaji_p
+fpga_project, OpenMP for FPGA, cappello_f finkel_h yoshii_k alvarez_c
+ft_workflow_project, Optimization of Fault-Tolerance Strategies for Workflow Applications, benoit_a cappello_f robert_y cavelan_a
+interf_aware_sched, Towards Interference-aware scheduling in HPC systems, ross_r dorier_m antoniu_g ibrahim_s yildiz_o
+omniscio, Exploiting Omnisc'IO to improve scheduling, prefetching and caching in Exascale systems, dorier_m ross_r antoniu_g ibrahim_s
+ompss_argobots_project, Enhancing Asynchronous Parallelism in OmpSs with Argobots, balaji_p seo_s amer_a badia_r labarta_j teruel_x beltran_v
+ompss_mpi_project, Hybrid resilience for MPI + tasks codes, subasi_o martsinkevich_t labarta_j cappello_f unsal_o
+pampa_project, Dynamic load balancing with Pampa in Alya, houzeaux_g vazquez_m mehta_v jeannot_e lachat_c
+qmd_project, Fast Integrators for Scalable Quantum Molecular Dynamics, constantinescu_e schleife_a
+reducing_communication_sparse, Reducing Communication in Sparse Iterative and Direct Solvers, olson_l bienz_a grigori_l gropp_b
+sc16_project, On-Demand Data Analytics and Storage for Extreme-Scale Simulations and Experiments, cappello_f heitmann_k allen_g gropp_b habib_s seidel_ed brown_m kettimuthu_r sisneros_r schmitz_c stevens_s turk_m uram_t wheeler_d wilde_m wozniak_j
+scheduling_hpc_workflows, Resource Management and Scheduling for Data-Intensive HPC Workflows, ibrahim_s cheriere_n dorier_m ross_r antoniu_g
+sdc_detection, New Techniques to Design Silent Data Corruption Detectors, bautista_gomez_l benoit_a cappello_f cavelan_a robert_y subasi_o sun_h unsal_o di_s
+shared_infra_ad, Shared Infrastructure for Source Transformation Automatic Differentiation, hovland_p hascoet_l hovland_p  narayanan_s
+smart_in_situ, Smart In Situ Visualization, antoniu_g peterka_t ross_r dorier_m sisneros_r rahmani_l bautista_gomez_l bouge_l
