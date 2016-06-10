@@ -148,7 +148,7 @@ bauer_g:
   given_name: Greg
   affiliation: ncsa
   position: permanent
-  topics: 
+  topics:
   email: gbauer@ncsa.illinois.edu
   homepage:
 
@@ -156,7 +156,7 @@ bautista_gomez_l:
   sur_name: Bautista Gomez
   given_name: Leonardo
   affiliation: bsc
-  position:
+  position: permanent
   topics: Resilience
   email: leonardo.bautista@bsc.es
   homepage: leobago.com
@@ -202,10 +202,10 @@ bleuse_r:
   given_name: Raphaël
   affiliation: inria
   position: phd
-  topics: 
+  topics:
   email: raphael.bleuse@imag.fr
-  homepage: 
- 
+  homepage:
+
 
 bouge_l:
   sur_name: Bougé
@@ -230,7 +230,7 @@ brown_m:
   given_name: Brown
   affiliation: uiuc
   position: permanent
-  topics: 
+  topics:
   email: maxine@uic.edu
   homepage: https://www.evl.uic.edu/maxine/
 
@@ -248,7 +248,7 @@ cappello_f:
   given_name: Franck
   affiliation: anl
   position: permanent
-  topics: 
+  topics:
   email: cappello@anl.gov
   homepage:
 
@@ -364,7 +364,7 @@ doblas_reyes_f:
   given_name: Francisco
   affiliation: bsc
   position:
-  topics: 
+  topics:
   email: francisco.doblas-reyes@bsc.es
   homepage: https://www.bsc.es/about-bsc/staff-directory/doblas-reyes-francisco-j
 
@@ -621,7 +621,7 @@ kalbarczyk_z:
   sur_name: Kalbarczyk
   given_name: Zbigniew
   affiliation: uiuc
-  topics: 
+  topics:
   position: permanent
   email: kalbarcz@illinois.edu
   homepage: https://www.ece.illinois.edu/directory/profile/kalbarcz
@@ -634,7 +634,7 @@ kale_s:
   topics: Programming Models
   email: kale@illinois.edu
   homepage: http://charm.cs.uiuc.edu/~kale/
-  
+
 keahey_k:
   sur_name: Keahey
   given_name: Kate
@@ -648,7 +648,7 @@ keller_tesser_r:
   sur_name: Keller Tesser
   given_name: Raphael
   affiliation: inria
-  topics: 
+  topics:
   position:
   email: ktesser@inf.ufrgs.br
   homepage:
@@ -657,7 +657,7 @@ kettimuthu_r:
   sur_name: Kettimuthu
   given_name: Rajkumar
   affiliation: anl
-  topics: 
+  topics:
   position: permanent
   email: kettimut@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~kettimut/
@@ -697,7 +697,7 @@ lachat_c:
   topics:
   email: cedric.lachat@inria.fr
   homepage:
-  
+
 legrand_a:
   sur_name: Legrand
   given_name: Arnaud
@@ -742,13 +742,13 @@ llort_g:
   topics: Performance Tools
   email: gllort@bsc.es
   homepage:
-    
+
 lucarelli_g:
   sur_name: Lucarelli
   given_name: Giorgo
   affiliation: inria
   position: post_doc
-  topics: 
+  topics:
   email: giorgio.lucarelli@inria.fr
   homepage: http://moais.imag.fr/membres/giorgio.lucarelli/
 
@@ -895,7 +895,7 @@ onishi_k:
   position: post_doc
   topics:
   email: keiji.onishi@riken.jp
-  homepage: 
+  homepage:
 
 ozen_g:
   sur_name: Ozen
@@ -910,7 +910,7 @@ padoin_e:
   sur_name: Padoin
   given_name: Edson Luiz
   affiliation: inria
-  position: 
+  position:
   topics:
   email:  elpadoin@inf.ufrgs.br
   homepage:
@@ -1265,7 +1265,7 @@ tessier_f:
   topics:
   email: ftessier@anl.gov
   homepage: http://www.francoistessier.info/
-  
+
 trystram_d:
   sur_name: Trystram
   given_name: Denis
