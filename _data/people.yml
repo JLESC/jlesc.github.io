@@ -1221,15 +1221,6 @@ sun_h:
   email: hongyang.sun@ens-lyon.fr
   homepage: http://perso.ens-lyon.fr/hongyang.sun/
 
-suno_b:
-  sur_name: Subramaniam
-  given_name: Balaji
-  affiliation: anl
-  position:
-  topics: Numerics
-  email: bsubramaniam@anl.gov
-  homepage:
-
 sutmann_g:
   sur_name: Sutmann
   given_name: Godehard
