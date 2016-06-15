@@ -34,7 +34,7 @@ for sFile in filecut:
     name = sFile.replace('.md', '')
     members = members.replace("\n", '')
     members = members.replace("  -", '')
-    file.write(name +", " + filename  +", " + members +"\n")
+    file.write(name +"; " + filename  +"; " + members +"\n") ## changed , to ;
 
 file.close()
 content.close()
