@@ -1,6 +1,10 @@
+from urllib.parse import quote
+
 list = open('list_of_projects.txt', 'r')
 file = open('mailinglist_pms.txt', 'w')
 email = open('_data/people.yml', 'r')
+
+head = []
 
 for line in list:
 
@@ -14,33 +18,23 @@ for line in list:
     if zeile[2].endswith("\n"):
         zeile[2] = zeile[2].rstrip()
 
-    project = zeile[1]
-    project = project.replace("%", "%25")
-    project = project.replace("+", "%2B")
-    project = project.replace("\\", "%5C")
-    project = project.replace("\"", "%22")
-    project = project.replace("`", "%60")
-    project = project.replace("<", "%3C")
-    project = project.replace(">", "%3E")
-    project = project.replace("[", "%5B")
-    project = project.replace("]", "%5D")
-    project = project.replace("{", "%7B")
-    project = project.replace("}", "%7D")
-    project = project.replace("|", "%7C")
-    project = project.replace("=", "%3D")
-    project = project.replace("&", "%26")
-    project = project.replace("^", "%5E")
-    project = project.replace("#", "%23")
-    project = project.replace(" ", "+")
-    project = project.replace("++", "+")
+    project = quote(zeile[1])
 
     names = zeile[2].split(" ")
     pms = ""
     for object in names:
         if(object != ""):
-            pms = pms + object + ":+0.0PM%60s%0A"
+            object = quote(object)
+            pms = pms + object + ":+0.0PMs%0A"
 
     link = link.replace("[projectname]", project)
     link = link.replace("[pms]", pms)
 
     file.write("Project: " + zeile[0] + " ; Head: " + names[0] + " ; Link: "+ link +"\n")
+
+    head.append(names[1])
+
+
+file.close()
+list.close()
+email.close()

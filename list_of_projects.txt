@@ -1,4 +1,3 @@
-fmm_project; Scalability Enhancements to FMM for Molecular Dynamics Simulations; kabadshow_i balaji_p haensel_d amer_a
 activestorage_project; Exploiting Active Storage for Resilience; pleiter_d chien_a dun_n vandenbergen_n
 pmefr_project; Programming Model Extensions for Resilience; amer_a balaji_p beltran_v casas_m
 ichpc_project; Mitigating I/O Interference in Concurrent HPC Applications; dorier_m antoniu_g ibrahim_s yildiz_o ross_r
