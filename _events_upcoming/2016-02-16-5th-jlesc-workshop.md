@@ -65,6 +65,9 @@ they will show you the rooms.
 Four different rooms will be available for the workshop at the 4th floor of the ENS Monod: 
 Amphitheater A, Amphitheater B, Room B1 and Room B2. Rooms will be indicated.
 
+**Breaks** and **lunches** will be in front of the **_Amphitheater B_** (3dr floor of ENS Monod) and at the
+**_Passerelle room_** (4th floor of ENS Monod).
+
 Except on Monday, **breaks** will be in front of the **_Amphitheater B_** (3dr floor of ENS Monod), and 
 **lunches** will be at the **_Passerelle room_** (4th floor of ENS Monod).
 
