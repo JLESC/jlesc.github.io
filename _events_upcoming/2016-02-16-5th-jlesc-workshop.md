@@ -16,7 +16,7 @@ permalink:
 page_type: event_page
 ---
 
-**_News! Find a map and some late informations about the workshop at the bottom of the page._**
+**_News! Find a map, schedule, abstracts, and some late informations about the workshop at the bottom of the page._**
 
 ## About the workshop
 
@@ -46,8 +46,8 @@ Registration will take place at [http://jlesc2016.sciencesconf.org](http://jlesc
 
 ## What you need
 
-  * [The booklet](/downloads/booklet.pdf)
-  * [The talks](/downloads/talks.pdf)
+  * [The booklet](/downloads/booklet.pdf), everything you need to know about the program
+  * [The talks](/downloads/talks.pdf), list of talks by session with abstracts
 
 ## On Monday 27th
 
