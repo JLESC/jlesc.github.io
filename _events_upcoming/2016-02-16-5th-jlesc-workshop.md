@@ -16,6 +16,15 @@ permalink:
 page_type: event_page
 ---
 
+**News! You can now download:**
+  
+  * [The booklet](/downloads/booklet.pdf), with everything you need to know about the program.
+  * [The list of talks](/downloads/talks.pdf), by session, with abstracts.
+
+**_Find a map, and some late informations about the workshop at the bottom of the page._**
+
+## About the workshop
+
 The workshop will take place at [ENS-Lyon](http://www.ens-lyon.fr/en/english-ens-de-lyon-269761.kjsp) and will gather top researchers in HPC from INRIA,
 the University of Illinois, Argonne National Laboratory, Barcelona Supercomputing Center,
 Jülich Supercomputing Centre and Riken-AICS to explore research problems related to
@@ -40,25 +49,44 @@ This workshop is supported by the PUF in the context of the NEXTGN project.
 
 Registration will take place at [http://jlesc2016.sciencesconf.org](http://jlesc2016.sciencesconf.org/).
 
-### How to go there:
+## On Monday 27th
 
 The workshop begins at *2pm on Monday 27th of June*. The first session (2pm-4:20pm) is
 plenary, and we need the large **Amphitheater located at ENS Descartes**. All following 
 sessions (end of Monday, Tuesday and Wednesday) will take place at ENS Monod. A map 
 is given in this guide, but we will return to ENS Monod all together after the first session.
 
+**Note:** _Steering committee_ and _application meetings_ (by invitations) will start at 9am 
+and will take place at **ENS Monod**. You need to go to the **reception desk**, where 
+they will show you the rooms.
+
 **Registration** also takes place at ENS Monod, 4:30pm-7pm. 
 
 Four different rooms will be available for the workshop at the 4th floor of the ENS Monod: 
 Amphitheater A, Amphitheater B, Room B1 and Room B2. Rooms will be indicated.
+
+**Breaks** and **lunches** will be in front of the **_Amphitheater B_** (3dr floor of ENS Monod) and at the
+**_Passerelle room_** (4th floor of ENS Monod).
 
 Except on Monday, **breaks** will be in front of the **_Amphitheater B_** (3dr floor of ENS Monod), and 
 **lunches** will be at the **_Passerelle room_** (4th floor of ENS Monod).
 
 **Monday** and **Wednesday dinners** will be held at the ENS Descartes.
 
-### Hotels / ENS Monod / ENS Descartes:
+## How to get there:
+
 {% image 'ens_map.png' alt:'ENS MAP' %}
+
+## Close-by restaurants:
+
+These restaurants are within 5-10mins walking distance from ENS:
+
+  * [Carnegie Hall](http://www.carnegie-hall-69.com), 253 rue Marcel Mérieux, 69007 Lyon
+  * [Ninkasi](http://www.ninkasi.fr/en/locations/gerland.html), 267 Rue Marcel Mérieux, 69007 Lyon
+  * [Gochi](http://www.gochi.fr/gochi-gerland/), 3 rue Challemel Lacour, 69007 Lyon
+  * [La Pataterie](http://www.lapataterie-gerland.fr/), 6 rue Challemel Lacour, 69007 Lyon
+  * [Tiger Wok](http://www.tigerwok.fr/en/), 8 rue Challemel Lacour 69007, Lyon
+
 
 <div id="institutes" class="card-columns">
   <div class="card">
