@@ -44,6 +44,11 @@ This workshop is supported by the PUF in the context of the NEXTGN project.
 
 Registration will take place at [http://jlesc2016.sciencesconf.org](http://jlesc2016.sciencesconf.org/).
 
+## What you need
+
+  * [The booklet](/downloads/booklet.pdf)
+  * [The talks](/downloads/talks.pdf)
+
 ## On Monday 27th
 
 The workshop begins at *2pm on Monday 27th of June*. The first session (2pm-4:20pm) is
@@ -51,7 +56,7 @@ plenary, and we need the large **Amphitheater located at ENS Descartes**. All fo
 sessions (end of Monday, Tuesday and Wednesday) will take place at ENS Monod. A map 
 is given in this guide, but we will return to ENS Monod all together after the first session.
 
-**Note:** Steering committee and application meetings (by invitations) will start at 9am 
+**Note:** _Steering committee_ and _application meetings_ (by invitations) will start at 9am 
 and will take place at **ENS Monod**. You need to go to the **reception desk**, where 
 they will show you the rooms.
 
