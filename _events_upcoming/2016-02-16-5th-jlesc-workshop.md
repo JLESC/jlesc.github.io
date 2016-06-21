@@ -16,7 +16,12 @@ permalink:
 page_type: event_page
 ---
 
-**_News! Find a map, schedule, abstracts, and some late informations about the workshop at the bottom of the page._**
+**News! You can now download:**
+  
+  * [The booklet](/downloads/booklet.pdf), with everything you need to know about the program.
+  * [The list of talks](/downloads/talks.pdf), by session, with abstracts.
+
+**_Find a map, and some late informations about the workshop at the bottom of the page._**
 
 ## About the workshop
 
@@ -43,11 +48,6 @@ engineers and students who want to learn more about Post Petascale / Exascale Co
 This workshop is supported by the PUF in the context of the NEXTGN project.
 
 Registration will take place at [http://jlesc2016.sciencesconf.org](http://jlesc2016.sciencesconf.org/).
-
-## What you need
-
-  * [The booklet](/downloads/booklet.pdf), everything you need to know about the program
-  * [The talks](/downloads/talks.pdf), list of talks by session with abstracts
 
 ## On Monday 27th
 
