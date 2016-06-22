@@ -1420,6 +1420,16 @@ wylie_b:
   email: b.wylie@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/wylie_b.html
 
+
+yashiro_h:
+  sur_name: Yashiro
+  given_name: Hisashi
+  affiliation: riken
+  position:
+  topics:
+  email: h.yashiro@riken.jp
+  homepage: http://aics-research.riken.jp/tomitat_top/members/yashiro/
+  
 yildiz_o:
   sur_name: Yildiz
   given_name: Orcun
