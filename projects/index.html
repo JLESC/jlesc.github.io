@@ -43,8 +43,17 @@ subnavbar: Projects
            role="tabpanel"
            id="category-{{ topic_id }}"
            aria-labelledby="category-heading-{{ topic_id }}">
-        <p class="card-text">{{ topic.desc }}</p>
-
+        <p class="card-text">{{ topic.desc }} 
+        {% if topic.leaders %}
+          The topic leaders are: 
+            {% for member_id in topic.leaders %}
+              <li class="list-style">
+                {% person {{ member_id }} %}
+              </li>
+            {% endfor %}
+        {% endif %}
+        </p>
+        <br>
         <div id="project-index" class="card-columns">
           {% for project in site.projects | order: 'title' %}
             {% unless project.topics contains topic_id %}
