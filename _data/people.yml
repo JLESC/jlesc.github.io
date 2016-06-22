@@ -1365,24 +1365,6 @@ vivien_f:
   email: frederic.vivien@inria.fr
   homepage: http://perso.ens-lyon.fr/frederic.vivien/
 
-yashiro_h:
-  sur_name: Yashiro
-  given_name: Hisashi
-  affiliation: riken
-  position:
-  topics:
-  email: h.yashiro@riken.jp
-  homepage: http://aics-research.riken.jp/tomitat_top/members/yashiro/
-
-yildiz_o:
-  sur_name: Orcun
-  given_name: Yildiz
-  affiliation: inria
-  position: phd
-  topics:
-  email: orcun.yildiz@inria.fr
-  homepage: https://team.inria.fr/kerdata/orcun-yildiz/
-
 wagner_f:
   sur_name: Wagner
   given_name: Frederic
@@ -1455,3 +1437,4 @@ yoshii_k:
   topics:
   email: okazutomo@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/person/kazutomo-yoshii
+
