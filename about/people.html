@@ -93,7 +93,8 @@ subnavbar: People
           <div class="btn-group btn-group-sm pull-right" role="group">
             {% if person.email %}
               {% assign email = person.email | obfuscate_email %}
-              <a target="_blank"
+              <a href="mailto:{{ email }}""
+                 target="_blank"
                  class="btn btn-link btn-sm email-obfuscated"
                  title="write an email to {{ person.given_name }} {{ person.sur_name }}"
                  data-email="{{ email }}"
