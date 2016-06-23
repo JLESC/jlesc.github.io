@@ -98,9 +98,13 @@ while i < len(people)-1:
                 name = line.replace("  given_name: ", "").rstrip() + " " + name
                 helpvar = helpvar + 1
             elif helpvar > 0 and line.find('  email:') != -1:
-                emailaddress = line.replace("  email: ", "").rstrip()
+                if(line == "  email:\n" or line == "  email: \n"):
+                    print(name +" has no Emailaddress.")
+                else:
+                    emailaddress = line.replace("  email: ", "").rstrip()
                 helpvar = helpvar + 1
             elif helpvar == 4:
+                name = name.replace("  "," ")
                 break
             if (akt_lines >= num_lines):
                 email.seek(0)
@@ -134,6 +138,7 @@ while i < len(people)-1:
                 name = line.replace("  given_name: ", "").rstrip() + " " + name
                 helpvar = helpvar + 1
             elif helpvar == 3:
+                name = name.replace("  ", " ")
                 break
             if (akt_lines >= num_lines):
                 email.seek(0)
@@ -144,9 +149,9 @@ while i < len(people)-1:
 
 
 
-print (people)
-print (head)
-print (realname)
+#print (people)
+#print (head)
+#print (realname)
 
 email.close()
 
@@ -159,7 +164,7 @@ datei.close()
 
 
 file = open('mailinglist_pms.txt', 'w')
-file.write("Head;Link\n")
+file.write("Head; Link\n")
 
 for key, value in iter(link_pair.items()):
     link = "https://docs.google.com/forms/d/1HtvPVp-oCxFACzIgJD49g5qXjt8otU9YIalt-GOCIAg/viewform?entry.1218238180=[projectname]&entry.703889404=[pms]"
@@ -170,7 +175,10 @@ for key, value in iter(link_pair.items()):
     for item in value:
         if (item.find('*') != -1):
             item = item.replace("*", "")
-            file.write(realname.get(item) + " ; ")
+            for objects in head:
+                if( objects[0] == item):
+                    file.write(objects[2] + "; ")
+                    break
         persons = persons + quote(realname[item]) + endung + "%0A"
 
     link = link.replace("[pms]", persons)
