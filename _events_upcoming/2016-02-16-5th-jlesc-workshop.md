@@ -99,7 +99,7 @@ Hotels are located next to the **Halle Tony Garnier** tram (**Line T1**) stop.
     - Eithe **walk** (10mins)
     - Or take the tram (**Line T1**) direction **IUT Feyssine** and get off at the **Halle Tony Garnier** stop
 
-**_Remarks_**: The tram (**Line T1**) deserves:
+**_Remarks_**: The tram (**Line T1**) follows the _Avenue Debourg_ and deserves:
 
   * The Hotels: **Halle Tony Garnier** stop
   * ENS Lyon: **ENS Lyon** stop
