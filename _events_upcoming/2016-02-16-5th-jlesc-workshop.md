@@ -73,7 +73,29 @@ Except on Monday, **breaks** will be in front of the **_Amphitheater B_** (3dr f
 
 **Monday** and **Wednesday dinners** will be held at the ENS Descartes.
 
+## Hotels
+
+Hotel rooms are included in the registration fees. A block of rooms has been reserved at two different hotels :
+
+  * Novotel Lyon Gerland , 70, avenue Leclerc, 69007 Lyon - Tel: +33 4 72 71 11 11 - Email: H0736-SB1@accor.com
+  * Ibis Lyon Gerland , 68, avenue Leclerc, 69007 Lyon - Tel: +33 4 78 58 30 70 - Email: H0778-GM@accor.com
+
+They are next to each other and within reasonable walking distance to the workshop venue.
+
 ## How to get there:
+
+  * From the **Lyon-Saint-Exupéry airport**
+    - Take the **Rhônexpress** tram to the **Part-Dieu** railway station
+    - Change to the metro (**Line B**), direction **Gare d'Oullins**
+    - Get off at the **Debourg** station
+ 
+  * From the Part-Dieu railway station
+    - Take the metro (**Line B**) direction **Gare d'Oullins**
+    - Get off at the **Debourg** station
+ 
+  * From the Perrache railway station
+    - Take the tram (**Line T1**) direction **Debourg**
+    - Get off at either the **ENS Lyon** stop (_Monod_ site), or the **Debourg** stop (_ENS Descartes_ site)
 
 {% image 'ens_map.png' alt:'ENS MAP' %}
 
