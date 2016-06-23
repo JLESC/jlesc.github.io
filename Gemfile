@@ -24,3 +24,4 @@ gem 'jekyll-git_metadata', github: 'torbjoernk/jekyll-git_metadata',
                            tag: 'v0.0.5-torbjoernk'
 
 gem 'jgd'
+gem 'jekyll-email-protect'

@@ -59,6 +59,7 @@ GEM
       sprockets (~> 3.3)
       sprockets-helpers (~> 1.2)
       tilt (~> 2.0)
+    jekyll-email-protect (1.0.3)
     jekyll-feed (0.4.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.4.0)
@@ -116,6 +117,7 @@ DEPENDENCIES
   font-awesome-sass (>= 4.5.0)
   jekyll (>= 3.0)
   jekyll-assets
+  jekyll-email-protect
   jekyll-feed
   jekyll-git_metadata!
   jekyll-paginate
@@ -128,5 +130,8 @@ DEPENDENCIES
   sass
   uglifier
 
+RUBY VERSION
+   ruby 2.2.1p85
+
 BUNDLED WITH
-   1.11.2
+   1.12.5

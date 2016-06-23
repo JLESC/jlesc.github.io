@@ -92,10 +92,10 @@ subnavbar: People
           {% person_noaffi_inverse {{ person_id }} %}
           <div class="btn-group btn-group-sm pull-right" role="group">
             {% if person.email %}
-              {% assign email = person.email | obfuscate_email %}
-              <a href="mailto:{{ email }}""
+              {% assign email = person.email | encode_email %}
+              <a href="mailto:{{ email }}"
                  target="_blank"
-                 class="btn btn-link btn-sm email-obfuscated"
+                 class="btn btn-link btn-sm"
                  title="write an email to {{ person.given_name }} {{ person.sur_name }}"
                  data-email="{{ email }}"
                  role="button"
