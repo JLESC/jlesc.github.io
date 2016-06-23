@@ -297,6 +297,15 @@ conejero_f:
   email: marc.casas@bsc.es
   homepage:
 
+cortes_t:
+  sur_name: Cortes
+  given_name: Toni
+  affiliation: bsc
+  position: permanent
+  topics: operating systems, middleware and runtimes for parallel machines and clusters of workstations
+  email: toni.cortes@bsc.es
+  homepage: http://people.ac.upc.edu/toni/Toni_web_site/Toni_Cortes_-_Welcome.html 
+
 costan_a:
   sur_name: Costan
   given_name: Alexandru
@@ -457,6 +466,15 @@ gimenez_j:
   email: judit@bsc.es
   homepage:
 
+giraud_l:
+  sur_name: Giraud
+  given_name: Luc
+  affiliation: inria
+  position: permanent
+  topics: numerical linear algebra, HPC, parallel iterative methods and preconditioning
+  email: luc.giraud@inria.fr
+  homepage: https://team.inria.fr/hiepacs/team-members/luc-giraud/ 
+
 girona_s:
   sur_name: Girona
   given_name: Sergi
@@ -562,6 +580,15 @@ hovland_p:
   topics: HPC, automatic differentiation, domain specific languages, performance engineering
   email: hovland@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~hovland/
+
+hwu_w:
+  sur_name: Hwu
+  given_name: Wen-Mei W.
+  affiliation: uiuc
+  position: permanent
+  topics: Software systems, Parallel processing
+  email: w-hwu@illinois.edu
+  homepage: https://www.ece.illinois.edu/directory/profile/w-hwu
 
 ibrahim_s:
   sur_name: Ibrahim
@@ -698,6 +725,15 @@ lachat_c:
   email: cedric.lachat@inria.fr
   homepage:
 
+lanteri_s:
+  sur_name: Lanteri
+  given_name: Stéphane
+  affiliation: inria
+  position: permanent
+  topics: development of flexible	and efficient numerical methodologies for the simulation of wave propagation
+  email: Stephane.Lanteri@inria.fr
+  homepage: http://www-sop.inria.fr/nachos/pmwiki-2.2.6/pmwiki.php/Main/St%E9phaneLanteri 
+
 legrand_a:
   sur_name: Legrand
   given_name: Arnaud
@@ -832,6 +868,15 @@ mohr_b:
   topics: HPC, Performance Tools
   email: b.mohr@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/mohr_b.html
+
+morin_c:
+  sur_name: Morin
+  given_name: Christine
+  affiliation: inria
+  position: permanent
+  topics: Cluster computing,  Grid computing, Cloud computing
+  email: Christine.Morin@inria.fr
+  homepage: http://people.rennes.inria.fr/Christine.Morin/
 
 murai_h:
   sur_name: Murai
