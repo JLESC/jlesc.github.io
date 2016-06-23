@@ -73,7 +73,37 @@ Except on Monday, **breaks** will be in front of the **_Amphitheater B_** (3dr f
 
 **Monday** and **Wednesday dinners** will be held at the ENS Descartes.
 
+## Hotels
+
+There are two different workshop hotels:
+
+  * Novotel Lyon Gerland , 70, avenue Leclerc, 69007 Lyon - Tel: +33 4 72 71 11 11 - Email: H0736-SB1@accor.com
+  * Ibis Lyon Gerland , 68, avenue Leclerc, 69007 Lyon - Tel: +33 4 78 58 30 70 - Email: H0778-GM@accor.com
+
+They are next to each other and within reasonable walking distance to the workshop venue. 
+Hotels are located next to the **Halle Tony Garnier** tram (**Line T1**) stop.
+
 ## How to get there:
+
+  * From the **Lyon-Saint-Exupéry** airport to **Debourg**
+    - Take the **Rhônexpress** tram to the **Part-Dieu** railway station
+    - Change to the metro (**Line B**), direction **Gare d'Oullins** and get off at the **Debourg** station
+ 
+  * From the **Part-Dieu railway** station to **Debourg**
+    - Take the metro (**Line B**) direction **Gare d'Oullins** and get off at the **Debourg** station
+ 
+  * From the **Perrache railway** station
+    - Take the tram (**Line T1**) direction **Debourg** and get off at the **Halle Tony Garnier** stop
+
+  * From the **Debourg** metro station to the hotels
+    - Eithe **walk** (10mins)
+    - Or take the tram (**Line T1**) direction **IUT Feyssine** and get off at the **Halle Tony Garnier** stop
+
+**_Remarks_**: The tram (**Line T1**) follows the _Avenue Debourg_ and deserves:
+
+  * The Hotels: **Halle Tony Garnier** stop
+  * ENS Lyon: **ENS Lyon** stop
+  * ENS Descartes: **Debourg** stop
 
 {% image 'ens_map.png' alt:'ENS MAP' %}
 
