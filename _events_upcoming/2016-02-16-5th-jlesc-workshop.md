@@ -96,7 +96,7 @@ Hotels are located next to the **Halle Tony Garnier** tram (**Line T1**) stop.
     - Take the tram (**Line T1**) direction **Debourg** and get off at the **Halle Tony Garnier** stop
 
   * From the **Debourg** metro station to the hotels
-    - Eithe **walk** (10mins)
+    - Either **walk** (10mins)
     - Or take the tram (**Line T1**) direction **IUT Feyssine** and get off at the **Halle Tony Garnier** stop
 
 **_Remarks_**: The tram (**Line T1**) follows the _Avenue Debourg_ and deserves:
