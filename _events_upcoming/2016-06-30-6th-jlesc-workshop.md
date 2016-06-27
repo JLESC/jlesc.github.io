@@ -1,7 +1,7 @@
 ---
 layout: page_event
 title: 6th JLESC Workshop
-date: 2016-06-27
+date: 2016-06-30
 updated:
 navbar: Events
 event_location: RIKEN AICS, Kobe, Japan
