@@ -26,3 +26,5 @@ Up to a maximum of 24 students are considered.
 The summer school is supported by the PUF in the context of the NEXTGN project.
 
 Registration will take place at [http://jlesc2016.sciencesconf.org](http://jlesc2016.sciencesconf.org/).
+
+**_Update_:** The summer school will take place at ENS Monod, in Amphitheater B (4th floor). Coffee breaks will be in _salle passerelle_ on the 4th floor as well (same as for the JLESC Workshop). Coupons will be given to you for the lunch at the cafetaria (dinner is not included).
