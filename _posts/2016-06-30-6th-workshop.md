@@ -9,6 +9,4 @@ The 6th JLESC Workshop will be held at RIKEN AICS, Kobe, Japan, from November 30
 
 <!--more-->
 
-Stay tuned for more information!
-
-<!-- Click [here](/events/5th-jlesc-workshop) for more information! -->
+Click [here](/events/6th-jlesc-workshop) for more information!
