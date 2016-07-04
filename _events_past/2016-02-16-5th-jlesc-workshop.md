@@ -9,7 +9,7 @@ event_start: 2016-06-27
 event_end: 2016-06-29
 event_short_url:
 event_url: http://jlesc2016.sciencesconf.org
-wayback_url:
+wayback_url: http://web.archive.org/web/20160704061110/http://jlesc2016.sciencesconf.org/
 kind: workshop
 institute: inria
 permalink:
@@ -18,8 +18,8 @@ page_type: event_page
 
 **News! You can now download:**
   
-  * [The booklet](/downloads/booklet.pdf), with everything you need to know about the program.
-  * [The list of talks](/downloads/talks.pdf), by session, with abstracts.
+  * [The booklet](/downloads/5th-workshop/booklet.pdf), with everything you need to know about the program.
+  * [The list of talks](/downloads/5th-workshop/talks.pdf), by session, with abstracts.
 
 **_Find a map, and some late informations about the workshop at the bottom of the page._**
 
