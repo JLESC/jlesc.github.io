@@ -47,7 +47,7 @@ Research has also identified a number of things that can inhibit collaboration. 
 
 Here are some resources to help you in your collaborations:
 
-* [Building Interdisciplinary Research Teams](/research/docs/ISSTI_Briefing_Note_3-Building_Interdisicplinary_Research_Teams.pdf)
-* [Writing Interdisciplinary Research Proposals](/research/docs/ISSTI_Briefing_Note_1-Writing_Interdisciplinary_Research_Proposals.pdf)
-* [Meeting Common Interdisciplinary Research Challenges](/research/docs/ISSTI_Briefing_Note_5-Meeting_Common_Interdisciplinary_Research_Challenges.pdf)
+* [Building Interdisciplinary Research Teams](/downloads/docs/ISSTI_Briefing_Note_3-Building_Interdisicplinary_Research_Teams.pdf)
+* [Writing Interdisciplinary Research Proposals](/downloads/docs/ISSTI_Briefing_Note_1-Writing_Interdisciplinary_Research_Proposals.pdf)
+* [Meeting Common Interdisciplinary Research Challenges](/downloads/docs/ISSTI_Briefing_Note_5-Meeting_Common_Interdisciplinary_Research_Challenges.pdf)
 * The Science of Team Science site has an extensive set of studies and tools to promote team science.  One of the most useful is the [Team Science Toolkit](https://www.teamsciencetoolkit.cancer.gov/Public/Home.aspx)
