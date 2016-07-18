@@ -72,3 +72,45 @@
   to: cappello_f
   start: 2016-02-29
   end: 2016-05-30
+
+- from: pineda_morales_l
+  host: anl
+  start: 2015-05-01
+  end: 2015-08-31
+  no_exact: true
+
+- from: yildiz_o
+  host: anl
+  start: 2015-07-01
+  end: 2015-09-30
+  no_exact: true
+  
+- from: jeannot_e
+  host: anl
+  start: 2015-03-01
+  end: 2015-03-31
+  no_exact: true
+
+- from: tessier_f
+  host: anl
+  start: 2015-03-01
+  end: 2015-03-11
+  no_exact: true
+  
+- from: cheriere_n
+  host: anl
+  start: 2016-01-01
+  end: 2016-06-30
+  no_exact: true
+  
+- from: bleuse_r
+  host: ncsa
+  start: 2015-11-01
+  end: 2015-11-22
+  no_exact: true
+  
+- from: martsinkevich_t
+  host: bsc
+  start: 2015-05-01
+  end: 2015-07-31
+  no_exact: true
