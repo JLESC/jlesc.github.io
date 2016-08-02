@@ -8,6 +8,10 @@ subnavbar: Visits
 ---
 
 <p class="lead">
+  Members of an active <a href="/projects/">JLESC project</a> have access to travel funds supporting visits, exchanges and further activities within the project. In particular, JLESC encourages PhD students to make use of these funds. For more information please contact your local <a href="/about/people/">JLESC Executive Director</a>. 
+</p>
+
+<p class="lead">
   This is a list of visits members of the JLESC program made within JLESC.
   In case your latest visit to your colleague at another JLESC partner is not yet listed here, feel
   free to add yourself through a
