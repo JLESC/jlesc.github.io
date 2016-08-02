@@ -11,7 +11,7 @@ user_input = parser.parse_args()
 filecut=[]
 for data in user_input.path:
     if os.path.isfile(data):
-            if data.find('.md'):
+            if data.find('.md') != -1:
                 filecut.append(data)
 
     else:
@@ -23,6 +23,7 @@ for data in user_input.path:
 bibfilemember = {}
 
 if not filecut:
+    print('There are no files or folders that could be used.')
     sys.exit()
 
 for sFile in filecut:
