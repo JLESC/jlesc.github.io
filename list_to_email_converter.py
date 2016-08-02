@@ -4,12 +4,12 @@ import sys
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("path",type=str, help="the folderpath like: ./example/more/")
+parser.add_argument("path",type=str, help="the folderpath like: ./example/more/pytr")
 parser.add_argument("-s","--seek", help="seeks an existing entry", action="store_true")
 parser.add_argument("-m","--mailinglist", help="when you want to update the mailinglist", action="store_true")
 user_input = parser.parse_args()
 
-if user_input.file:
+if user_input.seek:
     if user_input.path.find('.md') == -1:
         print("It is not a .md file!")
     data = open(user_input.path)
