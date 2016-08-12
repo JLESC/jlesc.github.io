@@ -977,6 +977,15 @@ pena_a:
   email:  antonio.pena@bsc.es
   homepage: https://www.bsc.es/es/about-bsc/staff-directory/pena-antonio
 
+perarnau_s:
+  sur_name: Perarnau
+  given_name: Swann
+  affiliation: anl
+  position: permanent
+  topics: Memory, Performance Tools, OS
+  email: swann@anl.gov
+  homepage: http://www.mcs.anl.gov/~perarnau/
+
 perez_c:
   sur_name: Perez
   given_name: Christian
