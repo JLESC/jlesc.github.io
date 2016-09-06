@@ -36,4 +36,6 @@ You can use
     <!--more-->
 
 as a separator after the first paragraph to indicate the end of the post's teaser.
+
+Important: remove this comment (or, line 36) from the final post, otherwise the build will fail
 {% endcomment %}
