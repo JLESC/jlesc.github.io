@@ -923,6 +923,15 @@ navaux_p:
   email:
   homepage: http://charm.cs.uiuc.edu/people/navaux
 
+nou_r:
+  sur_name: Nou
+  given_name: Ramon
+  affiliation: bsc
+  position: post_doc
+  topics: I/O
+  email: ramon.nou@bsc.es
+  homepage: http://personals.ac.upc.edu/rnou/
+
 oden_l:
   sur_name: Oden
   given_name: Lena
@@ -1509,4 +1518,14 @@ yoshii_k:
   topics:
   email: okazutomo@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/person/kazutomo-yoshii
+
+zanon_f:
+  sur_name: Zanon
+  given_name: Francieli
+  affiliation: inria
+  position: 
+  topics: I/O
+  email: francieli.zanon@inf.ufrgs.br
+  homepage: 
+  
 
