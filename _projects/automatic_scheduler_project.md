@@ -16,6 +16,7 @@ members:
   - zanon_f
   - nou_r
   - mehaut_j
+  - navaux_p
 
 ---
 {% comment %}
