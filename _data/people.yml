@@ -392,7 +392,7 @@ dorier_m:
   position: post_doc
   topics: Big Data & I/O
   email: mdorier@anl.gov
-  homepage: https://people.irisa.fr/Matthieu.Dorier/wiki/doku.php
+  homepage: https://dorier.github.io
 
 dreher_m:
   sur_name: Dreher
@@ -1104,8 +1104,8 @@ riedel_m:
   homepage: http://www.morrisriedel.de/
 
 ross_r:
-  sur_name: Rob
-  given_name: Ross
+  sur_name: Ross
+  given_name: Rob
   affiliation: anl
   position: permanent
   topics:
