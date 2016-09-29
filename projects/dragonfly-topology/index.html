@@ -3,11 +3,11 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Resource Management and Scheduling for Data-Intensive HPC Workflows</title>
+  <title>JLESC &mdash; Exploiting the Dragonfly Topology to Improve Communication Operations in MPI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
-  <link rel="canonical" href="https://jlesc.github.io/projects/scheduling_hpc_workflows/">
+  <link rel="canonical" href="https://jlesc.github.io/projects/dragonfly-topology/">
 
   <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
   <link type="text/css" rel="stylesheet" href="/assets/main-167e11ddb3cf37684b12f71844e6f57af3cc3c85c3c0db40eabf910fff2a2e09.css">
@@ -93,7 +93,7 @@
   <article class="post-content">
     <div class="row">
       <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Resource Management and Scheduling for Data-Intensive HPC Workflows</h1>
+        <h1 class="pull-left">Exploiting the Dragonfly Topology to Improve Communication Operations in MPI</h1>
       </header>
     </div>
     <div class="row">
@@ -122,7 +122,7 @@
         <div class="col-sm-8">
           
             <span class="clearfix">
-              <span class="person given-name">Shadi</span> <span class="person sur-name">Ibrahim</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+              <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
               <span class="pull-right">
                 <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
               </span>
@@ -134,15 +134,15 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
               <span class="person given-name">Rob</span> <span class="person sur-name">Ross</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
             <span class="clearfix">
               <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Shadi</span> <span class="person sur-name">Ibrahim</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
         </div>
@@ -152,7 +152,7 @@
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
       <div class="col-sm-8">
-        <span class="project-status project-status-starting">starting</span>
+        <span class="project-status project-status-running">running</span>
       </div>
     </li>
     
@@ -164,7 +164,7 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -177,12 +177,27 @@
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>To cope with the ever increasing size of data and the resulting increase in the number and complexity of workflows running on Extreme-scale HPC systems, it becomes necessary to share the HPC resources across multiple scientific workflows, as is already the case on cloud infrastructures. The goal of this research project is to investigate approaches for resource sharing and scheduling that can preserve QoS requirements of scientific applications running concurrently on a shared HPC system, while ensuring a high resource utilisation of the infrastructure. We plan to investigate the possible trade-offs including Isolation vs. performance guarantee, consolidation vs. resource utilisation, and dynamicity vs. resource provisioning.</p>
+<p>High-radix direct network topologies such as Dragonfly have been proposed for<br>
+petascale and exascale supercomputers because they ensure fast interconnections<br>
+and reduce the cost of the network compared with traditional network topologies. 
+The design of new machines such as Theta with a Dragonfly network present an opportunity<br>
+to further improve the performance of distributed applications by making the algorithms<br>
+aware of the topology. Indeed, current algorithms do not consider the topology and thus
+lose numerous opportunities of optimization for performance that have been created by the topology. 
+This project aims to explores ways to exploit the strengths of the Dragonfly network topology
+to propose and evaluate optimized algorithms  global communication operations, such as AllGather, Scatter, etc.</p>
 
-<h2 id="results-for-20152016">
-<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
 
-<p>This project effectively started in 2016.</p>
+<p>We studied and extended existing algorithms for collective communication operations and use CODES,
+an event-driven simulator, to evaluate them. The simulations show expected results for AllGather, as well as surprising ones for Scatter:<br>
+the naive algorithm perform oustandingly well on Dragonfly because they exploit the characteristics<br>
+of the routers in the network. In particular, the Scatter operation could be accelerated up 
+by a factor up to 2 times using a hardware aware algorithm.</p>
+
+<p>These results have been accepted as a poster for the ACM Student Research Competition at SC 2016, and will be
+submitted at IPDPS 2017.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -192,19 +207,15 @@
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<p>This project effectively started in 2016.</p>
-
 <ol class="bibliography"></ol>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>This project started in 2016. Currently we are investigating the limitations of the current static allocations of the HPC resources when running HPC workflows (i.e., allocating a fixed set of cores for a fixed duration) and the resulting resource waste. Our goal is to introduce new dynamic resource management techniques for workflow-type jobs running on HPC platforms.</p>
+<p>The results will be included in a paper to be submitted at IPDPS 2017.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
-
-<ol class="bibliography"></ol>
 
       </div>
     </div>
