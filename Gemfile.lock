@@ -137,7 +137,6 @@ DEPENDENCIES
   jgd
   mini_magick
   sass
-  therubyracer
   uglifier
 
 RUBY VERSION
