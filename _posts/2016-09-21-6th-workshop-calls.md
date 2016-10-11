@@ -16,3 +16,5 @@ Submit proposals for **break-out sessions** here: [https://goo.gl/forms/jn9tdkk5
 Submit proposals for **individual talks** here: [https://goo.gl/forms/4wzumCB5wpRpLMyL2](https://goo.gl/forms/4wzumCB5wpRpLMyL2)
 
 Submit **project talks** here: [https://goo.gl/forms/1XqT28h1kIGNFIN43](https://goo.gl/forms/1XqT28h1kIGNFIN43)
+
+*DEADLINE: October 7, 2016!*
