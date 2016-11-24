@@ -49,7 +49,7 @@ We confirmed the libraries are ported and perform on the systems;
 |:--+:---:+:---:+:---:|
 | K | Hybrid [^1] | NA [^2] | Hybrid |
 | JUQUEEN | Hybrid | Pure MPI [^3] | Hybrid |
-| JURECA | Pure MPI | Pure MPI | Pure MPI |
+| JURECA | Pure MPI | Pure MPI | Hybrid |
 
 [^1]: On the K computer, ELPA2 performs in a hybrid parallel fashion, but we confirmed that ELPA1 performs in the pure MPI mode.
 [^2]: Elemental needs C++10, but C++10 functionalty is not supported on the current compiler on the K computer.
