@@ -14,7 +14,6 @@ keywords:
 head: hovland_p
 members: 
   - hascoet_l
-  - hovland_p 
   - narayanan_s
 ---
 {% comment %}
@@ -87,12 +86,18 @@ We have created a runtime library called ADMM to allow source-transformation adj
 
 We have successfully interoperated OpenAD from Argonne and Tapenade from INRIA{% cite NarayananHascoet2016 %}. Interoperation between the OpenAD and Tapenade is possible because they share the same global architecture i.e. a front-end which parses and builds an internal representation, followed by an static data-flow analysis stage, then actual building of the differentiated program still in internal form, and finally a back-end that outputs this differentiated internal form into new source files. The interoperation uses Tapenade for parsing the code and analysis. It uses OpenAD's XAIFBooster module for code transformation. The code to be differentiated is written into the XML Abstract Interface Form (XAIF) by Tapenade which is subsequently transformed by XAIFBooster. The transformed XAIF is converted back to source code by Tapenade. We have tested the new tool flow on various test cases from OpenAD's regression testsuite. We plan to apply it to larger codes once the tool flow is more mature.
 
+## Results for 2016/2017
+
+We have added capability to OpenAD to handle fixed point iterations in the code in an efficient, non-standard manner using the so called Bruce Christianson approach {% cite GoldbergEtAl2016 %}.
+
+We have added capability to OpenAD to differentiate non-smooth computation and generate derivatives in the so called Abs Normal Form (ANF) {%cite BosseNarayananHascoet2016 %}.  
+
 
 ## Visits and meetings
 Frequent e-mail exchanges. {% person hascoet_l %} visited Argonne and {% person narayanan_s %} visited INRIA.
 
 ## Impact and publications
-In the last year, we have submitted one journal paper and one extended abstract and have another publication in preparation.
+The work based on {% cite GoldbergEtAl2016 %} was one of the six keynote talks at AD 2016, the main AD conference held every four years. In the last year, we have submitted one journal paper and one extended abstract and have another publication in preparation.
 
 <!--
 {% comment %}
