@@ -1,28 +1,28 @@
 ---
 layout: page_event
-title: 6th JLESC Workshop
-date: 2016-06-30
-updated: 2016-10-12
+title: 7th JLESC Workshop
+date: 2017-01-24
+updated: 2017-01-24
 navbar: Events
-event_location: RIKEN AICS, Kobe, Japan
-event_start: 2016-11-30
-event_end: 2016-12-02
+event_location: UIUC, Urbana, USA
+event_start: 2017-07-17
+event_end: 2017-07-19
 event_short_url:
-event_url: http://www.aics.riken.jp/workshop/jlesc/
+event_url: 
 wayback_url: 
 logo: 
 kind: workshop
-institute: riken
+institute: uiuc
 permalink:
 page_type: event_page
 ---
 
-The workshop gathered leading researchers in high-performance computing from the JLESC partners INRIA,
+The workshop gathers leading researchers in high-performance computing from the JLESC partners INRIA,
 the University of Illinois, Argonne National Laboratory, Barcelona Supercomputing Center,
 Jülich Supercomputing Centre and RIKEN AICS to explore the most recent and critical issues
 in advancing the field of HPC from petascale to the extreme scale era.
 
-The workshop featured sessions on these seven central topics:
+The workshop will feature sessions on these seven central topics:
 
   * Applications and mini-apps
   * Parallel Programming models and runtime 
