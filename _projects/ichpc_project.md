@@ -6,7 +6,7 @@ updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: finished
 topics:
   - storage
 keywords:
@@ -66,20 +66,6 @@ at SC’14 {% cite DorierEtAl2014b --file jlesc.bib %}.
 ## Impact and publications
 
 {% bibliography --cited --file jlesc.bib %}
-
-## Future plans
-
-### Sub-goal 1:
-Our plan is to integrate Omnisc’IO within CALCioM in order to provide a fully-featured
-I/O scheduling system.
-Evaluations will be made using event-driven simulations, using traces from Argonne’s Darshan tools.
-
-### Sub-goal 2:
-Our plan is to investigate the different factors which contribute to the interference
-in HPC systems and explore a model to predicate this interference. And ultimately to provide
-a new framework for interference-aware scheduling that would help in improving the performance
-of HPC applications. This work is the subject for the summer internship for Orcun Yildiz at ANL
-(2015).
 
 ## References
 
