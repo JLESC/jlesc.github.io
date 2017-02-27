@@ -6,7 +6,7 @@ updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: finished 
 topics: 
   - storage
 keywords:
@@ -27,7 +27,7 @@ While many parallel visualization tools now provide in situ visualization capabi
 
 ## Results for 2015/2016
 
-We tackled the challenge of enabling in situ visualization under performance constraints. Our approach shuffles data across processes according to its content and filters out part of it in order to feed a visualization pipeline with only a reorganized subset of the data produced by the simulation. Our proposed framework monitors its own performance and reconfigures itself dynamically to achieve the best possible visual fidelity within predefined performance constraints. Experiments on the Blue Waters supercomputer with the CM1 simulation show that our approach enables a 5x speedup and is able to meet performance constraints. The results of this work are available in a research report  {% cite DorierEtAlRR2016 --file jlesc.bib %} and have been submitted to IEEE Cluster 2016.
+We tackled the challenge of enabling in situ visualization under performance constraints. Our approach shuffles data across processes according to its content and filters out part of it in order to feed a visualization pipeline with only a reorganized subset of the data produced by the simulation. Our proposed framework monitors its own performance and reconfigures itself dynamically to achieve the best possible visual fidelity within predefined performance constraints. Experiments on the Blue Waters supercomputer with the CM1 simulation show that our approach enables a 5x speedup and is able to meet performance constraints. The results of this work are available in a research report  {% cite DorierEtAlRR2016 --file jlesc.bib %} and have been published at IEEE Cluster 2016 {% cite DorierEtAl2016a --file jlesc.bib %}.
 
 
 ## Visits and meetings
@@ -38,12 +38,6 @@ None
 
 {% bibliography --cited --file jlesc.bib %}
 
-
-## Future plans
-
-Our short term plan is to extend our submitted Cluster paper into a journal paper including more experiments and more use cases.
-
-We plan to investigate whether more elaborate redistribution algorithms are necessary in order to achieve the same results at larger scale and on platforms with lower network performance. We will also investigate finding relevant regions in multivariate data, as well as other visualization scenarios and other simulations.
 
 ## References
 
