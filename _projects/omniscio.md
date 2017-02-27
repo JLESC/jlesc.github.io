@@ -1,12 +1,12 @@
 ---
 layout: page_project
-title: Exploiting Omnisc'IO to improve scheduling, prefetching and caching in Exascale systems
+title: Exploiting the Omnisc'IO prediction approach for Exascale systems
 date: 2016-03-21
 updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: suspended
 topics: 
   - storage
 keywords:
@@ -25,10 +25,9 @@ Many techniques used in data management such as scheduling of I/O requests, pref
 
 The Omnisc'IO approach was presented at SC 14 {% cite DorierEtAl2014a --file jlesc.bib %}. An extension of the approach was published in the TPDS journal {% cite DorierTPDS2015 --file jlesc.bib %}.
 
-
 ## Visits and meetings
 
-None yet.
+None.
 
 ## Impact and publications
 
@@ -37,6 +36,6 @@ None yet.
 
 ## Future plans
 
-We plan to leverage Omnisc'IO first in the context of scheduling of I/O requests.
+The project is currently suspended due to a lack of human resources.
 
 ## References
