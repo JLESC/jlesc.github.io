@@ -6,7 +6,7 @@ updated: 2016-03-02
 navbar: Research
 subnavbar: Projects
 project_url:
-status: finished
+status: suspended
 topics:
   - apps
   - numerics
