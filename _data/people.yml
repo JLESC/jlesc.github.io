@@ -142,6 +142,24 @@ balaji_p:
   email: balaji@anl.gov
   homepage: http://www.mcs.anl.gov/~balaji/
 
+balaprakash_p:
+  sur_name: Balaprakash
+  given_name: Prasanna
+  affiliation: anl
+  position: 
+  topics: artificial intelligence, machine learning, optimization, and high-performance computing
+  email: pbalapra@anl.gov
+  homepage: http://www.mcs.anl.gov/person/prasanna-balaprakash
+
+balasz_g:
+  sur_name: Balasz
+  given_name: Gerofi
+  affiliation: riken
+  position: 
+  topics: 
+  email: bgerofi@riken.jp
+  homepage: http://www-sys-aics.riken.jp/Members/gerofi.html
+
 barcelo_a:
   sur_name: Barcelo
   given_name: Alex
@@ -177,6 +195,15 @@ baumeister_p:
   topics: performance optimization and analysis, applications, advanced architectures
   email: p.baumeister@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/baumeister_p.html
+
+beams_n:
+  sur_name: Beams
+  given_name: Natalie
+  affiliation: ncsa
+  position: phd
+  topics: 
+  email: beams2@illinois.edu
+  homepage: http://web.engr.illinois.edu/~beams2/
 
 beltran_v:
   sur_name: Beltran
@@ -214,6 +241,14 @@ bleuse_r:
   email: raphael.bleuse@imag.fr
   homepage:
 
+boito_f:
+  sur_name: Zanon Boito
+  given_name: Francieli
+  affiliation: inria
+  position: permanent
+  topics: 
+  email: francieli.zanon@inf.ufrgs.br
+  homepage: http://www.inf.ufrgs.br/~fzboito/
 
 bouge_l:
   sur_name: Bougé
@@ -223,15 +258,6 @@ bouge_l:
   topics: Big Data & I/O
   email: luc.bouge@ens-rennes.fr
   homepage: https://team.inria.fr/kerdata/luc-bouge/
-
-broemmel_d:
-  sur_name: Broemmel
-  given_name: Dirk
-  affiliation: jsc
-  position: permanent
-  topics: applications, programming models, extreme scaling
-  email: d.broemmel@fz-juelich.de
-  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/broemmel_d.html
 
 brown_m:
   sur_name: Maxine D.
@@ -258,7 +284,16 @@ cappello_f:
   position: permanent
   topics:
   email: cappello@anl.gov
-  homepage:
+  homepage: http://www.mcs.anl.gov/person/franck-cappello
+
+carns_p:
+  sur_name: Carns
+  given_name: Phil
+  affiliation: anl
+  position: 
+  topics:
+  email: carns@mcs.anl.gov
+  homepage: http://www.mcs.anl.gov/person/phil-carns
 
 casas_m:
   sur_name: Casas
@@ -277,6 +312,15 @@ cavelan_a:
   topics: Resilience
   email: aurelien.cavelan@inria.fr
   homepage: http://perso.ens-lyon.fr/aurelien.cavelan/
+
+chen_j:
+  sur_name: Chen
+  given_name: Jian
+  affiliation: riken
+  position: 
+  topics: 
+  email: jchen@riken.jp
+  homepage: 
 
 cheriere_n:
   sur_name: Cheriere
@@ -336,10 +380,19 @@ coullon_h:
   sur_name: Coullon
   given_name: Helene
   affiliation: inria
-  position: post_doc
-  topics: domain specific languages, parallel and high performance programming models, component-based programming models, numerical simulation
+  position: alumnus
+  topics: 
   email: helene.coullon@inria.fr
   homepage: http://www.univ-orleans.fr/lifo/Members/Helene.Coullon/
+
+dawson_w:
+  sur_name: Dawson
+  given_name: William
+  affiliation: riken
+  position: 
+  topics:
+  email: william.dawson@riken.jp
+  homepage: 
 
 denis_a:
   sur_name: Denis
@@ -562,6 +615,15 @@ heitmann_k:
   email: heitmann@anl.gov
   homepage: http://www.ci.anl.gov/profile/212
 
+hirota_y:
+  sur_name: Hirota
+  given_name: Yusuke
+  affiliation: riken
+  position:
+  topics: 
+  email: yusuke.hirota@riken.jp
+  homepage:
+
 hori_a:
   sur_name: Hori
   given_name: Atsushi
@@ -616,6 +678,24 @@ imamura_t:
   email: imamura.toshiyuki@riken.jp
   homepage:
 
+ishikawa_y:
+  sur_name: Ishikawa
+  given_name: Yukata
+  affiliation: riken
+  position: permanent
+  topics: 
+  email: yutaka.ishikawa@riken.jp
+  homepage: http://www-sys-aics.riken.jp/Members/ishikawa.html
+
+iwashita_h:
+  sur_name: Iwashita
+  given_name: Hidetoshi
+  affiliation: riken
+  position: 
+  topics: 
+  email: hidetoshi.iwashita@riken.jp
+  homepage: 
+
 jacob_r:
   sur_name: Jacob
   given_name: Robert
@@ -624,6 +704,15 @@ jacob_r:
   topics: application
   email: jacob@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~jacob/
+
+jaulmes_l:
+  sur_name: Jaulmes
+  given_name: Luc
+  position: 
+  affiliation: bsc
+  topics: 
+  email: luc.jaulmes@bsc.es
+  homepage: https://www.bsc.es/jaulmes-luc
 
 jeannot_e:
   sur_name: Jeannot
@@ -651,6 +740,15 @@ kabadshow_i:
   position: permanent
   email: i.kabadshow@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/kabadshow_i.html
+
+kajikawa_y:
+  sur_name: Kajikawa
+  given_name: Yoshiyuki
+  affiliation: riken
+  topics: 
+  position: 
+  email: ykaji@riken.jp
+  homepage: 
 
 kalbarczyk_z:
   sur_name: Kalbarczyk
@@ -697,6 +795,15 @@ kettimuthu_r:
   email: kettimut@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~kettimut/
 
+kindratenko_v:
+  sur_name: Kindratenko
+  given_name: Volodymyr
+  affiliation: ncsa
+  topics:
+  position: permanent
+  email: kindrtnk@illinois.edu 
+  homepage: https://www.ece.illinois.edu/directory/profile/kindrtnk
+
 klatt_t:
   sur_name: Klatt
   given_name: Torbjörn
@@ -713,6 +820,24 @@ kramer_b:
   position: permanent
   topics:
   email: wtkramer@illinois.edu
+  homepage:
+
+krieg_s:
+  sur_name: Krieg-Venghaus
+  given_name: Stefan
+  affiliation: jsc
+  position: permanent
+  topics: 
+  email: s.krieg@fz-juelich.de
+  homepage: http://www.fz-juelich.de/ias/jsc/EN/AboutUs/Staff/Krieg_S/_node.html
+
+kumahata_k:
+  sur_name: Kumahata
+  given_name: Kiyoshi
+  affiliation: riken
+  position: 
+  topics:
+  email: kuma@riken.jp
   homepage:
 
 labarta_j:
@@ -751,6 +876,24 @@ legrand_a:
   email: arnaud.legrand@imag.fr
   homepage: https://team.inria.fr/polaris/members/arnaud-legrand/
 
+lee_j:
+  sur_name: Lee
+  given_name: Jinpil
+  affiliation: riken
+  position: 
+  topics: 
+  email: jinpil.lee@riken.jp
+  homepage: 
+
+lehmkuhl_o:
+  sur_name: Lehmkuhl
+  given_name: Oriol
+  affiliation: bsc
+  position: post_doc
+  topics: 
+  email: oriol.lehmkuhl@bsc.es
+  homepage: https://www.bsc.es/lehmkuhl-oriol
+
 lefevre_l:
   sur_name: Lefevre
   given_name: Laurent
@@ -786,6 +929,15 @@ llort_g:
   topics: Performance Tools
   email: gllort@bsc.es
   homepage:
+    
+lopez_v:
+  sur_name: Lopez
+  given_name: Victor
+  affiliation: bsc
+  position: 
+  topics: 
+  email: victor.lopez@bsc.es
+  homepage: https://www.bsc.es/lopez-herrero-victor
 
 lucarelli_g:
   sur_name: Lucarelli
@@ -832,6 +984,15 @@ maruyama_y:
   email: yutaka.maruyama.ur@riken.jp
   homepage:
 
+matsuda_m:
+  sur_name: Matsuda
+  given_name: Motohiko
+  affiliation: riken
+  position:
+  topics:
+  email: matu@acm.org
+  homepage:
+
 mehaut_j:
   sur_name: Mehaut
   given_name: Jean-Francois
@@ -868,6 +1029,24 @@ mendes_c:
   email: cmendes@illinois.edu
   homepage: http://charm.cs.uiuc.edu/people/cmendes
 
+mikida_e:
+  sur_name: Mikida
+  given_name: Eric
+  affiliation: ncsa
+  position: phd
+  topics:
+  email: mikida2@illinois.edu
+  homepage: http://charm.cs.uiuc.edu/people/mikida2
+
+mikami_k:
+  sur_name: Mikami
+  given_name: Kazunori
+  affiliation: riken
+  position: 
+  topics:
+  email: kazunori.mikami@riken.jp
+  homepage: 
+
 mohr_b:
   sur_name: Mohr
   given_name: Bernd
@@ -895,6 +1074,15 @@ murai_h:
   email: h-murai@riken.jp
   homepage:
 
+nakajima_t:
+  sur_name: Nakajima
+  given_name: Takahito
+  affiliation: riken
+  position: permanent
+  topics: 
+  email: nakajima@riken.jp
+  homepage: http://www.riken.jp/en/research/labs/aics/research/comput_mol_sci/
+
 nakamura_y:
   sur_name: Nakamura
   given_name: Yoshifumi
@@ -902,6 +1090,15 @@ nakamura_y:
   position: permanent
   topics: Numerics, Lattice field theory, Theoretical Physics
   email: nakamura@riken.jp
+  homepage:
+    
+nakao_m:
+  sur_name: Nakao
+  given_name: Masahiro
+  affiliation: riken
+  position: 
+  topics: 
+  email: masahiro.nakao@riken.jp
   homepage:
 
 narayanan_s:
@@ -913,7 +1110,6 @@ narayanan_s:
   email: snarayan@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/person/sri-hari-krishna-narayanan
 
-
 navaux_p:
   sur_name: Navaux
   given_name: Phillipe
@@ -923,6 +1119,15 @@ navaux_p:
   email:
   homepage: http://charm.cs.uiuc.edu/people/navaux
 
+nonaka_j:
+  sur_name: Nonaka
+  given_name: Jorji
+  affiliation: riken
+  position: 
+  topics: 
+  email: jorji@riken.jp
+  homepage: 
+  
 nou_r:
   sur_name: Nou
   given_name: Ramon
@@ -932,14 +1137,41 @@ nou_r:
   email: ramon.nou@bsc.es
   homepage: http://personals.ac.upc.edu/rnou/
 
+o-tani_h:
+  sur_name: O-tani
+  given_name: Hideyuki
+  affiliation: riken
+  position: 
+  topics:
+  email: h.o-tani@riken.jp
+  homepage:
+
+odajima_t:
+  sur_name: Odajima
+  given_name: Tetsuya
+  affiliation: riken
+  position: post_doc
+  topics:
+  email: tetsuya.odajima@riken.jp
+  homepage:
+
 oden_l:
   sur_name: Oden
   given_name: Lena
-  affiliation: anl
+  affiliation: jsc
   position: post_doc
   topics:
   email: loden@anl.gov
   homepage:
+    
+olson_k:
+  sur_name: Olson
+  given_name: Kjellrun
+  affiliation: uiuc
+  position: 
+  topics: 
+  email: kjellrun@illinois.edu
+  homepage: http://www-backup.ncsa.illinois.edu/AboutUs/People/contact.php?id=kjellrun
 
 olson_l:
   sur_name: Olson
@@ -976,6 +1208,15 @@ padoin_e:
   topics:
   email:  elpadoin@inf.ufrgs.br
   homepage:
+
+pearson_c:
+  sur_name: Pearson
+  given_name: Carl
+  affiliation: uiuc
+  position: phd
+  topics:
+  email: pearson@illinois.edu
+  homepage: https://www.ece.illinois.edu/directory/profile/pearson
 
 pena_a:
   sur_name: Peña
@@ -1139,6 +1380,15 @@ ropars_t:
   email: thomas.ropars@inria.fr
   homepage: http://people.bordeaux.inria.fr/tropars/
 
+rutten_e:
+  sur_name: Rutten
+  given_name: Eric
+  affiliation: inria
+  position: permanent
+  topics: model-based control of autonomic, adaptive and reconfigurable computing systems
+  email: eric.rutten@inria.fr
+  homepage: https://team.inria.fr/ctrl-a/members/eric-rutten/
+
 sakai_y:
   sur_name: Sakai
   given_name: Yasuhiro
@@ -1219,6 +1469,51 @@ servat_h:
   topics: Performance Tools
   email: harald.servat@bsc.es
   homepage:
+    
+shimazaki_t:
+  sur_name: Shimazaki
+  given_name: Tomomi
+  affiliation: riken
+  position: permanent
+  topics: 
+  email: t-shimazaki@riken.jp
+  homepage: 
+    
+shintani_e:
+  sur_name: Shintani
+  given_name: Eigo
+  affiliation: riken
+  position: 
+  topics: 
+  email: shintani@riken.jp
+  homepage: 
+
+shoji_f:
+  sur_name: Shoji
+  given_name: Fumiyoshi
+  affiliation: riken
+  position: permanent
+  topics: 
+  email: shoji@riken.jp
+  homepage: http://www.riken.jp/en/research/labs/aics/ops_comput/
+
+si_m:
+  sur_name: Si
+  given_name: Min
+  affiliation: anl
+  position: post_doc
+  topics: high-performance computing, parallel programming models, and parallel runtime system on many-core architectures
+  email: msi@anl.gov
+  homepage: http://www.mcs.anl.gov/~minsi/
+
+silvi_g:
+  sur_name: Silvi
+  given_name: Giorgio
+  affiliation: jsc
+  position: phd
+  topics: 
+  email: g.silvi@fz-juelich.de
+  homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/silvi_g.html?nn=362224
 
 sisneros_r:
   sur_name: Sisneros
@@ -1237,6 +1532,15 @@ snir_m:
   topics:
   email: snir@anl.gov
   homepage: http://snir.cs.illinois.edu/
+
+sota_s:
+  sur_name: Sota
+  given_name: Shigetoshi
+  position: 
+  affiliation: riken
+  topics:
+  email: sotas@riken.jp
+  homepage: 
 
 speck_r:
   sur_name: Speck
@@ -1292,6 +1596,15 @@ sun_h:
   email: hongyang.sun@ens-lyon.fr
   homepage: http://perso.ens-lyon.fr/hongyang.sun/
 
+suno_h:
+  sur_name: Suno
+  given_name: Hiroya
+  affiliation: riken
+  position:
+  topics:
+  email: suno@riken.jp
+  homepage: 
+
 sutmann_g:
   sur_name: Sutmann
   given_name: Godehard
@@ -1301,6 +1614,24 @@ sutmann_g:
   email: g.sutmann@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/sutmann_g.html
 
+suzuki_s:
+  sur_name: Suzuki
+  given_name: Soichiro
+  affiliation: riken
+  position: 
+  topics: 
+  email: soichiro.suzuki@riken.jp
+  homepage: 
+
+takizawa_s:
+  sur_name: Takizawa
+  given_name: Shinichiro
+  affiliation: riken
+  position:
+  topics:
+  email: shinichiro.takizawa@riken.jp
+  homepage:
+
 tanaka_m:
   sur_name: Tanaka
   given_name: Mihoko
@@ -1308,6 +1639,24 @@ tanaka_m:
   position:
   topics:
   email: mihoko.tanaka@riken.jp
+  homepage:
+
+terai_m:
+  sur_name: Terai
+  given_name: Masaaki
+  affiliation: riken
+  position: 
+  topics: 
+  email: teraim@riken.jp
+  homepage:
+
+terasaki_k:
+  sur_name: Terasaki
+  given_name: Koji
+  affiliation: riken
+  position: 
+  topics: 
+  email: koji.terasaki@riken.jp
   homepage:
 
 teruel_x:
@@ -1352,8 +1701,17 @@ tsuji_m:
   affiliation: riken
   position:
   topics:
-  email:
+  email: miwako.tsuji@riken.jp
   homepage: http://www.aics.riken.jp/
+
+tsujita_y:
+  sur_name: Tsujita
+  given_name: Yuichi
+  affiliation: riken
+  position:
+  topics:
+  email: yuichi.tsujita@riken.jp
+  homepage: 
 
 turk_m:
   sur_name: Turk
@@ -1372,6 +1730,15 @@ ukawa_a:
   topcis:
   email: ukawa@ccs.tsukuba.ac.jp
   homepage: http://www2.ccs.tsukuba.ac.jp/people/ukawa/
+
+uno_a:
+  sur_name: Uno
+  given_name: Atsuya
+  affiliation: riken
+  position: permanent
+  topics: 
+  email: uno@riken.jp
+  homepage: http://www.riken.jp/en/research/labs/aics/ops_comput/sys_ops_dev/
 
 unsal_o:
   sur_name: Unsal
@@ -1445,6 +1812,15 @@ wagner_f:
   email: wagnerf@imag.fr
   homepage: http://www-id.imag.fr/Laboratoire/Membres/Wagner_Frederic/perso.html
 
+wahib_m:
+  sur_name: Wahib
+  given_name: Mohamed
+  affiliation: riken
+  position: 
+  topics:
+  email: mohamed.attia@riken.jp
+  homepage: 
+
 wheeler_d:
   sur_name: Wheeler
   given_name: David
@@ -1491,7 +1867,15 @@ wylie_b:
   email: b.wylie@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/wylie_b.html
 
-
+yamamoto_k:
+  sur_name: Yamamoto
+  given_name: Keiji
+  affiliation: riken
+  position:
+  topics:
+  email: keiji.yamamoto@riken.jp
+  homepage: 
+  
 yashiro_h:
   sur_name: Yashiro
   given_name: Hisashi
@@ -1528,4 +1912,3 @@ zanon_f:
   email: francieli.zanon@inf.ufrgs.br
   homepage: 
   
-
