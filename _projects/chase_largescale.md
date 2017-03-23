@@ -7,10 +7,13 @@ navbar: Research
 subnavbar: Projects
 project_url:
 status: starting
-topics: numerics
-  -
+topics:
+  - numerics
+  - apps
 keywords:
-  -
+  - Extremal eigenvalue solver
+  - Very large eigenproblems
+  - Subspace iteration
 head: di_napoli_e
 members: 
   - di_napoli_e
