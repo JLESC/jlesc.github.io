@@ -2,15 +2,18 @@
 layout: page_project
 title: Optimization of Fault-Tolerance Strategies for Workflow Applications
 date: 2016-03-16
-updated:
+updated: 2017-04-01
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - resilience
 keywords:
-  -
+  - resilience
+  - replication
+  - detection
+  - SDC
 head: benoit_a
 members:
   - cappello_f
@@ -98,30 +101,25 @@ for the execution of general workflow applications. For that, we first need to
 derive a clear model for replication, as there are many ways to implement it, 
 even for a single task.
 
-## Results for 2015/2016
 
-We start by investigating the impact of replication on the execution of a single task.
-Replication can be done at different application level. We investigate both 
-process-replication, where each process can be replicated several times, 
-and group replication, where an entire group of processes is replicated. 
-For each level, we consider a passive approach: waiting for the application 
-to either succeed or fail; and an active approach: checkpointing all living 
-replicas as soon as a failure occurs.
+## Results for 2016/2017
 
-Furthermore, we consider both fail-stop and silent errors. We derive closed-form 
-formulas for the expected execution time and first-order approximations for the overhead 
-and the optimal checkpoint interval. Finally, we compare both approaches to the 
-checkpointing-only solution.
+Work has been focused toward using replication as a detection and correction mechanism for Silent Data Corruptions (SDC).
+Although other detection techniques exist for HPC applications, based on algorithms (ABFT), invariant preservation or data analytics, replication remains the most transparent and least intrusive technique.
+In this work, replication is combined with checkpoiting to enable rollback and recovery when forward recovery is not possible, which occurs when too many replicas are corrupted.
+The goal is to find the right level (duplication, triplication or more) of replication needed to efficiently detect and correct silent errors at scale.
+As of today, we provide a detailed analytical study with formulas to decide the optimal parameters as a function of the error rate, checkpoint cost, and platform size.
+
 
 ## Visits and meetings
 
-{% person cavelan_a %} is visiting {% person cappello_f %} in Chicago for three 
-months (march-april-may 2016) to initiate this project. We are working 
+{% person cavelan_a %} visited {% person cappello_f %} in Chicago for three 
+months (march-april-may 2016) to initiate the project. We are working 
 in close collaboration to make progress.
 
 ## Impact and publications
 
-None yet.
+The project has submitted a paper to FTXS 2017 and JPDC.
 
 <!--
 {% comment %}
@@ -149,11 +147,17 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 {% bibliography --cited --file jlesc.bib %}
 
+## Person-Month efforts in 2016/2017
+
+{:.person-months-table.table.table-bordered.table-hover.table-sm}
+| {% person benoit_a %} | 1.0 PM |
+| {% person cappello_f %} | 1.0 PM |
+| {% person robert_y %} | 1.0 PM |
+| {% person cavelan_a %} | 3.0 PM |
 
 ## Future plans
 
-We have several results for replication with a single task. Our plan is now to 
-extend these results to more general workflows.
+Our work has been focused detecting and correcting silent data corruptions. We first plan to extend our current analytical study to account for both silent and fail-stop errors. Then, work will be directed toward more complex applications such as linear workflows or pipelined applications.
 
 
 ## References
