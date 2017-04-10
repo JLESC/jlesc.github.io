@@ -119,7 +119,13 @@
         <label class="col-sm-4">Keywords</label>
         <div class="col-sm-8">
           
-            <span class="clearfix"></span>
+            <span class="clearfix">resilience</span>
+          
+            <span class="clearfix">replication</span>
+          
+            <span class="clearfix">detection</span>
+          
+            <span class="clearfix">SDC</span>
           
         </div>
       </li>
@@ -157,7 +163,7 @@
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
       <div class="col-sm-8">
-        <span class="project-status project-status-starting">starting</span>
+        <span class="project-status project-status-running">running</span>
       </div>
     </li>
     
@@ -169,7 +175,7 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -201,33 +207,26 @@ for the execution of general workflow applications. For that, we first need to
 derive a clear model for replication, as there are many ways to implement it, 
 even for a single task.</p>
 
-<h2 id="results-for-20152016">
-<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
 
-<p>We start by investigating the impact of replication on the execution of a single task.
-Replication can be done at different application level. We investigate both 
-process-replication, where each process can be replicated several times, 
-and group replication, where an entire group of processes is replicated. 
-For each level, we consider a passive approach: waiting for the application 
-to either succeed or fail; and an active approach: checkpointing all living 
-replicas as soon as a failure occurs.</p>
-
-<p>Furthermore, we consider both fail-stop and silent errors. We derive closed-form 
-formulas for the expected execution time and first-order approximations for the overhead 
-and the optimal checkpoint interval. Finally, we compare both approaches to the 
-checkpointing-only solution.</p>
+<p>Work has been focused toward using replication as a detection and correction mechanism for Silent Data Corruptions (SDC).
+Although other detection techniques exist for HPC applications, based on algorithms (ABFT), invariant preservation or data analytics, replication remains the most transparent and least intrusive technique.
+In this work, replication is combined with checkpoiting to enable rollback and recovery when forward recovery is not possible, which occurs when too many replicas are corrupted.
+The goal is to find the right level (duplication, triplication or more) of replication needed to efficiently detect and correct silent errors at scale.
+As of today, we provide a detailed analytical study with formulas to decide the optimal parameters as a function of the error rate, checkpoint cost, and platform size.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) is visiting <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) in Chicago for three 
-months (march-april-may 2016) to initiate this project. We are working 
+<p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) in Chicago for three 
+months (march-april-may 2016) to initiate the project. We are working 
 in close collaboration to make progress.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<p>None yet.</p>
+<p>The project has submitted a paper to FTXS 2017 and JPDC.</p>
 
 <!--
 
@@ -242,8 +241,7 @@ in close collaboration to make progress.</p>
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>We have several results for replication with a single task. Our plan is now to 
-extend these results to more general workflows.</p>
+<p>Our work has been focused detecting and correcting silent data corruptions. We first plan to extend our current analytical study to account for both silent and fail-stop errors. Then, work will be directed toward more complex applications such as linear workflows or pipelined applications.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
