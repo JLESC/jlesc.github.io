@@ -124,6 +124,15 @@ attig_n:
   email: n.attig@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/attig_n.html
 
+aupy_a:
+  sur_name: Aupy
+  given_name: Guillaume
+  affiliation: inria
+  position: permanent
+  topics: storage, resilience
+  email: guillaume.aupy@inria.fr
+  homepage: https://gaupy.org
+
 badia_r:
   sur_name: Badia
   given_name: Rosa M.
