@@ -147,14 +147,6 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 {% bibliography --cited --file jlesc.bib %}
 
-## Person-Month efforts in 2016/2017
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person benoit_a %} | 1.0 PM |
-| {% person cappello_f %} | 1.0 PM |
-| {% person robert_y %} | 1.0 PM |
-| {% person cavelan_a %} | 3.0 PM |
-
 ## Future plans
 
 Our work has been focused detecting and correcting silent data corruptions. We first plan to extend our current analytical study to account for both silent and fail-stop errors. Then, work will be directed toward more complex applications such as linear workflows or pipelined applications.
