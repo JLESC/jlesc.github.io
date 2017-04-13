@@ -8,7 +8,7 @@ event_location: UIUC, Urbana, USA
 event_start: 2017-07-17
 event_end: 2017-07-19
 event_short_url:
-event_url: 
+event_url: http://www.ncsa.illinois.edu/Conferences/JLESC7/
 wayback_url: 
 logo: 
 kind: workshop
