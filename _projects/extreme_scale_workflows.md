@@ -23,29 +23,75 @@ members:
 
 ## Research topic and goals
 
-The goal of the Swift/Decaf/Damaris/FlowVR collaboration is to enhance the programmability of advanced applications composed of simulation and analysis modules. The Decaf project (Peterka), primarily funded by the U.S. Dept. of Energy, is developing a transport layer, high-level data flow primitives (selection, aggregation, pipelining, and buffering), and a high-level data description layer.  Swift (Wozniak), funded through Argonne LDRD, offers a rich, implicitly parallel programming language and scalable, load-balanced runtime.  Damaris (Antoniu) provides dedicated-core asynchronous resources that can be used for I/O, analysis, and visualization. FlowVR (Raffin) is a generic framework for building complex dataflows by plugging components into a Python interface. We intend to compare and contrast these tools and combine some of them to investigate computer science challenges in creating a highly useful, efficient analysis system.
+The goal of the Swift/Decaf/Damaris/FlowVR collaboration is to enhance the programmability of advanced applications composed of simulation and analysis modules. The Decaf project (Peterka), primarily funded by the U.S. Dept. of Energy, is developing a transport layer, high-level data flow primitives (selection, aggregation, pipelining, and buffering), and a high-level data description layer.  Swift (Wozniak), funded through Argonne LDRD, offers a rich, implicitly parallel programming language and scalable, load-balanced runtime.  Damaris (Antoniu) provides asynchronous resources (dedicated cores/nodes) that can be used for I/O, analysis, and visualization. FlowVR (Raffin) is a generic framework for building complex dataflows by plugging components into a Python interface. We intend to compare and contrast these tools and combine some of them to investigate computer science challenges in creating a highly useful, efficient analysis system.
 
-## Results for 2015/2016
+## Activity for 2015/2016
 
  * M. Dorier led the authorship of the ISAV 2015 workshop paper on lessons learned developing all four tools {% cite DorierEtAl2015 --file jlesc.bib %}.
  * M. Dreher and J. Wozniak developed an initial integration plan for Swift and Decaf.
  * M. Dreher presented an initial suite of workflows at the December 2015 meeting.
  * T. Peterka co-organized SC15 BOF on scientific workflows.
- * M. Dreher and B. Raffin integrated the Decaf redistribution component with FlowVR and we are in the process of submitting a Cluster 2016 paper on this research.
+* M. Dreher and B. Raffin integrated the Decaf redistribution component with FlowVR and we published a Cluster 2016 paper on this research {% cite DreherEtAl2016 --file jlesc.bib %}.
 
+## Activity for 2016/2017
+
+### Damaris
+
+ * Matthieu Dorier (ANL), Gabriel Antoniu (INRIA), Franck Cappello (ANL), Marc Snir (UIUC), Roberto Sisneros (UIUC), Orcun Yildiz (INRIA), Shadi Ibrahim (INRIA), Tom Peterka (INRIA) and Leigh Orf (University of Wisconsin, Madison)
+
+A paper synthesizing the results obtained with Damaris for I/O and in situ visualization was published in the ACM TOPC journal {% cite DorierEtAl2016TOPC --file jlesc.bib %}.
+
+ * Matthieu Dorier of ANL, Laurent Debreu of INRIA
+
+We enabled in situ visualization in the CROCO ocean simulation using Damaris and VisIt. This work was presented by Matthieu Dorier at the VisIt tutorial of Supercomputing 2016 (Salt Lake City) and at a pannel at LDAV 2016 (Baltimore), and by Hadi Salimi at the INRIA booth of SC2016.
+
+### The Bredala library for data model and data redistribution between parallel applications
+
+ * Matthieu Dreher and Tom Peterka (ANL), Bruno Raffin (INRIA)
+
+The Bredala library is one of the base layer of Decaf. The work is done in collaboration with Bruno Raffin (INRIA) to evaluate the interest of integrating Bredala with FlowVR. A paper on Bredala was published at Cluster 2016 {% cite DreherEtAl2016 --file jlesc.bib %}.
+
+### Decaf, FlowVR, Damaris, HPC/big data convergence
+
+ * Bruno Raffin and Gabriel Antoniu of INRIA, Tom Peterka of ANL
+
+This is an exploratory action to evaluate the potential of Big Data approaches for the analysis of large simulation data (actual performance of existing tools, expressiveness of their programming model, integration issues with the HPC stack, etc.). Bruno Raffin gave a talk at Argonne in November 2016 to give an overview of modern Map/Reduce framework and report on the development of the Velassco query based visualization framework based on Hadoop. Gabriel Antoniu participated in the BDEC meetings focused on this topic. Gabriel and Bruno have initiated a prospective reflexion on this subject at INRIA level. 
+
+### PyCompss, Decaf distributed/in situ workflow convergence
+
+ * Rosa Badia and Jorge Ejarque of BSC, Matthieu Dreher and  Tom Peterka of ANL
+
+We are investigating potential convergences between distributed workflows (or wide area workflows) and in situ workflows. PyCommps is a workflow  engine developed at BSC aiming at coordinating the execution of jobs in a wide area. Data exchanges between tasks are done through files. This approach is very convenient for wide areas but are not suitable for HPC resources. Decaf is a runtime to describe and execute in situ workflows. Decaf focuses on coordinating tasks running on the same cluster or data-center. In this context data are exchanged through memory or high performance networks. We are currently building prototypes combining both runtimes where a Decaf workflow is an individual task in a PyCommps workflow. The objective is to automate the full science pipeline to discovery by merging high performance in situ workflows (Decaf) with traditional post-processing methods into a single workflow (PyCommps).
+
+### Decaf, Swift workflow integration
+
+ * Tom Peterka, Matthieu Dreher and Justin Wozniak of ANL
+
+In the first stage, the goal is for swift to be able to execute Decaf workflow as a task. The resources are allocated by Swift and given to the Decaf runtime. We built a first prototype for a simple workflow composed of two tasks exchanging data. The long term objective is for Swift and Decaf to be able to exchange the graph information so that a user could build the graph of the workflow in the Swift language. Another long term objective is for Swift to use Bredala, the data model library of Decaf, to exchange data in parallel between tasks.
+
+### Flow control management for In Situ workflows
+
+ * Bruno Raffin, INRIA and Matthieu Dreher of ANL
+
+Current In Situ infrastructures adopt very often a fixed policy to manage mismatch data rates between parallel tasks exchanging data. If the consumer is too slow,  a policy might be to hold the producer, slowing down the whole pipeline to the slowest component, or to drop an entire frame. FlowVR communication channels are FIFO by default as well, meaning that overflows could happen as well.  However, FlowVR provides components called filters and synchronizer to create more complex sampling policies. We are building a communication library based on the same principles as the components of FlowVR with several improvements: 1) Possibility to buffer data in several memory layers, 2) Buffering done synchronously or asynchronously 3) communications done in parallel, 4) supercomputer compliant.
+
+### Data contract for In Situ workflows
+
+ * Clement Mommessin (ANL), supervised by Matthieu Dreher (ANL), Bruno Raffin (INRIA) and Tom Peterka (ANL)
+
+Scientific workflows are an aggregation of several tasks exchanging messaging. Usually each task is developed independently as a single piece of software. When integrating these codes into a a workflow, the developer has to build interfaces to exchange data between each task. To get the best performance for a particular workflow, the user should only send necessary data. However, simulation and analysis codes are complex code hard to maintain. It is then desired that the user modify only once their respective code. This imposes that the developer should expose as much data as possible to cover the maximum of use cases. Yet this approach could create significant performance impact due to unnecessary data being send for a particular workflow. We are currently investigating the notion of contracts for tasks. A contract is a declaration by the user of all the data that a particular need to work and all the data that the task can emit. Given this information, we can perform several checks and optimizations. First we check that the user is not trying to connect incompatible tasks with a data model mismatch. Second we can check at runtime that each task is sending the correct data. Third we can filter the data at runtime to send only necessary data for each consumer. This work is currently being integrated in Decaf. 
 
 ## Visits and meetings
 
-None yet.
+ * Pierre-Louis Guhur of ENS 9 months at ANL in 2016
+ * Clement Mommessin of INRIA 6 months at ANL in winter 2016/2017
+ * Estelle Dirand of INRIA 3 days at ANL (28-29 July 2016)
+ * Bruno Raffin of INRIA 3 days at ANL (7-9 November 2016)
+ * Estelle Dirant participated in the ATPESC summer school at ANL in 2016
 
 ## Impact and publications
 
 {% bibliography --cited --file jlesc.bib %}
-
-
-## Future plans
-
-This summer we will implement the main integration between Decaf and Swift. A paper about the MPI details of integration between Swift and Decaf would be a good submission to EuroMPI. A paper about realistic LAMMPS or HACC simulation/analysis workflows would be a good submission to SC.
 
 ## References
 
