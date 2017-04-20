@@ -1,6 +1,6 @@
 ---
 layout: page_project
-title: Exploiting the Dragonfly Topology to Improve Communication Operations in MPI
+title: Network Simulations and Topology-aware Communications
 date: 2016-09-28
 updated:
 navbar: Research
@@ -38,8 +38,7 @@ the naive algorithm perform oustandingly well on Dragonfly because they exploit 
 of the routers in the network. In particular, the Scatter operation could be accelerated up 
 by a factor up to 2 times using a hardware aware algorithm. 
 
-These results have been accepted as a poster for the ACM Student Research Competition at SC 2016, and will be
-submitted at IPDPS 2017.
+These results have been accepted as a poster for the ACM Student Research Competition at SC 2016 {% cite CheriereEtAl2016 --file jlesc.bib %}, and Nathanael Cheriere won the 2nd prize of the ACM SRC.
 
 ## Visits and meetings
 
@@ -52,6 +51,7 @@ Internship of Nathanael Cheriere at Argonne National Lab from January 2016 to Ju
 
 ## Future plans
 
-The results will be included in a paper to be submitted at IPDPS 2017.
+We plan to reiterate our experiments with network models matching Argonne's Theta machine, and publish the new results.
+We also plan to develop a workflow to automatize a large number of experiments using CODES and the Swift/T language, in order to boost design-space exploration of future network topologies.
 
 ## References
