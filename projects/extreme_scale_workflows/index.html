@@ -176,10 +176,17 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#activity-for-20152016">Activity for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#activity-for-20162017">Activity for 2016/2017</a></li>
+<li class="toc-entry toc-h3"><a href="#damaris">Damaris</a></li>
+<li class="toc-entry toc-h3"><a href="#the-bredala-library-for-data-model-and-data-redistribution-between-parallel-applications">The Bredala library for data model and data redistribution between parallel applications</a></li>
+<li class="toc-entry toc-h3"><a href="#decaf-flowvr-damaris-hpcbig-data-convergence">Decaf, FlowVR, Damaris, HPC/big data convergence</a></li>
+<li class="toc-entry toc-h3"><a href="#pycompss-decaf-distributedin-situ-workflow-convergence">PyCompss, Decaf distributed/in situ workflow convergence</a></li>
+<li class="toc-entry toc-h3"><a href="#decaf-swift-workflow-integration">Decaf, Swift workflow integration</a></li>
+<li class="toc-entry toc-h3"><a href="#flow-control-management-for-in-situ-workflows">Flow control management for In Situ workflows</a></li>
+<li class="toc-entry toc-h3"><a href="#data-contract-for-in-situ-workflows">Data contract for In Situ workflows</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
 </ul>
         </section>
@@ -189,28 +196,191 @@
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>The goal of the Swift/Decaf/Damaris/FlowVR collaboration is to enhance the programmability of advanced applications composed of simulation and analysis modules. The Decaf project (Peterka), primarily funded by the U.S. Dept. of Energy, is developing a transport layer, high-level data flow primitives (selection, aggregation, pipelining, and buffering), and a high-level data description layer.  Swift (Wozniak), funded through Argonne LDRD, offers a rich, implicitly parallel programming language and scalable, load-balanced runtime.  Damaris (Antoniu) provides dedicated-core asynchronous resources that can be used for I/O, analysis, and visualization. FlowVR (Raffin) is a generic framework for building complex dataflows by plugging components into a Python interface. We intend to compare and contrast these tools and combine some of them to investigate computer science challenges in creating a highly useful, efficient analysis system.</p>
+<p>The goal of the Swift/Decaf/Damaris/FlowVR collaboration is to enhance the programmability of advanced applications composed of simulation and analysis modules. The Decaf project (Peterka), primarily funded by the U.S. Dept. of Energy, is developing a transport layer, high-level data flow primitives (selection, aggregation, pipelining, and buffering), and a high-level data description layer.  Swift (Wozniak), funded through Argonne LDRD, offers a rich, implicitly parallel programming language and scalable, load-balanced runtime.  Damaris (Antoniu) provides asynchronous resources (dedicated cores/nodes) that can be used for I/O, analysis, and visualization. FlowVR (Raffin) is a generic framework for building complex dataflows by plugging components into a Python interface. We intend to compare and contrast these tools and combine some of them to investigate computer science challenges in creating a highly useful, efficient analysis system.</p>
 
-<h2 id="results-for-20152016">
-<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<h2 id="activity-for-20152016">
+<a id="activity-for-20152016" class="anchor" href="#activity-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activity for 2015/2016</h2>
 
 <ul>
   <li>M. Dorier led the authorship of the ISAV 2015 workshop paper on lessons learned developing all four tools <a href="#DorierEtAl2015">(Dorier et al. 2015)</a>.</li>
   <li>M. Dreher and J. Wozniak developed an initial integration plan for Swift and Decaf.</li>
   <li>M. Dreher presented an initial suite of workflows at the December 2015 meeting.</li>
   <li>T. Peterka co-organized SC15 BOF on scientific workflows.</li>
-  <li>M. Dreher and B. Raffin integrated the Decaf redistribution component with FlowVR and we are in the process of submitting a Cluster 2016 paper on this research.</li>
+  <li>M. Dreher and B. Raffin integrated the Decaf redistribution component with FlowVR and we published a Cluster 2016 paper on this research <a href="#DreherEtAl2016">(Dreher and Peterka 2016)</a>.</li>
 </ul>
+
+<h2 id="activity-for-20162017">
+<a id="activity-for-20162017" class="anchor" href="#activity-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activity for 2016/2017</h2>
+
+<h3 id="damaris">
+<a id="damaris" class="anchor" href="#damaris" aria-hidden="true"><span class="octicon octicon-link"></span></a>Damaris</h3>
+
+<ul>
+  <li>Matthieu Dorier (ANL), Gabriel Antoniu (INRIA), Franck Cappello (ANL), Marc Snir (UIUC), Roberto Sisneros (UIUC), Orcun Yildiz (INRIA), Shadi Ibrahim (INRIA), Tom Peterka (INRIA) and Leigh Orf (University of Wisconsin, Madison)</li>
+</ul>
+
+<p>A paper synthesizing the results obtained with Damaris for I/O and in situ visualization was published in the ACM TOPC journal <a href="#DorierEtAl2016TOPC">(Dorier et al. 2016)</a>.</p>
+
+<ul>
+  <li>Matthieu Dorier of ANL, Laurent Debreu of INRIA</li>
+</ul>
+
+<p>We enabled in situ visualization in the CROCO ocean simulation using Damaris and VisIt. This work was presented by Matthieu Dorier at the VisIt tutorial of Supercomputing 2016 (Salt Lake City) and at a pannel at LDAV 2016 (Baltimore), and by Hadi Salimi at the INRIA booth of SC2016.</p>
+
+<h3 id="the-bredala-library-for-data-model-and-data-redistribution-between-parallel-applications">
+<a id="the-bredala-library-for-data-model-and-data-redistribution-between-parallel-applications" class="anchor" href="#the-bredala-library-for-data-model-and-data-redistribution-between-parallel-applications" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Bredala library for data model and data redistribution between parallel applications</h3>
+
+<ul>
+  <li>Matthieu Dreher and Tom Peterka (ANL), Bruno Raffin (INRIA)</li>
+</ul>
+
+<p>The Bredala library is one of the base layer of Decaf. The work is done in collaboration with Bruno Raffin (INRIA) to evaluate the interest of integrating Bredala with FlowVR. A paper on Bredala was published at Cluster 2016 <a href="#DreherEtAl2016">(Dreher and Peterka 2016)</a>.</p>
+
+<h3 id="decaf-flowvr-damaris-hpcbig-data-convergence">
+<a id="decaf-flowvr-damaris-hpcbig-data-convergence" class="anchor" href="#decaf-flowvr-damaris-hpcbig-data-convergence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decaf, FlowVR, Damaris, HPC/big data convergence</h3>
+
+<ul>
+  <li>Bruno Raffin and Gabriel Antoniu of INRIA, Tom Peterka of ANL</li>
+</ul>
+
+<p>This is an exploratory action to evaluate the potential of Big Data approaches for the analysis of large simulation data (actual performance of existing tools, expressiveness of their programming model, integration issues with the HPC stack, etc.). Bruno Raffin gave a talk at Argonne in November 2016 to give an overview of modern Map/Reduce framework and report on the development of the Velassco query based visualization framework based on Hadoop. Gabriel Antoniu participated in the BDEC meetings focused on this topic. Gabriel and Bruno have initiated a prospective reflexion on this subject at INRIA level.</p>
+
+<h3 id="pycompss-decaf-distributedin-situ-workflow-convergence">
+<a id="pycompss-decaf-distributedin-situ-workflow-convergence" class="anchor" href="#pycompss-decaf-distributedin-situ-workflow-convergence" aria-hidden="true"><span class="octicon octicon-link"></span></a>PyCompss, Decaf distributed/in situ workflow convergence</h3>
+
+<ul>
+  <li>Rosa Badia and Jorge Ejarque of BSC, Matthieu Dreher and  Tom Peterka of ANL</li>
+</ul>
+
+<p>We are investigating potential convergences between distributed workflows (or wide area workflows) and in situ workflows. PyCommps is a workflow  engine developed at BSC aiming at coordinating the execution of jobs in a wide area. Data exchanges between tasks are done through files. This approach is very convenient for wide areas but are not suitable for HPC resources. Decaf is a runtime to describe and execute in situ workflows. Decaf focuses on coordinating tasks running on the same cluster or data-center. In this context data are exchanged through memory or high performance networks. We are currently building prototypes combining both runtimes where a Decaf workflow is an individual task in a PyCommps workflow. The objective is to automate the full science pipeline to discovery by merging high performance in situ workflows (Decaf) with traditional post-processing methods into a single workflow (PyCommps).</p>
+
+<h3 id="decaf-swift-workflow-integration">
+<a id="decaf-swift-workflow-integration" class="anchor" href="#decaf-swift-workflow-integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decaf, Swift workflow integration</h3>
+
+<ul>
+  <li>Tom Peterka, Matthieu Dreher and Justin Wozniak of ANL</li>
+</ul>
+
+<p>In the first stage, the goal is for swift to be able to execute Decaf workflow as a task. The resources are allocated by Swift and given to the Decaf runtime. We built a first prototype for a simple workflow composed of two tasks exchanging data. The long term objective is for Swift and Decaf to be able to exchange the graph information so that a user could build the graph of the workflow in the Swift language. Another long term objective is for Swift to use Bredala, the data model library of Decaf, to exchange data in parallel between tasks.</p>
+
+<h3 id="flow-control-management-for-in-situ-workflows">
+<a id="flow-control-management-for-in-situ-workflows" class="anchor" href="#flow-control-management-for-in-situ-workflows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flow control management for In Situ workflows</h3>
+
+<ul>
+  <li>Bruno Raffin, INRIA and Matthieu Dreher of ANL</li>
+</ul>
+
+<p>Current In Situ infrastructures adopt very often a fixed policy to manage mismatch data rates between parallel tasks exchanging data. If the consumer is too slow,  a policy might be to hold the producer, slowing down the whole pipeline to the slowest component, or to drop an entire frame. FlowVR communication channels are FIFO by default as well, meaning that overflows could happen as well.  However, FlowVR provides components called filters and synchronizer to create more complex sampling policies. We are building a communication library based on the same principles as the components of FlowVR with several improvements: 1) Possibility to buffer data in several memory layers, 2) Buffering done synchronously or asynchronously 3) communications done in parallel, 4) supercomputer compliant.</p>
+
+<h3 id="data-contract-for-in-situ-workflows">
+<a id="data-contract-for-in-situ-workflows" class="anchor" href="#data-contract-for-in-situ-workflows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data contract for In Situ workflows</h3>
+
+<ul>
+  <li>Clement Mommessin (ANL), supervised by Matthieu Dreher (ANL), Bruno Raffin (INRIA) and Tom Peterka (ANL)</li>
+</ul>
+
+<p>Scientific workflows are an aggregation of several tasks exchanging messaging. Usually each task is developed independently as a single piece of software. When integrating these codes into a a workflow, the developer has to build interfaces to exchange data between each task. To get the best performance for a particular workflow, the user should only send necessary data. However, simulation and analysis codes are complex code hard to maintain. It is then desired that the user modify only once their respective code. This imposes that the developer should expose as much data as possible to cover the maximum of use cases. Yet this approach could create significant performance impact due to unnecessary data being send for a particular workflow. We are currently investigating the notion of contracts for tasks. A contract is a declaration by the user of all the data that a particular need to work and all the data that the task can emit. Given this information, we can perform several checks and optimizations. First we check that the user is not trying to connect incompatible tasks with a data model mismatch. Second we can check at runtime that each task is sending the correct data. Third we can filter the data at runtime to send only necessary data for each consumer. This work is currently being integrated in Decaf.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>None yet.</p>
+<ul>
+  <li>Pierre-Louis Guhur of ENS 9 months at ANL in 2016</li>
+  <li>Clement Mommessin of INRIA 6 months at ANL in winter 2016/2017</li>
+  <li>Estelle Dirand of INRIA 3 days at ANL (28-29 July 2016)</li>
+  <li>Bruno Raffin of INRIA 3 days at ANL (7-9 November 2016)</li>
+  <li>Estelle Dirant participated in the ATPESC summer school at ANL in 2016</li>
+</ul>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<ol class="bibliography"><li>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          DorierEtAl2016TOPC
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDorierEtAl2016TOPCBibtex" aria-expanded="false" aria-controls="collapseDorierEtAl2016TOPCBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseDorierEtAl2016TOPCAbstract" aria-expanded="false" aria-controls="collapseDorierEtAl2016TOPCAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="DorierEtAl2016TOPC">Dorier, Matthieu, Gabriel Antoniu, Franck Cappello, Marc Snir, Robert Sisneros, Orcun Yildiz, Shadi Ibrahim, Tom Peterka, and Leigh Orf. 2016. “Damaris: Addressing Performance Variability In Data Management for Post-Petascale Simulations.” <i>ACM Transactions On Parallel Computing (TOPC)</i> 3 (3). ACM: 15.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseDorierEtAl2016TOPCBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{DorierEtAl2016TOPC,
+  title = {Damaris: Addressing Performance Variability in Data Management for Post-Petascale Simulations},
+  author = {Dorier, Matthieu and Antoniu, Gabriel and Cappello, Franck and Snir, Marc and Sisneros, Robert and Yildiz, Orcun and Ibrahim, Shadi and Peterka, Tom and Orf, Leigh},
+  journal = {ACM Transactions on Parallel Computing (TOPC)},
+  volume = {3},
+  number = {3},
+  pages = {15},
+  year = {2016},
+  publisher = {ACM}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          DreherEtAl2016
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDreherEtAl2016Bibtex" aria-expanded="false" aria-controls="collapseDreherEtAl2016Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseDreherEtAl2016Abstract" aria-expanded="false" aria-controls="collapseDreherEtAl2016Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="DreherEtAl2016">Dreher, Matthieu, and Tom Peterka. 2016. “Bredala: Semantic Data Redistribution For In Situ Applications.” In <i>Cluster Computing (CLUSTER), 2016 IEEE International Conference On</i>, 279–88. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseDreherEtAl2016Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{DreherEtAl2016,
+  title = {Bredala: Semantic Data Redistribution for In Situ Applications},
+  author = {Dreher, Matthieu and Peterka, Tom},
+  booktitle = {Cluster Computing (CLUSTER), 2016 IEEE International Conference on},
+  pages = {279--288},
+  year = {2016},
+  organization = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
 <div class="bibtex-entry-container">
   <div>
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
@@ -258,12 +428,8 @@
   </div>
   
 </div>
-</li></ol>
-
-<h2 id="future-plans">
-<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
-
-<p>This summer we will implement the main integration between Decaf and Swift. A paper about the MPI details of integration between Swift and Decaf would be a good submission to EuroMPI. A paper about realistic LAMMPS or HACC simulation/analysis workflows would be a good submission to SC.</p>
+</li>
+</ol>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>

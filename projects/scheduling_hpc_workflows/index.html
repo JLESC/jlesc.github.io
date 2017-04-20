@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Resource Management and Scheduling for Data-Intensive HPC Workflows</title>
+  <title>JLESC &mdash; Resource Management, Scheduling, and Fault-Tolerance for HPC Workflows</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
@@ -93,7 +93,7 @@
   <article class="post-content">
     <div class="row">
       <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Resource Management and Scheduling for Data-Intensive HPC Workflows</h1>
+        <h1 class="pull-left">Resource Management, Scheduling, and Fault-Tolerance for HPC Workflows</h1>
       </header>
     </div>
     <div class="row">
@@ -145,6 +145,10 @@
               <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
+            <span class="clearfix">
+              <span class="person given-name">Justin</span> <span class="person sur-name">Wozniak</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
         </div>
       </li>
     
@@ -165,6 +169,8 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h3"><a href="#goal">Goal:</a></li>
+<li class="toc-entry toc-h3"><a href="#results">Results:</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -177,12 +183,20 @@
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>To cope with the ever increasing size of data and the resulting increase in the number and complexity of workflows running on Extreme-scale HPC systems, it becomes necessary to share the HPC resources across multiple scientific workflows, as is already the case on cloud infrastructures. The goal of this research project is to investigate approaches for resource sharing and scheduling that can preserve QoS requirements of scientific applications running concurrently on a shared HPC system, while ensuring a high resource utilisation of the infrastructure. We plan to investigate the possible trade-offs including Isolation vs. performance guarantee, consolidation vs. resource utilisation, and dynamicity vs. resource provisioning.</p>
+<p>This project focuses on challenges posed by the increasing complexity of HPC workflows. To cope with the ever increasing size of data and the resulting increase in the number and complexity of workflows running on Extreme-scale HPC systems, it becomes necessary to share the HPC resources across multiple scientific workflows, as is already the case on cloud infrastructures. The goal of this research project is to investigate approaches for resource sharing and scheduling that can preserve QoS requirements of scientific applications running concurrently on a shared HPC system, while ensuring a high resource utilisation of the infrastructure. We plan to investigate the possible trade-offs including Isolation vs. performance guarantee, consolidation vs. resource utilisation, and dynamicity vs. resource provisioning. Additionaly, HPC workflows pose important challenges related to fault-tolerance. When a workflow fails, we need to make sure this does not affect other independent workflows. Inside a workflow when a task fails, the workflow management system should be able to reschedule the task without affecting other independent tasks.</p>
 
 <h2 id="results-for-20152016">
 <a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
 
-<p>This project effectively started in 2016.</p>
+<h3 id="goal">
+<a id="goal" class="anchor" href="#goal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Goal:</h3>
+
+<p>Our first sub-goal consisted of investigating the potential gain of sharing resources in a “cloud way” for HPC workflows. This initial study would provide an uper bound of the gain in resource usage when independent workflow share common resources in an HPC platform. This study was mainly conducted by Nathanael Cheriere at Argonne from January to June 2016.</p>
+
+<h3 id="results">
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results:</h3>
+
+<p>Results obtained using simulations with traces of real workflows showed no clear potential for resource sharing in the context of HPC workflows. Contrary to cloud workflows that can scale up and down depending on usage patterns, most HPC workflows already make the best use they can of the provided parallelism. Sharing resources presents more drawbacks than advantages and, in most cases, degrades resource utilization rather than improving it.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -192,14 +206,14 @@
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<p>This project effectively started in 2016.</p>
+<p>None yet.</p>
 
 <ol class="bibliography"></ol>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>This project started in 2016. Currently we are investigating the limitations of the current static allocations of the HPC resources when running HPC workflows (i.e., allocating a fixed set of cores for a fixed duration) and the resulting resource waste. Our goal is to introduce new dynamic resource management techniques for workflow-type jobs running on HPC platforms.</p>
+<p>We plan to investigate the fault-tolerance aspect of HPC workflows and propose solutions to task-level fault-tolerance.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
