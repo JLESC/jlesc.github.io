@@ -23,15 +23,13 @@ members:
 ## Research topic and goals
 
 Application developers targeting extreme-scale HPC systems such as JUQUEEN (BG/Q) and
-Kei (K computer) need effective tools to assist with porting and tuning for these unusual systems
-(e.g., where measurement configuration and analysis result files must be explicitly staged in and out
-of batch job partitions). 
+Kei (K computer) need effective tools to assist with porting and tuning for these unusual systems. 
 The XcalableMP compilation system (and directive-based language) {% cite LeeSato2010 --file external/tool_pandt_project.bib %}
-{% cite TsujiEtAl2013 --file external/tool_pandt_project.bib  %} and Scalasca/Score-P execution
+{% cite TsujiEtAl2013 --file external/tool_pandt_project.bib  %}, Scalasca/Score-P execution
 measurement and analysis tools {% cite GeimerEtAl2010 --file external/tool_pandt_project.bib  %}
 {% cite KnuepferEtAl2012 --file external/tool_pandt_project.bib  %} (using SIONlib scalable file I/O 
-{% cite FringsEtAl2009 --file external/tool_pandt_project.bib  %}) are two notable examples of 
-tools developed by RIKEN and JSC for this purpose. This project proposes to extend their support for 
+{% cite FringsEtAl2009 --file external/tool_pandt_project.bib  %}) and Paraver/Extrae/Dimemas measurement and analysis tools {% cite BSCtools --file external/tool_pandt_project.bib  %} are notable examples of 
+tools developed by RIKEN, JSC and BSC for this purpose. This project proposes to extend their support for 
 JLESC HPC systems and exploit their capabilities in an integrated work flow.  
 Existing training material will be adapted to collaborators large-scale HPC systems, augmented
 with newly prepared material, and refined for better uptake based on participant evaluations
