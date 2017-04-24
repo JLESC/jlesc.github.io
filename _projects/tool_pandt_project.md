@@ -38,38 +38,34 @@ joint training events (such as VI-HPS Tuning Workshops {% cite VIHPSTWS --file e
 Collaborative work with application developers will assess the effectiveness of the current (and revised) tools,
 and help direct development of new tool capabilities.
 
-## Results for 2015/2016
+## Results for 2016/2017
 
-* XcalableMP tutorial held at JSC (2015-12-01).
-* Organisation of 20th VI-HPS Tuning Workshop hosted by RIKEN AICS (2016/02/24-26) {% cite VIHPSTWS --file external/tool_pandt_project.bib %} covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) on K computer and local Fujitsu FX10 (pi).
-* Performance analysis of RIKEN FIBER {% cite FIBER --file external/tool_pandt_project.bib %} mini-app NTChem on pi/K.
-* Performance analysis of ABySS-P {% cite KitayamaEtAl2015 --file external/tool_pandt_project.bib %} and NEST neuronal network simulation tool {% cite NEST --file external/tool_pandt_project.bib %} on K computer.
+* Specification of XMPT generic tool interface for XcalableMP PGAS runtime (based on OMPT).
+* Initial prototype implementation of XMPT interface in Omni XMP compiler, used by Extrae/Paraver.
+* Definition of POP standard metrics for MPI and OpenMP applications {% cite POPmetrics2016 --file external/tool_pandt_project.bib %}.
+* Document how to obtain POP standard metrics in Paraver {% cite POPmetParaver2016 --file external/tool_pandt_project.bib %}
+* Calculation of POP standard metrics as derived metrics by CUBE.
+* Tools training for NERSC, DKRZ, IT4I, EPCC/Southampton and RWTH, covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) using local HPC systems.
 
 ## Visits and meetings
 
-Initial face-to-face meeting at 3rd JLESC Workshop (Barcelona, 2015-06), followed
-by meetings at ISC-HPC (Frankfurt am Main, 2015-07), ParCo (Edinburgh, 2015-09),
-SC15 (Austin, 2015-11), JSC (Juelich, 2015-12), 4th JLESC Workshop (Bonn,
-2015-12) and 6th AICS International Symposium (Kobe, 2016-02).
+Face-to-face meetings at ISC-HPC (Frankfurt am Main, 2016-06), SC (Salt Lake City, 2016-11) and 6th JLESC Workshop (Kobe, 2016-12).  Meeting with MYX project {% cite MYXproject --file external/tool_pandt_project.bib %} members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.
 
 Visits planned for the next 12 months:
 
-* Visit of RIKEN AICS researcher to JSC perhaps around ISC-HPC or 5th JLESC Workshop (1-2 weeks, 2016-06)
-* Visit of JSC researcher to RIKEN perhaps around 6th JLESC Workshop (2016-12).
+* (none)
 
 ## Impact and publications
-None yet.
+
+POP standard metrics applied in POP services performance analyses.
 {% bibliography --cited --file jlesc.bib %}
 
 
 ## Future plans
 
 The existing integration of XcalableMP and Scalasca will be updated to the latest
-community-developed Score-P instrumentation and measurement infrastructure, and made
-available for use on JUQUEEN BG/Q and Kei K computer.  Investigate Score-P support
-required for XcalableMP using Argobots and for native threading/autoparallelisation.
-Documentation for use of Scalasca/Score-P on K computer including example batch scripts
-(e.g., to stage-in/out configuration and analysis files). 
+community-developed Score-P instrumentation and measurement infrastructure.  
+Investigate Extrae and Score-P support required for XcalableMP.
 Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN FIBER mini-apps.
 Address terminology inconsistencies between JSC and BSC tools in their analyses and documentation.
 Workshops and training organised under the auspices of VI-HPS 
