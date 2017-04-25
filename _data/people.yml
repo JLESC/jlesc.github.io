@@ -1155,6 +1155,15 @@ luehrs_s:
   email: s.luehrs@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/luehrs_s.html
 
+martorell_x:
+  sur_name: Martorell
+  given_name: Xavier
+  affiliation: bsc
+  position: permanent
+  topics: Programming Models, FPGAs
+  email: xavier.martorell@bsc.es
+  homepage:
+
 martsinkevich_t:
   sur_name: Martsinkevich
   given_name: Tatiana V.
