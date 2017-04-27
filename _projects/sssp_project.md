@@ -92,27 +92,23 @@ The second objective is to construct a set of benchmarks including traditional b
 The third objective is to investigate the appropriateness of the existing benchmarks that has been used for many years. Based on this investigation, we will update the SSSP by adding relatively new benchmarks and/or adjusting the weight of each benchmark.
 
 
-### Contributions
+## Contributions
 
-* Execute mini-applications and benchmarks on various systems including K-Computer at RIKEN and Blue Waters at NCSA and investigate the relationship between the SSP and SSSP metrics.
-* Consider a machine learning methodology to give appropriate weighting factors for the SSSP metris
+We execute mini-applications and benchmarks on various systems including K-Computer at RIKEN and Blue Waters at NCSA and investigate the relationship between the SSP and SSSP metrics.
+
+We consider a machine learning methodology to give appropriate weighting factors for the SSSP metris
 
 ## Results for 2017/2018
 
-* PHASE I (Months 1-12): 
+
 
 ## Visits and meetings
 
 Miwako Tsuji visited the NCSA in January 2017
 
-
-### Compute resource needs
-
-Virous systems including K-computer, Blue Waters, OFP, etc...
-
 ## Impact and publications
 
-tbd
+
 
 <!--
 {% comment %}
