@@ -12,8 +12,7 @@ topics:
 keywords:
   - Performance evaluation
   - sustained performance
-head: 
-  - tsuji_m
+head: tsuji_m
 members: 
   - kramer_b
   - sato_m
