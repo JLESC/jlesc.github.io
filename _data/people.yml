@@ -86,7 +86,7 @@ alvarez_c:
   given_name: Carlos
   affiliation: bsc
   position: permanent
-  topics: FPGAs
+  topics: programming models, FPGAs
   email: calvarez@ac.upc.edu
   homepage:
 
@@ -911,6 +911,15 @@ jeannot_e:
   topics: Runtime Systems
   email: emmanuel.jeannot@inria.fr
   homepage: http://www.labri.fr/perso/ejeannot/
+  
+jimenez_d:
+  sur_name: Jimenez-Gonzalez
+  given_name: Daniel
+  affiliation: bsc
+  position: permanent
+  topics: programming models, FPGAs
+  email: djimenez@ac.upc.edu
+  homepage: 
 
 jung_j:
   sur_name: Jung
