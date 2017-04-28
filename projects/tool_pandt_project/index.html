@@ -173,7 +173,7 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -187,15 +187,13 @@
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
 <p>Application developers targeting extreme-scale HPC systems such as JUQUEEN (BG/Q) and
-Kei (K computer) need effective tools to assist with porting and tuning for these unusual systems
-(e.g., where measurement configuration and analysis result files must be explicitly staged in and out
-of batch job partitions). 
+Kei (K computer) need effective tools to assist with porting and tuning for these unusual systems. 
 The XcalableMP compilation system (and directive-based language) <a href="#LeeSato2010">(Lee and Sato 2010)</a>
-<a href="#TsujiEtAl2013">(Tsuji et al. 2013)</a> and Scalasca/Score-P execution
+<a href="#TsujiEtAl2013">(Tsuji et al. 2013)</a>, Scalasca/Score-P execution
 measurement and analysis tools <a href="#GeimerEtAl2010">(Geimer et al. 2010)</a>
 <a href="#KnuepferEtAl2012">(Knüpfer et al. 2012)</a> (using SIONlib scalable file I/O 
-<a href="#FringsEtAl2009">(Frings, Wolf, and Petkov 2009)</a>) are two notable examples of 
-tools developed by RIKEN and JSC for this purpose. This project proposes to extend their support for 
+<a href="#FringsEtAl2009">(Frings, Wolf, and Petkov 2009)</a>) and Paraver/Extrae/Dimemas measurement and analysis tools <a href="#BSCtools">(“BSC Tools For Performance Analysis” 2017)</a> are notable examples of 
+tools developed by RIKEN, JSC and BSC for this purpose. This project proposes to extend their support for 
 JLESC HPC systems and exploit their capabilities in an integrated work flow.<br>
 Existing training material will be adapted to collaborators large-scale HPC systems, augmented
 with newly prepared material, and refined for better uptake based on participant evaluations
@@ -204,45 +202,42 @@ joint training events (such as VI-HPS Tuning Workshops <a href="#VIHPSTWS">(“V
 Collaborative work with application developers will assess the effectiveness of the current (and revised) tools,
 and help direct development of new tool capabilities.</p>
 
-<h2 id="results-for-20152016">
-<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
 
 <ul>
-  <li>XcalableMP tutorial held at JSC (2015-12-01).</li>
-  <li>Organisation of 20th VI-HPS Tuning Workshop hosted by RIKEN AICS (2016/02/24-26) <a href="#VIHPSTWS">(“VI-HPS Tuning Workshop Series” 2016)</a> covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) on K computer and local Fujitsu FX10 (pi).</li>
-  <li>Performance analysis of RIKEN FIBER <a href="#FIBER">(“FIBER Mini-App Suite” 2016)</a> mini-app NTChem on pi/K.</li>
-  <li>Performance analysis of ABySS-P <a href="#KitayamaEtAl2015">(Kitayama, Wylie, and Maeda 2015)</a> and NEST neuronal network simulation tool <a href="#NEST">(“NEST Neural Simulation Tool” 2016)</a> on K computer.</li>
+  <li>Specification of XMPT generic tool interface for XcalableMP PGAS runtime (based on OMPT).</li>
+  <li>Initial prototype implementation of XMPT interface in Omni XMP compiler, used by Extrae/Paraver.</li>
+  <li>Definition of POP standard metrics for MPI and OpenMP applications <a href="#POPmetrics2016">(“POP Standard Metrics For Parallel Performance Analysis” 2016)</a>.</li>
+  <li>Document how to obtain POP standard metrics in Paraver <a href="#POPmetParaver2016">(“Paraver Efficiences Guide” 2016)</a>
+</li>
+  <li>Calculation of POP standard metrics as derived metrics by CUBE.</li>
+  <li>Tools training for NERSC, DKRZ, IT4I, EPCC/Southampton and RWTH, covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) using local HPC systems.</li>
 </ul>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>Initial face-to-face meeting at 3rd JLESC Workshop (Barcelona, 2015-06), followed
-by meetings at ISC-HPC (Frankfurt am Main, 2015-07), ParCo (Edinburgh, 2015-09),
-SC15 (Austin, 2015-11), JSC (Juelich, 2015-12), 4th JLESC Workshop (Bonn,
-2015-12) and 6th AICS International Symposium (Kobe, 2016-02).</p>
+<p>Face-to-face meetings at ISC-HPC (Frankfurt am Main, 2016-06), SC (Salt Lake City, 2016-11) and 6th JLESC Workshop (Kobe, 2016-12).  Meeting with MYX project <a href="#MYXproject">(“Project MYX” 2016)</a> members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.</p>
 
 <p>Visits planned for the next 12 months:</p>
 
 <ul>
-  <li>Visit of RIKEN AICS researcher to JSC perhaps around ISC-HPC or 5th JLESC Workshop (1-2 weeks, 2016-06)</li>
-  <li>Visit of JSC researcher to RIKEN perhaps around 6th JLESC Workshop (2016-12).</li>
+  <li>(none)</li>
 </ul>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
-<p>None yet.</p>
+
+<p>POP standard metrics applied in POP services performance analyses.</p>
 <ol class="bibliography"></ol>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
 <p>The existing integration of XcalableMP and Scalasca will be updated to the latest
-community-developed Score-P instrumentation and measurement infrastructure, and made
-available for use on JUQUEEN BG/Q and Kei K computer.  Investigate Score-P support
-required for XcalableMP using Argobots and for native threading/autoparallelisation.
-Documentation for use of Scalasca/Score-P on K computer including example batch scripts
-(e.g., to stage-in/out configuration and analysis files). 
+community-developed Score-P instrumentation and measurement infrastructure.<br>
+Investigate Extrae and Score-P support required for XcalableMP.
 Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN FIBER mini-apps.
 Address terminology inconsistencies between JSC and BSC tools in their analyses and documentation.
 Workshops and training organised under the auspices of VI-HPS 
@@ -253,6 +248,82 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation And 
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BSCtools
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBSCtoolsBibtex" aria-expanded="false" aria-controls="collapseBSCtoolsBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBSCtoolsAbstract" aria-expanded="false" aria-controls="collapseBSCtoolsAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BSCtools">“BSC Tools For Performance Analysis.” 2017. tools.bsc.es/.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBSCtoolsBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{BSCtools,
+  title = {BSC Tools for Performance Analysis},
+  url = {tools.bsc.es/},
+  year = {2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          MYXproject
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMYXprojectBibtex" aria-expanded="false" aria-controls="collapseMYXprojectBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseMYXprojectAbstract" aria-expanded="false" aria-controls="collapseMYXprojectAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="MYXproject">“Project MYX.” 2016. doc.itc.rwth-aachen.de/display/CCP/Project+MYX.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseMYXprojectBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{MYXproject,
+  title = {Project MYX},
+  url = {doc.itc.rwth-aachen.de/display/CCP/Project+MYX},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -396,6 +467,82 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation And 
         <pre><code>@misc{VIHPS,
   title = {Virtual Institute -- High Productivity Supercomputing},
   url = {www.vi-hps.org/},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          POPmetrics2016
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePOPmetrics2016Bibtex" aria-expanded="false" aria-controls="collapsePOPmetrics2016Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePOPmetrics2016Abstract" aria-expanded="false" aria-controls="collapsePOPmetrics2016Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="POPmetrics2016">“POP Standard Metrics For Parallel Performance Analysis.” 2016. <a href="https://pop-coe.eu/node/69" target="_blank">https://pop-coe.eu/node/69</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsePOPmetrics2016Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{POPmetrics2016,
+  title = {POP Standard Metrics for Parallel Performance Analysis},
+  url = {https://pop-coe.eu/node/69},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          POPmetParaver2016
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePOPmetParaver2016Bibtex" aria-expanded="false" aria-controls="collapsePOPmetParaver2016Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePOPmetParaver2016Abstract" aria-expanded="false" aria-controls="collapsePOPmetParaver2016Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="POPmetParaver2016">“Paraver Efficiences Guide.” 2016. <a href="https://pop-coe.eu/sites/default/files/pop_files/paraverefficenciesguide.pdf" target="_blank">https://pop-coe.eu/sites/default/files/pop_files/paraverefficenciesguide.pdf</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsePOPmetParaver2016Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{POPmetParaver2016,
+  title = {Paraver Efficiences Guide},
+  url = {https://pop-coe.eu/sites/default/files/pop_files/paraverefficenciesguide.pdf},
   year = {2016}
 }
 </code></pre>
