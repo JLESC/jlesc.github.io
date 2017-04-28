@@ -18,8 +18,12 @@ keywords:
 head: yoshii_k
 members: 
   - alvarez_c
+  - jimenez_d
+  - martorell_x
+  - jin_z
   - finkel_h
   - cappello_f
+
 ---
 
 ## Research topic and goals
@@ -51,7 +55,11 @@ algorithm-aware, to accelerate kernels significantly.
 
 
 ## Results for 2015/2016
-We organized an international workshop on FPGA for scientific simulation and data analytics, at Argonne on January 2016, that attracted application developers, researchers in computer science and applied mathematics, the main FPGA vendors (Xilinx and Altera), and HPC application users. 
+We organized an international workshop on FPGA for scientific simulation and data analytics, at Argonne on January 2016, that attracted application developers, researchers in computer science and applied mathematics, the main FPGA vendors (Xilinx and Altera), and HPC application users.
+
+## Results for 2016/2017
+We gave presentations on our FPGA work at the H2RC workshop and the post-Moore workshop in SC16. We organized the second international workshop on FPGA for scientific simulation and data analytics at NCSA in Urbana, Illinois.
+
 
 ## Visits and meetings
 {% person cappello_f %} will visit BSC for two weeks in July 2016.
