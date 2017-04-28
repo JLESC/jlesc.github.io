@@ -6,7 +6,7 @@ updated: 2016-03-29
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - numerics
 keywords:
@@ -25,17 +25,20 @@ This research action aims at improving the parallel scalability and robustness o
 In that framework both parallel sparse direct and hybrid iterative/direct linear solvers will be integrated in the Alya code to study their performance and identify their possible bottlenecks.
 This action will contribute to the definition of the global API for the solver stack currently developed at Inria that will ease the integration and testing of the linear solver in any large simulation code.
 
+<!-- ## Results for 2015/2016
 
-## Results for 2015/2016
+This activity has just started in February 2016, preliminary validation experiments have been performed but no scientific results yet. -->
 
-This activity has just started in February 2016, preliminary validation experiments have been performed but no scientific results yet.
+## Results for 2016/2017
 
+A database with testcases has been created on Marenostrum. This database includes a series of representative examples to test unsymmetric, symmetric and SPD matrices. In addition, different mesh topologies have been considered to assess the effects of mesh anisotropy, computational domain elongation, etc. 
+Benchmarking is currently carried out to compare Alya internal solvers and MAPHYS.
 
 ## Visits and meetings
 
 * {% person houzeaux_g %} and {% person vazquez_m %} met INRIA team at Bordeaux, 14-15 Oct. 2016.
 * {% person houzeaux_g %} met INRIA team at Bordeaux, 24-26 Feb. 2016. 
-
+* INRIA met BSC team at Barcelona, Nov. 2016. 
 
 ## Impact and publications
 
