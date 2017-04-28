@@ -225,7 +225,7 @@ file.write("Head; Link\n")
 # The link is generated and written into a file like: emailadress of the projectleader, link
 for key, value in iter(link_pair.items()):
     #If you want to change the link the [projectname] and [pms] are essential!
-    link = "https://docs.google.com/forms/d/1HtvPVp-oCxFACzIgJD49g5qXjt8otU9YIalt-GOCIAg/viewform?entry.1218238180=[projectname]&entry.703889404=[pms]"
+    link = "https://docs.google.com/forms/d/e/1FAIpQLScGSWaftv79a0sokGWAF9tiVRUdukQPPAdkOnQwXR4w116L-w/viewform?usp=pp_url&entry.945436707=[projectname]&entry.297499208=[pms]"
 
     varname =""
     link = link.replace("[projectname]", key)
