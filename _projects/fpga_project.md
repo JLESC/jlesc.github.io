@@ -75,7 +75,7 @@ The team is submitting a proposal to DOE on this topic.
 
 ## Future plans
 
-Building on the results, we plan to hold FPGA workshops every six months. The next workshop will be hosted at UIUC on October 10-11, 2016. We will leverage these workshops to share the progress of our project, get feedback, and extend collaborations to other leading research groups.
+We will study performance portablity and code optimization techniques on selected application kernels using the latest generation FPGA platforms such as Intel Arria10 and possibly submit results to relevent venues. We will also evaluate the Merlin compiler, the best commercial compiler for FPGA accelerators, for a comparison perpose.
 
 ## References
 
