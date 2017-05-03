@@ -39,16 +39,22 @@ At the heart of this program is a framework for modeling and abstracting the res
 We have worked on modeling the problem : communication cost, aggregator placement, I/O phases, etc. 
 We have proposed placement strategies but they need to be refined and tested.
 A preliminary implementation is being developed in a cosmology code called HACC I/O.
-We plan to have first results soon.
+we have taken into account the network topology for mapping aggregators and we propose an optimized buffering system in order to reduce the aggregation cost. 
+We have validated our approach using micro-benchmarks and the I/O kernel of a large-scale cosmology simulation.
+We have showed improvements up to 15× faster for I/O operations compared to a standard implementation of MPI I/O.
+
 
 ## Visits and meetings
 
 * Emmanuel Jeannot visited ANL on March 2015
 * François Tessier stayed 10 days at ANL on March 2015
+* Emmanuel Jeannot visited ANL on June 2016
+* François Tessier visited Inira on December 2016
 
 ## Impact and publications
 
-François Tessier moved from Inria to ANL in February 2016. A part of his work is focusing on this project. 
+François Tessier moved from Inria to ANL in February 2016. A part of his work is focused on this project. 
+Results have been published in the 1st Workshop on Optimization of Communication in HPC runtime systems (IEEE COM-HPC16), in conjunction with SuperComputing 2016 {% cite tmv16+ --file jlesc.bib %}
 
 <!--
 {% comment %}
@@ -81,7 +87,8 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 The next step will be to determine the parameters to consider to compute a near-optimal number of aggregators.
 Additionally, we plan to implement the topology-aware aggregator placement once a stable version of data aggregation will be developed.
-A new visit could be organized to that purpose. 
+We want to exted our approach to any kind of HPC system and especially to the new Theta system.
+Visists between Inria and ANL are planned for the summer 2016. 
 
 ## References
 
