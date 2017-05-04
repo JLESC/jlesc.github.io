@@ -5,7 +5,7 @@ date: 2016-03-21
 updated: 2016-03-21
 navbar: Research
 subnavbar: Projects
-status: starting
+status: running
 topics:
   - numerics
   - apps
@@ -61,23 +61,51 @@ envision exploring a folded-spectrum method to also access the
 high-energy range of the spectrum, which may become important to
 detect, for instance, Fano resonances.
 
-## Results for 2015/2016
+## Results for 2015--2017
 
 This project was discussed for the first time during the JLESC meeting
 in December of 2015 in Bonn. Since then, both PIs set up the necessary testing
-infrastructure which involved creating a JURECA account for Schleife,
+infrastructure which involved creating an account for A. Schleife on JURECA,
 a 23 GB Globus file transfer from Blue Waters to JURECA, and compiling
-the existing conjugate-gradient based code on JURECA. We completed
-these steps and made sure that previous results for this matrix were
-correctly reproduced on JURECA. The code was stripped to the
-necessary minimum and is now ready for the ChASE implementation to
-compute the eigenvalues of the existing exciton-Hamiltonian
-matrix. This will be the next step.
+the existing conjugate-gradient eigensolver (KSCG) based code on JURECA. 
+The transferred files were used to extract 
+a number of matrices of incresing size to be diagonalized outside 
+the Jena BSE code by using the existing ChASE
+eigensolver for comparison with the KSCG solver. We completed
+these steps and made sure to check the correctness of the solutions for 
+the relative matrices. Already at this stage the ChASE solver showed to 
+outperform KSCG out-of-the-box despite operating in sub-optimal conditions.
+These results were presented at the JLESC workshop in Lyon, France (2016).
+
+In a second phase, the ChASE library underwent a restructuring 
+of the parallelization scheme in order to accomodate for a 
+new paradigm based on MPI+CUDA. The initial effort concentrated on re-designing 
+only the Chebyshev filter, which is the most computationally intensive 
+routine of the ChASE solver.The rewriting effort was successfully tested
+on the JURECA nodes hosting 2 x K40 NVIDIA GPU cards using the same set of matrices 
+created in the first phase of the project. The tests, run over up to 64 computing nodes
+showed the potential for ChASE to scale over hundreds
+of computing nodes and making use of multi-GPU cards per each node. The results were
+presented at the JLESC workshop in Kobe, Japan (2016).
+
+In the following phase, working accounts were opened on Blue Waters for the JSC team members. 
+The JSC and UIUC teams met for a week in order to start
+integrating the ChASE solver into the Jena BSE code. First the ChASE solver was 
+templated to work both in single (SP) and double precision (DP). Numerical tests showed that 
+the Jena BSE does not require eigenpairs with a high precision so that ChASE can 
+just operate in SP. The second step of this integration was successfull carried 
+out on one computing node showing that, already at this stage, Jena BSE + ChASE 
+is about five times faster than Jena BSE using the KSCG solver. In the next step 
+we will fully integrate the MPI+CUDA version of ChASE and run tests on Blue Waters.
+Eventually we plan to demonstrate the potential of the new solver by tackling
+a physical system of unprecedented size which will require thousands of computing nodes.
 
 ## Visits and meetings
 
-All exchanges after the JLESC meeting in Bonn were handled via
-email. Visits may happen in the future as deemed necessary.
+All exchanges after the JLESC meeting in Bonn up to the meeting in Kobe were handled via
+email. In March 2017 the JSC team visited the UIUC team in Urbana, Champaign for a week. 
+The meeting was extremely useful in tackling several important details and paved the way
+to a promising integration of the ChASE library into Jena BSE.
 
 ## Impact and publications
 None yet.
@@ -85,10 +113,12 @@ None yet.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Person-Month efforts in 2015/2016
+## Person-Month efforts in 2015--2017
 
-The steps carried out so far to prepare this project have not taken
-significant person-month efforts (on the order of 1 person-day).
+The inital steps carried out in the first phase of the project have not taken
+significant person-month efforts (on the order of 1 person-day). The second phase 
+was carried out in collaboration with a JSC guest student and can be quantified 
+70 person-days. The on-going third phase is predicted to require about 20-30 person-days. 
 
 {% comment %}
 =========================================
@@ -110,13 +140,19 @@ Above the very first person put the following line:
 == START HERE ==
 {% endcomment %}
 
+{:.person-months-table.table.table-bordered.table-hover.table-sm}
+| {% person schleife_a %} | 0.1 PM |
+| {% person di_napoli_e %} | 3.0 PM |
 
 ## Future plans
 
-The next step is to implement the ChASE library into the Jena BSE code
-and test scalability and efficiency of the ChASE library when used to
-solve eigenproblems of increasing size and complexity on multi- and
-many-cores. We also plan to customize ChASE parameters and algorithm.
+The next step is to fully integrate a hybrid parallelization of 
+the ChASE library into the Jena BSE code 
+and test scalability and efficiency of the ChASE library
+on Blue Waters when used to
+solve eigenproblems of increasing size and complexity. 
+This plan include a full customization of ChASE parameters to adapt 
+seamlessly to the Jena BSE requirements.
 
 ## References
 
