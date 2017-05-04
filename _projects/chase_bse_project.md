@@ -114,14 +114,6 @@ None yet.
 
 {% bibliography --cited --file jlesc.bib %}
 
-{% comment %}
-## Person-Month efforts in 2015--2017
-
-The inital steps carried out in the first phase of the project have not taken
-significant person-month efforts (on the order of 1 person-day). The second phase 
-was carried out in collaboration with a JSC guest student and can be quantified 
-70 person-days. The on-going third phase is predicted to require about 20-30 person-days. 
-{% endcomment %}
 
 {% comment %}
 =========================================
