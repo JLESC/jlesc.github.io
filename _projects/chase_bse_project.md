@@ -61,7 +61,7 @@ envision exploring a folded-spectrum method to also access the
 high-energy range of the spectrum, which may become important to
 detect, for instance, Fano resonances.
 
-## Results for 2015--2017
+## Results for 2015/2016
 
 This project was discussed for the first time during the JLESC meeting
 in December of 2015 in Bonn. Since then, both PIs set up the necessary testing
@@ -76,6 +76,8 @@ these steps and made sure to check the correctness of the solutions for
 the relative matrices. Already at this stage the ChASE solver showed to 
 outperform KSCG out-of-the-box despite operating in sub-optimal conditions.
 These results were presented at the JLESC workshop in Lyon, France (2016).
+
+## Results for 2016/2017
 
 In a second phase, the ChASE library underwent a restructuring 
 of the parallelization scheme in order to accomodate for a 
@@ -112,13 +114,14 @@ None yet.
 
 {% bibliography --cited --file jlesc.bib %}
 
-
+{% comment %}
 ## Person-Month efforts in 2015--2017
 
 The inital steps carried out in the first phase of the project have not taken
 significant person-month efforts (on the order of 1 person-day). The second phase 
 was carried out in collaboration with a JSC guest student and can be quantified 
 70 person-days. The on-going third phase is predicted to require about 20-30 person-days. 
+{% endcomment %}
 
 {% comment %}
 =========================================
@@ -139,10 +142,6 @@ Above the very first person put the following line:
 ==================================
 == START HERE ==
 {% endcomment %}
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person schleife_a %} | 0.1 PM |
-| {% person di_napoli_e %} | 3.0 PM |
 
 ## Future plans
 
