@@ -25,7 +25,7 @@ members:
 
 The goal of the Swift/Decaf/Damaris/FlowVR collaboration is to enhance the programmability of advanced applications composed of simulation and analysis modules. The Decaf project (Peterka), primarily funded by the U.S. Dept. of Energy, is developing a transport layer, high-level data flow primitives (selection, aggregation, pipelining, and buffering), and a high-level data description layer.  Swift (Wozniak), funded through Argonne LDRD, offers a rich, implicitly parallel programming language and scalable, load-balanced runtime.  Damaris (Antoniu) provides asynchronous resources (dedicated cores/nodes) that can be used for I/O, analysis, and visualization. FlowVR (Raffin) is a generic framework for building complex dataflows by plugging components into a Python interface. We intend to compare and contrast these tools and combine some of them to investigate computer science challenges in creating a highly useful, efficient analysis system.
 
-## Activity for 2015/2016
+## Results for 2015/2016
 
  * M. Dorier led the authorship of the ISAV 2015 workshop paper on lessons learned developing all four tools {% cite DorierEtAl2015 --file jlesc.bib %}.
  * M. Dreher and J. Wozniak developed an initial integration plan for Swift and Decaf.
@@ -33,7 +33,7 @@ The goal of the Swift/Decaf/Damaris/FlowVR collaboration is to enhance the progr
  * T. Peterka co-organized SC15 BOF on scientific workflows.
 * M. Dreher and B. Raffin integrated the Decaf redistribution component with FlowVR and we published a Cluster 2016 paper on this research {% cite DreherEtAl2016 --file jlesc.bib %}.
 
-## Activity for 2016/2017
+## Results for 2016/2017
 
 ### Damaris
 
