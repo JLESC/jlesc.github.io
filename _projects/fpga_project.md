@@ -62,7 +62,7 @@ We gave presentations on our FPGA work at the H2RC workshop and the post-Moore w
 
 
 ## Visits and meetings
-{% person cappello_f %} will visit BSC for two weeks in July 2016.
+{% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
 
 
 ## Impact and publications
