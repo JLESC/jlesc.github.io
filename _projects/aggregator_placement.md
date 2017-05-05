@@ -39,7 +39,9 @@ At the heart of this program is a framework for modeling and abstracting the res
 We have worked on modeling the problem : communication cost, aggregator placement, I/O phases, etc. 
 We have proposed placement strategies but they need to be refined and tested.
 A preliminary implementation is being developed in a cosmology code called HACC I/O.
-we have taken into account the network topology for mapping aggregators and we propose an optimized buffering system in order to reduce the aggregation cost. 
+
+## Results for 2016/2017
+We have taken into account the network topology for mapping aggregators and we propose an optimized buffering system in order to reduce the aggregation cost. 
 We have validated our approach using micro-benchmarks and the I/O kernel of a large-scale cosmology simulation.
 We have showed improvements up to 15× faster for I/O operations compared to a standard implementation of MPI I/O.
 
