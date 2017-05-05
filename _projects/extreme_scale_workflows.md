@@ -16,7 +16,6 @@ members:
   - dreher_m
   - ross_r
   - antoniu_g
-  - ibrahim_s
   - dorier_m
   - raffin_b
 ---
