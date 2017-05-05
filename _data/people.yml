@@ -2267,8 +2267,8 @@ yoshii_k:
   given_name: Kazutomo
   affiliation: anl
   position: permanent
-  topics:
-  email: okazutomo@mcs.anl.gov
+  topics: FPGA, OS, energy-aware computing, approximate computing, reconfigurable computing
+  email: kazutomo@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/person/kazutomo-yoshii
 
 zanon_f:
@@ -2279,6 +2279,15 @@ zanon_f:
   topics: I/O
   email: francieli.zanon@inf.ufrgs.br
   homepage: 
+
+jin_z:
+  sur_name: Zheming
+  given_name: Jin
+  affiliation: anl
+  position: post_doc
+  topics:
+  email: zjin@anl.gov
+  homepage: https://www.alcf.anl.gov/staff-directory/zheming-jin
 
 zhou_a:
   sur_name: Zhou
