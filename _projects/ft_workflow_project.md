@@ -119,9 +119,10 @@ in close collaboration to make progress.
 
 ## Impact and publications
 
-The project has submitted a paper to FTXS 2017 and JPDC.
+Two papers have been accepted to FTXS'17 {% cite benoitEtAl2017identifying --file external/ft_workflow_project.bib
+%},{% cite benoitEtAl2017optimal --file external/ft_workflow_project.bib
+%}.
 
-<!--
 {% comment %}
 =============================
 == CITING OWN PUBLICATIONS ==
@@ -143,7 +144,6 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 == NO MORE BELOW THIS ==
 ========================
 {% endcomment %}
--->
 
 {% bibliography --cited --file jlesc.bib %}
 
