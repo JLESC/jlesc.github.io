@@ -2,7 +2,7 @@
 layout: page_project
 title: Comparison of Meshing and CFD Methods for Accurate Flow Simulations on HPC systems
 date: 2016-03-02
-updated: 2016-03-02
+updated: 2017-05-08
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -34,6 +34,12 @@ Such a cooperation is only possible by bilateral support activities which will l
 Hence, expertises of the centers in these fields will strongly be enhanced in the course of this project.
 To foster the cooperation, mutual short-time stays of the involved scientists are planned.
 
+## Results for 2016/2017 
+
+* Deep knowlegde exchange w.r.t. the computational methods applied by both groups 
+* JSC code has been compiled with node-installed GCC on K-computer; validity and performance tests are pending
+* AICS code has been ported to GPUs at JSC GPU Hackathon 2017  
+
 ## Results for 2015/2016
 
 Both parties are about to create accounts on both machines such that the first task, i.e., the porting of the individual codes can be performed:
@@ -45,7 +51,10 @@ Both parties are about to create accounts on both machines such that the first t
 
 ## Visits and meetings
 
-No visits yet.
+* 06.03.2017 - 10.03.2017: Rahul Bale, Wei-Hsiang Wang, Koji Nishiguchi (all RIKEN) -> Participation GPU Hackathon at JSC Jülich; meeting at JSC
+* 28.11.2016 - 02.12.2016: Thomas Schilden (RWTH, JSC) -> Participation Young Researchers Workshop & JLESC Riken 
+* 26.06.2016 - 29.06.2017: Andreas Lintermann (JSC) -> Participation JLESC meeting Lyon 
+* 16.06.2016 - 17.06.2016: Keiji Onishi (RIKEN) -> Visit RWTH Aachen University and JSC Jülich; meeting at JSC
 
 ## Impact and publications
 No publications yet.
