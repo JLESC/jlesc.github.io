@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; OpenMP for FPGA</title>
+  <title>JLESC &mdash; Evaluating high-level programming models for FPGA platforms</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
@@ -93,7 +93,7 @@
   <article class="post-content">
     <div class="row">
       <header class="col-sm-12 post-header">
-        <h1 class="pull-left">OpenMP for FPGA</h1>
+        <h1 class="pull-left">Evaluating high-level programming models for FPGA platforms</h1>
       </header>
     </div>
     <div class="row">
@@ -121,11 +121,13 @@
           
             <span class="clearfix">FPGA</span>
           
-            <span class="clearfix">compilation</span>
+            <span class="clearfix">High-level synthesis (OpenCL, OpenMP, OpenACC)</span>
           
-            <span class="clearfix">OpenMP4</span>
+            <span class="clearfix">HPC kernel porting</span>
           
-            <span class="clearfix">optimizations</span>
+            <span class="clearfix">Manual and automatic optimizations</span>
+          
+            <span class="clearfix">Heterogeneous reconfigurable computing</span>
           
         </div>
       </li>
@@ -137,7 +139,7 @@
         <div class="col-sm-8">
           
             <span class="clearfix">
-              <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Kazutomo</span> <span class="person sur-name">Yoshii</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
               <span class="pull-right">
                 <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
               </span>
@@ -145,15 +147,27 @@
           
           
             <span class="clearfix">
+              <span class="person given-name">Carlos</span> <span class="person sur-name">Alvarez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Daniel</span> <span class="person sur-name">Jimenez-Gonzalez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Xavier</span> <span class="person sur-name">Martorell</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Jin</span> <span class="person sur-name">Zheming</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
               <span class="person given-name">Hal</span> <span class="person sur-name">Finkel</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Kazutomo</span> <span class="person sur-name">Yoshii</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Carlos</span> <span class="person sur-name">Alvarez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+              <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
         </div>
@@ -163,7 +177,7 @@
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
       <div class="col-sm-8">
-        <span class="project-status project-status-starting">starting</span>
+        <span class="project-status project-status-running">running</span>
       </div>
     </li>
     
@@ -176,6 +190,7 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -187,19 +202,43 @@
         
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
-<p>The end of the Moore’s law poses a significant challenge for scientific computing: from the mid 2020s, performance will not improve any more from the CMOS technology progress. Reconfigurable computing presents the unique opportunity of allowing performance progress by customization while still serving a large variety of applications, offering a true co-design vehicle. However, its adoption in scientific computing still faces the lack of high-level parallel programming abstraction and the extreme difficulty of achieving high performance with existing compilation stacks.</p>
+<p>The end of the Moore’s law poses a significant challenge for
+scientific computing: from the mid 2020s, performance will not improve
+any more from the CMOS technology progress. Reconfigurable computing
+presents the unique opportunity of allowing performance progress by
+customization while still serving a large variety of applications,
+offering a true co-design vehicle. However, its adoption in scientific
+computing still faces the lack of high-level parallel programming
+abstraction and the extreme difficulty of achieving high performance
+with existing compilation stacks.</p>
 
-<p>We focus on node-level parallelism; and our objective is to demonstrate, for a set of JLESC applications parallelized with OpenMP 4, significant performance/watt improvement compared with CPUs and GPUs of the comparable technology.</p>
+<p>We focus on node-level parallelism; and our objective is to
+demonstrate, for a set of JLESC applications accelerated with emerging
+high-level synthesis technology, significant performance/watt
+improvement compared with CPUs and GPUs of the comparable technology.</p>
 
-<p>We follow a co-design approach. Because the community is investing significantly in OpenMP 4 for node-level parallelism, we will first provide a path to compile OpenMP 4 applications for high-end field-programmable gate arrays (FPGAs). Second, we explore, design, and develop new mechanisms to optimize the FPGA performance of scientific computing: (i) compiler-level optimizations; (ii) dynamic memory optimizations; and (iii) code transformation and additional, non-OpenMP 4, directives to help generate efficient computing and memory interface structures. Our co-design approach synergistically affects the programming interface and the hardware configuration.</p>
+<p>The advent of high-level synthesis technology such as OpenCL, OpenMP
+and OpenACC for FPGAs eases the FPGA adoption process in HPC. However,
+we have little expertise to port current existing computational kernel
+and have little knowledge on optimizations. In this project, we will
+implement key application kernels using high level synthesis tools,
+study optimization techniques and conduct performance evaluations.
+For optimization, we will evaluate existing source-to-source
+optimizers such as Merlin compiler and understand its pros and cons.
+We simultaneously study manual optimizations, that are
+algorithm-aware, to accelerate kernels significantly.</p>
 
 <h2 id="results-for-20152016">
 <a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
 <p>We organized an international workshop on FPGA for scientific simulation and data analytics, at Argonne on January 2016, that attracted application developers, researchers in computer science and applied mathematics, the main FPGA vendors (Xilinx and Altera), and HPC application users.</p>
 
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+<p>We gave presentations on our FPGA work at the H2RC workshop and the post-Moore workshop in SC16. We organized the second international workshop on FPGA for scientific simulation and data analytics at NCSA in Urbana, Illinois.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
-<p><span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) will visit BSC for two weeks in July 2016.</p>
+<p><span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) visited BSC for two weeks in July 2016 and spent two days for this project.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -212,7 +251,7 @@ The team is submitting a proposal to DOE on this topic.</p>
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>Building on the results, we plan to hold FPGA workshops every six months. The next workshop will be hosted at UIUC on October 10-11, 2016. We will leverage these workshops to share the progress of our project, get feedback, and extend collaborations to other leading research groups.</p>
+<p>We will study performance portablity and code optimization techniques on selected application kernels using the latest generation FPGA platforms such as Intel Arria10 and possibly submit results to relevent venues. We will also evaluate the Merlin compiler, the best commercial compiler for FPGA accelerators, for a comparison perpose.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
