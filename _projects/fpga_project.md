@@ -75,7 +75,7 @@ The team is submitting a proposal to DOE on this topic.
 
 ## Future plans
 
-We will study performance portablity and code optimization techniques on selected application kernels using the latest generation FPGA platforms such as Intel Arria10 and possibly submit results to relevent venues. We will also evaluate the Merlin compiler, the best commercial compiler for FPGA accelerators, for a comparison perpose.
+We will study performance portability and code optimization techniques on selected application kernels using the latest generation FPGA platforms such as Intel Arria10 and possibly submit results to relevant venues. We will also evaluate the Merlin compiler, the best commercial compiler for FPGA accelerators, for a comparison purpose.
 
 ## References
 
