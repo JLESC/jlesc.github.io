@@ -76,7 +76,12 @@ changes. Our evaluation shows that the proposed technique achieves a lower
 false positive rate and similar recall, while imposing a much lower memory
 overhead than state-of-the-art techniques. This work has been submitted to an
 international conference and it is currently under review. The software
-prototype, called MACORD, is pending approval for open source publication.
+prototype, called MACORD, is pending approval for open source publication. In
+addition, several separate efforts accross have been made in order to test
+selective replication for dealing with SDC in HPC systems {% cite subasi2017rep
+--file external/sdc_detection.bib %}, in particular for task-based programming
+languages {% cite subasi2016run --file external/sdc_detection.bib %}.
+
 
 
 ## Visits and meetings
