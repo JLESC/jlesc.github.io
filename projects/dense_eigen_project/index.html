@@ -153,7 +153,7 @@
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
       <div class="col-sm-8">
-        <span class="project-status project-status-starting">starting</span>
+        <span class="project-status project-status-running">running</span>
       </div>
     </li>
     
@@ -166,6 +166,8 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
+<li class="toc-entry toc-h3"><a href="#software-update-and-descriptions">Software update and descriptions:</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -236,10 +238,46 @@ We confirmed the libraries are ported and perform on the systems;
   </tbody>
 </table>
 
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+
+<ol>
+  <li>We have done benchmarks using EigenExa, ELPA, and Elemental on available platforms, K, JUQUEEN and JURECA.</li>
+  <li>Some of the combinations are not available due to compilation problems or runtime software. We will also continue the compilation if we get a new version or a new compiler environment.</li>
+  <li>On the latter half of 2016/2017, we analyzed the correlation between the number of expected eigenspectrum and computing time cost. It affects to select best dense eigensolver for application users.
+    <ul>
+      <li>EigenExa very good if the full eigenspectrum is wanted</li>
+      <li>Libraries have to be tuned for the architecture</li>
+      <li>Best performance with the library tuned for the machine</li>
+      <li>On JUQUEEN and JURECA hybrid parallelization with moderate OpenMP part preferred</li>
+      <li>On K computer EigenExa best with as little MPI parallelization as necessary</li>
+      <li>On K computer ELPA2 best with pure MPI parallelization</li>
+      <li>If only 5 percent of eigenspectrum needed even on K computer ELPA2 pure MPI becomes fastest</li>
+    </ul>
+  </li>
+  <li>GPU or accelerator-based eigenvalue solver like MAGMA or ELPA must be examined in 2017/2018. Currently, we have not yet confirmed to build the ELPA GPU extension on JURECA. Also, we would enhance the EigenExa library with an acceleration of GPUs.</li>
+</ol>
+
+<h3 id="software-update-and-descriptions">
+<a id="software-update-and-descriptions" class="anchor" href="#software-update-and-descriptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Software update and descriptions:</h3>
+
+<ul>
+  <li>EigenExa : 2.4a1_rewind (officially 2.4 has been released)
+         supports calculation of a part of eigenspectrum like ELPA</li>
+  <li>ELPA : 2016.005.003
+     includes new QR decomposition based block householder transformation.</li>
+  <li>Elemental: 0.87
+         allows to compute arbitrary part of the eigenspectrum</li>
+</ul>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
 <p>In the 4th JLESC meeting at Bonn, we had a pre-meeting of this project with regard to a research update and planning in 2016 of each member.</p>
+
+<p>Frequent e-mail exchanges between imamura_t and gutheil_i.
+In the 5th JLESC meeting at Lyon,  both met and discussed about this project.
+Also, 6th JLESC meeting was hosted by AICS and gutheil_i visited AICS.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -259,17 +297,12 @@ We confirmed the libraries are ported and perform on the systems;
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>In 2016, we divide the first year into 1st and 2nd halves on the management of this project.
-For each half, we plan to do as follow.</p>
+<!-- In 2016, we divide the first year into 1st and 2nd halves on the management of this project.
+For each half, we plan to do as follow.
 
-<ul>
-  <li>
-    <p>1st 6 months: performance measurements on the available resources</p>
-  </li>
-  <li>
-    <p>2nd 6 months: tuning the existing libraries on the available computers</p>
-  </li>
-</ul>
+* 1st 6 months: performance measurements on the available resources
+
+* 2nd 6 months: tuning the existing libraries on the available computers -->
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
