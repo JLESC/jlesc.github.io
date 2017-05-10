@@ -84,9 +84,9 @@ We confirmed the libraries are ported and perform on the systems;
 
 In the 4th JLESC meeting at Bonn, we had a pre-meeting of this project with regard to a research update and planning in 2016 of each member.
 
-Frequent e-mail exchanges between imamura_t and gutheil_i.
+Frequent e-mail exchanges between Toshiyuki Imamura and Inge Gutheil.
 In the 5th JLESC meeting at Lyon,  both met and discussed about this project.
-Also, 6th JLESC meeting was hosted by AICS and gutheil_i visited AICS.
+Also, 6th JLESC meeting was hosted by AICS and Inge Gutheil visited AICS.
 
 
 ## Impact and publications
