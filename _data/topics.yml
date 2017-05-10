@@ -81,6 +81,7 @@ numerics:
     - giraud_l
     - houzeaux_g
     - speck_r
+    - imamura_t
   desc: >
     The efficient use of modern HPC systems has become one of the key challenges in computational
     science.
