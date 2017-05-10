@@ -6,7 +6,7 @@ updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - numerics
 keywords:
@@ -55,10 +55,38 @@ We confirmed the libraries are ported and perform on the systems;
 [^2]: Elemental needs C++10, but C++10 functionality is not supported on the current compiler on the K computer.
 [^3]: Running in the pure MPI mode is confirmed on JUQUEEN and JURECA at the moment.
 
+## Results for 2016/2017
+
+1. We have done benchmarks using EigenExa, ELPA, and Elemental on available platforms, K, JUQUEEN and JURECA.
+1. Some of the combinations are not available due to compilation problems or runtime software. We will also continue the compilation if we get a new version or a new compiler environment.
+1. On the latter half of 2016/2017, we analyzed the correlation between the number of expected eigenspectrum and computing time cost. It affects to select best dense eigensolver for application users.
+ * EigenExa very good if the full eigenspectrum is wanted
+ * Libraries have to be tuned for the architecture
+ * Best performance with the library tuned for the machine
+ * On JUQUEEN and JURECA hybrid parallelization with moderate OpenMP part preferred
+ * On K computer EigenExa best with as little MPI parallelization as necessary
+ * On K computer ELPA2 best with pure MPI parallelization
+ * If only 5 percent of eigenspectrum needed even on K computer ELPA2 pure MPI becomes fastest
+
+1. GPU or accelerator-based eigenvalue solver like MAGMA or ELPA must be examined in 2017/2018. Currently, we have not yet confirmed to build the ELPA GPU extension on JURECA. Also, we would enhance the EigenExa library with an acceleration of GPUs.
+
+### Software update and descriptions:
+
+* EigenExa : 2.4a1_rewind (officially 2.4 has been released)
+           supports calculation of a part of eigenspectrum like ELPA
+* ELPA : 2016.005.003
+       includes new QR decomposition based block householder transformation.
+* Elemental: 0.87
+           allows to compute arbitrary part of the eigenspectram
+
 
 ## Visits and meetings
 
 In the 4th JLESC meeting at Bonn, we had a pre-meeting of this project with regard to a research update and planning in 2016 of each member.
+
+Frequent e-mail exchanges between imamura_t and gutheil_i.
+In the 5th JLESC meeting at Lyon,  both met and discussed about this project.
+Also, 6th JLESC meeting was hosted by AICS and gutheil_i visited AICS.
 
 
 ## Impact and publications
