@@ -174,6 +174,7 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -202,9 +203,16 @@ The adopted abstraction layer allows easier replacement/improvement of different
 Besides the structural changes, a latency-avoiding communication scheme was implemented to improve the strong scaling.
 Together with the automatic testing framework, scaling bottlenecks of the method can be investigated much easier.</p>
 
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+<p>During the visit of David Haensel at ANL we implemented a data-driven version of the FMM on top of Argobots.
+With the experience from this implementation we implemented a tasking framework with C++ standard library features.
+This tasking library is specialized for communication bound problems like they arose in MD simulations.
+For the fine grained resolution of dependencies we implemented a dependency resolver which is configurable at compile time via template meta programming.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
-<p><span class="person given-name">David</span> <span class="person sur-name">Haensel</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>) will join the group of <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) in Mai/June 2016 to develop a tasking scheme for FMSolvr on Argobots. This visit is vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).</p>
+<p><span class="person given-name">David</span> <span class="person sur-name">Haensel</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>) joined the group of <span class="person given-name">Pavan</span> <span class="person sur-name">Balaji</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) in Mai/June 2016 to develop a tasking scheme for FMSolvr on top of Argobots. This visit was vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -217,9 +225,8 @@ Together with the automatic testing framework, scaling bottlenecks of the method
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
-<p>Currently we are developing a task-based scheme to simplify the use of shared memory and to improve intranode load-balancing. Therefore, the FMM software layout has to be extended to support asynchronous execution, task-dependency resolvability and tasking itself.
-In a second step the FMM will be coupled with currently available low-level tasking frameworks like Argobots.
-This will also help to reduce load imbalances due to non-homogeneous particle distributions.</p>
+<p>Currently we are integrating the tasking framework with the communication layers. 
+This enables us to control the algorithmic flow and parallelization in detail. With this MPI-enabled tasking framework we will elaborate alternative communication strategies using MPI-3 and MPI-4.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
