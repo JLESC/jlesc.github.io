@@ -2217,6 +2217,15 @@ wilson_j:
   email: wilsja@illinois.edu
   homepage:
 
+winkelmann_j:
+  sur_name: Winkelmann
+  given_name: Jan
+  affiliation: external
+  position: phd
+  topics: 
+  email: winkelmann@aices.rwth-aachen.de
+  homepage: http://hpac.rwth-aachen.de/~winkelmann/
+
 wozniak_j:
   sur_name: Wozniak
   given_name: Justin
