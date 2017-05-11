@@ -36,8 +36,14 @@ The adopted abstraction layer allows easier replacement/improvement of different
 Besides the structural changes, a latency-avoiding communication scheme was implemented to improve the strong scaling.
 Together with the automatic testing framework, scaling bottlenecks of the method can be investigated much easier.
 
+## Results for 2016/2017
+During the visit of David Haensel at ANL we implemented a data-driven version of the FMM on top of Argobots.
+With the experience from this implementation we implemented a tasking framework with C++ standard library features.
+This tasking library is specialized for communication bound problems like they arose in MD simulations.
+For the fine grained resolution of dependencies we implemented a dependency resolver which is configurable at compile time via template meta programming.
+
 ## Visits and meetings
-{% person haensel_d %} will join the group of {% person balaji_p %} in Mai/June 2016 to develop a tasking scheme for FMSolvr on Argobots. This visit is vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).
+{% person haensel_d %} joined the group of {% person balaji_p %} in Mai/June 2016 to develop a tasking scheme for FMSolvr on top of Argobots. This visit was vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).
 
 ## Impact and publications
 None yet.
@@ -49,9 +55,8 @@ None yet.
 
 
 ## Future plans
-Currently we are developing a task-based scheme to simplify the use of shared memory and to improve intranode load-balancing. Therefore, the FMM software layout has to be extended to support asynchronous execution, task-dependency resolvability and tasking itself.
-In a second step the FMM will be coupled with currently available low-level tasking frameworks like Argobots.
-This will also help to reduce load imbalances due to non-homogeneous particle distributions.
+Currently we are integrating the tasking framework with the communication layers. 
+This enables us to control the algorithmic flow and parallelization in detail. With this MPI-enabled tasking framework we will elaborate alternative communication strategies using MPI-3 and MPI-4.
 
 ## References
 
