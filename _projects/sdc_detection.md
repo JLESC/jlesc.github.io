@@ -39,31 +39,31 @@ future supercomputers.
 
 ## Results for 2015/2016
 
-During 2015/2016 we tackled several challenges related to silent
-corruption {% cite BautEtAl2015 --file jlesc.bib %}.  We developed a
-lightweight, adaptive, impact-driven detector for detecting the silent data
-corruptions{% cite ShengEtCappello2016 --file jlesc.bib %}. (1) We carefully
-characterize 18 HPC applications/benchmarks and discuss the runtime data
-features, as well as the impact of the SDCs on their execution results. (2) We
-propose an impact-driven detection model that does not blindly improve the
-prediction accuracy, but instead detects only influential SDCs to guarantee
-user-acceptable execution results. (3) Our solution can adapt to dynamic
-prediction errors based on local runtime data and can automatically tune
-detection ranges for guaranteeing low false alarms. Another question we
-answered was related to the use of multiple SDC detectors with different
-characteristics. We designed a strategy that allows users to decide which SDC
-detector use and at which frequency, having the choice among several SDC
-detectors with different performance, recall and precision. This research was
-published as a full paper at HiPC2015 {% cite BautEtAl2015b --file jlesc.bib %}
-and we wrote an extension full of details and new result and submitted to
-IJHPCA. In addition, we investigated how to create SDC detectors based on
-support vector machines (SVM) and compare them with the state-of-the-art SDC
-detectors. Our evaluation with multiple large-scale HPC applications shows that
-SVM is a good technique that can learn about the behavior of the datasets and
-detect the vast majority of anomalies while imposing a negligible overhead. Our
-technique preforms better than the existent ones in most of the cases. We
-published this results at CCGrid2016 {% cite SubasiEtAl2016 --file jlesc.bib
-%}.
+During 2015/2016 we tackled several challenges related to silent corruption {%
+cite BautEtAl2015 --file jlesc.bib %} and tested preliminary approaches {% cite
+di2015detect --file jlesc.bib %}. We developed a lightweight, adaptive,
+impact-driven detector for detecting the silent data corruptions{% cite
+ShengEtCappello2016 --file jlesc.bib %}. (1) We carefully characterize 18 HPC
+applications/benchmarks and discuss the runtime data features, as well as the
+impact of the SDCs on their execution results. (2) We propose an impact-driven
+detection model that does not blindly improve the prediction accuracy, but
+instead detects only influential SDCs to guarantee user-acceptable execution
+results. (3) Our solution can adapt to dynamic prediction errors based on local
+runtime data and can automatically tune detection ranges for guaranteeing low
+false alarms. Another question we answered was related to the use of multiple
+SDC detectors with different characteristics. We designed a strategy that
+allows users to decide which SDC detector use and at which frequency, having
+the choice among several SDC detectors with different performance, recall and
+precision. This research was published as a full paper at HiPC2015 {% cite
+BautEtAl2015b --file jlesc.bib %} and we wrote an extension full of details and
+new result and published it {% cite bautista2016coping --file jlesc.bib %}. In
+addition, we investigated how to create SDC detectors based on support vector
+machines (SVM) and compare them with the state-of-the-art SDC detectors. Our
+evaluation with multiple large-scale HPC applications shows that SVM is a good
+technique that can learn about the behavior of the datasets and detect the vast
+majority of anomalies while imposing a negligible overhead. Our technique
+performs better than the existent ones in most of the cases. We published this
+results at CCGrid2016 {% cite SubasiEtAl2016 --file jlesc.bib %}.
 
 ## Results for 2016/2017
 
@@ -77,10 +77,10 @@ false positive rate and similar recall, while imposing a much lower memory
 overhead than state-of-the-art techniques. This work has been submitted to an
 international conference and it is currently under review. The software
 prototype, called MACORD, is pending approval for open source publication. In
-addition, several separate efforts accross have been made in order to test
+addition, several separate efforts across have been made in order to test
 selective replication for dealing with SDC in HPC systems {% cite subasi2017rep
---file external/sdc_detection.bib %}, in particular for task-based programming
-languages {% cite subasi2016run --file external/sdc_detection.bib %}.
+--file jlesc.bib %}, in particular for task-based programming
+languages {% cite subasi2016run --file jlesc.bib %}.
 
 
 
