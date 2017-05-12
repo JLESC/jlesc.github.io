@@ -40,9 +40,6 @@
 help_wanted:
   title: help wanted
 
-preparation:
-  title: in preparation
-
 starting:
   title: starting
 
@@ -51,9 +48,6 @@ running:
 
 suspended:
   title: suspended
-
-closing:
-  title: closing
 
 finished:
   title: finished
