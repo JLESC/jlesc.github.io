@@ -221,30 +221,27 @@ future supercomputers.</p>
 <h2 id="results-for-20152016">
 <a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
 
-<p>During 2015/2016 we tackled several challenges related to silent
-corruption <a href="#BautEtAl2015">(Bautista-Gomez and Cappello 2015)</a>.  We developed a
-lightweight, adaptive, impact-driven detector for detecting the silent data
-corruptions<a href="#ShengEtCappello2016">(Di and Cappello 2016)</a>. (1) We carefully
-characterize 18 HPC applications/benchmarks and discuss the runtime data
-features, as well as the impact of the SDCs on their execution results. (2) We
-propose an impact-driven detection model that does not blindly improve the
-prediction accuracy, but instead detects only influential SDCs to guarantee
-user-acceptable execution results. (3) Our solution can adapt to dynamic
-prediction errors based on local runtime data and can automatically tune
-detection ranges for guaranteeing low false alarms. Another question we
-answered was related to the use of multiple SDC detectors with different
-characteristics. We designed a strategy that allows users to decide which SDC
-detector use and at which frequency, having the choice among several SDC
-detectors with different performance, recall and precision. This research was
-published as a full paper at HiPC2015 <a href="#BautEtAl2015b">(Bautista-Gomez et al. 2015)</a>
-and we wrote an extension full of details and new result and submitted to
-IJHPCA. In addition, we investigated how to create SDC detectors based on
-support vector machines (SVM) and compare them with the state-of-the-art SDC
-detectors. Our evaluation with multiple large-scale HPC applications shows that
-SVM is a good technique that can learn about the behavior of the datasets and
-detect the vast majority of anomalies while imposing a negligible overhead. Our
-technique preforms better than the existent ones in most of the cases. We
-published this results at CCGrid2016 <a href="#SubasiEtAl2016">(Subasi et al. 2016)</a>.</p>
+<p>During 2015/2016 we tackled several challenges related to silent corruption <a href="#BautEtAl2015">(Bautista-Gomez and Cappello 2015)</a> and tested preliminary approaches <a href="#di2015detect">(Di, Berrocal, and Cappello 2015)</a>. We developed a lightweight, adaptive,
+impact-driven detector for detecting the silent data corruptions<a href="#ShengEtCappello2016">(Di and Cappello 2016)</a>. (1) We carefully characterize 18 HPC
+applications/benchmarks and discuss the runtime data features, as well as the
+impact of the SDCs on their execution results. (2) We propose an impact-driven
+detection model that does not blindly improve the prediction accuracy, but
+instead detects only influential SDCs to guarantee user-acceptable execution
+results. (3) Our solution can adapt to dynamic prediction errors based on local
+runtime data and can automatically tune detection ranges for guaranteeing low
+false alarms. Another question we answered was related to the use of multiple
+SDC detectors with different characteristics. We designed a strategy that
+allows users to decide which SDC detector use and at which frequency, having
+the choice among several SDC detectors with different performance, recall and
+precision. This research was published as a full paper at HiPC2015 <a href="#BautEtAl2015b">(Bautista-Gomez et al. 2015)</a> and we wrote an extension full of details and
+new result and published it <a href="#bautista2016coping">(Bautista-Gomez et al. 2016)</a>. In
+addition, we investigated how to create SDC detectors based on support vector
+machines (SVM) and compare them with the state-of-the-art SDC detectors. Our
+evaluation with multiple large-scale HPC applications shows that SVM is a good
+technique that can learn about the behavior of the datasets and detect the vast
+majority of anomalies while imposing a negligible overhead. Our technique
+performs better than the existent ones in most of the cases. We published this
+results at CCGrid2016 <a href="#SubasiEtAl2016">(Subasi et al. 2016)</a>.</p>
 
 <h2 id="results-for-20162017">
 <a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
@@ -259,7 +256,7 @@ false positive rate and similar recall, while imposing a much lower memory
 overhead than state-of-the-art techniques. This work has been submitted to an
 international conference and it is currently under review. The software
 prototype, called MACORD, is pending approval for open source publication. In
-addition, several separate efforts accross have been made in order to test
+addition, several separate efforts across have been made in order to test
 selective replication for dealing with SDC in HPC systems <a href="#subasi2017rep">(Subasi et al. 2017)</a>, in particular for task-based programming
 languages <a href="#subasi2016run">(Subasi et al. 2016)</a>.</p>
 
@@ -275,6 +272,46 @@ languages <a href="#subasi2016run">(Subasi et al. 2016)</a>.</p>
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          subasi2017rep
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsesubasi2017repBibtex" aria-expanded="false" aria-controls="collapsesubasi2017repBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsesubasi2017repAbstract" aria-expanded="false" aria-controls="collapsesubasi2017repAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="subasi2017rep">Subasi, Omer, Gulay Yalcin, Ferad Zyulkyarov, Osman Unsal, and Jesus Labarta. 2017. “Designing And Modelling Selective Replication for Fault-Tolerant HPC Applications.” In <i>2017 IEEE International Conference On Cluster Cloud and Grid Computing (CCGrid’17)</i>. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsesubasi2017repBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{subasi2017rep,
+  title = {Designing and Modelling Selective Replication for Fault-tolerant HPC Applications},
+  author = {Subasi, Omer and Yalcin, Gulay and Zyulkyarov, Ferad and Unsal, Osman and Labarta, Jesus},
+  booktitle = {2017 IEEE International Conference on Cluster Cloud and Grid Computing (CCGrid'17)},
+  year = {2017},
+  organization = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -335,7 +372,7 @@ languages <a href="#subasi2016run">(Subasi et al. 2016)</a>.</p>
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="SubasiEtAl2016">Subasi, Omer, Sheng Di, Leonardo Bautista-Gomez, Prasanna Balaprakash, Osman Unsal, Jesus Labarta, Adrian Cristal, and Franck Cappello. 2016. “Spatial Support Vector Regression To Detect Silent Errors in the Exascale Era.” In <i>Proceedings Of the 2015 IEEE/ACM International Symposium on Cluster Cloud And
+      <span id="SubasiEtAl2016">Subasi, Omer, Sheng Di, Leonardo Bautista-Gomez, Prasanna Balaprakash, Osman Unsal, Jesus Labarta, Adrian Cristal, and Franck Cappello. 2016. “Spatial Support Vector Regression To Detect Silent Errors in the Exascale Era.” In <i>Proceedings Of the 2016 IEEE/ACM International Symposium on Cluster Cloud And
       Grid Computing</i>. IEEE.</span>
     </div>
   </div>
@@ -345,10 +382,93 @@ languages <a href="#subasi2016run">(Subasi et al. 2016)</a>.</p>
         <pre><code>@inproceedings{SubasiEtAl2016,
   title = {Spatial Support Vector Regression to Detect Silent Errors in the Exascale Era},
   author = {Subasi, Omer and Di, Sheng and Bautista-Gomez, Leonardo and Balaprakash, Prasanna and Unsal, Osman and Labarta, Jesus and Cristal, Adrian and Cappello, Franck},
-  booktitle = {Proceedings of the 2015 IEEE/ACM International Symposium on Cluster Cloud and
+  booktitle = {Proceedings of the 2016 IEEE/ACM International Symposium on Cluster Cloud and
         Grid Computing},
   organization = {IEEE},
   year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          bautista2016coping
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsebautista2016copingBibtex" aria-expanded="false" aria-controls="collapsebautista2016copingBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsebautista2016copingAbstract" aria-expanded="false" aria-controls="collapsebautista2016copingAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="bautista2016coping">Bautista-Gomez, Leonardo, Anne Benoit, Aurélien Cavelan, Saurabh K Raina, Yves Robert, and Hongyang Sun. 2016. “Coping With Recall and Precision of Soft Error Detectors.” <i>Journal Of Parallel and Distributed Computing</i> 98. Elsevier: 8–24.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsebautista2016copingBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{bautista2016coping,
+  title = {Coping with recall and precision of soft error detectors},
+  author = {Bautista-Gomez, Leonardo and Benoit, Anne and Cavelan, Aur{\'e}lien and Raina, Saurabh K and Robert, Yves and Sun, Hongyang},
+  journal = {Journal of Parallel and Distributed Computing},
+  volume = {98},
+  pages = {8--24},
+  year = {2016},
+  publisher = {Elsevier}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          subasi2016run
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsesubasi2016runBibtex" aria-expanded="false" aria-controls="collapsesubasi2016runBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsesubasi2016runAbstract" aria-expanded="false" aria-controls="collapsesubasi2016runAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="subasi2016run">Subasi, Omer, Gulay Yalcin, Ferad Zyulkyarov, Osman Unsal, and Jesus Labarta. 2016. “A Runtime Heuristic to Selectively Replicate Tasks for Application-Specific Reliability Targets.” In <i>2016 IEEE International Conference On Cluster Computing (CLUSTER’16)</i>, 498–505. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsesubasi2016runBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{subasi2016run,
+  title = {A runtime heuristic to selectively replicate tasks for application-specific reliability targets},
+  author = {Subasi, Omer and Yalcin, Gulay and Zyulkyarov, Ferad and Unsal, Osman and Labarta, Jesus},
+  booktitle = {2016 IEEE International Conference on Cluster Computing (CLUSTER'16)},
+  pages = {498--505},
+  year = {2016},
+  organization = {IEEE}
 }
 </code></pre>
       </div>
@@ -438,6 +558,47 @@ languages <a href="#subasi2016run">(Subasi et al. 2016)</a>.</p>
   
 </div>
 </li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          di2015detect
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsedi2015detectBibtex" aria-expanded="false" aria-controls="collapsedi2015detectBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsedi2015detectAbstract" aria-expanded="false" aria-controls="collapsedi2015detectAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="di2015detect">Di, Sheng, Eduardo Berrocal, and Franck Cappello. 2015. “An Efficient Silent Data Corruption Detection Method with Error-Feedback Control and Even Sampling for HPC Applications.” In <i>2015 IEEE/ACM International Symposium On Cluster, Cloud and Grid Computing (CCGrid’15)</i>, 271–80. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsedi2015detectBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{di2015detect,
+  title = {An efficient silent data corruption detection method with error-feedback control and even sampling for HPC applications},
+  author = {Di, Sheng and Berrocal, Eduardo and Cappello, Franck},
+  booktitle = {2015 IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid'15)},
+  pages = {271--280},
+  year = {2015},
+  organization = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 </ol>
 
 <h2 id="future-plans">
@@ -451,89 +612,7 @@ projects within the JLESC.</p>
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
 
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
-    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
-      <div class="row">
-        <div class="col-md-12 ref-label tag tag-default">
-          subasi2017rep
-        </div>
-      </div>
-      <div class="row">
-        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsesubasi2017repBibtex" aria-expanded="false" aria-controls="collapsesubasi2017repBibtex">
-          BibTeX
-        </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsesubasi2017repAbstract" aria-expanded="false" aria-controls="collapsesubasi2017repAbstract">
-          Abstract
-        </button>
-      </div>
-    </div>
-
-    <div class="bibtex-ref-entry">
-      <span id="subasi2017rep">Subasi, Omer, Gulay Yalcin, Ferad Zyulkyarov, Osman Unsal, and Jesus Labarta. 2017. “Designing And Modelling Selective Replication for Fault-Tolerant HPC Applications.” In <i>Cluster Cloud And Grid Computing (CLUSTER), 2017 IEEE International Conference On</i>. IEEE.</span>
-    </div>
-  </div>
-  <div class="collapse" id="collapsesubasi2017repBibtex">
-    <div class="row bibtex-ref-raw">
-      <div class="col-sm-10 offset-sm-1">
-        <pre><code>@inproceedings{subasi2017rep,
-  title = {Designing and Modelling Selective Replication for Fault-tolerant HPC Applications},
-  author = {Subasi, Omer and Yalcin, Gulay and Zyulkyarov, Ferad and Unsal, Osman and Labarta, Jesus},
-  booktitle = {Cluster Cloud and Grid Computing (CLUSTER), 2017 IEEE International Conference on},
-  year = {2017},
-  organization = {IEEE}
-}
-</code></pre>
-      </div>
-    </div>
-  </div>
-  
-</div>
-</li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
-    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
-      <div class="row">
-        <div class="col-md-12 ref-label tag tag-default">
-          subasi2016run
-        </div>
-      </div>
-      <div class="row">
-        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsesubasi2016runBibtex" aria-expanded="false" aria-controls="collapsesubasi2016runBibtex">
-          BibTeX
-        </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsesubasi2016runAbstract" aria-expanded="false" aria-controls="collapsesubasi2016runAbstract">
-          Abstract
-        </button>
-      </div>
-    </div>
-
-    <div class="bibtex-ref-entry">
-      <span id="subasi2016run">———. 2016. “A Runtime Heuristic to Selectively Replicate Tasks for Application-Specific Reliability Targets.” In <i>Cluster Computing (CLUSTER), 2016 IEEE International Conference On</i>, 498–505. IEEE.</span>
-    </div>
-  </div>
-  <div class="collapse" id="collapsesubasi2016runBibtex">
-    <div class="row bibtex-ref-raw">
-      <div class="col-sm-10 offset-sm-1">
-        <pre><code>@inproceedings{subasi2016run,
-  title = {A runtime heuristic to selectively replicate tasks for application-specific reliability targets},
-  author = {Subasi, Omer and Yalcin, Gulay and Zyulkyarov, Ferad and Unsal, Osman and Labarta, Jesus},
-  booktitle = {Cluster Computing (CLUSTER), 2016 IEEE International Conference on},
-  pages = {498--505},
-  year = {2016},
-  organization = {IEEE}
-}
-</code></pre>
-      </div>
-    </div>
-  </div>
-  
-</div>
-</li>
-</ol>
+<ol class="bibliography"></ol>
 
       </div>
     </div>
