@@ -15,6 +15,7 @@ members:
   - cheriere_n
   - ross_r
   - antoniu_g
+  - ibrahim_s
 ---
 
 ## Research topic and goals
