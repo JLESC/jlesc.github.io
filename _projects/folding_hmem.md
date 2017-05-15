@@ -26,6 +26,9 @@ We are extending the research on data distribution and partitioning for heteroge
 We also analyze the potential of a runtime support for heterogeneous memory systems. Profiling can be used to find the optimal data distribution, but it is limited to the system configuration.  Runtime support may be helpful if highly accessed objects are not fitting to the fastest available memory layer and therefore must be allocated in a slower memory region.  Here, efficient prefetching between the slow memory layer and a software-managed fast memory cache may be helpful.
 
 
+## Results for 2016/2017
+We are following separate paths until we get ready to combine our research. ANL has been working in programming models, whereas BSC has been working in the underlying tools.
+
 ## Results for 2015/2016
 So far we have:
 
@@ -43,7 +46,7 @@ Our emulation shows that, in the case highly accessed objects are not fitting in
 Frequent teleconferences and e-mail exchanges. No planned visits yet. {% person pena_a %} moved from Argonne to BSC.
 
 ## Impact and publications
-We are writing a paper and seeking further funding.
+We are writing separate papers.
 
 {% bibliography --cited --file jlesc.bib %}
 
