@@ -120,8 +120,11 @@ for experimentations to validate the contributions of this JLESC collaboration.
 ## Results for 2015/2016
 We have results with an armed-bandid approach, which tries to select the I/O scheduler based on a probability-guided approach. The results are better than the original OrangeFS behaviour. This approach was used to see if AGIOS and the workloads are working with changes of the scheduler every 5 seconds (i.e.). 
 
+## Results for 2017
+No work has been conducted on the project on 2017.
+
 ## Visits and meetings
-Email interaction.
+Email interaction. Meetings in JLESC'16 at Kobe.
 
 ## Impact and publications
 None yet.
@@ -155,38 +158,23 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 ## Person-Month efforts in 2015/2016
 
-{% comment %}
-=========================================
-== ADD A TABLE OF PERSON-MONTH EFFORTS ==
+{:.person-months-table.table.table-bordered.table-hover.table-sm}
+| {% person zanon_f %} | 12.0 PM |
+| {% person nou_r %} | 12.0 PM |
 
-Put it in the following form, each person on its own line
-
-| {% person PERSON_ID %} | X.Y PM |
-
-e.g.:
-
-| {% person kabadshow_i %} | 2.0 PM |
-
-Above the very first person put the following line:
+## Person-Month efforts in 2017
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
-
-==================================
-== START HERE ==
-{% endcomment %}
-
+| {% person zanon_f %} | 1 PM |
+| {% person nou_r %} | 1 PM |
 
 ## Future plans
 As the results are promising the next steps are to put the pattern matching or similar algorithm to learn about the running workload and try to select the best expected scheduler for the next period. 
 
+The project has very low interaction during 2017, but it is not cancelled
+
 ## References
 
-{% comment %}
-=================
-=== IMPORTANT ===
-=================
 
-Replace 'YOUR_BIBTEX_FILE_NAME_HERE' with the name of the BibTeX file with the external references!
-{% endcomment %}
 
 {% bibliography --file external/automatic_scheduler_project.bib %}
