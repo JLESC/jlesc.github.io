@@ -121,10 +121,11 @@ for experimentations to validate the contributions of this JLESC collaboration.
 We have results with an armed-bandid approach, which tries to select the I/O scheduler based on a probability-guided approach. The results are better than the original OrangeFS behaviour. This approach was used to see if AGIOS and the workloads are working with changes of the scheduler every 5 seconds (i.e.). 
 
 ## Results for 2017
-No work has been conducted on the project on 2017.
+We have some new results, but the progress is slow due to the lack of personnel.
 
 ## Visits and meetings
 Email interaction. Meetings in JLESC'16 at Kobe.
+Telco to discuss new results.
 
 ## Impact and publications
 None yet.
@@ -165,13 +166,13 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 ## Person-Month efforts in 2017
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person zanon_f %} | 1 PM |
-| {% person nou_r %} | 1 PM |
+| {% person zanon_f %} | 6 PM |
+| {% person nou_r %} | 6 PM |
 
 ## Future plans
 As the results are promising the next steps are to put the pattern matching or similar algorithm to learn about the running workload and try to select the best expected scheduler for the next period. 
 
-The project has very low interaction during 2017, but it is not cancelled
+The project has very low interaction and progress during 2017, but it is not cancelled.
 
 ## References
 
