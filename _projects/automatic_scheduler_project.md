@@ -122,6 +122,13 @@ We have results with an armed-bandid approach, which tries to select the I/O sch
 
 ## Results for 2017
 We have some new results, but the progress is slow due to the lack of personnel.
+Key points: 
+* Armed bandit implementation, with a 4s window, show a 15% of performance improvement over OrangeFS original scheduler.
+* We analyzed MPI-IO Test benchmark with different patterns, request size, and processes.
+* We provided 120 executions to the DTW pattern matching mechanism from IOAnalyzer.
+* The precision of the match goes from 0.65 to 0.8, depending on the DTW threshold selected.
+* The executions using different orders, provide a right prediction rate over 0.75.
+* We also predict the next pattern, the results show that the prediction is 70% right.
 
 ## Visits and meetings
 Email interaction. Meetings in JLESC'16 at Kobe.
@@ -160,14 +167,14 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 ## Person-Month efforts in 2015/2016
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person zanon_f %} | 12.0 PM |
-| {% person nou_r %} | 12.0 PM |
+| {% person zanon_f %} | 6.0 PM |
+| {% person nou_r %} | 6.0 PM |
 
 ## Person-Month efforts in 2017
 
 {:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person zanon_f %} | 6 PM |
-| {% person nou_r %} | 6 PM |
+| {% person zanon_f %} | 3 PM |
+| {% person nou_r %} | 3 PM |
 
 ## Future plans
 As the results are promising the next steps are to put the pattern matching or similar algorithm to learn about the running workload and try to select the best expected scheduler for the next period. 
