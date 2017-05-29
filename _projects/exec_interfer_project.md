@@ -33,12 +33,27 @@ unique and multiple-purpose network.
 ## Results for 2015/2016
 
 Blue~Waters's network topology makes scheduling at the machine's scale a real challenge {% cite EnosJ2014Topology --file external/exec_interfer_project.bib %}. 
-We studied the execution of jobs on Blue~Waters, and derived a generic model of such machines {% cite BleuseR2016Scheduling --file jlesc.bib %}.
+We studied the execution of jobs on Blue~Waters, and derived a generic model of such machines {% cite BleuseR2017Scheduling --file jlesc.bib %}.
 For example, the new topologies are built using local heterarchic (contrary of hierarchical) networks that are interconnected by a low depth hierarchy {% cite BestaM2014Slim --file external/exec_interfer_project.bib %}, {% cite TuncerO2015PaC --file external/exec_interfer_project.bib %}.
 The constraints arise from the distribution of the heterogeneous nodes within the topology.
 Heterogeneity may come from various architecture of computing nodes, or mixed workloads of computing and analysis, or nodes dedicated to I/O.
 We do not take such constraints into account in a quantitative manner.
 We rather translate these constraints in geometric properties: allocations have to be convex (in order to limit interferences between different jobs), or need to embed specific designated nodes.
+
+## Results for 2016/2017
+
+The model proposed last year has been welcomed with interest by the scheduling
+community.
+The convexity constraint (with respect to the underlying network topology)
+allows to tackle some interferences.
+Constraining applications to be allocated near the I/O nodes they are using
+might be a way to completely remove interferences.
+
+We refined the model, by precising geometric constraints/metrics of interest:
+contiguity, convexity, compacity, proximity, and locality {% cite XXX %}.
+We studied the algorithmic complexity of various instantiations (notably
+enforcing convexity and locality constraints at the same time).
+We proposed fast approximation algorithm for these instantiations.
 
 ## Visits and meetings
 
@@ -52,13 +67,16 @@ We rather translate these constraints in geometric properties: allocations have 
 
 ## Future plans
 
-The model detailed above has been welcomed with interest by the scheduling community.
-We identified two ideas we would like to explore.
-The interleaved flows hinder the overall performances of the applications.
-The convexity constraint (with respect to the underlying network topology) allows to tackle some interferences.
-Furthermore, constraining applications to be allocated near the I/O nodes they are using might be a way to completely remove interferences.
-Which strategy can be used to enforce such constraints at a reasonable cost?
-What is the impact of such constraints on machines' utilization?
+Some simple instantiations of the model have been studied.
+The next step is to study, by simulation with traces of Blue~Waters, how these
+algorithms behave at scale: what is the cost of enforcing these constraints?
+While the algorithms studied so far have proven performance guarantees in worst
+case, we are interested in studying fast heuristics, and comparing them to the
+guaranteed algorithms.
+
+The convexity constraint might be a too strong constraint when combined with
+the locality constraint: how can we relax the convexity constraint while
+keeping good properties?
 
 On the other hand, given a requested amount of computing nodes, many convex shapes are valid allocations.
 We are interested in studying how to choose a shape in order to better exploit the machines.
