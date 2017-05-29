@@ -49,7 +49,7 @@ Jon Calhoun did an internship of 11 weeks at ANL.
 
 ## Impact and publications
 None yet.
-\cite{Calhoun17}
+{% cite Calhoun17 --file jlesc.bib %}
 
 ## Future plans
 
