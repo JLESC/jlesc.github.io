@@ -178,6 +178,7 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -201,12 +202,28 @@ unique and multiple-purpose network.</p>
 <a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
 
 <p>Blue~Waters’s network topology makes scheduling at the machine’s scale a real challenge <a href="#EnosJ2014Topology">(Enos et al. 2014)</a>. 
-We studied the execution of jobs on Blue~Waters, and derived a generic model of such machines <a href="#BleuseR2016Scheduling">(Bleuse et al. 2016)</a>.
+We studied the execution of jobs on Blue~Waters, and derived a generic model of such machines <a href="#BleuseR2017Scheduling">(Bleuse et al. 2017)</a>.
 For example, the new topologies are built using local heterarchic (contrary of hierarchical) networks that are interconnected by a low depth hierarchy <a href="#BestaM2014Slim">(Besta and Hoefler 2014)</a>, <a href="#TuncerO2015PaC">(Tuncer, Leung, and Coskun 2015)</a>.
 The constraints arise from the distribution of the heterogeneous nodes within the topology.
 Heterogeneity may come from various architecture of computing nodes, or mixed workloads of computing and analysis, or nodes dedicated to I/O.
 We do not take such constraints into account in a quantitative manner.
 We rather translate these constraints in geometric properties: allocations have to be convex (in order to limit interferences between different jobs), or need to embed specific designated nodes.</p>
+
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+
+<p>The model proposed last year has been welcomed with interest by the scheduling
+community.
+The convexity constraint (with respect to the underlying network topology)
+allows to tackle some interferences.
+Constraining applications to be allocated near the I/O nodes they are using
+might be a way to completely remove interferences.</p>
+
+<p>We refined the model, by precising geometric constraints/metrics of interest:
+contiguity, convexity, compacity, proximity, and locality (missing reference).
+We studied the algorithmic complexity of various instantiations (notably
+enforcing convexity and locality constraints at the same time).
+We proposed fast approximation algorithm for these instantiations.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -222,32 +239,41 @@ We rather translate these constraints in geometric properties: allocations have 
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
-          BleuseR2016Scheduling
+          BleuseR2017Scheduling
         </div>
       </div>
       <div class="row">
-        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBleuseR2016SchedulingBibtex" aria-expanded="false" aria-controls="collapseBleuseR2016SchedulingBibtex">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBleuseR2017SchedulingBibtex" aria-expanded="false" aria-controls="collapseBleuseR2017SchedulingBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBleuseR2016SchedulingAbstract" aria-expanded="false" aria-controls="collapseBleuseR2016SchedulingAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBleuseR2017SchedulingAbstract" aria-expanded="false" aria-controls="collapseBleuseR2017SchedulingAbstract">
           Abstract
         </button>
       </div>
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="BleuseR2016Scheduling">Bleuse, Raphal, Sascha Hunold, Safia Kedad-Sidhoum, Florence Monna, Gregory Mounie, and Denis Trystram. 2016. “Scheduling Independent Moldable Tasks On Multi-Cores with GPUs.” <i>Manuscript Submitted for Publication</i>.</span>
+      <span id="BleuseR2017Scheduling">Bleuse, Raphaël, Sascha Hunold, Safia Kedad-Sidhoum, Florence Monna, Grégory Mounié, and Denis Trystram. 2017. “Scheduling Independent Moldable Tasks On Multi-Cores
+	       with GPUs.” <i>IEEE Transactions On Parallel and Distributed Systems</i>. IEEE. doi:10.1109/TPDS.2017.2675891.</span>
     </div>
   </div>
-  <div class="collapse" id="collapseBleuseR2016SchedulingBibtex">
+  <div class="collapse" id="collapseBleuseR2017SchedulingBibtex">
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
-        <pre><code>@article{BleuseR2016Scheduling,
-  author = {Bleuse, Raphal and Hunold, Sascha and Kedad-Sidhoum, Safia and Monna, Florence and Mounie, Gregory and Trystram, Denis},
-  title = {{Scheduling Independent Moldable Tasks on Multi-Cores with GPUs}},
-  journal = {{Manuscript submitted for publication}},
-  year = {2016},
-  keywords = {own}
+        <pre><code>@article{BleuseR2017Scheduling,
+  note = {in print},
+  author = {Bleuse, Rapha{\"{e}}l and Hunold, Sascha and Kedad{-}Sidhoum, Safia and Monna, Florence and Mouni{\'{e}}, Gr{\'{e}}gory and Trystram, Denis},
+  title = {{S}cheduling {I}ndependent {Moldable} {T}asks on {M}ulti-{C}ores
+  	       with {GPU}s},
+  journal = {IEEE Transactions on Parallel and Distributed Systems},
+  volume = {},
+  number = {},
+  pages = {},
+  year = {2017},
+  doi = {10.1109/TPDS.2017.2675891},
+  publisher = {IEEE},
+  issn = {1045-9219},
+  language = english
 }
 </code></pre>
       </div>
@@ -260,13 +286,16 @@ We rather translate these constraints in geometric properties: allocations have 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>The model detailed above has been welcomed with interest by the scheduling community.
-We identified two ideas we would like to explore.
-The interleaved flows hinder the overall performances of the applications.
-The convexity constraint (with respect to the underlying network topology) allows to tackle some interferences.
-Furthermore, constraining applications to be allocated near the I/O nodes they are using might be a way to completely remove interferences.
-Which strategy can be used to enforce such constraints at a reasonable cost?
-What is the impact of such constraints on machines’ utilization?</p>
+<p>Some simple instantiations of the model have been studied.
+The next step is to study, by simulation with traces of Blue~Waters, how these
+algorithms behave at scale: what is the cost of enforcing these constraints?
+While the algorithms studied so far have proven performance guarantees in worst
+case, we are interested in studying fast heuristics, and comparing them to the
+guaranteed algorithms.</p>
+
+<p>The convexity constraint might be a too strong constraint when combined with
+the locality constraint: how can we relax the convexity constraint while
+keeping good properties?</p>
 
 <p>On the other hand, given a requested amount of computing nodes, many convex shapes are valid allocations.
 We are interested in studying how to choose a shape in order to better exploit the machines.
