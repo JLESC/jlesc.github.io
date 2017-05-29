@@ -7,7 +7,7 @@ navbar: Research
 subnavbar: Projects
 footer: true
 project_url:
-status: running
+status: suspended
 topics:
   - prog_lang
 keywords:
