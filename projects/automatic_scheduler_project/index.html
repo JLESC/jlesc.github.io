@@ -174,9 +174,9 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#person-month-efforts-in-20152016">Person-Month efforts in 2015/2016</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
 </ul>
@@ -184,8 +184,7 @@
       </aside>
       <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
         
-        
-<h2 id="research-topic-and-goals">
+        <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 <p>This short proposal describes an ongoing research collaboration
 between researchers from the Barcelona Supercomputing Center (BSC) and
@@ -226,9 +225,21 @@ for experimentations to validate the contributions of this JLESC collaboration.<
 <a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
 <p>We have results with an armed-bandid approach, which tries to select the I/O scheduler based on a probability-guided approach. The results are better than the original OrangeFS behaviour. This approach was used to see if AGIOS and the workloads are working with changes of the scheduler every 5 seconds (i.e.).</p>
 
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+<p>We have some new results, but the progress is slow due to the lack of personnel.
+Key points: 
+* Armed bandit implementation, with a 4s window, show a 15% of performance improvement over OrangeFS original scheduler.
+* We analyzed MPI-IO Test benchmark with different patterns, request size, and processes.
+* We provided 120 executions to the DTW pattern matching mechanism from IOAnalyzer.
+* The precision of the match goes from 0.65 to 0.8, depending on the DTW threshold selected.
+* The executions using different orders, provide a right prediction rate over 0.75.
+* We also predict the next pattern, the results show that the prediction is 70% right.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
-<p>Email interaction.</p>
+<p>Email interaction. Meetings in JLESC’16 at Kobe.
+Telco to discuss new results.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -244,12 +255,23 @@ for experimentations to validate the contributions of this JLESC collaboration.<
 
 <ol class="bibliography"></ol>
 
-<h2 id="person-month-efforts-in-20152016">
-<a id="person-month-efforts-in-20152016" class="anchor" href="#person-month-efforts-in-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person-Month efforts in 2015/2016</h2>
+<!-- ## Person-Month efforts in 2015/2016
+
+{:.person-months-table.table.table-bordered.table-hover.table-sm}
+| <span class="person given-name">Francieli</span> <span class="person sur-name">Zanon Boito</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) | 6.0 PM |
+| <span class="person given-name">Ramon</span> <span class="person sur-name">Nou</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) | 6.0 PM |
+
+## Person-Month efforts in 2017
+
+{:.person-months-table.table.table-bordered.table-hover.table-sm}
+| <span class="person given-name">Francieli</span> <span class="person sur-name">Zanon Boito</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) | 3 PM |
+| <span class="person given-name">Ramon</span> <span class="person sur-name">Nou</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) | 3 PM | -->
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 <p>As the results are promising the next steps are to put the pattern matching or similar algorithm to learn about the running workload and try to select the best expected scheduler for the next period.</p>
+
+<p>The project has very low interaction and progress during 2017, but it is not cancelled.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
