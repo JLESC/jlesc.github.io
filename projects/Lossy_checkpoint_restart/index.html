@@ -148,7 +148,7 @@
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
       <div class="col-sm-8">
-        <span class="project-status project-status-starting">starting</span>
+        <span class="project-status project-status-running">running</span>
       </div>
     </li>
     
@@ -161,6 +161,7 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -189,21 +190,69 @@ They already reveal two interesting points/First, checkpoints are composed of di
 
 <p>From our observations of restart from lossy checkpoints in dynamic simulations, we have observed that diffusion and advection problems are reacting differently. We are currently characterizing and formalizing this difference. We suspect that lossyness may be increased as the execution progresses: restarting from a lossy checkpoint near the beginning of the execution seems to affect much more the end results compared with restarting from a lossy checkpoint near the end of the execution. Moreover, we note that in a given variable field, some regions of the field are more chaotic than others. Some applications may not tolerate lossy compression on the entire field. But we suspect that they may tolerate lossy compression in the nonchaotic regions of the variable field.</p>
 
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+
+<p>We particularly explored an important problem: how to bound the impact of  restarting from lossy checkpoint and guarantee that this impact does not affect the application result quality. To address this problem, we established a link between the compression error and the numerical error of the application. Applications using numerical methods suffer errors from truncation and discretization. We showed that compressing checkpoint with an error lower than the numerical errors allow to reserve the quality of the application results. We also demonstrated empirically that the error introduced by restarting from lossy checkpoint can be bounded.</p>
+
+<p>Other researchers will be able to exploit the link we established between the compression error and the numerical errors to design better compression algorithms and numerical methods that tolerate better compression errors.</p>
+
+<p>An important impact of this work on other disciplines that are using numerical simulation is that they can use lossy compression for checkpoint/restart since we established and verified guidance to fix the compression error that guarantee the quality of the numerical results.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.</p>
+<p>Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.
+Jon Calhoun did an internship of 11 weeks at ANL.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
-<p>None yet.</p>
-<ol class="bibliography"></ol>
+<p><a href="#Calhoun17">(Calhoun et al.)</a></p>
+<ol class="bibliography"><li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Calhoun17
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCalhoun17Bibtex" aria-expanded="false" aria-controls="collapseCalhoun17Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCalhoun17Abstract" aria-expanded="false" aria-controls="collapseCalhoun17Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Calhoun17">Calhoun, Jon, Franck Cappello, Luke Olson, Marc Snir, and William Gropp. “Exploring The Feasibility of Lossy Compression for PDE Simulations.”</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCalhoun17Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@unpublished{Calhoun17,
+  author = {Calhoun, Jon and Cappello, Franck and Olson, Luke and Snir, Marc and Gropp, William},
+  note = {},
+  numpages = {12},
+  title = {Exploring the Feasibility of Lossy Compression for PDE Simulations},
+  year = {(Submitted) 2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>Jon Calhoun will spend the summer at ANL with Franck Cappello for an internship.
-A paper is in preparation for a submission in a conference with a deadline in the 1/2 half of 2016.</p>
+<p>We still need to make a formal link between the numerical and compression errors.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
