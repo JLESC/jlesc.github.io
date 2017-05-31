@@ -33,12 +33,12 @@ If a classical mesh partitioning based on the balancing of the number of element
 In this project we aim at implementing the Pampa library in Alya in order to redistribute the elements among the MPI processes
 in order to dynamically balance the computation of particle transport.
 
-## Results for 2016/2017
-Initially, bridges from Alya to Pampa and Pampa to Alya were created. To do so, the data structures of Alya were adapted to Pampa's data structures. In fact, the parallelization strategy of Alya is based on a partition into disjoint element sets, where interface nodes on the interfaces are duplicated. Thus, Alya does not require halos. However, Pampa was based on disjoint sets of nodes, which made the interface between the two codes a bit complex and heavy to manage. As the Alya data structure is quite common in the finite element community, we decided it was more convenient to adapt Pampa to this format. This work has been carried out in the first months of this year and is now being tested in Alya.
-
 ## Results for 2015/2016
 The work have just started. 
 The data structure required by Pampa was coded in Alya and Pampa was interfaced with Alya.
+
+## Results for 2016/2017
+Initially, bridges from Alya to Pampa and Pampa to Alya were created. To do so, the data structures of Alya were adapted to Pampa's data structures. In fact, the parallelization strategy of Alya is based on a partition into disjoint element sets, where interface nodes on the interfaces are duplicated. Thus, Alya does not require halos. However, Pampa was based on disjoint sets of nodes, which made the interface between the two codes a bit complex and heavy to manage. As the Alya data structure is quite common in the finite element community, we decided it was more convenient to adapt Pampa to this format. This work has been carried out in the first months of this year and is now being tested in Alya.
 
 ## Visits and meetings
 
