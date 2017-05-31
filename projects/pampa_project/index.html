@@ -169,7 +169,7 @@
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
       <div class="col-sm-8">
-        <span class="project-status project-status-starting">starting</span>
+        <span class="project-status project-status-running">running</span>
       </div>
     </li>
     
@@ -182,6 +182,7 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -208,6 +209,10 @@ in order to dynamically balance the computation of particle transport.</p>
 <p>The work have just started. 
 The data structure required by Pampa was coded in Alya and Pampa was interfaced with Alya.</p>
 
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+<p>Initially, bridges from Alya to Pampa and Pampa to Alya were created. To do so, the data structures of Alya were adapted to Pampa’s data structures. In fact, the parallelization strategy of Alya is based on a partition into disjoint element sets, where interface nodes on the interfaces are duplicated. Thus, Alya does not require halos. However, Pampa was based on disjoint sets of nodes, which made the interface between the two codes a bit complex and heavy to manage. As the Alya data structure is quite common in the finite element community, we decided it was more convenient to adapt Pampa to this format. This work has been carried out in the first months of this year and is now being tested in Alya.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -216,7 +221,8 @@ The data structure required by Pampa was coded in Alya and Pampa was interfaced 
 <span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) and <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 14-15 Oct. 2016.</li>
   <li>
 <span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) and <span class="person given-name">Vishal</span> <span class="person sur-name">Mehta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 24-26 Feb. 2016.</li>
-  <li>Visit of <span class="person given-name">Cédric</span> <span class="person sur-name">Lachat</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) and <span class="person given-name">Emmanuel</span> <span class="person sur-name">Jeannot</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) at BSC forecast for spring.</li>
+  <li>
+<span class="person given-name">Cédric</span> <span class="person sur-name">Lachat</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) met BSC team at Barcelona, 7-9- Dec. 2016.</li>
 </ul>
 
 <h2 id="impact-and-publications">
