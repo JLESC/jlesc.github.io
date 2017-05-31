@@ -14,7 +14,6 @@ keywords:
 head: hovland_p
 members: 
   - hascoet_l
-  - hovland_p 
   - narayanan_s
 ---
 
