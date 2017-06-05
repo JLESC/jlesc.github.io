@@ -170,6 +170,7 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -183,19 +184,18 @@
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
 <p>The focus of this collaboration is on the development of topology-aware sparse solvers at extreme
-scales. In this first phase we have made some initial steps in forming a communications
-model and formalizing the project with INRIA.
+scales. The first phase made some initial steps in forming a communications
+model.
 Communication costs dominate most sparse solvers leading to sharp strong scaling limitations.
 The specific topology of the computation plays an important role in these costs and current sparse
 solvers do not take this into account — e.g. algebraic multigrid. Since algebraic methods only approximate
 a solution, there is an opportunity to reduce communication costs by limiting algebraic
-decisions to efficient paths in the topology.
+decisions to efficient paths in the topology.  Moreover, aggregating node-level communication can lead to additional performance gains.
 The primary goal is to develop solvers in this direction. The partnership between Illinois and
 INRIA through the JointLab will directly enhance this effort.</p>
 
 <p>The project involves Illinois graduate student Amanda Bienz, Illinois professors Bill Gropp
-and Luke Olson, and INRIA professor Laura Grigori. Amanda Bienz presented initial results at
-the Copper Mountain Conference on Multigrid Methods in March 2015. The work highlighted
+and Luke Olson, and INRIA professor Laura Grigori. The work has highlighted
 several aspects in moving toward topology-based algorithm decisions. Here, we investigated the
 communication overhead of an algebraic multigrid method at scale, where coarse grids push the
 strong scaling limit and exhibit irregular memory access patterns. As a result, high communication
@@ -214,10 +214,12 @@ asynchronous SpMV operation that was presented at Supercomputing15 in November
 2015 as well as the Copper Mountain Conference on Iterative Methods in March
 2016.</p>
 
-<p>The next steps of the collaboration include incorporating the sparsification
-strategies that we have developed for algebraic multigrid (AMG) into low-rank
-preconditioners.  To this end, we are also focussed on developed topology-based
-decisions into the sparsification process.</p>
+<h2 id="results-for-20162017">
+<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+
+<p>The work was extended to aggregate communication at on the nodes and was presented at SC16 and at Copper Multigrid 2017.</p>
+
+<p>The next steps of the collaboration will look at adding pushing the topology aware process to sparse algorithms at INRIA.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -226,12 +228,12 @@ decisions into the sparsification process.</p>
 
 <p>Completed: JointLab Meeting in Bonn, December 2015.</p>
 
-<p>Planned: Amanda Bienz visit to INRIA, Spring 2016 for 4 months</p>
+<p>Completed: Amanda Bienz visit to INRIA, Spring 2016 for 4 months.</p>
+
+<p>Planned: JointLab Meeting in Champaign, July 2017.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
-
-<p>None yet.</p>
 
 <ol class="bibliography"></ol>
 
@@ -239,15 +241,97 @@ decisions into the sparsification process.</p>
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
 <p>Going forward, we have outlined a plan to work with a broader collection of
-sparse solvers by collaborating with the expertise at INRIA. Amanda Bienz will
-be supported through the NSF Grow project for a four-month visit to INRIA to
-work with Grigori and others on these topics.   We continue to anticipate
-meeting again at SIAM PP in Paris as well as the Joint Lab meeting in Lyon.</p>
+sparse solvers by collaborating with the expertise at INRIA.  We continue to anticipate
+meetings at the upcoming Joint Lab meetings.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
 
-<ol class="bibliography"></ol>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BienzEtAl2017
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBienzEtAl2017Bibtex" aria-expanded="false" aria-controls="collapseBienzEtAl2017Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBienzEtAl2017Abstract" aria-expanded="false" aria-controls="collapseBienzEtAl2017Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BienzEtAl2017">Bienz, Amanda, William D. Gropp, and Luke N. Olson. 2017. “TAPSpMV: Topology-Aware Parallel Sparse Matrix Vector Multiplication.” <i>SIAM Journal On Scientific Computing</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBienzEtAl2017Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{BienzEtAl2017,
+  author = {Bienz, Amanda and Gropp, William D. and Olson, Luke N.},
+  journal = {SIAM Journal on Scientific Computing},
+  notes = {submitted},
+  title = {TAPSpMV: Topology-Aware Parallel Sparse Matrix Vector Multiplication},
+  year = {2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BienzEtAl2016
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBienzEtAl2016Bibtex" aria-expanded="false" aria-controls="collapseBienzEtAl2016Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBienzEtAl2016Abstract" aria-expanded="false" aria-controls="collapseBienzEtAl2016Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BienzEtAl2016">Bienz, Amanda, Robert D. Falgout, William Gropp, Luke N. Olson, and Jacob B. Schroder. 2016. “Reducing Parallel Communication In Algebraic Multigrid through Sparsification.” <i>SIAM Journal On Scientific Computing</i> 38 (5): S332–S357. doi:10.1137/15M1026341.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBienzEtAl2016Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{BienzEtAl2016,
+  author = {Bienz, Amanda and Falgout, Robert D. and Gropp, William and Olson, Luke N. and Schroder, Jacob B.},
+  doi = {10.1137/15M1026341},
+  journal = {SIAM Journal on Scientific Computing},
+  number = {5},
+  pages = {S332-S357},
+  title = {Reducing Parallel Communication in Algebraic Multigrid through Sparsification},
+  volume = {38},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
 
       </div>
     </div>
