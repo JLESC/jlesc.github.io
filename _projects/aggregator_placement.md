@@ -43,7 +43,7 @@ A preliminary implementation is being developed in a cosmology code called HACC 
 ## Results for 2016/2017
 We have taken into account the network topology for mapping aggregators and we propose an optimized buffering system in order to reduce the aggregation cost. 
 We have validated our approach using micro-benchmarks and the I/O kernel of a large-scale cosmology simulation.
-We have showed improvements up to 15× faster for I/O operations compared to a standard implementation of MPI I/O.
+We have showed improvements up to 15x faster for I/O operations compared to a standard implementation of MPI I/O.
 
 
 ## Visits and meetings
