@@ -466,6 +466,16 @@ dawson_w:
   email: william.dawson@riken.jp
   homepage: 
 
+delamare_s:
+  sur_name: Delamare
+  given_name: Simon
+  affiliation: inria
+  position: permanent
+  topics:
+  email: Simon Delamare <simon.delamare@ens-lyon.fr>
+  homepage: 
+
+
 denis_a:
   sur_name: Denis
   given_name: Alexandre
@@ -1145,6 +1155,15 @@ lopez_v:
   topics: 
   email: victor.lopez@bsc.es
   homepage: https://www.bsc.es/lopez-herrero-victor
+
+loup_d:
+  sur_name: Loup
+  given_name: David
+  affiliation: inria
+  position: 
+  topics: 
+  email: David Loup <david.loup@inria.fr>
+  homepage: 
 
 lucarelli_g:
   sur_name: Lucarelli
