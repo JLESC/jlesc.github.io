@@ -12,7 +12,7 @@ topics:
 keywords:
   - Experimentation platforms
   - Chameleon
-  - Grid'5000q
+  - Grid'5000
 head: keahey_k
 members:
   - loup_d
