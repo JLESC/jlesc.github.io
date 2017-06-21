@@ -1399,6 +1399,15 @@ nou_r:
   email: ramon.nou@bsc.es
   homepage: http://personals.ac.upc.edu/rnou/
 
+nussbaum_l:
+  sur_name: Nussbaum
+  given_name: Lucas
+  position: permanent
+  affiliation: inria
+  topics: experimentation, testbeds, reproducible research
+  email: lucas.nussbaum@loria.fr
+  homepage : http://members.loria.fr/lnussbaum
+  
 o-tani_h:
   sur_name: O-tani
   given_name: Hideyuki

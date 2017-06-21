@@ -1,6 +1,6 @@
 ---
 layout: page_project
-title: Toward Interoperability between Chameleon and Grid'5000 experimentation platforms
+title: Advancing Chameleon and Grid'5000 testbeds
 date: 2017-06-07
 updated: 
 navbar: Research
@@ -10,6 +10,7 @@ status: running
 topics:
   - architectures
 keywords:
+  - Testbeds
   - Experimentation platforms
   - Chameleon
   - Grid'5000
@@ -17,12 +18,13 @@ head: keahey_k
 members:
   - loup_d
   - delamare_s
+  - nussbaum_l
   - perez_c
 ---
 
 ## Research topic and goals
-The aim of this project is to develop building blocks toward interoperability between Chameleon (ANL) and
-Grid'5000 (Inria) experimentation platforms.
+The aim of this project is to improve Chameleon (ANL) and
+Grid'5000 (Inria) testbeds, in particular with respect to interoperability and interconnection.
 
 Chameleon and Grid'5000 testbeds have proven their relevance to conduct
 experiments involving large scale distributed computing systems. However, those
@@ -68,7 +70,11 @@ This makes it easier for users to deploy the same environment on Grid'5000 and C
 ## Future plans
 The results of this project should be compared to Enos performance.
 Depending on the performance and ease to use of each solution, the official "supported" way to deploy Openstack on Chameleon will be either Devstack, Puppet, or Enos.
-It is likely that Chameleon and Grid'5000 will converge to the same solution, reducing maintenance costs for both platforms and easing cross experimentation for their users
+It is likely that Chameleon and Grid'5000 will converge to the same solution, reducing maintenance costs for both platforms and easing cross experimentation for their users.
+
+Another challenge for future work is the data-plane federation of both testbeds, to enable experiments spanning both testbeds in a
+controlled networking environment. We will explore how to achieve that by interconnecting both testbeds to Internet Software Defined eXchange
+points (SDX), which would allow us to provide on-demand Level-2 link stitching, to provide per-experiment overlays.
 
 ## References
 {% bibliography --file external/interop_chameleon_g5k.bib %}
