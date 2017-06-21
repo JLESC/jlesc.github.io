@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Toward Interoperability between Chameleon and Grid'5000 experimentation platforms</title>
+  <title>JLESC &mdash; Advancing Chameleon and Grid'5000 testbeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
@@ -93,7 +93,7 @@
   <article class="post-content">
     <div class="row">
       <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Toward Interoperability between Chameleon and Grid'5000 experimentation platforms</h1>
+        <h1 class="pull-left">Advancing Chameleon and Grid'5000 testbeds</h1>
       </header>
     </div>
     <div class="row">
@@ -118,6 +118,8 @@
       <li class="list-group-item row">
         <label class="col-sm-4">Keywords</label>
         <div class="col-sm-8">
+          
+            <span class="clearfix">Testbeds</span>
           
             <span class="clearfix">Experimentation platforms</span>
           
@@ -148,6 +150,10 @@
           
             <span class="clearfix">
               <span class="person given-name">Simon</span> <span class="person sur-name">Delamare</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Lucas</span> <span class="person sur-name">Nussbaum</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
             <span class="clearfix">
@@ -185,8 +191,8 @@
         
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
-<p>The aim of this project is to develop building blocks toward interoperability between Chameleon (ANL) and
-Grid’5000 (Inria) experimentation platforms.</p>
+<p>The aim of this project is to improve Chameleon (ANL) and
+Grid’5000 (Inria) testbeds, in particular with respect to interoperability and interconnection.</p>
 
 <p>Chameleon and Grid’5000 testbeds have proven their relevance to conduct
 experiments involving large scale distributed computing systems. However, those
@@ -239,7 +245,11 @@ This makes it easier for users to deploy the same environment on Grid’5000 and
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 <p>The results of this project should be compared to Enos performance.
 Depending on the performance and ease to use of each solution, the official “supported” way to deploy Openstack on Chameleon will be either Devstack, Puppet, or Enos.
-It is likely that Chameleon and Grid’5000 will converge to the same solution, reducing maintenance costs for both platforms and easing cross experimentation for their users</p>
+It is likely that Chameleon and Grid’5000 will converge to the same solution, reducing maintenance costs for both platforms and easing cross experimentation for their users.</p>
+
+<p>Another challenge for future work is the data-plane federation of both testbeds, to enable experiments spanning both testbeds in a
+controlled networking environment. We will explore how to achieve that by interconnecting both testbeds to Internet Software Defined eXchange
+points (SDX), which would allow us to provide on-demand Level-2 link stitching, to provide per-experiment overlays.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
