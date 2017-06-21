@@ -92,16 +92,6 @@ Scientific workflows are an aggregation of several tasks exchanging messaging. U
 
 {% bibliography --cited --file jlesc.bib %}
 
-## Person-Month efforts in 2016/2017
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person peterka_t %}    | 2.0 PM |
-| {% person wozniak_j %}    | 0.5 PM |
-| {% person dreher_m %}    | 3.0 PM |
-| {% person ross_r %}    | 0.2 PM |
-| {% person antoniu_g %}    | 0.2 PM |
-| {% person dorier_m %}    | 1.0 PM |
-| {% person raffin_b %}    | 0.2 PM |
  
 ## Future plans
 
