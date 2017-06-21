@@ -19,7 +19,8 @@ import argparse
 # This is the input with argparse. The output is optional. The input should be the .csv file from the JLESC survey.
 parser = argparse.ArgumentParser()
 parser.add_argument("input",type=str, help="The path of the input. It has to be a .csv.")
-parser.add_argument("output",type=str, nargs='?', default='./_projects/', help="The folder with the output. It has to be a .csv. if there is no folder given the Programm will take the outbox folder.")
+parser.add_argument("--output",type=str, nargs='?', default='./_projects/', help="The folder with the output. If there is no folder given the program will create _projects in the current folder.")
+parser.add_argument("--projects",type=str, default='../_projects/', help="The path of the project folder.")
 user_input = parser.parse_args()
 
 # To change the date easier
@@ -40,8 +41,8 @@ if user_input.input.find('.csv')!= -1 and os.path.isfile(user_input.input) and o
     projects = projects[1:]
 
     # The ./_projects/ folder is the outboxfolder. As long as there is an entry in the projectslist, every file will be checked.
-    for data in os.listdir('../_projects/'):
-        file = open('../_projects/'+data ,'r')
+    for data in os.listdir(user_input.projects):
+        file = open(user_input.projects+data ,'r')
         text=''
         # The text from each file is first added to a string
         for line in file:
@@ -99,4 +100,4 @@ if user_input.input.find('.csv')!= -1 and os.path.isfile(user_input.input) and o
 
 
 else:
-    print('Your input is not existing file or is no .csv or is empty')
+    print('Your input is not an existing file or is no .csv or is empty')

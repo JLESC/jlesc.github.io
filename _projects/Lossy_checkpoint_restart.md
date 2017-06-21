@@ -48,7 +48,7 @@ Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour me
 Jon Calhoun did an internship of 11 weeks at ANL.
 
 ## Impact and publications
-{% cite Calhoun17 --file jlesc.bib %}
+See {% cite Calhoun17 --file jlesc.bib %}.
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans

@@ -1,6 +1,6 @@
 ---
 layout: page_project
-title: "Extreme-Scale Workflow Tools: Swift, Decaf, Damaris, FlowVR"
+title: Extreme-Scale Workflow Tools - Swift, Decaf, Damaris, FlowVR
 date: 2016-03-21
 updated:
 navbar: Research
@@ -91,6 +91,10 @@ Scientific workflows are an aggregation of several tasks exchanging messaging. U
 ## Impact and publications
 
 {% bibliography --cited --file jlesc.bib %}
+
+## Future plans
+
+See above.
 
 ## References
 

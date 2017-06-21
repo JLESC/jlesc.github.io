@@ -39,7 +39,7 @@ We consider a machine learning methodology to give appropriate weighting factors
 
 ## Results for 2016/2017
 
-We've proposed the idea of Simpelified SSP and evaluated its consistency with the original SSP over several systems. 
+We have proposed the idea of Simpelified SSP and evaluated its consistency with the original SSP over several systems. 
 
 ## Visits and meetings
 

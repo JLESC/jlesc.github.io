@@ -51,9 +51,7 @@ and help direct development of new tool capabilities.
 
 Face-to-face meetings at ISC-HPC (Frankfurt am Main, 2016-06), SC (Salt Lake City, 2016-11) and 6th JLESC Workshop (Kobe, 2016-12).  Meeting with MYX project {% cite MYXproject --file external/tool_pandt_project.bib %} members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.
 
-Visits planned for the next 12 months:
-
-* (none)
+Visits planned for the next 12 months: none
 
 ## Impact and publications
 

@@ -37,6 +37,7 @@ Then fill in the YAML header variables above.
 
   title            (required)
                    the full title of the project
+                   WARNING: do not use quotation marks, colons and the likes
 
   date             (required)
                    the date this page was created in the format: YYYY-MM-DD; this will get displayed

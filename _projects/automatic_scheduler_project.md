@@ -63,6 +63,7 @@ We have results with an armed-bandid approach, which tries to select the I/O sch
 ## Results for 2016/2017
 We have some new results, but the progress is slow due to the lack of personnel.
 Key points: 
+
 * Armed bandit implementation, with a 4s window, show a 15% of performance improvement over OrangeFS original scheduler.
 * We analyzed MPI-IO Test benchmark with different patterns, request size, and processes.
 * We provided 120 executions to the DTW pattern matching mechanism from IOAnalyzer.
