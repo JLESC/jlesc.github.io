@@ -15,11 +15,13 @@ keywords:
   - HPC kernel porting
   - Manual and automatic optimizations
   - Heterogeneous reconfigurable computing
+  - Dataflow computing
 head: yoshii_k
 members: 
   - alvarez_c
   - jimenez_d
   - martorell_x
+  - sano_k
   - jin_z
   - finkel_h
   - cappello_f
