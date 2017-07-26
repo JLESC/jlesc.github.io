@@ -13,8 +13,8 @@ keywords:
   - FPGA
   - High-level synthesis (OpenCL, OpenMP, OpenACC)
   - HPC kernel porting
-  - Manual and automatic optimizations
-  - Heterogeneous reconfigurable computing
+  - Manual and automatic optimization
+  - Reconfigurable computing
   - Dataflow computing
 head: yoshii_k
 members: 
