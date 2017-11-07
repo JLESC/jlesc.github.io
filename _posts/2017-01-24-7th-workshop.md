@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 7th JLESC Workshop
-date: 2017-01-24
-updated: 2017-01-24
+title: 8th JLESC Workshop
+date: 2017-11-07
+updated: 2017-11-07
 author: speck_r
 ---
-The 7th JLESC Workshop will be held at University of Illinois at Urbana-Champaign, Urbana, USA, from July 17 to 19, 2017. 
+The 8th JLESC Workshop will be held at Universitat Politècnica de Catalunya (UPC), Barcelona, Spain, from April 17 to 19, 2018. 
 
 <!--more-->
 
-Click [here](/events/7th-jlesc-workshop) for more information!
+Stay tuned for more information!
