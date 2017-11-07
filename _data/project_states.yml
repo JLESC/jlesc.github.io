@@ -39,6 +39,9 @@
 
 help_wanted:
   title: help wanted
+  
+proposed:
+  title: proposed
 
 starting:
   title: starting

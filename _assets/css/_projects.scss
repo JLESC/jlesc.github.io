@@ -14,7 +14,7 @@
 }
 
 .project-status-help_wanted-bg {
-  background-color: lighten($brand-primary, 15%);
+  background-color: lighten($brand-primary, 30%);
   .project-status-help_wanted {
     color: inherit
   }
@@ -23,14 +23,14 @@
   color: $brand-primary;
 }
 
-.project-status-preparation-bg {
-  background-color: lighten($brand-info, 15%);
-  .project-status-preparation {
+.project-status-proposed-bg {
+  background-color: lighten($brand-primary, 15%);
+  .project-status-proposed {
     color: inherit;
   }
 }
-.project-status-preparation {
-  color: $brand-info;
+.project-status-proposed {
+  color: $brand-primary;
 }
 
 .project-status-starting-bg {
