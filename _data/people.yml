@@ -1759,6 +1759,15 @@ sankaranarayanan_s:
   email: skrssank@anl.gov
   homepage:
 
+sano_k:
+  sur_name: Sano
+  given_name: Kentaro
+  affiliation: riken
+  position:
+  topics: FPGAs
+  email: kentaro.sano@riken.jp
+  homepage:
+
 sasaki_h:
   sur_name: Sasaki
   given_name: Hisako
@@ -2318,8 +2327,8 @@ zanon_f:
   homepage: 
 
 jin_z:
-  sur_name: Zheming
-  given_name: Jin
+  sur_name: Jin
+  given_name: Zheming
   affiliation: anl
   position: post_doc
   topics:
