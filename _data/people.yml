@@ -298,7 +298,7 @@ buch_r:
 burbano_m:
   sur_name: Burbano
   given_name: Mario
-  affiliation: external
+  affiliation: inria
   position:
   topics:
   email: burbano.carmona@gmail.com
