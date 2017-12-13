@@ -11,9 +11,9 @@ topics:
   - numerics
 keywords:
   - ewald
-head: dawson_w
+head: burbano_m
 members:
-  - burbano_m
+  - dawson_w
 ---
 
 ## Research topic and goals
@@ -84,7 +84,8 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 
 ## Future plans
-
+We are continuing to work on generating representative matrices and are performing 
+some preliminary calculations.
 
 ## References
 
