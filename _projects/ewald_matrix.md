@@ -13,7 +13,7 @@ keywords:
   - ewald
 head: dawson_w
 members:
-  -
+  - burbano_m
 ---
 
 ## Research topic and goals
@@ -87,7 +87,5 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 
 ## References
-
-{% comment %}
 
 {% bibliography --file external/ewald_matrix %}
