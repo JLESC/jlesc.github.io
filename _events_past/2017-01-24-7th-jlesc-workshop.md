@@ -9,7 +9,7 @@ event_start: 2017-07-17
 event_end: 2017-07-19
 event_short_url:
 event_url: http://www.ncsa.illinois.edu/Conferences/JLESC7/
-wayback_url: 
+wayback_url: https://web.archive.org/web/20171213084920/http://www.ncsa.illinois.edu/Conferences/JLESC7/
 logo: 
 kind: workshop
 institute: uiuc
