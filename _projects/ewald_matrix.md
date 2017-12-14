@@ -2,12 +2,13 @@
 layout: page_project
 title: Joint Investigation Into the Structure of Ewald Matrices
 date: 2017-12-13
-updated:
+updated: 2017-12-14
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: starting
 topics:
+  - apps
   - numerics
 keywords:
   - ewald
@@ -21,12 +22,14 @@ Electrochemical Double Layer Capacitors (EDLCs) have garnered significant
 interest due to their potential applications in novel energy storage devices.
 At the Maison de la Simulation, software is currently being developed that can
 accurately simulate these systems at constant electrostatic potential over long
-time scales. By far the most expensive part of these simulations is the
-solving of a linear system that represents the interactions between the
-electrodes and electrolyte ions. Currently, this system is solved using dense
-linear algebra routines, however these routines scale cubically with the size
-of the system, which poses severe limitations on the maximum system size and
-time scales that can be treated.
+time scales (see, for example, the work of Reed et al.
+{% cite ReedEtAl2007 --file external/ewald_matrix.bib %}
+for details of the computational techniques involved). By far the most expensive
+part of these simulations is the solving of a linear system that represents the
+interactions between the electrodes and electrolyte ions. Currently, this
+system is solved using dense linear algebra routines, however these routines
+scale cubically with the size of the system, which poses severe limitations on
+the maximum system size and time scales that can be treated.
 
 One alternative would be to use sparse matrix techniques. However, while sparse
 linear solvers reduce the scaling costs, the need to solve a large linear
@@ -88,4 +91,4 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 ## References
 
-{% bibliography --file external/ewald_matrix %}
+{% bibliography --file external/ewald_matrix.bib %}
