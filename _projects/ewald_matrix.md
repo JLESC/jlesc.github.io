@@ -35,7 +35,7 @@ One alternative would be to use sparse matrix techniques. However, while sparse
 linear solvers reduce the scaling costs, the need to solve a large linear
 system at each iteration would impose a large cost and limit the length of
 simulations that can be practically performed. Recently, at RIKEN a new library
-called NTPoly has been developed that can compute the full inverse of sparse
+called [NTPoly](http://william-dawson.github.io/NTPoly) has been developed that can compute the full inverse of sparse
 matrices in linear time. This library would allow the matrix inverse to be
 precomputed, allowing for fast iteration times and thus long simulations. For
 this project, we will investigate the properties of the matrices produced in
@@ -87,7 +87,7 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 
 ## Future plans
-We are continuing to work on generating representative matrices and are performing 
+We are continuing to work on generating representative matrices and are performing
 some preliminary calculations.
 
 ## References
