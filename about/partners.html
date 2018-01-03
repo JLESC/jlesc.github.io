@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Partners"
+title:
 date: 2016-02-15
 updated: 2016-02-17
 navbar: About
@@ -8,6 +8,7 @@ subnavbar: Partners
 ---
 
 <ul id="partners" class="media-list">
+  <h1>Founding partners</h1>
   <li class="media p-t-2">
     <a id="partner-uiuc-ncsa"></a>
     <div class="media-left media-middle hidden-sm-down">
@@ -76,7 +77,10 @@ subnavbar: Partners
       {% image 'inria_logo.png' class:'media-object partners-logo p-l-1' alt:'Logo of Inria' %}
     </div>
   </li>
-
+  
+  <br><br>
+  <h1>Full partners</h1>
+  
   <li class="media p-t-2">
     <a id="partner-anl"></a>
     <div class="media-left media-middle hidden-sm-down">
@@ -229,4 +233,32 @@ subnavbar: Partners
       {% image 'riken_logo.png' class:'media-object partners-logo p-l-1' alt:'Logo of RIKEN' %}
     </div>
   </li>
+  
+  <br><br>
+  <h1>Associate partner</h1>
+  
+  <li class="media p-t-2">
+    <a id="partner-icl"></a>
+    <div class="media-left media-middle hidden-sm-down">
+      {% image 'icl-logo.jpg' class:'media-object partners-logo p-r-1' alt:'Logo of the Innovative Computing Laboratory' %}
+    </div>
+    <div class="media-body">
+      <h2 class="media-heading">Innovative Computing Laboratory (ICL)</h2>
+      {% include asides/partner_meta.html partner_id="icl" %}
+      <p>
+        The Innovative Computing Laboratory (ICL) aspires to be a world leader in enabling technologies and software for scientific computing. Its vision is to provide high performance tools to tackle science’s most challenging problems and to play a major role in the development of standards for scientific computing in general. ICL has three main areas of research interest: algorithms and software for numerical linear algebra for high-performance computers, distributed computing and performance evaluation and benchmarking. 
+      </p>
+      <p>
+        ICL is a research laboratory in the College of Engineering at the University of Tennessee and serves as the cornerstone laboratory of the Center for Information Technology Research (CITR), one of UT’s nine Centers of Excellence.
+      </p>
+      <footer class="blockquote-footer">
+        Taken from
+        <a href="http://www.icl.utk.edu/"
+           target="_blank">
+          http://www.icl.utk.edu
+        </a>
+      </footer>
+    </div>
+  </li>
+  
 </ul>

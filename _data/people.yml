@@ -268,6 +268,15 @@ borrell_r:
   email: ricard.borrell@bsc.es
   homepage: https://www.bsc.es/borrell-ricard
 
+bosilca_g:
+  sur_name: Bosilca
+  given_name: George
+  affiliation: icl
+  position: permanent
+  topics:
+  email: bosilca@icl.utk.edu
+  homepage: http://www.icl.utk.edu/~bosilca/
+
 bouge_l:
   sur_name: Bougé
   given_name: Luc
@@ -546,6 +555,15 @@ doblas_reyes_f:
   topics:
   email: francisco.doblas-reyes@bsc.es
   homepage: https://www.bsc.es/about-bsc/staff-directory/doblas-reyes-francisco-j
+
+dongarra_j:
+  sur_name: Dongarra
+  given_name: Jack
+  affiliation: icl
+  position: permanent
+  topics:
+  email: dongarra@icl.utk.edu
+  homepage: http://www.netlib.org/utk/people/JackDongarra/
 
 dorier_m:
   sur_name: Dorier
