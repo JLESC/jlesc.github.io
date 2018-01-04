@@ -74,7 +74,12 @@ riken:
   title: RIKEN Advanced Institute for Computational Science
   abbr: RIKEN
   logo: riken_logo.png
-  
+
+icl:
+  title: Innovative Computing Laboratory
+  abbr: ICL
+  logo: icl-logo.jpg
+
 external:
   title: External partner
   abbr: EXT
