@@ -6,7 +6,7 @@ updated: 2017-05-04
 navbar: Research
 subnavbar: Projects
 project_url:
-status: suspended
+status: running
 topics:
   - resilience
 keywords:
@@ -22,6 +22,8 @@ members:
   - sun_h
   - unsal_o
   - di_s
+  - hori_a
+  - gerofi_b
 ---
 
 ## Research topic and goals
@@ -109,7 +111,7 @@ languages {% cite subasi2016run --file jlesc.bib %}.
 | {% person sun_h %}    | 3.0 PM |
 | {% person unsal_o %}    | 6.0 PM |
 | {% person di_s %}    | 0.5 PM |
- 
+
 ## Future plans
 
 The project will be suspended as most of the partners in the project have
