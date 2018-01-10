@@ -690,6 +690,15 @@ geimer_m:
   email: m.geimer@fz-juelich.de
   homepage: https://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/geimer_m.html
 
+gerofi_b:
+  sur_name: Gerofi
+  given_name: Balazs
+  affiliation: riken
+  position: permanent
+  topics: Resilience
+  email: bgerofi@gmail.com
+  homepage:
+
 gibbon_p:
   sur_name: Gibbon
   given_name: Paul

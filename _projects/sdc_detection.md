@@ -6,7 +6,7 @@ updated: 2017-05-04
 navbar: Research
 subnavbar: Projects
 project_url:
-status: suspended
+status: running
 topics:
   - resilience
 keywords:
@@ -22,6 +22,8 @@ members:
   - sun_h
   - unsal_o
   - di_s
+  - hori_a
+  - gerofi_b
 ---
 
 ## Research topic and goals
@@ -95,21 +97,6 @@ languages {% cite subasi2016run --file jlesc.bib %}.
 {% bibliography --cited --file jlesc.bib %}
 
 
-
-## Person-Month efforts in 2016/2017
-
-{:.person-months-table.table.table-bordered.table-hover.table-sm}
-| {% person bautista_gomez_l %}    | 6.0 PM |
-| {% person balaprakash_p %}    | 0.5 PM |
-| {% person benoit_a %}    | 3.0 PM |
-| {% person cappello_f %}    | 0.5 PM |
-| {% person cavelan_a %}    | 3.0 PM |
-| {% person robert_y %}    | 3.0 PM |
-| {% person subasi_o %}    | 12.0 PM |
-| {% person sun_h %}    | 3.0 PM |
-| {% person unsal_o %}    | 6.0 PM |
-| {% person di_s %}    | 0.5 PM |
- 
 ## Future plans
 
 The project will be suspended as most of the partners in the project have
