@@ -6,7 +6,7 @@ updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: finished 
 topics: 
   - storage
 keywords:
@@ -40,6 +40,10 @@ by a factor up to 2 times using a hardware aware algorithm.
 
 These results have been accepted as a poster for the ACM Student Research Competition at SC 2016 {% cite CheriereEtAl2016 --file jlesc.bib %}, and Nathanael Cheriere won the 2nd prize of the ACM SRC.
 
+## Results for 2017/2018
+
+We developped a Swift/T-based workflow to automatize a large number of experiments using CODES, in order to boost design-space exploration. This workflow helped us reiterate our experiments with network models matching Argonne's Theta machine. We submitted a paper at CCgrid 2018 presenting the results of these experiments.
+
 ## Visits and meetings
 
 Internship of Nathanael Cheriere at Argonne National Lab from January 2016 to June 2016, under the supervision of Matthieu Dorier and Rob Ross.
@@ -51,7 +55,6 @@ Internship of Nathanael Cheriere at Argonne National Lab from January 2016 to Ju
 
 ## Future plans
 
-We plan to reiterate our experiments with network models matching Argonne's Theta machine, and publish the new results.
-We also plan to develop a workflow to automatize a large number of experiments using CODES and the Swift/T language, in order to boost design-space exploration of future network topologies.
+This project is finished.
 
 ## References
