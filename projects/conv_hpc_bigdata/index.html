@@ -3,11 +3,11 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Resource Management, Scheduling, and Fault-Tolerance for HPC Workflows</title>
+  <title>JLESC &mdash; Towards Blob-Based Convergence Between HPC and Big Data</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
-  <link rel="canonical" href="https://jlesc.github.io/projects/scheduling_hpc_workflows/">
+  <link rel="canonical" href="https://jlesc.github.io/projects/conv_hpc_bigdata/">
 
   <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
   <link type="text/css" rel="stylesheet" href="/assets/main-3546dca8cc3b7748a61d67ddae407f653664d2e6cedc60baa97ab21f0923bbc9.css">    
@@ -93,7 +93,7 @@
   <article class="post-content">
     <div class="row">
       <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Resource Management, Scheduling, and Fault-Tolerance for HPC Workflows</h1>
+        <h1 class="pull-left">Towards Blob-Based Convergence Between HPC and Big Data</h1>
       </header>
     </div>
     <div class="row">
@@ -122,16 +122,12 @@
         <div class="col-sm-8">
           
             <span class="clearfix">
-              <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
               <span class="pull-right">
                 <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
               </span>
             </span>
           
-          
-            <span class="clearfix">
-              <span class="person given-name">Nathanael</span> <span class="person sur-name">Cheriere</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
           
             <span class="clearfix">
               <span class="person given-name">Rob</span> <span class="person sur-name">Ross</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
@@ -142,11 +138,15 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Justin</span> <span class="person sur-name">Wozniak</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Phil</span> <span class="person sur-name">Carns</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Shadi</span> <span class="person sur-name">Ibrahim</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+              <span class="person given-name">Pierre</span> <span class="person sur-name">Matri</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Alexandru</span> <span class="person sur-name">Costan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
         </div>
@@ -168,8 +168,6 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
@@ -183,31 +181,23 @@
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>This project focuses on challenges posed by the increasing complexity of HPC workflows. To cope with the ever increasing size of data and the resulting increase in the number and complexity of workflows running on Extreme-scale HPC systems, it becomes necessary to share the HPC resources across multiple scientific workflows, as is already the case on cloud infrastructures. The first goal of this research project is to investigate approaches for resource sharing and scheduling that can preserve QoS requirements of scientific workflows running concurrently on a shared HPC system, while ensuring a high resource utilization of the infrastructure. We plan to investigate the possible trade-offs including Isolation vs. performance guarantee, consolidation vs. resource utilization, and dynamicity vs. resource provisioning. Additionally, it becomes necessary to make HPC workflows fault-tolerant at the relevant granularity level. The typical behavior of an HPC workflow when one of its tasks fails it to fail entirely, requiring user intervention to restart it. Yet depending on task dependencies and/or communications, the workflow management system should be able to reschedule a failed task without affecting other independent tasks, as done in the cloud for frameworks such as Hadoop. This project will focus on the Swift/T workflow management system. First we will find a way to provide task-level fault tolerance for independent tasks with no dependencies. The immediate application of this will be in managing ensemble simulations. As a second step we will explore ways to maintain fault tolerance for interdependent tasks, and in particular for tasks linked together with dataflows.</p>
+<p>The ever-increasing computing power available on HPC platforms raises major challenges for the underlying storage systems, both in terms of I/O performance requirements and scalability. Metadata management has been identified as a key factor limiting the performance of POSIX file systems. Due to their lower metadata overhead, Blobs (Binary Large Objects) have been proposed as an alternative to traditional POSIX file systems for answering the storage needs of data-intensive HPC applications. Yet, the interest for blobs spans far beyond HPC, as they are also used as a low-level primitive for providing higher-level storage abstractions such as key-value stores or relational databases in cloud environments.</p>
 
-<h2 id="results-for-20152016">
-<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<p>We explore the following question: could Blobs be an enabling factor for storage convergence between both worlds? The objective is to leverage standard benchmarks for Big Data as well as real-world HPC applications to answer the question. Through extensive experiments, we seek to prove that blobs are a solid base for HPC and Big Data storage convergence, by demonstrating that the same storage systems (namely RADOS and Týr) applied in both contexts can yield significant performance advantages over the state of the art on both sides. This work is done in collaboration with ANL, UPM (Spain) and DKRZ (Germany).</p>
 
-<p>Our first sub-goal consisted of investigating the potential gain of sharing resources in a “cloud way” for HPC workflows. This initial study would provide an upper bound of the gain in resource usage when independent workflow share common resources in an HPC platform. This study was mainly conducted by Nathanael Cheriere at Argonne from January to June 2016.</p>
-
-<p>Results obtained using simulations with traces of real workflows showed no clear potential for resource sharing in the context of HPC workflows. Contrary to cloud workflows that can scale up and down depending on usage patterns, most HPC workflows already make the best use they can of the provided parallelism. Sharing resources presents more drawbacks than advantages and, in most cases, degrades resource utilization rather than improving it.</p>
-
-<h2 id="results-for-20162017">
-<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
-
-<p>The second goal of the project will investigate mechanisms by which an HPC workflow can become fault-tolerant at task-level, so that failure of a single task has the smallest impact possible on the overall workflow. We plan to implement and demonstrate these mechanisms on real HPC workflows. This study was mainly conducted by Matthieu Dorier and Justin Wozniak from November 2016 to March 2017.</p>
-
-<p>In terms of fault-tolerance, we proposed the addition of a new primitive, MPI_Comm_launch, for the MPI standard. This function enables to launch an MPI application inside another MPI application in a fault-tolerant manner. We leveraged a first implementation of MPI_Comm_launch to implement new constructs in the Swift/T language enabling a Swift workflow to be decomposed into sub-workflows. Failures in sub-workflows are reported to the parent workflow without causing it to fails, thus enabling task-level fault tolerance. We demonstrated these new features in the CODES-ESW workflow, a workflow meant for design-space exploration of network simulations.</p>
+<p>Leveraging on the previous goal, we intend to further demonstrate the applicability of Blobs on HPC context, which is less studied in the literature. For that matter, we focus on one use-case, distributed logging. We prove that this can bring highly-efficient support for applications such as computational steering, while offering unprecedented scalability on large-scale platforms. We leverage the local storage on the Theta supercomputer to deploy the storage system directly on the compute nodes.</p>
 
 <h2 id="results-for-20172018">
 <a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
 
-<p>A paper with the aforementioned results has been published at the WORKS 2017 workshop <a href="#DorierWORKS2017">(Dorier, Wozniak, and Ross 2017)</a>, held jointly with Supercomputing. We improved the Swift/T usage of MPI_Comm_launch to support launching multiple executables, and started working on in situ analysis use-cases of MPI_Comm_launch, with ADIOS and DataSpaces as transport layers between launched tasks.</p>
+<p>The first sub-goal lead to an extensive research leveraging a set of 5 benchmarks for Spark Bench as well as 4 real-world data-intensive HPC applications. The results show that all 4 applications are able to work unmodified atop object storage. More importantly, they show that the same storage systems (Týr or RADOS) can be used for both HPC and Big Data contexts, and on both show significant performance advantages. This clearly confirms the applicability and relevance of blob-based storage in a storage convergence context. These results have been published as a preliminary publication in the Cluster 2017 conference <a href="#MatriEtAl2017">(Matri et al. 2017)</a>.</p>
+
+<p>The second sub-goal was achieved through a 3-month visit of Pierre Matri (Inria) at ANL, under the direct supervision of Philip Carns and Rob Ross. Through extensive experiments on the Theta supercomputer up to 120,000 cores, we did demonstrate the performance benefits of using blobs for distributed logging on HPC. We also showed that the near-limitless scaling of blob storage systems brings significant performance benefits at large scale when compared to traditional, file-based storage. The results of this work resulted in a second submission to IPDPS 2018.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>Internship of Nathanael Cheriere at Argonne National Lab from January 2016 to June 2016, under the supervision of Matthieu Dorier and Rob Ross.</p>
+<p>May to July 2017: Internship of Pierre Matri at Argonne National Laboratory (3 months).</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -218,34 +208,39 @@
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
-          DorierWORKS2017
+          MatriEtAl2017
         </div>
       </div>
       <div class="row">
-        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDorierWORKS2017Bibtex" aria-expanded="false" aria-controls="collapseDorierWORKS2017Bibtex">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMatriEtAl2017Bibtex" aria-expanded="false" aria-controls="collapseMatriEtAl2017Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseDorierWORKS2017Abstract" aria-expanded="false" aria-controls="collapseDorierWORKS2017Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseMatriEtAl2017Abstract" aria-expanded="false" aria-controls="collapseMatriEtAl2017Abstract">
           Abstract
         </button>
       </div>
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="DorierWORKS2017">Dorier, Matthieu, Justin Wozniak, and Robert Ross. 2017. “Supporting Task-Level Fault-Tolerance in HPC Workflows by Launching MPI Jobs inside MPI Jobs.” Workshop. In <i>Proceedings Of the WORKS 2017 Workshop (SC17)</i>. <a href="https://dl.acm.org/citation.cfm?id=3151001" target="_blank">https://dl.acm.org/citation.cfm?id=3151001</a>.</span>
+      <span id="MatriEtAl2017">Matri, Pierre, Yevhen Alforov, Alvaro Brandon, Michael Kuhn, Philip Carns, and Thomas Ludwig. 2017. “Could Blobs Fuel Storage-Based Convergence Between HPC And Big Data?” In <i>CLUSTER 2017 -  IEEE International Conference On Cluster Computing</i>, 81–86. Honolulu, United States. doi:10.1109/CLUSTER.2017.63.</span>
     </div>
   </div>
-  <div class="collapse" id="collapseDorierWORKS2017Bibtex">
+  <div class="collapse" id="collapseMatriEtAl2017Bibtex">
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
-        <pre><code>@inproceedings{DorierWORKS2017,
-  title = {{Supporting Task-level Fault-Tolerance in HPC Workflows by Launching MPI Jobs inside MPI Jobs}},
-  author = {Dorier, Matthieu and Wozniak, Justin and Ross, Robert},
-  booktitle = {{Proceedings of the WORKS 2017 workshop (SC17)}},
+        <pre><code>@inproceedings{MatriEtAl2017,
+  title = {{Could Blobs Fuel Storage-Based Convergence Between HPC and Big Data?}},
+  author = {Matri, Pierre and Alforov, Yevhen and Brandon, Alvaro and Kuhn, Michael and Carns, Philip and Ludwig, Thomas},
+  url = {https://hal.inria.fr/hal-01617655},
+  booktitle = {{CLUSTER 2017 -  IEEE International Conference on Cluster Computing}},
+  address = {Honolulu, United States},
+  pages = {81 - 86},
   year = {2017},
-  type = {workshop},
-  url = {https://dl.acm.org/citation.cfm?id=3151001},
-  pdf = {http://delivery.acm.org/10.1145/3160000/3151001/a5-dorier.pdf}
+  month = sep,
+  doi = {10.1109/CLUSTER.2017.63},
+  pdf = {https://hal.inria.fr/hal-01617655/file/HPC_BD_Convergence___Short_Paper___Cluster_17%20%282%29.pdf},
+  hal_id = {hal-01617655},
+  hal_version = {v1}
 }
 </code></pre>
       </div>
@@ -258,12 +253,10 @@
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>We plan to propose our MPI_Comm_launch feature to the MPI standard committee. We also plan to use MPI_Comm_launch in multiple other real-life use cases, in particular with in situ analysis workflows.</p>
+<p>Plans for 2018: Such a convergence through blobs leads to two main questions that we intend to answer in the next year. First, how can we further optimize object storage for convergence? Indeed, the conclusions from this preliminary experiments prove that the performance advantage of blobs over the state of the art can be further improved by leveraging the technologies available on both platforms. This includes RDMA, that is increasingly available on Big Data platforms through RoCE for example, or leveraging advanced memory architectures such as NVRAM available on next-generation supercomputers. Second, how can this model be applied to converging data processing frameworks? While originating on clouds, there is a growing interest in the HPC community for artificial intelligence, through frameworks such as TensorFlow. This gives an unprecedented opportunity to take convergence one level higher, and shows how convergent frameworks can be integrated with convergent storage to offer users with a unified experience on HPC and Clouds for such use-cases.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
-
-<ol class="bibliography"></ol>
 
       </div>
     </div>
