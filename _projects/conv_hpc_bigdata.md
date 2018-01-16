@@ -13,7 +13,6 @@ keywords:
 head: antoniu_g
 members:
   - ross_r
-  - antoniu_g
   - carns_p
   - matri_p
   - costan_a
