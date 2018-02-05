@@ -38,6 +38,18 @@ joint training events (such as VI-HPS Tuning Workshops {% cite VIHPSTWS --file e
 Collaborative work with application developers will assess the effectiveness of the current (and revised) tools,
 and help direct development of new tool capabilities.
 
+## Results for 2014/2015
+
+* Initial planning.
+* XcalableMP training material translated into English, and Scalasca/Score-P training material translated into Japanese.
+
+## Results for 2015/2016
+
+* XcalableMP tutorial held at JSC (2015-12-01).
+* Organisation of 20th VI-HPS Tuning Workshop hosted by RIKEN AICS (2016/02/24-26) {% cite VIHPSTWS --file external/tool_pandt_project.bib %} covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) on K computer and local Fujitsu FX10 (pi).
+* Performance analysis of RIKEN FIBER {% cite FIBER --file external/tool_pandt_project.bib %} mini-app NTChem on pi/K.
+* Performance analysis of ABySS-P {% cite KitayamaEtAl2015 --file external/tool_pandt_project.bib %} and NEST neuronal network simulation tool {% cite NEST --file external/tool_pandt_project.bib %} on K computer.
+
 ## Results for 2016/2017
 
 * Specification of XMPT generic tool interface for XcalableMP PGAS runtime (based on OMPT).
@@ -45,11 +57,17 @@ and help direct development of new tool capabilities.
 * Definition of POP standard metrics for MPI and OpenMP applications {% cite POPmetrics2016 --file external/tool_pandt_project.bib %}.
 * Document how to obtain POP standard metrics in Paraver {% cite POPmetParaver2016 --file external/tool_pandt_project.bib %}
 * Calculation of POP standard metrics as derived metrics by CUBE.
-* Tools training for NERSC, DKRZ, IT4I, EPCC/Southampton and RWTH, covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) using local HPC systems.
+* Tools training for NERSC, DKRZ, IT4I, EPCC/Southampton and RWTH using local HPC systems.
+
+## Results for 2017/2018
+
+* Prototype implementation in Omni XMP compiler of XMPT events for detecting data races of coarrays and for profiling coarray programs.
+* Large-scale application performance measurements on JUQUEEN, K computer and Blue Waters.
+* Tools training at BSC (2017-04) and TERATEC (2017-10) using local HPC systems.
 
 ## Visits and meetings
 
-Face-to-face meetings at ISC-HPC (Frankfurt am Main, 2016-06), SC (Salt Lake City, 2016-11) and 6th JLESC Workshop (Kobe, 2016-12).  Meeting with MYX project {% cite MYXproject --file external/tool_pandt_project.bib %} members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.
+Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and ParCo conferences, and events hosted by project partners.  Meeting with MYX project {% cite MYXproject --file external/tool_pandt_project.bib %} members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.
 
 Visits planned for the next 12 months: none
 
@@ -61,11 +79,11 @@ POP standard metrics applied in POP services performance analyses.
 
 ## Future plans
 
-The existing integration of XcalableMP and Scalasca will be updated to the latest
+Further XcalableMP support for XMPT and tasklet.
+Existing integration of XcalableMP and Scalasca will be updated to the latest
 community-developed Score-P instrumentation and measurement infrastructure.  
 Investigate Extrae and Score-P support required for XcalableMP.
-Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN FIBER mini-apps.
-Address terminology inconsistencies between JSC and BSC tools in their analyses and documentation.
+Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN FIBER mini-apps and other applications.
 Workshops and training organised under the auspices of VI-HPS 
 {% cite VIHPS --file external/tool_pandt_project.bib %} 
 or the POP Centre of Excellence {% cite POP --file external/tool_pandt_project.bib %}.
