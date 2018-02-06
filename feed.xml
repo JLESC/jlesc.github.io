@@ -8,6 +8,34 @@
     <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Open JLESC PhD position at JSC</title>
+        <description>&lt;p&gt;JSC has an open position for a &lt;a href=&quot;http://www.fz-juelich.de/SharedDocs/Stellenangebote/_common/dipldok/d026-2018-jsc.html&quot;&gt;PhD student&lt;/a&gt; in the field of C++ tasking approaches!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Jülich Supercomputing Centre is recruiting a PhD student in the field
+of computer science with a special focus on C++-based tasking approaches.&lt;/p&gt;
+
+&lt;p&gt;The goal of this project is the extension and optimization of our C++
+tasking framework for current and future HPC hardware as well as its
+application to multigrid methods and the FMM. The project is
+embedded into the interdisciplinary research setting of the Joint
+Laboratory for Extreme Scale Computing (JLESC).&lt;/p&gt;
+
+&lt;p&gt;Candidates should hold a university degree in the field of computer science or 
+mathematics and should have profound understanding of C++
+template metaprogramming, with no fear of numerical methods. Social
+competence and good communication skills for collaborative work in and
+with interdisciplinary teams are essential.&lt;/p&gt;
+
+&lt;p&gt;The project runs for 3 years, for more information, please see &lt;a href=&quot;http://www.fz-juelich.de/SharedDocs/Stellenangebote/_common/dipldok/d026-2018-jsc.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2018/02/06/phd-position-at-jsc/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2018/02/06/phd-position-at-jsc/</guid>
+      </item>
+    
+      <item>
         <title>ICL becomes Associate Partner</title>
         <description>&lt;p&gt;With January 1, 2018, the &lt;a href=&quot;http://www.icl.utk.edu/&quot;&gt;Innovative Computing Laboratory&lt;/a&gt; (ICL) becomes new Associate Partner of the JLESC.&lt;/p&gt;
 
@@ -59,7 +87,7 @@ for international students. For more information, please see &lt;a href=&quot;ht
 
 &lt;!--more--&gt;
 
-&lt;p&gt;Stay tuned for more information!&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;https://www.bsc.es/news/events/8th-jlesc-workshop&quot;&gt;official website&lt;/a&gt; for details and registration.&lt;/p&gt;
 </description>
         <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
         <link>https://jlesc.github.io/news/2017/11/07/8th-workshop/</link>
