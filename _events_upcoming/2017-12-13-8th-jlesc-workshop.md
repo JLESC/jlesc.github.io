@@ -7,8 +7,8 @@ navbar: Events
 event_location: UPC, Barcelona, Spain
 event_start: 2018-04-17
 event_end: 2018-04-19
-event_short_url:
-event_url: 
+event_short_url: https://www.bsc.es/news/events/8th-jlesc-workshop
+event_url: https://www.bsc.es/news/events/8th-jlesc-workshop
 wayback_url: 
 logo: 
 kind: workshop
