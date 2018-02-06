@@ -6,7 +6,7 @@ updated: 2018-02-06
 author: speck_r
 ---
 
-JSC is welcoming registrations for the training course ""[From zero to hero: Understanding and fixing intra-node performance bottlenecks](http://www.fz-juelich.de/SharedDocs/Termine/IAS/JSC/EN/courses/2018/intranode-performance-2018.html)"!
+JSC is welcoming registrations for the training course "[From zero to hero: Understanding and fixing intra-node performance bottlenecks](http://www.fz-juelich.de/SharedDocs/Termine/IAS/JSC/EN/courses/2018/intranode-performance-2018.html)"!
 
 <!--more-->
 
