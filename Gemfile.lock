@@ -85,12 +85,10 @@ GEM
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
     mini_magick (4.3.6)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.3.0)
     namae (0.10.1)
-    nokogiri (1.6.8)
-      mini_portile2 (~> 2.1.0)
-      pkg-config (~> 1.1.7)
-    pkg-config (1.1.7)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     rack (1.6.4)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
@@ -132,5 +130,8 @@ DEPENDENCIES
   sass
   uglifier
 
+RUBY VERSION
+   ruby 2.2.1p85
+
 BUNDLED WITH
-   1.12.5
+   1.13.3
