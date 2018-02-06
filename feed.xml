@@ -8,6 +8,25 @@
     <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Training course on intra-node performance bottlenecks</title>
+        <description>&lt;p&gt;JSC is welcoming registrations for the training course ““&lt;a href=&quot;http://www.fz-juelich.de/SharedDocs/Termine/IAS/JSC/EN/courses/2018/intranode-performance-2018.html&quot;&gt;From zero to hero: Understanding and fixing intra-node performance bottlenecks&lt;/a&gt;”!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;In the first part of the training course we want to give insights in today’s CPU microarchitecture and apply this knowledge in the hands-on session. As a demonstrator we will use a simple Coulomb solver and improve the code step-by-step. We will start from a basic implementation and advance to an optimized version using hardware features like vectorization to increase performance.&lt;/p&gt;
+
+&lt;p&gt;The exercises will also contain training on the use of open-source tools to measure and understand the achieved performance. Such optimizations, however, depend heavily on the targeted hardware and should not be part of the algorithmic layer of the code.&lt;/p&gt;
+
+&lt;p&gt;In the second part we will present a detailed description of possible abstraction layers to hide such hardware-specifics and therefore maintain readability and maintainability. We will also discuss the overhead costs of our introduced abstraction and show compile-time SIMD configurations and corresponding performance results on different platforms.&lt;/p&gt;
+
+&lt;p&gt;This advanced course is free of charge and intended for scientists/developers who want to understand performance-critical hardware features of modern CPUs (like SIMD, ILP, caches, out-of-order execution) and utilize these features in their code. See &lt;a href=&quot;http://www.fz-juelich.de/SharedDocs/Termine/IAS/JSC/EN/courses/2018/intranode-performance-2018.html&quot;&gt;here&lt;/a&gt; for details.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2018/02/06/training-course-at-jsc/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2018/02/06/training-course-at-jsc/</guid>
+      </item>
+    
+      <item>
         <title>Open JLESC PhD position at JSC</title>
         <description>&lt;p&gt;JSC has an open position for a &lt;a href=&quot;http://www.fz-juelich.de/SharedDocs/Stellenangebote/_common/dipldok/d026-2018-jsc.html&quot;&gt;PhD student&lt;/a&gt; in the field of C++ tasking approaches!&lt;/p&gt;
 
@@ -33,6 +52,70 @@ with interdisciplinary teams are essential.&lt;/p&gt;
         <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
         <link>https://jlesc.github.io/news/2018/02/06/phd-position-at-jsc/</link>
         <guid isPermaLink="true">https://jlesc.github.io/news/2018/02/06/phd-position-at-jsc/</guid>
+      </item>
+    
+      <item>
+        <title>2018 JSC Guest Student Programme on Scientific Computing</title>
+        <description>&lt;p&gt;JSC welcomes applications for the &lt;a href=&quot;http://www.fz-juelich.de/ias/jsc/gsp&quot;&gt;2018 JSC Guest Student Programme on Scientific Computing&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;In order to give students the opportunity to familiarize themselves
+with various aspects of scientific computing as early as possible,
+the Jülich Supercomputing Centre is once again organizing a
+programme for guest students in the 2018 summer vacation. The
+programme is supported by CECAM - Centre Europeen de Calcul Atomique 
+and IBM. It targets students of science and engineering, computer science and
+mathematics who have already completed their first degree but have
+not yet finished their master’s course.&lt;/p&gt;
+
+&lt;p&gt;The students will work together with local scientists on topics of
+current interest in research and development. Depending on their
+previous experience and interests, they will be involved in various
+fields of work, for example:&lt;/p&gt;
+
+&lt;p&gt;Computational Science, Applied Mathematics&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Modelling and simulation in physics, chemistry and biophysics&lt;/li&gt;
+  &lt;li&gt;Techniques of parallel MD simulation&lt;/li&gt;
+  &lt;li&gt;Modelling, simulation and data analysis in neuroscience&lt;/li&gt;
+  &lt;li&gt;Parallel computational procedures in quantum chemistry and structural mechanics&lt;/li&gt;
+  &lt;li&gt;Performance evaluation of parallel algorithms in linear algebra&lt;/li&gt;
+  &lt;li&gt;Mathematical modelling, statistics and data mining&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Computer Architectures, GPU Computing&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GPU-computing&lt;/li&gt;
+  &lt;li&gt;High-speed data networks &amp;amp; data management&lt;/li&gt;
+  &lt;li&gt;Programming models and performance portability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;High-Performance Computing, Visualization&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Performance analysis and optimization of parallel programs&lt;/li&gt;
+  &lt;li&gt;Programming of hierarchical parallel computer systems&lt;/li&gt;
+  &lt;li&gt;Distributed applications, interactive control and visualization&lt;/li&gt;
+  &lt;li&gt;Virtual reality techniques for visualizing scientific data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The programme will run for ten weeks from 6 August to 12 October 2018.
+During this period JSC grants access to its supercomputers, including
+the JURECA installation. The participants should be
+familiar with the computational branch of their subject. In addition,
+practical experience including at least a good knowledge of programming
+with C, C++, Python or Fortran on Linux systems should be present.&lt;/p&gt;
+
+&lt;p&gt;More information: &lt;a href=&quot;http://www.fz-juelich.de/ias/jsc/gsp&quot;&gt;http://www.fz-juelich.de/ias/jsc/gsp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Application deadline: &lt;strong&gt;25 March 2018&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2018/02/06/gsp-at-jsc/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2018/02/06/gsp-at-jsc/</guid>
       </item>
     
       <item>
@@ -158,33 +241,6 @@ We will therefore post relevant calls in the news section and encourage everyone
         <pubDate>Mon, 05 Sep 2016 00:00:00 +0000</pubDate>
         <link>https://jlesc.github.io/news/2016/09/05/funding-opportunities/</link>
         <guid isPermaLink="true">https://jlesc.github.io/news/2016/09/05/funding-opportunities/</guid>
-      </item>
-    
-      <item>
-        <title>5th JLESC Workshop</title>
-        <description>&lt;p&gt;The next JLESC Workshop will be held in Lyon, at ENS de Lyon, from June 27th (afternoon) to 29th.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Click &lt;a href=&quot;/events/5th-jlesc-workshop&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
-</description>
-        <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
-        <link>https://jlesc.github.io/news/2016/04/04/5th-workshop/</link>
-        <guid isPermaLink="true">https://jlesc.github.io/news/2016/04/04/5th-workshop/</guid>
-      </item>
-    
-      <item>
-        <title>3rd JLESC Summer School on Resilience</title>
-        <description>&lt;p&gt;The next JLESC Summer School will take place in Lyon from June 30 to July 1,
-right after the 5th JLESC Workshop.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Click &lt;a href=&quot;/events/3rd-jlesc-summer-school&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
-</description>
-        <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
-        <link>https://jlesc.github.io/news/2016/03/22/3rd-summerschool/</link>
-        <guid isPermaLink="true">https://jlesc.github.io/news/2016/03/22/3rd-summerschool/</guid>
       </item>
     
   </channel>

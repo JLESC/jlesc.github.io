@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://jlesc.github.io/news/2018/02/06/training-course-at-jsc/</loc>
+<lastmod>2018-02-06T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>https://jlesc.github.io/news/2018/02/06/phd-position-at-jsc/</loc>
+<lastmod>2018-02-06T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://jlesc.github.io/news/2018/02/06/gsp-at-jsc/</loc>
 <lastmod>2018-02-06T00:00:00+00:00</lastmod>
 </url>
 <url>
@@ -84,6 +92,9 @@
 </url>
 <url>
 <loc>https://jlesc.github.io/news/page2/</loc>
+</url>
+<url>
+<loc>https://jlesc.github.io/news/page3/</loc>
 </url>
 <url>
 <loc>https://jlesc.github.io/events/8th-jlesc-workshop/</loc>
