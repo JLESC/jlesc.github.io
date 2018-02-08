@@ -34,11 +34,17 @@ This activity has just started in February 2016, preliminary validation experime
 A database with testcases has been created on Marenostrum. This database includes a series of representative examples to test unsymmetric, symmetric and SPD matrices. In addition, different mesh topologies have been considered to assess the effects of mesh anisotropy, computational domain elongation, etc. 
 Benchmarking is currently carried out to compare Alya internal solvers and MAPHYS.
 
+## Results for 2017
+
+1. Full integration of the Inria solvers with their current individual API in the Alya code.
+2. Scalability studies carried out on for CFD and solid mechanics applications.
+
 ## Visits and meetings
 
 * {% person houzeaux_g %} and {% person vazquez_m %} met INRIA team at Bordeaux, 14-15 Oct. 2016.
 * {% person houzeaux_g %} met INRIA team at Bordeaux, 24-26 Feb. 2016. 
 * INRIA met BSC team at Barcelona, Nov. 2016. 
+* {% person houzeaux_g %} visits INRIA, Nov. 2017.
 
 ## Impact and publications
 
