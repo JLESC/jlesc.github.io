@@ -6,7 +6,7 @@ updated: 2017-12-14
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - apps
   - numerics
@@ -35,7 +35,9 @@ One alternative would be to use sparse matrix techniques. However, while sparse
 linear solvers reduce the scaling costs, the need to solve a large linear
 system at each iteration would impose a large cost and limit the length of
 simulations that can be practically performed. Recently, at RIKEN a new library
-called [NTPoly](http://william-dawson.github.io/NTPoly) has been developed that can compute the full inverse of sparse
+called [NTPoly](http://william-dawson.github.io/NTPoly) 
+{% cite DawsNaka2017 --file external/ewald_matrix.bib %}
+has been developed that can compute the full inverse of sparse
 matrices in linear time. This library would allow the matrix inverse to be
 precomputed, allowing for fast iteration times and thus long simulations. For
 this project, we will investigate the properties of the matrices produced in
@@ -52,12 +54,25 @@ accuracy and performance of NTPoly's sparse matrix techniques.
 integrating NTPoly or NTPoly's techniques into the software being developed
 at the Maison de la Simulation.
 
-## Results for 2015/2016
-Not applicable (project proposed in 2017).
+## Results for 2017/2018
+* Development of a program that can be used to test the accuracy and efficiency
+of NTPoly when applied to Ewald matrices.
+* Initial evaluation of the input parameters for applying NTPoly to Ewald
+matrices.
 
 ## Visits and meetings
+None yet.
 
 ## Impact and publications
+None yet.
+
+## Future plans
+
+Currently we have only investigated medium sized matrices which could be
+generated in serial using the software developed at the Maison de la 
+Simulation. In the next year, we will take advantage of a parallelized version
+to generate larger matrices to investigate. We will also explore the use
+of the other matrix functions implemented in NTPoly for improving the solver.
 
 <!--
 {% comment %}
@@ -85,10 +100,6 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 {% bibliography --cited --file jlesc.bib %}
 
-
-## Future plans
-We are continuing to work on generating representative matrices and are performing
-some preliminary calculations.
 
 ## References
 
