@@ -41,14 +41,17 @@ We consider a machine learning methodology to give appropriate weighting factors
 
 We have proposed the idea of Simpelified SSP and evaluated its consistency with the original SSP over several systems. 
 
+## Results for 2017/2018
+
+We have performed 6 tnraditional benchmarks and 7 mini applications on 6 systems to calculate the SSP and SSSP metrics. The SSSP metric has given better performance projection to the SSP than HPL. However, there have been still some differences between the SSP and SSSP scores. Therefore, we have introduced weighting factors for benchmarks in the SSSP to approximate the SSP metrics by the SSSP matrics more acurately. The weighting factors have been calculated based on a simple learning algorithm, and the SSSP metric using the resulted weighting factors has succcessfully approximated the SSP metric. 
+
 ## Visits and meetings
 
 Miwako Tsuji visited NCSA in January 2017.
 
 ## Impact and publications
 
-None yet.
-
+{% cite SSSP2017 %}
 
 <!--
 {% comment %}
@@ -74,12 +77,10 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 {% endcomment %}
 -->
 
-{% bibliography --cited --file jlesc.bib %}
-
 
 ## Future plans
 
-See above.
+We'll perform our sets of benchmarks and apps on large systems to verfy and modify the SSSP metric. 
 
 ## References
 
