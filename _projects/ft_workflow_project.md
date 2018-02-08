@@ -102,26 +102,42 @@ derive a clear model for replication, as there are many ways to implement it,
 even for a single task.
 
 
-## Results for 2016/2017
+## Results
 
-Work has been focused toward using replication as a detection and correction mechanism for Silent Data Corruptions (SDC).
-Although other detection techniques exist for HPC applications, based on algorithms (ABFT), invariant preservation or data analytics, replication remains the most transparent and least intrusive technique.
-In this work, replication is combined with checkpoiting to enable rollback and recovery when forward recovery is not possible, which occurs when too many replicas are corrupted.
-The goal is to find the right level (duplication, triplication or more) of replication needed to efficiently detect and correct silent errors at scale.
-As of today, we provide a detailed analytical study with formulas to decide the optimal parameters as a function of the error rate, checkpoint cost, and platform size.
+The initial work for this project has been focused towards using replication as a detection and correction mechanism for Silent Data Corruptions (SDC). Although other detection techniques exist for HPC applications, based on algorithms (ABFT), invariant preservation or data analytics, replication remains the most transparent and least intrusive technique. 
+
+In this project, replication is combined with checkpointing to enable rollback and recovery when forward recovery is not possible, which occurs when too many replicas are corrupted. The goal is to find the right level of replication (duplication, triplication or more) needed to efficiently detect and correct silent errors at scale. We have provided a detailed analytical study for this framework in the previous years.
+
+In the last year of the project, we have extended these results for platforms subject to both silent and fail-stop errors. Fail-stop errors are immediately detected, unlike silent errors, and replication may also help tolerating such errors. 
+
+We have considered two flavors of replication: process replication and group replication. Process replication applies to message-passing applications with communicating processes. Each process is replicated, and the platform is composed of process pairs, or triplets. Group replication applies to black-box applications, whose parallel execution is replicated several times. The platform is partitioned into two halves (or three thirds). In both scenarios, results are compared before each checkpoint, which is taken only when both results (duplication) or two out of three results (triplication) coincide. If not, one or more silent errors have been detected, and the application rolls back to the last checkpoint, as well as when fail-stop errors have struck. 
+
+We provide a detailed analytical study for all of these scenarios, with formulas to decide, for each scenario, the optimal parameters as a function of the error rate, checkpoint cost, and platform size. We also report a set of extensive simulation results that nicely corroborates the analytical model.
+
+While the previous work had focused on applications for which we can decide at which frequency we can checkpoint, and our aim has been to find the optimal checkpointing period, we have also initiated the study for linear chains of parallel tasks. The aim is then to decide which tasks to checkpoint and/or replicate. In this case, we have
+provided an optimal dynamic programming algorithm, and an extensive set of simulations to assess (i) in which scenarios checkpointing performs better than replication, or vice-versa; and (ii) in which scenarios the combination of both methods is useful, and to what extent.
+
 
 
 ## Visits and meetings
 
-{% person cavelan_a %} visited {% person cappello_f %} in Chicago for three 
-months (march-april-may 2016) to initiate the project. We are working 
-in close collaboration to make progress.
+{% person cavelan_a %} visited {% person cappello_f %} in Chicago for three months (March, April, and May 2016) to initiate the project. Furthermore, we have been meeting regularly in the previous years. In particular,
+we have been attending the SC conference (November 2016
+and November 2017), where we had extensive discussions to make progress. 
+We represented the JLESC at the Inria booth during these conferences. 
+
+While not meeting in person, we have stayed in close collaboration through regular Skype meetings,
+which allowed us to make progress on the project. 
+
 
 ## Impact and publications
 
-Two papers have been accepted to FTXS'17 {% cite benoitEtAl2017identifying --file external/ft_workflow_project.bib
-%},{% cite benoitEtAl2017optimal --file external/ft_workflow_project.bib
-%}.
+Two papers have been accepted to FTXS'17 {% cite benoitEtAl2017identifying --file external/ft_workflow_project.bib %},{% cite benoitEtAl2017optimal --file external/ft_workflow_project.bib %}.
+
+The most recent work combining fail-stop and silent errors has been submitted to JPDC ("Coping with silent and fail-stop errors at scale by combining replication and checkpointing"). 
+
+The initial work on linear chain of tasks will be submitted to APDCM'18 ("Combining Checkpointing and Replication for Linear Workflows"). 
+
 
 {% comment %}
 =============================
@@ -149,7 +165,21 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 ## Future plans
 
-Our work has been focused detecting and correcting silent data corruptions. We first plan to extend our current analytical study to account for both silent and fail-stop errors. Then, work will be directed toward more complex applications such as linear workflows or pipelined applications.
+There remains a lot to explore for workflow applications, consisting of tasks. 
+We have so far focused only on duplication in this case, but
+one may want to consider different replication levels (duplication, triplication or more) to different tasks, depending upon their criticality in terms of longest paths, number of successors, etc. 
+This may be even more important when considering a general directed acyclic graph of tasks,
+rather than restricting to linear chains of tasks. This topic is called partial replication,
+and even though it has been empirically studied by some previous work, designing an optimal strategy that combines partial redundancy and checkpointing and analyzing its efficacy remain to be done.
+
+Also, we have not yet explored how replication may help correct silent data corruptions in 
+workflow applications, since our initial study considers only fail-stop errors. Combining
+both types of errors for workflow applications is a challenging perspective to our work. 
+
+Finally, our initial goal was to target pipelined workflow applications, where data continuously
+enters the workflow, and where the objective is to maximize the throughput that can be achieved.
+This causes several new challenges that we hope to address in the future. 
+
 
 
 ## References
