@@ -51,7 +51,7 @@ Miwako Tsuji visited NCSA in January 2017.
 
 ## Impact and publications
 
-{% cite SSSP2017 --file jlesc.bib %}
+{% cite TsujEtAl2017 --file jlesc.bib %}
 
 <!--
 {% comment %}
