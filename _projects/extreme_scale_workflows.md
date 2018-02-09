@@ -80,6 +80,112 @@ Current In Situ infrastructures adopt very often a fixed policy to manage mismat
 
 Scientific workflows are an aggregation of several tasks exchanging messaging. Usually each task is developed independently as a single piece of software. When integrating these codes into a a workflow, the developer has to build interfaces to exchange data between each task. To get the best performance for a particular workflow, the user should only send necessary data. However, simulation and analysis codes are complex code hard to maintain. It is then desired that the user modify only once their respective code. This imposes that the developer should expose as much data as possible to cover the maximum of use cases. Yet this approach could create significant performance impact due to unnecessary data being send for a particular workflow. We are currently investigating the notion of contracts for tasks. A contract is a declaration by the user of all the data that a particular need to work and all the data that the task can emit. Given this information, we can perform several checks and optimizations. First we check that the user is not trying to connect incompatible tasks with a data model mismatch. Second we can check at runtime that each task is sending the correct data. Third we can filter the data at runtime to send only necessary data for each consumer. This work is currently being integrated in Decaf. 
 
+## Results for 2017/2018
+
+### PyCompss, Decaf distributed/in situ workflow convergence
+
+ * Rosa Badia and Jorge Ejarque of BSC, Matthieu Dreher and  Tom Peterka of ANL
+
+We are investigating convergence between distributed workflows (or
+wide area workflows) and in situ workflows. PyCOMPSs is a workflow  engine
+developed at BSC aiming at coordinating the execution of jobs in a wide area.
+Data exchanges between tasks are done through files. This approach is very
+convenient for wide areas but are not suitable for HPC resources. Decaf is a
+runtime to describe and execute in situ workflows. Decaf focuses on coordinating
+tasks running on the same cluster or data-center. In this context data are
+exchanged through memory or high performance networks. We have built a
+prototype combining both runtimes where a Decaf workflow is an individual task
+in a PyCOMPSs workflow. The objective is to automate the full science pipeline
+to discovery by merging high performance in situ workflows (Decaf) with
+traditional post-processing methods into a single workflow (PyCOMPSs).
+
+In 2018, our goal is to investigate science use cases of such an integrated
+distributed area / in situ workflow system. We have identified one synthetic
+example derived from cosmology and one actual example derived from materials
+science. In the first case, the in situ workflow consists of three
+tasks---synthetic particle generation, Voronoi tessellation, and density
+estimation---while the distributed area workflow is a Python plotting task to
+visualize the results. In the second case, the in situ workflow consists of the
+LAMMPS molecular dynamics code and in situ filtering of molecule clusters while
+the distributed area workflow consists of a Python visualization engine.
+
+### Flow control management for in situ workflows
+
+ * Bruno Raffin, INRIA, Matthieu Dreher and Tom Peterka of ANL
+
+Current in situ infrastructures often adopt a fixed policy to manage
+mismatched data rates between parallel tasks exchanging data. If the consumer is
+too slow,  a policy might be to block the producer, slowing down the whole
+pipeline to the slowest component, or to drop an entire frame. We built a
+communication library called Manala that offers: 1) Possibility to buffer data in several memory
+layers, 2) Buffering done synchronously or asynchronously 3) communications done
+in parallel, 4) is part of the Decaf project and is compatible with the Bredala
+data model previously developed in this project. This work was published in IEEE
+Cluster 2017 and was presented by Matthieu Dreher.
+
+### Data contracts for in situ workflows
+
+ * Clement Mommessin (ANL), supervised by Matthieu Dreher (ANL), Bruno Raffin (INRIA) and Tom Peterka (ANL)
+
+Scientific workflows are an aggregation of several tasks exchanging data.
+Usually each task is developed independently as a single piece of software. When
+integrating these codes into a a workflow, the developer has to build interfaces
+to exchange data between each task. To get the best performance for a particular
+workflow, the user should only send necessary data. However, simulation and
+analysis codes are complex code hard to maintain. In order to minimize code
+changes, the developer often exposes as much data as possible to cover the
+maximum number of use cases. Yet this approach could create significant
+performance impact due to unnecessary data being send for a particular workflow.
+We solved this problem with the notion of contracts for tasks. A contract is a
+declaration by the user of all the data that a particular need to work and all
+the data that the task can produce.  Given this information, we can perform
+several checks and optimizations. First, we check that the user is not trying to
+connect incompatible tasks with a data model mismatch. Second, we can check at
+runtime that each task is sending the correct data. Third, we can filter the
+data at runtime to send only necessary data for each consumer. This work is part
+of the Decaf project and is compatible with the Bredala data model and Manala
+flow control library developed in this project. This work was published in IEEE
+Cluster 2017 and was presented by Matthieu Dreher on behalf of Clement
+Mommessin.
+
+### Data contracts for storage systems
+
+* Matthieu Dorier (ANL) and Matthieu Dreher (ANL)
+
+The data contract idea described above was extended to storage systems. Data
+management is a critical component of high-performance computing, with storage
+as a cornerstone. Yet the traditional model of parallel  file systems fails to
+meet users’ needs, in terms of both performance and features. In response, we
+proposed CoSS, a new storage model based on contracts. Contracts encapsulate in
+the same entity the data model (type, dimensions, units, etc.) and the intended
+uses of the data. They enable the storage system to work with much more
+knowledge about the input and output expected from an application and how it
+should be exposed to the user.  This knowledge enables CoSS to optimize data
+formatting and placement to best fit user’s requirements, storage space, and
+performance. Matthieu Dorier presented a concept paper at the SC17 PDSW workshop
+that introduces the idea of contract-based storage systems and presents some of
+the opportunities it offers, in order to motivate further research in this
+direction.
+
+### Workflows and operating systems
+
+Implementing an in situ workflow involves several challenges related to data
+placement, task scheduling, efficient communication, scalability, and
+reliability. Most current in situ workflow systems focus on high-performance
+communications and low-overhead execution models at the cost of reliability and
+flexibility.  One of the key design choices in such infrastructures is between
+providing a single-program, integrated environment or a multipleprogram,
+connected environment, both solutions having their own strengths and weaknesses.
+While these approaches might be appropriate for current production systems, the
+expected characteristics of exascale machines will shift current priorities.
+After surveying the tradeoffs and challenges of integrated and connected in situ
+workflow solutions available today, we studied how exascale systems will impact
+those designs. In particular, we identified missing features of current system
+software required for the evolution of in situ workflows toward exascale and how
+system software innovations can help address those challenges.  Matthieu Dreher
+presented a concept paper at the SC17 ISAV workshop on these topics.
+
+
 ## Visits and meetings
 
  * Pierre-Louis Guhur of ENS 9 months at ANL in 2016
@@ -87,6 +193,9 @@ Scientific workflows are an aggregation of several tasks exchanging messaging. U
  * Estelle Dirand of INRIA 3 days at ANL (28-29 July 2016)
  * Bruno Raffin of INRIA 3 days at ANL (7-9 November 2016)
  * Estelle Dirant participated in the ATPESC summer school at ANL in 2016
+ * Orcun Yildiz hired as a postdoc in ANL, under the direction of Tom Peterka,
+   beginning in February 2018
+
 
 ## Impact and publications
 
