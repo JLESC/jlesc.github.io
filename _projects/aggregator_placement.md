@@ -45,6 +45,8 @@ We have taken into account the network topology for mapping aggregators and we p
 We have validated our approach using micro-benchmarks and the I/O kernel of a large-scale cosmology simulation.
 We have showed improvements up to 15x faster for I/O operations compared to a standard implementation of MPI I/O.
 
+## Results for 2017/2018
+We have developed TAPIOCA, an MPI-based library implementing an efficient topology-aware two-phase I/O algorithm. TAPIOCA can take advantage of double-buffering and one-sided communication to reduce as much as possible the idle time during data aggregation. We validate our approach at large scale on two leadership-class supercomputers: Mira (IBM BG/Q) and Theta (Cray XC40). On both architectures, we show a substantial improvement of I/O performance compared with the default MPI I/O implementation.
 
 ## Visits and meetings
 
@@ -52,35 +54,13 @@ We have showed improvements up to 15x faster for I/O operations compared to a st
 * François Tessier stayed 10 days at ANL on March 2015
 * Emmanuel Jeannot visited ANL on June 2016
 * François Tessier visited Inira on December 2016
+* Emmanuel Jeannot and Guillaume Aupy visited ANL on July 2017
 
 ## Impact and publications
 
 François Tessier moved from Inria to ANL in February 2016. A part of his work is focused on this project. 
-Results have been published in the 1st Workshop on Optimization of Communication in HPC runtime systems (IEEE COM-HPC16), in conjunction with SuperComputing 2016 {% cite tmv16+ --file jlesc.bib %}
-
-<!--
-{% comment %}
-=============================
-== CITING OWN PUBLICATIONS ==
-=============================
-
-You can list your own publications below in case you did not cite them in the text
-(which you should do, though).
-Use the Liquid citing syntax as explained in the wiki:
-https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publications
-Remember to use the `--file jlesc.bib` with the `cite` tag.
-
-=====================================
-== START HERE WITH YOUR ADDITIONAL REFERENCES ==
-{% endcomment %}
-
-
-
-{% comment %}
-== NO MORE BELOW THIS ==
-========================
-{% endcomment %}
--->
+Results have been published in the 1st Workshop on Optimization of Communication in HPC runtime systems (IEEE COM-HPC16), in conjunction with SuperComputing 2016 {% cite tmv+16 --file jlesc.bib %}.
+We have published our work on Tapioca in Cluster 2017 {%cite tvj17 --file jlesc.bib %}.
 
 {% bibliography --cited --file jlesc.bib %}
 
@@ -89,8 +69,8 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 The next step will be to determine the parameters to consider to compute a near-optimal number of aggregators.
 Additionally, we plan to implement the topology-aware aggregator placement once a stable version of data aggregation will be developed.
-We want to exted our approach to any kind of HPC system and especially to the new Theta system.
-Visists between Inria and ANL are planned for the summer 2017. 
+We want to extend our approach to any kind of HPC system and especially to the new Theta system.
+We also want to work on memory partitioning for workflow performing I/O request. A visit in spring 2018 is scheduled between ANL and INRIA. 
 
 ## References
 
