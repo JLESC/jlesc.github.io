@@ -8,8 +8,8 @@ subnavbar: Projects
 project_url:
 status: running
 topics:
-  - numerics
   - prog_lang
+  - numerics
 keywords:
   - Fast Multipole Method, tasking, MPI-3, MPI-4
 head: kabadshow_i
@@ -42,11 +42,21 @@ With the experience from this implementation we implemented a tasking framework 
 This tasking library is specialized for communication bound problems like they arose in MD simulations.
 For the fine grained resolution of dependencies we implemented a dependency resolver which is configurable at compile time via template meta programming.
 
+## Results for 2017/2018
+The task engine was extended with compile-time type-driven priority scheduling.
+This step was necessary to reduce the runtime overhead of the multiqueue.
+In order to increase the scalability for an increasing number of cores per node, the task engine was enhanced with NUMA-aware work stealing and NUMA-aware allocations.
+Both features ensure that data locality is maintained and data crosses the NUMA boundary only if absolutely necessary.
+Another source of performance degradation was tackled by exchanging the standard mutex locks with scalable MCS locks.
+Several strategies have been tested and the overall runtime could be reduced by more than 15% for high core numbers where lock contention exists.
+Finally the tasking layer was extended with a preliminary version of the internode communication layer and hybrid dispatching.
+This will allow to scale the task engine beyond the node boundary.
+
 ## Visits and meetings
 {% person haensel_d %} joined the group of {% person balaji_p %} in Mai/June 2016 to develop a tasking scheme for FMSolvr on top of Argobots. This visit was vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).
 
 ## Impact and publications
-None yet.
+A master thesis on the extension of the task engine was written by Laura Morgenstern at TU Chemnitz {% cite morgenstern2017 --file external/fmm_project.bib %}.
 
 <!--
 
@@ -55,8 +65,8 @@ None yet.
 
 
 ## Future plans
-Currently we are integrating the tasking framework with the communication layers. 
-This enables us to control the algorithmic flow and parallelization in detail. With this MPI-enabled tasking framework we will elaborate alternative communication strategies using MPI-3 and MPI-4.
+The internode communication layer needs to be tested in depth on different platforms.
+Especially since we are dealing with latency-critical problems arising in MD simulations, the communication layer overhead needs to be minimized.
 
 ## References
 
