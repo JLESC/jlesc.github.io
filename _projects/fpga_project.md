@@ -62,6 +62,8 @@ We organized an international workshop on FPGA for scientific simulation and dat
 ## Results for 2016/2017
 We gave presentations on our FPGA work at the H2RC workshop and the post-Moore workshop in SC16. We organized the second international workshop on FPGA for scientific simulation and data analytics at NCSA in Urbana, Illinois.
 
+## Results for 2017/2018
+We presented two technical posters related to high-level synthesis and custom FPGA designs in SC17. We also co-organized a bird-of-feather session about reconfigurable computing in SC17. We have built FPGA test environment for cutting-edge FPGA platforms and high-level synthesis tools.
 
 ## Visits and meetings
 {% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
