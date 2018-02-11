@@ -43,7 +43,7 @@ This tasking library is specialized for communication bound problems like they a
 For the fine grained resolution of dependencies we implemented a dependency resolver which is configurable at compile time via template meta programming.
 
 ## Results for 2017/2018
-The task engine was extended with a compile-time type-driven priority scheduling.
+The task engine was extended with compile-time type-driven priority scheduling.
 This step was necessary to reduce the runtime overhead of the multiqueue.
 In order to increase the scalability for an increasing number of cores per node, the task engine was enhanced with NUMA-aware work stealing and NUMA-aware allocations.
 Both features ensure that data locality is maintained and data crosses the NUMA boundary only if absolutely necessary.
