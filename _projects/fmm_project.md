@@ -56,7 +56,7 @@ This will allow to scale the task engine beyond the node boundary.
 {% person haensel_d %} joined the group of {% person balaji_p %} in Mai/June 2016 to develop a tasking scheme for FMSolvr on top of Argobots. This visit was vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).
 
 ## Impact and publications
-A master thesis on the extension of the task engine was written by Laura Morgenstern at TU Chemnitz {% morgenstern2017 --file external/fmm_project.bib %}.
+A master thesis on the extension of the task engine was written by Laura Morgenstern at TU Chemnitz {% cite morgenstern2017 --file external/fmm_project.bib %}.
 
 <!--
 
