@@ -34,15 +34,15 @@ Contributions:
 * analysis of numerical scaling and cost per time step for different time-stepping schemes for quantum dynamics based on time-dependent Kohn-Sham equations
 * numerical study of electron dynamics in model systems
 
-<!-- ## Results for 2015/2016
-None yet, the project has just started. -->
-
 ## Results for 2016/2017
 We began interfacing Qbox/Qb@ll with PETSc. We have forked Qb@ll and started to explore passing the state variables to PETSc. PETSc will perform the time stepping.
 
+## Results for 2017/2018
+We have interfaced PETSc with Qb@ll in a separate repository. The interface is not fully functional, we are currently working on fixing the variable mapping: PETSc-> Qb@ll and Qb@ll -> PETSc.
+
 ## Visits and meetings
 <!-- Since this is a starting cooperation no visits have been initiated. -->
-None yet.
+We had a meeting on Dev 13, 2017 - Andre visited Argonne.
 
 ## Impact and publications
 None yet.
