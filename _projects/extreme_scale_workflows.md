@@ -121,7 +121,7 @@ communication library called Manala that offers: 1) Possibility to buffer data i
 layers, 2) Buffering done synchronously or asynchronously 3) communications done
 in parallel, 4) is part of the Decaf project and is compatible with the Bredala
 data model previously developed in this project. This work was published in IEEE
-Cluster 2017 and was presented by Matthieu Dreher.
+Cluster 2017~\cite{dreher_cluster17} and was presented by Matthieu Dreher.
 
 ### Data contracts for in situ workflows
 
@@ -145,7 +145,7 @@ runtime that each task is sending the correct data. Third, we can filter the
 data at runtime to send only necessary data for each consumer. This work is part
 of the Decaf project and is compatible with the Bredala data model and Manala
 flow control library developed in this project. This work was published in IEEE
-Cluster 2017 and was presented by Matthieu Dreher on behalf of Clement
+Cluster 2017~\cite{mommessin_cluster17} and was presented by Matthieu Dreher on behalf of Clement
 Mommessin.
 
 ### Data contracts for storage systems
@@ -162,7 +162,7 @@ uses of the data. They enable the storage system to work with much more
 knowledge about the input and output expected from an application and how it
 should be exposed to the user.  This knowledge enables CoSS to optimize data
 formatting and placement to best fit user’s requirements, storage space, and
-performance. Matthieu Dorier presented a concept paper at the SC17 PDSW workshop
+performance. Matthieu Dorier presented a concept paper at the SC17 PDSW workshop~\cite{dorier_pdsw17}
 that introduces the idea of contract-based storage systems and presents some of
 the opportunities it offers, in order to motivate further research in this
 direction.
@@ -183,7 +183,7 @@ workflow solutions available today, we studied how exascale systems will impact
 those designs. In particular, we identified missing features of current system
 software required for the evolution of in situ workflows toward exascale and how
 system software innovations can help address those challenges.  Matthieu Dreher
-presented a concept paper at the SC17 ISAV workshop on these topics.
+presented a concept paper at the SC17 ISAV workshop~\cite{dreher_isav17} on these topics.
 
 
 ## Visits and meetings
