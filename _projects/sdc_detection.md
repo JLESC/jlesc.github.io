@@ -81,8 +81,10 @@ international conference and it is currently under review. The software
 prototype, called MACORD, is pending approval for open source publication. In
 addition, several separate efforts across have been made in order to test
 selective replication for dealing with SDC in HPC systems {% cite subasi2017rep
---file jlesc.bib %}, in particular for task-based programming
-languages {% cite subasi2016run --file jlesc.bib %}.
+--file jlesc.bib %}, in particular for task-based programming languages {% cite
+subasi2016run --file jlesc.bib %}. A comprehensive study of support vecotr
+machines capabilities on detecting silent data corruption was published aspart
+of the sustainable computing journal {% cite Subasi2018 --file jlesc.bib%}.
 
 
 
