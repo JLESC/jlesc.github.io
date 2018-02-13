@@ -82,10 +82,21 @@ prototype, called MACORD, is pending approval for open source publication. In
 addition, several separate efforts across have been made in order to test
 selective replication for dealing with SDC in HPC systems {% cite subasi2017rep
 --file jlesc.bib %}, in particular for task-based programming languages {% cite
-subasi2016run --file jlesc.bib %}. A comprehensive study of support vecotr
-machines capabilities on detecting silent data corruption was published aspart
-of the sustainable computing journal {% cite Subasi2018 --file jlesc.bib%}.
+subasi2016run --file jlesc.bib %}.
 
+## Results for 2017/2018
+
+A comprehensive study of support vector machines capabilities on detecting
+silent data corruption was published as part of the sustainable computing
+journal {% cite Subasi2018 --file jlesc.bib%}. This is an extension and
+aggregation of several research efforts done within this project.  After all
+the results produced by this project, most of the partners in the project
+started working on different topics, some of them related to resilience others
+in other domains. Some of these new interests formed new collaboration projects
+within the JLESC. Thus, it was decided to suspend the project and close it
+after six months.  However, due to renewed interest on the project with fresh
+ideas, the project was restarted. Currently, BSC and RIKEN are investigating
+energy-free alternatives to SDC quantification in large scale supercomputers.
 
 
 ## Visits and meetings
@@ -101,10 +112,11 @@ of the sustainable computing journal {% cite Subasi2018 --file jlesc.bib%}.
 
 ## Future plans
 
-The project will be suspended as most of the partners in the project have
-started working on different topics, some of them related to resilience others
-in other domains. Some of these new interests are forming new collaboration
-projects within the JLESC.
+We are developing open source tools for large scale energy-free SDC
+quantification for a wide variety of architectures. Ideally, JLESC partners can
+test the developed tools and deploy them on their machines. We expect to gather
+large amounts of data from diverse systems to have enough statistical
+robustness to draw clear conclusions on SDC occurrence in large scale systems.
 
 ## References
 
