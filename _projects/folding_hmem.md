@@ -14,7 +14,6 @@ keywords:
 head: pena_a
 members:
   - servat_h
-  - oden_l
   - gimenez_j
   - labarta_j
   - balaji_p
@@ -41,17 +40,22 @@ Our emulation shows that, in the case highly accessed objects are not fitting in
 ## Results for 2016/2017
 We are following separate paths until we get ready to combine our research. ANL has been working in programming models, whereas BSC has been working in the underlying tools.
 
+## Results for 2017/2018
+We have published a last paper on Extrae's methodology. We believe we have accomplished the objectives of the project and we have successfully proved data-oriented profiling using hardware sampling instead of emulation can be used to assist on data distribution for heterogeneous memory systems. We will follow-up on a new JLESC project in short.
+
 ## Visits and meetings
-Frequent teleconferences and e-mail exchanges. No planned visits yet. {% person pena_a %} moved from Argonne to BSC.
+Frequent teleconferences and e-mail exchanges. No planned visits yet. {% person pena_a %} moved from Argonne to BSC in 2015.
+In February 2018 {% person pena_a %} has visited ANL and we have decided that (1) the objectives of this project are already successfully accomplished and (2) the planned upcoming work on heterogeneous memories will better fit a new project.
 
 ## Impact and publications
-We are writing separate papers.
+The research in this project lead to the definition of a Marie Slodowska-Curie Individual Fellowship (MSCA-IF): "Advanced Ecosystem for Broad Heterogeneous Memory Usage" (ECO-H-MEM). The proposal was funded and it is scheduled to start on March 1st. In addition, a follow-up task has also been funded in EU H2020 Project "European joint Effort toward a Highly Productive Environment for Heterogeneous Exascale Computing" (EPEEC), to start on May 1st 2018. Hence, apart from the publications listed below, this project under the JLESC umbrella has successfully served as an incubator toward mature proposals.
+
+The developments of this project have been publically released in both EVOP (ANL) and Extrae software packages.
 
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
-Validate the sampling technique for data distribution by implementing and evaluating sampling on EVOP.
-Joint software release.
+To start a new JLESC project to follow-up on a broader direction besides the Extrae validation.
 
 ## References
 
