@@ -18,7 +18,6 @@ keywords:
 head: di_napoli_e
 members:
   - schleife_a
-  - suno_h
   - winkelmann_j
 ---
 {% comment %}
@@ -31,15 +30,43 @@ https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publ
 
 {% endcomment %}
 
-## Research topic and goals
+## Research topics and goals
 
 In this project we propose to focus on the modern implementation of
 one of the oldest subspace iteration methods: the Chebyshev
 Accelerated Subspace Eigensolver (ChASE), recently developed at
-JSC. ChASE is tailored to compute a fraction not exceeding 20\% of the
+JSC. ChASE is tailored to compute a fraction not exceeding 20% of the
 extremal spectrum of dense Hermitian eigenproblems.
 
-### Topic 1: Optimizing ChASE for Bethe-Salpeter computations on multi-GPUs
+### Scaling the ChASE for large Hermitian eigenvalue problems
+
+State of the art eigensolvers used in Computational Science and
+Engineering present evidence of widely varying performance and serious
+limitations when it comes to scalability over thousands of
+cores. Scalability is often an issue intrinsic to the algorithms
+granularity which determines the amount of parallelism
+available. Ultimately, though, it is the rigid structure of the
+libraries imposing limitations on the optimal use of the hierarchical
+structure of the caches that creates serious restrictions to the level
+of scalability these routines can achieve.
+
+An appealing alternative to traditional algorithms for dense and
+sparse problems is a class of modern iterative eigensolvers based on
+subspace iteration with spectral projection. Thanks to their simple
+algorithmic structure and extended granularity, this class of
+algorithms are experiencing a revival as an alternative to traditional
+dense solvers. Moreover, at the sub-routine level the internal tasks
+can be designed so as to use almost exclusively low level kernels from
+specialized libraries, such as BLAS, guaranteeing performance
+portability.
+
+The objective of this topic is to port the ChASE library to the
+largest computing architectures currently available, 
+generalize its interface so as to allow multiple parallelization schemes, and extend
+its applicability by supporting the solution of large
+Hermitian eigenvalue problems.
+
+### Optimizing ChASE for Bethe-Salpeter computations on multi-GPUs
 
 Accurate predictions for the interaction of light with matter are
 crucial, for instance, to design novel optoelectronic or photovoltaic
@@ -73,44 +100,14 @@ envision exploring a folded-spectrum method to also access the
 high-energy range of the spectrum, which may become important to
 detect, for instance, Fano resonances.
 
-### Topic 2: Scaling the ChASE for large Hermitian eigenvalue problems
-
-State of the art eigensolvers used in Computational Science and
-Engineering present evidence of widely varying performance and serious
-limitations when it comes to scalability over thousands of
-cores. Scalability is often an issue intrinsic to the algorithms
-granularity which determines the amount of parallelism
-available. Ultimately, though, it is the rigid structure of the
-libraries imposing limitations on the optimal use of the hierarchical
-structure of the caches that creates serious restrictions to the level
-of scalability these routines can achieve.
-
-An appealing alternative to traditional algorithms for dense and
-sparse problems is a class of modern iterative eigensolvers based on
-subspace iteration with spectral projection. Thanks to their simple
-algorithmic structure and extended granularity, this class of
-algorithms are experiencing a revival as an alternative to traditional
-dense solvers. Moreover, at the sub-routine level the internal tasks
-can be designed so as to use almost exclusively low level kernels from
-specialized libraries, such as BLAS, guaranteeing performance
-portability.
-
-The objective of this topic is to port the ChASE library to the
-K-Computer, generalize its current parallelization scheme, and extend
-its applicability by supporting the solution of large and sparse
-Hermitian eigenvalue problems.
-
 #### Contributions
 
-* Port and validate the robustness of the reference version of the ChASE library on the K-Computer;
+* Port and validate the robustness of the reference version of the ChASE library on Blue Waters;
 * Extend the reference implementation of ChASE to distributed memory platforms by porting the new hybrid parallelization of the Chebyshev filter;
 * Extend the hybrid parallelization to the Rayleigh-Ritz projection, QR factorization and residual computation;
-* Extend the distributed memory parallelization to sparse matrices;
 * Testing the scalability of ChASE when solving extremely large Hermitian eigenvalue problems extracted from specific applications.
 
 ## Results for 2015/2016
-
-### Topic 1
 
 This project was discussed for the first time during the JLESC meeting
 in December of 2015 in Bonn. Since then, both PIs set up the necessary testing
@@ -126,13 +123,7 @@ the relative matrices. Already at this stage the ChASE solver showed to
 outperform KSCG out-of-the-box despite operating in sub-optimal conditions.
 These results were presented at the JLESC workshop in Lyon, France (2016).
 
-### Topic 2
-
-Will start in 2017
-
 ## Results for 2016/2017
-
-### Topic 1
 
 In a second phase, the ChASE library underwent a restructuring 
 of the parallelization scheme in order to accommodate for a 
@@ -157,13 +148,7 @@ we will fully integrate the MPI+CUDA version of ChASE and run tests on Blue Wate
 Eventually we plan to demonstrate the potential of the new solver by tackling
 a physical system of unprecedented size which will require thousands of computing nodes.
 
-### Topic 2
-
-Just started.
-
 ## Results for 2017/2018
-
-### Topic 1
 
 In the third phase of this project, the ChASE library was completely 
 re-written in order to separate the actual ChASE algorithm from the numerical kernels.
@@ -185,46 +170,29 @@ using as many computing nodes and GPU cards on Blue Waters as feasible for the s
 under scrutiny. The results of these tests will be presented in a publication,
 we plan to submit just before the JLESC meeting in Barcelona on April 17-19. 
 
-### Topic 2
-
-Despite several attempts to jump start this topic, it was not possible to make any progress
-due to the transfer of one of the partners from AICS to a different institution. As such 
-this topic could be considered unofficially closed.
-
 
 ## Visits and meetings
-
-### Topic 1
 
 * March 3 -- 11 2017: Jan Winkelmann and Edoardo Di Napoli visited
 Andre Schleife in Urbana, Champaign. During the visit several
 important details were tackled, paving the way to a promising
 integration of the ChASE library into Jena BSE code.
 
-### Topic 2
-
-No extra visits or meeting are foreseen besides the bi-annual JLESC meetings.
-
 #### Compute resource needs
 
-Test account on K-Computer in the first phase of the project. We 
-apply for computational resources of the K-Computer in the Category 
-of *General Trial Use*. In the final phase of the project, it will be 
-necessary to obtain computing
-time compatible with the solution of very large eigenproblems on the
-whole K-Computer. For this purpose, we apply for computational resources as a *General 
-Use* project.
+* Test account on JURECA for Matrix generation in the first phase of the project 
+* Regular account on Blue Waters in the successive phases of the project.
 
 ## Impact and publications
 
-None yet.
+* One journal publication presenting the new ChASE library to be submitted in March 2018
+* One conference publication presenting results related to the use of ChASE to solve very 
+large eigenvalue problems generated by the BSE Jena code to be submitted in April 2018
 
 {% bibliography --cited --file jlesc.bib %}
 
 
 ## Future plans
-
-### Topic 1
 
 The next step is to fully integrate a hybrid parallelization of 
 the ChASE library into the Jena BSE code 
@@ -240,29 +208,6 @@ Jena BSE code in such a way as to accommodate the HDF5 standard.
 Allocating resources to such task and possibly an enlargement 
 of the collaboration effort to the developers of the HDF5 library 
 are envisaged.
-
-### Topic 2
-
-As part of a positive outcome for this project we expect to publish a
-number of new scientific papers. One such publication will focus on
-the porting and optimization of the ChASE library to the K-Computer,
-while additional papers will report new scientific results made
-accessible by the algorithmic improvements. We plan to tackle
-eigenproblems arising from distinct areas of quantum chemistry,
-materials science, and fundamental physics. For instance, the
-calculation of roto-vibrational energy spectrum of small molecules
-requires the solution of eigenproblems, representing the
-Schrödinger equation, with matrix size amounting to several
-millions. Similarly, in lattice quantum chromodynamics (QCD)
-simulations, we plan to approach the computation of the spectrum of
-the (sparse) Wilson-Dirac operator by solving eigenproblems with
-matrix sizes from about one million to about one billion. These are
-just examples of the type scientific applications where the use of the
-ChASE library can be expected to lead to several publications.
-
-* PHASE I (Months 1-12): Porting of the reference version of ChASE library on the K-Computer, checking its robustness;  extension to distributed memory and hybrid parallelization schemes, and 
-sparse matrices.
-* PHASE II (Months 12-24): Applications to the scientific applications; testing the scalability of ChASE in solving extremely large eigenvalue problems.
 
 ## References
 
