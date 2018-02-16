@@ -273,7 +273,7 @@ bosilca_g:
   given_name: George
   affiliation: icl
   position: permanent
-  topics:
+  topics: HPC, Resilience, programming models
   email: bosilca@icl.utk.edu
   homepage: http://www.icl.utk.edu/~bosilca/
 
@@ -285,6 +285,15 @@ bouge_l:
   topics: Big Data & I/O
   email: luc.bouge@ens-rennes.fr
   homepage: https://team.inria.fr/kerdata/luc-bouge/
+
+bouteiller_a:
+  sur_name: Aurelien
+  given_name: Bouteiller
+  affiliation: icl
+  position: permanent
+  topics: HPC, Resilience, programming models
+  email: bouteill@icl.utk.edu
+  homepage: http://www.icl.utk.edu/~bouteill/
 
 brown_m:
   sur_name: Maxine D.
@@ -975,6 +984,15 @@ jung_j:
   topics: Molecular Dynamics
   email: jung@riken.jp
   homepage: http://www.riken.jp/TMS2012/cbp/en/member/profile/jaewoon_jung.html
+
+herault_t:
+  sur_name: Thomas
+  given_name: Herault
+  affiliation: icl
+  position: permanent
+  topics: HPC, Resilience
+  email: herault@icl.utk.edu
+  homepage: https://scholar.google.com/citations?user=tEPKoK0AAAAJ&hl=en
 
 kabadshow_i:
   sur_name: Kabadshow
