@@ -21,12 +21,12 @@ members:
 
 State compression is an important technique for reducing the problem posed by the bandwidth plateauing of the HDD-based storage systems. 
 
-The state saved by HPC executions in checkpoints is composed mostly of floating-point data (single or double precision). Two types of compressors have been developed for floating-point data. Lossless compressors keep all the initial information and try to reduce the size occupied by this information. Sophisticated lossless compression techniques may use entropy analysis, duplicate string elimination, or bit reduction, for example {% cite LindstromETAl2006 --file external/Lossy_checkpoint_restart.bib %}, {% cite IbteshamETAl2012 --file external/Lossy_checkpoint_restart.bib %}. 
-The compression factor generally observed with lossless compression is 1.2 to 4 (the compressed data set is 1.2 to 4 times smaller than the original). Lossy compressors deliberately lose information in order to reduce the size of the initial data set further. Lossy compressors reach very variable compression ratios depending on the application. This could be from 3 to 4 for difficult-to-compress data sets (lossless compressors would achieve a compression ratio of 1.5 to 2 on those data sets) to x100 for easier-to-compress data sets. Lossy compressors can be error bounded or not. Lossy compressors that are not error bounded simply compress the data set as much as they can, with no guarantee on the error on each decompressed data. Their applicability is limited in HPC because users have expectations in terms of accuracy. Error bounded lossy compressors allow users to set a maximum (or relative) compression/decompression error. The maximum error is the maximum of the difference between any initial data in the data set and its decompressed version (from its lossy compressed version). The user has a guarantee of a maximum loss of information quantified by the maximum compression/decompression errors. Users will set the maximum error to match their accuracy expectations. Note that all lossy compressors keep all data points of the initial data set (none of the lossy compressors drop data points).
+The state saved by HPC executions in checkpoints is composed mostly of floating-point data (single or double precision). Two types of compressors have been developed for floating-point data. Lossless compressors keep all the initial information and try to reduce the size occupied by this information. Sophisticated lossless compression techniques may use entropy coding, runlengh encoding, dictionary coding for example {% cite LindstromETAl2006 --file external/Lossy_checkpoint_restart.bib %}, {% cite IbteshamETAl2012 --file external/Lossy_checkpoint_restart.bib %}. 
+The compression factor generally observed on scientific datasets with lossless compression is 1.2 to 2 (the compressed data set is 1.2 to 2 times smaller than the original). Lossy compressors deliberately lose information in order to reduce the size of the initial data set further. Lossy compressors reach very variable compression ratios depending on the application and the error bounds set by the users. This could be from less than 10 for difficult-to-compress data sets (lossless compressors would achieve a compression ratio of 1.5 to 2 on some extreme cases) to 100 for easier-to-compress data sets. Lossy compressors can be error bounded or not. Lossy compressors that are not error bounded simply compress the data set as much as they can, with no guarantee on the error on each decompressed data. Their applicability is limited in HPC because users have expectations in terms of accuracy. Error bounded lossy compressors provide different error controls such as absolute error and relative error bounds. Some compressors also provide stratistical bounds. For example, SZ provides PSNR bound (lower). The user has a guarantee of a maximum loss of information quantified by the maximum compression/decompression errors. Users will set the error bound to match their accuracy expectations. Note that all lossy compressors keep all data points of the initial data set (none of the lossy compressors drop data points).
 
 Few studies have been done on checkpointing and restart from lossy compressed states {% cite SasakiETAl2015 --file external/Lossy_checkpoint_restart.bib %}. 
-These studies are limited in scope by studying only one application and one type of lossy compressor: NICAM with a lossy compressor based on wavelet and quantization {% cite SasakiETAl2015 --file external/Lossy_checkpoint_restart.bib %} and ChaNGa with the fpzip lossy compressor {% cite NiETAl2014 --file external/Lossy_checkpoint_restart.bib %}. 
-They already reveal two interesting points/First, checkpoints are composed of different variables that present different sensitivity to lossy compression. The correctness of the execution after restart depends on how each variable is compressed. In the cosmology simulation (ChaNGa), lossy compression of particle positions lead the execution to hang for a high compression level, while this does not happen when compressing other variable at the same level. Second, for the study of NICAM, the authors consider that an error of 1 percent on the final result is acceptable when restarting from lossy checkpoints. The rationale is that this magnitude of error is similar to those of sensor errors and model errors, while the compression factor exceeds 5. 
+These studies are limited in scope by studying only one application and one type of lossy compressor: NICAM with a lossy compressor based on wavelet and quantization {% cite SasakiETAl2015 --file external/Lossy_checkpoint_restart.bib %} and ChaNGa with fpzip used as a lossy compressor {% cite NiETAl2014 --file external/Lossy_checkpoint_restart.bib %}. 
+They already reveal two interesting points. First, checkpoints are composed of different variables that present different sensitivity to lossy compression. The correctness of the execution after restart depends on how each variable is compressed. In the cosmology simulation (ChaNGa), lossy compression of particle positions lead the execution to hang for a high compression level, while this does not happen when compressing other variable at the same level. Second, for the study of NICAM, the authors consider that an error of 1 percent on the final result is acceptable when restarting from lossy checkpoints. The rationale is that this magnitude of error is similar to those of sensor errors and model errors, while the compression factor exceeds 5. 
 
 In contrary to previous research that concentrated on few applications, we focus on simple problems used by many applications and try to understand how they behave. We are exploring diffusion and advection problems. The diffusion problem simulates the heat diffusion on a one-dimensional rod. The advection problem simulates a sine wave advecting to the right with periodic boundaries. 
 
@@ -42,13 +42,27 @@ Other researchers will be able to exploit the link we established between the co
 
 An important impact of this work on other disciplines that are using numerical simulation is that they can use lossy compression for checkpoint/restart since we established and verified guidance to fix the compression error that guarantee the quality of the numerical results.
 
+John Calhoun wrote a Ph. D. manuscript and defended a Ph. D. disertation presenting this research/results.
+
+## Results for 2017/2018
+
+The paper submitted to IJHPCA on the results of this research has been accepted for publication.
+
 ## Visits and meetings
 
 Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.
 Jon Calhoun did an internship of 11 weeks at ANL.
 
 ## Impact and publications
-See {% cite Calhoun17 --file jlesc.bib %}.
+
+This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra and a paper has been submitted to a top ACM conference.
+
+The results of this project motivated the submission of the NSF Aletheia project that has been awarded and is funded for 3 years.
+https://www.nsf.gov/awardsearch/showAward?AWD_ID=1617488&HistoricalAwards=false
+
+Funded by the NSF Aletheia project, a Ph. D. student (Wang Chen) at UIUC is exploring how to detect corruption in lossy compressed results (e.g. checkpoints) of numerical simulations.  
+
+See {% cite Calhoun18 --file jlesc.bib %} and {% cite Calhoun17 --file jlesc.bib %}
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
