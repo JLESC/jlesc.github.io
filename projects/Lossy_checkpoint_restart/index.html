@@ -162,6 +162,7 @@
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -176,12 +177,12 @@
 
 <p>State compression is an important technique for reducing the problem posed by the bandwidth plateauing of the HDD-based storage systems.</p>
 
-<p>The state saved by HPC executions in checkpoints is composed mostly of floating-point data (single or double precision). Two types of compressors have been developed for floating-point data. Lossless compressors keep all the initial information and try to reduce the size occupied by this information. Sophisticated lossless compression techniques may use entropy analysis, duplicate string elimination, or bit reduction, for example <a href="#LindstromETAl2006">(Lindstrom and Isenburg 2006)</a>, <a href="#IbteshamETAl2012">(Ibtesham et al. 2012)</a>. 
-The compression factor generally observed with lossless compression is 1.2 to 4 (the compressed data set is 1.2 to 4 times smaller than the original). Lossy compressors deliberately lose information in order to reduce the size of the initial data set further. Lossy compressors reach very variable compression ratios depending on the application. This could be from 3 to 4 for difficult-to-compress data sets (lossless compressors would achieve a compression ratio of 1.5 to 2 on those data sets) to x100 for easier-to-compress data sets. Lossy compressors can be error bounded or not. Lossy compressors that are not error bounded simply compress the data set as much as they can, with no guarantee on the error on each decompressed data. Their applicability is limited in HPC because users have expectations in terms of accuracy. Error bounded lossy compressors allow users to set a maximum (or relative) compression/decompression error. The maximum error is the maximum of the difference between any initial data in the data set and its decompressed version (from its lossy compressed version). The user has a guarantee of a maximum loss of information quantified by the maximum compression/decompression errors. Users will set the maximum error to match their accuracy expectations. Note that all lossy compressors keep all data points of the initial data set (none of the lossy compressors drop data points).</p>
+<p>The state saved by HPC executions in checkpoints is composed mostly of floating-point data (single or double precision). Two types of compressors have been developed for floating-point data. Lossless compressors keep all the initial information and try to reduce the size occupied by this information. Sophisticated lossless compression techniques may use entropy coding, runlengh encoding, dictionary coding for example <a href="#LindstromETAl2006">(Lindstrom and Isenburg 2006)</a>, <a href="#IbteshamETAl2012">(Ibtesham et al. 2012)</a>. 
+The compression factor generally observed on scientific datasets with lossless compression is 1.2 to 2 (the compressed data set is 1.2 to 2 times smaller than the original). Lossy compressors deliberately lose information in order to reduce the size of the initial data set further. Lossy compressors reach very variable compression ratios depending on the application and the error bounds set by the users. This could be from less than 10 for difficult-to-compress data sets (lossless compressors would achieve a compression ratio of 1.5 to 2 on some extreme cases) to 100 for easier-to-compress data sets. Lossy compressors can be error bounded or not. Lossy compressors that are not error bounded simply compress the data set as much as they can, with no guarantee on the error on each decompressed data. Their applicability is limited in HPC because users have expectations in terms of accuracy. Error bounded lossy compressors provide different error controls such as absolute error and relative error bounds. Some compressors also provide stratistical bounds. For example, SZ provides PSNR bound (lower). The user has a guarantee of a maximum loss of information quantified by the maximum compression/decompression errors. Users will set the error bound to match their accuracy expectations. Note that all lossy compressors keep all data points of the initial data set (none of the lossy compressors drop data points).</p>
 
 <p>Few studies have been done on checkpointing and restart from lossy compressed states <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a>. 
-These studies are limited in scope by studying only one application and one type of lossy compressor: NICAM with a lossy compressor based on wavelet and quantization <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a> and ChaNGa with the fpzip lossy compressor <a href="#NiETAl2014">(Ni et al. 2014)</a>. 
-They already reveal two interesting points/First, checkpoints are composed of different variables that present different sensitivity to lossy compression. The correctness of the execution after restart depends on how each variable is compressed. In the cosmology simulation (ChaNGa), lossy compression of particle positions lead the execution to hang for a high compression level, while this does not happen when compressing other variable at the same level. Second, for the study of NICAM, the authors consider that an error of 1 percent on the final result is acceptable when restarting from lossy checkpoints. The rationale is that this magnitude of error is similar to those of sensor errors and model errors, while the compression factor exceeds 5.</p>
+These studies are limited in scope by studying only one application and one type of lossy compressor: NICAM with a lossy compressor based on wavelet and quantization <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a> and ChaNGa with fpzip used as a lossy compressor <a href="#NiETAl2014">(Ni et al. 2014)</a>. 
+They already reveal two interesting points. First, checkpoints are composed of different variables that present different sensitivity to lossy compression. The correctness of the execution after restart depends on how each variable is compressed. In the cosmology simulation (ChaNGa), lossy compression of particle positions lead the execution to hang for a high compression level, while this does not happen when compressing other variable at the same level. Second, for the study of NICAM, the authors consider that an error of 1 percent on the final result is acceptable when restarting from lossy checkpoints. The rationale is that this magnitude of error is similar to those of sensor errors and model errors, while the compression factor exceeds 5.</p>
 
 <p>In contrary to previous research that concentrated on few applications, we focus on simple problems used by many applications and try to understand how they behave. We are exploring diffusion and advection problems. The diffusion problem simulates the heat diffusion on a one-dimensional rod. The advection problem simulates a sine wave advecting to the right with periodic boundaries.</p>
 
@@ -199,6 +200,13 @@ They already reveal two interesting points/First, checkpoints are composed of di
 
 <p>An important impact of this work on other disciplines that are using numerical simulation is that they can use lossy compression for checkpoint/restart since we established and verified guidance to fix the compression error that guarantee the quality of the numerical results.</p>
 
+<p>John Calhoun wrote a Ph. D. manuscript and defended a Ph. D. dissertation presenting this research/results.</p>
+
+<h2 id="results-for-20172018">
+<a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
+
+<p>The paper submitted to IJHPCA on the results of this research has been accepted for publication.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -207,8 +215,57 @@ Jon Calhoun did an internship of 11 weeks at ANL.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
-<p>See <a href="#Calhoun17">(Calhoun 2017)</a>.</p>
-<ol class="bibliography"><li>
+
+<p>This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra and a paper has been submitted to a top ACM conference.</p>
+
+<p>The results of this project motivated the submission of the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1617488&amp;HistoricalAwards=false">NSF Aletheia project</a> that has been awarded and is funded for 3 years.</p>
+
+<p>Funded by the NSF Aletheia project, a Ph. D. student (Wang Chen) at UIUC is exploring how to detect corruption in lossy compressed results (e.g. checkpoints) of numerical simulations.</p>
+
+<p>See <a href="#Calhoun18">(Calhoun et al. 2018)</a> and <a href="#Calhoun17">(Calhoun 2017)</a></p>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Calhoun18
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCalhoun18Bibtex" aria-expanded="false" aria-controls="collapseCalhoun18Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCalhoun18Abstract" aria-expanded="false" aria-controls="collapseCalhoun18Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Calhoun18">Calhoun, Jon, Franck Cappello, Luke N. Olson, Marc Snir, and William D. Gropp. 2018. “Exploring The Feasibility of Lossy Compression for PDE Simulations.” <i>Int. J. High Perform. Comput. Appl.</i> 27. Sage Publications, Inc.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCalhoun18Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Calhoun18,
+  author = {Calhoun, Jon and Cappello, Franck and Olson, Luke N. and Snir, Marc and Gropp, William D.},
+  journal = {Int. J. High Perform. Comput. Appl.},
+  publisher = {Sage Publications, Inc.},
+  title = {Exploring the Feasibility of Lossy Compression for PDE Simulations},
+  volume = {27},
+  year = {2018}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
 <div class="bibtex-entry-container">
   <div>
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
@@ -228,7 +285,7 @@ Jon Calhoun did an internship of 11 weeks at ANL.</p>
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="Calhoun17">Calhoun, Jon. 2017. “FROM DETECTION TO OPTIMIZATION: IMPACT OF SOFT ERRORS ON HIGH-PERFORMANCE COMPUTING APPLICATIONS.” <i>Ph. D. Manuscript: <a href="Https://Www.Ideals.Illinois.Edu/Bitstream/Handle/2142/98379/CALHOUN-DISSERTATION-2017.Pdf?Sequence=1&amp;IsAllowed=y" target="_blank">Https://Www.Ideals.Illinois.Edu/Bitstream/Handle/2142/98379/CALHOUN-DISSERTATION-2017.Pdf?Sequence=1&amp;IsAllowed=y</a></i>.</span>
+      <span id="Calhoun17">Calhoun, Jon. 2017. “From Detection to Optimization: Impact of Soft Errors on High-Performance Computing Applications.” <i>Ph. D. Manuscript: <a href="Https://Www.Ideals.Illinois.Edu/Handle/2142/98379" target="_blank">Https://Www.Ideals.Illinois.Edu/Handle/2142/98379</a></i>.</span>
     </div>
   </div>
   <div class="collapse" id="collapseCalhoun17Bibtex">
@@ -236,9 +293,8 @@ Jon Calhoun did an internship of 11 weeks at ANL.</p>
       <div class="col-sm-10 offset-sm-1">
         <pre><code>@unpublished{Calhoun17,
   author = {Calhoun, Jon},
-  journal = {Ph. D. Manuscript: https://www.ideals.illinois.edu/bitstream/handle/2142/98379/CALHOUN-DISSERTATION-2017.pdf?sequence=1&amp;isAllowed=y},
-  numpages = {12},
-  title = {FROM DETECTION TO OPTIMIZATION: IMPACT OF SOFT ERRORS ON HIGH-PERFORMANCE COMPUTING APPLICATIONS},
+  journal = {Ph. D. Manuscript: https://www.ideals.illinois.edu/handle/2142/98379},
+  title = {From detection to optimization: impact of soft errors on high-performance computing applications},
   year = {2017}
 }
 </code></pre>
@@ -247,7 +303,8 @@ Jon Calhoun did an internship of 11 weeks at ANL.</p>
   </div>
   
 </div>
-</li></ol>
+</li>
+</ol>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
