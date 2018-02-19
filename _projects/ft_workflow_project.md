@@ -19,6 +19,7 @@ members:
   - cappello_f
   - robert_y
   - cavelan_a
+  - herault_t
 ---
 {% comment %}
 ================================
