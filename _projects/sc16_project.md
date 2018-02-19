@@ -44,7 +44,11 @@ This SC16 experiment we prepare covers several critical elements of the on-deman
 
 ## Results for 2016/2017
 - Technical: we successfully deployed the experiment, produced all the simulation snapshots and exercised all aspects of the infrastructure (simulation, analytics, transfer, workflow, vis.).
-- Scientific: a new staff member will join us in the fall to help with all the analysis
+- Scientific: the analysis of the data produced during the experiment is on going and results will be published in a cosmology journal.
+
+## Results for 2017/2018
+
+A paper presenting the data transfer aspect of the experiment has been accepted and presented at EEE/ACM SC17 Workshop on Innovating the Network for Data Intensive Science (INDIS 2017), Denver, CO, Nov. 2017. An extended version of this paper has been submitted to FGCS.
  
 ## Visits and meetings
 Weekly meeting since December 2015, until November 2016
@@ -55,12 +59,14 @@ Franck Cappello (ANL) organized the weekly meeting from NCSA.
 - Presentation of the concept at BDEC,
 - Presentation of the infrastructure on the NCSA booth of SC16,
 - BOF at SC16 on the “On-Demand Data Analytics and Storage for Extreme-Scale Simulations and Experiments”,
-- BOF Report on the experiment
+- BOF Report on the experiment: [http://sc16.supercomputing.org/sc-archive/bof/bof_files/bof139s2.pdf](http://sc16.supercomputing.org/sc-archive/bof/bof_files/bof139s2.pdf)
 - Joint NCSA-ANL announcement of the experiment
 - We discover performance limitation of GridFTP related to the computation of checksums
 - We needed to improve swift to consider external events
-- Presentation of the concept at Enabling Cosmological Resonances Between WFIRST and LSST (https://conference.ipac.caltech.edu/wfirst_lsst/page/agenda)
+- Presentation of the concept at Enabling Cosmological Resonances Between WFIRST and LSST ([https://conference.ipac.caltech.edu/wfirst_lsst/page/agenda](https://conference.ipac.caltech.edu/wfirst_lsst/page/agenda))
 - Concept will be further investigated and developed as part of Advisory Board for the Tri-Agency Cosmological Simulation (TACS) Task Force (NSF/DOE/NASA)
+
+Publication: {% cite Kettimuthua17 --file jlesc.bib %} 
 
 {% bibliography --cited --file jlesc.bib %}
 
