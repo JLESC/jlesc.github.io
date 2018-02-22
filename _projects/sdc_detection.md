@@ -44,7 +44,7 @@ future supercomputers.
 During 2015/2016 we tackled several challenges related to silent corruption {%
 cite BautEtAl2015 --file jlesc.bib %} and tested preliminary approaches {% cite
 di2015detect --file jlesc.bib %}. We developed a lightweight, adaptive,
-impact-driven detector for detecting the silent data corruptions{% cite
+impact-driven detector for detecting the silent data corruptions {% cite
 ShengEtCappello2016 --file jlesc.bib %}. (1) We carefully characterize 18 HPC
 applications/benchmarks and discuss the runtime data features, as well as the
 impact of the SDCs on their execution results. (2) We propose an impact-driven
@@ -88,7 +88,7 @@ subasi2016run --file jlesc.bib %}.
 
 A comprehensive study of support vector machines capabilities on detecting
 silent data corruption was published as part of the sustainable computing
-journal {% cite Subasi2018 --file jlesc.bib%}. This is an extension and
+journal {% cite Subasi2018 --file jlesc.bib %}. This is an extension and
 aggregation of several research efforts done within this project.  After all
 the results produced by this project, most of the partners in the project
 started working on different topics, some of them related to resilience others
