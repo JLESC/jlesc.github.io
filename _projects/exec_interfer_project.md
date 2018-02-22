@@ -6,7 +6,7 @@ updated: 2016-06-01
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: suspended
 topics:
   - storage
 keywords:
