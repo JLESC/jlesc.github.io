@@ -16,9 +16,12 @@ keywords:
   - Grid'5000
 head: keahey_k
 members:
-  - lebre_a
   - loup_d
+  - lebre_a
   - simonin_m
+  - cherrueau_r_a
+  - pertin_d
+  - riteau_p
   - delamare_s
   - nussbaum_l
   - perez_c
