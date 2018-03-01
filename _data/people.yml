@@ -1902,6 +1902,15 @@ schmitz_c:
   topics:
   email: schmitz@anl.gov
   homepage:
+  
+schoebel_r:
+  sur_name: Schöbel
+  given_name: Ruth
+  affiliation: jsc
+  position: PhD Student
+  topics: Numerical methods, parallel-in-time integration
+  email: r.schoebel@fz-juelich.de
+  homepage: 
 
 seidel_ed:
   sur_name: Seidel
