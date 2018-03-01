@@ -153,6 +153,10 @@
             </span>
           
             <span class="clearfix">
+              <span class="person given-name">Matthieu</span> <span class="person sur-name">Simonin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
               <span class="person given-name">Simon</span> <span class="person sur-name">Delamare</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
@@ -256,13 +260,13 @@ Chameleon’s current solution is based on DevStack. Grid’5000 has two differe
 
 <p>OpenStack has become the de-facto solution to operate compute, network and storage resources in public and private clouds. However, developers and scientists are facing challenges when it comes to deploy and benchmark such a complex software stack. 
 To address this problem, we developed Enos, an integrated framework that relies on container technologies for deploying and evaluating OpenStack on any testbed. Enos allows researchers to easily express different configurations, enabling fine-grained investigations of OpenStack services. Enos collects performance metrics at runtime and stores them for post-mortem analysis and sharing. 
-The relevance of the <a href="http://enos.readthedocs.io/en/stable/">Enos</a> approach to reproducible research has been illustrated by evaluating different OpenStack scenarios on the Grid’5000 testbed in 2016 <a href="#CCGRID17_Enos">(Cherrueau et al. 2017)</a>, <a href="https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale">OpenStack summit in Barcelona</a>.</p>
+The relevance of the <a href="http://enos.readthedocs.io/en/stable/">Enos</a> approach to reproducible research was illustrated by evaluating different OpenStack scenarios on the Grid’5000 testbed in 2016 as published at CCGRID <a href="#CCGRID17_Enos">(Cherrueau et al. 2017)</a> and also presented at the <a href="https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale">OpenStack summit in Barcelona</a>.</p>
 
-<p>Building on this success, we extended the Enos framework to achieve performance experiments while doing traffic shaping. 
+<p>Building on this success, in 2017, we extended the Enos framework to achieve performance experiments while doing traffic shaping. 
 Our goal was to offer the opportunity to researchers to evaluate the impact of WAN communications on OpenStack.<br>
 Latency is  a critical requirement for Internet Of Things and NFV/SDN applications that favors a more distributed Cloud Computing model deployed at the Edge. 
 This model does not cope with the traditional vision that has been driving the development of OpenStack. Although some efforts such as multiple regions, federations, … may allow operators to administrate these new infrastructures, there are no studies that evaluate how OpenStack will behave in such a massively distributed context.
-To illustrate the interest of such extensions, we conducted additional experiments over the Grid’5000 and the Chameleon testbed as shown at the <a href="https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide">Boston OpenStack summit</a>.  The port of Enos on top of Chameleon consisted in <a href="http://enos.readthedocs.io/en/stable/provider/index.html">developing a new provider</a> as presented in the Sydney OpenStack summit.</p>
+To illustrate the interest of such extensions, we conducted additional experiments over the Grid’5000 and the Chameleon testbed as shown at the <a href="https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide">Boston OpenStack summit</a>. The port of Enos on top of Chameleon consisted in <a href="http://enos.readthedocs.io/en/stable/provider/index.html">developing a new provider</a> as presented in the Sydney OpenStack summit.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -270,8 +274,9 @@ To illustrate the interest of such extensions, we conducted additional experimen
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
-<p>This project has proposed tools for operating system image portability between Chameleon and Grid’5000 and a new (faster) method to deploy an Openstack infrastructure on Chameleon.
-This makes it easier for users to deploy the same environment on Grid’5000 and Chameleon testbeds, easing experiments involving both platforms.</p>
+<p>This project has proposed tools for operating system image portability between Chameleon and Grid’5000 and a new (faster) method to deploy an Openstack infrastructure on Chameleon, in particular with the <a href="https://github.com/BeyondTheClouds/enos">Enos</a> framework.
+This makes it easier for users to deploy the same environment on Grid’5000 and Chameleon testbeds, easing experiments involving both platforms.
+The joint presentation at Boston OpenStack summit is avaible <a href="https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide">online</a>.</p>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
