@@ -385,6 +385,15 @@ chen_j:
   email: jchen@riken.jp
   homepage:
 
+cherrueau_r_a:
+  sur_name: Cherrueau
+  given_name: Ronan Alexandre
+  affiliation: inria
+  position: 
+  topics:
+  email: Ronan-Alexandre.Cherrueau@inria.fr
+  homepage: https://rcherrueau.github.io/
+
 cheriere_n:
   sur_name: Cheriere
   given_name: Nathanael
@@ -1579,6 +1588,15 @@ perez_c:
   email: christian.perez@inria.fr
   homepage : http://avalon.ens-lyon.fr/~cperez
 
+pertin_d:
+  sur_name: Pertin
+  given_name: Dimitri
+  position: post_doc
+  affiliation: inria
+  topics:
+  email: dimitri.pertin@inria.fr 
+  homepage:
+
 peterka_t:
   sur_name: Peterka
   given_name: Tom
@@ -1740,6 +1758,15 @@ riedel_m:
   topics: Big Data & I/O
   email: m.riedel@fz-juelich.de
   homepage: http://www.morrisriedel.de/
+
+riteau_p:
+  sur_name: Riteau
+  given_name: Pierre
+  affiliation: anl
+  position: 
+  topics:
+  email: priteau@uchicago.edu
+  homepage: 
 
 ross_r:
   sur_name: Ross
