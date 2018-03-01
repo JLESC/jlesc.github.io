@@ -145,6 +145,10 @@
           
           
             <span class="clearfix">
+              <span class="person given-name">Adrien</span> <span class="person sur-name">Lebre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
               <span class="person given-name">David</span> <span class="person sur-name">Loup</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
@@ -180,6 +184,10 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
+<li class="toc-entry toc-h3"><a href="#image-portability-between-chamelon-and-grid5000">Image portability between Chamelon and Grid’5000</a></li>
+<li class="toc-entry toc-h3"><a href="#a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000">A first step toward the deployment of OpenStack on Chameleon and Grid’5000</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
+<li class="toc-entry toc-h3"><a href="#toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack">Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -207,13 +215,18 @@ will be able to deploy their Chameleon appliances on Grid’5000 nodes and
 vice versa. As a second step, the project will explore existing solutions for
 efficient deployment of an Openstack-based Cloud, that would work on both
 Chameleon and Grid’5000. A document presenting challenges to address to
-overcome the differences between these platforms will also be produced.</p>
+overcome the differences between these platforms will also be produced.
+We will also test an advanced tool for conducting scientific evaluations of OpenStack.</p>
 
 <p>Overall the project is a step forward better usability for users of both
 testbeds, but also for their managers to share experience and best practices.</p>
 
 <h2 id="results-for-20162017">
 <a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+
+<h3 id="image-portability-between-chamelon-and-grid5000">
+<a id="image-portability-between-chamelon-and-grid5000" class="anchor" href="#image-portability-between-chamelon-and-grid5000" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image portability between Chamelon and Grid’5000</h3>
+
 <p>To enable images portability between Chameleon and Grid’5000 platforms (first project’s goal), two tools have been produced:</p>
 
 <ul>
@@ -225,12 +238,31 @@ testbeds, but also for their managers to share experience and best practices.</p
 
 <p>When a user converts a Grid’5000 image to a Chameleon image, the image format is first converted from Grid’5000 to Chameleon ones. Then the configuration needed to run on Chameleon infrastructure is added (e.g., cloud-init is installed with Chameleon configuration file). This adds virtual machine contextualization ability from Chameleon backend.</p>
 
+<h3 id="a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000">
+<a id="a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000" class="anchor" href="#a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000" aria-hidden="true"><span class="octicon octicon-link"></span></a>A first step toward the deployment of OpenStack on Chameleon and Grid’5000</h3>
+
 <p>The second goal of the project is to study Openstack deployment tool that would work over both Chameleon and Grid’5000.
 Chameleon’s current solution is based on DevStack. Grid’5000 has two different solutions: <a href="https://enos.readthedocs.io/en/latest/">Enos</a> which is based on OpenStack’s <a href="https://wiki.openstack.org/wiki/Kolla">Kolla</a> containers and <a href="https://github.com/grid5000/xp5k-openstack">xp5k-openstack</a> which uses Puppet recipes also provided by OpenStack. As Chameleon solution is longer to deploy, our goal was to try porting a tool used in Grid’5000. Enos team already started porting Enos on Chameleon, so we focused on the other solution, so they can be compared later.</p>
 
 <p>Based on what is done on Grid’5000 with Puppet, we wrote a Heat template to deploy Openstack on Chameleon with a custom number of compute nodes. Once given this template, the Heat orchestrator will install the operating system and software on nodes, bootstrap a puppet server on one of the nodes and Puppet agents on the others to execute Puppet recipes that will install and configure an OpenStack controller and several compute nodes. The overall deployment time is approximately 20 minutes. A <a href="https://docs.google.com/spreadsheets/d/1emHefWvhkO7BJwQkvXLgaIKJ64NxCLnbtajoOqrpXBk/edit?usp=sharing">document</a> is available to compare the performances of the different solutions showing that Puppet-based method is faster than the DevStack one, but it might also be harder to maintain. A second <a href="https://docs.google.com/document/d/1PwgjST8I7xgeer75_0Xk7AQwlmpNGKvoBhEYYn4IhFI/edit?usp=sharing">document</a> was written to give more details about how the different solutions work.</p>
 
 <p>The repository that contains the Heat templates to use on Chameleon to run Openstack Liberty using the Puppet approach is available at <a href="https://github.com/dloup/CC_Openstack">https://github.com/dloup/CC_Openstack</a></p>
+
+<h2 id="results-for-20172018">
+<a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
+
+<h3 id="toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack">
+<a id="toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack" class="anchor" href="#toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack</h3>
+
+<p>OpenStack has become the de-facto solution to operate compute, network and storage resources in public and private clouds. However, developers and scientists are facing challenges when it comes to deploy and benchmark such a complex software stack. 
+To address this problem, we developed Enos, an integrated framework that relies on container technologies for deploying and evaluating OpenStack on any testbed. Enos allows researchers to easily express different configurations, enabling fine-grained investigations of OpenStack services. Enos collects performance metrics at runtime and stores them for post-mortem analysis and sharing. 
+The relevance of the <a href="http://enos.readthedocs.io/en/stable/">Enos</a> approach to reproducible research has been illustrated by evaluating different OpenStack scenarios on the Grid’5000 testbed in 2016 <a href="#CCGRID17_Enos">(Cherrueau et al. 2017)</a>, <a href="https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale">OpenStack summit in Barcelona</a>.</p>
+
+<p>Building on this success, we extended the Enos framework to achieve performance experiments while doing traffic shaping. 
+Our goal was to offer the opportunity to researchers to evaluate the impact of WAN communications on OpenStack.<br>
+Latency is  a critical requirement for Internet Of Things and NFV/SDN applications that favors a more distributed Cloud Computing model deployed at the Edge. 
+This model does not cope with the traditional vision that has been driving the development of OpenStack. Although some efforts such as multiple regions, federations, … may allow operators to administrate these new infrastructures, there are no studies that evaluate how OpenStack will behave in such a massively distributed context.
+To illustrate the interest of such extensions, we conducted additional experiments over the Grid’5000 and the Chameleon testbed as shown at the <a href="https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide">Boston OpenStack summit</a>.  The port of Enos on top of Chameleon consisted in <a href="http://enos.readthedocs.io/en/stable/provider/index.html">developing a new provider</a> as presented in the Sydney OpenStack summit.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -243,11 +275,8 @@ This makes it easier for users to deploy the same environment on Grid’5000 and
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
-<p>The results of this project should be compared to Enos performance.
-Depending on the performance and ease to use of each solution, the official “supported” way to deploy Openstack on Chameleon will be either Devstack, Puppet, or Enos.
-It is likely that Chameleon and Grid’5000 will converge to the same solution, reducing maintenance costs for both platforms and easing cross experimentation for their users.</p>
 
-<p>Another challenge for future work is the data-plane federation of both testbeds, to enable experiments spanning both testbeds in a
+<p>A remaining challenge is the data-plane federation of both testbeds, to enable experiments spanning both testbeds in a
 controlled networking environment. We will explore how to achieve that by interconnecting both testbeds to Internet Software Defined eXchange
 points (SDX), which would allow us to provide on-demand Level-2 link stitching, to provide per-experiment overlays.</p>
 
