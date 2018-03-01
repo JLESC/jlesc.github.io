@@ -61,6 +61,8 @@ The next steps of the collaboration will look at adding pushing the topology awa
 
 The work resulted in presentations at the 7th JLESC Workshop in July, 2017, along with presentation of multigrid and sparse-matrix multiplication results at SC17 and Copper Mountain Multigrid (2017) and Copper Mountain Multigrid (2018).  In addition, the main code Raptor, was released as open source.
 
+Grigori (INRIA) serves on Bienz's thesis committee; Bienz is expected to finish in 2018.
+
 The next steps include completing contention modeling.
 
 ## Visits and meetings
