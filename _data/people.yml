@@ -1955,7 +1955,7 @@ silva_p:
   position: phd
   topics:
   email: pedro.silva@inria.fr
-  homepage: http://graal.ens-lyon.fr/~psilva/
+  homepage: http://avalon.ens-lyon.fr/~psilva/
 
 silvi_g:
   sur_name: Silvi
@@ -1965,6 +1965,15 @@ silvi_g:
   topics:
   email: g.silvi@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/silvi_g.html?nn=362224
+
+simonin_m:
+  sur_name: Simonin
+  given_name: Matthieu
+  affiliation: inria
+  position: permanent
+  topics:
+  email: matthieu.simonin@inria.fr
+  homepage: https://people.irisa.fr/Matthieu.Simonin/
 
 sisneros_r:
   sur_name: Sisneros
