@@ -1591,7 +1591,7 @@ perez_c:
 pertin_d:
   sur_name: Pertin
   given_name: Dimitri
-  position: post-doc
+  position: post_doc
   affiliation: inria
   topics:
   email: dimitri.pertin@inria.fr 
