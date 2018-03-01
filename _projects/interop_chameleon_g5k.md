@@ -18,6 +18,7 @@ head: keahey_k
 members:
   - lebre_a
   - loup_d
+  - simonin_m
   - delamare_s
   - nussbaum_l
   - perez_c
@@ -72,21 +73,22 @@ The repository that contains the Heat templates to use on Chameleon to run Opens
 
 OpenStack has become the de-facto solution to operate compute, network and storage resources in public and private clouds. However, developers and scientists are facing challenges when it comes to deploy and benchmark such a complex software stack. 
 To address this problem, we developed Enos, an integrated framework that relies on container technologies for deploying and evaluating OpenStack on any testbed. Enos allows researchers to easily express different configurations, enabling fine-grained investigations of OpenStack services. Enos collects performance metrics at runtime and stores them for post-mortem analysis and sharing. 
-The relevance of the [Enos](http://enos.readthedocs.io/en/stable/) approach to reproducible research has been illustrated by evaluating different OpenStack scenarios on the Grid'5000 testbed in 2016 {% cite CCGRID17_Enos --file external/interop_chameleon_g5k.bib %}, [OpenStack summit in Barcelona](https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale).
+The relevance of the [Enos](http://enos.readthedocs.io/en/stable/) approach to reproducible research was illustrated by evaluating different OpenStack scenarios on the Grid'5000 testbed in 2016 as published at CCGRID {% cite CCGRID17_Enos --file external/interop_chameleon_g5k.bib %} and also presented at the [OpenStack summit in Barcelona](https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale).
 
-Building on this success, we extended the Enos framework to achieve performance experiments while doing traffic shaping. 
+Building on this success, in 2017, we extended the Enos framework to achieve performance experiments while doing traffic shaping. 
 Our goal was to offer the opportunity to researchers to evaluate the impact of WAN communications on OpenStack.  
 Latency is  a critical requirement for Internet Of Things and NFV/SDN applications that favors a more distributed Cloud Computing model deployed at the Edge. 
 This model does not cope with the traditional vision that has been driving the development of OpenStack. Although some efforts such as multiple regions, federations, ... may allow operators to administrate these new infrastructures, there are no studies that evaluate how OpenStack will behave in such a massively distributed context.
-To illustrate the interest of such extensions, we conducted additional experiments over the Grid’5000 and the Chameleon testbed as shown at the [Boston OpenStack summit](https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide).  The port of Enos on top of Chameleon consisted in [developing a new provider](http://enos.readthedocs.io/en/stable/provider/index.html) as presented in the Sydney OpenStack summit.
+To illustrate the interest of such extensions, we conducted additional experiments over the Grid’5000 and the Chameleon testbed as shown at the [Boston OpenStack summit](https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide). The port of Enos on top of Chameleon consisted in [developing a new provider](http://enos.readthedocs.io/en/stable/provider/index.html) as presented in the Sydney OpenStack summit.
 
 
 ## Visits and meetings
 David Loup was at Argonne National Laboratory from 3rd March to 20th April 2017 to work on this project.
 
 ## Impact and publications
-This project has proposed tools for operating system image portability between Chameleon and Grid'5000 and a new (faster) method to deploy an Openstack infrastructure on Chameleon.
+This project has proposed tools for operating system image portability between Chameleon and Grid'5000 and a new (faster) method to deploy an Openstack infrastructure on Chameleon, in particular with the [Enos](https://github.com/BeyondTheClouds/enos) framework.
 This makes it easier for users to deploy the same environment on Grid'5000 and Chameleon testbeds, easing experiments involving both platforms.
+The joint presentation at Boston OpenStack summit is avaible [online](https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide).
 
 ## Future plans
 
