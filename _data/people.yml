@@ -461,10 +461,10 @@ coullon_h:
   sur_name: Coullon
   given_name: Helene
   affiliation: inria
-  position: alumnus
+  position: permanent
   topics:
   email: helene.coullon@inria.fr
-  homepage: http://www.univ-orleans.fr/lifo/Members/Helene.Coullon/
+  homepage: http://helene-coullon.fr/
 
 croubois_h:
   sur_name: Croubois
@@ -1129,11 +1129,20 @@ lanteri_s:
   email: Stephane.Lanteri@inria.fr
   homepage: http://www-sop.inria.fr/nachos/pmwiki-2.2.6/pmwiki.php/Main/St%E9phaneLanteri
 
+lebre_a:
+  sur_name: Lebre
+  given_name: Adrien
+  affiliation: inria
+  position: permanent
+  topics:
+  email: adrien.lebre@inria.fr
+  homepage: http://people.rennes.inria.fr/Adrien.Lebre/
+  
 lefevre_v:
   sur_name: Le Fèvre
   given_name: Valentin
   affiliation: inria
-  position:
+  position: permanent
   topics:
   email: valentin.le-fevre@ens-lyon.fr
   homepage:
