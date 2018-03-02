@@ -70,13 +70,29 @@ We confirmed the libraries are ported and perform on the systems;
 
 1. GPU or accelerator-based eigenvalue solver like MAGMA or ELPA must be examined in 2017/2018. Currently, we have not yet confirmed to build the ELPA GPU extension on JURECA. Also, we would enhance the EigenExa library with an acceleration of GPUs.
 
+## Results for 2017/2018
+
+1. We have done benchmarks using EigenExa, ELPA, and Elemental on available platforms, K, JUQUEEN and JURECA and lately on JURECA Booster module.
+1. As JUQUEEN will be put out of operation by end of March 2018 we only completed old benchmarks. The old compiler does not support C++/11 and the latest Fortran, thus it was not possible to install newer versions of Elemental and ELPA.
+1. We inspected new versions of ELPA and EigenExa that support KNL processors.
+1. Support for Elemental is temporarily stopped with version 0.87.7, which is the last stable version and runs on JURECA in pure MPI mode, thus there are only results for JURECA for this version.
+1. Results are still the same as 2016/17
+ * EigenExa very good if the full eigenspectrum is wanted
+ * Libraries have to be tuned for the architecture
+ * Best performance with the library tuned for the machine
+ * On JUQUEEN and JURECA hybrid parallelization with moderate OpenMP part preferred
+ * On K computer EigenExa best with as little MPI parallelization as necessary
+ * On K computer ELPA2 best with pure MPI parallelization
+ * If only 5 percent of eigenspectrum needed even on K computer ELPA2 pure MPI becomes fastest
+1. No results for GPU
+1. First results for KNL on JURECA booster, similar to the results for JURECA
+
 ### Software update and descriptions:
 
-* EigenExa : 2.4a1_rewind (officially 2.4 has been released)
-           supports calculation of a part of eigenspectrum like ELPA
-* ELPA : 2016.005.003
-       includes new QR decomposition based block householder transformation.
-* Elemental: 0.87
+* EigenExa : 2.4p1
+* ELPA : 2017.11.001
+       includes support for KNL and GPU, new user interface
+* Elemental: 0.87.7
            allows to compute arbitrary part of the eigenspectrum
 
 
@@ -87,7 +103,9 @@ In the 4th JLESC meeting at Bonn, we had a pre-meeting of this project with rega
 Frequent e-mail exchanges between Toshiyuki Imamura and Inge Gutheil.
 In the 5th JLESC meeting at Lyon,  both met and discussed about this project.
 Also, 6th JLESC meeting was hosted by AICS and Inge Gutheil visited AICS.
-
+Toshiyuki Imamura visited the 7th JLESC workshop in UIUC Urbana and
+will visit the 8th JLESC workshop in Barcelona. He visited Juelich after ISC
+to talk about KNL usage.
 
 ## Impact and publications
 
@@ -130,6 +148,9 @@ For each half, we plan to do as follow.
 
 * 2nd 6 months: tuning the existing libraries on the available computers -->
 
+We plan a minisymposium at PMAA 2018 in Zuerich with the title
+
+ *Performance benchmark of standard eigensolver on KNL systems
 
 ## References
 
