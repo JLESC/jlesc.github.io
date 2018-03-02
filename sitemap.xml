@@ -204,9 +204,6 @@
 <loc>https://jlesc.github.io/projects/dense_eigen_project/</loc>
 </url>
 <url>
-<loc>https://jlesc.github.io/projects/reducing_communication_sparse/</loc>
-</url>
-<url>
 <loc>https://jlesc.github.io/projects/Lossy_checkpoint_restart/</loc>
 </url>
 <url>
@@ -247,5 +244,8 @@
 </url>
 <url>
 <loc>https://jlesc.github.io/projects/conv_hpc_bigdata/</loc>
+</url>
+<url>
+<loc>https://jlesc.github.io/projects/reducing_communication_sparse/</loc>
 </url>
 </urlset>
