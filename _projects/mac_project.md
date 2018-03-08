@@ -128,6 +128,7 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 ## References
 
+<!--
 {% comment %}
 =================
 === IMPORTANT ===
@@ -135,5 +136,6 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 Replace 'YOUR_BIBTEX_FILE_NAME_HERE' with the name of the BibTeX file with the external references!
 {% endcomment %}
+-->
 
 {% bibliography --file external/mac_project.bib %}
