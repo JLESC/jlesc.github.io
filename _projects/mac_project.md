@@ -15,6 +15,7 @@ head:
 members:
   -
 ---
+<!--
 {% comment %}
 ================================
 === HOW TO USE THIS TEMPLATE ===
@@ -76,6 +77,7 @@ or order.
 Read the comments carefully!
 
 {% endcomment %}
+-->
 
 ## Research topic and goals
 Monitoring the Arctic Climate (MAC) aims at refining estimates of the sea ice state over the last three decades and its impact on the atmosphere as a general purpose. Its specific purpose is to harvest the benefits of the latest high-resolution and high-quality satellite products available to generate a sea ice reanalysis at a resolution never explored up-to-date and examine the impacts of this sea ice reanalysis on numerical weather prediction (NWP) using a global atmospheric data assimilation system in RIKEN AICS.
