@@ -63,6 +63,24 @@
 # [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
 #
 
+acosta_j:
+  sur_name: Acosta
+  given_name: Juan
+  affiliation: bsc
+  position:
+  topics:
+  email: juan.acosta@bsc.es
+  homepage:
+
+acosta_m:
+  sur_name: Acosta
+  given_name: Mario
+  affiliation: bsc
+  position:
+  topics:
+  email: mario.acosta@bsc.es
+  homepage:
+
 agullo_e:
   sur_name: Agullo
   given_name: Emmanuel
@@ -358,6 +376,15 @@ casas_m:
   email: marc.casas@bsc.es
   homepage: http://www.bsc.es/about-bsc/staff-directory/casas-marc
 
+castrillo_m:
+  sur_name: Castrillo
+  given_name: Miguel
+  affiliation: bsc
+  position:
+  topics:
+  email: miguel.castrillo@bsc.es
+  homepage:
+
 cavelan_a:
   sur_name: Cavelan
   given_name: Aurélien
@@ -609,6 +636,15 @@ dun_n:
   email:
   homepage:
 
+echevarria_p:
+  sur_name: Echevarria
+  given_name: Pablo
+  affiliation: bsc
+  position:
+  topics:
+  email: pablo.echevarria@bsc.es
+  homepage:
+
 ejarque_j:
   sur_name: Ejarque
   given_name: Jorge
@@ -778,6 +814,15 @@ gropp_b:
   topics: Scalable numerical algorithms, programming models, parallel I/O, performance tools
   email:  wgropp@illinois.edu
   homepage: http://wgropp.cs.illinois.edu/
+
+guemas_v:
+  sur_name: Guemas
+  given_name: Virginie
+  affiliation: bsc
+  position:
+  topics:
+  email: virginie.guemas@bsc.es
+  homepage:
 
 gutheil_i:
   sur_name: Gutheil
@@ -1084,6 +1129,15 @@ klatt_t:
   email: t.klatt@fz-juelich.de
   homepage:
 
+kotsuki_s:
+  sur_name: Kotsuki
+  given_name: Shunji
+  affiliation: riken
+  position:
+  topics:
+  email: shunji.kotsuki@riken.jp
+  homepage:
+
 kramer_b:
   sur_name: Kramer
   given_name: Bill
@@ -1372,6 +1426,15 @@ mikami_k:
   email: kazunori.mikami@riken.jp
   homepage:
 
+miyoshi_t:
+  sur_name: Miyoshi
+  given_name: Takemasa
+  affiliation: riken
+  position:
+  topics:
+  email: takemasa.miyoshi@riken.jp
+  homepage: http://data-assimilation.riken.jp/~miyoshi/
+
 mohr_b:
   sur_name: Mohr
   given_name: Bernd
@@ -1380,6 +1443,15 @@ mohr_b:
   topics: HPC, Performance Tools
   email: b.mohr@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/mohr_b.html
+
+moreno-chamarro_e:
+  sur_name: Moreno-Chamarro
+  given_name: Eduardo
+  affiliation: bsc
+  position:
+  topics:
+  email: eduardo.moreno@bsc.es
+  homepage:
 
 morin_c:
   sur_name: Morin
@@ -1532,6 +1604,15 @@ onishi_k:
   position: post_doc
   topics:
   email: keiji.onishi@riken.jp
+  homepage:
+
+ortega_p:
+  sur_name: Ortega
+  given_name: Pablo
+  affiliation: bsc
+  position:
+  topics:
+  email: pablo.ortega@bsc.es
   homepage:
 
 ozen_g:
@@ -1929,6 +2010,15 @@ seo_s:
   topics: Programming Models
   email: sseo@anl.gov
   homepage: http://www.mcs.anl.gov/~sseo/
+
+serradell_k:
+  sur_name: Serradell
+  given_name: Kim
+  affiliation: bsc
+  position:
+  topics:
+  email: kim.serradell@bsc.es
+  homepage:
 
 servat_h:
   sur_name: Servat
