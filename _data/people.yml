@@ -1428,3 +1428,22 @@ yoshii_k:
   topics:
   email: okazutomo@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/person/kazutomo-yoshii
+
+lee_j:
+  sur_name: Lee
+  given_name: Jinpil
+  affiliation: anl
+  position: permanent
+  topics: XcalableMP-2.0
+  email: jinpil.lee@riken.jp
+  homepage: 
+
+perez_j:
+  sur_name: Jose
+  given_name: Perez
+  affiliation: bsc
+  position: researcher
+  topics: 
+  email: josep.m.perez@bsc.es
+  homepage:
+
