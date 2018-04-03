@@ -51,10 +51,8 @@ To be planned.
 ## Future plans
 
 The first steps will be using OmpSS runtime as a XMP runtime. 
-We will investiage how to combine PGAS operations onto OmpSS runtime.
+We will investigate how to combine PGAS operations onto OmpSS runtime.
 
 ## References
 
 {% bibliography --file external/ompss_xmp_project.bib %}
-
-

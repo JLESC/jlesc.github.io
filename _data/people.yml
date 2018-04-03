@@ -1688,10 +1688,10 @@ perez_c:
   homepage : http://avalon.ens-lyon.fr/~cperez
 
 perez_j:
-  sur_name: Jose
-  given_name: Perez
+  sur_name: Perez
+  given_name: Jose
   affiliation: bsc
-  position: researcher
+  position: permanent
   topics: 
   email: josep.m.perez@bsc.es
   homepage:
