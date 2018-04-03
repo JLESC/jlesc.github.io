@@ -1030,6 +1030,15 @@ jimenez_d:
   email: djimenez@ac.upc.edu
   homepage:
 
+jin_z:
+  sur_name: Jin
+  given_name: Zheming
+  affiliation: anl
+  position: post_doc
+  topics:
+  email: zjin@anl.gov
+  homepage: https://www.alcf.anl.gov/staff-directory/zheming-jin
+
 jung_j:
   sur_name: Jung
   given_name: Jaewoon
@@ -1677,6 +1686,15 @@ perez_c:
   topics: Programming Models, HPC, Clouds
   email: christian.perez@inria.fr
   homepage : http://avalon.ens-lyon.fr/~cperez
+
+perez_j:
+  sur_name: Jose
+  given_name: Perez
+  affiliation: bsc
+  position: researcher
+  topics: 
+  email: josep.m.perez@bsc.es
+  homepage:
 
 pertin_d:
   sur_name: Pertin
@@ -2541,15 +2559,6 @@ zanon_f:
   topics: I/O
   email: francieli.zanon@inf.ufrgs.br
   homepage:
-
-jin_z:
-  sur_name: Jin
-  given_name: Zheming
-  affiliation: anl
-  position: post_doc
-  topics:
-  email: zjin@anl.gov
-  homepage: https://www.alcf.anl.gov/staff-directory/zheming-jin
 
 zhou_a:
   sur_name: Zhou
