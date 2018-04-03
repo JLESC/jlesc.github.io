@@ -20,7 +20,8 @@
 %   Aaaa           first author's surname in CamelCase
 %   Bbbb           second author's surname in CamelCase
 %
-% - for single-author publications:   AaaaYYYY % - for two-authors publications:     AaaaBbbbYYYY
+% - for single-author publications:   AaaaYYYY
+% - for two-authors publications:     AaaaBbbbYYYY
 % - for three or more authors:        AaaaEtAlYYYY
 %
 % In case an author has published more than one publication in the same year, append lower case
@@ -52,29 +53,172 @@
 % Please, treat this file not different from usual source code files.
 %
 @article{BienzEtAl2016,
-  author = {Amanda Bienz and Robert D. Falgout and William Gropp and Luke N. Olson
-    and Jacob B. Schroder},
-  doi = {10.1137/15M1026341},
-  journal = {SIAM Journal on Scientific Computing},
-  number = {5},
-  pages = {S332-S357},
-  title = {Reducing Parallel Communication in Algebraic Multigrid through Sparsification},
-  volume = {38},
-  year = {2016},
+    author = {Amanda Bienz and Robert D. Falgout and William Gropp and Luke N. Olson
+        and Jacob B. Schroder},
+    doi = {10.1137/15M1026341},
+    journal = {SIAM Journal on Scientific Computing},
+    number = {5},
+    pages = {S332-S357},
+    title = {Reducing Parallel Communication in Algebraic Multigrid through Sparsification},
+    volume = {38},
+    year = {2016},
 }
 
 @article{BienzEtAl2017,
-  author = {Amanda Bienz and William D. Gropp and Luke N. Olson},
-  journal = {SIAM Journal on Scientific Computing},
-  notes = {submitted},
-  title = {NAPSpMV: Topology-Aware Parallel Sparse Matrix Vector Multiplication},
-  year = {2017},
+    author = {Amanda Bienz and William D. Gropp and Luke N. Olson},
+    journal = {SIAM Journal on Scientific Computing},
+    notes = {submitted},
+    title = {NAPSpMV: Topology-Aware Parallel Sparse Matrix Vector Multiplication},
+    year = {2017},
 }
 
-@misc{BiOl2017,
-      author = {Bienz, Amanda and Olson, Luke N.},
-      title = {{RAPtor}: parallel algebraic multigrid v0.1},
-      year = {2017},
-      url = {https://github.com/lukeolson/raptor},
-      note = {Release 0.1}
-      }
+@misc{BienzOlson2017,
+    author = {Bienz, Amanda and Olson, Luke N.},
+    title = {{RAPtor}: parallel algebraic multigrid v0.1},
+    year = {2017},
+    url = {https://github.com/lukeolson/raptor},
+    note = {Release 0.1}
+}
+
+@article{BienzEtAl2018a,
+    author = {Amanda Bienz and William D. Gropp and Luke N. Olson},
+    title = {Node Aware Sparse Matrix-Vector Multiplication},
+    journal = {(submitted)},
+    URL = {https://arxiv.org/abs/1612.08060},
+    year= {2018},
+}
+
+@article{BienzEtAl2018b,
+    author = {Amanda Bienz and William D. Gropp and Luke N. Olson},
+    title = {NAPSpGEMM: Node Aware Sparse Matrix-Matrix Multiplication},
+    journal = {(In progress)},
+    year = {2018},
+}
+
+@article{Bienz2018,
+    author = {Amanda Bienz},
+    title = {Parallel Algebraic Multigrid with Node-Aware Communication},
+    journal = {Student Paper Competition, Copper Mountain
+        Conference},
+    year = {2018},
+}
+
+@unpublished{BienzEtAl2014,
+    title= {Scalability of non-Galerkin Parallel Algebraic Multigrid},
+    author = {Amanda Bienz and Robert D. Falgout and William Gropp and Luke N. Olson and Jacob B. Schroder},
+    month = {April},
+    year = {2014},
+    note= {$13^{\texttt{th}}$ Copper Mountain Conference on Iterative Methods},
+    URL= {http://grandmaster.colorado.edu/copper/2014/abstract/bienz_amandaj__087692/},
+}
+
+@unpublished{BienzOlson2014,
+    title= {Reducing Network Contention Associated with Parallel Algebraic Multigrid},
+    author = {Amanda Bienz and Luke N. Olson},
+    month = {November},
+    year = {2014},
+    note= {ACM Student Research Competition at Supercomputing 2014},
+    URL= {http://sc14.supercomputing.org/schedule/event_detail-evid=spost141.html},
+}
+
+@unpublished{BienzEtAl2015,
+    title= {Reducing Communication Costs in Parallel Algebraic Multigrid},
+    author = {Amanda Bienz and Robert D. Falgout and William Gropp and Luke N. Olson and Jacob B. Schroder},
+    month = {March},
+    year = {2015},
+    note= {$17^{\texttt{th}}$ Copper Mountain Conference on Multigrid Methods},
+    URL= {http://grandmaster.colorado.edu/copper/2015/abstract/bienz_amanda___094984/},
+}
+
+@unpublished{BienzEtAl2015b,
+    title= {Topology-Aware Performance Modeling},
+    author = {Amanda Bienz and Laura Grigori and William Gropp and Luke N. Olson},
+    month = {June},
+    year = {2015},
+    note= {$3^{\texttt{rd}}$ JLESC Workshop},
+    URL= {https://jlesc.github.io/events/3rd-jlesc-workshop/schedule/},
+}
+
+@unpublished{BienzEtAl2015c,
+    title= {Analyzing the Performance of a SpMV for Extreme Scale Computers},
+    author = {Amanda Bienz and Jon Calhoun and Luke Olson and Marc Snir and William D. Gropp},
+    month = {November},
+    year = {2015},
+    note= {Research Poster at Supercomputing 2015},
+    URL= {http://sc15.supercomputing.org/schedule/event_detail-evid=post327.html},
+}
+
+@unpublished{BienzEtAl2015d,
+    title= {Topology-Aware Asynchronous Methods and the Sparse Matrix-Vector
+        Multiply},
+    author = {Amanda Bienz and Laura Grigori and William Gropp and Luke N. Olson},
+    month = {November},
+    year = {2015},
+    note= {$4^{\texttt{th}}$ JLESC Workshop},
+    URL= {http://www.fz-juelich.de/ias/jsc/EN/Expertise/Workshops/Conferences/JLESC-4/Programme/Abstracts/bienz-s.html?nn=1893370},
+}
+
+@unpublished{BienzEtAl2016,
+    title= {Hiding Communication Costs in SpMVs and Algebraic Multigrid},
+    author = {Amanda Bienz and Jon Calhoun and William Gropp and Luke N. Olson},
+    month = {March},
+    year = {2016},
+    note= {$14^{\texttt{th}}$ Copper Mountain Conference on Iterative Methods},
+    URL= {http://grandmaster.colorado.edu/copper/2016/abstract/bienz_amanda___097808/},
+}
+
+@unpublished{BienzOlson2016,
+    title= {Topology-Aware Performance Modeling in Parallel SpMVs},
+    author = {Amanda Bienz and Luke N. Olson},
+    month = {November},
+    year = {2016},
+    note= {$17^{\texttt{th}}$ SIAM Conference on Parallel Processing for Scientific Computing},
+    URL= {http://meetings.siam.org/sess/dsp_talk.cfm?p=75934},
+}
+
+@unpublished{BienzEtAl2016b,
+    title= {Reducing Communication in Sparse Iterative and Direct Solvers},
+    author = {Amanda Bienz and Laura Grigori and William Gropp and Luke N. Olson},
+    month = {June},
+    year = {2016},
+    note= {$5^{\texttt{th}}$ JLESC Workshop},
+    URL= {https://jlesc.github.io/downloads/5th-workshop/talks.pdf},
+}
+
+@unpublished{BienzEtAl2016c,
+    title= {Reducing Communication Costs in the Parallel SpMV},
+    author = {Amanda Bienz and William Gropp and Luke N. Olson},
+    month = {November},
+    year = {2016},
+    note= {Research Poster at Supercomputing 2016},
+    URL= {http://sc16.supercomputing.org/sc-archive/tech_poster/tech_poster_pages/post211.html},
+}
+
+@unpublished{BienzEtAl2017b,
+    title= {Reducing Parallel Communication Costs in Algebraic Multigrid},
+    author = {Amanda Bienz and William Gropp and Luke N. Olson},
+    month = {February},
+    year = {2017},
+    note= {SIAM Conference on Computational Science and Engineering},
+    URL= {http://meetings.siam.org/sess/dsp_talk.cfm?p=82795},
+}
+
+@unpublished{BienzEtAl2017c,
+    title= {Reducing Communication Costs in Sparse Matrix-Vector Multiplication},
+    author = {Amanda Bienz and William Gropp and Luke N. Olson},
+    month = {March},
+    year = {2017},
+    note= {$18^{\texttt{th}}$ Copper Mountain Conference on Multigrid Methods},
+    URL= {http://easychair.org/smart-program/Copper2017/2017-03-27.html#talk:36549},
+}
+
+@unpublished{BienzEtAl2017d,
+    title= {Reducing Communication Costs in Parallel Algebraic Multigrid},
+    author = {Amanda Bienz and William Gropp and Luke N. Olson},
+    month = {November},
+    year = {2017},
+    note= {Doctoral Showcase at Supercomputing 2016},
+    URL= {http://sc17.supercomputing.org/presentation/?id=drs106&sess=sess282},
+}
+
+
