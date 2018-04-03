@@ -1372,6 +1372,15 @@ matsuda_m:
   email: matu@acm.org
   homepage:
 
+matsuoka_s:
+  sur_name: Matsuoka
+  given_name: Satoshi
+  affiliation: riken
+  position: 
+  topics:
+  email: 
+  homepage: http://www.r-ccs.riken.jp/en/
+ 
 mehaut_j:
   sur_name: Mehaut
   given_name: Jean-Francois
