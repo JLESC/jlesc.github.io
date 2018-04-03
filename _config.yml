@@ -11,7 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
   The Joint Lab is part of Parallel@Illinois.
 baseurl: ""
 url: "https://jlesc.github.io"
-logo: jlesc_logo.jpg
+logo: jlesc-header_180305.jpeg
 
 timezone: UTC
 encoding: utf-8
