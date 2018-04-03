@@ -41,7 +41,7 @@ Our emulation shows that, in the case highly accessed objects are not fitting in
 We are following separate paths until we get ready to combine our research. ANL has been working in programming models, whereas BSC has been working in the underlying tools.
 
 ## Results for 2017/2018
-We have published a last paper on Extrae's methodology. We believe we have accomplished the objectives of the project and we have successfully proved data-oriented profiling using hardware sampling instead of emulation can be used to assist on data distribution for heterogeneous memory systems. We will follow-up on a new JLESC project in short.
+We have published last papers on Extrae's methodology {% cite ServatEtAl2017 --file external/folding_hmem %}{% cite ServatEtAl2017b --file external/folding_hmem %}. We believe we have accomplished the objectives of the project and we have successfully proved data-oriented profiling using hardware sampling instead of emulation can be used to assist on data distribution for heterogeneous memory systems. We will follow-up on a new JLESC project in short.
 
 ## Visits and meetings
 Frequent teleconferences and e-mail exchanges. No planned visits yet. {% person pena_a %} moved from Argonne to BSC in 2015.
