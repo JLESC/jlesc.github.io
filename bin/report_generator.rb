@@ -292,7 +292,7 @@ module Jekyll
         when 'preparation'
           status_str += 'In Preparation'
         else
-          status_str += @document.data['status'].capitalize
+          status_str += @document.data['status'].to_s.capitalize
       end
       # note: not appending double line break because member list is following in the same
       #       description list
@@ -483,7 +483,7 @@ module Jekyll
 
   class ReportGenerator
     class << self
-      def process
+      def process      
         @generator = Jekyll::ReportGenerator.new
         @generator.run
       end
@@ -497,7 +497,7 @@ module Jekyll
     def run
       @site.reset
       @site.read
-      @site.generate
+      # @site.generate
       @site.render
       @site.write
 
