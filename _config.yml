@@ -30,7 +30,7 @@ exclude:
 
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-assets
   - jekyll-paginate
   - jekyll-toc

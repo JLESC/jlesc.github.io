@@ -7,7 +7,8 @@ subnavbar: Software
 ---
 
 <div id="group-index" class="card-columns">
-  {% for software in site.software | order: 'title' %}
+  {% assign sorted_software = site.software | sort:'title' %}
+  {% for software in sorted_software %}
     <section class="card">
       <div class="card-block text-xs-center">
         <h4 class="card-title">
