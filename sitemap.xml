@@ -93,9 +93,6 @@
 <loc>https://jlesc.github.io/news/page3/</loc>
 </url>
 <url>
-<loc>https://jlesc.github.io/events/8th-jlesc-workshop/</loc>
-</url>
-<url>
 <loc>https://jlesc.github.io/events/1st-jlesc-summer-school/</loc>
 </url>
 <url>
@@ -141,7 +138,7 @@
 <loc>https://jlesc.github.io/events/4th-jlesc-summer-school/</loc>
 </url>
 <url>
-<loc>https://jlesc.github.io/software/pfasst/</loc>
+<loc>https://jlesc.github.io/events/8th-jlesc-workshop/</loc>
 </url>
 <url>
 <loc>https://jlesc.github.io/projects/activestorage_project/</loc>
@@ -256,5 +253,8 @@
 </url>
 <url>
 <loc>https://jlesc.github.io/projects/energy_autonomic/</loc>
+</url>
+<url>
+<loc>https://jlesc.github.io/software/pfasst/</loc>
 </url>
 </urlset>

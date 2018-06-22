@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://jlesc.github.io/projects/shared_infra_ad/">
 
   <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
-  <link type="text/css" rel="stylesheet" href="/assets/main-3546dca8cc3b7748a61d67ddae407f653664d2e6cedc60baa97ab21f0923bbc9.css">    
+  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
 </head>
 
   <body>
@@ -179,7 +179,7 @@
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 <p>Our goal is to pursue development of Algorithmic Differentiation (AD) tools, to enhance their applicability to HPC codes. We focus on the adjoint mode of AD, which is the most effective way of obtaining gradients of large HPC simulations. We focus on AD tools by source transformation because of the efficiency of the code they produce. One of our goals is to implement cooperation at the algorithmic level between OpenAD, the AD tool developed at ANL and Tapenade, the AD tool developed at INRIA. Another goal is to develop and maintain AMPI, and open-source library wrapped around MPI that implements the adjoint operations corresponding to the most commonly used MPI communication primitives.</p>
 
-<h2 id="results-for-2016--2018">
+<h2 id="results-for-20162018">
 <a id="results-for-20162018" class="anchor" href="#results-for-20162018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016–2018</h2>
 
 <p>We have continued to develop a runtime library called ADMM to allow source-transformation adjoint AD of input codes that contain the operations pointers and dynamic allocation of memory. This is the first library of its kind for source transformation AD. Before this, dynamic allocation and pointer usage were unsupported in adjoint-mode-source-transformation AD.  The library ensures that any memory accessed in the reverse computation exists through restoration (if needed) and contains the same value as it would have in the forward computation. Pointer variables used to access memory in the forward computation are updated to access the corresponding memory in the reverse computation. We have tested this method with a medium sized code. After an initial version the library was developed in 2016 that targeted codes written in C we have worked on refinements to the library and extended it to be target codes written in Fortran. We are currently refining the library to account for shortcomings in the first version.</p>
@@ -226,7 +226,7 @@
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="NarayananHascoet2016">Narayanan, Sri Hari Krishna, and Laurent Hascoet. 2016. “Interfacing OpenAD And Tapenade.”</span>
+      <span id="NarayananHascoet2016">Narayanan, Sri Hari Krishna, and Laurent Hascoet. 2016. “Interfacing OpenAD and Tapenade.”</span>
     </div>
   </div>
   <div class="collapse" id="collapseNarayananHascoet2016Bibtex">
@@ -348,7 +348,7 @@ topics in the field of algorithmic differentiation.</p>
 </footer>
 
     <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="/assets/main-cc560abaacc504809fd53ed1638bea5e1d3b98220e2bdc3e828b01fb7dd5ca7e.js"></script>
+<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
 
 <!--  -->
 
