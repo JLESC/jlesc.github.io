@@ -289,7 +289,7 @@ borrell_r:
 bosilca_g:
   sur_name: Bosilca
   given_name: George
-  affiliation: icl
+  affiliation: utk
   position: permanent
   topics: HPC, Resilience, programming models
   email: bosilca@icl.utk.edu
@@ -307,7 +307,7 @@ bouge_l:
 bouteiller_a:
   sur_name: Aurelien
   given_name: Bouteiller
-  affiliation: icl
+  affiliation: utk
   position: permanent
   topics: HPC, Resilience, programming models
   email: bouteill@icl.utk.edu
@@ -604,7 +604,7 @@ doblas_reyes_f:
 dongarra_j:
   sur_name: Dongarra
   given_name: Jack
-  affiliation: icl
+  affiliation: utk
   position: permanent
   topics:
   email: dongarra@icl.utk.edu
@@ -1051,7 +1051,7 @@ jung_j:
 herault_t:
   sur_name: Thomas
   given_name: Herault
-  affiliation: icl
+  affiliation: utk
   position: permanent
   topics: HPC, Resilience
   email: herault@icl.utk.edu
