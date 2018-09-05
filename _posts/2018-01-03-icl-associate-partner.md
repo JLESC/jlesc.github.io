@@ -5,7 +5,7 @@ date: 2018-01-03
 updated: 2018-01-03
 author: speck_r
 ---
-With January 1, 2018, the [Innovative Computing Laboratory](http://www.icl.utk.edu/) (ICL) at the University of Tennessee (UTK) becomes new Associate Partner of the JLESC. 
+Starting from January 1, 2018, the [University of Tennessee](https://www.utk.edu), represented by the  [Innovative Computing Laboratory](http://www.icl.utk.edu/) (ICL) at the University of Tennessee (UTK), becomes new Associate Partner of the JLESC. 
 
 <!--more-->
 
