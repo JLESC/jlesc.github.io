@@ -8,6 +8,19 @@
     <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>9th JLESC Workshop</title>
+        <description>&lt;p&gt;The 9th JLESC Workshop will be held at the University of Tennessee, Knoxville, USA, from April 16 to 18, 2019.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;More information will follow soon! Contact your local executive director if you are interested in attending.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2018/12/04/9th-workshop/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2018/12/04/9th-workshop/</guid>
+      </item>
+    
+      <item>
         <title>Training course on intra-node performance bottlenecks</title>
         <description>&lt;p&gt;JSC is welcoming registrations for the training course “&lt;a href=&quot;http://www.fz-juelich.de/SharedDocs/Termine/IAS/JSC/EN/courses/2018/intranode-performance-2018.html&quot;&gt;From zero to hero: Understanding and fixing intra-node performance bottlenecks&lt;/a&gt;”!&lt;/p&gt;
 
@@ -214,19 +227,6 @@ We will therefore post relevant calls in the news section and encourage everyone
         <pubDate>Mon, 05 Sep 2016 00:00:00 +0000</pubDate>
         <link>https://jlesc.github.io/news/2016/09/05/funding-opportunities/</link>
         <guid isPermaLink="true">https://jlesc.github.io/news/2016/09/05/funding-opportunities/</guid>
-      </item>
-    
-      <item>
-        <title>5th JLESC Workshop</title>
-        <description>&lt;p&gt;The next JLESC Workshop will be held in Lyon, at ENS de Lyon, from June 27th (afternoon) to 29th.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Click &lt;a href=&quot;/events/5th-jlesc-workshop&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
-</description>
-        <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
-        <link>https://jlesc.github.io/news/2016/04/04/5th-workshop/</link>
-        <guid isPermaLink="true">https://jlesc.github.io/news/2016/04/04/5th-workshop/</guid>
       </item>
     
   </channel>
