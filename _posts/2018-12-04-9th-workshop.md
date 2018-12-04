@@ -9,4 +9,4 @@ The 9th JLESC Workshop will be held at the University of Tennessee, Knoxville, U
 
 <!--more-->
 
-More information will follow soon! Contact your local executive director if you are interested in attending.
+Click [here](/events/9th-jlesc-workshop) for more information! 
