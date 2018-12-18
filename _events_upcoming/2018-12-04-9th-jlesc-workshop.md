@@ -5,8 +5,8 @@ date: 2018-12-04
 updated: 2018-12-04
 navbar: Events
 event_location: UTK, Knoxville, USA
-event_start: 2019-04-16
-event_end: 2019-04-18
+event_start: 2019-04-15
+event_end: 2019-04-17
 event_short_url:
 event_url: 
 wayback_url: 
