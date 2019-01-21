@@ -68,7 +68,7 @@ and help direct development of new tool capabilities.
 ## Results for 2018/2019
 
 * Omni XMP compiler updated with XMPT-defined runtime events, including for local/remote co-array accesses
-{% cite XMPhandbook -- file external/tool_pandt_project.bib %}.
+{% cite XMPhandbook --file external/tool_pandt_project.bib %}.
 * BSC prototyping recording and analysis of additional XMPT events (Impact3D benchmark).
 * Initial Scalasca/Score-P performance measurements of JURECA-MSA (Cluster+Booster).
 * Integration of POP metrics within CUBE GUI.
