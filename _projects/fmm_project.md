@@ -52,6 +52,21 @@ Several strategies have been tested and the overall runtime could be reduced by 
 Finally the tasking layer was extended with a preliminary version of the internode communication layer and hybrid dispatching.
 This will allow to scale the task engine beyond the node boundary.
 
+## Results for 2018/2019
+Up until now the task engine was designed solely to strong-scale workloads on a single node.
+Exchanging data between nodes was not supported due to the lack of a communication layer.
+The aforementioned task engine was extended to support communication between multiple nodes via MPI.
+Therefore, the task model had to provide communication and computation tasks.
+As an initial step, input and output data were distributed equally among the nodes.
+During the simulation each rank will independently compute the forces and potentials of the particles it is responsible for.
+Since the rank owning a certain set of data already knows which other ranks need to process it, the communication task is required to send that data.
+For such a scheme to be efficient, we need a tasking engine on every rank that operates with multiple workers (threads).
+We therefore need a communication library that can handle communication from multiple threads on different ranks.
+In our case, we used multithreaded MPI in the following way:
+We allow each thread on each rank to send multipoles it has already computed, but we only permit receiving of multipoles by a single thread.
+This way we avoid the problem of multiple threads concurrently receiving and writing data.
+Initial benchmarks exhibit good scaling, but show room for improvements through reducing/hiding the communication overhead.
+
 ## Visits and meetings
 {% person haensel_d %} joined the group of {% person balaji_p %} in Mai/June 2016 to develop a tasking scheme for FMSolvr on top of Argobots. This visit was vital to the success of this project, since we require a very flexible and fine-grained tasking scheme with only minimal overhead from the tasking runtime (e.g. Argobots).
 
