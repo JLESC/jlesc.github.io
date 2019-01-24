@@ -49,7 +49,7 @@ Both parties are about to create accounts on both machines such that the first t
 * JSC code has been compiled with node-installed GCC on K-computer; validity and performance tests are pending
 * AICS code has been ported to GPUs at JSC GPU Hackathon 2017  
 
-## Results for 2018
+## Results for 2018/2019
 
 * project has been suspended due to resource limitations
 * joint organization of the mini-symposium "HPC-Based simulations for the wide industrial realm: aerospace, automotive, bio, construction, heavy…” on ECCOMAS ECCM ECFD 2018 in Glasgow, UK (11.06.2018 - 15.06.2018)
