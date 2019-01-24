@@ -89,12 +89,14 @@ We confirmed the libraries are ported and perform on the systems;
 
 ## Results for 2018/2019
 
-1.(Cont.) Distributed MPI/OpenMP Parallel
+1. (Cont.) Distributed MPI/OpenMP Parallel
  * On four nodes a combination with 16 MPI processes per node and four OpenMP threads per MPI process is as fast as the pure MPI parallelization for ELPA on a KNL system.
  * On a single KNL node pure MPI parallelization was better than hybrid.
  * Plan update with respect to the machine replacement in very future!!
+ 
 1. (Cont.) GPU extensions (standalone/cluster)
  * No update up to now
+ 
 1. (UPDATE) Manycore extensions (KNL, PEZY SCx, etc.)
  * Wilkinson512/Kevd specialized for 2,4,8-wide SIMD intrinsic : 2 versions Wilkinson and Dongarra-Wilkinson
  * Parameter survey for NB of Back-transform
