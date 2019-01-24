@@ -88,15 +88,16 @@ We confirmed the libraries are ported and perform on the systems;
 1. First results for KNL on JURECA booster, similar to the results for JURECA
 
 ## Results for 2018/2019
+
 1.(Cont.) Distributed MPI/OpenMP Parallel
-* On four nodes a combination with 16 MPI processes per node and four OpenMP threads per MPI process is as fast as the pure MPI parallelization for ELPA on a KNL system.
-* On a single KNL node pure MPI parallelization was better than hybrid.
-* Plan update with respect to the machine replacement in very future!!
+ * On four nodes a combination with 16 MPI processes per node and four OpenMP threads per MPI process is as fast as the pure MPI parallelization for ELPA on a KNL system.
+ * On a single KNL node pure MPI parallelization was better than hybrid.
+ * Plan update with respect to the machine replacement in very future!!
 1. (Cont.) GPU extensions (standalone/cluster)
-* No update upto now
+ * No update up to now
 1. (UPDATE) Manycore extensions (KNL, PEZY SCx, etc.)
-* Wilkinson512/Kevd specialized for 2,4,8-wide SIMD intrinsic : 2 versions Wilkinson and Dongarra-Wilkinson
-* Parameter survey for NB of Back-transform
+ * Wilkinson512/Kevd specialized for 2,4,8-wide SIMD intrinsic : 2 versions Wilkinson and Dongarra-Wilkinson
+ * Parameter survey for NB of Back-transform
 
 
 ### Software update and descriptions:
@@ -118,7 +119,7 @@ Also, 6th JLESC meeting was hosted by AICS and Inge Gutheil visited AICS.
 Toshiyuki Imamura visited the 7th JLESC workshop in UIUC Urbana and
 will visit the 8th JLESC workshop in Barcelona. He visited Juelich after ISC
 to talk about KNL usage.
-PMAA2018 conference at Zurich and organized a minisymposium titled 'Performance benchmark of standard eigensolver on KNL systems'
+Organized a minisymposium titled 'Performance benchmark of standard eigensolver on KNL systems', at the PMAA2018 conference, Zurich.
 
 ## Impact and publications
 
