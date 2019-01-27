@@ -13,6 +13,7 @@ topics:
 keywords:
 head: calhoun_j
 members:
+  - altenbernd_m
   - speck_r
   - cappello_f
 ---
@@ -38,7 +39,7 @@ models to explore theoretical possibilities for new compressor designs and
 system architectures.
 
 The project involves JLESC Fellow Jon Calhoun, JSC affiliated graduate student
-Micro Altenbernd, JSC Robert Speck, and Franck Cappello from Argonne. This
+Micro Altenbernd, Robert Speck from JSC, and Franck Cappello from Argonne. This
 project was formed though collaborative discussions at the 2018 JLESC workshop
 in Barcelona.
 
