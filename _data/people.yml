@@ -62,6 +62,7 @@
 #
 # [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
 #
+#
 
 acosta_j:
   sur_name: Acosta
@@ -98,6 +99,15 @@ allen_g:
   topics: Applications & Software Frameworks & Astrophysics
   email: gallen@ncsa.illinois.edu
   homepage: http://www.ncsa.illinois.edu/assets/php/directory/contact.php?contact=gdallen
+  
+altenbernd_m:
+  sur_name: Altenbernd
+  given_name: Mirco
+  affiliation: external
+  position: phd
+  topics:
+  email: mirco.altenbernd@mathematik.uni-stuttgart.de
+  homepage: https://www.ians.uni-stuttgart.de/institute/team/Altenbernd-00001/
 
 alvarez_c:
   sur_name: Alvarez
@@ -345,9 +355,9 @@ calhoun_j:
   given_name: Jon
   affiliation: uiuc
   position: phd
-  topics: HPC, Resilience
-  email: jccalho2@illinois.edu
-  homepage: http://web.engr.illinois.edu/~jccalho2/
+  topics: HPC, Resilience, Lossy Compression
+  email: jonccal@clmeson.edu
+  homepage: http://jonccal.people.clemson.edu/
 
 cappello_f:
   sur_name: Cappello
