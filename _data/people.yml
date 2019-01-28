@@ -63,14 +63,6 @@
 # [1]: https://en.wikipedia.org/wiki/YAML#Newlines_folded
 #
 #
-altenbernd_m:
-  sur_name: Altenbernd
-  given_name: Mirco
-  affiliation: jsc
-  position: phd
-  topics:
-  email: mirco.altenbernd@mathematik.uni-stuttgart.de
-  homepage: https://www.ians.uni-stuttgart.de/institute/team/Altenbernd-00001/
 
 acosta_j:
   sur_name: Acosta
@@ -107,6 +99,15 @@ allen_g:
   topics: Applications & Software Frameworks & Astrophysics
   email: gallen@ncsa.illinois.edu
   homepage: http://www.ncsa.illinois.edu/assets/php/directory/contact.php?contact=gdallen
+  
+altenbernd_m:
+  sur_name: Altenbernd
+  given_name: Mirco
+  affiliation: external
+  position: phd
+  topics:
+  email: mirco.altenbernd@mathematik.uni-stuttgart.de
+  homepage: https://www.ians.uni-stuttgart.de/institute/team/Altenbernd-00001/
 
 alvarez_c:
   sur_name: Alvarez
