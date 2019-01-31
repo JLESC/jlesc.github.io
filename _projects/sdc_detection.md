@@ -6,7 +6,7 @@ updated: 2017-05-04
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: suspended
 topics:
   - resilience
 keywords:
