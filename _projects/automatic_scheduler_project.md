@@ -6,7 +6,7 @@ updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: finished
 topics:
   - storage
 keywords:
@@ -23,7 +23,7 @@ members:
 
 ## Research topics and goals
 
-This is an ongoing collaboration between researchers from the
+This is an finished collaboration between researchers from the
 BSC, INRIA, and the Federal University of Rio Grande do Sul (UFRGS).
 
 We are investigating the use of pattern matching at parallel file system (PFS) servers for automatic I/O scheduling algorithm selection.
@@ -187,9 +187,7 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 
 ## Future plans
-As the results are promising the next steps are to put the pattern matching or similar algorithm to learn about the running workload and try to select the best expected scheduler for the next period. 
-
-The project has very low interaction and progress during 2017, but it is not cancelled.
+The project is considered finished, and had opened new collaboration with the same actors that will create a new project inside the JLESC umbrella. For this finished project, the final step is to write a paper and publish the results.
 
 ## References
 
