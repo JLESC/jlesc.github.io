@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Reconfiguring Distributed Storage Systems on HPC infrastructures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/reconf_distr_storage/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <a href="/software/" class="dropdown-item">Software</a>
+    <a href="/research/visits/" class="dropdown-item">Visits</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Reconfiguring Distributed Storage Systems on HPC infrastructures</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">I/O, Storage and In-Situ Processing</span>
+          </span>
+        
+      </div>
+    </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Nathanael</span> <span class="person sur-name">Cheriere</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Rob</span> <span class="person sur-name">Ross</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Phil</span> <span class="person sur-name">Carns</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-running">running</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+
+<p>As parallel file systems reach their limits in HPC, an alternative approach is emerging:
+the creation of data services tailored to the needs of the application that uses it 
+<a href="#Dorier2018Methodology">(Dorier et al. 2018)</a>.
+In order to do so, a set of building blocks for data services (e.g. membership service, key-value store, …)
+has been developed as part of the Mochi project (https://www.mcs.anl.gov/research/projects/mochi/).
+In particular, some applications (typically workflows) have requirements in number of machines 
+that vary over time, thus being able to rescale efficiently can be needed for data services 
+co-deployed with malleable applications. Preliminary work by Cheriere et al. showed that 
+the reconfiguration could be done in a short time when the amount of data per node is balanced.
+Our work in this context is to investigate the use of rescaling of distributed storage systems in HPC environments.</p>
+
+<h2 id="results-for-20172018">
+<a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
+
+<p>We modelled the duration of the commision and decommission operations, for which we obtained 
+theoretical lower bounds. Then we considered HDFS as a use case and we show that our model
+can explain the measured commission and decommission times. The existing decommission mechanism
+of HDFS is good when the network is the bottleneck, but could be accelerated by up to a factor 3
+when the storage is the limiting factor. We also show that commission in HDFS can largely be improved.
+The results on theoretical decommission time have been published at the IEEE BigData 2017 
+conference <a href="#Cheriere2017How">(Cheriere and Antoniu 2017)</a>. Results for the commission time have later
+been added and an extended paper has been submitted and is under review for Elsevier JPDC.
+These additional results are independently available as a research report <a href="#Cheriere2018LowerCommission">(Cheriere, Dorier, and Antoniu 2018)</a>.</p>
+
+<h2 id="results-for-20182019">
+<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+
+<p>We introduced Pufferbench <a href="#Cheriere2018Pufferbench">(Cheriere, Dorier, and Antoniu 2018)</a>, a benchmark for evaluating
+how fast one can scale up and down a distributed storage system on a given infrastructure and, thereby,
+how viably can one implement storage malleability on it. Besides, it can serve to quickly prototype and evaluate mechanisms
+for malleability in existing distributed storage systems. We validate Pufferbench against theoretical
+lower bounds for commission and decommission: it can achieve performance within 16% of them.
+We use Pufferbench to evaluate in practice these operations in HDFS: commission in HDFS could be
+accelerated by as much as 14 times! Our results show that: (1) the lower bounds for commission
+and decommission times we previously established are sound and can be approached in practice;
+(2) HDFS could handle these operations much more efficiently; most importantly,
+(3) malleability in distributed storage systems is viable and should be further leveraged
+for Big Data applications.</p>
+
+<p>We also studied from a theoretical point of view the potential opportunities provided by
+relaxing fault tolerance during decommission operations. Results of this work are available
+in a research report <a href="#Cheriere2018LowerRelaxed">(Cheriere, Dorier, and Antoniu 2018)</a> and have been submitted to IEEE/ACM CCgrid 2019.</p>
+
+<p>Furthermore, we focused on understanding the requirements of distributed storage systems
+co-deployed with HPC-applications, designed a rescaling mechanism able to meet these
+requirements, and implemented it.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+
+<p>Nathanael Cheriere visited Argonne National laboratory from September to December 2018 
+(2.5 months) and developed Pufferscale, a rescaling scheduler that keeps the load balanced
+across the nodes, while ensuring the speed and stability of the rescaling operations.</p>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2018LowerCommission
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2018LowerCommissionBibtex" aria-expanded="false" aria-controls="collapseCheriere2018LowerCommissionBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCheriere2018LowerCommissionAbstract" aria-expanded="false" aria-controls="collapseCheriere2018LowerCommissionAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2018LowerCommission">Cheriere, Nathanaël, Matthieu Dorier, and Gabriel Antoniu. 2018. “A Lower Bound for the Commission Times in Replication-Based Distributed Storage Systems.” Research Report RR-9186. Inria Rennes - Bretagne Atlantique. <a href="https://hal.archives-ouvertes.fr/hal-01817638" target="_blank">https://hal.archives-ouvertes.fr/hal-01817638</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2018LowerCommissionBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@techreport{Cheriere2018LowerCommission,
+  title = {{A Lower Bound for the Commission Times in Replication-Based Distributed Storage Systems}},
+  author = {Cheriere, Nathana{\"e}l and Dorier, Matthieu and Antoniu, Gabriel},
+  url = {https://hal.archives-ouvertes.fr/hal-01817638},
+  type = {Research Report},
+  number = {RR-9186},
+  pages = {1-26},
+  institution = {{Inria Rennes - Bretagne Atlantique}},
+  year = {2018},
+  month = jun,
+  keywords = {Commission ; Elastic Storage ; Distributed File System ; Malleable File System ; Lower Bound},
+  pdf = {https://hal.archives-ouvertes.fr/hal-01817638/file/RR-9186.pdf},
+  hal_id = {hal-01817638},
+  hal_version = {v2}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2018Pufferbench
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2018PufferbenchBibtex" aria-expanded="false" aria-controls="collapseCheriere2018PufferbenchBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCheriere2018PufferbenchAbstract" aria-expanded="false" aria-controls="collapseCheriere2018PufferbenchAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2018Pufferbench">———. 2018. “Pufferbench: Evaluating and Optimizing Malleability of Distributed Storage.” In <i>PDSW-DISCS 2018: 3rd Joint International Workshop on Parallel Data Storage &amp; Data Intensive Scalable Computing Systems</i>, 1–10. Dallas, United States. <a href="https://hal.archives-ouvertes.fr/hal-01892713" target="_blank">https://hal.archives-ouvertes.fr/hal-01892713</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2018PufferbenchBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Cheriere2018Pufferbench,
+  title = {{Pufferbench: Evaluating and Optimizing Malleability of Distributed Storage}},
+  author = {Cheriere, Nathana{\"e}l and Dorier, Matthieu and Antoniu, Gabriel},
+  url = {https://hal.archives-ouvertes.fr/hal-01892713},
+  booktitle = {{PDSW-DISCS 2018: 3rd Joint International workshop on Parallel Data Storage \&amp; Data Intensive Scalable computing Systems}},
+  address = {Dallas, United States},
+  pages = {1-10},
+  year = {2018},
+  month = nov,
+  keywords = {Distributed Storage System Malleability ; Benchmark ; Pufferbench},
+  pdf = {https://hal.archives-ouvertes.fr/hal-01892713/file/Paper.pdf},
+  hal_id = {hal-01892713},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2018LowerRelaxed
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2018LowerRelaxedBibtex" aria-expanded="false" aria-controls="collapseCheriere2018LowerRelaxedBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCheriere2018LowerRelaxedAbstract" aria-expanded="false" aria-controls="collapseCheriere2018LowerRelaxedAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2018LowerRelaxed">———. 2018. “Lower Bounds for the Duration of Decommission Operations with Relaxed Fault Tolerance in Replication-Based Distributed Storage Systems.” Research Report RR-9229. Inria Rennes - Bretagne Atlantique. <a href="https://hal.archives-ouvertes.fr/hal-01943964" target="_blank">https://hal.archives-ouvertes.fr/hal-01943964</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2018LowerRelaxedBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@techreport{Cheriere2018LowerRelaxed,
+  title = {{Lower Bounds for the Duration of Decommission Operations with Relaxed Fault Tolerance in Replication-based Distributed Storage Systems}},
+  author = {Cheriere, Nathana{\"e}l and Dorier, Matthieu and Antoniu, Gabriel},
+  url = {https://hal.archives-ouvertes.fr/hal-01943964},
+  type = {Research Report},
+  number = {RR-9229},
+  pages = {1-28},
+  institution = {{Inria Rennes - Bretagne Atlantique}},
+  year = {2018},
+  month = dec,
+  keywords = {Distributed Storage Systems ; Malleable Storage ; Fault Tolerance ; Elastic Storage ; Syst{\`e}me de stockage distribu{\'e} ; Stockage {\'e}lastique ; Stockage mall{\'e}able ; D{\'e}commission ; Tol{\'e}rance aux pannes},
+  pdf = {https://hal.archives-ouvertes.fr/hal-01943964/file/Report.pdf},
+  hal_id = {hal-01943964},
+  hal_version = {v2}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2017How
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2017HowBibtex" aria-expanded="false" aria-controls="collapseCheriere2017HowBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCheriere2017HowAbstract" aria-expanded="false" aria-controls="collapseCheriere2017HowAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2017How">Cheriere, Nathanaël, and Gabriel Antoniu. 2017. “How Fast Can One Scale Down a Distributed File System?” In <i>BigData</i>. Boston, United States. doi:10.1109/BigData.2017.8257922.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2017HowBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Cheriere2017How,
+  title = {{How Fast Can One Scale Down a Distributed File System?}},
+  author = {Cheriere, Nathana{\"e}l and Antoniu, Gabriel},
+  url = {https://hal.archives-ouvertes.fr/hal-01644928},
+  booktitle = {{BigData}},
+  address = {Boston, United States},
+  year = {2017},
+  month = dec,
+  doi = {10.1109/BigData.2017.8257922},
+  keywords = {Decommission ; Model ; Malleable File System ; Distributed File System ; Elastic Storage},
+  pdf = {https://hal.archives-ouvertes.fr/hal-01644928/file/ModelingDecommision.pdf},
+  hal_id = {hal-01644928},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>We intend to explore how transient storage systems can be leveraged to support elastic in situ analytics.</p>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ol class="bibliography"><li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Dorier2018Methodology
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDorier2018MethodologyBibtex" aria-expanded="false" aria-controls="collapseDorier2018MethodologyBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseDorier2018MethodologyAbstract" aria-expanded="false" aria-controls="collapseDorier2018MethodologyAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Dorier2018Methodology">Dorier, Matthieu, Philip Carns, Kevin Harms, Robert Latham, Robert Ross, Shane Snyder, Justin Wozniak, et al. 2018. “Methodology for the Rapid Development of Scalable HPC Data Services.” Workshop. In <i>Proceedings of the PDSW-DISC 2018 Workshop (SC18)</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseDorier2018MethodologyBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Dorier2018Methodology,
+  title = {{Methodology for the Rapid Development of Scalable HPC Data Services}},
+  author = {Dorier, Matthieu and Carns, Philip and Harms, Kevin and Latham, Robert and Ross, Robert and Snyder, Shane and Wozniak, Justin and Gutierrez, Samuel and Robey, Bob and Settlemyer, Brad and Shipman, Galen and Soumagne, Jerome and Kowalkowski, James and Paterno, Marc and Sehrish, Saba},
+  booktitle = {{Proceedings of the PDSW-DISC 2018 workshop (SC18)}},
+  year = {2018},
+  type = {workshop},
+  url = {},
+  pdf = {}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="nav-item">
+              <a class="nav-link" href="/about/imprint/">
+                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+
+<!--  -->
+
+  </body>
+</html>
