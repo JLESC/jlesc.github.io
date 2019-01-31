@@ -39,6 +39,10 @@ In terms of fault-tolerance, we proposed the addition of a new primitive, MPI_Co
 
 A paper with the aforementioned results has been published at the WORKS 2017 workshop {% cite DorierWORKS2017 --file jlesc.bib %}, held jointly with Supercomputing. We improved the Swift/T usage of MPI_Comm_launch to support launching multiple executables, and started working on in situ analysis use-cases of MPI_Comm_launch, with ADIOS and DataSpaces as transport layers between launched tasks.
 
+## Results for 2018/2019
+
+We worked  with Cray to add support for functionalities similar to MPI_Comm_launch in Cray MPICH. A Paper has been submitted at CUG 2019 on "Implementing and Standardizing In Situ Job Launch for HPC Workflows". In parallel, we started discussing with members of the MPI Forum to have the functionalities added to the MPI standard.
+
 ## Visits and meetings
 
 Internship of Nathanael Cheriere at Argonne National Lab from January 2016 to June 2016, under the supervision of Matthieu Dorier and Rob Ross.
