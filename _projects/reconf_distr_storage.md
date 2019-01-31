@@ -83,4 +83,4 @@ We intend to explore how transient storage systems can be leveraged to support e
 
 ## References
 
-{% bibliography --file external/reconf-distr-storage.bib %}
+{% bibliography --file external/reconf_distr_storage.bib %}
