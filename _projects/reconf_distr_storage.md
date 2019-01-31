@@ -1,7 +1,7 @@
 ---
 layout: page_project
 title: Reconfiguring Distributed Storage Systems on HPC infrastructures
-date: 2018-05-01
+date: 2017-01-01
 updated:
 navbar: Research
 subnavbar: Projects
@@ -32,6 +32,18 @@ the reconfiguration could be done in a short time when the amount of data per no
 Our work in this context is to investigate the use of rescaling of distributed storage systems in HPC environments.
 
 
+## Results for 2017/2018
+
+We modelled the duration of the commision and decommission operations, for which we obtained 
+theoretical lower bounds. Then we considered HDFS as a use case and we show that our model
+can explain the measured commission and decommission times. The existing decommission mechanism
+of HDFS is good when the network is the bottleneck, but could be accelerated by up to a factor 3
+when the storage is the limiting factor. We also show that commission in HDFS can largely be improved.
+The results on theoretical decommission time have been published at the IEEE BigData 2017 
+conference {% cite Cheriere2017How --file jlesc.bib %}. Results for the commission time have later
+been added and an extended paper has been submitted and is under review for Elsevier JPDC.
+These additional results are independently available as a research report {% cite Cheriere2018LowerCommission --file jlesc.bib %}.
+
 ## Results for 2018/2019
 
 We introduced Pufferbench {% cite Cheriere2018Pufferbench --file jlesc.bib %}, a benchmark for evaluating
@@ -53,19 +65,6 @@ in a research report {% cite Cheriere2018LowerRelaxed --file jlesc.bib %} and ha
 Furthermore, we focused on understanding the requirements of distributed storage systems
 co-deployed with HPC-applications, designed a rescaling mechanism able to meet these
 requirements, and implemented it.
-
-
-## Results for 2017/2018
-
-We modelled the duration of the commision and decommission operations, for which we obtained 
-theoretical lower bounds. Then we considered HDFS as a use case and we show that our model
-can explain the measured commission and decommission times. The existing decommission mechanism
-of HDFS is good when the network is the bottleneck, but could be accelerated by up to a factor 3
-when the storage is the limiting factor. We also show that commission in HDFS can largely be improved.
-The results on theoretical decommission time have been published at the IEEE BigData 2017 
-conference {% cite Cheriere2017How --file jlesc.bib %}. Results for the commission time have later
-been added and an extended paper has been submitted and is under review for Elsevier JPDC.
-These additional results are independently available as a research report {% cite Cheriere2018LowerCommission --file jlesc.bib %}.
 
 ## Visits and meetings
 
