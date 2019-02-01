@@ -7,8 +7,8 @@ navbar: Events
 event_location: UTK, Knoxville, USA
 event_start: 2019-04-15
 event_end: 2019-04-17
-event_short_url:
-event_url: 
+event_short_url: http://icl.utk.edu/jlesc9/
+event_url: http://icl.utk.edu/jlesc9/
 wayback_url: 
 logo: 
 kind: workshop
@@ -32,9 +32,9 @@ The workshop will feature sessions on these seven central topics:
   * Numerical methods and algorithms
   * Advanced architectures
 
-In addition, dedicated sessions on hot topics are again envisioned.
+In addition, three keynote speakers will be invited to provide a clear picture of the current state and efforts on the roadmap to Exascale, a vendor session will be organized, and dedicated sessions on hot topics are again envisioned. Special efforts will be taken to highlight students and postdoc contributions: a poster session and a student/postdoc meeting opportunity will be arranged.
 
-A key objective of the workshop is to identify new research collaborations and establish a roadmap
+A key objective of the workshop is to foster the existing collaborations and inform the workshop attendees of their respective progress, as well as identify new research collaborations and establish a roadmap
 for their implementation.
 
 The workshop is open to Illinois, INRIA, ANL, BSC, JSC, R-CCS and UTK faculties, researchers,
