@@ -45,7 +45,7 @@ Intel Xeon Phi Knights Landing nodes). We conclude that online memory access
 profiling using PEBS at large scale is promising for memory management in
 heterogeneous memory environments. All these results were published at the
 International Workshop on Memory Centric High Performance Computing Co-located
-with SC18 at Dallas {% cite RocaEtAl2018 %}.
+with SC18 at Dallas {% cite RocaEtAl2018 --file external/deep-memory.bib %}.
 
 ## Visits and meetings
 
