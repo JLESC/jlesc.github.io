@@ -46,27 +46,44 @@ John Calhoun wrote a Ph. D. manuscript and defended a Ph. D. dissertation presen
 
 ## Results for 2017/2018
 
-The paper submitted to IJHPCA on the results of this research has been accepted for publication.
+The paper submitted to IJHPCA on the results of lossy compression for advection and diffusion problems has been accepted for publication.
+
+
+## Results for 2018/2019
+
+A new collaboration has started with Luc Giraud and Emmanuel Agulo (Inria) on lossy compression for linerar solvers (GMRES). The goal is to study the convergence of GMRES if lossy compression is used at each iteration or for only some iterations. The first case will allow to understand how lossy compression could be used to compress the solver data in memory. The second case will inform about the possibility to retart GMES from lossy checkpoints. The research has started, a Postdoc has been hired on the Inria siade
 
 ## Visits and meetings
 
 Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.
 Jon Calhoun did an internship of 11 weeks at ANL.
+Franck Cappello visited Inria Bordeaux for 1 week in July 2018.
 
 ## Impact and publications
 
-This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra and a paper has been submitted to a top ACM conference.
+### Papers
+The paper from this collaboration submitted to IJHPCA has been accepted for publication. See {% cite Calhoun18 --file jlesc.bib %} and {% cite Calhoun17 --file jlesc.bib %}
 
+This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra and a paper has been accepted at ACM HPDC 2018 on that topic {% cite HPDC2018 --file jlesc.bib %}.
+
+{% bibliography --cited --file jlesc.bib %}
+
+### Funding
 The results of this project motivated the submission of the [NSF Aletheia project](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1617488&HistoricalAwards=false) that has been awarded and is funded for 3 years.
 
 Funded by the NSF Aletheia project, a Ph. D. student (Wang Chen) at UIUC is exploring how to detect corruption in lossy compressed results (e.g. checkpoints) of numerical simulations.  
 
-See {% cite Calhoun18 --file jlesc.bib %} and {% cite Calhoun17 --file jlesc.bib %}
-{% bibliography --cited --file jlesc.bib %}
+Another student is funded on the Aletheia project on the Argonne side. Sihuan Li from U.C. Reiverside is doing a long term internship at Argonne on making lossy compression tolerant to SDC.
+
+### Impact on other projects
+
+The team of Jon Calhoun at Clemson University is continuing the research on this topic. They are exploring how lossy compression affect optimal checkpoint intervals and how the nature of the compression error affect the stability of numerical methods.
+
+This project also led to discussions with the ECP NWCHEMeX team that is developing a new version of the quantum chemistry code NWCHEM for exascale. The new version of the code will use lossy checkpointing to reduce as much as possible the fault tolerance overehad.
 
 ## Future plans
 
-We still need to make a formal link between the numerical and compression errors.
+Through the collaboratio with Luc Giraud, we hope to make a formal link between the numerical and compression errors.
 
 ## References
 {% bibliography --file external/Lossy_checkpoint_restart.bib %}
