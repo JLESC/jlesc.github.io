@@ -163,8 +163,12 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h3"><a href="#papers">Papers</a></li>
+<li class="toc-entry toc-h3"><a href="#funding">Funding</a></li>
+<li class="toc-entry toc-h3"><a href="#impact-on-other-projects">Impact on other projects</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
 </ul>
@@ -205,25 +209,74 @@ They already reveal two interesting points. First, checkpoints are composed of d
 <h2 id="results-for-20172018">
 <a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
 
-<p>The paper submitted to IJHPCA on the results of this research has been accepted for publication.</p>
+<p>The paper submitted to IJHPCA on the results of lossy compression for advection and diffusion problems has been accepted for publication.</p>
+
+<h2 id="results-for-20182019">
+<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+
+<p>A new collaboration has started with Luc Giraud and Emmanuel Agulo (Inria) on lossy compression for linerar solvers (GMRES). The goal is to study the convergence of GMRES if lossy compression is used at each iteration or for only some iterations. The first case will allow to understand how lossy compression could be used to compress the solver data in memory. The second case will inform about the possibility to retart GMES from lossy checkpoints. The research has started, a Postdoc has been hired on the Inria siade</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
 <p>Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.
-Jon Calhoun did an internship of 11 weeks at ANL.</p>
+Jon Calhoun did an internship of 11 weeks at ANL.
+Franck Cappello visited Inria Bordeaux for 1 week in July 2018.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<p>This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra and a paper has been submitted to a top ACM conference.</p>
+<h3 id="papers">
+<a id="papers" class="anchor" href="#papers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Papers</h3>
+<p>The paper from this collaboration submitted to IJHPCA has been accepted for publication. See <a href="#Calhoun18">(Calhoun et al. 2018)</a> and <a href="#Calhoun17">(Calhoun 2017)</a></p>
 
-<p>The results of this project motivated the submission of the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1617488&amp;HistoricalAwards=false">NSF Aletheia project</a> that has been awarded and is funded for 3 years.</p>
+<p>This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra and a paper has been accepted at ACM HPDC 2018 on that topic <a href="#HPDC2018">(Tao et al. 2018)</a>.</p>
 
-<p>Funded by the NSF Aletheia project, a Ph. D. student (Wang Chen) at UIUC is exploring how to detect corruption in lossy compressed results (e.g. checkpoints) of numerical simulations.</p>
-
-<p>See <a href="#Calhoun18">(Calhoun et al. 2018)</a> and <a href="#Calhoun17">(Calhoun 2017)</a></p>
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HPDC2018
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHPDC2018Bibtex" aria-expanded="false" aria-controls="collapseHPDC2018Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHPDC2018Abstract" aria-expanded="false" aria-controls="collapseHPDC2018Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="HPDC2018">Tao, Dingwen, Sheng Di, Xin Liang, Zizhong Chen, and Franck Cappello. 2018. “Improving Performance of Iterative Methods by Lossy Checkponting.” In <i>Proceedings of the 27th International Symposium on High-Performance
+               Parallel and Distributed Computing, HPDC 2018, Tempe, AZ, USA, June
+               11-15, 2018</i>, 52–65.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHPDC2018Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{HPDC2018,
+  author = {Tao, Dingwen and Di, Sheng and Liang, Xin and Chen, Zizhong and Cappello, Franck},
+  title = {Improving performance of iterative methods by lossy checkponting},
+  booktitle = {Proceedings of the 27th International Symposium on High-Performance
+                 Parallel and Distributed Computing, {HPDC} 2018, Tempe, AZ, USA, June
+                 11-15, 2018},
+  pages = {52--65},
+  year = {2018}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -306,10 +359,25 @@ Jon Calhoun did an internship of 11 weeks at ANL.</p>
 </li>
 </ol>
 
+<h3 id="funding">
+<a id="funding" class="anchor" href="#funding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Funding</h3>
+<p>The results of this project motivated the submission of the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1617488&amp;HistoricalAwards=false">NSF Aletheia project</a> that has been awarded and is funded for 3 years.</p>
+
+<p>Funded by the NSF Aletheia project, a Ph. D. student (Wang Chen) at UIUC is exploring how to detect corruption in lossy compressed results (e.g. checkpoints) of numerical simulations.</p>
+
+<p>Another student is funded on the Aletheia project on the Argonne side. Sihuan Li from U.C. Reiverside is doing a long term internship at Argonne on making lossy compression tolerant to SDC.</p>
+
+<h3 id="impact-on-other-projects">
+<a id="impact-on-other-projects" class="anchor" href="#impact-on-other-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact on other projects</h3>
+
+<p>The team of Jon Calhoun at Clemson University is continuing the research on this topic. They are exploring how lossy compression affect optimal checkpoint intervals and how the nature of the compression error affect the stability of numerical methods.</p>
+
+<p>This project also led to discussions with the ECP NWCHEMeX team that is developing a new version of the quantum chemistry code NWCHEM for exascale. The new version of the code will use lossy checkpointing to reduce as much as possible the fault tolerance overehad.</p>
+
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>We still need to make a formal link between the numerical and compression errors.</p>
+<p>Through the collaboratio with Luc Giraud, we hope to make a formal link between the numerical and compression errors.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
