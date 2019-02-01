@@ -21,6 +21,8 @@ members:
   - alvarez_c
   - jimenez_d
   - martorell_x
+  - unsal_o
+  - rutten_e
   - sano_k
   - jin_z
   - finkel_h
