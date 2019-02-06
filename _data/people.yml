@@ -1221,7 +1221,7 @@ lebre_a:
   homepage: http://people.rennes.inria.fr/Adrien.Lebre/
   
 lefevre_v:
-  sur_name: Le Fèvre
+  sur_name: Le Fèvre
   given_name: Valentin
   affiliation: inria
   position: permanent
@@ -1843,7 +1843,7 @@ reverdy_v:
 
 ricard_j:
   sur_name: Ricard
-  given_name: Jérôme
+  given_name: Jérôme
   affiliation: inria
   position:
   topics:
@@ -2546,11 +2546,11 @@ yashiro_h:
 yildiz_o:
   sur_name: Yildiz
   given_name: Orcun
-  affiliation: inria
-  position: phd
+  affiliation: anl
+  position: post_doc
   topics: Big Data & I/O
-  email: orcun.yildiz@inria.fr
-  homepage: https://team.inria.fr/kerdata/orcun-yildiz/
+  email: oyildiz@anl.gov
+  homepage: https://www.anl.gov/profile/orcun-yildiz
 
 yoshii_k:
   sur_name: Yoshii
