@@ -13,7 +13,7 @@ keywords:
 head: peterka_t
 members:
   - wozniak_j
-  - dreher_m
+  - yildiz_o
   - ross_r
   - antoniu_g
   - dorier_m
@@ -184,6 +184,17 @@ those designs. In particular, we identified missing features of current system
 software required for the evolution of in situ workflows toward exascale and how
 system software innovations can help address those challenges.  Matthieu Dreher
 presented a concept paper at the SC17 ISAV workshop {% cite dreherisav17 --file jlesc.bib %} on these topics.
+
+
+## Results for 2018/2019
+
+### PyCompss, Decaf distributed/in situ workflow convergence
+
+ * Rosa Badia and Jorge Ejarque of BSC, Orcun Yildiz and Tom Peterka of ANL
+ 
+Workflow systems promise scientists an automated end-to-end path from hypothesis to discovery. However, it is impractical to expect any single system to deliver such a wide range of capabilities. A more practical solution is to compose the end-to-end workflow from more than one system. With this goal in mind, the integration between distributed and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of subworkflows, with different levels of the hierarchy using different programming, execution, and data models.
+
+In 2018, we finalized the implementation of this hierarchical workflow composition that uses PyCOMPSs and Decaf as the distributed and in situ workflow tools, respectively. We evaluated our approach by performing experiments in materials science. The in situ Decaf sub-workflow consists of the LAMMPS molecular dynamics simulation coupled to a parallel in situ feature detector that selects nucleated molecule clusters during crystallization. Meanwhile, the PyCOMPSs distributed area workflow launches an ensemble of in situ Decaf workflows with different initial conditions, saves results from experiments that successfully nucleated, and collects frames from those ensemble members into an animation. Our results reveal that heterogeneous workflow integration is advantageous to both distributed area and in situ workflow systems. This work is currently being reviewed for a journal publication. 
 
 
 ## Visits and meetings
