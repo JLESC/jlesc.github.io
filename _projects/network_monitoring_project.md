@@ -14,7 +14,7 @@ topics:
 keywords:
 head: jeannot_e
 members:
-   - bogdan_n
+   - nicolae_b
    - bosilca_g
    - cappello_f
    - jeannot_e
