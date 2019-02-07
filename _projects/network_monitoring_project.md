@@ -17,7 +17,6 @@ members:
    - nicolae_b
    - bosilca_g
    - cappello_f
-   - jeannot_e
 ---
 {% comment %}
 ================================
