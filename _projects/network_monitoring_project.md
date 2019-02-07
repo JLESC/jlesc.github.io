@@ -83,15 +83,17 @@ Read the comments carefully!
 
 ## Research topic and goals
 
-The goal of this project is to study how a careful monitoring of MPI communications can help in forecasting communication to avoid congestion on the network when writing checkpoints. This work will be based on the low-level monitoring interface that has been implemented by Inria and UTK in OpenMPI {% cite Bosilca17_online %}. We want to monitor applications communication with this feature and, using time-series analysis and other techniques, predict the future usage of the network by the application. With such prediction we will schedule I/O access of VeloC ((Very Low Overhead transparent multilevel Checkpoint/restart), to avoid interference between the checkpoint writing to the storage system and the usage of the network by the application.
+The goal of this project is to study how a careful monitoring of MPI communications can help in forecasting communication to avoid congestion on the network when writing checkpoints. This work will be based on the low-level monitoring interface that has been implemented by Inria and UTK in OpenMPI {% cite Bosilca17_online --file external/network_monitoring_project.bib %}. We want to monitor applications communication with this feature and, using time-series analysis and other techniques, predict the future usage of the network by the application. With such prediction we will schedule I/O access of VeloC ((Very Low Overhead transparent multilevel Checkpoint/restart), to avoid interference between the checkpoint writing to the storage system and the usage of the network by the application.
 
 ## Contributions:
-A transparent application monitoring system within VeloC
-A network tool that predicts network usage of the application
-Strategies to avoid network interference between the application and VeloC.
 
-## Results for 2017/2018
+* A transparent application monitoring system within VeloC
+* A network tool that predicts network usage of the application
+* Strategies to avoid network interference between the application and VeloC.
 
+## Results for 2018/2019
+
+None yet.
 
 ## Visits and meetings
 
