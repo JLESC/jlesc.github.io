@@ -134,7 +134,7 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Matthieu</span> <span class="person sur-name">Dreher</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Orcun</span> <span class="person sur-name">Yildiz</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
             <span class="clearfix">
@@ -187,6 +187,8 @@
 <li class="toc-entry toc-h3"><a href="#data-contracts-for-in-situ-workflows">Data contracts for in situ workflows</a></li>
 <li class="toc-entry toc-h3"><a href="#data-contracts-for-storage-systems">Data contracts for storage systems</a></li>
 <li class="toc-entry toc-h3"><a href="#workflows-and-operating-systems">Workflows and operating systems</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
+<li class="toc-entry toc-h3"><a href="#pycompss-decaf-distributedin-situ-workflow-convergence-2">PyCompss, Decaf distributed/in situ workflow convergence</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -402,6 +404,20 @@ those designs. In particular, we identified missing features of current system
 software required for the evolution of in situ workflows toward exascale and how
 system software innovations can help address those challenges.  Matthieu Dreher
 presented a concept paper at the SC17 ISAV workshop <a href="#dreherisav17">(Dreher et al. 2017)</a> on these topics.</p>
+
+<h2 id="results-for-20182019">
+<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+
+<h3 id="pycompss-decaf-distributedin-situ-workflow-convergence-2">
+<a id="pycompss-decaf-distributedin-situ-workflow-convergence-2" class="anchor" href="#pycompss-decaf-distributedin-situ-workflow-convergence-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>PyCompss, Decaf distributed/in situ workflow convergence</h3>
+
+<ul>
+  <li>Rosa Badia and Jorge Ejarque of BSC, Orcun Yildiz and Tom Peterka of ANL</li>
+</ul>
+
+<p>Workflow systems promise scientists an automated end-to-end path from hypothesis to discovery. However, it is impractical to expect any single system to deliver such a wide range of capabilities. A more practical solution is to compose the end-to-end workflow from more than one system. With this goal in mind, the integration between distributed and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of subworkflows, with different levels of the hierarchy using different programming, execution, and data models.</p>
+
+<p>In 2018, we finalized the implementation of this hierarchical workflow composition that uses PyCOMPSs and Decaf as the distributed and in situ workflow tools, respectively. We evaluated our approach by performing experiments in materials science. The in situ Decaf sub-workflow consists of the LAMMPS molecular dynamics simulation coupled to a parallel in situ feature detector that selects nucleated molecule clusters during crystallization. Meanwhile, the PyCOMPSs distributed area workflow launches an ensemble of in situ Decaf workflows with different initial conditions, saves results from experiments that successfully nucleated, and collects frames from those ensemble members into an animation. Our results reveal that heterogeneous workflow integration is advantageous to both distributed area and in situ workflow systems. This work is currently being reviewed for a journal publication.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
