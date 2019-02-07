@@ -296,15 +296,6 @@ borrell_r:
   email: ricard.borrell@bsc.es
   homepage: https://www.bsc.es/borrell-ricard
 
-bogdan_n:
-  sur_name: Bogdan
-  given_name: Nicolae
-  affiliation: anl
-  position: permanent
-  topics: HPC, Resilience
-  email: bosilca@icl.utk.edu
-  homepage: http://www.bnicolae.net/
-
 bosilca_g:
   sur_name: Bosilca
   given_name: George
@@ -1561,6 +1552,15 @@ navaux_p:
   topics:
   email:
   homepage: http://charm.cs.uiuc.edu/people/navaux
+  
+nicolae_b:
+  sur_name: Nicolae
+  given_name: Bogdan
+  affiliation: anl
+  position: permanent
+  topics: HPC, Resilience
+  email: bogdan.nicolae@acm.org
+  homepage: http://www.bnicolae.net/
 
 nonaka_j:
   sur_name: Nonaka
