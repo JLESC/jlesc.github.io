@@ -45,6 +45,13 @@ We have proposed the idea of Simplified SSP and evaluated its consistency with t
 
 We have performed 6 traditional benchmarks and 7 mini applications on 6 systems to calculate the SSP and SSSP metrics. The SSSP metric has given better performance projection to the SSP than HPL {% cite TsujEtAl2017 --file jlesc.bib %}. However, there have been still some differences between the SSP and SSSP scores. Therefore, we have introduced weighting factors for benchmarks in the SSSP to approximate the SSP metrics by the SSSP metrics more accurately. The weighting factors have been calculated based on a simple learning algorithm, and the SSSP metric using the resulted weighting factors has successfully approximated the SSP metric.
 
+## Results for 2018/2019
+
+To evaluate the performance of various systems by SSP/SSSP-metric-wise way, we have introduced the very Simplified SSP (vSSSP) metric. Whereas the SSSP metric approximates the SSP metric by using 6 different benchmarks, the vSSSP metric does by only two benchmarks, the HPL and HPCG. While the approximation by the vSSSP metric may not so precise, the vSSSP metric can be computed for all systems if their HPL and HPCG scores are available.
+
+The current vSSSP formula computed based on the results of applications and HPCG, HPL on 6 different systems is for vSSSP is 0.19*HPL+0.85*HCPG. It had been considered
+ that the performance of systems for real applications will be between HPCG and HPL, we have shown that it is biased toward HPCG. 
+
 ## Visits and meetings
 
 Miwako Tsuji visited NCSA in January 2017.
