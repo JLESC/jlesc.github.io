@@ -170,6 +170,7 @@
 <li class="toc-entry toc-h2"><a href="#contributions">Contributions</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -208,6 +209,14 @@
 <a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
 
 <p>We have performed 6 traditional benchmarks and 7 mini applications on 6 systems to calculate the SSP and SSSP metrics. The SSSP metric has given better performance projection to the SSP than HPL <a href="#TsujEtAl2017">(Tsuji, Kramer, and Sato 2017)</a>. However, there have been still some differences between the SSP and SSSP scores. Therefore, we have introduced weighting factors for benchmarks in the SSSP to approximate the SSP metrics by the SSSP metrics more accurately. The weighting factors have been calculated based on a simple learning algorithm, and the SSSP metric using the resulted weighting factors has successfully approximated the SSP metric.</p>
+
+<h2 id="results-for-20182019">
+<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+
+<p>To evaluate the performance of various systems by SSP/SSSP-metric-wise way, we have introduced the very Simplified SSP (vSSSP) metric. Whereas the SSSP metric approximates the SSP metric by using 6 different benchmarks, the vSSSP metric does by only two benchmarks, the HPL and HPCG. While the approximation by the vSSSP metric may not so precise, the vSSSP metric can be computed for all systems if their HPL and HPCG scores are available.</p>
+
+<p>The current vSSSP formula computed based on the results of applications and HPCG, HPL on 6 different systems is for vSSSP is 0.19<em>HPL+0.85</em>HCPG. It had been considered
+ that the performance of systems for real applications will be between HPCG and HPL, we have shown that it is biased toward HPCG.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
