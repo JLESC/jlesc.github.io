@@ -124,7 +124,7 @@ provided an optimal dynamic programming algorithm, and an extensive set of simul
 
 
 
-## Results for 2018-2019
+## Results for 2018/2019
 
 In high-performance computing environments, input/output (I/O) from various
 sources often contend for scarce available bandwidth. Adding to the I/O
