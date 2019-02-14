@@ -57,6 +57,4 @@ We intend to leverage the principles behind SLoG to demonstrate how streaming da
 
 ## Future plans
 
-Plans for 2018: 
-
 ## References
