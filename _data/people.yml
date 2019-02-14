@@ -879,6 +879,15 @@ hagemeier_b:
   email: b.hagemeier@fz-juelich.de
   homepage: https://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/hagemeier_b.html
 
+han_l:
+ sur_name: Han
+ given_name: Li
+ affiliation: inria
+ position:
+ topics:
+ email: Li.Han@ens-lyon.fr
+ homepage:
+
 hascoet_l:
   sur_name: Hascoët
   given_name: Laurent
