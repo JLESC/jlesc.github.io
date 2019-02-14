@@ -74,6 +74,7 @@ We co-organized a panel session and a bird-of-feather session related to FPGA an
 {% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
 {% person sano_k %} visited ANL in August 2018 and spent one day for this project.
 
+{% person yoshii_k %}, {% person martorell_x %}, {% person rutten_e %} and {% person sano_k %} had a project meeting during FPT18 in Okinawa, Japan in Dec, 2018.
 
 ## Impact and publications
 
