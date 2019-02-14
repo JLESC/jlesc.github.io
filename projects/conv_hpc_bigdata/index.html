@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Towards Blob-Based Convergence Between HPC and Big Data</title>
+  <title>JLESC &mdash; Towards Storage-Based Convergence Between HPC and Big Data</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
@@ -93,7 +93,7 @@
   <article class="post-content">
     <div class="row">
       <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Towards Blob-Based Convergence Between HPC and Big Data</h1>
+        <h1 class="pull-left">Towards Storage-Based Convergence Between HPC and Big Data</h1>
       </header>
     </div>
     <div class="row">
@@ -165,9 +165,11 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans-1">Future plans</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
 </ul>
         </section>
@@ -190,14 +192,29 @@
 
 <p>The first sub-goal lead to an extensive research leveraging a set of 5 benchmarks for Spark Bench as well as 4 real-world data-intensive HPC applications. The results show that all 4 applications are able to work unmodified atop object storage. More importantly, they show that the same storage systems (Týr or RADOS) can be used for both HPC and Big Data contexts, and on both show significant performance advantages. This clearly confirms the applicability and relevance of blob-based storage in a storage convergence context. These results have been published as a preliminary publication in the Cluster 2017 conference <a href="#MatriEtAl2017">(Matri et al. 2017)</a>.</p>
 
-<p>The second sub-goal was achieved through a 3-month visit of Pierre Matri (Inria) at ANL, under the direct supervision of Philip Carns and Rob Ross. Through extensive experiments on the Theta supercomputer up to 120,000 cores, we did demonstrate the performance benefits of using blobs for distributed logging on HPC. We also showed that the near-limitless scaling of blob storage systems brings significant performance benefits at large scale when compared to traditional, file-based storage. The results of this work resulted in a second submission to IPDPS 2018.</p>
+<p>The second sub-goal was achieved through a 3-month visit of Pierre Matri (Inria) at ANL, under the direct supervision of Philip Carns and Rob Ross. Through extensive experiments on the Theta supercomputer, we did demonstrate the performance benefits of using blobs for distributed logging on HPC. We also showed that the near-limitless scaling of blob storage systems brings significant performance benefits at large scale when compared to traditional, file-based storage.</p>
 
 <p>The third sub-goal was achieved by developing a file system prototype named TýrFS, working as a thin layer between Týr and the application. This demonstration demonstrated the performance benefits of such approach in a converging use-case, on both HPC and Big Data applicative contexts. In particular, relying on various optimisations for small files, TýrFS has been shown to outperform OrangeFS, Lustre, HDFS and Ceph by more than one order of magnitude with such workload. These results have been accepted for publication in the CCGrid 2018 conference <a href="#MatriEtAl2018">(Matri et al. 2018)</a>.</p>
+
+<h2 id="results-for-20182019">
+<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+
+<p>The availability of blobs as a generic purpose storage system opens opportunities for various storage abstractions. One of these opportunities relates to data streaming. In particular for such applications, the append operation available on mutable object storage systems enables recording streams of events at high velocity. This work builds on top of the results obtained last year on the during the visit of Pierre Matri at ANL.</p>
+
+<p>It led to the development of a prototype layer above Týr named SLoG, that provides a unified interface on top of an object store providing high-velocity data ingestion with near-linear horizontal scalability through transparent partitioning. It can optionally falls back to using a distributed file system as storage backend. The measured throughput reached 250 million events per second using Týr using up to 120,000 cores of the Theta supercomputer at ANL. It was published at the ICDCS 2018 conference <a href="#MatriEtAl2018Streaming">(Matri et al. 2018)</a>.</p>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>We intend to leverage the principles behind SLoG to demonstrate how streaming data services are able to help collecting and processing large volumes of telemetry information for real applications, for the purpose of monitoring, computational steering as well as in-siu visualization of running HPC and Big Data applications. In particular, this will require understanding how part of the processing of the streaming data can performed inside the data service to reduce application complexity and further reduce the time needed to analyze large amounts of events.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>May to July 2017: Internship of Pierre Matri at Argonne National Laboratory (3 months).</p>
+<ul>
+  <li>May to July 2017: Internship of Pierre Matri at Argonne National Laboratory (3 months).</li>
+  <li>Work meetings between Pierre Matri, Philip Carns, Rob Ross, Alexandru Costan and Gabriel Antoniu at SC’18.</li>
+</ul>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -233,6 +250,46 @@
   title = {{TýrFS: Increasing Small Files Access Performance with Dynamic Metadata Replication}},
   author = {Matri, Pierre and Pérez, María S and Costan, Alexandru and Antoniu, Gabriel},
   booktitle = {2018 IEEE International Conference on Cluster Cloud and Grid Computing (CCGrid'18)},
+  year = {2018},
+  organization = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          MatriEtAl2018Streaming
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMatriEtAl2018StreamingBibtex" aria-expanded="false" aria-controls="collapseMatriEtAl2018StreamingBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseMatriEtAl2018StreamingAbstract" aria-expanded="false" aria-controls="collapseMatriEtAl2018StreamingAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="MatriEtAl2018Streaming">Matri, Pierre, Philip Carns, Robert Ross, Alexandru Costan, María S Pérez, and Gabriel Antoniu. 2018. “SLoG: Large-Scale Logging Middleware for HPC and Big Data Convergence.” In <i>2018 IEEE 38th International Conference on Distributed Computing Systems (ICDCS)</i>. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseMatriEtAl2018StreamingBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{MatriEtAl2018Streaming,
+  title = {{SLoG: Large-Scale Logging Middleware for HPC and Big Data Convergence}},
+  author = {Matri, Pierre and Carns, Philip and Ross, Robert and Costan, Alexandru and Pérez, María S and Antoniu, Gabriel},
+  booktitle = {2018 IEEE 38th International Conference on Distributed Computing Systems (ICDCS)},
   year = {2018},
   organization = {IEEE}
 }
@@ -292,10 +349,10 @@
 </li>
 </ol>
 
-<h2 id="future-plans">
-<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+<h2 id="future-plans-1">
+<a id="future-plans-1" class="anchor" href="#future-plans-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>Plans for 2018: Such a convergence through blobs leads to two main questions that we intend to answer in the next year. First, how can we further optimize object storage for convergence? Indeed, the conclusions from this preliminary experiments prove that the performance advantage of blobs over the state of the art can be further improved by leveraging the technologies available on both platforms. This includes RDMA, that is increasingly available on Big Data platforms through RoCE for example, or leveraging advanced memory architectures such as NVRAM available on next-generation supercomputers. Second, how can this model be applied to converging data processing frameworks? While originating on clouds, there is a growing interest in the HPC community for artificial intelligence, through frameworks such as TensorFlow. This gives an unprecedented opportunity to take convergence one level higher, and shows how convergent frameworks can be integrated with convergent storage to offer users with a unified experience on HPC and Clouds for such use-cases.</p>
+<p>Plans for 2018:</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>

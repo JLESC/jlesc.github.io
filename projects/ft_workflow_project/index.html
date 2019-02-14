@@ -157,7 +157,11 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Herault</span> <span class="person sur-name">Thomas</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+              <span class="person given-name">Thomas</span> <span class="person sur-name">Herault</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Frederic</span> <span class="person sur-name">Vivien</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
         </div>
@@ -181,6 +185,7 @@
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-2018-2019">Results for 2018-2019</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -231,6 +236,47 @@ even for a single task.</p>
 <p>While the previous work had focused on applications for which we can decide at which frequency we can checkpoint, and our aim has been to find the optimal checkpointing period, we have also initiated the study for linear chains of parallel tasks. The aim is then to decide which tasks to checkpoint and/or replicate. In this case, we have
 provided an optimal dynamic programming algorithm, and an extensive set of simulations to assess (i) in which scenarios checkpointing performs better than replication, or vice-versa; and (ii) in which scenarios the combination of both methods is useful, and to what extent.</p>
 
+<h2 id="results-for-2018-2019">
+<a id="results-for-2018-2019" class="anchor" href="#results-for-2018-2019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018-2019</h2>
+
+<p>In high-performance computing environments, input/output (I/O) from various
+sources often contend for scarce available bandwidth. Adding to the I/O
+operations inherent to the failure-free execution of an application, I/O
+from checkpoint/restart (CR) operations (used to ensure progress in the presence
+of failures) place an additional burden as it increase I/O contention,
+leading to degraded performance.  We have  considered a cooperative scheduling policy that optimizes the
+overall performance of concurrently executing CR-based applications which share
+valuable I/O resources.  First, we provide a theoretical model and then derive a set
+of necessary constraints needed to minimize the global waste on the
+platform.
+  Our results demonstrate that the optimal checkpoint interval, as defined by
+Young/Daly, despite providing a sensible metric for a single application, is not
+sufficient to optimally address resource contention at the platform scale.  We
+therefore show that combining optimal checkpointing periods with I/O scheduling
+strategies can provide a significant improvement on the overall application
+performance, thereby maximizing platform throughput.
+Overall, these results provide critical analysis and direct guidance on checkpointing
+large-scale workloads in the presence of competing I/O while minimizing the impact
+on application performance. This work has received the best paper award at APDCM 2018,
+a workshop run in conjunction with IPDPS 2018.</p>
+
+<p>Three JLESC partners, Inria, Riken and UTK,  have conducted a study to compare 
+the performance of different approaches to
+  tolerate failures using checkpoint/restart when executed on
+  large-scale failure-prone platforms. We study (i) rigid
+  applications, which use a constant number of processors throughout
+  execution; (ii) moldable applications, which can use a different
+  number of processors after each restart following a fail-stop error;
+  and (iii) \rid applications, which are moldable applications
+  restricted to use rectangular processor grids (such as many dense
+  linear algebra kernels). For each application type, we compute the
+  optimal number of failures to tolerate before relinquishing the
+  current allocation and waiting until a new resource can be
+  allocated, and we determine the optimal yield that can be
+  achieved. We instantiate our performance model with a realistic
+  applicative scenario and make it publicly available for further
+  usage.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -239,8 +285,12 @@ we have been attending the SC conference (November 2016
 and November 2017), where we had extensive discussions to make progress. 
 We represented the JLESC at the Inria booth during these conferences.</p>
 
-<p>While not meeting in person, we have stayed in close collaboration through regular Skype meetings,
+<p>When not meeting in person, we have stayed in close collaboration through regular Skype meetings,
 which allowed us to make progress on the project.</p>
+
+<p><span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months.</p>
+
+<p>Valentin Le Fèvre has visited  Univ. Tenn. Knoxville for 10 days in February 2019.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
