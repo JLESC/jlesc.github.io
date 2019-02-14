@@ -49,7 +49,7 @@ We intend to leverage the principles behind SLoG to demonstrate how streaming da
 ## Visits and meetings
 
 - May to July 2017: Internship of Pierre Matri at Argonne National Laboratory (3 months).
-– Work meetings between Pierre Matri, Philip Carns, Rob Ross, Alexandru Costan and Gabriel Antoniu at SC'18.
+- Work meetings between Pierre Matri, Philip Carns, Rob Ross, Alexandru Costan and Gabriel Antoniu at SC'18.
 
 ## Impact and publications
 
