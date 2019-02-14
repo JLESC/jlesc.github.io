@@ -70,7 +70,7 @@ We presented two technical posters related to high-level synthesis and custom FP
 ## Visits and meetings
 {% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
 
-{% person yoshii_k %}, {% person martorell_x %}, {% person rutten_e%} and {% person sano_k %} had a project meeting during FPT18 in Okinawa, Japan in Dec, 2018.
+{% person yoshii_k %}, {% person martorell_x %}, {% person rutten_e %} and {% person sano_k %} had a project meeting during FPT18 in Okinawa, Japan in Dec, 2018.
 
 ## Impact and publications
 
