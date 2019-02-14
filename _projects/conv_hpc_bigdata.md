@@ -1,6 +1,6 @@
 ---
 layout: page_project
-title: Towards Blob-Based Convergence Between HPC and Big Data
+title: Towards Storage-Based Convergence Between HPC and Big Data
 date: 2018-01-15
 updated:
 navbar: Research
@@ -32,13 +32,24 @@ Finally, we seek to prove that such convergence does not impact support for lega
 
 The first sub-goal lead to an extensive research leveraging a set of 5 benchmarks for Spark Bench as well as 4 real-world data-intensive HPC applications. The results show that all 4 applications are able to work unmodified atop object storage. More importantly, they show that the same storage systems (Týr or RADOS) can be used for both HPC and Big Data contexts, and on both show significant performance advantages. This clearly confirms the applicability and relevance of blob-based storage in a storage convergence context. These results have been published as a preliminary publication in the Cluster 2017 conference {% cite MatriEtAl2017 --file jlesc.bib %}.
 
-The second sub-goal was achieved through a 3-month visit of Pierre Matri (Inria) at ANL, under the direct supervision of Philip Carns and Rob Ross. Through extensive experiments on the Theta supercomputer up to 120,000 cores, we did demonstrate the performance benefits of using blobs for distributed logging on HPC. We also showed that the near-limitless scaling of blob storage systems brings significant performance benefits at large scale when compared to traditional, file-based storage. The results of this work resulted in a second submission to IPDPS 2018.
+The second sub-goal was achieved through a 3-month visit of Pierre Matri (Inria) at ANL, under the direct supervision of Philip Carns and Rob Ross. Through extensive experiments on the Theta supercomputer, we did demonstrate the performance benefits of using blobs for distributed logging on HPC. We also showed that the near-limitless scaling of blob storage systems brings significant performance benefits at large scale when compared to traditional, file-based storage.
 
 The third sub-goal was achieved by developing a file system prototype named TýrFS, working as a thin layer between Týr and the application. This demonstration demonstrated the performance benefits of such approach in a converging use-case, on both HPC and Big Data applicative contexts. In particular, relying on various optimisations for small files, TýrFS has been shown to outperform OrangeFS, Lustre, HDFS and Ceph by more than one order of magnitude with such workload. These results have been accepted for publication in the CCGrid 2018 conference {% cite MatriEtAl2018 --file jlesc.bib %}.
 
+## Results for 2018/2019
+
+The availability of blobs as a generic purpose storage system opens opportunities for various storage abstractions. One of these opportunities relates to data streaming. In particular for such applications, the append operation available on mutable object storage systems enables recording streams of events at high velocity. This work builds on top of the results obtained last year on the during the visit of Pierre Matri at ANL.
+
+It led to the development of a prototype layer above Týr named SLoG, that provides a unified interface on top of an object store providing high-velocity data ingestion with near-linear horizontal scalability through transparent partitioning. It can optionally falls back to using a distributed file system as storage backend. The measured throughput reached 250 million events per second using Týr using up to 120,000 cores of the Theta supercomputer at ANL. It was published at the ICDCS 2018 conference {% cite MatriEtAl2018Streaming --file jlesc.bib %}.
+
+## Future plans
+
+We intend to leverage the principles behind SLoG to demonstrate how streaming data services are able to help collecting and processing large volumes of telemetry information for real applications, for the purpose of monitoring, computational steering as well as in-siu visualization of running HPC and Big Data applications. In particular, this will require understanding how part of the processing of the streaming data can performed inside the data service to reduce application complexity and further reduce the time needed to analyze large amounts of events.
+
 ## Visits and meetings
 
-May to July 2017: Internship of Pierre Matri at Argonne National Laboratory (3 months).
+- May to July 2017: Internship of Pierre Matri at Argonne National Laboratory (3 months).
+- Work meetings between Pierre Matri, Philip Carns, Rob Ross, Alexandru Costan and Gabriel Antoniu at SC'18.
 
 ## Impact and publications
 
@@ -46,6 +57,6 @@ May to July 2017: Internship of Pierre Matri at Argonne National Laboratory (3 m
 
 ## Future plans
 
-Plans for 2018: Such a convergence through blobs leads to two main questions that we intend to answer in the next year. First, how can we further optimize object storage for convergence? Indeed, the conclusions from this preliminary experiments prove that the performance advantage of blobs over the state of the art can be further improved by leveraging the technologies available on both platforms. This includes RDMA, that is increasingly available on Big Data platforms through RoCE for example, or leveraging advanced memory architectures such as NVRAM available on next-generation supercomputers. Second, how can this model be applied to converging data processing frameworks? While originating on clouds, there is a growing interest in the HPC community for artificial intelligence, through frameworks such as TensorFlow. This gives an unprecedented opportunity to take convergence one level higher, and shows how convergent frameworks can be integrated with convergent storage to offer users with a unified experience on HPC and Clouds for such use-cases.
+Plans for 2018: 
 
 ## References
