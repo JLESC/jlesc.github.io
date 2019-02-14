@@ -67,6 +67,9 @@ We gave presentations on our FPGA work at the H2RC workshop and the post-Moore w
 ## Results for 2017/2018
 We presented two technical posters related to high-level synthesis and custom FPGA designs in SC17. We also co-organized a bird-of-feather session about reconfigurable computing in SC17. We have built FPGA test environment for cutting-edge FPGA platforms and high-level synthesis tools.
 
+## Results for 2018/2019
+We co-organized a panel session and a bird-of-feather session related to FPGA and reconfigurable computing with our collaborators in this field in SC18. We also organized two workshops related HPC and FPGAs in FPT18 in Japan.
+
 ## Visits and meetings
 {% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
 {% person sano_k %} visited ANL in August 2018 and spent one day for this project.
