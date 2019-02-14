@@ -20,6 +20,7 @@ members:
   - robert_y
   - cavelan_a
   - herault_t
+  - vivien_f
 ---
 {% comment %}
 ================================
@@ -123,6 +124,50 @@ provided an optimal dynamic programming algorithm, and an extensive set of simul
 
 
 
+## Results for 2018-2019
+
+In high-performance computing environments, input/output (I/O) from various
+sources often contend for scarce available bandwidth. Adding to the I/O
+operations inherent to the failure-free execution of an application, I/O
+from checkpoint/restart (CR) operations (used to ensure progress in the presence
+of failures) place an additional burden as it increase I/O contention,
+leading to degraded performance.  We have  considered a cooperative scheduling policy that optimizes the
+overall performance of concurrently executing CR-based applications which share
+valuable I/O resources.  First, we provide a theoretical model and then derive a set
+of necessary constraints needed to minimize the global waste on the
+platform.
+  Our results demonstrate that the optimal checkpoint interval, as defined by
+Young/Daly, despite providing a sensible metric for a single application, is not
+sufficient to optimally address resource contention at the platform scale.  We
+therefore show that combining optimal checkpointing periods with I/O scheduling
+strategies can provide a significant improvement on the overall application
+performance, thereby maximizing platform throughput.
+Overall, these results provide critical analysis and direct guidance on checkpointing
+large-scale workloads in the presence of competing I/O while minimizing the impact
+on application performance. This work has received the best paper award at APDCM 2018,
+a workshop run in conjunction with IPDPS 2018.
+
+
+Three JLESC partners, Inria, Riken and UTK,  have conducted a study to compare 
+the performance of different approaches to
+  tolerate failures using checkpoint/restart when executed on
+  large-scale failure-prone platforms. We study (i) rigid
+  applications, which use a constant number of processors throughout
+  execution; (ii) moldable applications, which can use a different
+  number of processors after each restart following a fail-stop error;
+  and (iii) \rid applications, which are moldable applications
+  restricted to use rectangular processor grids (such as many dense
+  linear algebra kernels). For each application type, we compute the
+  optimal number of failures to tolerate before relinquishing the
+  current allocation and waiting until a new resource can be
+  allocated, and we determine the optimal yield that can be
+  achieved. We instantiate our performance model with a realistic
+  applicative scenario and make it publicly available for further
+  usage.
+  
+
+
+
 
 ## Visits and meetings
 
@@ -131,8 +176,13 @@ we have been attending the SC conference (November 2016
 and November 2017), where we had extensive discussions to make progress. 
 We represented the JLESC at the Inria booth during these conferences. 
 
-While not meeting in person, we have stayed in close collaboration through regular Skype meetings,
+When not meeting in person, we have stayed in close collaboration through regular Skype meetings,
 which allowed us to make progress on the project. 
+
+{% person robert_y %} made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months.
+
+Valentin Le Fèvre has visited  Univ. Tenn. Knoxville for 10 days in February 2019.
+
 
 ## Impact and publications
 
