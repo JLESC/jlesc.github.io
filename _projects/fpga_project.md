@@ -69,6 +69,7 @@ We presented two technical posters related to high-level synthesis and custom FP
 
 ## Visits and meetings
 {% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
+{% person sano_k %} visited ANL in August 2018 and spent one day for this project.
 
 
 ## Impact and publications
