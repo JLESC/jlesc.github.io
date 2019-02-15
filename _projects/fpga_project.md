@@ -80,13 +80,14 @@ We co-organized a panel session and a bird-of-feather session related to FPGA an
 
 {% person cappello_f %}, Internal report on HPC trends: focus on Reconfigurable Architecture. ANL technical report. As part of the EDF contract for the JLESC.
 The team is submitting a proposal to DOE on this topic.
+The team has also been making significant effort to develop a community about reconfigurable high-performance computing. We have successfully identified major players in this field and planning upcoming workloads co-held with major FPGA conferences.
 
 {% bibliography --cited --file jlesc.bib %}
 
 
 ## Future plans
 
-We will study performance portability and code optimization techniques on selected application kernels using the latest generation FPGA platforms such as Intel Arria10 and possibly submit results to relevant venues. We will also evaluate the Merlin compiler, the best commercial compiler for FPGA accelerators, for a comparison purpose.
+We will study performance portability and code optimization techniques on selected application kernels using the latest generation FPGA platforms (e.g., Intel Arria10, Intel Stratix10) and possibly submit results to relevant venues. We will study low-level drivers, runtime system, compiler technologies, dynamic resource management techniques and algorithm mapping techniques for future FPGA-enabled heterogeneous HPC cluster platforms.
 
 ## References
 
