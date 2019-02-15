@@ -2,7 +2,7 @@
 layout: page_project
 title: Optimization of Fault-Tolerance Strategies for Workflow Applications
 date: 2016-03-16
-updated: 2017-04-01
+updated: 2019-02-14
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -16,10 +16,14 @@ keywords:
   - SDC
 head: benoit_a
 members:
+  - bosilca_g
+  - bouteiller_a
   - cappello_f
-  - robert_y
   - cavelan_a
+  - han_l
   - herault_t
+  - lefevre_v
+  - robert_y
   - vivien_f
 ---
 {% comment %}
@@ -155,7 +159,7 @@ the performance of different approaches to
   applications, which use a constant number of processors throughout
   execution; (ii) moldable applications, which can use a different
   number of processors after each restart following a fail-stop error;
-  and (iii) \rid applications, which are moldable applications
+  and (iii) rid applications, which are moldable applications
   restricted to use rectangular processor grids (such as many dense
   linear algebra kernels). For each application type, we compute the
   optimal number of failures to tolerate before relinquishing the
@@ -186,11 +190,18 @@ Valentin Le Fèvre has visited  Univ. Tenn. Knoxville for 10 days in February 20
 
 ## Impact and publications
 
-Two papers have been accepted to FTXS'17 {% cite benoitEtAl2017identifying --file jlesc.bib %},{% cite benoitEtAl2017optimal --file jlesc.bib %}.
+Two papers have been published in FTXS'17 {% cite benoitEtAl2017identifying --file jlesc.bib %},{% cite benoitEtAl2017optimal --file jlesc.bib %}.
 
-The most recent work combining fail-stop and silent errors has been submitted to JPDC ("Coping with silent and fail-stop errors at scale by combining replication and checkpointing"). 
+The work combining fail-stop and silent errors has been published in JPDC 
+{% cite BenoitEtAl2018 --file jlesc.bib %}. 
 
-The initial work on linear chain of tasks will be submitted to APDCM'18 ("Combining Checkpointing and Replication for Linear Workflows"). 
+A work on executing workflows on high-bandwidth memory architectures was published in ICPP'18 {% cite BenoitEtAl2018b --file jlesc.bib %}. 
+
+The work on optimal cooperative checkpointing for shared high-performance computing platforms was the best paper at APDCM'18 {% cite HeraultEtAl2018 --file jlesc.bib %}. 
+
+Finally, the work studying whether moldable applications perform better
+on failure-prone HPC platforms was published in Resilience'18 {% cite LeFevreEtAl2018 --file jlesc.bib %}. 
+
 
 
 
@@ -227,9 +238,6 @@ This may be even more important when considering a general directed acyclic grap
 rather than restricting to linear chains of tasks. This topic is called partial replication,
 and even though it has been empirically studied by some previous work, designing an optimal strategy that combines partial redundancy and checkpointing and analyzing its efficacy remain to be done.
 
-Also, we have not yet explored how replication may help correct silent data corruptions in 
-workflow applications, since our initial study considers only fail-stop errors. Combining
-both types of errors for workflow applications is a challenging perspective to our work. 
 
 Finally, our initial goal was to target pipelined workflow applications, where data continuously
 enters the workflow, and where the objective is to maximize the throughput that can be achieved.
