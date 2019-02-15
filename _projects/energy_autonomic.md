@@ -54,19 +54,43 @@ autonomic loops. Based on our previous experience in Cloud-oriented Autonomic
 Computing, we will generalize and explore novel issues in adapting our
 approaches to specificities of HPC and power management.
 
-## Results for 2017/2018
-None yet.
+## Results for 2018/2019
+
+We performed analysis of power capping mechanisms, RAPL in particular, and of
+their interaction with application-level variations. We identified potential
+retroaction loops in that context, and currently focus on a particular
+representative autonomic loop : deciding at runtime, dynamically, on the
+sufficient/minimal level of power capping  such that the application
+performance remains maximum. The range of flexibility/elasticity typically
+comes from some phases of an application involving more input/output, slowing
+down computations, and therefore the same performance can be achieved while
+slowing down the processor, through lower power cap.
+
+Preliminary work completed at Argonne to instrument a collection of HPC
+applications to report _progress_: an application-specific measure of online
+performance. These progress reports will be used as a sensor in future work.
 
 ## Visits and meetings
-None yet.
+
+We schedule regular video meetings between the different members of the
+project. {% person perarnau_s %} visited Grenoble for a week to make progress
+on the project in April 2018.
 
 ## Impact and publications
+
 None yet.
 
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
 
+Short term plans are to finalize the design of controllers for this feedback
+loop : we consider a range of controllers, from simple intuitive algorithms, to
+model-based approaches involving control theoretical approaches.
+
+We then plan to perform a series of experimental evaluations in order to
+characterize and compare the different controllers w.r.t. the gain in power
+consumption as well as properties of the controllers (convergence, stability).
 
 ## References
 
