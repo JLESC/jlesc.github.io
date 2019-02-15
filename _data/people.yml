@@ -1625,6 +1625,15 @@ oden_l:
   email: loden@anl.gov
   homepage:
 
+ogura_t:
+  sur_name: Ogura
+  given_name: Takahiro
+  affiliation: riken
+  position:
+  topics:
+  email: t-ogura@riken.jp
+  homepage:
+
 olson_k:
   sur_name: Olson
   given_name: Kjellrun
