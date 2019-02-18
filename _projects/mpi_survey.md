@@ -94,7 +94,7 @@ JLESC. This kind of International MPI survey would be another type of
 collaboration in JLESC to obtain the insights into Exascale computing. This
 survey will be a touchstone of following JLESC survey projects.
 
-## Results for 2015/2016
+## Results for 2018/2019
 
 As of 02.2019 the design of the questionnaire survey is almost done. It will be
 distributed and collected by the end of February 2019. The first draft report
