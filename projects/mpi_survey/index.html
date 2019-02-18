@@ -3,11 +3,11 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques</title>
+  <title>JLESC &mdash; International MPI Survey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
 ">
-  <link rel="canonical" href="https://jlesc.github.io/projects/energy_autonomic/">
+  <link rel="canonical" href="https://jlesc.github.io/projects/mpi_survey/">
 
   <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
   <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
@@ -93,7 +93,7 @@
   <article class="post-content">
     <div class="row">
       <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques</h1>
+        <h1 class="pull-left">International MPI Survey</h1>
       </header>
     </div>
     <div class="row">
@@ -109,23 +109,19 @@
       <div class="col-sm-8">
         
           <span class="clearfix">
-            <span class="topic topic-title">Advanced Architectures</span>
+            <span class="topic topic-title">Programming Languages and Runtimes</span>
           </span>
         
       </div>
     </li>
     
+    
       <li class="list-group-item row">
-        <label class="col-sm-4">Keywords</label>
+        <label class="col-sm-4">Homepage</label>
         <div class="col-sm-8">
-          
-            <span class="clearfix">autonomic computing</span>
-          
-            <span class="clearfix">energy efficiency</span>
-          
+          <a href="https://github.com/bosilca/MPIsurvey">github.com/bosilca/MPIsurvey</a>
         </div>
       </li>
-    
     
     
       <li class="list-group-item row">
@@ -133,7 +129,7 @@
         <div class="col-sm-8">
           
             <span class="clearfix">
-              <span class="person given-name">Eric</span> <span class="person sur-name">Rutten</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+              <span class="person given-name">Atsushi</span> <span class="person sur-name">Hori</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
               <span class="pull-right">
                 <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
               </span>
@@ -141,11 +137,15 @@
           
           
             <span class="clearfix">
-              <span class="person given-name">Kazutomo</span> <span class="person sur-name">Yoshii</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">George</span> <span class="person sur-name">Bosilca</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Swann</span> <span class="person sur-name">Perarnau</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Emmanuel</span> <span class="person sur-name">Jeannot</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Takahiro</span> <span class="person sur-name">Ogura</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
             </span>
           
         </div>
@@ -177,83 +177,49 @@
       </aside>
       <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
         
-        <h2 id="research-topic-and-goals">
+        
+<h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>Behaviour of HPC systems, such as performance, power consumption, thermal
-distribution, are increasingly hard to predict due to process variations and
-dynamic processors, which conflicts with conventional bulk synchronous
-parallelism software models such as MPI. Additionally computing facilities are
-now interested in limiting computing resources by power/energy budget rather
-than CPU time. Such idea is also negatively affected by unpredictable behaviour
-of modern HPC systems. Hardware-level power-limiting capability is becoming a
-standard feature in modern processors. Intel running average power limit
-(RAPL), for example, adjusts CPU core frequency (and CPU states if needed)
-periodically in order to limit the CPU power consumption not to exceed
-user-specified per-socket power budget. While RAPL, in fact, is an excellent
-mechanism for independent workloads, there are multiple considerations for HPC
-usage. The side effect of such power limiting is performance variation between
-cores/sockets/nodes; no mechanism to communicate between sockets or nodes. The
-effective range of user-specifiable power budget is limited; lower efficiency
-with lower power budget. They tend to be a hardware feature; not tuneable.</p>
+<p>As part of a wide effort to understand the current usage of the Message Passing
+Interface (MPI) in the development of parallel applications and drive future
+additions to the MPI standard, the objective of this project is to get feedback
+from the largest MPI audience (past, current and potential users) to get a
+better understanding of their needs, and the impact of different MPI
+capabilities on the process of developing distributed applications. Since this
+questionnaire survey will be distributed worldwide, it is also expected to
+reveal country/region differences on the above aspects.</p>
 
-<p>We propose a software-level solution to provide additional control mechanisms
-that increase hardware power-limiting feature and work for multiple nodes by
-applying autonomic computing techniques and targeting HPC workloads.  We adopt
-an approach involving Autonomic Computing and Control Theory. We will identify
-significant sensors and actuators (e.g., switching on/off cores, changing CPU
-frequency), build adaptive models of the process to be controlled, and define
-robust adaptive control objectives w.r.t. appropriate metrics. We will design
-and experimentally validate controllers regulating consumption while ensuring
-performance. We will explore variants, beyond simple threshold-based control
-e.g., predictive control to avoid overshooting or adaptive control for
-robustness to the natural variability, considering costs of actions, avoiding
-oscillations and over-reaction, handle multiple criteria, coordinate multiple
-autonomic loops. Based on our previous experience in Cloud-oriented Autonomic
-Computing, we will generalize and explore novel issues in adapting our
-approaches to specificities of HPC and power management.</p>
+<p>We believe this kind of international survey is suitable for the vision of
+JLESC. This kind of International MPI survey would be another type of
+collaboration in JLESC to obtain the insights into Exascale computing. This
+survey will be a touchstone of following JLESC survey projects.</p>
 
 <h2 id="results-for-20182019">
 <a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
 
-<p>We performed analysis of power capping mechanisms, RAPL in particular, and of
-their interaction with application-level variations. We identified potential
-retroaction loops in that context, and currently focus on a particular
-representative autonomic loop : deciding at runtime, dynamically, on the
-sufficient/minimal level of power capping  such that the application
-performance remains maximum. The range of flexibility/elasticity typically
-comes from some phases of an application involving more input/output, slowing
-down computations, and therefore the same performance can be achieved while
-slowing down the processor, through lower power cap.</p>
-
-<p>Preliminary work completed at Argonne to instrument a collection of HPC
-applications to report <em>progress</em>: an application-specific measure of online
-performance. These progress reports will be used as a sensor in future work.</p>
+<p>As of 02.2019 the design of the questionnaire survey is almost done. It will be
+distributed and collected by the end of February 2019. The first draft report
+will be presented in JLESC workshop in Knoxville, 2019.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>We schedule regular video meetings between the different members of the
-project. <span class="person given-name">Swann</span> <span class="person sur-name">Perarnau</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) visited Grenoble for a week to make progress
-on the project in April 2018.</p>
-
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<p>None yet.</p>
+<!--
+
+
+
+
+
+-->
 
 <ol class="bibliography"></ol>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
-
-<p>Short term plans are to finalize the design of controllers for this feedback
-loop : we consider a range of controllers, from simple intuitive algorithms, to
-model-based approaches involving control theoretical approaches.</p>
-
-<p>We then plan to perform a series of experimental evaluations in order to
-characterize and compare the different controllers w.r.t. the gain in power
-consumption as well as properties of the controllers (convergence, stability).</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
