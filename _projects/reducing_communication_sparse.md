@@ -21,6 +21,7 @@ members:
   - bienz_a
   - grigori_l
   - gropp_b
+  - lockhart_s
 ---
 
 ## Research topic and goals
