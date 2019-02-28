@@ -123,6 +123,10 @@
           
             <span class="clearfix">multigrid</span>
           
+            <span class="clearfix">Krylov</span>
+          
+            <span class="clearfix">iterative</span>
+          
             <span class="clearfix">communication</span>
           
         </div>
@@ -154,6 +158,10 @@
               <span class="person given-name">William</span> <span class="person sur-name">Gropp</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
             </span>
           
+            <span class="clearfix">
+              <span class="person given-name">Shelby</span> <span class="person sur-name">Lockhart</span> (<abbr title="University of Illinois at Urbana-Champaign" class="initialism" data-toggle="tooltip">UIUC</abbr>)
+            </span>
+          
         </div>
       </li>
     
@@ -176,6 +184,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -188,27 +197,20 @@
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>The focus of this collaboration is on the development of topology-aware sparse solvers at extreme
+<p>The focus of this collaboration is on reducing communication in sparse solvers at extreme
 scales. The first phase made some initial steps in forming a communications
 model.
 Communication costs dominate most sparse solvers leading to sharp strong scaling limitations.
 The specific topology of the computation plays an important role in these costs and current sparse
-solvers do not take this into account — e.g. algebraic multigrid. Since algebraic methods only approximate
-a solution, there is an opportunity to reduce communication costs by limiting algebraic
-decisions to efficient paths in the topology.  Moreover, aggregating node-level communication can lead to additional performance gains.
-The primary goal is to develop solvers in this direction. The partnership between Illinois and
+solvers do not take this into account — e.g. algebraic multigrid. 
+Aggregating communication to align with machine topology can lead to performance gains.
+The primary goal is to develop advanced solvers in this direction. The partnership between Illinois and
 INRIA through the JointLab will directly enhance this effort.</p>
 
-<p>The project involves Illinois graduate student Amanda Bienz, Illinois professors Bill Gropp
+<p>The project involves Illinois graduate student Shelby Lockhart, postdoc Amanda Bienz, Illinois professors Bill Gropp
 and Luke Olson, and INRIA professor Laura Grigori. The work has highlighted
-several aspects in moving toward topology-based algorithm decisions. Here, we investigated the
-communication overhead of an algebraic multigrid method at scale, where coarse grids push the
-strong scaling limit and exhibit irregular memory access patterns. As a result, high communication
-lead to reduced efficiency. We continue to develop a communication model that attempts
-to account for two aspects in the communication: message distance and message contention in the
-network. The result is a model that may help make point-wise decisions in the algorithm. For
-example, sparse entries could be strengthened or weakened depending on their communication
-burden.</p>
+several aspects in moving toward topology-based algorithm decisions. 
+The next steps in the project will take a closer look at the performance opporunitities in enlarged Krylov methods.</p>
 
 <h2 id="results-for-20152016">
 <a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
@@ -237,6 +239,15 @@ asynchronous SpMV operation that was presented at Supercomputing15 in November
 
 <p>The next steps include completing contention modeling.</p>
 
+<h2 id="results-for-20182019">
+<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+
+<p>Recent progress has included a paper in review, significant updates to the code
+base, and a beta version of a node aware communication package.  Bienz
+completed a PhD in summer 2018, with Grigori (INRIA) serving on the final
+defense committee.  Shelby Lockhart has joined the collaboration and is making
+some initial steps toward performance analysis of enlarged Krylov methods.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -248,7 +259,9 @@ asynchronous SpMV operation that was presented at Supercomputing15 in November
 
 <p>Completed: JointLab Meeting in Champaign, July 2017.</p>
 
-<p>Planned: JointLab Meeting in Barcelona, April 2018.</p>
+<p>Completed: JointLab Meeting in Barcelona, April 2018.</p>
+
+<p>Planned: JointLab Meeting in Tennessee, April 2019.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -1060,7 +1073,7 @@ meetings at the upcoming Joint Lab meetings.</p>
   
     <div class="card card-block">
   
-      <i class="fa fa-folder-o"></i> <span class="hidden-sm-down">Created on </span><time datetime="2018-03-01T00:00:00+00:00">01 Mar 2018</time>
+      <i class="fa fa-folder-o"></i> <span class="hidden-sm-down">Created on </span><time datetime="2019-02-28T00:00:00+00:00">28 Feb 2019</time>
   
     </div>
   
