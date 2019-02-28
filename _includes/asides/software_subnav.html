@@ -10,7 +10,8 @@
       <a class="nav-link{% if software_index_url == page.url %} active{% endif %}"
          href="{{ software_index_url }}">Software's Main Page</a>
     </li>
-    {% sorted_for subpage in site.software %}
+    {% assign sorted_pages = site.software | sort:'title' %}
+    {% for subpage in sorted_pages %}
       {% unless subpage.page_type == 'software_page' %}
         {% assign subpage_url_arr = subpage.url | split:'/' %}
         {% if subpage_url_arr contains current_base %}
@@ -20,7 +21,7 @@
           </li>
         {% endif %}
       {% endunless %}
-    {% endsorted_for %}
+    {% endfor %}
     <li id="show-meta-aside-wrapper">
       <a class="invisible" id="show-meta-aside" role="button" title="Show Profile" data-toggle="tooltip">
         <i class="fa fa-fw fa-info"></i>

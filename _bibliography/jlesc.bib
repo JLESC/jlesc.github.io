@@ -52,6 +52,21 @@
 %
 % Please, treat this file not different from usual source code files.
 %
+
+@inproceedings{HPDC2018,
+  author    = {Dingwen Tao and
+               Sheng Di and
+               Xin Liang and
+               Zizhong Chen and
+               Franck Cappello},
+  title     = {Improving performance of iterative methods by lossy checkponting},
+  booktitle = {Proceedings of the 27th International Symposium on High-Performance
+               Parallel and Distributed Computing, {HPDC} 2018, Tempe, AZ, USA, June
+               11-15, 2018},
+  pages     = {52--65},
+  year      = {2018}
+}
+
 @article{Calhoun18,
   author = {Calhoun, Jon and Cappello, Franck and Olson, Luke N. and Snir, Marc and Gropp, William D.},
   journal = {Int. J. High Perform. Comput. Appl.},
@@ -67,6 +82,50 @@
   title = {From detection to optimization: impact of soft errors on high-performance computing applications},
   year = {2017},
 }
+
+@InProceedings{LeFevreEtAl2018,
+  author        = {Valentin Le Fèvre and George Bosilca and Aurelien Bouteiller and
+               Thomas Herault and Atsushi Hori and Yves Robert and
+               Jack Dongarra},
+  booktitle = {{Resilience}: 11th Workshop on Resiliency in High Performance Computing 
+  in Clusters, Clouds, and Grids,
+                jointly published with {Euro-Par 2018}},
+  title     = {{Do moldable applications perform better
+on failure-prone HPC platforms?}},
+  year		= {2018},
+  series	= {LNCS},
+  publisher	= {Springer Verlag}
+}
+
+@INPROCEEDINGS{HeraultEtAl2018,
+ AUTHOR             = {Thomas Hérault and Yves Robert and Aurélien Bouteiller and Dorian Arnold
+ and Kurt B. Ferreira and George Bosilca and Jack Dongarra},
+        BOOKTITLE          = {20th Workshop on Advances in Parallel and Distributed
+                              Computational Models {APDCM 2018}},
+        PUBLISHER          = {IEEE Computer Society Press},
+        TITLE              = {Optimal cooperative checkpointing for shared high-performance computing platforms},
+       YEAR               = {2018}
+}
+
+@INPROCEEDINGS{BenoitEtAl2018b,
+        AUTHOR             = {Anne Benoit and Swann Perarnau and Loïc Pottier
+                                         and Yves Robert},
+        BOOKTITLE          = {{ICPP'2018}, the 47th Int. Conf. on Parallel Processing},
+        TITLE              = {A performance model to execute workflows on high-bandwidth memory architectures},
+        publisher    = {{IEEE} Computer Society Press},
+        YEAR               = {2018}
+}
+
+@article{BenoitEtAl2018,
+        AUTHOR             = {Anne Benoit and Aurélien Cavelan and Franck Cappello and Padma Raghavan
+        and Yves Robert and Hongyang Sun},
+         journal = {J. Parallel and Distributed Computing},
+        TITLE              = {Coping with silent and fail-stop errors at scale by combining replication and checkpointing},
+       YEAR               = {2018},
+       badvolume = {98},
+  badpages     = {8-24}
+}
+
 
 @inproceedings{benoitEtAl2017identifying,
   title={Identifying the right replication level to detect and correct silent errors at scale},
@@ -162,6 +221,68 @@
 	year = {2016},
 	url = {http://sc16.supercomputing.org/sc-archive/src_poster/src_poster_pages/spost146.html},
 	pdf = {http://sc16.supercomputing.org/sc-archive/src_poster/poster_files/spost146s2-file2.pdf}
+}
+
+@inproceedings{Cheriere2017How,
+  TITLE = {{How Fast Can One Scale Down a Distributed File System?}},
+  AUTHOR = {Cheriere, Nathana{\"e}l and Antoniu, Gabriel},
+  URL = {https://hal.archives-ouvertes.fr/hal-01644928},
+  BOOKTITLE = {{BigData}},
+  ADDRESS = {Boston, United States},
+  YEAR = {2017},
+  MONTH = Dec,
+  DOI = {10.1109/BigData.2017.8257922},
+  KEYWORDS = {Decommission ; Model ; Malleable File System ; Distributed File System ; Elastic Storage},
+  PDF = {https://hal.archives-ouvertes.fr/hal-01644928/file/ModelingDecommision.pdf},
+  HAL_ID = {hal-01644928},
+  HAL_VERSION = {v1},
+}
+
+@techreport{Cheriere2018LowerCommission,
+  TITLE = {{A Lower Bound for the Commission Times in Replication-Based Distributed Storage Systems}},
+  AUTHOR = {Cheriere, Nathana{\"e}l and Dorier, Matthieu and Antoniu, Gabriel},
+  URL = {https://hal.archives-ouvertes.fr/hal-01817638},
+  TYPE = {Research Report},
+  NUMBER = {RR-9186},
+  PAGES = {1-26},
+  INSTITUTION = {{Inria Rennes - Bretagne Atlantique}},
+  YEAR = {2018},
+  MONTH = Jun,
+  KEYWORDS = {Commission ; Elastic Storage ; Distributed File System ; Malleable File System ; Lower Bound},
+  PDF = {https://hal.archives-ouvertes.fr/hal-01817638/file/RR-9186.pdf},
+  HAL_ID = {hal-01817638},
+  HAL_VERSION = {v2},
+}
+
+@inproceedings{Cheriere2018Pufferbench,
+  TITLE = {{Pufferbench: Evaluating and Optimizing Malleability of Distributed Storage}},
+  AUTHOR = {Cheriere, Nathana{\"e}l and Dorier, Matthieu and Antoniu, Gabriel},
+  URL = {https://hal.archives-ouvertes.fr/hal-01892713},
+  BOOKTITLE = {{PDSW-DISCS 2018: 3rd Joint International workshop on Parallel Data Storage \& Data Intensive Scalable computing Systems}},
+  ADDRESS = {Dallas, United States},
+  PAGES = {1-10},
+  YEAR = {2018},
+  MONTH = Nov,
+  KEYWORDS = {Distributed Storage System Malleability ; Benchmark ; Pufferbench},
+  PDF = {https://hal.archives-ouvertes.fr/hal-01892713/file/Paper.pdf},
+  HAL_ID = {hal-01892713},
+  HAL_VERSION = {v1},
+}
+
+@techreport{Cheriere2018LowerRelaxed,
+  TITLE = {{Lower Bounds for the Duration of Decommission Operations with Relaxed Fault Tolerance in Replication-based Distributed Storage Systems}},
+  AUTHOR = {Cheriere, Nathana{\"e}l and Dorier, Matthieu and Antoniu, Gabriel},
+  URL = {https://hal.archives-ouvertes.fr/hal-01943964},
+  TYPE = {Research Report},
+  NUMBER = {RR-9229},
+  PAGES = {1-28},
+  INSTITUTION = {{Inria Rennes - Bretagne Atlantique}},
+  YEAR = {2018},
+  MONTH = Dec,
+  KEYWORDS = {Distributed Storage Systems ; Malleable Storage ; Fault Tolerance ; Elastic Storage ; Syst{\`e}me de stockage distribu{\'e} ; Stockage {\'e}lastique ; Stockage mall{\'e}able ; D{\'e}commission ; Tol{\'e}rance aux pannes},
+  PDF = {https://hal.archives-ouvertes.fr/hal-01943964/file/Report.pdf},
+  HAL_ID = {hal-01943964},
+  HAL_VERSION = {v2},
 }
 
 @inproceedings{DiEtAl2014,
@@ -399,6 +520,14 @@
   TITLE = {{TýrFS: Increasing Small Files Access Performance with Dynamic Metadata Replication}},
   AUTHOR = {Matri, Pierre and Pérez, María S and Costan, Alexandru and Antoniu, Gabriel},
   booktitle={2018 IEEE International Conference on Cluster Cloud and Grid Computing (CCGrid'18)},
+  year={2018},
+  organization={IEEE}
+}
+
+@inproceedings{MatriEtAl2018Streaming,
+  TITLE = {{SLoG: Large-Scale Logging Middleware for HPC and Big Data Convergence}},
+  AUTHOR = {Matri, Pierre and Carns, Philip and Ross, Robert and Costan, Alexandru and Pérez, María S and Antoniu, Gabriel},
+  booktitle={2018 IEEE 38th International Conference on Distributed Computing Systems (ICDCS)},
   year={2018},
   organization={IEEE}
 }

@@ -49,8 +49,15 @@ Both parties are about to create accounts on both machines such that the first t
 * JSC code has been compiled with node-installed GCC on K-computer; validity and performance tests are pending
 * AICS code has been ported to GPUs at JSC GPU Hackathon 2017  
 
+## Results for 2018/2019
+
+* project has been suspended due to resource limitations
+* joint organization of the mini-symposium "HPC-Based simulations for the wide industrial realm: aerospace, automotive, bio, construction, heavy…” on ECCOMAS ECCM ECFD 2018 in Glasgow, UK (11.06.2018 - 15.06.2018)
+
 ## Visits and meetings
 
+* 11.06.2018 - 15.06.2018: Meeting of the PIs Makoto Tsubokura, Andreas Lintermann, and the researcher Keiji Onishi (RIKEN) at ECCOMAS ECCM ECFD 2018
+* 28.02.2018 - 29.02.2018: Visit of Keiji Onishi (RIKEN) at JSC.
 * 06.03.2017 - 10.03.2017: Rahul Bale, Wei-Hsiang Wang, Koji Nishiguchi (all RIKEN) -> Participation GPU Hackathon at JSC Jülich; meeting at JSC
 * 28.11.2016 - 02.12.2016: Thomas Schilden (RWTH, JSC) -> Participation Young Researchers Workshop & JLESC Riken 
 * 26.06.2016 - 29.06.2017: Andreas Lintermann (JSC) -> Participation JLESC meeting Lyon 

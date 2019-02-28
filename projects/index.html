@@ -65,7 +65,8 @@ subnavbar: Projects
         </p>
         <br>
         <div id="project-index" class="card-columns">
-          {% for project in site.projects | order: 'title' %}
+          {% assign sorted_projects = site.projects | sort:'title' %}
+          {% for project in sorted_projects %}
             {% unless project.topics contains topic_id %}
               {% continue %}
             {% endunless %}

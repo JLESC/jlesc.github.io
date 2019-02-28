@@ -9,7 +9,7 @@ event_start: 2018-04-17
 event_end: 2018-04-19
 event_short_url: https://www.bsc.es/news/events/8th-jlesc-workshop
 event_url: https://www.bsc.es/news/events/8th-jlesc-workshop
-wayback_url: 
+wayback_url: https://web.archive.org/web/20181204071952/https://www.bsc.es/news/events/8th-jlesc-workshop
 logo: 
 kind: workshop
 institute: bsc

@@ -71,14 +71,14 @@ uiuc:
   logo:
 
 riken:
-  title: RIKEN Advanced Institute for Computational Science
-  abbr: RIKEN
+  title: RIKEN Center for Computational Science
+  abbr: R-CCS
   logo: riken_logo.png
 
-icl:
-  title: Innovative Computing Laboratory
-  abbr: ICL
-  logo: icl-logo.jpg
+utk:
+  title: University of Tennessee
+  abbr: UTK
+  logo: utk.png
 
 external:
   title: External partner

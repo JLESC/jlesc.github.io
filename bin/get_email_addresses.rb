@@ -58,7 +58,8 @@ module JLESC
           next
         end
 
-        emails << "\"#{construct_person_name(person)}\" <#{person['email']}>"
+        # emails << "\"#{construct_person_name(person)}\" <#{person['email']}>"
+        emails << "#{person['email']}"
       end
 
       puts ''

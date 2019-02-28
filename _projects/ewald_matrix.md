@@ -2,11 +2,11 @@
 layout: page_project
 title: Joint Investigation Into the Structure of Ewald Matrices
 date: 2017-12-13
-updated: 2017-12-14
+updated: 2018-06-25
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: suspended
 topics:
   - apps
   - numerics

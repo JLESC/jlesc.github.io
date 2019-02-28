@@ -11,7 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
   The Joint Lab is part of Parallel@Illinois.
 baseurl: ""
 url: "https://jlesc.github.io"
-logo: jlesc_logo.jpg
+logo: jlesc-header_180910.jpg
 
 timezone: UTC
 encoding: utf-8
@@ -30,7 +30,7 @@ exclude:
 
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-assets
   - jekyll-paginate
   - jekyll-toc
@@ -117,4 +117,4 @@ scholar:
   query: "@*"
 
 # Google services
-google_analytics: UA-89097376-1
+# google_analytics: UA-89097376-1
