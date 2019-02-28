@@ -10,7 +10,7 @@ status: running
 topics:
   - numerics
 keywords:
-  - awesomeness
+  - time stepping
 head: constantinescu_e
 members:
   - schleife_a
@@ -39,6 +39,9 @@ We began interfacing Qbox/Qb@ll with PETSc. We have forked Qb@ll and started to 
 
 ## Results for 2017/2018
 We have interfaced PETSc with Qb@ll in a separate repository. The interface is not fully functional, we are currently working on fixing the variable mapping: PETSc-> Qb@ll and Qb@ll -> PETSc.
+
+## Results for 2018/2019
+We have tested the PETSc with Qb@ll interface. The interface is fully functional in serial and parallel. We are conducting a series of benchmarks to see what combinations of integrators performs well.
 
 ## Visits and meetings
 <!-- Since this is a starting cooperation no visits have been initiated. -->
