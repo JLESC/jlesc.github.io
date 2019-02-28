@@ -6,7 +6,7 @@ updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: suspended
 topics: 
   - architectures
 keywords:
@@ -49,6 +49,10 @@ This SC16 experiment we prepare covers several critical elements of the on-deman
 ## Results for 2017/2018
 
 A paper presenting the data transfer aspect of the experiment has been accepted and presented at EEE/ACM SC17 Workshop on Innovating the Network for Data Intensive Science (INDIS 2017), Denver, CO, Nov. 2017. An extended version of this paper has been submitted to FGCS.
+
+## Results for 2018/2019
+
+The analysis of the data produced by the simulation is not completed yet. Publications on the science aspect of the research are in preparation. 
  
 ## Visits and meetings
 Weekly meeting since December 2015, until November 2016
