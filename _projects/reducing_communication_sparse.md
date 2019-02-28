@@ -46,8 +46,7 @@ The next steps in the project will take a closer look at the performance opporun
 Recent efforts have focused on overlapping communication with computation in the
 sparse matrix-vector multiplication operation.  This work led to an
 asynchronous SpMV operation that was presented at Supercomputing15 in November
-2015 as well as the Copper Mountain Conference on Iterative Methods in March
-2016.  
+2015 as well as the Copper Mountain Conference on Iterative Methods in March 2016.  
 
 ## Results for 2016/2017
 
