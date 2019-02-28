@@ -1,7 +1,7 @@
 ---
 layout: page_project
 title: Reducing Communication in Sparse Iterative and Direct Solvers
-date: 2018-03-01
+date: 2019-02-28
 updated:
 navbar: Research
 subnavbar: Projects
@@ -13,37 +13,33 @@ topics:
 keywords:
   - sparse matrix
   - multigrid
+  - Krylov
+  - iterative
   - communication
 head: olson_l
 members:
   - bienz_a
   - grigori_l
   - gropp_b
+  - lockhart_s
 ---
 
 ## Research topic and goals
 
-The focus of this collaboration is on the development of topology-aware sparse solvers at extreme
+The focus of this collaboration is on reducing communication in sparse solvers at extreme
 scales. The first phase made some initial steps in forming a communications
 model.
 Communication costs dominate most sparse solvers leading to sharp strong scaling limitations.
 The specific topology of the computation plays an important role in these costs and current sparse
-solvers do not take this into account — e.g. algebraic multigrid. Since algebraic methods only approximate
-a solution, there is an opportunity to reduce communication costs by limiting algebraic
-decisions to efficient paths in the topology.  Moreover, aggregating node-level communication can lead to additional performance gains.
-The primary goal is to develop solvers in this direction. The partnership between Illinois and
+solvers do not take this into account — e.g. algebraic multigrid. 
+Aggregating communication to align with machine topology can lead to performance gains.
+The primary goal is to develop advanced solvers in this direction. The partnership between Illinois and
 INRIA through the JointLab will directly enhance this effort.
 
-The project involves Illinois graduate student Amanda Bienz, Illinois professors Bill Gropp
+The project involves Illinois graduate student Shelby Lockhart, postdoc Amanda Bienz, Illinois professors Bill Gropp
 and Luke Olson, and INRIA professor Laura Grigori. The work has highlighted
-several aspects in moving toward topology-based algorithm decisions. Here, we investigated the
-communication overhead of an algebraic multigrid method at scale, where coarse grids push the
-strong scaling limit and exhibit irregular memory access patterns. As a result, high communication
-lead to reduced efficiency. We continue to develop a communication model that attempts
-to account for two aspects in the communication: message distance and message contention in the
-network. The result is a model that may help make point-wise decisions in the algorithm. For
-example, sparse entries could be strengthened or weakened depending on their communication
-burden.
+several aspects in moving toward topology-based algorithm decisions. 
+The next steps in the project will take a closer look at the performance opporunitities in enlarged Krylov methods.
 
 ## Results for 2015/2016
 
@@ -67,6 +63,14 @@ Grigori (INRIA) serves on Bienz's thesis committee; Bienz is expected to finish 
 
 The next steps include completing contention modeling.
 
+## Results for 2018/2019
+
+Recent progress has included a paper in review, significant updates to the code
+base, and a beta version of a node aware communication package.  Bienz
+completed a PhD in summer 2018, with Grigori (INRIA) serving on the final
+defense committee.  Shelby Lockhart has joined the collaboration and is making
+some initial steps toward performance analysis of enlarged Krylov methods.
+
 ## Visits and meetings
 
 Completed: JointLab Meeting in Barcelona, June 2015.
@@ -77,7 +81,9 @@ Completed: Amanda Bienz visit to INRIA, Spring 2016 for 4 months.
 
 Completed: JointLab Meeting in Champaign, July 2017.
 
-Planned: JointLab Meeting in Barcelona, April 2018.
+Completed: JointLab Meeting in Barcelona, April 2018.
+
+Planned: JointLab Meeting in Tennessee, April 2019.
 
 ## Impact and publications
 
