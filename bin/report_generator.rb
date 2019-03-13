@@ -106,7 +106,10 @@ def create_clean_bibtex_entry(entry, document, own=nil)
   values.each_pair do |field, value|
     v = value.to_s
 
-    v.gsub! /^[\{"]*(.*?)[}"]*$/, '\1'
+    # v.gsub! /^[\{"]*(.*?)[}"]*$/, '\1'
+    v.gsub! /\{\s*(.+)\s*\}/, '\1'
+    # puts '{{b{l}a}}'.gsub! /\{\s*(.+)\s*\}/, '\1'
+    # /{\[}(.*?){\]}/, '[\1]'
 
     case field
       when :bibtex_key
@@ -416,7 +419,7 @@ module Jekyll
       # if num_ref_jlesc == 0
       #   document.content.gsub! BIBLIOGRAPHY_MATCHER_JLESC, "\nNo publication yet."
       # end
-      # 
+      #
       if num_ref_external == 0
         document.content.gsub! BIBLIOGRAPHY_MATCHER_EXTERNAL, "\nNo external references."
       end
@@ -435,9 +438,9 @@ module Jekyll
       puts '    cleaning up obsolete stuff in Markdown'
       # generation/output of the bibliography (note: the LaTeX package _biblatex_ is used)
       # a) the JLESC publications
-      document.content.gsub! BIBLIOGRAPHY_MATCHER_JLESC, '\printbibliography[heading=none,keyword=own]'
+      document.content.gsub! BIBLIOGRAPHY_MATCHER_JLESC, '\printbibliography\[heading=none,keyword=own\]'
       # b) external references
-      document.content.gsub! BIBLIOGRAPHY_MATCHER_EXTERNAL, '\printbibliography[heading=none,notkeyword=own]'
+      document.content.gsub! BIBLIOGRAPHY_MATCHER_EXTERNAL, '\printbibliography\[heading=none,notkeyword=own\]'
 
       # the _jekyll-scholar_ +cite+ Liquid tag needs to be replace as it generates HTML code
       document.content.gsub! CITATION_MATCHER, "\\cite{\\k<bibtex_id>-#{document.data['slug'].gsub(/_/, '-')}}"
@@ -459,6 +462,8 @@ module Jekyll
       puts '    cleanup obsolete stuff in LaTeX'
       document.content.gsub! /\\textbackslash\{}printbibliography/, '\printbibliography'
       document.content.gsub! /\\textbackslash\{}cite\\\{(.*?)\\}/, '\cite{\1}'
+
+      document.content.gsub! /{\[}(.*?){\]}/, '[\1]'
 
       puts '    increase heading levels'
       # for the annual report the level of headings of the project reports need to be increased
@@ -483,7 +488,7 @@ module Jekyll
 
   class ReportGenerator
     class << self
-      def process      
+      def process
         @generator = Jekyll::ReportGenerator.new
         @generator.run
       end
