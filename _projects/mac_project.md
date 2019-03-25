@@ -6,7 +6,7 @@ updated: 2018-03-08
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: suspended
 topics:
   - apps
 keywords:
