@@ -93,6 +93,17 @@ This project has proposed tools for operating system image portability between C
 This makes it easier for users to deploy the same environment on Grid'5000 and Chameleon testbeds, easing experiments involving both platforms.
 The joint presentation at Boston OpenStack summit is avaible [online](https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide).
 
+## Results for 2018
+
+Lucas Nussbaum (Université de Lorraine, France) and Kate Keahey (University of Chicago, USA) partnered on the organization of two sessions at the third Global Experimentation for Future Internet [(GEFI 2018)](http://indico.rnp.br/conferenceDisplay.py?confId=260) workshop that was held October 25-26, 2018 in Tokyo, Japan and hosted by the University of Tokyo. The objective of this workshops was to create a forum for the exchange of information and best practices among an international community of developers and operators of testbeds and related research infrastructure, as well as the researchers who make use of these facilities. Historically, these interactions were highly effective in building successful collaborations and coordinating activities among participating research infrastructures and this was thus a good forum to continue, and in some cases, broaden our collaboration. 
+
+The sessions focused on current topics in both testbeds: (1) modern networking technologies, a central concern when performing experiments in the distributed systems context, and (2) reproducibility in experimentation (together with Violet Syrotiuk).  The sessions led to the discussion of current topics. Specifically, for networking the discussion focused on programmability and isolation, emulation technologies, as well as emergent use cases such interactions with IoT, and support for Big Data/AI scenarios. For reproducibility, the discussions focused on tools and services, data management practices, and lessons learned. 
+
+The workshop produced a report co-authored by the participants (see below) that is currently in the process of preparation for a publication on current topics in testbed design. 
+
+M. Berman, T. Friedman, A. Gosain, K. Keahey, R. McGeer, I. Moerman, A. Nakao, L. Nussbaum, K. Rauschenbach, V. Syrotiuk, A. Veeraraghavan, and N. Yamanaka, “Report of the Third Global Experimentation for Future Internet (GEFI 2018) Workshop” October 25-26, 2018, Tokyo, Japan.
+
+
 ## Future plans
 
 A remaining challenge is the data-plane federation of both testbeds, to enable experiments spanning both testbeds in a
