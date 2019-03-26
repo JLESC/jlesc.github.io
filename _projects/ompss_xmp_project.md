@@ -32,7 +32,7 @@ OmpSs have been being developed by Barcelona Supercomputing Center (BSC). It ext
 
 Although two programming models take different approaches, they can share underlying software layers such as communication runtime and thread generation and scheduling mechanics. We propose a collaboration between RIKEN AICS and BSC to share OmpSs2 runtime as a common infrastructure for multi-tasking on large-scale many-core clusters. Since RIKEN AICS have been mainly focused on its PGAS runtime and BSC has been developed thread programming infrastructure, we are interested in extending OmpSs2 runtime to support PGAS operations. Exchanging experiences and technology can boost the development on both sides, and enable open programming interface which can lead future collaboration.
 
-## Results for 2015/2016
+## Results for 2017/2018
 
 This activity has just started in March 2018. No results yet.
 
