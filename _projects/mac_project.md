@@ -6,16 +6,15 @@ updated: 2018-03-08
 navbar: Research
 subnavbar: Projects
 project_url:
-status: suspended
+status: running
 topics:
   - apps
 keywords:
   -
-head: guemas_v
+head: ortega_p
 members:
   - miyoshi_t
   - serradell_k
-  - ortega_p
   - castrillo_m
   - echevarria_p
   - acosta_m
