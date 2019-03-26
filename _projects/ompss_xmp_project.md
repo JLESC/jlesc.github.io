@@ -32,9 +32,13 @@ OmpSs have been being developed by Barcelona Supercomputing Center (BSC). It ext
 
 Although two programming models take different approaches, they can share underlying software layers such as communication runtime and thread generation and scheduling mechanics. We propose a collaboration between RIKEN AICS and BSC to share OmpSs2 runtime as a common infrastructure for multi-tasking on large-scale many-core clusters. Since RIKEN AICS have been mainly focused on its PGAS runtime and BSC has been developed thread programming infrastructure, we are interested in extending OmpSs2 runtime to support PGAS operations. Exchanging experiences and technology can boost the development on both sides, and enable open programming interface which can lead future collaboration.
 
-## Results for 2015/2016
+## Results for 2017/2018
 
 This activity has just started in March 2018. No results yet.
+
+## Results for 2018/2019
+
+We have implemented a Blocked Cholesky factorization code with three schemes. The codes emulate our XcalableMP task runtime. The first one (ver1) is to implement it with multiple thread that communicated with each other. The second scheme (ver2) is to introduce a dedicated communication thread. For comparison, we implemented the code with OmpSs (ver3). A Blocked Cholesky factorization code is used for the performance evaluation. With 32 nodes of a Intel Knights Landing cluster (Oakforest-PACS in the University of Tokyo), ver2 achieves 8 TFLOPS, which is better than ver1 and 3 (7 TFLOPS both). On a Intel Xeon platform (COMA in University of Tsukuba), ver3 shows lower performance than ver1 and ver3 because of the wait overhead in OmpSs runtime.
 
 ## Visits and meetings
 
