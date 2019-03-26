@@ -48,10 +48,6 @@ To be planned.
 
 None yet.
 
-## Person-Month efforts in 2015/2016
-
-To be planned.
-
 ## Future plans
 
 The first steps will be using OmpSS runtime as a XMP runtime. 
