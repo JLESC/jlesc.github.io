@@ -11,24 +11,26 @@ topics:
   - numerics
 keywords:
   - 
-head: hovland_p
+head: narayanan_s
 members: 
   - hascoet_l
-  - narayanan_s
+  - hovland_p
 ---
 
 ## Research topic and goals
 Our goal is to pursue development of Algorithmic Differentiation (AD) tools, to enhance their applicability to HPC codes. We focus on the adjoint mode of AD, which is the most effective way of obtaining gradients of large HPC simulations. We focus on AD tools by source transformation because of the efficiency of the code they produce. One of our goals is to implement cooperation at the algorithmic level between OpenAD, the AD tool developed at ANL and Tapenade, the AD tool developed at INRIA. Another goal is to develop and maintain AMPI, and open-source library wrapped around MPI that implements the adjoint operations corresponding to the most commonly used MPI communication primitives.
 
-## Results for 2016--2018
+## Results for 2016--2019
 
 We have continued to develop a runtime library called ADMM to allow source-transformation adjoint AD of input codes that contain the operations pointers and dynamic allocation of memory. This is the first library of its kind for source transformation AD. Before this, dynamic allocation and pointer usage were unsupported in adjoint-mode-source-transformation AD.  The library ensures that any memory accessed in the reverse computation exists through restoration (if needed) and contains the same value as it would have in the forward computation. Pointer variables used to access memory in the forward computation are updated to access the corresponding memory in the reverse computation. We have tested this method with a medium sized code. After an initial version the library was developed in 2016 that targeted codes written in C we have worked on refinements to the library and extended it to be target codes written in Fortran. We are currently refining the library to account for shortcomings in the first version.  
 
 We have continued to develop the ability to interoperate OpenAD from Argonne and Tapenade from INRIA {% cite NarayananHascoet2016 --file jlesc.bib %}. Interoperation between the OpenAD and Tapenade is possible because they share the same global architecture i.e. a front-end which parses and builds an internal representation, followed by an static data-flow analysis stage, then actual building of the differentiated program still in internal form, and finally a back-end that outputs this differentiated internal form into new source files. The interoperation uses Tapenade for parsing the code and analysis. It uses OpenAD's XAIFBooster module for code transformation. The code to be differentiated is written into the XML Abstract Interface Form (XAIF) by Tapenade which is subsequently transformed by XAIFBooster. The transformed XAIF is converted back to source code by Tapenade. We have tested the new tool flow on various test cases from OpenAD's regression testsuite.
 
+We have begun to explore the possibility of using Tapenade for differentiating code containing SIMD pragmas and for generating adjoint code that exploits SIMD parallelization. 
+
 
 ## Visits and meetings
-Frequent e-mail exchanges. {% person hascoet_l %} visited Argonne in 2017 and {% person narayanan_s %} will visit INRIA in 2018.
+Frequent e-mail exchanges. {% person narayanan_s %} will visited INRIA in 2019.
 
 ## Impact and publications
 
