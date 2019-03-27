@@ -90,7 +90,7 @@ Lucas Nussbaum (Université de Lorraine, France) and Kate Keahey (University of 
 
 The sessions focused on current topics in both testbeds: (1) modern networking technologies, a central concern when performing experiments in the distributed systems context, and (2) reproducibility in experimentation (together with Violet Syrotiuk).  The sessions led to the discussion of current topics. Specifically, for networking the discussion focused on programmability and isolation, emulation technologies, as well as emergent use cases such interactions with IoT, and support for Big Data/AI scenarios. For reproducibility, the discussions focused on tools and services, data management practices, and lessons learned. 
 
-The workshop produced a report co-authored by the participants (see below) that is currently in the process of preparation for a publication on current topics in testbed design. 
+The workshop produced a report co-authored by the participants {% cite BermanEtAl %} that is currently in the process of preparation for a publication on current topics in testbed design. 
 
 ## Visits and meetings
 David Loup was at Argonne National Laboratory from 3rd March to 20th April 2017 to work on this project.
