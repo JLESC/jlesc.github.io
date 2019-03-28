@@ -25,7 +25,6 @@ members:
   - hori_a
   - gerofi_b
   - snir_f
-  -
 ---
 
 ## Research topic and goals
