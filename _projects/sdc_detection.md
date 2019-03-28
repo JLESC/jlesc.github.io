@@ -6,7 +6,7 @@ updated: 2017-05-04
 navbar: Research
 subnavbar: Projects
 project_url:
-status: suspended
+status: running
 topics:
   - resilience
 keywords:
@@ -24,6 +24,8 @@ members:
   - di_s
   - hori_a
   - gerofi_b
+  - snir_f
+  -
 ---
 
 ## Research topic and goals
@@ -98,17 +100,22 @@ after six months.  However, due to renewed interest on the project with fresh
 ideas, the project was restarted. Currently, BSC and RIKEN are investigating
 energy-free alternatives to SDC quantification in large scale supercomputers.
 
+## Results for 2018/2019
+We developped a neural network based detector.  
+Compared to state of the art generic SDC detectors, this detector can detect SDCs multiple iterations after they were injected.
+We have evaluated our detector with 6 FLASH applications and 2 Mantevo mini-apps. 
+Experiments show that our detector can detect more than 89% of SDCs with a false positive rate of less than 2%.
 
 ## Visits and meetings
 
  * August 2nd, 2015 - November 6th, 2015: Omer internship at ANL
  * July 4th, 2016 - July 8th, 2016: Franck visit to BSC
+ * 2018: multiple visits of Franck at UIUC
 
 
 ## Impact and publications
 
-{% bibliography --cited --file jlesc.bib %}
-
+{% cite cluster/WangDCS18 --file jlesc.bib %}
 
 ## Future plans
 
@@ -117,6 +124,8 @@ quantification for a wide variety of architectures. Ideally, JLESC partners can
 test the developed tools and deploy them on their machines. We expect to gather
 large amounts of data from diverse systems to have enough statistical
 robustness to draw clear conclusions on SDC occurrence in large scale systems.
+
+We are improving the neural network based SDC detector to work on 3D datasets.
 
 ## References
 
