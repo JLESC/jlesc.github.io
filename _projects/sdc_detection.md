@@ -101,7 +101,7 @@ ideas, the project was restarted. Currently, BSC and RIKEN are investigating
 energy-free alternatives to SDC quantification in large scale supercomputers.
 
 ## Results for 2018/2019
-We developped a neural network based detector.  
+We developed a neural network based detector {% cite cluster/WangDCS18 --file jlesc.bib %}.  
 Compared to state of the art generic SDC detectors, this detector can detect SDCs multiple iterations after they were injected.
 We have evaluated our detector with 6 FLASH applications and 2 Mantevo mini-apps. 
 Experiments show that our detector can detect more than 89% of SDCs with a false positive rate of less than 2%.
@@ -115,7 +115,7 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
 
 ## Impact and publications
 
-{% cite cluster/WangDCS18 --file jlesc.bib %}
+{% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
 
