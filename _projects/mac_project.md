@@ -43,6 +43,15 @@ The benefits and expected knowledge expected to be derived from this new dataset
 
 {% bibliography --cited --file jlesc.bib %}
 
+## Results for 2017/2018
+
+After setting the collaboration, in May 2017, BSC and Riken did a joint effort to submit a project to the “General Projects of the K computer use” call to get computational resources in the K computer.  The full description of the project can be found in this document. 
+Unfortunately, the project was not granted but due to the effort done by both teams, Riken shared some computing time with the BSC to deploy the EC-Earth model in post-K machine. In May 2017 Pablo Echevarria (BSC) started to port EC-Earth and solved several issues related to the installation of model dependencies and required libraries. During the following months other problems emerged, related to PERL libraries, the NetCDF and CDO versions and some issues when compiling OASIS. The BSC finally decided to stop temporarily the deployment in K machine, after some numerical instabilities with the EnKF routine that was to be used for their experiments were solved. 
+
+## Results for 2018/2019
+
+In February 2019, Kim Serradell visited Riken. A meeting was scheduled with Shunji Kotsuki to evaluate the status of the collaboration and how to go on with the work. In this meeting they agreed to stop definitely the installation of EC-Earth in K machine (K machine will be stopped in August 2019). A post-doc has started in March 2019 to work exclusively in the numerical instabilities in the EnKF routine. As soon the filter is working and outputs produced, BSC will share them with Riken. In the following months, BSC will get an ARM machine as part of Mare Nostrum 4 FTE clusters. This machine should be quite similar to post-K machine. This similarity could foster the collaboration between both teams when both machines will be in production.
+
 
 ## Future plans
 
