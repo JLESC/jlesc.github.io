@@ -271,13 +271,13 @@ Chameleon’s current solution is based on DevStack. Grid’5000 has two differe
 <h3 id="toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack">
 <a id="toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack" class="anchor" href="#toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack</h3>
 
-<p>OpenStack has become the de-facto solution to operate compute, network and storage resources in public and private clouds. However, developers and scientists are facing challenges when it comes to deploy and benchmark such a complex software stack. 
-To address this problem, we developed Enos, an integrated framework that relies on container technologies for deploying and evaluating OpenStack on any testbed. Enos allows researchers to easily express different configurations, enabling fine-grained investigations of OpenStack services. Enos collects performance metrics at runtime and stores them for post-mortem analysis and sharing. 
-The relevance of the <a href="http://enos.readthedocs.io/en/stable/">Enos</a> approach to reproducible research was illustrated by evaluating different OpenStack scenarios on the Grid’5000 testbed in 2016 as published at CCGRID <a href="#CCGRID17_Enos">(Cherrueau et al. 2017)</a> and also presented at the <a href="https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale">OpenStack summit in Barcelona</a>.</p>
+<p>OpenStack has become the de-facto solution to operate compute, network and storage resources in public and private clouds. However, developers and scientists are facing challenges when it comes to deploy and benchmark such a complex software stack.
+To address this problem, we developed Enos, an integrated framework that relies on container technologies for deploying and evaluating OpenStack on any testbed. Enos allows researchers to easily express different configurations, enabling fine-grained investigations of OpenStack services. Enos collects performance metrics at runtime and stores them for post-mortem analysis and sharing.
+The relevance of the <a href="http://enos.readthedocs.io/en/stable/">Enos</a> approach to reproducible research was illustrated by evaluating different OpenStack scenarios on the Grid’5000 testbed in 2016 as published at CCGRID <a href="#CCGRID17Enos">(Cherrueau et al. 2017)</a> and also presented at the <a href="https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale">OpenStack summit in Barcelona</a>.</p>
 
-<p>Building on this success, in 2017, we extended the Enos framework to achieve performance experiments while doing traffic shaping. 
+<p>Building on this success, in 2017, we extended the Enos framework to achieve performance experiments while doing traffic shaping.
 Our goal was to offer the opportunity to researchers to evaluate the impact of WAN communications on OpenStack.<br>
-Latency is  a critical requirement for Internet Of Things and NFV/SDN applications that favors a more distributed Cloud Computing model deployed at the Edge. 
+Latency is  a critical requirement for Internet Of Things and NFV/SDN applications that favors a more distributed Cloud Computing model deployed at the Edge.
 This model does not cope with the traditional vision that has been driving the development of OpenStack. Although some efforts such as multiple regions, federations, … may allow operators to administrate these new infrastructures, there are no studies that evaluate how OpenStack will behave in such a massively distributed context.
 To illustrate the interest of such extensions, we conducted additional experiments over the Grid’5000 and the Chameleon testbed as shown at the <a href="https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide">Boston OpenStack summit</a>. The port of Enos on top of Chameleon consisted in <a href="http://enos.readthedocs.io/en/stable/provider/index.html">developing a new provider</a> as presented in the Sydney OpenStack summit.</p>
 
@@ -553,27 +553,27 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
-          CCGRID17_Enos
+          CCGRID17Enos
         </div>
       </div>
       <div class="row">
-        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCCGRID17_EnosBibtex" aria-expanded="false" aria-controls="collapseCCGRID17_EnosBibtex">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCCGRID17EnosBibtex" aria-expanded="false" aria-controls="collapseCCGRID17EnosBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCCGRID17_EnosAbstract" aria-expanded="false" aria-controls="collapseCCGRID17_EnosAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCCGRID17EnosAbstract" aria-expanded="false" aria-controls="collapseCCGRID17EnosAbstract">
           Abstract
         </button>
       </div>
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="CCGRID17_Enos">Cherrueau, R. A., D. Pertin, A. Simonet, A. Lebre, and M. Simonin. 2017. “Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack.” In <i>2017 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID)</i>, 544–48. doi:10.1109/CCGRID.2017.87.</span>
+      <span id="CCGRID17Enos">Cherrueau, R. A., D. Pertin, A. Simonet, A. Lebre, and M. Simonin. 2017. “Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack.” In <i>2017 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID)</i>, 544–48. doi:10.1109/CCGRID.2017.87.</span>
     </div>
   </div>
-  <div class="collapse" id="collapseCCGRID17_EnosBibtex">
+  <div class="collapse" id="collapseCCGRID17EnosBibtex">
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
-        <pre><code>@inproceedings{CCGRID17_Enos,
+        <pre><code>@inproceedings{CCGRID17Enos,
   author = {Cherrueau, R. A. and Pertin, D. and Simonet, A. and Lebre, A. and Simonin, M.},
   booktitle = {2017 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID)},
   title = {Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack},
