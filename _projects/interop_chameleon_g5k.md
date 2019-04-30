@@ -2,7 +2,7 @@
 layout: page_project
 title: Advancing Chameleon and Grid'5000 testbeds
 date: 2017-06-07
-updated: 
+updated:
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -74,23 +74,23 @@ The repository that contains the Heat templates to use on Chameleon to run Opens
 
 ### Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack
 
-OpenStack has become the de-facto solution to operate compute, network and storage resources in public and private clouds. However, developers and scientists are facing challenges when it comes to deploy and benchmark such a complex software stack. 
-To address this problem, we developed Enos, an integrated framework that relies on container technologies for deploying and evaluating OpenStack on any testbed. Enos allows researchers to easily express different configurations, enabling fine-grained investigations of OpenStack services. Enos collects performance metrics at runtime and stores them for post-mortem analysis and sharing. 
-The relevance of the [Enos](http://enos.readthedocs.io/en/stable/) approach to reproducible research was illustrated by evaluating different OpenStack scenarios on the Grid'5000 testbed in 2016 as published at CCGRID {% cite CCGRID17_Enos --file external/interop_chameleon_g5k.bib %} and also presented at the [OpenStack summit in Barcelona](https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale).
+OpenStack has become the de-facto solution to operate compute, network and storage resources in public and private clouds. However, developers and scientists are facing challenges when it comes to deploy and benchmark such a complex software stack.
+To address this problem, we developed Enos, an integrated framework that relies on container technologies for deploying and evaluating OpenStack on any testbed. Enos allows researchers to easily express different configurations, enabling fine-grained investigations of OpenStack services. Enos collects performance metrics at runtime and stores them for post-mortem analysis and sharing.
+The relevance of the [Enos](http://enos.readthedocs.io/en/stable/) approach to reproducible research was illustrated by evaluating different OpenStack scenarios on the Grid'5000 testbed in 2016 as published at CCGRID {% cite CCGRID17Enos --file external/interop_chameleon_g5k.bib %} and also presented at the [OpenStack summit in Barcelona](https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale).
 
-Building on this success, in 2017, we extended the Enos framework to achieve performance experiments while doing traffic shaping. 
+Building on this success, in 2017, we extended the Enos framework to achieve performance experiments while doing traffic shaping.
 Our goal was to offer the opportunity to researchers to evaluate the impact of WAN communications on OpenStack.  
-Latency is  a critical requirement for Internet Of Things and NFV/SDN applications that favors a more distributed Cloud Computing model deployed at the Edge. 
+Latency is  a critical requirement for Internet Of Things and NFV/SDN applications that favors a more distributed Cloud Computing model deployed at the Edge.
 This model does not cope with the traditional vision that has been driving the development of OpenStack. Although some efforts such as multiple regions, federations, ... may allow operators to administrate these new infrastructures, there are no studies that evaluate how OpenStack will behave in such a massively distributed context.
 To illustrate the interest of such extensions, we conducted additional experiments over the Grid’5000 and the Chameleon testbed as shown at the [Boston OpenStack summit](https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide). The port of Enos on top of Chameleon consisted in [developing a new provider](http://enos.readthedocs.io/en/stable/provider/index.html) as presented in the Sydney OpenStack summit.
 
 ## Results for 2018/2019
 
-Lucas Nussbaum (Université de Lorraine, France) and Kate Keahey (University of Chicago, USA) partnered on the organization of two sessions at the third Global Experimentation for Future Internet [(GEFI 2018)](http://indico.rnp.br/conferenceDisplay.py?confId=260) workshop that was held October 25-26, 2018 in Tokyo, Japan and hosted by the University of Tokyo. The objective of this workshops was to create a forum for the exchange of information and best practices among an international community of developers and operators of testbeds and related research infrastructure, as well as the researchers who make use of these facilities. Historically, these interactions were highly effective in building successful collaborations and coordinating activities among participating research infrastructures and this was thus a good forum to continue, and in some cases, broaden our collaboration. 
+Lucas Nussbaum (Université de Lorraine, France) and Kate Keahey (University of Chicago, USA) partnered on the organization of two sessions at the third Global Experimentation for Future Internet [(GEFI 2018)](http://indico.rnp.br/conferenceDisplay.py?confId=260) workshop that was held October 25-26, 2018 in Tokyo, Japan and hosted by the University of Tokyo. The objective of this workshops was to create a forum for the exchange of information and best practices among an international community of developers and operators of testbeds and related research infrastructure, as well as the researchers who make use of these facilities. Historically, these interactions were highly effective in building successful collaborations and coordinating activities among participating research infrastructures and this was thus a good forum to continue, and in some cases, broaden our collaboration.
 
-The sessions focused on current topics in both testbeds: (1) modern networking technologies, a central concern when performing experiments in the distributed systems context, and (2) reproducibility in experimentation (together with Violet Syrotiuk).  The sessions led to the discussion of current topics. Specifically, for networking the discussion focused on programmability and isolation, emulation technologies, as well as emergent use cases such interactions with IoT, and support for Big Data/AI scenarios. For reproducibility, the discussions focused on tools and services, data management practices, and lessons learned. 
+The sessions focused on current topics in both testbeds: (1) modern networking technologies, a central concern when performing experiments in the distributed systems context, and (2) reproducibility in experimentation (together with Violet Syrotiuk).  The sessions led to the discussion of current topics. Specifically, for networking the discussion focused on programmability and isolation, emulation technologies, as well as emergent use cases such interactions with IoT, and support for Big Data/AI scenarios. For reproducibility, the discussions focused on tools and services, data management practices, and lessons learned.
 
-The workshop produced a report co-authored by the participants {% cite BermanEtAl --file jlesc.bib %} that is currently in the process of preparation for a publication on current topics in testbed design. 
+The workshop produced a report co-authored by the participants {% cite BermanEtAl --file jlesc.bib %} that is currently in the process of preparation for a publication on current topics in testbed design.
 
 ## Visits and meetings
 David Loup was at Argonne National Laboratory from 3rd March to 20th April 2017 to work on this project.
