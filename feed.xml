@@ -8,6 +8,19 @@
     <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>10th JLESC Workshop</title>
+        <description>&lt;p&gt;The 10th JLESC Workshop will be held at the Gustav-Stresemann-Institut, Bonn, Germany, from April 15 to 17, 2020.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;/events/10th-jlesc-workshop&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2019/04/30/10th-workshop/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2019/04/30/10th-workshop/</guid>
+      </item>
+    
+      <item>
         <title>9th JLESC Workshop</title>
         <description>&lt;p&gt;The 9th JLESC Workshop will be held at the University of Tennessee, Knoxville, USA, from April 15 to 17, 2019.&lt;/p&gt;
 
@@ -209,24 +222,6 @@ just before the 6th JLESC Workshop.&lt;/p&gt;
         <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
         <link>https://jlesc.github.io/news/2016/09/21/6th-workshop-calls/</link>
         <guid isPermaLink="true">https://jlesc.github.io/news/2016/09/21/6th-workshop-calls/</guid>
-      </item>
-    
-      <item>
-        <title>International funding opportunities</title>
-        <description>&lt;p&gt;We will gather funding opportunities (e.g. EU or NSF calls) in this and future news post.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;In order to support the work of JLESC researchers, the goal is to leverage the effort and multilateral JLESC collaborations for acquiring 3rd party funding, e.g. via EU or NSF projects. 
-We will therefore post relevant calls in the news section and encourage everyone to submit further opportunities via their executive director.&lt;/p&gt;
-
-&lt;p&gt;Also, please contact your executive director if you are planning or about to submit a JLESC-related proposal.&lt;/p&gt;
-
-&lt;p&gt;For now, we start with an &lt;a href=&quot;https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503394&quot;&gt;overview&lt;/a&gt; of NSF calls. In particular, the SAVI call, &lt;a href=&quot;https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504756&amp;amp;org=NSF&quot;&gt;Science Across Virtual Institutes&lt;/a&gt;, is relevant for JLESC researchers.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 05 Sep 2016 00:00:00 +0000</pubDate>
-        <link>https://jlesc.github.io/news/2016/09/05/funding-opportunities/</link>
-        <guid isPermaLink="true">https://jlesc.github.io/news/2016/09/05/funding-opportunities/</guid>
       </item>
     
   </channel>
