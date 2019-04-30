@@ -1,18 +1,18 @@
 ---
 layout: page_event
-title: 9th JLESC Workshop
-date: 2018-12-04
-updated: 2018-12-04
+title: 10th JLESC Workshop
+date: 2019-04-30
+updated: 2019-04-30
 navbar: Events
-event_location: UTK, Knoxville, USA
-event_start: 2019-04-15
-event_end: 2019-04-17
-event_short_url: http://icl.utk.edu/jlesc9/
-event_url: http://icl.utk.edu/jlesc9/
-wayback_url: 
-logo: 
+event_location: GSI, Bonn, Germany
+event_start: 2020-04-15
+event_end: 2020-04-17
+event_short_url:
+event_url:
+wayback_url:
+logo:
 kind: workshop
-institute: utk
+institute: jsc
 permalink:
 page_type: event_page
 ---
@@ -25,14 +25,12 @@ to explore the most recent and critical issues in advancing the field of HPC fro
 The workshop will feature sessions on these seven central topics:
 
   * Applications and mini-apps
-  * Parallel Programming models and runtime 
+  * Parallel Programming models and runtime
   * Performance tools
   * Resilience
   * Big Data, I/O and in-situ visualization
   * Numerical methods and algorithms
   * Advanced architectures
-
-In addition, three keynote speakers will be invited to provide a clear picture of the current state and efforts on the roadmap to Exascale, a vendor session will be organized, and dedicated sessions on hot topics are again envisioned. Special efforts will be taken to highlight students and postdoc contributions: a poster session and a student/postdoc meeting opportunity will be arranged.
 
 A key objective of the workshop is to foster the existing collaborations and inform the workshop attendees of their respective progress, as well as identify new research collaborations and establish a roadmap
 for their implementation.
