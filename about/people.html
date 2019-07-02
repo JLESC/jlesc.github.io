@@ -6,21 +6,13 @@ navbar: About
 subnavbar: People
 ---
 
-<div class="row">
-  <div class="col-xs-12 col-lg-4">
-    <div class="card">
-      <h3 class="card-header">JLESC Director</h3>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">{% person cappello_f %}</li>
-      </ul>
-    </div>
-  </div>
+
 
   <div class="col-xs-12 col-md-6 col-lg-4">
     <div class="card">
       <h3 class="card-header">JLESC Executive Directors</h3>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">{% person cappello_f %}</li>
+        <li class="list-group-item">{% person cappello_f %} <label class="tag tag-default">Director</label> </li>
         <li class="list-group-item">{% person kramer_b %}</li>
         <li class="list-group-item">{% person robert_y %}</li>
         <li class="list-group-item">{% person labarta_j %}</li>
@@ -49,6 +41,20 @@ subnavbar: People
   </div>
 </div>
 
+  <div class="col-xs-12 col-md-6 col-lg-4">
+    <div class="card">
+      <h3 class="card-header"> JLESC Student Committee</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          {% person schoebel_r %} <label class="tag tag-default">Leader</label>
+        </li>
+        <li class="list-group-item">{% person heinemann_c %}</li>
+        <li class="list-group-item">{% person honore_v %}</li>
+        <li class="list-group-item">{% person sala_k %}</li>
+      </ul>
+    </div>
+  </div>  
+  
 <!-- <hr /> -->
 
 <!-- <p class="lead">
