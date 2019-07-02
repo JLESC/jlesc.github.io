@@ -897,6 +897,15 @@ hascoet_l:
   email: Laurent.Hascoet@inria.fr
   homepage: http://www-sop.inria.fr/members/Laurent.Hascoet/
 
+heinemann_c:
+  sur_name: Heinemann
+  given_name: Colleen
+  affiliation: uiuc
+  position: phd
+  topics: 
+  email: heinmnn2@illinois.edu
+  homepage:
+
 heinrich_c:
   sur_name: Heinrich
   given_name: Christian
@@ -930,6 +939,15 @@ hirota_y:
   position:
   topics:
   email: yusuke.hirota@riken.jp
+  homepage:
+
+honore_v:
+  sur_name: Honore
+  given_name: Valentin
+  affiliation: inria
+  position:
+  topics:
+  email: valentin.honore@inria.fr
   homepage:
 
 hori_a:
@@ -1993,6 +2011,15 @@ sakai_y:
   topics:
   email: yasuhiro.sakai.gv@riken.jp
   homepage:
+
+sala_k:
+  sur_name: Sala
+  given_name: Kevin
+  affiliation: bsc
+  position: phd
+  topics:
+  email: 
+  homepage: kevin.sala@bsc.es
 
 sankaranarayanan_s:
   sur_name: Sankaranarayanan
