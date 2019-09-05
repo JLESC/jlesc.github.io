@@ -14,6 +14,9 @@ PUF: Partnership University Fund NEXTGEN
 FP7 ESSI2: European Exascale Software Initiative
 : Lead for Resilience: {% person cappello_f %}
 
+FACCTS (France and Chicago Collaborating in the Sciences), Binomial Checkpointing for Machine Learning
+: Lead: {% person hovland_p %}
+
 FACCTS (France and Chicago Collaborating in the Sciences), Collaborative Tool Development for Adjoining MPI Codes
 : Lead: {% person hovland_p %}
 
@@ -25,6 +28,9 @@ FACCTS (France and Chicago Collaborating in the Sciences), ANL/INRIA Success Sto
 
 [G8 Exascale: Enablig Climate Simulation at Extremescale](https://wiki.cites.illinois.edu/wiki/)
 : Lead: {% person cappello_f %}
+
+[ANR Dash](https://project.inria.fr/dash/)
+: Lead: {% person aupy_g %}
 
 ANR RESCUE
 : Lead: {% person robert_y %}
