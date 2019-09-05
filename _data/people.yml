@@ -153,12 +153,12 @@ attig_n:
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/attig_n.html
 
 aupy_a:
-  sur_name: Aupy
+  sur_name: Pallez
   given_name: Guillaume
   affiliation: inria
   position: permanent
   topics: storage, resilience
-  email: guillaume.aupy@inria.fr
+  email: guillaume.pallez@inria.fr
   homepage: https://gaupy.org
 
 badia_r:
