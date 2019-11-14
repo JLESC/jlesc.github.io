@@ -7,8 +7,8 @@ navbar: Events
 event_location: GSI, Bonn, Germany
 event_start: 2020-04-15
 event_end: 2020-04-17
-event_short_url:
-event_url:
+event_short_url: https://www.fz-juelich.de/ias/jsc/jlesc-10
+event_url: https://www.fz-juelich.de/ias/jsc/jlesc-10
 wayback_url:
 logo:
 kind: workshop
