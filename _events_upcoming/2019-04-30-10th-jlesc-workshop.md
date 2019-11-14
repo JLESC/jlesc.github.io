@@ -37,3 +37,5 @@ for their implementation.
 
 The workshop is open to Illinois, INRIA, ANL, BSC, JSC, R-CCS and UTK faculties, researchers,
 engineers and students who want to learn more about Exascale Computing and beyond. Contact your local executive director if you are interested in attending.
+
+The event's website can be found [here](https://www.fz-juelich.de/ias/jsc/jlesc-10).
