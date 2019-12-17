@@ -31,17 +31,17 @@ may benefit from system heterogeneity. Highly scalable CFD
 solvers have been developed at R-CCS and JSC to conduct
 large-scale simulations. R-CCS focuses on full-scale
 simulations of vehicles aerodynamics. JSC
-investigates respiratory flows to improve 
+investigates respiratory flows to improve
 medical treatments. Due to massive amounts of data produced, the
 analysis of the results is becoming a time-consuming
 process. Data-driven approaches have the potential to speed up
 analyses or to even replace certain physics in simulations. Deep
 learning methods have proven to be a fast alternative to extract
 multi-scale features from high-dimensional data
-sets. Deep neural networks (DNN) are able to 
+sets. Deep neural networks (DNN) are able to
 predict the steady-state flow and aerodynamic coefficients around bluff
 bodies and airfoils, and unsteady laminar vortex shedding over
-circular bodies. Autoencoders (AE) or generative models, like variational AEs or generative adversarial networks (GANs), 
+circular bodies. Autoencoders (AE) or generative models, like variational AEs or generative adversarial networks (GANs),
 have shown great potential in predciting 2D and 3D flow fields.
 
 It is the aim of the proposed cooperation to tie in with these
@@ -53,7 +53,7 @@ trained on data with similar features. It is
 investigated (i) how such such pre-trained DNNs adapt to the various flow
 configurations of interest for R-CCS and JSC, (ii) how they can
 speed up the simulation workflow, and (iii) how they
-overcome a shortage of training data. 
+overcome a shortage of training data.
 
 Bilateral support activities will lead to
 knowledge exchange with respect to the different hardware available
@@ -81,5 +81,4 @@ Will be discussed in 03/2020.
 
 ## References
 
-{% bibliography --file external/mcfd_cmp_project.bib %}
  
