@@ -807,16 +807,16 @@ goebbert_j:
   topics:
   email: j.goebbert@fz-juelich.de
   homepage: https://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/goebbert_j_h.html
-  
+
 gok_a:
   sur_name: Gok
   given_name: Ali Murat
   affiliation: anl
   position: post_doc
-  topics: 
+  topics:
   email: amg@u.northwestern.edu
   homepage:
-  
+
 grigori_l:
   sur_name: Grigori
   given_name: Laura
@@ -2002,6 +2002,15 @@ ropars_t:
   topics:
   email: thomas.ropars@inria.fr
   homepage: http://people.bordeaux.inria.fr/tropars/
+
+ruettgers_m:
+  sur_name: Rüttgers
+  given_name: Mario
+  affiliation: jsc
+  position: phd
+  topics:
+  email: m.ruettgers@fz-juelich.de
+  homepage: 
 
 rutten_e:
   sur_name: Rutten
