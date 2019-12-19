@@ -206,6 +206,15 @@ barcelo_a:
   email: alex.barcelo@bsc.es
   homepage:
 
+barry_d:
+  sur_name: Barry
+  given_name: Daniel
+  affiliation: utk
+  position: 
+  topics: 
+  email: 
+  homepage:
+
 bauer_g:
   sur_name: Bauer
   given_name: Greg
@@ -502,6 +511,15 @@ coulaud_o:
   topics:
   email: Olivier.Coulaud@inria.fr
   homepage: http://people.bordeaux.inria.fr/coulaud/
+
+caklovic_g:
+  sur_name: Caklovic
+  given_name: Gayatri
+  affiliation: jsc
+  position: phd
+  topics: Numerical methods, parallel-in-time integration
+  email: g.caklovic@fz-juelich.de
+  homepage:
 
 coullon_h:
   sur_name: Coullon
