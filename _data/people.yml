@@ -206,6 +206,15 @@ barcelo_a:
   email: alex.barcelo@bsc.es
   homepage:
 
+barry_d:
+  sur_name: Barry
+  given_name: Daniel
+  affiliation: utk
+  position: 
+  topics: 
+  email: dbarry@vols.utk.edu
+  homepage: 
+
 bauer_g:
   sur_name: Bauer
   given_name: Greg
@@ -348,6 +357,15 @@ burbano_m:
   position:
   topics:
   email: burbano.carmona@gmail.com
+  homepage:
+
+caklovic_g:
+  sur_name: Caklovic
+  given_name: Gayatri
+  affiliation: jsc
+  position: phd
+  topics: Numerical methods, parallel-in-time integration
+  email: g.caklovic@fz-juelich.de
   homepage:
 
 calhoun_j:
