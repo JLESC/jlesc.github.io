@@ -6,7 +6,7 @@ updated: 2016-03-30
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: suspended
 topics:
   - prog_lang
   - numerics
