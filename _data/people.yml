@@ -2677,3 +2677,49 @@ zhou_a:
   topics:
   email: amelie.czhou@gmail.com
   homepage: https://team.inria.fr/kerdata/amelie-chi-zhou/
+
+taufer_m:
+  sur_name: Taufer
+  given_name: Michela
+  affiliation: utk
+  position: permanent
+  topics:
+  email: mtaufer@utk.edu
+  homepage: https://www.eecs.utk.edu/people/faculty/dr-michela-taufer/
+
+luszczek_p:
+  sur_name: Luszczek
+  given_name: Piotr
+  affiliation: utk
+  position: permanent
+  topics: Numerical methods
+  email: luszczek@icl.utk.edu
+  homepage: https://scholar.google.com/citations?user=a9df4xQAAAAJ&hl=en
+
+hartwig_a:
+  sur_name: Hartwig
+  given_name: Anzt
+  affiliation: utk
+  position: permanent
+  topics: Numerical methods
+  email: hanzt@icl.utk.edu
+  homepage: https://hartwiganzt.github.io/
+
+lindquist_n:
+  sur_name: Lindquist
+  given_name: Neil
+  affiliation: utk
+  position:
+  topics:
+  email: nlindqu1@vols.utk.edu
+  homepage:
+
+wyatt_m:
+  sur_name: Wyatt
+  given_name: Michael
+  affiliation: utk
+  position:
+  topics:
+  email: mwyatt@vols.utk.edu
+  homepage:
+
