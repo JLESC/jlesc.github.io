@@ -6,7 +6,7 @@ updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status:
+status: starting
 topics:
   - apps
 keywords:
