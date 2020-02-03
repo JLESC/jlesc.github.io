@@ -44,48 +44,16 @@ None yet.
 None yet.
 
 ## Impact and publications
-We expect to deliver four main results: (a) annual JLESC internal reports; (b) papers presenting both
-computer science and computational chemistry results; (c) an open-source software tool including open
-access datasets for testing and replication; and (d) Jupyter interfaces to the software and datasets
-presenting the annotated workflow for predictions.
-
-<!--
-{% comment %}
-=============================
-== CITING OWN PUBLICATIONS ==
-=============================
-
-You can list your own publications below in case you did not cite them in the text
-(which you should do, though).
-Use the Liquid citing syntax as explained in the wiki:
-https://github.com/JLESC/jlesc.github.io/wiki/Markup-Language#cite-and-list-publications
-Remember to use the `--file jlesc.bib` with the `cite` tag.
-
-=====================================
-== START HERE WITH YOUR ADDITIONAL REFERENCES ==
-{% endcomment %}
-
-
-
-{% comment %}
-== NO MORE BELOW THIS ==
-========================
-{% endcomment %}
--->
 
 {% bibliography --cited --file jlesc.bib %}
 
 
 ## Future plans
-
+We expect to deliver four main results: (a) annual JLESC internal reports; (b) papers presenting both
+computer science and computational chemistry results; (c) an open-source software tool including open
+access datasets for testing and replication; and (d) Jupyter interfaces to the software and datasets
+presenting the annotated workflow for predictions.
 
 ## References
-
-{% comment %}
-=================
-=== IMPORTANT ===
-=================
-
-{% endcomment %}
 
 {% bibliography --file external/ml4protein_diffraction.bib %}
