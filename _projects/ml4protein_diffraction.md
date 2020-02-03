@@ -13,7 +13,11 @@ keywords:
   - machine learning, protein folding
 head: taufer_m
 members:
+  - tama_f
   - luszczek_p
+  - miyashita_o
+  - lindquist_n
+  - wyatt_m
 ---
 
 ## Research topic and goals
