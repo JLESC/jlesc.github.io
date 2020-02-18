@@ -70,11 +70,15 @@ We presented two technical posters related to high-level synthesis and custom FP
 ## Results for 2018/2019
 We co-organized a panel session and a bird-of-feather session related to FPGA and reconfigurable computing with our collaborators in this field in SC18. We also organized two workshops related HPC and FPGAs in FPT18 in Japan.
 
+## Results for 2019/2020
+Like previous year, we co-organized a panel session and a bird-of-feather session related to FPGA and reconfigurable computing with our collaborators in this field in SC19, which caputured a large audience. We also co-organized the ReHPC workshop in FPL2019.
+
 ## Visits and meetings
 {% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
 {% person sano_k %} visited ANL in August 2018 and spent one day for this project.
-
 {% person yoshii_k %}, {% person martorell_x %}, {% person rutten_e %} and {% person sano_k %} had a project meeting during FPT18 in Okinawa, Japan in Dec, 2018.
+{% person yoshii_k %}, {% person cappello_f %} visited RIKEN R-CCS and Sprint-8 facility in Aug, 2019 to discuss hardware compression technology.
+
 
 ## Impact and publications
 
