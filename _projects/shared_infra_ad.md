@@ -26,11 +26,13 @@ We have continued to develop a runtime library called ADMM to allow source-trans
 
 We have continued to develop the ability to interoperate OpenAD from Argonne and Tapenade from INRIA {% cite NarayananHascoet2016 --file jlesc.bib %}. Interoperation between the OpenAD and Tapenade is possible because they share the same global architecture i.e. a front-end which parses and builds an internal representation, followed by an static data-flow analysis stage, then actual building of the differentiated program still in internal form, and finally a back-end that outputs this differentiated internal form into new source files. The interoperation uses Tapenade for parsing the code and analysis. It uses OpenAD's XAIFBooster module for code transformation. The code to be differentiated is written into the XML Abstract Interface Form (XAIF) by Tapenade which is subsequently transformed by XAIFBooster. The transformed XAIF is converted back to source code by Tapenade. We have tested the new tool flow on various test cases from OpenAD's regression testsuite.
 
+{% person narayanan_s %} developed two-level checkpointing of adjoint computations with the additional capability for suspending and restarting the computation. This was applied to MITgcm, a code that can be used to study both atmospheric and oceanic phenomena. The approach is partially based on the work previously performed by {% person aupy_g %} and {% person hovland_p %}.
+
 We have begun to explore the possibility of using Tapenade for differentiating code containing SIMD pragmas and for generating adjoint code that exploits SIMD parallelization. 
 
 
 ## Visits and meetings
-Frequent e-mail exchanges. {% person narayanan_s %} will visited INRIA in 2019.
+Frequent e-mail exchanges. In 2019, {% person narayanan_s %} met with {% person hascoet_l %} for joint work on MITgcm.
 
 ## Impact and publications
 
