@@ -1013,6 +1013,15 @@ huard_g:
   email: guillaume.huard@imag.fr
   homepage: https://team.inria.fr/polaris/members/guillaume-huard/
 
+hueckelheim_j:
+  sur_name: Hückelheim
+  given_name: Jan
+  affiliation: anl
+  position: permanent
+  topics:
+  email: jhueckelheim@anl.gov
+  homepage: https://www.anl.gov/profile/jan-christian-hueckelheim
+
 hwu_w:
   sur_name: Hwu
   given_name: Wen-Mei W.
