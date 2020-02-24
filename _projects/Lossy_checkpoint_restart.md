@@ -15,6 +15,9 @@ members:
   - olson_l
   - calhoun_j
   - snir_m
+  - Luc Gigaud
+  - Emmanuel Agulo
+  - Nick Schenkels
 ---
 
 ## Research topic and goals
@@ -51,20 +54,27 @@ The paper submitted to IJHPCA on the results of lossy compression for advection 
 
 ## Results for 2018/2019
 
-A new collaboration has started with Luc Giraud and Emmanuel Agulo (Inria) on lossy compression for linerar solvers (GMRES). The goal is to study the convergence of GMRES if lossy compression is used at each iteration or for only some iterations. The first case will allow to understand how lossy compression could be used to compress the solver data in memory. The second case will inform about the possibility to retart GMES from lossy checkpoints. The research has started, a Postdoc has been hired on the Inria siade
+A new collaboration has started with Luc Giraud and Emmanuel Agulo (Inria) on lossy compression for linerar solvers (GMRES). The goal is to study the convergence of GMRES if lossy compression is used at each iteration or for only some iterations. The first case will allow to understand how lossy compression could be used to compress the solver data in memory. The second case will inform about the possibility to retart GMES from lossy checkpoints. The research has started, a Postdoc has been hired on the Inria sade
+
+## Results for 2019/2020
+
+The first results experimental of the new collaboration were presented during the workshop at Knoxville. Nick Schenkels then visited Argonne for 2 weeks. During the two weeks we decided to focus the work on Flexible GMRES. Franck Cappello visited Bordeaux in June 2019. There were several meetings about the collaboration. Nick Schenkels visited Argonne on February 2020 for 1 week. Discussions were about the draft of a paper on the theoretical results of this collaboration. The results of the collaboration will be presented at the JLESC workshop at Bonn in April 2020.
 
 ## Visits and meetings
 
 Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.
 Jon Calhoun did an internship of 11 weeks at ANL.
 Franck Cappello visited Inria Bordeaux for 1 week in July 2018.
+Nick Schenkels visited Argonne 2 weeks in April 2019
+Franck Cappello visited Inria Bordeaux for 1 week in July 2019.
+Nick Schenkels visited Argonne 1 week in February 2020
 
 ## Impact and publications
 
 ### Papers
 The paper from this collaboration submitted to IJHPCA has been accepted for publication. See {% cite Calhoun18 --file jlesc.bib %} and {% cite Calhoun17 --file jlesc.bib %}
 
-This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra and a paper has been accepted at ACM HPDC 2018 on that topic {% cite HPDC2018 --file jlesc.bib %}.
+This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra. A paper has been accepted at ACM HPDC 2018 on that topic {% cite HPDC2018 --file jlesc.bib %}. Another paper is under preparation for submission on lossy compression for flexible GMRES {% cite Schenkels20 --file jlesc.bib %}.
 
 {% bibliography --cited --file jlesc.bib %}
 
@@ -74,6 +84,8 @@ The results of this project motivated the submission of the [NSF Aletheia projec
 Funded by the NSF Aletheia project, a Ph. D. student (Wang Chen) at UIUC is exploring how to detect corruption in lossy compressed results (e.g. checkpoints) of numerical simulations.  
 
 Another student is funded on the Aletheia project on the Argonne side. Sihuan Li from U.C. Reiverside is doing a long term internship at Argonne on making lossy compression tolerant to SDC.
+
+Inria postdoc funding for 16 momths: Nick Schenkels
 
 ### Impact on other projects
 
