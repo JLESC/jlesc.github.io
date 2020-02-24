@@ -66,6 +66,17 @@ Furthermore, we focused on understanding the requirements of distributed storage
 co-deployed with HPC-applications, designed a rescaling mechanism able to meet these
 requirements, and implemented it.
 
+## Results for 2019/2020
+
+We developed PufferScale, a rescaling scheduler that aims to be integrated within Mochi
+microservices {% cite Dorier2018Methodology --file external/reconf_distr_storage.bib %}.
+Pufferscale was demonstrated with a set of microservice representative of a storage
+system designed for High Energy Physics applications, and evaluated on Grid'5000.
+This work led to a paper accepted for publication at IEEE/ACM CCgrid 2020 {% cite Cheriere2020Pufferscale --file jlesc.bib %}.
+
+Additionally, theoretical work on quantifying rescaling performance was accepted for
+publication in the Elsevier JPDC journal in early 2020 {% cite Cheriere2020HowFast --file jlesc.bib %}.
+
 ## Visits and meetings
 
 Nathanael Cheriere visited Argonne National laboratory from September to December 2018 
