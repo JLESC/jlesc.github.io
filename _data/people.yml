@@ -210,10 +210,10 @@ barry_d:
   sur_name: Barry
   given_name: Daniel
   affiliation: utk
-  position: 
-  topics: 
+  position:
+  topics:
   email: dbarry@vols.utk.edu
-  homepage: 
+  homepage:
 
 bauer_g:
   sur_name: Bauer
@@ -2037,7 +2037,7 @@ ruettgers_m:
   position: phd
   topics:
   email: m.ruettgers@fz-juelich.de
-  homepage: 
+  homepage:
 
 rutten_e:
   sur_name: Rutten
@@ -2109,6 +2109,15 @@ schanen_m:
   position:
   topics: Adjoints, Checkpointing, Large-Scale
   email: mschanen@anl.gov
+  homepage:
+
+schenkels_n:
+  sur_name: Schenkels
+  given_name: Nick
+  affiliation: inria
+  position: post_doc
+  topics:
+  email: nick.schenkels@inria.fr
   homepage:
 
 schleife_a:
@@ -2749,4 +2758,3 @@ miyashita_o:
   topics:
   email: osamu.miyashita@riken.jp
   homepage: http://www2.riken.jp/TMS2012/cbp/en/member/profile/osamu_miyashita.html
-
