@@ -141,11 +141,11 @@
           
           
             <span class="clearfix">
-              <span class="person given-name">Kazutomo</span> <span class="person sur-name">Yoshii</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Swann</span> <span class="person sur-name">Perarnau</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Swann</span> <span class="person sur-name">Perarnau</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Raphaël</span> <span class="person sur-name">Bleuse</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
         </div>
@@ -167,7 +167,7 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -213,29 +213,33 @@ autonomic loops. Based on our previous experience in Cloud-oriented Autonomic
 Computing, we will generalize and explore novel issues in adapting our
 approaches to specificities of HPC and power management.</p>
 
-<h2 id="results-for-20182019">
-<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+<h2 id="results-for-20192020">
+<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
 
-<p>We performed analysis of power capping mechanisms, RAPL in particular, and of
-their interaction with application-level variations. We identified potential
-retroaction loops in that context, and currently focus on a particular
-representative autonomic loop : deciding at runtime, dynamically, on the
-sufficient/minimal level of power capping  such that the application
-performance remains maximum. The range of flexibility/elasticity typically
-comes from some phases of an application involving more input/output, slowing
-down computations, and therefore the same performance can be achieved while
-slowing down the processor, through lower power cap.</p>
+<p>On the basis of the preliminary work done at ANL on instrumentation of HPC
+applications, Inria has begun work on a range of controllers for the runtime
+adaptation of the Power Cap level in RAPL. A first approach is considered,
+re-using results on other work concerning a different problem (regulating the
+degree of parallelism according to synchronization cost), but which could be
+transferred here. Another approach involves measuring progress and power and
+making decisions based on predictions.</p>
 
-<p>Preliminary work completed at Argonne to instrument a collection of HPC
-applications to report <em>progress</em>: an application-specific measure of online
-performance. These progress reports will be used as a sensor in future work.</p>
+<p>Argonne completed the design and implementation of an infrastructure to perform
+control experiments using jupyter notebooks. This infrastructure can be
+deployed on a wide range of servers, and allows collaborators to independently
+implement their own control algorithm using a simple interface and a high level
+language. The notebook then connect remotely to the existing Argo NRM
+infrastructure, that keeps track of actuators, sensors and application
+management.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
 <p>We schedule regular video meetings between the different members of the
-project. <span class="person given-name">Swann</span> <span class="person sur-name">Perarnau</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) visited Grenoble for a week to make progress
-on the project in April 2018.</p>
+project.</p>
+
+<p><span class="person given-name">Eric</span> <span class="person sur-name">Rutten</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited ANL for two days to make progress on the project
+on April 18-19 2019.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -247,13 +251,18 @@ on the project in April 2018.</p>
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>Short term plans are to finalize the design of controllers for this feedback
-loop : we consider a range of controllers, from simple intuitive algorithms, to
-model-based approaches involving control theoretical approaches.</p>
+<p>On the control of RAPL, short term plans are to finalize the design of some of
+the controllers and their implementation, in order to integrate them in the
+NRM platform for experimental evaluation. We then plan to consider more
+elaborate control problems, e.g. taking into account variables other than
+power in the system, and to consider more elaborate control techniques, to
+obtain controllers that are more robust or give a more efficient use of the
+system.</p>
 
-<p>We then plan to perform a series of experimental evaluations in order to
-characterize and compare the different controllers w.r.t. the gain in power
-consumption as well as properties of the controllers (convergence, stability).</p>
+<p>On a longer term, we plan to start working on another feedback loop approach
+for HPC, at a higher-level than processor level : we believe that there are
+opportunities in combining control-based methods and scheduling-based
+techniques for the general problem of runtime allocation and placement.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
