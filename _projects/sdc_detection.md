@@ -2,11 +2,11 @@
 layout: page_project
 title: New Techniques to Design Silent Data Corruption Detectors
 date: 2016-05-11
-updated: 2017-05-04
+updated: 2020-02-25
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: suspended
 topics:
   - resilience
 keywords:
@@ -16,10 +16,7 @@ members:
   - balaprakash_p
   - benoit_a
   - cappello_f
-  - cavelan_a
   - robert_y
-  - subasi_o
-  - sun_h
   - unsal_o
   - di_s
   - hori_a
@@ -105,11 +102,15 @@ Compared to state of the art generic SDC detectors, this detector can detect SDC
 We have evaluated our detector with 6 FLASH applications and 2 Mantevo mini-apps.
 Experiments show that our detector can detect more than 89% of SDCs with a false positive rate of less than 2%.
 
+## Results for 2019/2020
+Most of the partners of this project started working in other projects and there has not been any recent update/work done on this topic. Therefore, we are suspending the project and potentially mark it as finished in 6 months if no further comments/petitions are raised by any of the partners. 
+
 ## Visits and meetings
 
  * August 2nd, 2015 - November 6th, 2015: Omer internship at ANL
  * July 4th, 2016 - July 8th, 2016: Franck visit to BSC
  * 2018: multiple visits of Franck at UIUC
+ * 2019: Franck visit to BSC
 
 
 ## Impact and publications
@@ -118,13 +119,7 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
 
 ## Future plans
 
-We are developing open source tools for large scale energy-free SDC
-quantification for a wide variety of architectures. Ideally, JLESC partners can
-test the developed tools and deploy them on their machines. We expect to gather
-large amounts of data from diverse systems to have enough statistical
-robustness to draw clear conclusions on SDC occurrence in large scale systems.
-
-We are improving the neural network based SDC detector to work on 3D datasets.
+No future plans.
 
 ## References
 
