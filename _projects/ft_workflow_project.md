@@ -2,7 +2,7 @@
 layout: page_project
 title: Optimization of Fault-Tolerance Strategies for Workflow Applications
 date: 2016-03-16
-updated: 2019-02-14
+updated: 2020-02-25
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -89,37 +89,37 @@ Read the comments carefully!
 
 ## Research topic and goals
 
-In this project, we aim at finding efficient fault-tolerant scheduling schemes 
-for workflow applications that can be expressed as a directed acyclic graph (DAG) 
-of tasks. 
+In this project, we aim at finding efficient fault-tolerant scheduling schemes
+for workflow applications that can be expressed as a directed acyclic graph (DAG)
+of tasks.
 
-Checkpointing-recovery is the traditional fault-tolerance technique when it comes 
-to resilience for large-scale platforms. Unfortunately, as platform scale increases, 
-checkpoints must become more frequent to accommodate with the increasing 
-Mean Time Between Failure (MTBF). As such, it is expected that checkpoint-recovery 
+Checkpointing-recovery is the traditional fault-tolerance technique when it comes
+to resilience for large-scale platforms. Unfortunately, as platform scale increases,
+checkpoints must become more frequent to accommodate with the increasing
+Mean Time Between Failure (MTBF). As such, it is expected that checkpoint-recovery
 will become a major bottleneck for applications running on post-petascale platforms.
 
-We first focus on replication as a way of mitigating the checkpointing-recovery 
-overhead. A task can be checkpointed and/or replicated, so that if a single replica 
-fails, no recovery is needed. Our goal is to decide which task to checkpoint, 
-which task to replicate, and how much resource should be allocated to each task 
-for the execution of general workflow applications. For that, we first need to 
-derive a clear model for replication, as there are many ways to implement it, 
+We first focus on replication as a way of mitigating the checkpointing-recovery
+overhead. A task can be checkpointed and/or replicated, so that if a single replica
+fails, no recovery is needed. Our goal is to decide which task to checkpoint,
+which task to replicate, and how much resource should be allocated to each task
+for the execution of general workflow applications. For that, we first need to
+derive a clear model for replication, as there are many ways to implement it,
 even for a single task.
 
 
 ## Results for 2016/2017
 
-The initial work for this project has been focused towards using replication as a detection and correction mechanism for Silent Data Corruptions (SDC). Although other detection techniques exist for HPC applications, based on algorithms (ABFT), invariant preservation or data analytics, replication remains the most transparent and least intrusive technique. 
+The initial work for this project has been focused towards using replication as a detection and correction mechanism for Silent Data Corruptions (SDC). Although other detection techniques exist for HPC applications, based on algorithms (ABFT), invariant preservation or data analytics, replication remains the most transparent and least intrusive technique.
 
 In this project, replication is combined with checkpointing to enable rollback and recovery when forward recovery is not possible, which occurs when too many replicas are corrupted. The goal is to find the right level of replication (duplication, triplication or more) needed to efficiently detect and correct silent errors at scale. We have provided a detailed analytical study for this framework.
 
 
 ## Results for 2017/2018
 
-We have extended these results for platforms subject to both silent and fail-stop errors. Fail-stop errors are immediately detected, unlike silent errors, and replication may also help tolerating such errors. 
+We have extended these results for platforms subject to both silent and fail-stop errors. Fail-stop errors are immediately detected, unlike silent errors, and replication may also help tolerating such errors.
 
-We have considered two flavors of replication: process replication and group replication. Process replication applies to message-passing applications with communicating processes. Each process is replicated, and the platform is composed of process pairs, or triplets. Group replication applies to black-box applications, whose parallel execution is replicated several times. The platform is partitioned into two halves (or three thirds). In both scenarios, results are compared before each checkpoint, which is taken only when both results (duplication) or two out of three results (triplication) coincide. If not, one or more silent errors have been detected, and the application rolls back to the last checkpoint, as well as when fail-stop errors have struck. 
+We have considered two flavors of replication: process replication and group replication. Process replication applies to message-passing applications with communicating processes. Each process is replicated, and the platform is composed of process pairs, or triplets. Group replication applies to black-box applications, whose parallel execution is replicated several times. The platform is partitioned into two halves (or three thirds). In both scenarios, results are compared before each checkpoint, which is taken only when both results (duplication) or two out of three results (triplication) coincide. If not, one or more silent errors have been detected, and the application rolls back to the last checkpoint, as well as when fail-stop errors have struck.
 
 We provide a detailed analytical study for all of these scenarios, with formulas to decide, for each scenario, the optimal parameters as a function of the error rate, checkpoint cost, and platform size. We also report a set of extensive simulation results that nicely corroborates the analytical model.
 
@@ -152,7 +152,7 @@ on application performance. This work has received the best paper award at APDCM
 a workshop run in conjunction with IPDPS 2018.
 
 
-Three JLESC partners, Inria, Riken and UTK,  have conducted a study to compare 
+Three JLESC partners, Inria, Riken and UTK,  have conducted a study to compare
 the performance of different approaches to
   tolerate failures using checkpoint/restart when executed on
   large-scale failure-prone platforms. We study (i) rigid
@@ -168,8 +168,30 @@ the performance of different approaches to
   achieved. We instantiate our performance model with a realistic
   applicative scenario and make it publicly available for further
   usage.
-  
 
+Also, the Inria partner has studied checkpointing strategies for workflows and has shown
+how to design an efficient strategy that achieves an efficient trade-off between extreme approaches where either  all application data is checkpointed, or no application data is
+  checkpointed.
+  Results demonstrate that our algorithm outperforms both the former approach,
+  because of lower checkpointing overhead, and the latter approach, because of better resilience to failures {% cite HanEtAl2018 --file external/ft_workflow_project.bib %},
+{% cite HanEtAl2018b --file external/ft_workflow_project.bib %}.
+
+
+
+## Results for 2019/2020
+
+We have revisited replication coupled with checkpointing for fail-stop errors. This work focuses on divisible-load applications rather than workflows. In this context, replication enables the application to survive many fail-stop errors, thereby allowing for longer checkpointing periods. Previously published works use replication with the NORESTART strategy, which works as follows: (i) compute the application Mean
+  Time To Interruption (MTTI) as a function of the number of processor pairs and the individual processor Mean Time Between Failures (MTBF); (ii) use
+ checkpointing period  P à la Young/Daly, replacing the MTBF by the MTTI;
+  and (iii) never restart failed processors until the application crashes.
+We introduce the RESTART strategy where failed processors are restarted after each checkpoint.
+We compute
+ the optimal checkpointing period Q for this strategy, which is much larger than P thereby
+ decreasing I/O pressure.
+We show through simulations that using Q and the RESTART strategy, instead of P  and the usual NORESTART strategy, significantly decreases the overhead
+induced by replication,
+in terms of both total execution time and energy consumption.
+This work has appeared in the proceedings of SC'2019.
 
 
 
@@ -177,31 +199,33 @@ the performance of different approaches to
 
 {% person cavelan_a %} visited {% person cappello_f %} in Chicago for three months (March, April, and May 2016) to initiate the project. Furthermore, we have been meeting regularly in the previous years. In particular,
 we have been attending the SC conference (November 2016
-and November 2017), where we had extensive discussions to make progress. 
-We represented the JLESC at the Inria booth during these conferences. 
+and November 2017), where we had extensive discussions to make progress.
+We represented the JLESC at the Inria booth during these conferences.
 
 When not meeting in person, we have stayed in close collaboration through regular Skype meetings,
-which allowed us to make progress on the project. 
+which allowed us to make progress on the project.
 
-{% person robert_y %} made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months.
+{% person robert_y %} made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months, and a total of two months and a half for 2019/2020. 
 
-Valentin Le Fèvre has visited  Univ. Tenn. Knoxville for 10 days in February 2019.
+{% person lefevre_v %} has visited  Univ. Tenn. Knoxville for 10 days in February 2019,
+and for 10 days in January 2020.
 
 
 ## Impact and publications
 
 Two papers have been published in FTXS'17 {% cite benoitEtAl2017identifying --file jlesc.bib %},{% cite benoitEtAl2017optimal --file jlesc.bib %}.
 
-The work combining fail-stop and silent errors has been published in JPDC 
-{% cite BenoitEtAl2018 --file jlesc.bib %}. 
+The work combining fail-stop and silent errors has been published in JPDC
+{% cite BenoitEtAl2018 --file jlesc.bib %}.
 
-A work on executing workflows on high-bandwidth memory architectures was published in ICPP'18 {% cite BenoitEtAl2018b --file jlesc.bib %}. 
+A work on executing workflows on high-bandwidth memory architectures was published in ICPP'18 {% cite BenoitEtAl2018b --file jlesc.bib %}.
 
-The work on optimal cooperative checkpointing for shared high-performance computing platforms was the best paper at APDCM'18 {% cite HeraultEtAl2018 --file jlesc.bib %}. 
+The work on optimal cooperative checkpointing for shared high-performance computing platforms was the best paper at APDCM'18 {% cite HeraultEtAl2018 --file jlesc.bib %}.
 
-Finally, the work studying whether moldable applications perform better
-on failure-prone HPC platforms was published in Resilience'18 {% cite LeFevreEtAl2018 --file jlesc.bib %}. 
+The work studying whether moldable applications perform better
+on failure-prone HPC platforms was published in Resilience'18 {% cite LeFevreEtAl2018 --file jlesc.bib %}.
 
+The work on replication with checkpointing was published at SC'19 {% cite BenoitEtAl2019 --file jlesc.bib %}.
 
 
 
@@ -231,9 +255,9 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 ## Future plans
 
-There remains a lot to explore for workflow applications, consisting of tasks. 
+There remains a lot to explore for workflow applications, consisting of tasks.
 We have so far focused only on duplication in this case, but
-one may want to consider different replication levels (duplication, triplication or more) to different tasks, depending upon their criticality in terms of longest paths, number of successors, etc. 
+one may want to consider different replication levels (duplication, triplication or more) to different tasks, depending upon their criticality in terms of longest paths, number of successors, etc.
 This may be even more important when considering a general directed acyclic graph of tasks,
 rather than restricting to linear chains of tasks. This topic is called partial replication,
 and even though it has been empirically studied by some previous work, designing an optimal strategy that combines partial redundancy and checkpointing and analyzing its efficacy remain to be done.
@@ -241,7 +265,7 @@ and even though it has been empirically studied by some previous work, designing
 
 Finally, our initial goal was to target pipelined workflow applications, where data continuously
 enters the workflow, and where the objective is to maximize the throughput that can be achieved.
-This causes several new challenges that we hope to address in the future. 
+This causes several new challenges that we hope to address in the future.
 
 
 
