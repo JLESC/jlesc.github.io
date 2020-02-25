@@ -141,6 +141,18 @@
               <span class="person given-name">Marc</span> <span class="person sur-name">Snir</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
+            <span class="clearfix">
+              <span class="person given-name">Luc</span> <span class="person sur-name">Giraud</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Emmanuel</span> <span class="person sur-name">Agullo</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Nick</span> <span class="person sur-name">Schenkels</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
         </div>
       </li>
     
@@ -164,6 +176,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h3"><a href="#papers">Papers</a></li>
@@ -181,11 +194,11 @@
 
 <p>State compression is an important technique for reducing the problem posed by the bandwidth plateauing of the HDD-based storage systems.</p>
 
-<p>The state saved by HPC executions in checkpoints is composed mostly of floating-point data (single or double precision). Two types of compressors have been developed for floating-point data. Lossless compressors keep all the initial information and try to reduce the size occupied by this information. Sophisticated lossless compression techniques may use entropy coding, runlengh encoding, dictionary coding for example <a href="#LindstromETAl2006">(Lindstrom and Isenburg 2006)</a>, <a href="#IbteshamETAl2012">(Ibtesham et al. 2012)</a>. 
-The compression factor generally observed on scientific datasets with lossless compression is 1.2 to 2 (the compressed data set is 1.2 to 2 times smaller than the original). Lossy compressors deliberately lose information in order to reduce the size of the initial data set further. Lossy compressors reach very variable compression ratios depending on the application and the error bounds set by the users. This could be from less than 10 for difficult-to-compress data sets (lossless compressors would achieve a compression ratio of 1.5 to 2 on some extreme cases) to 100 for easier-to-compress data sets. Lossy compressors can be error bounded or not. Lossy compressors that are not error bounded simply compress the data set as much as they can, with no guarantee on the error on each decompressed data. Their applicability is limited in HPC because users have expectations in terms of accuracy. Error bounded lossy compressors provide different error controls such as absolute error and relative error bounds. Some compressors also provide stratistical bounds. For example, SZ provides PSNR bound (lower). The user has a guarantee of a maximum loss of information quantified by the maximum compression/decompression errors. Users will set the error bound to match their accuracy expectations. Note that all lossy compressors keep all data points of the initial data set (none of the lossy compressors drop data points).</p>
+<p>The state saved by HPC executions in checkpoints is composed mostly of floating-point data (single or double precision). Two types of compressors have been developed for floating-point data. Lossless compressors keep all the initial information and try to reduce the size occupied by this information. Sophisticated lossless compression techniques may use entropy coding, runlengh encoding, dictionary coding for example <a href="#LindstromETAl2006">(Lindstrom and Isenburg 2006)</a>, <a href="#IbteshamETAl2012">(Ibtesham et al. 2012)</a>.
+The compression factor generally observed on scientific datasets with lossless compression is 1.2 to 2 (the compressed data set is 1.2 to 2 times smaller than the original). Lossy compressors deliberately lose information in order to reduce the size of the initial data set further. Lossy compressors reach very variable compression ratios depending on the application and the error bounds set by the users. This could be from less than 10 for difficult-to-compress data sets (lossless compressors would achieve a compression ratio of 1.5 to 2 on some extreme cases) to 100 for easier-to-compress data sets. Lossy compressors can be error bounded or not. Lossy compressors that are not error bounded simply compress the data set as much as they can, with no guarantee on the error on each decompressed data. Their applicability is limited in HPC because users have expectations in terms of accuracy. Error bounded lossy compressors provide different error controls such as absolute error and relative error bounds. Some compressors also provide statistical bounds. For example, SZ provides PSNR bound (lower). The user has a guarantee of a maximum loss of information quantified by the maximum compression/decompression errors. Users will set the error bound to match their accuracy expectations. Note that all lossy compressors keep all data points of the initial data set (none of the lossy compressors drop data points).</p>
 
-<p>Few studies have been done on checkpointing and restart from lossy compressed states <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a>. 
-These studies are limited in scope by studying only one application and one type of lossy compressor: NICAM with a lossy compressor based on wavelet and quantization <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a> and ChaNGa with fpzip used as a lossy compressor <a href="#NiETAl2014">(Ni et al. 2014)</a>. 
+<p>Few studies have been done on checkpointing and restart from lossy compressed states <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a>.
+These studies are limited in scope by studying only one application and one type of lossy compressor: NICAM with a lossy compressor based on wavelet and quantization <a href="#SasakiETAl2015">(Sasaki et al. 2015)</a> and ChaNGa with fpzip used as a lossy compressor <a href="#NiETAl2014">(Ni et al. 2014)</a>.
 They already reveal two interesting points. First, checkpoints are composed of different variables that present different sensitivity to lossy compression. The correctness of the execution after restart depends on how each variable is compressed. In the cosmology simulation (ChaNGa), lossy compression of particle positions lead the execution to hang for a high compression level, while this does not happen when compressing other variable at the same level. Second, for the study of NICAM, the authors consider that an error of 1 percent on the final result is acceptable when restarting from lossy checkpoints. The rationale is that this magnitude of error is similar to those of sensor errors and model errors, while the compression factor exceeds 5.</p>
 
 <p>In contrary to previous research that concentrated on few applications, we focus on simple problems used by many applications and try to understand how they behave. We are exploring diffusion and advection problems. The diffusion problem simulates the heat diffusion on a one-dimensional rod. The advection problem simulates a sine wave advecting to the right with periodic boundaries.</p>
@@ -214,14 +227,22 @@ They already reveal two interesting points. First, checkpoints are composed of d
 <h2 id="results-for-20182019">
 <a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
 
-<p>A new collaboration has started with Luc Giraud and Emmanuel Agulo (Inria) on lossy compression for linerar solvers (GMRES). The goal is to study the convergence of GMRES if lossy compression is used at each iteration or for only some iterations. The first case will allow to understand how lossy compression could be used to compress the solver data in memory. The second case will inform about the possibility to retart GMES from lossy checkpoints. The research has started, a Postdoc has been hired on the Inria siade</p>
+<p>A new collaboration has started with Luc Giraud and Emmanuel Aggulo (Inria) on lossy compression for linear solvers (GMRES). The goal is to study the convergence of GMRES if lossy compression is used at each iteration or for only some iterations. The first case will allow to understand how lossy compression could be used to compress the solver data in memory. The second case will inform about the possibility to restart GMES from lossy checkpoints. The research has started, a Postdoc has been hired on the Inria side.</p>
+
+<h2 id="results-for-20192020">
+<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
+
+<p>The first results experimental of the new collaboration were presented during the workshop at Knoxville. Nick Schenkels then visited Argonne for 2 weeks. During the two weeks we decided to focus the work on Flexible GMRES. Franck Cappello visited Bordeaux in June 2019. There were several meetings about the collaboration. Nick Schenkels visited Argonne on February 2020 for 1 week. Discussions were about the draft of a paper on the theoretical results of this collaboration. The results of the collaboration will be presented at the JLESC workshop at Bonn in April 2020.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
 <p>Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.
 Jon Calhoun did an internship of 11 weeks at ANL.
-Franck Cappello visited Inria Bordeaux for 1 week in July 2018.</p>
+Franck Cappello visited Inria Bordeaux for 1 week in July 2018.
+Nick Schenkels visited Argonne 2 weeks in April 2019
+Franck Cappello visited Inria Bordeaux for 1 week in July 2019.
+Nick Schenkels visited Argonne 1 week in February 2020</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -230,9 +251,48 @@ Franck Cappello visited Inria Bordeaux for 1 week in July 2018.</p>
 <a id="papers" class="anchor" href="#papers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Papers</h3>
 <p>The paper from this collaboration submitted to IJHPCA has been accepted for publication. See <a href="#Calhoun18">(Calhoun et al. 2018)</a> and <a href="#Calhoun17">(Calhoun 2017)</a></p>
 
-<p>This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra and a paper has been accepted at ACM HPDC 2018 on that topic <a href="#HPDC2018">(Tao et al. 2018)</a>.</p>
+<p>This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra. A paper has been accepted at ACM HPDC 2018 on that topic <a href="#HPDC2018">(Tao et al. 2018)</a>. Another paper is under preparation for submission on lossy compression for flexible GMRES <a href="#Schenkels20">(Schenkels et al. 2020)</a>.</p>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Schenkels20
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSchenkels20Bibtex" aria-expanded="false" aria-controls="collapseSchenkels20Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseSchenkels20Abstract" aria-expanded="false" aria-controls="collapseSchenkels20Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Schenkels20">Schenkels, Nick, Emmanuel Agullo, Luc Giraud, Xin Liangy, Sheng Diy, and Franck Cappello. 2020. “Flexible Generalized Minimal Residual Method with a Compressed Search Space.”</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseSchenkels20Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@unpublished{Schenkels20,
+  author = {Schenkels, Nick and Agullo, Emmanuel and Giraud, Luc and Liangy, Xin and Diy, Sheng and Cappello, Franck},
+  title = {Flexible generalized minimal residual method with a compressed search space},
+  year = {2020},
+  note = {(to be submitted)}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -365,19 +425,21 @@ Franck Cappello visited Inria Bordeaux for 1 week in July 2018.</p>
 
 <p>Funded by the NSF Aletheia project, a Ph. D. student (Wang Chen) at UIUC is exploring how to detect corruption in lossy compressed results (e.g. checkpoints) of numerical simulations.</p>
 
-<p>Another student is funded on the Aletheia project on the Argonne side. Sihuan Li from U.C. Reiverside is doing a long term internship at Argonne on making lossy compression tolerant to SDC.</p>
+<p>Another student is funded on the Aletheia project on the Argonne side. Sihuan Li from U.C. Riverside is doing a long term internship at Argonne on making lossy compression tolerant to SDC.</p>
+
+<p>Inria postdoc funding for 16 months: Nick Schenkels</p>
 
 <h3 id="impact-on-other-projects">
 <a id="impact-on-other-projects" class="anchor" href="#impact-on-other-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact on other projects</h3>
 
 <p>The team of Jon Calhoun at Clemson University is continuing the research on this topic. They are exploring how lossy compression affect optimal checkpoint intervals and how the nature of the compression error affect the stability of numerical methods.</p>
 
-<p>This project also led to discussions with the ECP NWCHEMeX team that is developing a new version of the quantum chemistry code NWCHEM for exascale. The new version of the code will use lossy checkpointing to reduce as much as possible the fault tolerance overehad.</p>
+<p>This project also led to discussions with the ECP NWCHEMeX team that is developing a new version of the quantum chemistry code NWCHEM for exascale. The new version of the code will use lossy checkpointing to reduce as much as possible the fault tolerance overhead.</p>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>Through the collaboratio with Luc Giraud, we hope to make a formal link between the numerical and compression errors.</p>
+<p>Through the collaboration with Luc Giraud, we hope to make a formal link between the numerical and compression errors.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
