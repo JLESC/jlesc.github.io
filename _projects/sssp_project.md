@@ -52,6 +52,16 @@ To evaluate the performance of various systems by SSP/SSSP-metric-wise way, we h
 The current vSSSP formula computed based on the results of applications and HPCG, HPL on 6 different systems is for vSSSP is 0.19*HPL+0.85*HCPG. It had been considered
  that the performance of systems for real applications will be between HPCG and HPL, we have shown that it is biased toward HPCG. 
 
+## Results for 2019/2020
+
+We have performed several benchmarks and applications on larger systems than those used in previous years to compare the accuracy of the SSSP metric for large systems. We perform two kinds of performance projections : (1) SSSP metric for large systems using weighting factors computed from small systems, (2) SSSP metric for large systems using weighting factors computed from large systems. We have comfirmed while the (2) was more precise, the (1) method also gave appropriate insights about applications' performance of systems. 
+
+We have organized a mini symposium about performance metrics at SIAM PP20, Seattle, Feb 2020, "Meaningful  Performance Indicators for Scientific Computing". We had 4 invited speakers including two from this JLESC project:
+ - "Why Run Real Benchmarks? Can't I Just Run Linpack to Understand My System?"  William T. Kramer 
+ - "Evaluation of Large Scale Systems with Focus on Application Performance: the Benchmarking Perspective", Piotr Luszczek
+ - "How to Monitor the Performance Evolution of a Large HPC System : a System and Application Points of View", Matthieu Hautreux, Marc Perache, and Jean-Christophe Weill
+ - "Performance Modeling of Applications by Benchmarks", Miwako Tsuji
+
 ## Visits and meetings
 
 Miwako Tsuji visited NCSA in January 2017.
