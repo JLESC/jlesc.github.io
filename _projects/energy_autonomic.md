@@ -14,8 +14,8 @@ keywords:
   - energy efficiency
 head: rutten_e
 members:
-  - yoshii_k
   - perarnau_s
+  - bleuse_r
 
 ---
 
@@ -54,27 +54,31 @@ autonomic loops. Based on our previous experience in Cloud-oriented Autonomic
 Computing, we will generalize and explore novel issues in adapting our
 approaches to specificities of HPC and power management.
 
-## Results for 2018/2019
+## Results for 2019/2020
 
-We performed analysis of power capping mechanisms, RAPL in particular, and of
-their interaction with application-level variations. We identified potential
-retroaction loops in that context, and currently focus on a particular
-representative autonomic loop : deciding at runtime, dynamically, on the
-sufficient/minimal level of power capping  such that the application
-performance remains maximum. The range of flexibility/elasticity typically
-comes from some phases of an application involving more input/output, slowing
-down computations, and therefore the same performance can be achieved while
-slowing down the processor, through lower power cap.
+On the basis of the preliminary work done at ANL on instrumentation of HPC
+applications, Inria has begun work on a range of controllers for the runtime
+adaptation of the Power Cap level in RAPL. A first approach is considered,
+re-using results on other work concerning a different problem (regulating the
+degree of parallelism according to synchronization cost), but which could be
+transferred here. Another approach involves measuring progress and power and
+making decisions based on predictions.
 
-Preliminary work completed at Argonne to instrument a collection of HPC
-applications to report _progress_: an application-specific measure of online
-performance. These progress reports will be used as a sensor in future work.
+Argonne completed the design and implementation of an infrastructure to perform
+control experiments using jupyter notebooks. This infrastructure can be
+deployed on a wide range of servers, and allows collaborators to independently
+implement their own control algorithm using a simple interface and a high level
+language. The notebook then connect remotely to the existing Argo NRM
+infrastructure, that keeps track of actuators, sensors and application
+management.
 
 ## Visits and meetings
 
 We schedule regular video meetings between the different members of the
-project. {% person perarnau_s %} visited Grenoble for a week to make progress
-on the project in April 2018.
+project.
+
+{% person rutten_e %} visited ANL for two days to make progress on the project
+on April 18-19 2019.
 
 ## Impact and publications
 
@@ -84,13 +88,18 @@ None yet.
 
 ## Future plans
 
-Short term plans are to finalize the design of controllers for this feedback
-loop : we consider a range of controllers, from simple intuitive algorithms, to
-model-based approaches involving control theoretical approaches.
+On the control of RAPL, short term plans are to finalize the design of some of
+the controllers and their implementation, in order to integrate them in the
+NRM platform for experimental evaluation. We then plan to consider more
+elaborate control problems, e.g. taking into account variables other than
+power in the system, and to consider more elaborate control techniques, to
+obtain controllers that are more robust or give a more efficient use of the
+system.
 
-We then plan to perform a series of experimental evaluations in order to
-characterize and compare the different controllers w.r.t. the gain in power
-consumption as well as properties of the controllers (convergence, stability).
+On a longer term, we plan to start working on another feedback loop approach
+for HPC, at a higher-level than processor level : we believe that there are
+opportunities in combining control-based methods and scheduling-based
+techniques for the general problem of runtime allocation and placement.
 
 ## References
 
