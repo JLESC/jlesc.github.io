@@ -202,6 +202,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -215,22 +216,22 @@
 <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>In this project, we aim at finding efficient fault-tolerant scheduling schemes 
-for workflow applications that can be expressed as a directed acyclic graph (DAG) 
+<p>In this project, we aim at finding efficient fault-tolerant scheduling schemes
+for workflow applications that can be expressed as a directed acyclic graph (DAG)
 of tasks.</p>
 
-<p>Checkpointing-recovery is the traditional fault-tolerance technique when it comes 
-to resilience for large-scale platforms. Unfortunately, as platform scale increases, 
-checkpoints must become more frequent to accommodate with the increasing 
-Mean Time Between Failure (MTBF). As such, it is expected that checkpoint-recovery 
+<p>Checkpointing-recovery is the traditional fault-tolerance technique when it comes
+to resilience for large-scale platforms. Unfortunately, as platform scale increases,
+checkpoints must become more frequent to accommodate with the increasing
+Mean Time Between Failure (MTBF). As such, it is expected that checkpoint-recovery
 will become a major bottleneck for applications running on post-petascale platforms.</p>
 
-<p>We first focus on replication as a way of mitigating the checkpointing-recovery 
-overhead. A task can be checkpointed and/or replicated, so that if a single replica 
-fails, no recovery is needed. Our goal is to decide which task to checkpoint, 
-which task to replicate, and how much resource should be allocated to each task 
-for the execution of general workflow applications. For that, we first need to 
-derive a clear model for replication, as there are many ways to implement it, 
+<p>We first focus on replication as a way of mitigating the checkpointing-recovery
+overhead. A task can be checkpointed and/or replicated, so that if a single replica
+fails, no recovery is needed. Our goal is to decide which task to checkpoint,
+which task to replicate, and how much resource should be allocated to each task
+for the execution of general workflow applications. For that, we first need to
+derive a clear model for replication, as there are many ways to implement it,
 even for a single task.</p>
 
 <h2 id="results-for-20162017">
@@ -276,7 +277,7 @@ large-scale workloads in the presence of competing I/O while minimizing the impa
 on application performance. This work has received the best paper award at APDCM 2018,
 a workshop run in conjunction with IPDPS 2018.</p>
 
-<p>Three JLESC partners, Inria, Riken and UTK,  have conducted a study to compare 
+<p>Three JLESC partners, Inria, Riken and UTK,  have conducted a study to compare
 the performance of different approaches to
   tolerate failures using checkpoint/restart when executed on
   large-scale failure-prone platforms. We study (i) rigid
@@ -293,37 +294,103 @@ the performance of different approaches to
   applicative scenario and make it publicly available for further
   usage.</p>
 
+<p>Also, the Inria partner has studied checkpointing strategies for workflows and has shown
+how to design an efficient strategy that achieves an efficient trade-off between extreme approaches where either  all application data is checkpointed, or no application data is
+  checkpointed.
+  Results demonstrate that our algorithm outperforms both the former approach,
+  because of lower checkpointing overhead, and the latter approach, because of better resilience to failures <a href="#HanEtAl2018">(Han et al. 2018)</a>,
+<a href="#HanEtAl2018b">(Han et al. 2018)</a>.</p>
+
+<h2 id="results-for-20192020">
+<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
+
+<p>We have revisited replication coupled with checkpointing for fail-stop errors. This work focuses on divisible-load applications rather than workflows. In this context, replication enables the application to survive many fail-stop errors, thereby allowing for longer checkpointing periods. Previously published works use replication with the NORESTART strategy, which works as follows: (i) compute the application Mean
+  Time To Interruption (MTTI) as a function of the number of processor pairs and the individual processor Mean Time Between Failures (MTBF); (ii) use
+ checkpointing period  P à la Young/Daly, replacing the MTBF by the MTTI;
+  and (iii) never restart failed processors until the application crashes.
+We introduce the RESTART strategy where failed processors are restarted after each checkpoint.
+We compute
+ the optimal checkpointing period Q for this strategy, which is much larger than P thereby
+ decreasing I/O pressure.
+We show through simulations that using Q and the RESTART strategy, instead of P  and the usual NORESTART strategy, significantly decreases the overhead
+induced by replication,
+in terms of both total execution time and energy consumption.
+This work has appeared in the proceedings of SC’2019.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
 <p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) in Chicago for three months (March, April, and May 2016) to initiate the project. Furthermore, we have been meeting regularly in the previous years. In particular,
 we have been attending the SC conference (November 2016
-and November 2017), where we had extensive discussions to make progress. 
+and November 2017), where we had extensive discussions to make progress.
 We represented the JLESC at the Inria booth during these conferences.</p>
 
 <p>When not meeting in person, we have stayed in close collaboration through regular Skype meetings,
 which allowed us to make progress on the project.</p>
 
-<p><span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months.</p>
+<p><span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months, and a total of two months and a half for 2019/2020.</p>
 
-<p>Valentin Le Fèvre has visited  Univ. Tenn. Knoxville for 10 days in February 2019.</p>
+<p><span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) has visited  Univ. Tenn. Knoxville for 10 days in February 2019,
+and for 10 days in January 2020.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
 <p>Two papers have been published in FTXS’17 <a href="#benoitEtAl2017identifying">(Benoit et al. 2017)</a>,<a href="#benoitEtAl2017optimal">(Benoit et al. 2017)</a>.</p>
 
-<p>The work combining fail-stop and silent errors has been published in JPDC 
+<p>The work combining fail-stop and silent errors has been published in JPDC
 <a href="#BenoitEtAl2018">(Benoit et al. 2018)</a>.</p>
 
 <p>A work on executing workflows on high-bandwidth memory architectures was published in ICPP’18 <a href="#BenoitEtAl2018b">(Benoit et al. 2018)</a>.</p>
 
 <p>The work on optimal cooperative checkpointing for shared high-performance computing platforms was the best paper at APDCM’18 <a href="#HeraultEtAl2018">(Hérault et al. 2018)</a>.</p>
 
-<p>Finally, the work studying whether moldable applications perform better
+<p>The work studying whether moldable applications perform better
 on failure-prone HPC platforms was published in Resilience’18 <a href="#LeFevreEtAl2018">(Fèvre et al. 2018)</a>.</p>
 
+<p>The work on replication with checkpointing was published at SC’19 <a href="#BenoitEtAl2019">(Benoit et al. 2019)</a>.</p>
+
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BenoitEtAl2019
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBenoitEtAl2019Bibtex" aria-expanded="false" aria-controls="collapseBenoitEtAl2019Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBenoitEtAl2019Abstract" aria-expanded="false" aria-controls="collapseBenoitEtAl2019Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BenoitEtAl2019">Benoit, Anne, Thomas Hérault, Valentin Le Fèvre, and Yves Robert. 2019. “Replication Is More Efficient than You Think.” In <i>SC’2019, the IEEE/ACM Conference on High Performance Computing Networking, Storage and Analysis</i>. ACM Press.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBenoitEtAl2019Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{BenoitEtAl2019,
+  author = {Benoit, Anne and Hérault, Thomas and Fèvre, Valentin Le and Robert, Yves},
+  booktitle = {{SC'2019}, the IEEE/ACM Conference on High Performance Computing Networking, Storage and Analysis},
+  title = {Replication is more efficient than you think},
+  publisher = {ACM Press},
+  year = {2019}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -579,9 +646,9 @@ on Failure-Prone HPC Platforms?” In <i>Resilience: 11th Workshop on Resiliency
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>There remains a lot to explore for workflow applications, consisting of tasks. 
+<p>There remains a lot to explore for workflow applications, consisting of tasks.
 We have so far focused only on duplication in this case, but
-one may want to consider different replication levels (duplication, triplication or more) to different tasks, depending upon their criticality in terms of longest paths, number of successors, etc. 
+one may want to consider different replication levels (duplication, triplication or more) to different tasks, depending upon their criticality in terms of longest paths, number of successors, etc.
 This may be even more important when considering a general directed acyclic graph of tasks,
 rather than restricting to linear chains of tasks. This topic is called partial replication,
 and even though it has been empirically studied by some previous work, designing an optimal strategy that combines partial redundancy and checkpointing and analyzing its efficacy remain to be done.</p>
