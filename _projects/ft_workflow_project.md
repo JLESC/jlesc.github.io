@@ -2,7 +2,7 @@
 layout: page_project
 title: Optimization of Fault-Tolerance Strategies for Workflow Applications
 date: 2016-03-16
-updated: 2019-02-14
+updated: 2020-02-25
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -168,8 +168,30 @@ the performance of different approaches to
   achieved. We instantiate our performance model with a realistic
   applicative scenario and make it publicly available for further
   usage.
+
+Also, the Inria partner has studied checkpointing strategies for workflows and has shown
+how to design an efficient strategy that achieves an efficient trade-off between extreme approaches where either  all application data is checkpointed, or no application data is
+  checkpointed.
+  Results demonstrate that our algorithm outperforms both the former approach,
+  because of lower checkpointing overhead, and the latter approach, because of better resilience to failures {% cite HanEtAl2018 --file external/ft_workflow_project.bib %},
+{% cite HanEtAl2018b --file external/ft_workflow_project.bib %}. 
   
 
+
+## Results for 2019/2020
+
+We have revisited replication coupled with checkpointing for fail-stop errors. This work focuses on divisible-load applications rather than workflows. In this context, replication enables the application to survive many fail-stop errors, thereby allowing for longer checkpointing periods. Previously published works use replication with the NORESTART strategy, which works as follows: (i) compute the application Mean
+  Time To Interruption (MTTI) as a function of the number of processor pairs and the individual processor Mean Time Between Failures (MTBF); (ii) use
+ checkpointing period  P à la Young/Daly, replacing the MTBF by the MTTI;
+  and (iii) never restart failed processors until the application crashes.
+We introduce the RESTART strategy where failed processors are restarted after each checkpoint.
+We compute
+ the optimal checkpointing period Q for this strategy, which is much larger than P thereby
+ decreasing I/O pressure.
+We show through simulations that using Q and the RESTART strategy, instead of P  and the usual NORESTART strategy, significantly decreases the overhead
+induced by replication,
+in terms of both total execution time and energy consumption.
+This work has appeared in the proceedings of SC'2019.
 
 
 
@@ -183,9 +205,10 @@ We represented the JLESC at the Inria booth during these conferences.
 When not meeting in person, we have stayed in close collaboration through regular Skype meetings,
 which allowed us to make progress on the project. 
 
-{% person robert_y %} made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months.
+{% person robert_y %} made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months, and a total of two months and a half for 2019/2020< 
 
-Valentin Le Fèvre has visited  Univ. Tenn. Knoxville for 10 days in February 2019.
+{% person lefevre_v %} has visited  Univ. Tenn. Knoxville for 10 days in February 2019,
+and for 10 days in January 2020. 
 
 
 ## Impact and publications
@@ -199,9 +222,10 @@ A work on executing workflows on high-bandwidth memory architectures was publish
 
 The work on optimal cooperative checkpointing for shared high-performance computing platforms was the best paper at APDCM'18 {% cite HeraultEtAl2018 --file jlesc.bib %}. 
 
-Finally, the work studying whether moldable applications perform better
+The work studying whether moldable applications perform better
 on failure-prone HPC platforms was published in Resilience'18 {% cite LeFevreEtAl2018 --file jlesc.bib %}. 
 
+The work on replication with checkpointing was published at SC'19 {% cite BenoitEtAl2019 --file jlesc.bib %}. 
 
 
 
