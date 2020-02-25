@@ -190,18 +190,18 @@
 <h2 id="results-for-20172018">
 <a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
 
-<p>The first sub-goal lead to an extensive research leveraging a set of 5 benchmarks for Spark Bench as well as 4 real-world data-intensive HPC applications. The results show that all 4 applications are able to work unmodified atop object storage. More importantly, they show that the same storage systems (Týr or RADOS) can be used for both HPC and Big Data contexts, and on both show significant performance advantages. This clearly confirms the applicability and relevance of blob-based storage in a storage convergence context. These results have been published as a preliminary publication in the Cluster 2017 conference (missing reference).</p>
+<p>The first sub-goal lead to an extensive research leveraging a set of 5 benchmarks for Spark Bench as well as 4 real-world data-intensive HPC applications. The results show that all 4 applications are able to work unmodified atop object storage. More importantly, they show that the same storage systems (Týr or RADOS) can be used for both HPC and Big Data contexts, and on both show significant performance advantages. This clearly confirms the applicability and relevance of blob-based storage in a storage convergence context. These results have been published as a preliminary publication in the Cluster 2017 conference <a href="#MatriEtAl2017">(Matri et al. 2017)</a>.</p>
 
 <p>The second sub-goal was achieved through a 3-month visit of Pierre Matri (Inria) at ANL, under the direct supervision of Philip Carns and Rob Ross. Through extensive experiments on the Theta supercomputer, we did demonstrate the performance benefits of using blobs for distributed logging on HPC. We also showed that the near-limitless scaling of blob storage systems brings significant performance benefits at large scale when compared to traditional, file-based storage.</p>
 
-<p>The third sub-goal was achieved by developing a file system prototype named TýrFS, working as a thin layer between Týr and the application. This demonstration demonstrated the performance benefits of such approach in a converging use-case, on both HPC and Big Data applicative contexts. In particular, relying on various optimisations for small files, TýrFS has been shown to outperform OrangeFS, Lustre, HDFS and Ceph by more than one order of magnitude with such workload. These results have been accepted for publication in the CCGrid 2018 conference (missing reference).</p>
+<p>The third sub-goal was achieved by developing a file system prototype named TýrFS, working as a thin layer between Týr and the application. This demonstration demonstrated the performance benefits of such approach in a converging use-case, on both HPC and Big Data applicative contexts. In particular, relying on various optimisations for small files, TýrFS has been shown to outperform OrangeFS, Lustre, HDFS and Ceph by more than one order of magnitude with such workload. These results have been accepted for publication in the CCGrid 2018 conference <a href="#MatriEtAl2018">(Matri et al. 2018)</a>.</p>
 
 <h2 id="results-for-20182019">
 <a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
 
 <p>The availability of blobs as a generic purpose storage system opens opportunities for various storage abstractions. One of these opportunities relates to data streaming. In particular for such applications, the append operation available on mutable object storage systems enables recording streams of events at high velocity. This work builds on top of the results obtained last year on the during the visit of Pierre Matri at ANL.</p>
 
-<p>It led to the development of a prototype layer above Týr named SLoG, that provides a unified interface on top of an object store providing high-velocity data ingestion with near-linear horizontal scalability through transparent partitioning. It can optionally falls back to using a distributed file system as storage backend. The measured throughput reached 250 million events per second using Týr using up to 120,000 cores of the Theta supercomputer at ANL. It was published at the ICDCS 2018 conference (missing reference).</p>
+<p>It led to the development of a prototype layer above Týr named SLoG, that provides a unified interface on top of an object store providing high-velocity data ingestion with near-linear horizontal scalability through transparent partitioning. It can optionally falls back to using a distributed file system as storage backend. The measured throughput reached 250 million events per second using Týr using up to 120,000 cores of the Theta supercomputer at ANL. It was published at the ICDCS 2018 conference <a href="#MatriEtAl2018Streaming">(Matri et al. 2018)</a>.</p>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
@@ -219,7 +219,135 @@
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<ol class="bibliography"></ol>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          MatriEtAl2018
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMatriEtAl2018Bibtex" aria-expanded="false" aria-controls="collapseMatriEtAl2018Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseMatriEtAl2018Abstract" aria-expanded="false" aria-controls="collapseMatriEtAl2018Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="MatriEtAl2018">Matri, Pierre, María S Pérez, Alexandru Costan, and Gabriel Antoniu. 2018. “TýrFS: Increasing Small Files Access Performance with Dynamic Metadata Replication.” In <i>2018 IEEE International Conference on Cluster Cloud and Grid Computing (CCGrid’18)</i>. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseMatriEtAl2018Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{MatriEtAl2018,
+  title = {{TýrFS: Increasing Small Files Access Performance with Dynamic Metadata Replication}},
+  author = {Matri, Pierre and Pérez, María S and Costan, Alexandru and Antoniu, Gabriel},
+  booktitle = {2018 IEEE International Conference on Cluster Cloud and Grid Computing (CCGrid'18)},
+  year = {2018},
+  organization = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          MatriEtAl2018Streaming
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMatriEtAl2018StreamingBibtex" aria-expanded="false" aria-controls="collapseMatriEtAl2018StreamingBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseMatriEtAl2018StreamingAbstract" aria-expanded="false" aria-controls="collapseMatriEtAl2018StreamingAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="MatriEtAl2018Streaming">Matri, Pierre, Philip Carns, Robert Ross, Alexandru Costan, María S Pérez, and Gabriel Antoniu. 2018. “SLoG: Large-Scale Logging Middleware for HPC and Big Data Convergence.” In <i>2018 IEEE 38th International Conference on Distributed Computing Systems (ICDCS)</i>. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseMatriEtAl2018StreamingBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{MatriEtAl2018Streaming,
+  title = {{SLoG: Large-Scale Logging Middleware for HPC and Big Data Convergence}},
+  author = {Matri, Pierre and Carns, Philip and Ross, Robert and Costan, Alexandru and Pérez, María S and Antoniu, Gabriel},
+  booktitle = {2018 IEEE 38th International Conference on Distributed Computing Systems (ICDCS)},
+  year = {2018},
+  organization = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          MatriEtAl2017
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMatriEtAl2017Bibtex" aria-expanded="false" aria-controls="collapseMatriEtAl2017Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseMatriEtAl2017Abstract" aria-expanded="false" aria-controls="collapseMatriEtAl2017Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="MatriEtAl2017">Matri, Pierre, Yevhen Alforov, Alvaro Brandon, Michael Kuhn, Philip Carns, and Thomas Ludwig. 2017. “Could Blobs Fuel Storage-Based Convergence Between HPC and Big Data?” In <i>CLUSTER 2017 -  IEEE International Conference on Cluster Computing</i>, 81–86. Honolulu, United States. doi:10.1109/CLUSTER.2017.63.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseMatriEtAl2017Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{MatriEtAl2017,
+  title = {{Could Blobs Fuel Storage-Based Convergence Between HPC and Big Data?}},
+  author = {Matri, Pierre and Alforov, Yevhen and Brandon, Alvaro and Kuhn, Michael and Carns, Philip and Ludwig, Thomas},
+  url = {https://hal.inria.fr/hal-01617655},
+  booktitle = {{CLUSTER 2017 -  IEEE International Conference on Cluster Computing}},
+  address = {Honolulu, United States},
+  pages = {81 - 86},
+  year = {2017},
+  month = sep,
+  doi = {10.1109/CLUSTER.2017.63},
+  pdf = {https://hal.inria.fr/hal-01617655/file/HPC_BD_Convergence___Short_Paper___Cluster_17%20%282%29.pdf},
+  hal_id = {hal-01617655},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
 
 <h2 id="future-plans-1">
 <a id="future-plans-1" class="anchor" href="#future-plans-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>

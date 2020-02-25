@@ -188,7 +188,7 @@
 
 <p>We have continued to develop a runtime library called ADMM to allow source-transformation adjoint AD of input codes that contain the operations pointers and dynamic allocation of memory. This is the first library of its kind for source transformation AD. Before this, dynamic allocation and pointer usage were unsupported in adjoint-mode-source-transformation AD.  The library ensures that any memory accessed in the reverse computation exists through restoration (if needed) and contains the same value as it would have in the forward computation. Pointer variables used to access memory in the forward computation are updated to access the corresponding memory in the reverse computation. We have tested this method with a medium sized code. After an initial version the library was developed in 2016 that targeted codes written in C we have worked on refinements to the library and extended it to be target codes written in Fortran. We are currently refining the library to account for shortcomings in the first version.</p>
 
-<p>We have continued to develop the ability to interoperate OpenAD from Argonne and Tapenade from INRIA (missing reference). Interoperation between the OpenAD and Tapenade is possible because they share the same global architecture i.e. a front-end which parses and builds an internal representation, followed by an static data-flow analysis stage, then actual building of the differentiated program still in internal form, and finally a back-end that outputs this differentiated internal form into new source files. The interoperation uses Tapenade for parsing the code and analysis. It uses OpenAD’s XAIFBooster module for code transformation. The code to be differentiated is written into the XML Abstract Interface Form (XAIF) by Tapenade which is subsequently transformed by XAIFBooster. The transformed XAIF is converted back to source code by Tapenade. We have tested the new tool flow on various test cases from OpenAD’s regression testsuite.</p>
+<p>We have continued to develop the ability to interoperate OpenAD from Argonne and Tapenade from INRIA <a href="#NarayananHascoet2016">(Narayanan and Hascoet 2016)</a>. Interoperation between the OpenAD and Tapenade is possible because they share the same global architecture i.e. a front-end which parses and builds an internal representation, followed by an static data-flow analysis stage, then actual building of the differentiated program still in internal form, and finally a back-end that outputs this differentiated internal form into new source files. The interoperation uses Tapenade for parsing the code and analysis. It uses OpenAD’s XAIFBooster module for code transformation. The code to be differentiated is written into the XML Abstract Interface Form (XAIF) by Tapenade which is subsequently transformed by XAIFBooster. The transformed XAIF is converted back to source code by Tapenade. We have tested the new tool flow on various test cases from OpenAD’s regression testsuite.</p>
 
 <p><span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) developed two-level checkpointing of adjoint computations with the additional capability for suspending and restarting the computation. This was applied to MITgcm, a code that can be used to study both atmospheric and oceanic phenomena. The approach is partially based on the work previously performed by <span class="person given-name">Guillaume</span> <span class="person sur-name">Pallez</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) and <span class="person given-name">Paul</span> <span class="person sur-name">Hovland</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>).</p>
 
@@ -215,7 +215,49 @@
 
 -->
 
-<ol class="bibliography"></ol>
+<ol class="bibliography"><li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          NarayananHascoet2016
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseNarayananHascoet2016Bibtex" aria-expanded="false" aria-controls="collapseNarayananHascoet2016Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseNarayananHascoet2016Abstract" aria-expanded="false" aria-controls="collapseNarayananHascoet2016Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="NarayananHascoet2016">Narayanan, Sri Hari Krishna, and Laurent Hascoet. 2016. “Interfacing OpenAD and Tapenade.”</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseNarayananHascoet2016Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{NarayananHascoet2016,
+  author = {Narayanan, Sri Hari Krishna and Hascoet, Laurent},
+  title = {Interfacing OpenAD and Tapenade},
+  journal = {},
+  year = {2016},
+  volume = {},
+  number = {},
+  pages = {},
+  notes = {submitted, also available as ANL/MCS-P5588-0316}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
