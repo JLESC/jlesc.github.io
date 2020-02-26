@@ -92,14 +92,15 @@ The goal of this project is to study how a careful monitoring of MPI communicati
 
 ## Results for 2018/2019
 
-None yet.
 
 ## Visits and meetings
 
+Emmanuel Jeannot Visited ANL in June2019.
+Emmanuel Jeannot, George Bosilca and Bogdan Nicilaa met at SC 19 in Denver.
 
 ## Impact and publications
 
-
+We have proposed a portable deep learning predictor that only uses the information available through MPI introspection to construct a recurrent sequence-to-sequence neural network capable of forecasting network utilization {% cite tnb19+ --file external/network_monitoring_project.bib %}. 
 
 <!--
 {% comment %}
