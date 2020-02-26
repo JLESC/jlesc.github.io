@@ -46,7 +46,7 @@ Franck Cappello presented lossy compression for photon source at the Internation
 
 ### Papers
 
-A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. {% cite Rupak19 --file jlesc.bib %}
+A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. {% cite Rupak20 --file jlesc.bib %}
 {% bibliography --cited --file jlesc.bib %}
 
 ### Funding
