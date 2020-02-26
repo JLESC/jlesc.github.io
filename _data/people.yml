@@ -2480,6 +2480,15 @@ turk_m:
   email: mjturk@illinois.edu
   homepage: http://www.astro.illinois.edu/people/mjturk
 
+ueno_t:
+  sur_name: Ueno
+  given_name: Tomohiro
+  affiliation: riken
+  position: 
+  topics:
+  email: tomohiro.ueno@riken.jp
+  homepage:
+
 ukawa_a:
   sur_name: Ukawa
   given_name: Akira
