@@ -92,10 +92,12 @@ The goal of this project is to study how a careful monitoring of MPI communicati
 
 ## Results for 2018/2019
 
-None yet.
+We have proposed a portable deep learning predictor that only uses the information available through MPI introspection to construct a recurrent sequence-to-sequence neural network capable of forecasting network utilization. This have been published at Euro-Par 19.
 
 ## Visits and meetings
 
+Emmanuel Jeannot Visited ANL in June 2019
+Emmanuel Jeannot, Bogdan Nicolae and George Bosilca met at SC19.
 
 ## Impact and publications
 
