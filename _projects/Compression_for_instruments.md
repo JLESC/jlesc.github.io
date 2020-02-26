@@ -6,7 +6,7 @@ updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status: strating
+status: starting
 topics:  
   - storage
 keywords:
