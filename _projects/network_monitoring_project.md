@@ -90,16 +90,17 @@ The goal of this project is to study how a careful monitoring of MPI communicati
 * A network tool that predicts network usage of the application
 * Strategies to avoid network interference between the application and VeloC.
 
-## Results for 2018/2019
+## Results for 2019/2020
 
-None yet.
+We have proposed a portable deep learning predictor that only uses the information available through MPI introspection to construct a recurrent sequence-to-sequence neural network capable of forecasting network utilization {% cite tnb19+ --file jlesc.bib %}. 
+
 
 ## Visits and meetings
 
+Emmanuel Jeannot Visited ANL in June2019.
+Emmanuel Jeannot, George Bosilca and Bogdan Nicolae met at SC 19 in Denver.
 
 ## Impact and publications
-
-
 
 <!--
 {% comment %}
