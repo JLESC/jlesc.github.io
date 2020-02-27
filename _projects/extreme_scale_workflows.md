@@ -7,7 +7,7 @@ navbar: Research
 subnavbar: Projects
 project_url:
 status: running
-topics: 
+topics:
   - storage
 keywords:
 head: peterka_t
@@ -54,7 +54,7 @@ The Bredala library is one of the base layer of Decaf. The work is done in colla
 
  * Bruno Raffin and Gabriel Antoniu of INRIA, Tom Peterka of ANL
 
-This is an exploratory action to evaluate the potential of Big Data approaches for the analysis of large simulation data (actual performance of existing tools, expressiveness of their programming model, integration issues with the HPC stack, etc.). Bruno Raffin gave a talk at Argonne in November 2016 to give an overview of modern Map/Reduce framework and report on the development of the Velassco query based visualization framework based on Hadoop. Gabriel Antoniu participated in the BDEC meetings focused on this topic. Gabriel and Bruno have initiated a prospective reflexion on this subject at INRIA level. 
+This is an exploratory action to evaluate the potential of Big Data approaches for the analysis of large simulation data (actual performance of existing tools, expressiveness of their programming model, integration issues with the HPC stack, etc.). Bruno Raffin gave a talk at Argonne in November 2016 to give an overview of modern Map/Reduce framework and report on the development of the Velassco query based visualization framework based on Hadoop. Gabriel Antoniu participated in the BDEC meetings focused on this topic. Gabriel and Bruno have initiated a prospective reflexion on this subject at INRIA level.
 
 ### PyCompss, Decaf distributed/in situ workflow convergence
 
@@ -78,7 +78,7 @@ Current In Situ infrastructures adopt very often a fixed policy to manage mismat
 
  * Clement Mommessin (ANL), supervised by Matthieu Dreher (ANL), Bruno Raffin (INRIA) and Tom Peterka (ANL)
 
-Scientific workflows are an aggregation of several tasks exchanging messaging. Usually each task is developed independently as a single piece of software. When integrating these codes into a a workflow, the developer has to build interfaces to exchange data between each task. To get the best performance for a particular workflow, the user should only send necessary data. However, simulation and analysis codes are complex code hard to maintain. It is then desired that the user modify only once their respective code. This imposes that the developer should expose as much data as possible to cover the maximum of use cases. Yet this approach could create significant performance impact due to unnecessary data being send for a particular workflow. We are currently investigating the notion of contracts for tasks. A contract is a declaration by the user of all the data that a particular need to work and all the data that the task can emit. Given this information, we can perform several checks and optimizations. First we check that the user is not trying to connect incompatible tasks with a data model mismatch. Second we can check at runtime that each task is sending the correct data. Third we can filter the data at runtime to send only necessary data for each consumer. This work is currently being integrated in Decaf. 
+Scientific workflows are an aggregation of several tasks exchanging messaging. Usually each task is developed independently as a single piece of software. When integrating these codes into a a workflow, the developer has to build interfaces to exchange data between each task. To get the best performance for a particular workflow, the user should only send necessary data. However, simulation and analysis codes are complex code hard to maintain. It is then desired that the user modify only once their respective code. This imposes that the developer should expose as much data as possible to cover the maximum of use cases. Yet this approach could create significant performance impact due to unnecessary data being send for a particular workflow. We are currently investigating the notion of contracts for tasks. A contract is a declaration by the user of all the data that a particular need to work and all the data that the task can emit. Given this information, we can perform several checks and optimizations. First we check that the user is not trying to connect incompatible tasks with a data model mismatch. Second we can check at runtime that each task is sending the correct data. Third we can filter the data at runtime to send only necessary data for each consumer. This work is currently being integrated in Decaf.
 
 ## Results for 2017/2018
 
@@ -162,7 +162,7 @@ uses of the data. They enable the storage system to work with much more
 knowledge about the input and output expected from an application and how it
 should be exposed to the user.  This knowledge enables CoSS to optimize data
 formatting and placement to best fit user’s requirements, storage space, and
-performance. Matthieu Dorier presented a concept paper at the SC17 PDSW workshop 
+performance. Matthieu Dorier presented a concept paper at the SC17 PDSW workshop
 {% cite dorierpdsw17 --file jlesc.bib %} that introduces the idea of contract-based storage systems and presents some of
 the opportunities it offers, in order to motivate further research in this
 direction.
@@ -191,10 +191,29 @@ presented a concept paper at the SC17 ISAV workshop {% cite dreherisav17 --file 
 ### PyCompss, Decaf distributed/in situ workflow convergence
 
  * Rosa Badia and Jorge Ejarque of BSC, Orcun Yildiz and Tom Peterka of ANL
- 
+
 Workflow systems promise scientists an automated end-to-end path from hypothesis to discovery. However, it is impractical to expect any single system to deliver such a wide range of capabilities. A more practical solution is to compose the end-to-end workflow from more than one system. With this goal in mind, the integration between distributed and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of subworkflows, with different levels of the hierarchy using different programming, execution, and data models.
 
-In 2018, we finalized the implementation of this hierarchical workflow composition that uses PyCOMPSs and Decaf as the distributed and in situ workflow tools, respectively. We evaluated our approach by performing experiments in materials science. The in situ Decaf sub-workflow consists of the LAMMPS molecular dynamics simulation coupled to a parallel in situ feature detector that selects nucleated molecule clusters during crystallization. Meanwhile, the PyCOMPSs distributed area workflow launches an ensemble of in situ Decaf workflows with different initial conditions, saves results from experiments that successfully nucleated, and collects frames from those ensemble members into an animation. Our results reveal that heterogeneous workflow integration is advantageous to both distributed area and in situ workflow systems. This work is currently being reviewed for a journal publication. 
+In 2018, we finalized the implementation of this hierarchical workflow composition that uses PyCOMPSs and Decaf as the distributed and in situ workflow tools, respectively. We evaluated our approach by performing experiments in materials science. The in situ Decaf sub-workflow consists of the LAMMPS molecular dynamics simulation coupled to a parallel in situ feature detector that selects nucleated molecule clusters during crystallization. Meanwhile, the PyCOMPSs distributed area workflow launches an ensemble of in situ Decaf workflows with different initial conditions, saves results from experiments that successfully nucleated, and collects frames from those ensemble members into an animation. Our results reveal that heterogeneous workflow integration is advantageous to both distributed area and in situ workflow systems. This work is currently being reviewed for a journal publication.
+
+## Results for 2019/2020
+
+### PyCompss, Decaf distributed/in situ workflow convergence
+
+ * Rosa Badia and Jorge Ejarque of BSC, Orcun Yildiz and Tom Peterka of ANL
+
+Workflow systems promise scientists an automated end-to-end path from hypothesis to discovery. However, it is
+impractical to expect any single system to deliver such a wide range of capabilities. A more practical solution is to
+compose the end-to-end workflow from more than one system. With this goal in mind, the integration between distributed
+and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of subworkflows,
+with different levels of the hierarchy using different programming, execution, and data models.
+
+In 2019, we completed the implementation of this hierarchical workflow composition that uses PyCOMPSs and Decaf as the
+distributed and in situ workflow tools and published the results in the Journal Computing in Science
+and Engineering special issue on scientific workflows {% cite Yildiz2019 --file jlesc.bib %}.
+
+We are continuing to apply a similar hierarchical composition to particle accelerator high-energy physics applications
+in 2020.
 
 
 ## Visits and meetings
@@ -212,7 +231,7 @@ In 2018, we finalized the implementation of this hierarchical workflow compositi
 
 {% bibliography --cited --file jlesc.bib %}
 
- 
+
 ## Future plans
 
 See above.
