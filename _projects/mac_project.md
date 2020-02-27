@@ -52,6 +52,9 @@ Unfortunately, the project was not granted but due to the effort done by both te
 
 In February 2019, Kim Serradell visited Riken. A meeting was scheduled with Shunji Kotsuki to evaluate the status of the collaboration and how to go on with the work. In this meeting they agreed to stop definitely the installation of EC-Earth in K machine (K machine will be stopped in August 2019). A post-doc has started in March 2019 to work exclusively in the numerical instabilities in the EnKF routine. As soon the filter is working and outputs produced, BSC will share them with Riken. In the following months, BSC will get an ARM machine as part of Mare Nostrum 4 FTE clusters. This machine should be quite similar to post-K machine. This similarity could foster the collaboration between both teams when both machines will be in production.
 
+## Results for 2019/2020
+
+The collaboration is on hold until FUGAKU, the new supercomputer at RIKEN, is installed and access is granted. During 2020, BSC will also install an ARM cluster, which will be key for resuming the collaboration. 
 
 ## Future plans
 
