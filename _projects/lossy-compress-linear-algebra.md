@@ -2,7 +2,7 @@
 layout: page_project
 title: Effective Use of Lossy Compression for Numerical Linear Algebra Resilience and Performance 
 date: 2019-01-22
-updated:
+updated: 2020-02-27
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -39,21 +39,37 @@ models to explore theoretical possibilities for new compressor designs and
 system architectures.
 
 The project involves JLESC Fellow Jon Calhoun, JSC affiliated graduate student
-Micro Altenbernd, Robert Speck from JSC, and Franck Cappello from Argonne. This
+Mirco Altenbernd, Robert Speck from JSC, and Franck Cappello from Argonne. This
 project was formed though collaborative discussions at the 2018 JLESC workshop
 in Barcelona.
 
 
 ## Results for 2019/2020
 
+In-progress results from comparing SZ lossy compression vs multigrid compression for
+checkpointing iterative linear solvers was presented at the SPPEXA workshop in Dresden
+(October 2019). Currently, a journal article based on the results in being
+prepared for submission to the IEEE Transactions on Parallel and Distributed
+Systems.
+
+Preliminary results on evaluating current state-of-the-art compressors for use
+inside the pySDC application from Robert Speck were accepted and presented as
+an ACM student research competition (SRC) poster at SC'19. Results showed that
+specially designed lossy compressors are effective at reducing the runtime
+memory size, but long compression/decompression times results in slowdown.
+
 
 ## Visits and meetings
 
-Planned: Visit by Mirco Altenbernd to Clemson, Spring 2019 for 2 months.
-Planned: Present talk at JLESC Meeting in Knoxville, April 2019.
+* Completed: Visit by Mirco Altenbernd to Clemson, Spring 2019 for 2 months.
+* Completed: Present talk at JLESC Meeting in Knoxville, April 2019.
+* Completed: Brief meetup and presented in progress work at SPPEXA workshop in Dresden, October 2019.
+* Planned: Present talk at JLESC Meeting in Bonn, April 2020.
 
 
 ## Impact and publications
+
+* One ACM student research competition poster at Supercomputing 2019.
 
 {% bibliography --cited --file jlesc.bib %}
 
