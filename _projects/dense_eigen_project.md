@@ -93,14 +93,24 @@ We confirmed the libraries are ported and perform on the systems;
  * On four nodes a combination with 16 MPI processes per node and four OpenMP threads per MPI process is as fast as the pure MPI parallelization for ELPA on a KNL system.
  * On a single KNL node pure MPI parallelization was better than hybrid.
  * Plan update with respect to the machine replacement in very future!!
- 
+
 1. (Cont.) GPU extensions (standalone/cluster)
  * No update up to now
- 
+
 1. (UPDATE) Manycore extensions (KNL, PEZY SCx, etc.)
  * Wilkinson512/Kevd specialized for 2,4,8-wide SIMD intrinsic : 2 versions Wilkinson and Dongarra-Wilkinson
  * Parameter survey for NB of Back-transform
 
+### Results for 2019/2020
+
+1. (Cont.) Distributed MPI/OpenMP Parallel
+ * Progress will be delivered upto the machine replacement status.
+
+1. (Cont.) GPU extensions (standalone/cluster)
+ * We have investigated the performance trend on three GPU-eigensolvers, cuSolver 10.0, MAGMA 2.5.0, and EigenG 2.2d.
+ * On a Volta V100 board with CUDA 10.0+intel MKL library yieded excellent performance.
+ * MAGMA (1stege kernel) and EigenG shows totally 700GFLOPS for a full diagonalization operation when N=9700.
+ * For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximatedly 100 seconds, and it reached more than one TFLOPS.
 
 ### Software update and descriptions:
 
@@ -120,12 +130,10 @@ In the 5th JLESC meeting at Lyon,  both met and discussed about this project.
 Also, 6th JLESC meeting was hosted by AICS and Inge Gutheil visited AICS.
 Toshiyuki Imamura visited the 7th JLESC workshop in UIUC Urbana and the 8th JLESC workshop in Barcelona.
 He also visited Juelich on 23th of June after ISC17 to talk about KNL usage.
-Organized a minisymposium titled 'Performance benchmark of standard eigensolver on KNL systems', at the PMAA2018 conference, 27-29th of June 2019, Zurich.
-Toshiyuki Imamura visited JSC on 24-25th of January 2019 to talk about eigensolvers on GPU environment so on.
+Organized a minisymposium titled 'Performance benchmark of standard eigensolver on KNL systems', at the PMAA2018 conference, 27-29th of June 2019, Zurich, with two presentations from Imamura (Communication-Avoiding approaches of dense Eigenvalue / SVD problems) and Gutheil (Performance benchmark of standard eigensolver on KNL systems).
+Toshiyuki Imamura visited JSC on 24-25th of January 2019 to talk about eigensolvers on GPU environment and so on.
 
 ## Impact and publications
-
-We have no publication yet.
 
 
 <!--
@@ -168,7 +176,7 @@ For each half, we plan to do as follow.
 
  *Performance benchmark of standard eigensolver on KNL systems -->
 
-Apply to the computational resource such as 
+Apply to the computational resource such as
 "Large-scale HPC Challenge" Project, Joint Center for Advanced High Performance Computing (JCAHPC).
 
 Benchmarking on GPU accelration systems.
