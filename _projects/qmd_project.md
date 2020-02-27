@@ -40,9 +40,12 @@ None yet, the project has just started.
 ## Results for 2016/2017
 We began interfacing Qbox/Qb@ll with PETSc. We have forked Qb@ll and started to explore passing the state variables to PETSc. PETSc will perform the time stepping.
 
-## Visits and meetings
-Since this is a starting cooperation no visits have been initiated.
+## Results for 2019/2020
+We have tested Qb@ll with PETSc integrators. The interface works both in serial and parallel and we are now moving to HPC simulations. The initial benchmark series showed some promise but require more fine algorithmic tuning. In particular, we need to be able to adddress the communication latency between Qb@ll with PETSc. Another thread we are following is time step adaptivity. This feature is working but did not provide too many benefits on the small examples we have tried because their dynamics was more homogeneous. We are moving on to larger, more relevant and challenging simulations.
 
+## Visits and meetings
+<!-- Since this is a starting cooperation no visits have been initiated. -->
+We had a meeting on Dev 13, 2017 - Andre visited Argonne.
 
 ## Impact and publications
 None yet.
@@ -56,10 +59,11 @@ None yet.
 
 Timeline:
 
-* month 1-6: PETSc interface development and analysis of the Hamiltonian to determine what is required for the integrator
-* month 7-12: implementation of SSPRK schemes
-* month 13-18: interface Qbox/Qb@ll with PETSc
-* month 19-24: development and implementation of better-suited integrators
+* month 1-6: [done] PETSc interface development and analysis of the Hamiltonian to determine what is required for the integrator
+* month 7-12: [done] implementation of SSPRK schemes
+* month 13-18: [done] interface Qbox/Qb@ll with PETSc
+* month 19-24: [in progress] development and implementation of better-suited integrators
+* month 25-36: [in progress] larger, more relevant benchmarks; fine-tune the interface
 
 Expected results:
 
