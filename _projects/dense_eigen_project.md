@@ -101,6 +101,16 @@ We confirmed the libraries are ported and perform on the systems;
  * Wilkinson512/Kevd specialized for 2,4,8-wide SIMD intrinsic : 2 versions Wilkinson and Dongarra-Wilkinson
  * Parameter survey for NB of Back-transform
 
+### Results for 2019/2020
+
+1. (Cont.) Distributed MPI/OpenMP Parallel
+ * Progress will be delivered upto the machine replacement status.
+
+1. (Cont.) GPU extensions (standalone/cluster)
+ * We have investigated the performance trend on three GPU-eigensolvers, cuSolver 10.0, MAGMA 2.5.0, and EigenG 2.2d.
+ * On a Volta V100 board with CUDA 10.0+intel MKL library yieded excellent performance.
+ * MAGMA (1stege kernel) and EigenG shows totally 700GFLOPS for a full diagonalization operation when N=9700.
+ * For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximatedly 100 seconds, and it reached more than one TFLOPS.
 
 ### Software update and descriptions:
 
@@ -125,7 +135,8 @@ Toshiyuki Imamura visited JSC on 24-25th of January 2019 to talk about eigensolv
 
 ## Impact and publications
 
-We have no publication yet.
+[1] imamura_t: Communication-Avoiding approaches of dense Eigenvalue / SVD problemsPresenter: PMAA2018, Zurich, 2018.
+[2] gutheil_i, Performance benchmark of standard eigensolver on KNL systemsPresenter: PMAA2018, Zurich, 2018.
 
 
 <!--
