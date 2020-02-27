@@ -36,13 +36,29 @@ applications. Since this questionnaire survey will be distributed
 worldwide, it is also expected to reveal country/region differences on
 the above aspects.
 
-## Results for 2018/2019
+Existing studies on MPI uses are focused on a restricted target domain,
+such as the Exascale Computing Project (ECP) study conducted in 2017 that focused
+on MPI usage in the context of ECP applications; and/or those that are geographically
+constrained to a single laboratory, funding agency or at best, country.
+
+Such studies inspired us to conduct a larger study, not focused on HPC, but
+targeting a wider audience and involving a larger spectrum of geographically
+distinct users. Since MPI has been a widely used vehicle for high-performance
+computing for decades, this larger-scale questionnaire survey would be
+beneficial not only for deciding the future direction of MPI, but also the
+feature differences of MPI users among countries and/or regions of the world.
+
+This survey was conducted from February to June 2019, and at the time of
+this writing has gathered more than 800 answers from more than 40 countries.
+
+## Results for 2018/2019/2020
 
 As of 02.2019 the design of the questionnaire survey is almost
-done. It has been being distributed and collected since
-January 2019. Due to the relatively large disparities among the
-numbers of answers from countries, the questionnaire survey is not yet
-closed.
+done. Especially we also pay attention to China which is growing
+rapidly in the HPC field and we have been making great effort to have
+answers from China. Unfortunately, our effort is not rewarded, 15
+answers from China at the time of this writing. We are now analyzing
+the answers and planning to submit a paper.
 
 ## Visits and meetings
 
