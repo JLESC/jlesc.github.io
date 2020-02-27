@@ -42,11 +42,15 @@ Other researchers will be able to exploit the link we established between the co
 
 An important impact of this work on other disciplines that are using numerical simulation is that they can use lossy compression for checkpoint/restart since we established and verified guidance to fix the compression error that guarantee the quality of the numerical results.
 
-John Calhoun wrote a Ph. D. manuscript and defended a Ph. D. dissertation presenting this research/results.
+Jon Calhoun wrote a Ph. D. manuscript and defended a Ph. D. dissertation presenting this research/results.
 
 ## Results for 2017/2018
 
 The paper submitted to IJHPCA on the results of this research has been accepted for publication.
+
+## Results for 2019/2020
+
+Two graduate students of Jon Calhoun (Robert Underwood and Tasmia Reza) spent time at Argonne. The results of their internships produced two publications. Tasmia's paper is published at DRBSD'19. Robert's paper is published at IPDPS'20.
 
 ## Visits and meetings
 
