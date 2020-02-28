@@ -196,21 +196,41 @@ models to explore theoretical possibilities for new compressor designs and
 system architectures.</p>
 
 <p>The project involves JLESC Fellow Jon Calhoun, JSC affiliated graduate student
-Micro Altenbernd, Robert Speck from JSC, and Franck Cappello from Argonne. This
+Mirco Altenbernd, Robert Speck from JSC, and Franck Cappello from Argonne. This
 project was formed though collaborative discussions at the 2018 JLESC workshop
 in Barcelona.</p>
 
 <h2 id="results-for-20192020">
 <a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
 
+<p>In-progress results from comparing SZ lossy compression vs multigrid compression for
+checkpointing iterative linear solvers was presented at the SPPEXA workshop in Dresden
+(October 2019). Currently, a journal article based on the results in being
+prepared for submission to the IEEE Transactions on Parallel and Distributed
+Systems.</p>
+
+<p>Preliminary results on evaluating current state-of-the-art compressors for use
+inside the pySDC application from Robert Speck were accepted and presented as
+an ACM student research competition (SRC) poster at SC’19. Results showed that
+specially designed lossy compressors are effective at reducing the runtime
+memory size, but long compression/decompression times results in slowdown.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>Planned: Visit by Mirco Altenbernd to Clemson, Spring 2019 for 2 months.
-Planned: Present talk at JLESC Meeting in Knoxville, April 2019.</p>
+<ul>
+  <li>Completed: Visit by Mirco Altenbernd to Clemson, Spring 2019 for 2 months.</li>
+  <li>Completed: Present talk at JLESC Meeting in Knoxville, April 2019.</li>
+  <li>Completed: Brief meetup and presented in progress work at SPPEXA workshop in Dresden, October 2019.</li>
+  <li>Planned: Present talk at JLESC Meeting in Bonn, April 2020.</li>
+</ul>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+
+<ul>
+  <li>One ACM student research competition poster at Supercomputing 2019.</li>
+</ul>
 
 <ol class="bibliography"></ol>
 
@@ -222,7 +242,50 @@ Planned: Present talk at JLESC Meeting in Knoxville, April 2019.</p>
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
 
-<ol class="bibliography"></ol>
+<ol class="bibliography"><li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ElmoreCalhoun2019
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseElmoreCalhoun2019Bibtex" aria-expanded="false" aria-controls="collapseElmoreCalhoun2019Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseElmoreCalhoun2019Abstract" aria-expanded="false" aria-controls="collapseElmoreCalhoun2019Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ElmoreCalhoun2019">Elmore, Donald, and Jon Calhoun. 2019. “Evaluating Lossy Compressors for Inline Compression.” In <i>Poster Session of the 2019 ACM/IEEE International Conference for High Performance
+      Computing, Networking, Storage and Analysis</i>. SC ’19. Washington, DC, USA: IEEE Computer Society.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseElmoreCalhoun2019Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{ElmoreCalhoun2019,
+  title = {Evaluating Lossy Compressors for Inline Compression},
+  author = {Elmore, Donald and Calhoun, Jon},
+  booktitle = {Poster Session of the 2019 ACM/IEEE International Conference for High Performance
+        Computing, Networking, Storage and Analysis},
+  series = {SC '19},
+  year = {2019},
+  publisher = {IEEE Computer Society},
+  address = {Washington, DC, USA}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
 
 
       </div>
