@@ -45,7 +45,7 @@ Other researchers will be able to exploit the link we established between the co
 
 An important impact of this work on other disciplines that are using numerical simulation is that they can use lossy compression for checkpoint/restart since we established and verified guidance to fix the compression error that guarantee the quality of the numerical results.
 
-John Calhoun wrote a Ph. D. manuscript and defended a Ph. D. dissertation presenting this research/results.
+Jon Calhoun wrote a Ph. D. manuscript and defended a Ph. D. dissertation presenting this research/results.
 
 ## Results for 2017/2018
 
@@ -59,6 +59,8 @@ A new collaboration has started with Luc Giraud and Emmanuel Aggulo (Inria) on l
 ## Results for 2019/2020
 
 The first results experimental of the new collaboration were presented during the workshop at Knoxville. Nick Schenkels then visited Argonne for 2 weeks. During the two weeks we decided to focus the work on Flexible GMRES. Franck Cappello visited Bordeaux in June 2019. There were several meetings about the collaboration. Nick Schenkels visited Argonne on February 2020 for 1 week. Discussions were about the draft of a paper on the theoretical results of this collaboration. The results of the collaboration will be presented at the JLESC workshop at Bonn in April 2020.
+
+Two graduate students of Jon Calhoun (Robert Underwood and Tasmia Reza) spent time at Argonne. The results of their internships produced two publications. Tasmia's paper is published at DRBSD'19. Robert's paper is published at IPDPS'20.
 
 ## Visits and meetings
 
