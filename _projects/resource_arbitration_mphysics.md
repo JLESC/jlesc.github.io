@@ -17,7 +17,8 @@ keywords:
 head: borrell_r
 members:
   - perarnau_s
-  - houzeaux_g  
+  - houzeaux_g
+  - reis_v
 ---
 
 ## Research topic and goals
