@@ -1,7 +1,7 @@
 ---
 layout: page_project
 title: Reducing Communication in Sparse Iterative and Direct Solvers
-date: 2019-02-28
+date: 2020-02-26
 updated:
 navbar: Research
 subnavbar: Projects
@@ -40,6 +40,7 @@ The project involves Illinois graduate student Shelby Lockhart, postdoc Amanda B
 and Luke Olson, and INRIA professor Laura Grigori. The work has highlighted
 several aspects in moving toward topology-based algorithm decisions. 
 The next steps in the project will take a closer look at the performance opporunitities in enlarged Krylov methods.
+Currently we have extended the performance modeling to the ECG algorithm and we are detailing the measured performance. 
 
 ## Results for 2015/2016
 
@@ -70,6 +71,13 @@ completed a PhD in summer 2018, with Grigori (INRIA) serving on the final
 defense committee.  Shelby Lockhart has joined the collaboration and is making
 some initial steps toward performance analysis of enlarged Krylov methods.
 
+## Results for 2019/2020
+
+The recent work as included the extension of the node aware algorithm to the full
+algebraic multigrid setup and solve phases.  In addition, Bienz's work has been extended
+to collectives.  Lockhart extended the performance analysis to the enlarged Krylov setting
+and developed a new communication strategy.
+
 ## Visits and meetings
 
 Completed: JointLab Meeting in Barcelona, June 2015.
@@ -82,7 +90,7 @@ Completed: JointLab Meeting in Champaign, July 2017.
 
 Completed: JointLab Meeting in Barcelona, April 2018.
 
-Planned: JointLab Meeting in Tennessee, April 2019.
+Completed: JointLab Meeting in Tennessee, April 2019.
 
 ## Impact and publications
 
@@ -90,9 +98,9 @@ Planned: JointLab Meeting in Tennessee, April 2019.
 
 ## Future plans
 
-Going forward, we have outlined a plan to work with a broader collection of
-sparse solvers by collaborating with the expertise at INRIA.  We continue to anticipate
-meetings at the upcoming Joint Lab meetings.
+We continue to anticipate
+meetings at the upcoming Joint Lab meetings.  Future work includes continued work
+on high performance Kryolv methods.
 
 ## References
 
