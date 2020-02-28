@@ -1922,6 +1922,15 @@ ramet_p:
   email: ramet@labri.fr
   homepage: http://www.labri.fr/perso/ramet/
 
+reis_v:
+  sur_name: Reis
+  given_name: Valentin
+  affiliation: anl
+  position: post_doc
+  topics:
+  email: vreis@anl.gov
+  homepage: http://freux.fr
+  
 reverdy_v:
   sur_name: Reverdy
   given_name: Vincent
