@@ -7,7 +7,7 @@ navbar: Research
 subnavbar: Projects
 footer: true
 project_url:
-status: suspended
+status: running
 topics:
   - numerics
 keywords:
