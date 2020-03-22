@@ -149,6 +149,14 @@
               <span class="person given-name">Tomohiro</span> <span class="person sur-name">Ueno</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
             </span>
           
+            <span class="clearfix">
+              <span class="person given-name">Jon</span> <span class="person sur-name">Calhoun</span> (<abbr title="External partner" class="initialism" data-toggle="tooltip">EXT</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Robert</span> <span class="person sur-name">Underwood</span> (<abbr title="External partner" class="initialism" data-toggle="tooltip">EXT</abbr>)
+            </span>
+          
         </div>
       </li>
     
@@ -193,7 +201,9 @@ We propose to:
 <h2 id="results-for-20192020">
 <a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
 
-<p>The first results experimental of the new collaboration were presented during the workshop at Knoxville. Nick Schenkels then visited Argonne for 2 weeks. During the two weeks we decided to focus the work on Flexible GMRES. Franck Cappello visited Bordeaux in June 2019. There were several meetings about the collaboration. Nick Schenkels visited Argonne on February 2020 for 1 week. Discussions were about the draft of a paper on the theoretical results of this collaboration. The results of the collaboration will be presented at the JLESC workshop at Bonn in April 2020.</p>
+<p>One of the promising approaches is predictive delta compression. Predictive delta compression is a technique to store only difference between original data and predicted data or the difference between consecutive predicted frames. Therefore, accurate prediction to the original data, which is data to compress, is important for increasing the compression ratio. Because the image data from sensors are time-evolutional images, we need a technique to accuracy predict future image frames. Predictive neural network is a predictive coding based deep convolutional neural network which learns to predict future frames of a video sequence. PredNet is such an architecture which is trained to predict the future movement of objects. We use PredNet to predict the future frames from the given time-evolutional frames. In the evaluation, we observe that we can compress SPring-8 data by a factor of 600 compared to original size using a combination of predictive delta compression and the SZ compressor developed at Argonne with a PSNR of 56dB.</p>
+
+<p>In addition, Argonne collaborated with Clemson to develop a control loop allowing the automatic setting of lossy compressor error bound from user defined analysis metrics. The first implementation of the control loop targeted the fix ratio compression objective. The control loop was used to search for the compressor error bound providing  the best accuracy for the the targeted compression ratio. A paper has been accepted at IPDPS on this topic.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -207,13 +217,54 @@ Kazumoto Yoshii visited Riken-CCS and Riken Spring-8 facility in August 2019 for
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
 <p>The first presentation of this collaboration was made during the DOE-MEXT meeting at Chicago in May 2019.
-Franck Cappello presented lossy compression for photon source at the International Forum on Detectors for Photon Science March-April 2020.</p>
+Franck Cappello presentation of lossy compression for photon source at the International Forum on Detectors for Photon Science March-April 2020 [cancelled because of COVID-19].</p>
 
 <h3 id="papers">
 <a id="papers" class="anchor" href="#papers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Papers</h3>
 
-<p>A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. <a href="#Rupak20">(Roy et al. 2019)</a></p>
-<ol class="bibliography"><li>
+<p>A paper at IPDPS on fix ratio compression using control loop <a href="#Underwood20">(Underwood et al. 2020)</a>
+A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. <a href="#Rupak20">(Roy et al. 2019)</a></p>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Underwood20
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseUnderwood20Bibtex" aria-expanded="false" aria-controls="collapseUnderwood20Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseUnderwood20Abstract" aria-expanded="false" aria-controls="collapseUnderwood20Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Underwood20">Underwood, Robert, Sheng Di, Jon Calhoun, and Franck Cappello. 2020. “FRaZ: A Generic High-Fidelity Fixed-Ratio Lossy Compression Framework for Scientific Floating-Point Data.” In <i>IPDPS20: 34th IEEE International Parallel and Distributed Processing Symposium</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseUnderwood20Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Underwood20,
+  title = {{FRaZ: A Generic High-Fidelity Fixed-Ratio Lossy Compression Framework for Scientific Floating-point Data}},
+  author = {Underwood, Robert and Di, Sheng and Calhoun, Jon and Cappello, Franck},
+  booktitle = {{IPDPS20: 34th IEEE International parallel and distributed processing symposium}},
+  year = {2020}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
 <div class="bibtex-entry-container">
   <div>
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
@@ -252,10 +303,13 @@ Franck Cappello presented lossy compression for photon source at the Internation
   </div>
   
 </div>
-</li></ol>
+</li>
+</ol>
 
 <h3 id="funding">
 <a id="funding" class="anchor" href="#funding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Funding</h3>
+
+<p>Robert Underwood from Clemson (Jon Calhoun’s group) received a DOE funding for his 6 months stay at Argonne.</p>
 
 <h3 id="impact-on-other-projects">
 <a id="impact-on-other-projects" class="anchor" href="#impact-on-other-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact on other projects</h3>
