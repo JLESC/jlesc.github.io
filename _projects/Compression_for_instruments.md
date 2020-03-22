@@ -17,6 +17,8 @@ members:
   - sato_k
   - sano_k
   - ueno_t
+  - calhoun_j
+  - underwood_r
 ---
 
 ## Research topic and goals
@@ -30,7 +32,9 @@ We propose to:
 
 ## Results for 2019/2020
 
-The first results experimental of the new collaboration were presented during the workshop at Knoxville. Nick Schenkels then visited Argonne for 2 weeks. During the two weeks we decided to focus the work on Flexible GMRES. Franck Cappello visited Bordeaux in June 2019. There were several meetings about the collaboration. Nick Schenkels visited Argonne on February 2020 for 1 week. Discussions were about the draft of a paper on the theoretical results of this collaboration. The results of the collaboration will be presented at the JLESC workshop at Bonn in April 2020.
+One of the promising approaches is predictive delta compression. Predictive delta compression is a technique to store only difference between original data and predicted data or the difference between consecutive predicted frames. Therefore, accurate prediction to the original data, which is data to compress, is important for increasing the compression ratio. Because the image data from sensors are time-evolutional images, we need a technique to accuracy predict future image frames. Predictive neural network is a predictive coding based deep convolutional neural network which learns to predict future frames of a video sequence. PredNet is such an architecture which is trained to predict the future movement of objects. We use PredNet to predict the future frames from the given time-evolutional frames. In the evaluation, we observe that we can compress SPring-8 data by a factor of 600 compared to original size using a combination of predictive delta compression and the SZ compressor developed at Argonne with a PSNR of 56dB. 
+
+In addition, Argonne collaborated with Clemson to develop a control loop allowing the automatic setting of lossy compressor error bound from user defined analysis metrics. The first implementation of the control loop targeted the fix ratio compression objective. The control loop was used to search for the compressor error bound providing  the best accuracy for the the targeted compression ratio. A paper has been accepted at IPDPS on this topic.
 
 ## Visits and meetings
 
@@ -42,14 +46,17 @@ Kazumoto Yoshii visited Riken-CCS and Riken Spring-8 facility in August 2019 for
 ## Impact and publications
 
 The first presentation of this collaboration was made during the DOE-MEXT meeting at Chicago in May 2019.
-Franck Cappello presented lossy compression for photon source at the International Forum on Detectors for Photon Science March-April 2020.
+Franck Cappello presentation of lossy compression for photon source at the International Forum on Detectors for Photon Science March-April 2020 [cancelled because of COVID19].
 
 ### Papers
 
+A paper at IPDPS on fix ratio compression using control loop {% cite Underwood20 --file jlesc.bib %}
 A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. {% cite Rupak20 --file jlesc.bib %}
 {% bibliography --cited --file jlesc.bib %}
 
 ### Funding
+
+Robert Underwood from Clemson (Jon Calhoun's group) received a DOE funding for his 6 months stay at Argonne.
 
 ### Impact on other projects
 
