@@ -371,8 +371,8 @@ caklovic_g:
 calhoun_j:
   sur_name: Calhoun
   given_name: Jon
-  affiliation: uiuc
-  position: phd
+  affiliation: external
+  position: permanent
   topics: HPC, Resilience, Lossy Compression
   email: jonccal@clmeson.edu
   homepage: http://jonccal.people.clemson.edu/
@@ -1930,7 +1930,7 @@ reis_v:
   topics:
   email: vreis@anl.gov
   homepage: http://freux.fr
-  
+
 reverdy_v:
   sur_name: Reverdy
   given_name: Vincent
@@ -2493,7 +2493,7 @@ ueno_t:
   sur_name: Ueno
   given_name: Tomohiro
   affiliation: riken
-  position: 
+  position:
   topics:
   email: tomohiro.ueno@riken.jp
   homepage:
@@ -2506,6 +2506,15 @@ ukawa_a:
   topcis:
   email: ukawa@ccs.tsukuba.ac.jp
   homepage: http://www2.ccs.tsukuba.ac.jp/people/ukawa/
+
+underwood_r:
+  sur_name: Underwood
+  given_name: Robert
+  affiliation: external
+  position: 
+  topics:
+  email: robertu@g.clemson.edu
+  homepage:
 
 uno_a:
   sur_name: Uno
