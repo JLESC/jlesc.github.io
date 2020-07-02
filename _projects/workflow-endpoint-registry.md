@@ -15,7 +15,7 @@ head: katz_d
 members:
   - badia_r
   - chard_k
-  - ljarque_j
+  - ejarque_j
 ---
 {% comment %}
 ================================
