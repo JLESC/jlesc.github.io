@@ -1,19 +1,21 @@
 ---
 layout: page_project
-title:
-date:
+title: A common workflow registry of compute endpoints and applications
+date: 2020-07-02
 updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status:
+status: starting
 topics:
-  -
+  - prog_lang
 keywords:
   -
-head:
+head: katz_d
 members:
-  -
+  - badia_r
+  - chard_k
+  - ljarque_j
 ---
 {% comment %}
 ================================
@@ -128,4 +130,4 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 Replace 'YOUR_BIBTEX_FILE_NAME_HERE' with the name of the BibTeX file with the external references!
 {% endcomment %}
 
-{% bibliography --file external/YOUR_BIBTEX_FILE_NAME_HERE %}
+{% bibliography --file external/workflow-endpoint-registry.bib %}
