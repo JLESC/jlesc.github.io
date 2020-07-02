@@ -81,8 +81,40 @@ Read the comments carefully!
 
 ## Research topic and goals
 
+There is now a large and ever growing number of workflow systems, and we have lost hope in
+encouraging users not to continue developing more. Instead, we want to focus on building
+shared elements that can help us with our own systems, as well as the users of those systems
+and the developers of applications that will increasingly be used as workflow elements in
+simulation, analysis, search, optimization, and parameter study research campaigns.
 
-## Results for 2015/2016
+As discussed briefly at JLESC 9 (in ST A1.1. Python-based Workflows & Software Sustainability),
+two of the common types of elements that workflow systems interact with are the end computing
+systems and the preexisting applications that the workflows wrap and call. Today, users of a
+workflow system have to find information about both the end points and the applications, they
+have to map that information to workflow-specific configuration formats, individually customize
+their workflow to use these configurations, and keep up with changes over time. Instead, we
+propose a registry of compute end points and applications, where an entry could be automatically
+brought in to a workflow system.
+
+This requires a pair of components:
+
+1. The registry itself and a means for adding and editing entries, potentially along with curation,
+or perhaps community curated, using WikiData
+
+2. A means to use entries for a given workflow system
+
+Registry entries could be added by three different groups:
+
+1. Compute resource providers could enter their systems, and application developers could enter their
+applications
+
+2. Workflow system providers could enter systems and applications that they support, or we could collect
+published configurations and map them to our common schema
+
+3. Workflow developers could enter system and applications that they and their workflow users need
+
+
+## Results for 2020/2021
 
 
 ## Visits and meetings
@@ -118,6 +150,34 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 
 ## Future plans
+
+### Contributions:
+
+1. A prototype of the registry itself and a means for adding and editing entries,
+potentially along with curation, or perhaps community curated, using WikiData
+
+2. Methods to use registry entries in Parsl and PyCOMPs
+
+### Timeline:
+
+The initial work that we propose here is
+
+1. defining the schema for the registry, and implementing it as a REST service
+2. building some test elements, and entering them manually
+3. building software for Parsl and PyCOMPs to import and use registry entries
+
+We plan to do this initial work in the summer of 2020. After this, we will evaluate
+progress and decide on next steps, which likely include a publication and bringing
+in additional workflow systems.
+
+### Computer resource needs:
+Very few – no testing needs to be done at large scale, though we will need access
+to a few HPC systems to test mechanisms for their use
+
+### Expected results:
+-	Paper describing the prototype
+-	The prototype registry
+-	Initial methods added to Parsl and PyCOMPs to use the registry
 
 
 ## References
