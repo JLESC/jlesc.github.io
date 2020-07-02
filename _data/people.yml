@@ -431,6 +431,15 @@ cela_j:
   email: josem.cela@bsc.es
   homepage: https://www.bsc.es/cela-espin-jose-maria
 
+chard_k:
+  sur_name: Kyle
+  given_name: Chard
+  position:
+  affiliation: anl
+  topics:
+  email: chard@uchicago.edu
+  homepage:
+
 chen_j:
   sur_name: Chen
   given_name: Jian
@@ -1165,6 +1174,15 @@ kale_s:
   topics: Programming Models
   email: kale@illinois.edu
   homepage: http://charm.cs.uiuc.edu/~kale/
+
+katz_d:
+  sur_name: Katz
+  given_name: Daniel S.
+  affiliation: uiuc
+  position: 
+  topics: 
+  email: dskatz@illinois.edu
+  homepage: http://danielskatz.org/
 
 keahey_k:
   sur_name: Keahey
