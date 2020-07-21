@@ -166,9 +166,13 @@ The initial work that we propose here is
 2. building some test elements, and entering them manually
 3. building software for Parsl and PyCOMPs to import and use registry entries
 
-We plan to do this initial work in the summer of 2020. After this, we will evaluate
-progress and decide on next steps, which likely include a publication and bringing
-in additional workflow systems.
+We originally planed to do this initial work in the summer of 2020, but due to COVID-19 disruptions, we are now planning to focus initially
+on defining the registration schema and collecting resource documents in a GitHub repository during 2020.
+In early 2021, we will get some experience with using them in an ad hoc fashion.  With the help of students we will develop the REST API
+and integrate with Parsl over summer 2021.
+Also in 2021, the use of the registry will be considered within the EU eFlows4HPC project and its integration with PyCOMPSs.
+After these initial activities, we will evaluate progress and decide on next steps, which likely include a publication and bringing in additional workflow systems.
+
 
 ### Computer resource needs:
 Very few – no testing needs to be done at large scale, though we will need access
