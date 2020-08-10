@@ -13,7 +13,7 @@ wayback_url:
 logo:
 kind: workshop
 institute: utk
-permalink: 
+permalink:
 page_type: event_page
 ---
 
