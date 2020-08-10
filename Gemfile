@@ -2,6 +2,7 @@ source 'https://rubygems.org/'
 ruby '>=2.4.1'
 
 # other dependencies
+gem 'therubyracer'
 gem 'sass'
 gem 'uglifier'
 gem 'coffee-script'
