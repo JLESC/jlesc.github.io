@@ -8,6 +8,19 @@
     <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>11th JLESC Workshop</title>
+        <description>&lt;p&gt;The 11th JLESC Workshop, the first virtual one in the history of the JLESC, will be held online from September 8 to 10, 2020.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;/events/11th-jlesc-workshop&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2020/08/10/11th-workshop/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2020/08/10/11th-workshop/</guid>
+      </item>
+    
+      <item>
         <title>10th JLESC Workshop</title>
         <description>&lt;p&gt;The 10th JLESC Workshop has been cancelled.&lt;/p&gt;
 
@@ -201,27 +214,6 @@ just before the 6th JLESC Workshop.&lt;/p&gt;
         <pubDate>Tue, 11 Oct 2016 00:00:00 +0000</pubDate>
         <link>https://jlesc.github.io/news/2016/10/11/youthworkshop-2016/</link>
         <guid isPermaLink="true">https://jlesc.github.io/news/2016/10/11/youthworkshop-2016/</guid>
-      </item>
-    
-      <item>
-        <title>6th JLESC Workshop - Call for participation</title>
-        <description>&lt;p&gt;The 6th JLESC Workshop will be held at RIKEN AICS, Kobe, Japan, from November 30th to December 2nd, 2016.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Click &lt;a href=&quot;/events/6th-jlesc-workshop&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
-
-&lt;p&gt;Submit proposals for &lt;strong&gt;break-out sessions&lt;/strong&gt; here: &lt;a href=&quot;https://goo.gl/forms/jn9tdkk5dBgUC1XD2&quot;&gt;https://goo.gl/forms/jn9tdkk5dBgUC1XD2&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Submit proposals for &lt;strong&gt;individual talks&lt;/strong&gt; here: &lt;a href=&quot;https://goo.gl/forms/4wzumCB5wpRpLMyL2&quot;&gt;https://goo.gl/forms/4wzumCB5wpRpLMyL2&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Submit &lt;strong&gt;project talks&lt;/strong&gt; here: &lt;a href=&quot;https://goo.gl/forms/1XqT28h1kIGNFIN43&quot;&gt;https://goo.gl/forms/1XqT28h1kIGNFIN43&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;DEADLINE: October 7, 2016!&lt;/em&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
-        <link>https://jlesc.github.io/news/2016/09/21/6th-workshop-calls/</link>
-        <guid isPermaLink="true">https://jlesc.github.io/news/2016/09/21/6th-workshop-calls/</guid>
       </item>
     
   </channel>
