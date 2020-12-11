@@ -8,6 +8,19 @@
     <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>12th JLESC Workshop</title>
+        <description>&lt;p&gt;The 12th JLESC Workshop will be held online from February 24 to 26, 2021.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;/events/12th-jlesc-workshop&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2020/12/11/12th-workshop/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2020/12/11/12th-workshop/</guid>
+      </item>
+    
+      <item>
         <title>11th JLESC Workshop</title>
         <description>&lt;p&gt;The 11th JLESC Workshop, the first virtual one in the history of the JLESC, will be held online from September 8 to 10, 2020.&lt;/p&gt;
 
@@ -200,20 +213,6 @@ with C, C++, Python or Fortran on Linux systems should be present.&lt;/p&gt;
         <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
         <link>https://jlesc.github.io/news/2017/06/13/4th-summer-school/</link>
         <guid isPermaLink="true">https://jlesc.github.io/news/2017/06/13/4th-summer-school/</guid>
-      </item>
-    
-      <item>
-        <title>RIKEN AICS HPC Youth Workshop 2016</title>
-        <description>&lt;p&gt;RIKEN AICS HPC Youth Workshop 2016 will take place in Kobe from 28 Nov. to 30 Nov, 
-just before the 6th JLESC Workshop.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Click &lt;a href=&quot;http://www.aics.riken.jp/en/events/161007.html&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
-</description>
-        <pubDate>Tue, 11 Oct 2016 00:00:00 +0000</pubDate>
-        <link>https://jlesc.github.io/news/2016/10/11/youthworkshop-2016/</link>
-        <guid isPermaLink="true">https://jlesc.github.io/news/2016/10/11/youthworkshop-2016/</guid>
       </item>
     
   </channel>
