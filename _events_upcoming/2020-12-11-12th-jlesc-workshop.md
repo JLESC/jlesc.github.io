@@ -34,5 +34,4 @@ The workshop will feature short talk and break-out sessions on these seven centr
 
 A key objective of the workshop is to foster the existing collaborations and inform the workshop attendees of their respective progress, as well as identify new research collaborations and establish a roadmap for their implementation.
 
-The workshop is open to Illinois, INRIA, ANL, BSC, JSC, R-CCS and UTK faculties, researchers,
-engineers and students who want to learn more about Exascale Computing and beyond. Contact your local executive director if you are interested in attending.
+Most of the workshop is open to all participatants from the JLESC institutions Illinois, INRIA, ANL, BSC, JSC, Riken R-CCS and UTK; faculties, researchers, engineers and students who want to learn more about Post-Petascale / Pre-Exascale Computing. In addition to the schedule with restricted participation, the 12th JLESC meeting will feature the last workshop's day, February 26th 2021, as an open day, where attendance is open to anybody interested by any of the workshop related topics. The precise schedule for this open day will include invited open science talks from external collaborators as well as from members of the JLESC group. Registration for the external participants will however be required. Contact your local executive director if you are interested in attending.
