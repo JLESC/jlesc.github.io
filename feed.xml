@@ -8,6 +8,19 @@
     <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>13th JLESC Workshop</title>
+        <description>&lt;p&gt;The 13th JLESC Workshop is planned to take place at GSI Bonn, Germany.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;/events/13th-jlesc-workshop&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2021/01/06/13th-workshop/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2021/01/06/13th-workshop/</guid>
+      </item>
+    
+      <item>
         <title>12th JLESC Workshop</title>
         <description>&lt;p&gt;The 12th JLESC Workshop will be held online from February 24 to 26, 2021.&lt;/p&gt;
 
@@ -200,19 +213,6 @@ with C, C++, Python or Fortran on Linux systems should be present.&lt;/p&gt;
         <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
         <link>https://jlesc.github.io/news/2017/11/07/8th-workshop/</link>
         <guid isPermaLink="true">https://jlesc.github.io/news/2017/11/07/8th-workshop/</guid>
-      </item>
-    
-      <item>
-        <title>4th JLESC Summer School - Program online</title>
-        <description>&lt;p&gt;The fourth JLESC Summer School will be held at NCSA from July 20 to 21, 2017, following the &lt;a href=&quot;/events/7th-jlesc-workshop&quot;&gt;7th JLESC Worksphop&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Click &lt;a href=&quot;/events/4th-jlesc-summer-school&quot;&gt;here&lt;/a&gt; for more information! The program can be found &lt;a href=&quot;http://www.ncsa.illinois.edu/Conferences/JLESCsummer17/program.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
-        <link>https://jlesc.github.io/news/2017/06/13/4th-summer-school/</link>
-        <guid isPermaLink="true">https://jlesc.github.io/news/2017/06/13/4th-summer-school/</guid>
       </item>
     
   </channel>
