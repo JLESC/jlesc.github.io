@@ -2406,6 +2406,15 @@ suzuki_s:
   topics:
   email: soichiro.suzuki@riken.jp
   homepage:
+  
+swartvagher_p:
+  sur_name: Swartvagher
+  given_name: Philippe
+  affiliation: inria
+  position:
+  topics:
+  email: philippe.swartvagher@inria.fr
+  homepage:  
 
 takizawa_s:
   sur_name: Takizawa
