@@ -177,6 +177,7 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h3"><a href="#papers">Papers</a></li>
@@ -205,13 +206,21 @@ We propose to:
 
 <p>In addition, Argonne collaborated with Clemson to develop a control loop allowing the automatic setting of lossy compressor error bound from user defined analysis metrics. The first implementation of the control loop targeted the fix ratio compression objective. The control loop was used to search for the compressor error bound providing  the best accuracy for the the targeted compression ratio. A paper has been accepted at IPDPS on this topic.</p>
 
+<h2 id="results-for-20202021">
+<a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
+<p>The research on predictive delta compression continued at Riken and produced a paper accepted at IEEE CCGRID 2021. In parallel, the team at Argonne optimized the implementation of Huffman variable lenght coding on GPUs. This effort produced two publications at ACM PACT 2020 and IEEE IPDPS 2021.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>Franck Cappello visited Riken-CCS and Riken Spring-8 facility in August 2019 for 1 week
+<p>2020:
+Franck Cappello visited Riken-CCS and Riken Spring-8 facility in August 2019 for 1 week
 Bogdan Nicolae visited Riken-CCS and Riken Spring-8 facility in August 2019 for 1 week
 Ali Murat Gok visited Riken-CCS and Riken Spring-8 facility in August 2019 for 1 week
 Kazumoto Yoshii visited Riken-CCS and Riken Spring-8 facility in August 2019 for 1 week</p>
+
+<p>2021:
+There was no visit due to the Covid situaiton.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -306,6 +315,10 @@ A poster presented the results of the delta compression developed at Riken combi
 </li>
 </ol>
 
+<p>A paper at ACM PACT 2020 <a href="#Tian20">(Tian et al. 2020)</a>
+A paper at IEEE CCGRID 2021 <a href="#Rupak21">(Roy et al. 2020)</a>
+A paper at ACM IPDPS 2021 <a href="#Tian21">(Tian et al. 2021)</a></p>
+
 <h3 id="funding">
 <a id="funding" class="anchor" href="#funding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Funding</h3>
 
@@ -314,11 +327,16 @@ A poster presented the results of the delta compression developed at Riken combi
 <h3 id="impact-on-other-projects">
 <a id="impact-on-other-projects" class="anchor" href="#impact-on-other-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact on other projects</h3>
 
-<p>This project has a direct impact on the APS (Argonne Photon Source) and Spring-8 instruments.
+<p>The compression scheme (ROI-SZ) developed by Argonne is in extensive testing at LCLS for integration in the datareduction pipeline of the LCLS2. It will be also tested in Germany.
+This project has a direct impact on the APS (Argonne Photon Source) and Spring-8 instruments.
 This project has a broad impact on other photo sources. Results from this project are impacting the collaborations with the LCLS (Linac Coherent Light Source) instruments.</p>
+
+<p>The implementation of Huffman variable lenght coding in SZ (part of ROI-S) is the first high performance implementation of Huffman coding on GPU. We will make it stand alone and available for the community, independently of SZ.</p>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>Exchange results of experiments and testing of the compression schemes.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>

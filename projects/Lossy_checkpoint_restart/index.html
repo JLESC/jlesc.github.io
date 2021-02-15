@@ -177,6 +177,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h3"><a href="#papers">Papers</a></li>
@@ -236,6 +237,11 @@ They already reveal two interesting points. First, checkpoints are composed of d
 
 <p>Two graduate students of Jon Calhoun (Robert Underwood and Tasmia Reza) spent time at Argonne. The results of their internships produced two publications. Tasmia’s paper is published at DRBSD’19. Robert’s paper is published at IPDPS’20.</p>
 
+<h2 id="results-for-20202021">
+<a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
+
+<p>The research on lossy compression for FGMRES algorithm has progressed. FGMRES requires the storage of a basis for the search space and another one for the space spanned by the residuals. We showed that the vectors spanning this search space can be compressed by looking at the combination of FGMRES and compression in the context of inexact Krylov subspace methods. This allows us to derive a bound on the normwise relative compression error in each iteration. We use this bound to formulate a number of different practical compression strategies, and validate and compare them through numerical experiments.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -255,7 +261,61 @@ Nick Schenkels visited Argonne 1 week in February 2020</p>
 
 <p>This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra. A paper has been accepted at ACM HPDC 2018 on that topic <a href="#HPDC2018">(Tao et al. 2018)</a>. Another paper is under preparation for submission on lossy compression for flexible GMRES <a href="#Schenkels20">(Schenkels et al. 2020)</a>.</p>
 
+<p>A research report has been produced in 2020 and submitted to publication <a href="#agullo:hal-02572910">(Agullo et al. 2020)</a></p>
+
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          agullo:hal-02572910
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseagullo:hal-02572910Bibtex" aria-expanded="false" aria-controls="collapseagullo:hal-02572910Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseagullo:hal-02572910Abstract" aria-expanded="false" aria-controls="collapseagullo:hal-02572910Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="agullo:hal-02572910">Agullo, Emmanuel, Franck Cappello, Sheng Di, Luc Giraud, Xin Liang, and Nick Schenkels. 2020. “Exploring Variable Accuracy Storage through Lossy 
+Compression Techniques in Numerical Linear Algebra: a First Application 
+to Flexible GMRES.” Research Report RR-9342. Inria Bordeaux Sud-Ouest. <a href="https://hal.inria.fr/hal-02572910" target="_blank">https://hal.inria.fr/hal-02572910</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseagullo:hal-02572910Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@techreport{agullo:hal-02572910,
+  title = {{Exploring variable accuracy storage through lossy 
+  compression techniques in numerical linear algebra: a first application 
+  to flexible GMRES}},
+  author = {Agullo, Emmanuel and Cappello, Franck and Di, Sheng and Giraud, Luc and Liang, Xin and Schenkels, Nick},
+  url = {https://hal.inria.fr/hal-02572910},
+  type = {Research Report},
+  number = {RR-9342},
+  institution = {{Inria Bordeaux Sud-Ouest}},
+  year = {2020},
+  month = may,
+  keywords = {Mixed precision ; Lossy compression ; Flexible GMRES ; 
+  Inexact Krylov ; Compression avec perte ; Pr{\'e}cision mixte},
+  pdf = {https://hal.inria.fr/hal-02572910v2/file/RR-9342.pdf},
+  hal_id = {hal-02572910},
+  hal_version = {v2}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
