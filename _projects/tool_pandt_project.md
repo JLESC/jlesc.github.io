@@ -18,6 +18,7 @@ members:
   - murai_h
   - feld_c
   - gimenez_j
+  - llort_g
 ---
 
 ## Research topic and goals
@@ -82,6 +83,12 @@ and help direct development of new tool capabilities.
 * Tools training for GW4/Bristol and ANF/EoCoE using local HPC systems.
 * 31st VI-HPS Tuning Workshop hosted by UTK-ICL (2019/04/09-12) using Stampede2.
 * 33rd VI-HPS Tuning Workshop hosted by JSC (2019/06/24-28) using JURECA.
+
+## Results for 2020/2021
+
+* Initial Score-P porting to Fugaku.
+* Implementation of experimental POP metrics for hybrid MPI+OMP within CUBE GUI.
+* Virtual tools training for EPCC, HLRS, CINECA, CSC/Frankfurt using local HPC systems.
 
 ## Visits and meetings
 
