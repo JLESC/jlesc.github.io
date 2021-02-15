@@ -62,6 +62,10 @@ The first results experimental of the new collaboration were presented during th
 
 Two graduate students of Jon Calhoun (Robert Underwood and Tasmia Reza) spent time at Argonne. The results of their internships produced two publications. Tasmia's paper is published at DRBSD'19. Robert's paper is published at IPDPS'20.
 
+## Results for 2020/2021
+
+The research on lossy compression for FGMRES algorithm has progressed. FGMRES requires the storage of a basis for the search space and another one for the space spanned by the residuals. We showed that the vectors spanning this search space can be compressed by looking at the combination of FGMRES and compression in the context of inexact Krylov subspace methods. This allows us to derive a bound on the normwise relative compression error in each iteration. We use this bound to formulate a number of different practical compression strategies, and validate and compare them through numerical experiments. 
+
 ## Visits and meetings
 
 Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.
@@ -77,6 +81,8 @@ Nick Schenkels visited Argonne 1 week in February 2020
 The paper from this collaboration submitted to IJHPCA has been accepted for publication. See {% cite Calhoun18 --file jlesc.bib %} and {% cite Calhoun17 --file jlesc.bib %}
 
 This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra. A paper has been accepted at ACM HPDC 2018 on that topic {% cite HPDC2018 --file jlesc.bib %}. Another paper is under preparation for submission on lossy compression for flexible GMRES {% cite Schenkels20 --file jlesc.bib %}.
+
+A research report has been produced in 2020 and submitted to publication {% cite agullo:hal-02572910 --file jlesc.bib %}
 
 {% bibliography --cited --file jlesc.bib %}
 
