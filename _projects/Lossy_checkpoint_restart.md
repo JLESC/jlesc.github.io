@@ -68,12 +68,12 @@ The research on lossy compression for FGMRES algorithm has progressed. FGMRES re
 
 ## Visits and meetings
 
-Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.
-Jon Calhoun did an internship of 11 weeks at ANL.
-Franck Cappello visited Inria Bordeaux for 1 week in July 2018.
-Nick Schenkels visited Argonne 2 weeks in April 2019
-Franck Cappello visited Inria Bordeaux for 1 week in July 2019.
-Nick Schenkels visited Argonne 1 week in February 2020
+* Franck Cappello visits UIUC almost every week. We have a 30 minutes to 1 hour meeting almost each time.
+* Jon Calhoun did an internship of 11 weeks at ANL.
+* Franck Cappello visited Inria Bordeaux for 1 week in July 2018.
+* Nick Schenkels visited Argonne 2 weeks in April 2019.
+* Franck Cappello visited Inria Bordeaux for 1 week in July 2019.
+* Nick Schenkels visited Argonne 1 week in February 2020.
 
 ## Impact and publications
 
@@ -82,7 +82,7 @@ The paper from this collaboration submitted to IJHPCA has been accepted for publ
 
 This research continues at Argonne National Laboratory focusing on restart from lossy checkpointing for iterative numerical methods in linear algebra. A paper has been accepted at ACM HPDC 2018 on that topic {% cite HPDC2018 --file jlesc.bib %}. Another paper is under preparation for submission on lossy compression for flexible GMRES {% cite Schenkels20 --file jlesc.bib %}.
 
-A research report has been produced in 2020 and submitted to publication {% cite agullo:hal-02572910 --file jlesc.bib %}
+A research report has been produced in 2020 and submitted to publication {% cite agullo:hal-02572910 --file jlesc.bib %}.
 
 {% bibliography --cited --file jlesc.bib %}
 

@@ -60,14 +60,13 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
 
 ### Papers
 
-A paper at IPDPS on fix ratio compression using control loop {% cite Underwood20 --file jlesc.bib %}
-A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. {% cite Rupak20 --file jlesc.bib %}
+* A paper at IPDPS on fix ratio compression using control loop {% cite Underwood20 --file jlesc.bib %}
+* A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. {% cite Rupak20 --file jlesc.bib %}
+* A paper at ACM PACT 2020 {% cite Tian20 --file jlesc.bib %}
+* A paper at IEEE CCGRID 2021 {% cite Rupak21 --file jlesc.bib %}
+* A paper at ACM IPDPS 2021 {% cite Tian21 --file jlesc.bib %}
+
 {% bibliography --cited --file jlesc.bib %}
-
-A paper at ACM PACT 2020 {% cite Tian20 --file jlesc.bib %}
-A paper at IEEE CCGRID 2021 {% cite Rupak21 --file jlesc.bib %}
-A paper at ACM IPDPS 2021 {% cite Tian21 --file jlesc.bib %}
-
 
 ### Funding
 
