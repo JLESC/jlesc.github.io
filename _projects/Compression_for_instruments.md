@@ -83,7 +83,7 @@ The implementation of Huffman variable lenght coding in SZ (part of ROI-S) is th
 
 ## Future plans
 
-Exhange results of experiments and testing of the compression schemes.
+Exchange results of experiments and testing of the compression schemes.
 
 ## References
 {% bibliography --file external/Lossy_checkpoint_restart.bib %}
