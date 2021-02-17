@@ -80,7 +80,6 @@ None.
 * 07.03.2020 - 11.03.2020: Meeting of the PIs Makoto Tsubokura, Andreas Lintermann, and the researchers Keiji Onishi (RIKEN) and Mario Rüttgers at COMPSAFE 2020 (Kobe, Japan)
 
 ## Impact and publications
-<!-- {% cite Ruettger2020 --file jlesc.bib %} -->
 
 {% bibliography --cited --file jlesc.bib %}
 
