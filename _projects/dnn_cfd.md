@@ -66,7 +66,7 @@ planned.
 ## Results for 2020/2021
 Due to the CODID-19 pandemic, the activities in the project had to be reduced. Unfortunately, a plannned research stay of JSC's Ph.D. student Mario Rüttgers at R-CCS could not take place. An exchange of research ideas took, however, place online via video conferences (see Visits and meetings below). 
 
-JSC was able to continue its work on DNNs. The architecture for such a neural network was developed to predict the sound pressure level in a 2D square domain. It was trained by numerical results from up to 20,000 GPU-based lattice-Boltzmann simulations that include randomly distributed rectangular and circular objects, and monopole sources. Types of boundary conditions, the monopole locations, and cell distances for objects and monopoles serve as input to the network. Parameters were studied to tune the predictions and to increase their accuracy. An optimal choice of the parameters lead to network-predicted results that are in good agreement with the simulated findings. The results have been presented at the International Conference on High Performance Computing - ISC High Performance 2020. A peer-reviewed article has been published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS){% cite Ruettger2020 --file jlesc.bib %}.
+JSC was able to continue its work on DNNs. The architecture for such a neural network was developed to predict the sound pressure level in a 2D square domain. It was trained by numerical results from up to 20,000 GPU-based lattice-Boltzmann simulations that include randomly distributed rectangular and circular objects, and monopole sources. Types of boundary conditions, the monopole locations, and cell distances for objects and monopoles serve as input to the network. Parameters were studied to tune the predictions and to increase their accuracy. An optimal choice of the parameters lead to network-predicted results that are in good agreement with the simulated findings. The results have been presented at the International Conference on High Performance Computing - ISC High Performance 2020. A peer-reviewed article has been published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS){% cite Ruttgers2020 --file jlesc.bib %}.
 
 ## Results for 2019/2020
 None.
@@ -80,12 +80,12 @@ None.
 * 07.03.2020 - 11.03.2020: Meeting of the PIs Makoto Tsubokura, Andreas Lintermann, and the researchers Keiji Onishi (RIKEN) and Mario Rüttgers at COMPSAFE 2020 (Kobe, Japan)
 
 ## Impact and publications
-{% cite Ruettger2020 --file jlesc.bib %}
+<!-- {% cite Ruettger2020 --file jlesc.bib %} -->
 
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
-Further intesification of the cooperation and planning of research stays for a post-pandemic phase.
+Further intensification of the cooperation and planning of research stays for a post-pandemic phase.
 
 ## References
 
