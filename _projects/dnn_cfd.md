@@ -63,21 +63,29 @@ strongly promoted in the course of this project. To foster the
 cooperation, mutual short-time stays of the involved scientists are
 planned.  
 
+## Results for 2020/2021
+Due to the CODID-19 pandemic, the activities in the project had to be reduced. Unfortunately, a plannned research stay of JSC's Ph.D. student Mario Rüttgers at R-CCS could not take place. An exchange of research ideas took, however, place online via video conferences (see Visits and meetings below). 
+
+JSC was able to continue its work on DNNs. The architecture for such a neural network was developed to predict the sound pressure level in a 2D square domain. It was trained by numerical results from up to 20,000 GPU-based lattice-Boltzmann simulations that include randomly distributed rectangular and circular objects, and monopole sources. Types of boundary conditions, the monopole locations, and cell distances for objects and monopoles serve as input to the network. Parameters were studied to tune the predictions and to increase their accuracy. An optimal choice of the parameters lead to network-predicted results that are in good agreement with the simulated findings. The results have been presented at the International Conference on High Performance Computing - ISC High Performance 2020. A peer-reviewed article has been published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS){% cite Ruettger2020 --file jlesc.bib %}.
+
 ## Results for 2019/2020
 None.
 
 ## Visits and meetings
 
+* troughout 2020: discussions of hosting a JSC reasearcher at R-CCS (canceled due to the COVID-19 pandemic)
+* 02.12.2020: R-CCS presents latest work on mode decomposition using ML for 3D cylinder cases to JSC.
+* 23.03.2020: JSC presents previous work in the combined field of CFD, AI to the JLESC partners at R-CCS (application of AI methods to automatize CFD workflows, ML-based segmentation of computer tomography images in preparation of CFD computations of respirtaory flows, prediction of sound pressure level distributions with DNNs).
 * 07.03.2020 - 20.03.2020: Research exchange: Mario Rüttgers from JSC will work together with researchers from R-CCS at R-CCS
 * 07.03.2020 - 11.03.2020: Meeting of the PIs Makoto Tsubokura, Andreas Lintermann, and the researchers Keiji Onishi (RIKEN) and Mario Rüttgers at COMPSAFE 2020 (Kobe, Japan)
 
 ## Impact and publications
-No publications yet.
+{% cite Ruettger2020 --file jlesc.bib %}
 
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
-Will be discussed in 03/2020.
+Further intesification of the cooperation and planning of research stays for a post-pandemic phase.
 
 ## References
 
