@@ -63,14 +63,14 @@ strongly promoted in the course of this project. To foster the
 cooperation, mutual short-time stays of the involved scientists are
 planned.  
 
+## Results for 2019/2020
+None.
+
 ## Results for 2020/2021
 Due to the CODID-19 pandemic, the activities in the project had to be reduced. Unfortunately, a plannned research stay of JSC's Ph.D. student Mario Rüttgers at R-CCS could not take place. An exchange of research ideas took, however, place online via video conferences (see Visits and meetings below). 
 
 JSC was able to continue its work on DNNs. The architecture for such a neural network was developed to predict the sound pressure level in a 2D square domain. It was trained by numerical results from up to 20,000 GPU-based lattice-Boltzmann simulations that include randomly distributed rectangular and circular objects, and monopole sources. Types of boundary conditions, the monopole locations, and cell distances for objects and monopoles serve as input to the network. Parameters were studied to tune the predictions and to increase their accuracy. An optimal choice of the parameters lead to network-predicted results that are in good agreement with the simulated findings. The results have been presented at the International Conference on High Performance Computing - ISC High Performance 2020. A peer-reviewed article has been published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS){% cite Ruttgers2020 --file jlesc.bib %}.
 R-CCS contributed with their talk "Distributed Learning for Three-dimensional Flow Field Mode Decomposition on Fugaku" to the 34th Computational Fluid Dynamics Symposium, which was held online on Dec. 21-23, 2020 (K. Ando, K. Onishi, R. Bale, M. Tsubokura, A. Kuroda, and K. Minami). In their ressearch, R-CCS developed and investigated non-linear CNN-based mode decompositioning methods for three-dimensional flow fields around circular cylinder configurations. For the distributed learning, up to 25,250 nodes (1,212,000 cores) on the supercomputer Fugaku were used. Scalable model parallelization techniques for auto-encoder neural networks with a sustained performance of 7.8PFLOPs on 25,250 nodes were implemented.
-
-## Results for 2019/2020
-None.
 
 ## Visits and meetings
 
