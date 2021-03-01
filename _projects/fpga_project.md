@@ -74,7 +74,7 @@ We co-organized a panel session and a bird-of-feather session related to FPGA an
 Like previous year, we co-organized a panel session and a bird-of-feather session related to FPGA and reconfigurable computing with our collaborators in this field in SC19, which caputured a large audience. We also co-organized the ReHPC workshop in FPL2019.
 
 ## Results for 2020/2021
-We organized break-out session at JLESC 11th and 12th workshops titiled "Heterogeneous and reconfigurable architectures for the future of computing". 
+We organized break-out session at JLESC 11th and 12th workshops titled "Heterogeneous and reconfigurable architectures for the future of computing". 
 
 ## Visits and meetings
 {% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
