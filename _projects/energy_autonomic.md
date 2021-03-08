@@ -12,6 +12,7 @@ topics:
 keywords:
   - autonomic computing
   - energy efficiency
+  - control theory
 head: rutten_e
 members:
   - perarnau_s
@@ -57,13 +58,7 @@ approaches to specificities of HPC and power management.
 
 ## Results for 2019/2020
 
-On the basis of the preliminary work done at ANL on instrumentation of HPC
-applications, Inria has begun work on a range of controllers for the runtime
-adaptation of the Power Cap level in RAPL. A first approach is considered,
-re-using results on other work concerning a different problem (regulating the
-degree of parallelism according to synchronization cost), but which could be
-transferred here. Another approach involves measuring progress and power and
-making decisions based on predictions.
+On the basis of the preliminary work done at ANL on instrumentation of HPC applications, Inria has begun work on a range of controllers for the runtime adaptation of the Power Cap level in RAPL. A first approach is considered, re-using results on other work concerning a different problem (regulating the degree of parallelism according to synchronization cost), but which could be transferred here. Another approach involves measuring progress and power and making decisions based on predictions.
 
 Argonne completed the design and implementation of an infrastructure to perform
 control experiments using jupyter notebooks. This infrastructure can be
@@ -73,6 +68,24 @@ language. The notebook then connect remotely to the existing Argo NRM
 infrastructure, that keeps track of actuators, sensors and application
 management.
 
+## Results for 2020/2021
+
+{% person cerf_s %} started working as an Inria-funded postdoc on this project
+in October 2020. Using the jupyter notebook infrastructure and Grid'5000, we
+are in the process on designing and validating control-theory based approaches
+to the problem of power/performance efficiency, with RAPL as the main actuator.
+We have identified our main objective for HPC systems: as applications
+dynamically undergo variations in workload, due to phases or data/compute
+movement between devices, one can dynamically adjust power across compute
+elements to save energy with limited and controllable impact on application
+performance. We are also focusing on leveraging preliminary work from Argonne
+on periodical monitoring of application progress. 
+
+We are in the process of publishing our first study, using a preliminary
+offline identification process to derive a model of the dynamics of the system
+and a proportional-integral (PI) controller, on top of the Argo NRM
+infrastructure.
+
 ## Visits and meetings
 
 We schedule regular video meetings between the different members of the
@@ -81,21 +94,24 @@ project.
 {% person rutten_e %} visited ANL for two days to make progress on the project
 on April 18-19 2019.
 
+Once international travel can resume, we plan for {% person cerf_s %} to visit
+ANL.
+
 ## Impact and publications
 
-None yet.
+First publication under evaluation.
 
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
 
-On the control of RAPL, short term plans are to finalize the design of some of
-the controllers and their implementation, in order to integrate them in the
-NRM platform for experimental evaluation. We then plan to consider more
-elaborate control problems, e.g. taking into account variables other than
-power in the system, and to consider more elaborate control techniques, to
-obtain controllers that are more robust or give a more efficient use of the
-system.
+Initial results on the approach are encouraging, but have highlighted potential
+shortcomings of the NRM infrastructure (precision/stability of measurements)
+and need to be validated on a wider range of benchmarks. Given the expected
+architectures on future systems, we are also planning to evaluate different
+actuators than RAPL (i.e. accelerator power capping). We also plan to consider
+more elaborate control techniques, to obtain controllers that are more robust
+or give a more efficient use of the system.
 
 On a longer term, we plan to start working on another feedback loop approach
 for HPC, at a higher-level than processor level : we believe that there are

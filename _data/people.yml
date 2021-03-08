@@ -431,6 +431,15 @@ cela_j:
   email: josem.cela@bsc.es
   homepage: https://www.bsc.es/cela-espin-jose-maria
 
+cerf_s:
+  sur_name: Cerf
+  given_name: Sophie
+  affiliation: inria
+  position: post_doc
+  topics:
+  email: sophie.cerf@inria.fr
+  homepage:
+
 chard_k:
   sur_name: Kyle
   given_name: Chard
