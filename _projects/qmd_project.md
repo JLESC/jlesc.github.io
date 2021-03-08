@@ -2,11 +2,11 @@
 layout: page_project
 title: Fast Integrators for Scalable Quantum Molecular Dynamics
 date: 2016-03-11
-updated: 2016-03-11
+updated: 2021-03-08
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: Suspended
 topics:
   - numerics
 keywords:
