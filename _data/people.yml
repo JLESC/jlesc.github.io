@@ -986,6 +986,15 @@ hirota_y:
   email: yusuke.hirota@riken.jp
   homepage:
 
+hobson_t:
+  sur_name: Hobson
+  given_name: Tanner
+  affiliation: utk
+  position: phd
+  topics:
+  email: thobson2@vols.utk.edu
+  homepage:
+  
 honore_v:
   sur_name: Honore
   given_name: Valentin
@@ -1022,6 +1031,15 @@ hovland_p:
   email: hovland@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~hovland/
 
+huang_j:
+  sur_name: Huang
+  given_name: Jian
+  affiliation: utk
+  position: permanent
+  topics:
+  email: huangj@utk.edu
+  homepage:
+  
 huard_g:
   sur_name: Huard
   given_name: Guillaume
