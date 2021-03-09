@@ -18,6 +18,10 @@ members:
   - antoniu_g
   - dorier_m
   - raffin_b
+  - nicolae_b
+  - taufer_m
+  - huang_j
+  - hobson_t
 ---
 
 ## Research topic and goals
@@ -215,6 +219,15 @@ and Engineering special issue on scientific workflows {% cite Yildiz2019 --file 
 We are continuing to apply a similar hierarchical composition to particle accelerator high-energy physics applications
 in 2020.
 
+## Results for 2020/2021
+
+### Shared-memory communication for containerized workflows
+
+ * Tanner Hobson and Jian Huang of UTK, Orcun Yildiz, Bogdan Nicolae and Tom Peterka of ANL
+
+Scientific computation increasingly consists of a workflow of interrelated tasks. Containerization can make workflow systems more manageable, reproducible, and portable, but containers can impede communication due to their focus on encapsulation. In some circumstances, shared-memory regions are an effective way to improve performance of workflows; however sharing memory between containerized workflow tasks is difficult. In this work, we have created a software library called Dhmem that manages shared memory between workflow tasks in separate containers, with minimal code change and performance overhead. Instead of all code being in the same container, Dhmem allows a separate container for each workflow task to be constructed completely independently. Dhmem enables additional functionality: easy integration in existing workflow systems, communication configuration at runtime based on the environment, and scalable performance. 
+
+In 2020, we started a new collaboration between ANL and UTK, and hosted Tanner Hobson as a summer student, where he developed the Dhmem software that enables shared-memory communication for containerized workflows. We published our results in IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid21) {% cite Hobson2020Dhmem --file jlesc.bib %}.
 
 ## Visits and meetings
 
