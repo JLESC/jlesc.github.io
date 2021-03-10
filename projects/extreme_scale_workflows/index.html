@@ -153,6 +153,22 @@
               <span class="person given-name">Bruno</span> <span class="person sur-name">Raffin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
+            <span class="clearfix">
+              <span class="person given-name">Bogdan</span> <span class="person sur-name">Nicolae</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Michela</span> <span class="person sur-name">Taufer</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Jian</span> <span class="person sur-name">Huang</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Tanner</span> <span class="person sur-name">Hobson</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+            </span>
+          
         </div>
       </li>
     
@@ -191,6 +207,8 @@
 <li class="toc-entry toc-h3"><a href="#pycompss-decaf-distributedin-situ-workflow-convergence-2">PyCompss, Decaf distributed/in situ workflow convergence</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h3"><a href="#pycompss-decaf-distributedin-situ-workflow-convergence-3">PyCompss, Decaf distributed/in situ workflow convergence</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h3"><a href="#shared-memory-communication-for-containerized-workflows">Shared-memory communication for containerized workflows</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -444,6 +462,20 @@ and Engineering special issue on scientific workflows <a href="#Yildiz2019">(Yil
 <p>We are continuing to apply a similar hierarchical composition to particle accelerator high-energy physics applications
 in 2020.</p>
 
+<h2 id="results-for-20202021">
+<a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
+
+<h3 id="shared-memory-communication-for-containerized-workflows">
+<a id="shared-memory-communication-for-containerized-workflows" class="anchor" href="#shared-memory-communication-for-containerized-workflows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shared-memory communication for containerized workflows</h3>
+
+<ul>
+  <li>Tanner Hobson and Jian Huang of UTK, Orcun Yildiz, Bogdan Nicolae and Tom Peterka of ANL</li>
+</ul>
+
+<p>Scientific computation increasingly consists of a workflow of interrelated tasks. Containerization can make workflow systems more manageable, reproducible, and portable, but containers can impede communication due to their focus on encapsulation. In some circumstances, shared-memory regions are an effective way to improve performance of workflows; however sharing memory between containerized workflow tasks is difficult. In this work, we have created a software library called Dhmem that manages shared memory between workflow tasks in separate containers, with minimal code change and performance overhead. Instead of all code being in the same container, Dhmem allows a separate container for each workflow task to be constructed completely independently. Dhmem enables additional functionality: easy integration in existing workflow systems, communication configuration at runtime based on the environment, and scalable performance.</p>
+
+<p>In 2020, we started a new collaboration between ANL and UTK, and hosted Tanner Hobson as a summer student, where he developed the Dhmem software that enables shared-memory communication for containerized workflows. We published our results in IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid21) <a href="#Hobson2020Dhmem">(Hobson et al. 2021)</a>.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -461,6 +493,56 @@ beginning in February 2018</li>
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Hobson2020Dhmem
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHobson2020DhmemBibtex" aria-expanded="false" aria-controls="collapseHobson2020DhmemBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHobson2020DhmemAbstract" aria-expanded="false" aria-controls="collapseHobson2020DhmemAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Hobson2020Dhmem">Hobson, Tanner, Orcun Yildiz, Bogdan Nicolae, Jian Huang, and Tom Peterka. 2021. “Shared-Memory Communication for Containerized Workflows.” In <i>Proceedings of the 21st IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGrid)</i>. CCGrid ’21. IEEE/ACM.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHobson2020DhmemBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Hobson2020Dhmem,
+  author = {Hobson, Tanner and Yildiz, Orcun and Nicolae, Bogdan and Huang, Jian and Peterka, Tom},
+  title = {Shared-Memory Communication for Containerized Workflows},
+  booktitle = {Proceedings of the 21st IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGrid)},
+  series = {CCGrid '21},
+  year = {2021},
+  isbn = {},
+  location = {Melbourne, Australia},
+  pages = {},
+  numpages = {},
+  url = {},
+  doi = {},
+  acmid = {},
+  publisher = {IEEE/ACM},
+  keywords = {shared memory, workflow systems, containers},
+  pdf = {}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
