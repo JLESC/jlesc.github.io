@@ -194,6 +194,29 @@ in terms of both total execution time and energy consumption.
 This work has appeared in the proceedings of SC'2019.
 
 
+## Results for 2020/2021
+
+We have first focused on the resilient scheduling of parallel jobs on high performance computing (HPC) platforms to minimize the overall completion time, or makespan. We have revisited the problem by assuming that jobs are subject to transient or silent errors, and hence may need to be re-executed each time they fail to complete successfully. This work generalizes the classical framework where jobs are known offline and do not fail: in this classical framework, list scheduling that gives priority to longest jobs is known to be a 3-approximation when imposing to use shelves, and a 2-approximation without this restriction. We show that when jobs can fail, using shelves can be arbitrarily bad, but unrestricted list scheduling remains a 2-approximation. We have designed several heuristics, some list-based and some shelf-based, along with different priority rules and backfilling options. We have assessed and compared their performance through an extensive set of simulations, using both synthetic jobs and log traces from the Mira supercomputer. This work has appeared at APDCM'2020, and an extended version appeared in IJNC. 
+
+We have then focused the resilient scheduling of moldable parallel jobs on high-performance 
+computing (HPC) platforms. Moldable jobs allow for choosing a processor allocation before execution, 
+and their execution time obeys various speedup models. The objective is to minimize 
+the overall completion time of the jobs, or the makespan, when jobs can fail due to silent errors 
+and hence may need to be re-executed after each failure until successful completion. 
+Again, this work generalizes the classical scheduling framework for failure-free jobs. To cope with silent errors, 
+we introduce two resilient scheduling algorithms, LPA-List and Batch-List, both of which use the List strategy 
+to schedule the jobs. Without knowing a priori how many times each job will fail, LPA-List relies 
+on a local strategy to allocate processors to the jobs, while Batch-List schedules the jobs in batches 
+and allows only a restricted number of failures per job in each batch. We prove new approximation ratios 
+for the two algorithms under several prominent speedup models (e.g., roofline, communication, 
+Amdahl, power, monotonic, and a mixed model). An extensive set of simulations is conducted 
+to evaluate different variants of the two algorithms, and the results show that they consistently 
+outperform some baseline heuristics. Overall, our best algorithm is within a factor of 1.6 of 
+a lower bound on average over the entire set of experiments, and within a factor of 4.2 in the worst case. Preliminary results with a subset of speedup models have been published in 
+Cluster'2020. 
+
+
+
 
 ## Visits and meetings
 
@@ -209,6 +232,9 @@ which allowed us to make progress on the project.
 
 {% person lefevre_v %} has visited  Univ. Tenn. Knoxville for 10 days in February 2019,
 and for 10 days in January 2020. 
+
+Due to the Covid-19 sanitary situation, we have not had any visits since February 2020, 
+but we had numerous virtual interactions. 
 
 
 ## Impact and publications
