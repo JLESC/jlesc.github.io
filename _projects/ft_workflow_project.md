@@ -215,7 +215,19 @@ outperform some baseline heuristics. Overall, our best algorithm is within a fac
 a lower bound on average over the entire set of experiments, and within a factor of 4.2 in the worst case. Preliminary results with a subset of speedup models have been published in 
 Cluster'2020. 
 
-
+In parallel, we have also been working on the comparison of several fault-tolerance methods 
+for the detection and correction of floating-point errors in matrix-matrix multiplication.  
+These methods include replication,
+triplication, Algorithm-Based Fault Tolerance (ABFT) and residual checking
+(RC).  Error correction for ABFT can be achieved either by recovering the 
+corrupted entries from the correct data and the checksums by
+solving a small-size
+linear system of equations, or by recomputing corrupted coefficients. We show
+that both approaches can be used for RC. We provide a synthetic presentation of
+all methods before discussing their pros and cons.  We have implemented all
+these methods with calls to optimized BLAS routines, and we provide performance
+data for a wide range of failure rates and matrix sizes. In addition, with
+respect to the literature, we have  considered relatively high error rates.
 
 
 ## Visits and meetings
@@ -252,6 +264,8 @@ The work studying whether moldable applications perform better
 on failure-prone HPC platforms was published in Resilience'18 {% cite LeFevreEtAl2018 --file jlesc.bib %}. 
 
 The work on replication with checkpointing was published at SC'19 {% cite BenoitEtAl2019 --file jlesc.bib %}. 
+
+The work on the comparison of several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication was published at Resilience'20 {% cite LeFevreEtAl2020 --file jlesc.bib %}. 
 
 
 
