@@ -340,6 +340,20 @@ outperform some baseline heuristics. Overall, our best algorithm is within a fac
 a lower bound on average over the entire set of experiments, and within a factor of 4.2 in the worst case. Preliminary results with a subset of speedup models have been published in 
 Cluster’2020.</p>
 
+<p>In parallel, we have also been working on the comparison of several fault-tolerance methods 
+for the detection and correction of floating-point errors in matrix-matrix multiplication.<br>
+These methods include replication,
+triplication, Algorithm-Based Fault Tolerance (ABFT) and residual checking
+(RC).  Error correction for ABFT can be achieved either by recovering the 
+corrupted entries from the correct data and the checksums by
+solving a small-size
+linear system of equations, or by recomputing corrupted coefficients. We show
+that both approaches can be used for RC. We provide a synthetic presentation of
+all methods before discussing their pros and cons.  We have implemented all
+these methods with calls to optimized BLAS routines, and we provide performance
+data for a wide range of failure rates and matrix sizes. In addition, with
+respect to the literature, we have  considered relatively high error rates.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -376,7 +390,56 @@ on failure-prone HPC platforms was published in Resilience’18 <a href="#LeFevr
 
 <p>The work on replication with checkpointing was published at SC’19 <a href="#BenoitEtAl2019">(Benoit et al. 2019)</a>.</p>
 
+<p>The work on the comparison of several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication was published at Resilience’20 <a href="#LeFevreEtAl2020">(Fèvre et al. 2020)</a>.</p>
+
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          LeFevreEtAl2020
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLeFevreEtAl2020Bibtex" aria-expanded="false" aria-controls="collapseLeFevreEtAl2020Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLeFevreEtAl2020Abstract" aria-expanded="false" aria-controls="collapseLeFevreEtAl2020Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="LeFevreEtAl2020">Fèvre, Valentin Le, Thomas Herault, Julien Langou, and Yves Robert. 2020. “A Comparison of Several Fault-Tolerance Methods for the Detection and Correction of Floating-Point Errors
+in Matrix-Matrix Multiplication.” In <i>Resilience: 13th Workshop on Resiliency in High Performance Computing
+  in Clusters, Clouds, and Grids,
+                Jointly Published with Euro-Par 2020</i>. LNCS. Springer Verlag.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLeFevreEtAl2020Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{LeFevreEtAl2020,
+  author = {Fèvre, Valentin Le and Herault, Thomas and Langou, Julien and Robert, Yves},
+  booktitle = {{Resilience}: 13th Workshop on Resiliency in High Performance Computing
+    in Clusters, Clouds, and Grids,
+                  jointly published with {Euro-Par 2020}},
+  title = {A comparison of several fault-tolerance methods for the detection and correction of floating-point errors
+  in matrix-matrix multiplication},
+  year = {2020},
+  series = {LNCS},
+  publisher = {Springer Verlag}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
