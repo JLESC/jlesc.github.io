@@ -359,6 +359,15 @@ burbano_m:
   email: burbano.carmona@gmail.com
   homepage:
 
+cainolores_s:
+  sur_name: Caino-Lores
+  given_name: Silvina
+  affiliation: utk
+  position:
+  topics:
+  email: scainolo@utk.edu
+  homepage:
+
 caklovic_g:
   sur_name: Caklovic
   given_name: Gayatri
@@ -1748,6 +1757,15 @@ ogura_t:
   position:
   topics:
   email: t-ogura@riken.jp
+  homepage:
+
+olaya_p:
+  sur_name: Olaya Garcia
+  given_name: Paula
+  affiliation: utk
+  position:
+  topics:
+  email: polaya@vols.utk.edu
   homepage:
 
 olson_k:
