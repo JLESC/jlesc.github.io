@@ -62,6 +62,10 @@ We have organized a mini symposium about performance metrics at SIAM PP20, Seatt
  - "How to Monitor the Performance Evolution of a Large HPC System : a System and Application Points of View", Matthieu Hautreux, Marc Perache, and Jean-Christophe Weill
  - "Performance Modeling of Applications by Benchmarks", Miwako Tsuji
 
+## Results for 2020/2021
+
+We have published an article in Jornal of Supercomputing {% cite TsujEtAl2021 --file jlesc.bib %}. The manuscript includes discussions and experiments performed in this project. 
+
 ## Visits and meetings
 
 Miwako Tsuji visited NCSA in January 2017.
