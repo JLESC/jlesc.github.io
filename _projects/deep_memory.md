@@ -47,6 +47,10 @@ this work. We have prototyped the missing systems calls required for our
 experiments in the gem5 emulation layer, and discussed how to connect with a
 python distributed RL framework developed by RIKEN.
 
+## Results for 2020/2021
+
+We have extended the gem5 simulator to support heterogeneous memory devices and we have been working on interfacing runtime information between gem5 and python based ML frameworks (e.g., pytorch). The ultimate goal is to drive decisions on memory allocations and data movement in heterogeneous memory environments using machine learning in real time.
+
 ## Visits and meetings
 
 Internship of Aleix Roca at RIKEN between November 2019 and February 2020,
