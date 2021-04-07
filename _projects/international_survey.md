@@ -2,7 +2,7 @@
 layout: page_project
 title: International Survey
 date: 2019-02-15
-updated: 2019-07-16
+updated: 2021-04-07
 navbar: Research
 subnavbar: Projects
 project_url: https://github.com/bosilca/MPIsurvey
@@ -51,14 +51,15 @@ feature differences of MPI users among countries and/or regions of the world.
 This survey was conducted from February to June 2019, and at the time of
 this writing has gathered more than 800 answers from more than 40 countries.
 
-## Results for 2018/2019/2020
+## Results for 2021
 
-As of 02.2019 the design of the questionnaire survey is almost
-done. Especially we also pay attention to China which is growing
-rapidly in the HPC field and we have been making great effort to have
-answers from China. Unfortunately, our effort is not rewarded, 15
-answers from China at the time of this writing. We are now analyzing
-the answers and planning to submit a paper.
+We have successfully had more than 850 participants from over 40
+countries/regions.  This large-scale, worldwide survey can
+differentiate with the other surveys so far introduced. It is revealed
+that many MPI users are suffered from mastering MPI, are deploring not
+finding appropriate learning mediums, and are not using recently
+introduced MPI features. We have submitted a journal paper to report
+the survey findings.
 
 ## Visits and meetings
 
