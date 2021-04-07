@@ -60,6 +60,16 @@ answers from China. Unfortunately, our effort is not rewarded, 15
 answers from China at the time of this writing. We are now analyzing
 the answers and planning to submit a paper.
 
+## Results for 2020/2021
+
+We have successfully had more than 850 participants from over 40
+countries/regions.  This large-scale, worldwide survey can
+differentiate with the other surveys so far introduced. It is revealed
+that many MPI users are suffered from mastering MPI, are deploring not
+finding appropriate learning mediums, and are not using recently
+introduced MPI features. We have submitted a journal paper to report
+the survey findings.
+
 ## Visits and meetings
 
 A number of online meetings, one to two meeting in a month, have been
