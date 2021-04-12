@@ -170,6 +170,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
 <li class="toc-entry toc-h3"><a href="#results-for-20192020">Results for 2019/2020</a></li>
+<li class="toc-entry toc-h3"><a href="#update-for-20202021">Update for 2020/2021</a></li>
 <li class="toc-entry toc-h3"><a href="#software-update-and-descriptions">Software update and descriptions:</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
@@ -327,15 +328,33 @@ We confirmed the libraries are ported and perform on the systems;
   </li>
 </ol>
 
+<h3 id="update-for-20202021">
+<a id="update-for-20202021" class="anchor" href="#update-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update for 2020/2021</h3>
+
+<p>Basically, the activity in FY2020 was limited due to the Covid19 pandemic circumstance. However, some of our updates can be summarize as follow.</p>
+
+<ol>
+  <li>(Cont.) Distributed MPI/OpenMP Parallel
+    <ul>
+      <li>Implementation of the D&amp;C routine on Fugaku in trial usage in 2020 and early evaluation from the official launch in March 2021.</li>
+      <li>Progress and preliminary results will be reported at the next JLESC meeting in 2021.</li>
+    </ul>
+  </li>
+  <li>(Cont.) GPU extensions (standalone/cluster)
+    <ul>
+      <li>Good acceleration both on JUWELS and JURECA all parts of the computation</li>
+      <li>ELPA1 is accelerated very high; however, ELPA2 only shows reasonable acceleration only at a few % of eigenvectors are computed rather than the pure CPU version.</li>
+    </ul>
+  </li>
+</ol>
+
 <h3 id="software-update-and-descriptions">
 <a id="software-update-and-descriptions" class="anchor" href="#software-update-and-descriptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Software update and descriptions:</h3>
 
 <ul>
-  <li>EigenExa : 2.4p1</li>
-  <li>ELPA : 2017.11.001
-     includes support for KNL and GPU, new user interface</li>
-  <li>Elemental: 0.87.7
-         allows to compute arbitrary part of the eigenspectrum</li>
+  <li>EigenExa : 2.4d and 2.6</li>
+  <li>ELPA : 2018.11.001, 2019.05.001 for devel stage, and 2019.11.001 for next stage.
+     include support for GPU acceleration for ELPA1 and 2.</li>
 </ul>
 
 <h2 id="visits-and-meetings">
