@@ -112,13 +112,24 @@ We confirmed the libraries are ported and perform on the systems;
  * MAGMA (1stege kernel) and EigenG shows totally 700GFLOPS for a full diagonalization operation when N=9700.
  * For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximatedly 100 seconds, and it reached more than one TFLOPS.
 
+### Update for 2020
+
+Basically, the activity in FY2020 was limited due to the Covid19 pandemic circumstance. However, some of our updates can be summarize as follow.
+
+1. (Cont.) Distributed MPI/OpenMP Parallel
+ * Implementation of the D&C routine on Fugaku in trial usage in 2020 and early evaluation from the official launch in March 2021.
+ * Progress and preliminary results will be reported at the next JLESC meeting in 2021.
+
+1. (Cont.) GPU extensions (standalone/cluster)
+ * Good acceleration both on JUWELS and JURECA all parts of the computation
+ * ELPA1 is accelerated very high; however, ELPA2 only shows reasonable acceleration only at a few % of eigenvectors are computed rather than the pure CPU version.
+
+
 ### Software update and descriptions:
 
-* EigenExa : 2.4p1
-* ELPA : 2017.11.001
-       includes support for KNL and GPU, new user interface
-* Elemental: 0.87.7
-           allows to compute arbitrary part of the eigenspectrum
+* EigenExa : 2.4d and 2.6
+* ELPA : 2018.11.001, 2019.05.001 for devel stage, and 2019.11.001 for next stage.
+       include support for GPU acceleration for ELPA1 and 2.
 
 
 ## Visits and meetings
