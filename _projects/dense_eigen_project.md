@@ -101,7 +101,7 @@ We confirmed the libraries are ported and perform on the systems;
  * Wilkinson512/Kevd specialized for 2,4,8-wide SIMD intrinsic : 2 versions Wilkinson and Dongarra-Wilkinson
  * Parameter survey for NB of Back-transform
 
-### Results for 2019/2020
+## Results for 2019/2020
 
 1. (Cont.) Distributed MPI/OpenMP Parallel
  * Progress will be delivered upto the machine replacement status.
@@ -112,7 +112,7 @@ We confirmed the libraries are ported and perform on the systems;
  * MAGMA (1stege kernel) and EigenG shows totally 700GFLOPS for a full diagonalization operation when N=9700.
  * For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximatedly 100 seconds, and it reached more than one TFLOPS.
 
-### Update for 2020/2021
+## Results for 2020/2021
 
 Basically, the activity in FY2020 was limited due to the Covid19 pandemic circumstance. However, some of our updates can be summarize as follow.
 
@@ -125,7 +125,7 @@ Basically, the activity in FY2020 was limited due to the Covid19 pandemic circum
  * ELPA1 is accelerated very high; however, ELPA2 only shows reasonable acceleration only at a few % of eigenvectors are computed rather than the pure CPU version.
 
 
-### Software update and descriptions:
+## Software update and descriptions:
 
 * EigenExa : 2.4d and 2.6
 * ELPA : 2018.11.001, 2019.05.001 for devel stage, and 2019.11.001 for next stage.
