@@ -112,7 +112,7 @@ We confirmed the libraries are ported and perform on the systems;
  * MAGMA (1stege kernel) and EigenG shows totally 700GFLOPS for a full diagonalization operation when N=9700.
  * For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximatedly 100 seconds, and it reached more than one TFLOPS.
 
-### Update for 2020
+### Update for 2020/2021
 
 Basically, the activity in FY2020 was limited due to the Covid19 pandemic circumstance. However, some of our updates can be summarize as follow.
 
