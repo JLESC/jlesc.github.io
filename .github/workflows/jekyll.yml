@@ -6,7 +6,7 @@ on:
       - source
   pull_request:
     branches:
-      - main
+      - source
 
 jobs:
   jekyll:
