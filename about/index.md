@@ -36,7 +36,6 @@ Argonne National Laboratory joined in 2013.
 Barcelona Supercomputing Center joined in 2014 and the JLPC became the Joint Laboratory on Extreme Scale Computing.
 Jülich Supercomputing Centre and RIKEN Center for Computational Science (then RIKEN AICS) joined in 2015.
 In 2018, the University of Tennessee became the first associate partner.
-The JLESC is still based at Illinois.
 
 <div id="institutes" class="card-columns">
   <div class="card">
