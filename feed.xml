@@ -8,6 +8,19 @@
     <atom:link href="https://jlesc.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>14th JLESC Workshop</title>
+        <description>&lt;p&gt;The 14th JLESC Workshop will, hopefully, take place at GSI Bonn, Germany, from May 23 to 25.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;/events/14th-jlesc-workshop&quot;&gt;here&lt;/a&gt; for more information!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
+        <link>https://jlesc.github.io/news/2021/09/16/14th-workshop/</link>
+        <guid isPermaLink="true">https://jlesc.github.io/news/2021/09/16/14th-workshop/</guid>
+      </item>
+    
+      <item>
         <title>13th JLESC Workshop</title>
         <description>&lt;p&gt;The 13th JLESC Workshop goes virtual, Dec 14 to 16, 2021.&lt;/p&gt;
 
@@ -230,25 +243,6 @@ with C, C++, Python or Fortran on Linux systems should be present.&lt;/p&gt;
         <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
         <link>https://jlesc.github.io/news/2018/02/06/gsp-at-jsc/</link>
         <guid isPermaLink="true">https://jlesc.github.io/news/2018/02/06/gsp-at-jsc/</guid>
-      </item>
-    
-      <item>
-        <title>UTK becomes Associate Partner</title>
-        <description>&lt;p&gt;Starting from January 1, 2018, the &lt;a href=&quot;https://www.utk.edu&quot;&gt;University of Tennessee&lt;/a&gt;, represented by the  &lt;a href=&quot;http://www.icl.utk.edu/&quot;&gt;Innovative Computing Laboratory&lt;/a&gt; (ICL) at the University of Tennessee (UTK), becomes new Associate Partner of the JLESC.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;At the University of Tennessee, there are a number of groups working on extreme scale computing.&lt;/p&gt;
-
-&lt;p&gt;The Innovative Computing Laboratory aspires to be a world leader in enabling technologies and software for scientific computing. Its vision is to provide high performance tools to tackle science’s most challenging problems and to play a major role in the development of standards for scientific computing in general.&lt;/p&gt;
-
-&lt;p&gt;ICL is a research laboratory in the College of Engineering at the University of Tennessee and serves as the cornerstone laboratory of the Center for Information Technology Research (CITR), one of UT’s nine Centers of Excellence.&lt;/p&gt;
-
-&lt;p&gt;Welcome, ICL!&lt;/p&gt;
-</description>
-        <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
-        <link>https://jlesc.github.io/news/2018/01/03/icl-associate-partner/</link>
-        <guid isPermaLink="true">https://jlesc.github.io/news/2018/01/03/icl-associate-partner/</guid>
       </item>
     
   </channel>
