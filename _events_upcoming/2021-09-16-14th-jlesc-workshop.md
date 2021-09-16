@@ -4,7 +4,7 @@ title: 14th JLESC Workshop
 date: 2021-09-16
 updated: 2021-09-16
 navbar: Events
-event_location: Online
+event_location: GSI Bonn, Germany
 event_start: 2022-05-23
 event_end: 2022-05-25
 event_short_url:
