@@ -7,8 +7,8 @@ navbar: Events
 event_location: Online
 event_start: 2021-12-14
 event_end: 2021-12-16
-event_short_url:
-event_url:
+event_short_url: 
+event_url: https://icl.utk.edu/jlesc13/
 wayback_url:
 logo:
 kind: workshop
