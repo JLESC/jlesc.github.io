@@ -11,11 +11,9 @@ topics:
   - architectures
 keywords: 
   - FPGA
-  - High-level synthesis (OpenCL, OpenMP, OpenACC)
-  - HPC kernel porting
-  - Manual and automatic optimization
   - Reconfigurable computing
-  - Dataflow computing
+  - High-level synthesis (OpenCL, OpenMP, OpenACC)
+  - Reconfigurable computing
 head: yoshii_k
 members: 
   - alvarez_c
@@ -24,15 +22,13 @@ members:
   - unsal_o
   - rutten_e
   - sano_k
-  - jin_z
-  - finkel_h
   - cappello_f
 
 ---
 
 ## Research topic and goals
-The end of the Moore’s law poses a significant challenge for
-scientific computing: from the mid 2020s, performance will not improve
+The end of Moore’s law poses a significant challenge for
+scientific computing: from the mid-2020s, performance will not improve
 any more from the CMOS technology progress. Reconfigurable computing
 presents the unique opportunity of allowing performance progress by
 customization while still serving a large variety of applications,
@@ -47,7 +43,7 @@ high-level synthesis technology, significant performance/watt
 improvement compared with CPUs and GPUs of the comparable technology.
 
 The advent of high-level synthesis technology such as OpenCL, OpenMP
-and OpenACC for FPGAs eases the FPGA adoption process in HPC. However,
+and OmpSs for FPGAs eases the FPGA adoption process in HPC. However,
 we have little expertise to port current existing computational kernel
 and have little knowledge on optimizations. In this project, we will
 implement key application kernels using high level synthesis tools,
@@ -76,12 +72,15 @@ Like previous year, we co-organized a panel session and a bird-of-feather sessio
 ## Results for 2020/2021
 We organized break-out session at JLESC 11th and 12th workshops titled "Heterogeneous and reconfigurable architectures for the future of computing". 
 
+## Results for 2020/2021
+We organized break-out session at JLESC 13th workshops titled "Heterogeneous and reconfigurable architectures for the future of computing". 
+
 ## Visits and meetings
 {% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
 {% person sano_k %} visited ANL in August 2018 and spent one day for this project.
 {% person yoshii_k %}, {% person martorell_x %}, {% person rutten_e %} and {% person sano_k %} had a project meeting during FPT18 in Okinawa, Japan in Dec, 2018.
 {% person yoshii_k %}, {% person cappello_f %} visited RIKEN R-CCS and Sprint-8 facility in Aug, 2019 to discuss hardware compression technology.
-{% person yoshii_k %}, {% person sano_k %} had a virtual meeting in 2020 and 2021 to discuss collaborations and technical topics.
+{% person yoshii_k %}, {% person sano_k %} had a couple of virtual-meetings in 2020 and 2021 to discuss collaborations and technical topics.
 
 ## Impact and publications
 
@@ -94,7 +93,7 @@ The team has also been making significant effort to develop a community about re
 
 ## Future plans
 
-We will study performance portability and code optimization techniques on selected application kernels using the latest generation FPGA platforms (e.g., Intel Arria10, Intel Stratix10) and possibly submit results to relevant venues. We will study low-level drivers, runtime system, compiler technologies, dynamic resource management techniques and algorithm mapping techniques for future FPGA-enabled heterogeneous HPC cluster platforms.
+We will study performance portability and code optimization techniques on selected application kernels using the latest generation FPGA platforms (e.g., Intel Arria10, Stratix10, Xilinx Alveo) and possibly submit results to relevant venues. We will study low-level drivers, runtime system, compiler technologies, dynamic resource management techniques and algorithm mapping techniques for future FPGA-enabled heterogeneous HPC cluster platforms.
 
 ## References
 
