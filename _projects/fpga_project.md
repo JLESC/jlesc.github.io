@@ -72,7 +72,7 @@ Like previous year, we co-organized a panel session and a bird-of-feather sessio
 ## Results for 2020/2021
 We organized break-out session at JLESC 11th and 12th workshops titled "Heterogeneous and reconfigurable architectures for the future of computing". 
 
-## Results for 2020/2021
+## Results for 2021/2022
 We organized break-out session at JLESC 13th workshops titled "Heterogeneous and reconfigurable architectures for the future of computing". 
 
 ## Visits and meetings
