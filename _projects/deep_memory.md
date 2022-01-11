@@ -49,7 +49,32 @@ python distributed RL framework developed by RIKEN.
 
 ## Results for 2020/2021
 
-We have extended the gem5 simulator to support heterogeneous memory devices and we have been working on interfacing runtime information between gem5 and python based ML frameworks (e.g., pytorch). The ultimate goal is to drive decisions on memory allocations and data movement in heterogeneous memory environments using machine learning in real time.
+We have extended the gem5 simulator to support heterogeneous memory devices and
+we have been working on interfacing runtime information between gem5 and python
+based ML frameworks (e.g., pytorch). The ultimate goal is to drive decisions on
+memory allocations and data movement in heterogeneous memory environments using
+machine learning in real time.
+
+## Results for 2021/2022
+
+As compute nodes complexity in high-performance computing (HPC) keeps
+increasing, systems equipped with heterogeneous memory devices are becoming
+paramount. Efficiently utilizing heterogeneous memory based systems, however,
+poses significant challenges to application developers. System software level
+transparent solutions utilizing artificial intelligence and machine learning
+based approaches, in particular non-supervised learning based methods such as
+reinforcement learning, may come to the rescue. However, such methods require
+rapid estimation of execution runtime as a function of the data layout across
+memory devices for exploring different data placement strategies, rendering
+architecture-level simulators impractical for this purpose. We introduced a
+differential tracing based approach using memory access traces obtained by
+high-frequency sampling-based methods on real hardware running out of different
+memory devices. We developed a runtime estimator based on such traces that
+provides an execution time estimate orders of magnitudes faster than full
+system simulators. On a number of HPC mini-applications we showed that the
+estimator predicts runtime with an average error of 4.4% compared to
+measurements on real hardware.  There is a paper in progress and a short talk
+about this work was given on the last JLESC Workshop.
 
 ## Visits and meetings
 
