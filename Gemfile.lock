@@ -8,10 +8,10 @@ GIT
 
 GIT
   remote: git://github.com/torbjoernk/jekyll-toc.git
-  revision: c5df2e5077ab55b39d7f084797a1d7894d4447ba
+  revision: 8e0ba0157f1984f5e5a7d358550b10c8b753febe
   branch: feature/separate-filters
   specs:
-    jekyll-toc (0.0.5)
+    jekyll-toc (0.1.0)
       nokogiri (~> 1.6)
 
 GEM
@@ -102,7 +102,7 @@ GEM
     mini_magick (4.9.5)
     mini_portile2 (2.4.0)
     namae (1.0.1)
-    nokogiri (1.10.8)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)

@@ -12,6 +12,9 @@ jobs:
   jekyll:
     runs-on: ubuntu-latest
     steps:
+      - name: Fix git pull
+        run: git config --global url."https://".insteadOf git:// 
+        
       - name: 📂 setup
         uses: actions/checkout@v2
 
