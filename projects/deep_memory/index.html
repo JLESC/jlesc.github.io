@@ -162,6 +162,7 @@
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
@@ -205,7 +206,33 @@ python distributed RL framework developed by RIKEN.</p>
 <h2 id="results-for-20202021">
 <a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
 
-<p>We have extended the gem5 simulator to support heterogeneous memory devices and we have been working on interfacing runtime information between gem5 and python based ML frameworks (e.g., pytorch). The ultimate goal is to drive decisions on memory allocations and data movement in heterogeneous memory environments using machine learning in real time.</p>
+<p>We have extended the gem5 simulator to support heterogeneous memory devices and
+we have been working on interfacing runtime information between gem5 and python
+based ML frameworks (e.g., pytorch). The ultimate goal is to drive decisions on
+memory allocations and data movement in heterogeneous memory environments using
+machine learning in real time.</p>
+
+<h2 id="results-for-20212022">
+<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+
+<p>As compute nodes complexity in high-performance computing (HPC) keeps
+increasing, systems equipped with heterogeneous memory devices are becoming
+paramount. Efficiently utilizing heterogeneous memory based systems, however,
+poses significant challenges to application developers. System software level
+transparent solutions utilizing artificial intelligence and machine learning
+based approaches, in particular non-supervised learning based methods such as
+reinforcement learning, may come to the rescue. However, such methods require
+rapid estimation of execution runtime as a function of the data layout across
+memory devices for exploring different data placement strategies, rendering
+architecture-level simulators impractical for this purpose. We introduced a
+differential tracing based approach using memory access traces obtained by
+high-frequency sampling-based methods on real hardware running out of different
+memory devices. We developed a runtime estimator based on such traces that
+provides an execution time estimate orders of magnitudes faster than full
+system simulators. On a number of HPC mini-applications we showed that the
+estimator predicts runtime with an average error of 4.4% compared to
+measurements on real hardware.  There is a paper in progress and a short talk
+about this work was given on the last JLESC Workshop.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
