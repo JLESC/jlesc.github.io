@@ -229,6 +229,16 @@ Scientific computation increasingly consists of a workflow of interrelated tasks
 
 In 2020, we started a new collaboration between ANL and UTK, and hosted Tanner Hobson as a summer student, where he developed the Dhmem software that enables shared-memory communication for containerized workflows. We published our results in IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid21) {% cite Hobson2020Dhmem --file jlesc.bib %}.
 
+## Results for 2021/2022
+
+### Dynamic Heterogeneous Task Specification and Execution for In Situ Workflows
+
+ * Orcun Yildiz, Bogdan Nicolae and Tom Peterka of ANL
+
+Today's science campaigns consist of multiple tasks with wide-ranging data and computing requirements, and rarely are all the required capabilities found in current in situ workflow systems. In this work, we explore providing increased capabilities for scientific computing by bringing new capabilities to in situ workflows: a flexible interface for workflow specification, heterogeneous task placement, and dynamic changes to the workflow task graph. We evaluate our approach using materials science and cosmology use cases. Our results show that our approach (i) can save time and resources in science workflows exhibiting dynamic patterns by enabling dynamic workflow changes during their lifetime; (ii) enables easier specification of large-scale workflows consisting of subgraphs and ensemble computations; (iii) efficiently coordinates heterogeneous tasks by enabling free intermixing of time and space partitioning, thus resulting in time and space savings.
+
+We have published our results in 2021 IEEE Workshop on Workflows in Support of Large-Scale Science (WORKS). In 2022, we will continue to apply our approach, dynamic heterogenous in situ workflows, to several science use cases including elastic distributed deep learning use cases. This is a joint project between Orcun Yildiz, Bogdan Nicolae and Tom Peterka of ANL, and we are actively looking for students to help us with this project.
+
 ## Visits and meetings
 
  * Pierre-Louis Guhur of ENS 9 months at ANL in 2016
