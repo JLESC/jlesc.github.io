@@ -1318,6 +1318,15 @@ lachat_c:
   topics:
   email: cedric.lachat@inria.fr
   homepage:
+  
+lama_v:
+  sur_name: Lama
+  given_name: Vanessa
+  affiliation: utk
+  position:
+  topics: HPC
+  email: vlama@vols.utk.edu
+  homepage:
 
 lanteri_s:
   sur_name: Lanteri
