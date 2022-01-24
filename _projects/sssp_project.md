@@ -66,6 +66,10 @@ We have organized a mini symposium about performance metrics at SIAM PP20, Seatt
 
 We have published an article in Jornal of Supercomputing {% cite TsujEtAl2021 --file jlesc.bib %}. The manuscript includes discussions and experiments performed in this project. 
 
+## Results for 2021/2022
+
+We have performed some experiments on the supercomputer Fugaku, which started its oficial operation in March 2021, and have confirmed that the results were consistent with the previous experiments. 
+
 ## Visits and meetings
 
 Miwako Tsuji visited NCSA in January 2017.
