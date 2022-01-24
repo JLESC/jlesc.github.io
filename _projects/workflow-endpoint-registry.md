@@ -116,6 +116,14 @@ published configurations and map them to our common schema
 
 ## Results for 2020/2021
 
+The BSC team, in the context of the eFLows4HPC project, has developed an extension of the PyCOMPSs programming model to allow the integration of 3rd party software execution within a PyCOMPSs workflow with a simple JSON description. This integration is done with a new python decorator which is located on top of a python function which represent the 3rd party software invation, as indicated below. 
+```
+@software (config_file=software_description.json) 
+def external_software(params):
+  pass
+```
+The software_description.json can be stored locally or retrieved from a repository and provides a description of how the software is executed, If it is a multicore binary execution, mpi application, service invocation, etc. This description is processed by the PyCOMPSs runtime which replaces the method call by the application executed indicated in the description. A code example can be found in this link
+https://github.com/bsc-wdc/compss/blob/stable/tests/sources/local/python/1_decorator_software/src/modules/testSoftwareDecorator.py
 
 ## Visits and meetings
 
