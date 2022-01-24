@@ -122,8 +122,7 @@ The BSC team, in the context of the eFLows4HPC project, has developed an extensi
 def external_software(params):
   pass
 ```
-The software_description.json can be stored locally or retrieved from a repository and provides a description of how the software is executed, If it is a multicore binary execution, mpi application, service invocation, etc. This description is processed by the PyCOMPSs runtime which replaces the method call by the application executed indicated in the description. A code example can be found in this link
-https://github.com/bsc-wdc/compss/blob/stable/tests/sources/local/python/1_decorator_software/src/modules/testSoftwareDecorator.py
+The software_description.json can be stored locally or retrieved from a repository and provides a description of how the software is executed, If it is a multicore binary execution, mpi application, service invocation, etc. This description is processed by the PyCOMPSs runtime which replaces the method call by the application executed indicated in the description. A code example can be found in this [link](https://github.com/bsc-wdc/compss/blob/stable/tests/sources/local/python/1_decorator_software/src/modules/testSoftwareDecorator.py)
 
 ## Visits and meetings
 
