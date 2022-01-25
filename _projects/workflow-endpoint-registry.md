@@ -124,6 +124,18 @@ def external_software(params):
 ```
 The software_description.json can be stored locally or retrieved from a repository and provides a description of how the software is executed, If it is a multicore binary execution, mpi application, service invocation, etc. This description is processed by the PyCOMPSs runtime which replaces the method call by the application executed indicated in the description. A code example can be found in this [link](https://github.com/bsc-wdc/compss/blob/stable/tests/sources/local/python/1_decorator_software/src/modules/testSoftwareDecorator.py)
 
+In collaboration with the ECP ExaWorks project, we have contributed to the definition 
+and development of PSI/J, a common Python library for managing asynchronous execution
+of jobs on schedulers. 
+We contributed to the [specification](https://exaworks.org/job-api-spec/specification.html) 
+and the [Python library](https://github.com/ExaWorks/psi-j-python). 
+The evolving implementation currently supports Slurm, Cobalt, Flux, and LSF. 
+
+We have also worked with the Science Gateways Community Institute to provide feedback on 
+the [SGCI Resource Inventory](https://sgci-resource-inventory.readthedocs.io/en/latest/). 
+This initiative shares similar goals to our work in the NSF community. The inventory
+includes a JSON schema and a GitHub-based flow for cataloging systems. 
+
 ## Visits and meetings
 
 
