@@ -166,6 +166,7 @@
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -223,6 +224,28 @@ memory size, but long compression/decompression times results in slowdown.</p>
 
 <p>To protect compressed data from catastrophic corruption due to silent data corruption caused by a soft error, we develop the automated resiliency for compression (ARC) tool. ARC applies error-correcting codes to lossy compressed data to detect/correct silent data corruption. Results show that ARC is able to protect against potentially100-1000s of bit-flips in the compressed arrays with encoding and decoding bandwidths up to 3.6 GB/s on a modern multi-core CPU.</p>
 
+<h2 id="results-for-20212022">
+<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+
+<p>The ARC library developed in the previous year was published at HPDC 2021. The
+source code is publicly available on <a href="https://github.com/FTHPC/ARC">github</a>.
+This work is being extended to work for in-compression and data transfer
+scenarios.</p>
+
+<p>Development of an in-line compression library for large data arrays is in
+development. This year’s progress explores the performance impact of operating
+on in-line compressed arrays in HPC kernels (e.g., matrix-matrix
+multiplication, FFT, SpMV, Jacobi). We explore several strategies of using
+in-line compressed arrays and determine how applicable different types of
+parallelization are. This work is being compiled into a publication for 2022.
+To improve the performance of algorithms that operation on in-line compressed
+arrays, we can cache in a software managed cache decompressed regions that are
+part of the current working set. We are developing a cache simulator for
+in-line compressed arrays to determine the best configuration to maximize
+performance for certain kernels and access patterns. This work is being
+compiled into a publication for 2022. These works will be used in the current
+integration of lossy compression into PySDC.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -230,7 +253,6 @@ memory size, but long compression/decompression times results in slowdown.</p>
   <li>Completed: Visit by Mirco Altenbernd to Clemson, Spring 2019 for 2 months.</li>
   <li>Completed: Present talk at JLESC Meeting in Knoxville, April 2019.</li>
   <li>Completed: Brief meetup and presented in progress work at SPPEXA workshop in Dresden, October 2019.</li>
-  <li>Planned: Present talk at JLESC Meeting in Bonn, April 2020.</li>
 </ul>
 
 <h2 id="impact-and-publications">
@@ -238,6 +260,8 @@ memory size, but long compression/decompression times results in slowdown.</p>
 
 <ul>
   <li>One ACM student research competition poster at Supercomputing 2019.</li>
+  <li>Publication at HPDC 2021 on Resilience of lossy compressed data.</li>
+  <li>One ACM student research competition poster at Supercomputing 2021.</li>
 </ul>
 
 <ol class="bibliography"></ol>
