@@ -2,7 +2,7 @@
 layout: page_project
 title: Effective Use of Lossy Compression for Numerical Linear Algebra Resilience and Performance 
 date: 2019-01-22
-updated: 2020-02-27
+updated: 2022-01-25
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -66,18 +66,40 @@ Integration of in-line lossy compression was explored using ZFP compressed array
 
 To protect compressed data from catastrophic corruption due to silent data corruption caused by a soft error, we develop the automated resiliency for compression (ARC) tool. ARC applies error-correcting codes to lossy compressed data to detect/correct silent data corruption. Results show that ARC is able to protect against potentially100-1000s of bit-flips in the compressed arrays with encoding and decoding bandwidths up to 3.6 GB/s on a modern multi-core CPU.
 
+## Results for 2021/2022
+
+The ARC library developed in the previous year was published at HPDC 2021. The
+source code is publicly available on [github](https://github.com/FTHPC/ARC).
+This work is being extended to work for in-compression and data transfer
+scenarios.
+
+Development of an in-line compression library for large data arrays is in
+development. This year's progress explores the performance impact of operating
+on in-line compressed arrays in HPC kernels (e.g., matrix-matrix
+multiplication, FFT, SpMV, Jacobi). We explore several strategies of using
+in-line compressed arrays and determine how applicable different types of
+parallelization are. This work is being compiled into a publication for 2022.
+To improve the performance of algorithms that operation on in-line compressed
+arrays, we can cache in a software managed cache decompressed regions that are
+part of the current working set. We are developing a cache simulator for
+in-line compressed arrays to determine the best configuration to maximize
+performance for certain kernels and access patterns. This work is being
+compiled into a publication for 2022. These works will be used in the current
+integration of lossy compression into PySDC.
 
 ## Visits and meetings
 
 * Completed: Visit by Mirco Altenbernd to Clemson, Spring 2019 for 2 months.
 * Completed: Present talk at JLESC Meeting in Knoxville, April 2019.
 * Completed: Brief meetup and presented in progress work at SPPEXA workshop in Dresden, October 2019.
-* Planned: Present talk at JLESC Meeting in Bonn, April 2020.
+
 
 
 ## Impact and publications
 
 * One ACM student research competition poster at Supercomputing 2019.
+* Publication at HPDC 2021 on Resilience of lossy compressed data.
+* One ACM student research competition poster at Supercomputing 2021.
 
 {% bibliography --cited --file jlesc.bib %}
 
