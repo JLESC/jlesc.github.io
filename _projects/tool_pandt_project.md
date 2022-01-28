@@ -11,7 +11,9 @@ status: running
 topics:
   - perf_tools
 keywords:
-  -
+  - porting
+  - tuning
+  - tools
 head: wylie_b
 members:
   - tsuji_m
@@ -23,7 +25,8 @@ members:
 
 ## Research topic and goals
 
-Application developers targeting extreme-scale HPC systems such as Fugaku, and modular supercomputing architectures such as JUWELS Cluster+Booster, need effective tools to assist with porting and tuning for these unusual systems. 
+Application developers targeting extreme-scale HPC systems such as Fugaku, heterogeneous systems such as MN4 CTE-POWER/ARM/AMD, 
+and modular supercomputing architectures such as JUWELS Cluster+Booster, need effective tools to assist with porting and tuning for these unusual systems. 
 The XcalableMP compilation system (and directive-based language) {% cite LeeSato2010 --file external/tool_pandt_project.bib %}
 {% cite TsujiEtAl2013 --file external/tool_pandt_project.bib  %}, Scalasca/Score-P execution
 measurement and analysis tools {% cite GeimerEtAl2010 --file external/tool_pandt_project.bib  %}
@@ -88,12 +91,21 @@ and help direct development of new tool capabilities.
 
 * Initial Score-P porting to Fugaku.
 * Implementation of experimental POP metrics for hybrid MPI+OMP within CUBE GUI.
-* Virtual tools training for EPCC, HLRS, CINECA, CSC/Frankfurt using local HPC systems.
+* Virtual tools training for EPCC, HLRS, CINECA & CSC/Frankfurt using local HPC systems.
+
+## Results for 2021/2022
+
+* Continued Score-P porting to Fugaku.
+* Virtual tools training for NHR/Erlangen, POP & LRZ using local HPC systems.
+* Virtual tutorial on POP parallel performance analysis methodology given at ISC-HPC'21.
 
 ## Visits and meetings
 
 Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and ParCo conferences, and events hosted by project partners.  Meeting with MYX project {% cite MYXproject --file external/tool_pandt_project.bib %} members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.
 
+2015/12/01: RIKEN-AICS instructors visited JSC to deliver training with XcalableMP.
+2016/02/24-26: BSC & JSC instructors visited RIKEN-AICS to deliver training as part of VI-HPS Tuning Workshop.
+2019/04/09-12: BSC & JSC instructors visited UTK-ICL to deliver training as part of VI-HPS Tuning Workshop. 
 Visits planned for the next 12 months: none
 
 ## Impact and publications
@@ -104,11 +116,7 @@ POP standard metrics applied in POP services performance analyses.
 
 ## Future plans
 
-Further XcalableMP support for XMPT and tasklet directive.
-Existing integration of XcalableMP and Scalasca updated to the latest
-community-developed Score-P instrumentation and measurement infrastructure.  
-Investigate Extrae and Score-P support required for XcalableMP.
-Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN FIBER mini-apps and other applications.
+Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN applications.
 Large-scale application performance measurements on Fugaku and other HPC systems.
 HPC Tunathon at JSC scaling applications on JUWELS CPUs and GPUs.
 Workshops and training organised under the auspices of VI-HPS 
