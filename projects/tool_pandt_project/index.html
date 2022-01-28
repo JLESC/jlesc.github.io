@@ -119,7 +119,11 @@
         <label class="col-sm-4">Keywords</label>
         <div class="col-sm-8">
           
-            <span class="clearfix"></span>
+            <span class="clearfix">porting</span>
+          
+            <span class="clearfix">tuning</span>
+          
+            <span class="clearfix">tools</span>
           
         </div>
       </li>
@@ -184,6 +188,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -196,7 +201,8 @@
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
 
-<p>Application developers targeting extreme-scale HPC systems such as Fugaku, and modular supercomputing architectures such as JUWELS Cluster+Booster, need effective tools to assist with porting and tuning for these unusual systems. 
+<p>Application developers targeting extreme-scale HPC systems such as Fugaku, heterogeneous systems such as MN4 CTE-POWER/ARM/AMD, 
+and modular supercomputing architectures such as JUWELS Cluster+Booster, need effective tools to assist with porting and tuning for these unusual systems. 
 The XcalableMP compilation system (and directive-based language) <a href="#LeeSato2010">(Lee and Sato 2010)</a>
 <a href="#TsujiEtAl2013">(Tsuji et al. 2013)</a>, Scalasca/Score-P execution
 measurement and analysis tools <a href="#GeimerEtAl2010">(Geimer et al. 2010)</a>
@@ -282,7 +288,16 @@ and help direct development of new tool capabilities.</p>
 <ul>
   <li>Initial Score-P porting to Fugaku.</li>
   <li>Implementation of experimental POP metrics for hybrid MPI+OMP within CUBE GUI.</li>
-  <li>Virtual tools training for EPCC, HLRS, CINECA, CSC/Frankfurt using local HPC systems.</li>
+  <li>Virtual tools training for EPCC, HLRS, CINECA &amp; CSC/Frankfurt using local HPC systems.</li>
+</ul>
+
+<h2 id="results-for-20212022">
+<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+
+<ul>
+  <li>Continued Score-P porting to Fugaku.</li>
+  <li>Virtual tools training for NHR/Erlangen, POP &amp; LRZ using local HPC systems.</li>
+  <li>Virtual tutorial on POP parallel performance analysis methodology given at ISC-HPC’21.</li>
 </ul>
 
 <h2 id="visits-and-meetings">
@@ -290,7 +305,10 @@ and help direct development of new tool capabilities.</p>
 
 <p>Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and ParCo conferences, and events hosted by project partners.  Meeting with MYX project <a href="#MYXproject">(“Project MYX” 2016)</a> members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.</p>
 
-<p>Visits planned for the next 12 months: none</p>
+<p>2015/12/01: RIKEN-AICS instructors visited JSC to deliver training with XcalableMP.
+2016/02/24-26: BSC &amp; JSC instructors visited RIKEN-AICS to deliver training as part of VI-HPS Tuning Workshop.
+2019/04/09-12: BSC &amp; JSC instructors visited UTK-ICL to deliver training as part of VI-HPS Tuning Workshop. 
+Visits planned for the next 12 months: none</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -301,11 +319,7 @@ and help direct development of new tool capabilities.</p>
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>Further XcalableMP support for XMPT and tasklet directive.
-Existing integration of XcalableMP and Scalasca updated to the latest
-community-developed Score-P instrumentation and measurement infrastructure.<br>
-Investigate Extrae and Score-P support required for XcalableMP.
-Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN FIBER mini-apps and other applications.
+<p>Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN applications.
 Large-scale application performance measurements on Fugaku and other HPC systems.
 HPC Tunathon at JSC scaling applications on JUWELS CPUs and GPUs.
 Workshops and training organised under the auspices of VI-HPS 
