@@ -683,6 +683,14 @@ dreher_m:
   email: mdreher@anl.gov
   homepage: http://www.mcs.anl.gov/person/matthieu-dreher
 
+du_y:
+  sur_name: Du
+  given_name: Yishu
+  affiliation: inria
+  position: phd
+  email: yishu.du@ens-lyon.fr
+  homepage:
+
 dun_n:
   sur_name: Dun
   given_name: Nan
@@ -1874,6 +1882,15 @@ perez_j:
   position: permanent
   topics:
   email: josep.m.perez@bsc.es
+  homepage:
+
+perotin_l:
+  sur_name: Perotin
+  given_name: Lucas
+  position: phd
+  affiliation: inria
+  topics:
+  email: lucas.perotin@ens-lyon.fr
   homepage:
 
 pertin_d:
