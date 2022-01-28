@@ -88,6 +88,9 @@ We organized break-out session at JLESC 13th workshops titled "Heterogeneous and
 The team is submitting a proposal to DOE on this topic.
 The team has also been making significant effort to develop a community about reconfigurable high-performance computing. We have successfully identified major players in this field and planning upcoming workloads co-held with major FPGA conferences.
 
+* A paper at Smokey Mountain Conference 2021 on hardware co-design methodology {% citi yoshii2021hardware --file jlesc.bib %}
+* A paper at IEEE ASAP 2021 on virtualization of networks of FPGA clusters  {% citi ueno2021virtual --file jlesc.bib %}
+
 {% bibliography --cited --file jlesc.bib %}
 
 
