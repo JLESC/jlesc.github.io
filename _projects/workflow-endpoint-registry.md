@@ -136,6 +136,9 @@ the [SGCI Resource Inventory](https://sgci-resource-inventory.readthedocs.io/en/
 This initiative shares similar goals to our work in the NSF community. The inventory
 includes a JSON schema and a GitHub-based flow for cataloging systems. 
 
+We've also been involved in spinning up the [Workflows Community Initiative](https://workflows.community),
+which is another part to build buy-in for this work.
+
 ## Visits and meetings
 
 
@@ -179,7 +182,7 @@ potentially along with curation, or perhaps community curated, using WikiData
 
 ### Timeline:
 
-The initial work that we propose here is
+The initial work that proposed is
 
 1. defining the schema for the registry, and implementing it as a REST service
 2. building some test elements, and entering them manually
