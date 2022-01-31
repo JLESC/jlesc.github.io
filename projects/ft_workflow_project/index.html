@@ -161,6 +161,10 @@
             </span>
           
             <span class="clearfix">
+              <span class="person given-name">Yishu</span> <span class="person sur-name">Du</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
               <span class="person given-name">Li</span> <span class="person sur-name">Han</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
@@ -173,7 +177,15 @@
             </span>
           
             <span class="clearfix">
+              <span class="person given-name">Lucas</span> <span class="person sur-name">Perotin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
               <span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Hongyang</span> <span class="person sur-name">Sun</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
             <span class="clearfix">
@@ -204,6 +216,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -352,7 +365,93 @@ that both approaches can be used for RC. We provide a synthetic presentation of
 all methods before discussing their pros and cons.  We have implemented all
 these methods with calls to optimized BLAS routines, and we provide performance
 data for a wide range of failure rates and matrix sizes. In addition, with
-respect to the literature, we have  considered relatively high error rates.</p>
+respect to the literature, we have considered relatively high error rates.</p>
+
+<h2 id="results-for-20212022">
+<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+
+<p>At Inria, we have pursued the work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms, and an extension of the results has been published in Transactions on Computers (TC) in August 2021 <a href="#BenoitEtAl2021">(Benoit et al. 2021)</a>.</p>
+
+<p>At UTK, there has been some work on several fronts:</p>
+
+<ul>
+  <li>
+    <p>Interruption Scope: Failure detection and subsequent error reporting is the starting point
+of the entire recovery procedure.
+In the ULFM fault tolerant MPI, the scope of error reporting has been
+limited to processes that perform a direct communication operation with a failed
+process. The main rationale is found in application use cases
+(e.g., master/worker, stencil, job-stealing, etc.) that operate under the
+assumption that communication between non-failed processes should proceed
+without interruption (running through failures except when critical).
+However, when considering complex applications comprised on multiple software modules,
+certain modules may require more thorough information about errors.
+Many recovery techniques are global in nature, and a fault
+must trigger a recovery action in all modules of the application—including in processes that
+may not be currently involved in communications  for the module.
+Thus we added controls that can set MPI communicators in a mode that
+will implicitly interrupt MPI communication on the communicator when any
+process on the communicator group, or in the entire application, has failed.
+The benefit of this scoped recovery is to significantly improve on the
+complexity of the error management
+code by streamlining multiple error paths, making implicit the propagation
+of errors when appropriate, and enable cross-module, cross-library
+response to faults.</p>
+  </li>
+  <li>
+    <p>Uniform Errors: Collective communication in MPI are a powerful tool for expressing patterns
+where a group of processes participate in the same communication
+operation. By abstracting the intent of the communication pattern, the
+operation can help the user structure the code flow, and let the MPI
+implementation optimize.
+A simplistic assumption postulates that such structuring features
+would translate intact into a regime with failures.
+A notable aspect is if errors should be raised <em>uniformly</em>, that is
+the same error code is returned at all rank by the same collective operation.
+While this is desirable for the structuring aspect this gives to fault tolerant
+codes, this also entails a significant overhead in most cases as
+it adds a supplementary concensus,
+an extra fault tolerant synchronization step that is not required by the
+semantic of the underlying communication. Thus, to protect
+fault-free performance, users need to be able to control when such
+concensus are performed. The MPI_COMM_AGREE operation has provided
+an explicit means for users to synchronize in a fault tolerant fashion
+when the need arises.
+We added a per-communicator property (practically,
+by setting specific MPI Info keys on the communicator) that
+lets the user decide whether collective operations on the communicator
+should operate at maximum speed (non-uniform) or with implicit safety
+(uniform error reporting at all ranks). This control enables a
+distinction between pure communication operations (which are often critical for
+performance) and setup/management operations (like operations that create
+new communicators, or operations that change the logical epoch in the algorithm).</p>
+  </li>
+  <li>
+    <p>Asynchronous Recovery: 
+The MPI_COMM_SHRINK operation provides the operational
+construct that permits recreating a fully functional communication
+context in which not only select point-to-point communication but
+also collective communication can be carried. The core of the operation
+relies on agreeing on the set of failed processes that need to be excluded
+from the input communicator and then producing a resultant communicator with
+a well-specified membership of processes. The current definition of
+the shrink operation is blocking and synchronous, which limits the
+opportunity for overlapping its cost.
+We introduce a new non-blocking variant of the shrink
+operation, MPIX_COMM_ISHRINK(comm, newcomm, req). To support
+this operation, we designed a non-blocking variant of the
+consensus-like elimination of failed processes as well
+as the selection of the internal context identifier (a unique number
+that is used to match MPI messages to the correct communicator on which
+the operation was posted). The expected advantages are multiple.
+Some applications may have to recover multiple communicators after a failure;
+with the availability of the non-blocking shrink, these multiple shrink operation have an
+opportunity to overlap one another.
+The non-blocking shrink also gives an opportunity for overlap between the
+cost of rebuilding communicators with the cost of restoring the application
+dataset (e.g., reloading checkpoints, computing checksum on data, etc.).</p>
+  </li>
+</ul>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -392,7 +491,48 @@ on failure-prone HPC platforms was published in Resilience’18 <a href="#LeFevr
 
 <p>The work on the comparison of several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication was published at Resilience’20 <a href="#LeFevreEtAl2020">(Fèvre et al. 2020)</a>.</p>
 
+<p>The work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms was published in IEEE TC in 2021 <a href="#BenoitEtAl2021">(Benoit et al. 2021)</a>.</p>
+
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BenoitEtAl2021
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBenoitEtAl2021Bibtex" aria-expanded="false" aria-controls="collapseBenoitEtAl2021Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBenoitEtAl2021Abstract" aria-expanded="false" aria-controls="collapseBenoitEtAl2021Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BenoitEtAl2021">Benoit, Anne, Valentin Le Fèvre, Lucas Perotin, Padma Raghavan, Yves Robert, and Hongyang Sun. 2021. “Resilient Scheduling of Moldable Parallel Jobs to Cope with Silent Errors.” <i>IEEE Transactions on Computers</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBenoitEtAl2021Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{BenoitEtAl2021,
+  author = {Benoit, Anne and Fèvre, Valentin Le and Perotin, Lucas and Raghavan, Padma and Robert, Yves and Sun, Hongyang},
+  journal = {IEEE Transactions on Computers},
+  title = {Resilient scheduling of moldable parallel jobs to cope with silent errors},
+  year = {2021}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
