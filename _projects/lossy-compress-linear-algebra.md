@@ -85,7 +85,7 @@ part of the current working set. We are developing a cache simulator for
 in-line compressed arrays to determine the best configuration to maximize
 performance for certain kernels and access patterns. This work is being
 compiled into a publication for 2022. These works will be used in the current
-integration of lossy compression into PySDC.
+integration of lossy compression into pySDC.
 
 ## Visits and meetings
 
@@ -98,7 +98,7 @@ integration of lossy compression into PySDC.
 ## Impact and publications
 
 * One ACM student research competition poster at Supercomputing 2019.
-* Publication at HPDC 2021 on Resilience of lossy compressed data.
+* Publication at HPDC 2021 on Resilience of lossy compressed data {% cite Fulp:HPDC2021:ARC --file external/lossy-compress-linear-algebra.bib %}.
 * One ACM student research competition poster at Supercomputing 2021.
 
 {% bibliography --cited --file jlesc.bib %}
