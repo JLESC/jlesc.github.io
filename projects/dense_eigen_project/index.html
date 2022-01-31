@@ -171,6 +171,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
 <li class="toc-entry toc-h2"><a href="#software-update-and-descriptions">Software update and descriptions:</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
@@ -348,11 +349,30 @@ We confirmed the libraries are ported and perform on the systems;
   </li>
 </ol>
 
+<h2 id="results-for-20212022">
+<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+
+<p>Our activity in 2021/2022 was minimal as in 2020/2021. However, after the official launch of the supercomputer Fugaku in March 2021, we have had several benchmarks on Fugaku and established similar outstanding results compared to the previous system (K computer). As follow as the format in previous years, we can summarize.</p>
+
+<ol>
+  <li>(Cont.) Distributed MPI/OpenMP Parallel
+    <ul>
+      <li>The latest EigenExa (version 2.11) was released in December 2021. It performs stably not only on Fugaku but other cluster systems.</li>
+      <li>With 4096 compute nodes (about 16PFLOPS), the eigenvalue calculation of a million-dimensional matrix was achieved in less than an hour. It is roughly comparable to the performance of the K-computer.</li>
+    </ul>
+  </li>
+  <li>(Cont.) GPU extensions (standalone/cluster)
+    <ul>
+      <li>EigenG, GPU version of EigenExa, was confirmed to perform on an A100 card with a matrix size up to 60.000 dimensions.</li>
+    </ul>
+  </li>
+</ol>
+
 <h2 id="software-update-and-descriptions">
 <a id="software-update-and-descriptions" class="anchor" href="#software-update-and-descriptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Software update and descriptions:</h2>
 
 <ul>
-  <li>EigenExa : 2.4d and 2.6</li>
+  <li>EigenExa : stable version 2.11 (relases on December 2021)</li>
   <li>ELPA : 2018.11.001, 2019.05.001 for devel stage, and 2019.11.001 for next stage.
      include support for GPU acceleration for ELPA1 and 2.</li>
 </ul>
