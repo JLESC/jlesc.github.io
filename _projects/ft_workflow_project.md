@@ -2,7 +2,7 @@
 layout: page_project
 title: Optimization of Fault-Tolerance Strategies for Workflow Applications
 date: 2016-03-16
-updated: 2020-02-25
+updated: 2022-01-28
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -20,10 +20,13 @@ members:
   - bouteiller_a
   - cappello_f
   - cavelan_a
+  - du_y
   - han_l
   - herault_t
   - lefevre_v
+  - perotin_l
   - robert_y
+  - sun_h
   - vivien_f
 ---
 {% comment %}
@@ -227,7 +230,87 @@ that both approaches can be used for RC. We provide a synthetic presentation of
 all methods before discussing their pros and cons.  We have implemented all
 these methods with calls to optimized BLAS routines, and we provide performance
 data for a wide range of failure rates and matrix sizes. In addition, with
-respect to the literature, we have  considered relatively high error rates.
+respect to the literature, we have considered relatively high error rates.
+
+## Results for 2021/2022
+
+At Inria, we have pursued the work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms, and an extension of the results has been published in Transactions on Computers (TC) in August 2021 {% cite BenoitEtAl2021 --file jlesc.bib %}.
+
+At UTK, there has been some work on several fronts:
+
+* Interruption Scope: Failure detection and subsequent error reporting is the starting point
+of the entire recovery procedure.
+In the ULFM fault tolerant MPI, the scope of error reporting has been
+limited to processes that perform a direct communication operation with a failed
+process. The main rationale is found in application use cases
+(e.g., master/worker, stencil, job-stealing, etc.) that operate under the
+assumption that communication between non-failed processes should proceed
+without interruption (running through failures except when critical).
+However, when considering complex applications comprised on multiple software modules,
+certain modules may require more thorough information about errors.
+Many recovery techniques are global in nature, and a fault
+must trigger a recovery action in all modules of the application---including in processes that
+may not be currently involved in communications  for the module.
+Thus we added controls that can set MPI communicators in a mode that
+will implicitly interrupt MPI communication on the communicator when any
+process on the communicator group, or in the entire application, has failed.
+The benefit of this scoped recovery is to significantly improve on the
+complexity of the error management
+code by streamlining multiple error paths, making implicit the propagation
+of errors when appropriate, and enable cross-module, cross-library
+response to faults.
+
+* Uniform Errors: Collective communication in MPI are a powerful tool for expressing patterns
+where a group of processes participate in the same communication
+operation. By abstracting the intent of the communication pattern, the
+operation can help the user structure the code flow, and let the MPI
+implementation optimize.
+A simplistic assumption postulates that such structuring features
+would translate intact into a regime with failures.
+A notable aspect is if errors should be raised _uniformly_, that is
+the same error code is returned at all rank by the same collective operation.
+While this is desirable for the structuring aspect this gives to fault tolerant
+codes, this also entails a significant overhead in most cases as
+it adds a supplementary concensus,
+an extra fault tolerant synchronization step that is not required by the
+semantic of the underlying communication. Thus, to protect
+fault-free performance, users need to be able to control when such
+concensus are performed. The MPI_COMM_AGREE operation has provided
+an explicit means for users to synchronize in a fault tolerant fashion
+when the need arises.
+We added a per-communicator property (practically,
+by setting specific MPI Info keys on the communicator) that
+lets the user decide whether collective operations on the communicator
+should operate at maximum speed (non-uniform) or with implicit safety
+(uniform error reporting at all ranks). This control enables a
+distinction between pure communication operations (which are often critical for
+performance) and setup/management operations (like operations that create
+new communicators, or operations that change the logical epoch in the algorithm).
+
+* Asynchronous Recovery: 
+The MPI_COMM_SHRINK operation provides the operational
+construct that permits recreating a fully functional communication
+context in which not only select point-to-point communication but
+also collective communication can be carried. The core of the operation
+relies on agreeing on the set of failed processes that need to be excluded
+from the input communicator and then producing a resultant communicator with
+a well-specified membership of processes. The current definition of
+the shrink operation is blocking and synchronous, which limits the
+opportunity for overlapping its cost.
+We introduce a new non-blocking variant of the shrink
+operation, MPIX_COMM_ISHRINK(comm, newcomm, req). To support
+this operation, we designed a non-blocking variant of the
+consensus-like elimination of failed processes as well
+as the selection of the internal context identifier (a unique number
+that is used to match MPI messages to the correct communicator on which
+the operation was posted). The expected advantages are multiple.
+Some applications may have to recover multiple communicators after a failure;
+with the availability of the non-blocking shrink, these multiple shrink operation have an
+opportunity to overlap one another.
+The non-blocking shrink also gives an opportunity for overlap between the
+cost of rebuilding communicators with the cost of restoring the application
+dataset (e.g., reloading checkpoints, computing checksum on data, etc.).
+
 
 
 ## Visits and meetings
@@ -267,6 +350,7 @@ The work on replication with checkpointing was published at SC'19 {% cite Benoit
 
 The work on the comparison of several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication was published at Resilience'20 {% cite LeFevreEtAl2020 --file jlesc.bib %}. 
 
+The work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms was published in IEEE TC in 2021 {% cite BenoitEtAl2021 --file jlesc.bib %}.
 
 
 {% comment %}
