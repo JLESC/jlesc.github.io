@@ -124,10 +124,20 @@ Basically, the activity in FY2020 was limited due to the Covid19 pandemic circum
  * Good acceleration both on JUWELS and JURECA all parts of the computation
  * ELPA1 is accelerated very high; however, ELPA2 only shows reasonable acceleration only at a few % of eigenvectors are computed rather than the pure CPU version.
 
+## Results for 2021/2022
+
+Our activity in 2021/2022 was minimal as in 2020/2021. However, after the official launch of the supercomputer Fugaku in March 2021, we have had several benchmarks on Fugaku and established similar outstanding results compared to the previous system (K computer). As follow as the format in previous years, we can summarize.
+
+1. (Cont.) Distributed MPI/OpenMP Parallel
+  * The latest EigenExa (version 2.11) was released in December 2021. It performs stably not only on Fugaku but other cluster systems.
+  * With 4096 compute nodes (about 16PFLOPS), the eigenvalue calculation of a million-dimensional matrix was achieved in less than an hour. It is roughly comparable to the performance of the K-computer.
+
+2. (Cont.) GPU extensions (standalone/cluster)
+  * EigenG, GPU version of EigenExa, was confirmed to perform on an A100 card with a matrix size up to 60.000 dimensions.
 
 ## Software update and descriptions:
 
-* EigenExa : 2.4d and 2.6
+* EigenExa : stable version 2.11 (relases on December 2021)
 * ELPA : 2018.11.001, 2019.05.001 for devel stage, and 2019.11.001 for next stage.
        include support for GPU acceleration for ELPA1 and 2.
 
