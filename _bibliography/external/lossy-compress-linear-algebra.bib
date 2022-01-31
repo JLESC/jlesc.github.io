@@ -64,3 +64,21 @@
   address = {Washington, DC, USA},
 }
 
+@inproceedings{Fulp:HPDC2021:ARC,
+author = {Fulp, Dakota and Poulos, Alexandra and Underwood, Robert and Calhoun, Jon C.},
+title = {ARC: An Automated Approach to Resiliency for Lossy Compressed Data via Error Correcting Codes},
+year = {2021},
+isbn = {9781450382175},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3431379.3460638},
+doi = {10.1145/3431379.3460638},
+abstract = {Progress in high-performance computing (HPC) systems has led to complex applications that stress the I/O subsystem by creating vast amounts of data. Lossy compression reduces data size considerably, but a single error renders lossy compressed data unusable. This sensitivity stems from the high information content per bit in compressed data and is a critical issue as soft errors that cause bit-flips have become increasingly commonplace in HPC systems. While many works have improved lossy compressor performance, few have sought to address this critical weakness.This paper presents ARC: Automated Resiliency for Compression. Given user-defined constraints on storage, throughput, and resiliency, ARC automatically determines the optimal error-correcting code (ECC) configuration before encoding data. We conduct an extensive fault injection study to fully understand the effects of soft errors on lossy compressed data and how to best protect it. We evaluate ARC's scalability, performance, resiliency, and ease of use. We find on a 40 core node that encoding and decoding demonstrate throughput up to 3730 MB/s and 3602 MB/s. ARC also detects and corrects multi-bit errors with a tunable overhead in terms of storage and throughput. Finally, we display the ease of using ARC and how to consider a systems failure rate when determining the constraints.},
+booktitle = {Proceedings of the 30th International Symposium on High-Performance Parallel and Distributed Computing},
+pages = {57–68},
+numpages = {12},
+keywords = {sz, error correcting codes, zfp, error propagation, error-bounded lossy compression, silent data corruption, soft error},
+location = {Virtual Event, Sweden},
+series = {HPDC '21}
+}
+
