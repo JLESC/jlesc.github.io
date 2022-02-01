@@ -19,11 +19,8 @@ members:
   - bosilca_g
   - bouteiller_a
   - cappello_f
-  - cavelan_a
   - du_y
-  - han_l
   - herault_t
-  - lefevre_v
   - perotin_l
   - robert_y
   - sun_h
@@ -236,6 +233,22 @@ respect to the literature, we have considered relatively high error rates.
 
 At Inria, we have pursued the work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms, and an extension of the results has been published in Transactions on Computers (TC) in August 2021 {% cite BenoitEtAl2021 --file jlesc.bib %}.
 
+We have also proposed an optimal checkpointing strategy to protect iterative applications from fail-stop errors. 
+We consider a general framework, where the application repeats the same execution pattern 
+by executing consecutive iterations, and where each iteration is composed of several tasks.
+These tasks have different execution lengths and different checkpoint costs.  
+Assume that there are $n$ tasks, and that task $a_i$ has execution time $t_{i}$ and checkpoint cost $c_{i}$.
+A naive strategy would
+checkpoint after each task. Another naive strategy would checkpoint at the end of each iteration. A strategy inspired by the Young/Daly formula would work for $\sqrt{2 \mu C}$ seconds, where $\mu$ is the application MTBF
+and C is the average checkpoint time, and checkpoint at the end of the current task (and repeat). Another strategy, also
+inspired by the Young/Daly formula, would  select the task $a_{min}$ with smallest checkpoint 
+cost $c_{min}$ and would checkpoint after every p-th instance of that task, leading to a checkpointing period $p T$,  where $T = \sum_{i=0}^{n-1} a_{i}$ is the time per iteration. One would choose the period so that $p T \approx \sqrt{2 \mu c_{\min}}$ to obey the Young/Daly formula. 
+All these naive and Young/Daly strategies are suboptimal.
+ Our main contribution is to show that the optimal checkpointing strategy is globally periodic, and to design a dynamic programming algorithm that computes the optimal checkpointing pattern. This pattern may well checkpoint many different tasks, and this across many different iterations. We show through simulations, both from synthetic and real-life application scenarios, that the optimal strategy outperforms the naive and Young/Daly strategies.
+ These results have been published in IEEE Transactions on Parallel and Distributed Systems (TPDS) in 2022 {% cite DuEtAl2022 --file jlesc.bib %}.
+
+
+
 At UTK, there has been some work on several fronts:
 
 * Interruption Scope: Failure detection and subsequent error reporting is the starting point
@@ -390,6 +403,11 @@ and even though it has been empirically studied by some previous work, designing
 Finally, our initial goal was to target pipelined workflow applications, where data continuously
 enters the workflow, and where the objective is to maximize the throughput that can be achieved.
 This causes several new challenges that we hope to address in the future.
+
+
+## Former members
+{% person cavelan_a %}, {% person lefevre_v %}, {% person han_l %}. 
+
 
 
 
