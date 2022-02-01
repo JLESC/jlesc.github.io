@@ -157,23 +157,11 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
               <span class="person given-name">Yishu</span> <span class="person sur-name">Du</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Li</span> <span class="person sur-name">Han</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
               <span class="person given-name">Thomas</span> <span class="person sur-name">Herault</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
             <span class="clearfix">
@@ -220,6 +208,7 @@
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#former-members">Former members</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
 </ul>
         </section>
@@ -372,6 +361,20 @@ respect to the literature, we have considered relatively high error rates.</p>
 
 <p>At Inria, we have pursued the work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms, and an extension of the results has been published in Transactions on Computers (TC) in August 2021 <a href="#BenoitEtAl2021">(Benoit et al. 2021)</a>.</p>
 
+<p>We have also proposed an optimal checkpointing strategy to protect iterative applications from fail-stop errors. 
+We consider a general framework, where the application repeats the same execution pattern 
+by executing consecutive iterations, and where each iteration is composed of several tasks.
+These tasks have different execution lengths and different checkpoint costs.<br>
+Assume that there are $n$ tasks, and that task $a_i$ has execution time $t_{i}$ and checkpoint cost $c_{i}$.
+A naive strategy would
+checkpoint after each task. Another naive strategy would checkpoint at the end of each iteration. A strategy inspired by the Young/Daly formula would work for $\sqrt{2 \mu C}$ seconds, where $\mu$ is the application MTBF
+and C is the average checkpoint time, and checkpoint at the end of the current task (and repeat). Another strategy, also
+inspired by the Young/Daly formula, would  select the task $a_{min}$ with smallest checkpoint 
+cost $c_{min}$ and would checkpoint after every p-th instance of that task, leading to a checkpointing period $p T$,  where $T = \sum_{i=0}^{n-1} a_{i}$ is the time per iteration. One would choose the period so that $p T \approx \sqrt{2 \mu c_{\min}}$ to obey the Young/Daly formula. 
+All these naive and Young/Daly strategies are suboptimal.
+ Our main contribution is to show that the optimal checkpointing strategy is globally periodic, and to design a dynamic programming algorithm that computes the optimal checkpointing pattern. This pattern may well checkpoint many different tasks, and this across many different iterations. We show through simulations, both from synthetic and real-life application scenarios, that the optimal strategy outperforms the naive and Young/Daly strategies.
+ These results have been published in IEEE Transactions on Parallel and Distributed Systems (TPDS) in 2022 <a href="#DuEtAl2022">(Du et al. 2022)</a>.</p>
+
 <p>At UTK, there has been some work on several fronts:</p>
 
 <ul>
@@ -494,6 +497,48 @@ on failure-prone HPC platforms was published in Resilience’18 <a href="#LeFevr
 <p>The work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms was published in IEEE TC in 2021 <a href="#BenoitEtAl2021">(Benoit et al. 2021)</a>.</p>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          DuEtAl2022
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDuEtAl2022Bibtex" aria-expanded="false" aria-controls="collapseDuEtAl2022Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseDuEtAl2022Abstract" aria-expanded="false" aria-controls="collapseDuEtAl2022Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="DuEtAl2022">Du, Yishu, Guillaume Pallez, Loris Marchal, and Yves Robert. 2022. “Optimal Checkpointing Strategies for Iterative Applications.” <i>IEEE Trans. Parallel Distributed Systems</i> 33 (3): 507–22.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseDuEtAl2022Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{DuEtAl2022,
+  author = {Du, Yishu and Pallez, Guillaume and Marchal, Loris and Robert, Yves},
+  journal = {IEEE Trans. Parallel Distributed Systems},
+  volume = {33},
+  pages = {507-522},
+  title = {Optimal checkpointing strategies for iterative applications},
+  number = {3},
+  year = {2022}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -885,6 +930,10 @@ and even though it has been empirically studied by some previous work, designing
 <p>Finally, our initial goal was to target pipelined workflow applications, where data continuously
 enters the workflow, and where the objective is to maximize the throughput that can be achieved.
 This causes several new challenges that we hope to address in the future.</p>
+
+<h2 id="former-members">
+<a id="former-members" class="anchor" href="#former-members" aria-hidden="true"><span class="octicon octicon-link"></span></a>Former members</h2>
+<p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), <span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), <span class="person given-name">Li</span> <span class="person sur-name">Han</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>).</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
