@@ -151,7 +151,7 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Valentin</span> <span class="person sur-name">Reis</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="person given-name">Sophie</span> <span class="person sur-name">Cerf</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
             </span>
           
         </div>
@@ -175,6 +175,7 @@
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h1"><a href="#results-for-20212022">Results for 2021/2022</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -252,6 +253,26 @@ offline identification process to derive a model of the dynamics of the system
 and a proportional-integral (PI) controller, on top of the Argo NRM
 infrastructure.</p>
 
+<h1 id="results-for-20212022">
+<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h1>
+
+<p>We published our first study, using a preliminary offline identification
+process to derive a proportional-integral (PI) controller on top of the Argo
+NRM infrastructure, at Euro-Par 2021 <a href="#cerf2021europar">(Cerf et al. 2021)</a>. This study
+includes a controller applied to several Grid5000 clusters, and controlling a
+singe memory-bound application, using Intel RAPL for power control.</p>
+
+<p>A second publication is in the works, more on the control theory aspects of the
+work. Following this, we will work on expanding our control design process to
+allow for various types of applications and applications with phases in
+particular. The goal is to improve the NRM infrastructure and the controller
+design to detect phases in application performance and adapt the control to
+them.</p>
+
+<p><span class="person given-name">Valentin</span> <span class="person sur-name">Reis</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) left Argonne for Groq in March 2021. <span class="person given-name">Idriss</span> <span class="person sur-name">Daoudi</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+started working as an ANL-funded postdoc on this project in October 2021. <span class="person given-name">Sophie</span> <span class="person sur-name">Cerf</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+became a INRIA research scientist in Lille in October 2021.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -261,15 +282,52 @@ project.</p>
 <p><span class="person given-name">Eric</span> <span class="person sur-name">Rutten</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited ANL for two days to make progress on the project
 on April 18-19 2019.</p>
 
-<p>Once international travel can resume, we plan for <span class="person given-name">Sophie</span> <span class="person sur-name">Cerf</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) to visit
-ANL.</p>
+<p>Once international travel can resume, we plan for several members to visit ANL.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
-<p>First publication under evaluation.</p>
+<ol class="bibliography"><li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          cerf2021europar
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsecerf2021europarBibtex" aria-expanded="false" aria-controls="collapsecerf2021europarBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsecerf2021europarAbstract" aria-expanded="false" aria-controls="collapsecerf2021europarAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
 
-<ol class="bibliography"></ol>
+    <div class="bibtex-ref-entry">
+      <span id="cerf2021europar">Cerf, Sophie, Raphaël Bleuse, Valentin Reis, Swann Perarnau, and Éric Rutten. 2021. “Sustaining Performance While Reducing Energy Consumption: A Control Theory Approach.” In <i>Euro-Par 2021: Parallel Processing</i>. Springer International Publishing. doi:10.1007/978-3-030-85665-6_21.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsecerf2021europarBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{cerf2021europar,
+  title = {{Sustaining Performance While Reducing Energy Consumption: A Control Theory Approach}},
+  author = {Cerf, Sophie and Bleuse, Rapha{\"e}l and Reis, Valentin and Perarnau, Swann and Rutten, {\'E}ric},
+  booktitle = {Euro-Par 2021: Parallel Processing},
+  year = {2021},
+  doi = {10.1007/978-3-030-85665-6_21},
+  publisher = {Springer International Publishing}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
@@ -281,11 +339,6 @@ architectures on future systems, we are also planning to evaluate different
 actuators than RAPL (i.e. accelerator power capping). We also plan to consider
 more elaborate control techniques, to obtain controllers that are more robust
 or give a more efficient use of the system.</p>
-
-<p>On a longer term, we plan to start working on another feedback loop approach
-for HPC, at a higher-level than processor level : we believe that there are
-opportunities in combining control-based methods and scheduling-based
-techniques for the general problem of runtime allocation and placement.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
