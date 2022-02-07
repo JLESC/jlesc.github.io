@@ -86,7 +86,7 @@ offline identification process to derive a model of the dynamics of the system
 and a proportional-integral (PI) controller, on top of the Argo NRM
 infrastructure.
 
-# Results for 2021/2022
+## Results for 2021/2022
 
 We published our first study, using a preliminary offline identification
 process to derive a proportional-integral (PI) controller on top of the Argo
