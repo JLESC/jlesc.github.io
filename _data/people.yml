@@ -444,7 +444,7 @@ cerf_s:
   sur_name: Cerf
   given_name: Sophie
   affiliation: inria
-  position: post_doc
+  position: permanent
   topics:
   email: sophie.cerf@inria.fr
   homepage:
@@ -574,6 +574,15 @@ darte_a:
   topics:
   email: Alain.Darte@ens-lyon.fr
   homepage: http://perso.ens-lyon.fr/alain.darte/
+
+daoudi_i:
+  sur_name: Daoudi
+  given_name: Idriss
+  affiliation: anl
+  position: post_doc
+  topics:
+  email: idaoudi@anl.gov
+  homepage:
 
 dawson_w:
   sur_name: Dawson
@@ -2022,10 +2031,10 @@ ramet_p:
 reis_v:
   sur_name: Reis
   given_name: Valentin
-  affiliation: anl
-  position: post_doc
+  affiliation: 
+  position: alumnus
   topics:
-  email: vreis@anl.gov
+  email: 
   homepage: http://freux.fr
 
 reverdy_v:

@@ -2,7 +2,7 @@
 layout: page_project
 title: Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques
 date: 2018-04-17
-updated:
+updated: 2022-02-07
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -17,7 +17,7 @@ head: rutten_e
 members:
   - perarnau_s
   - bleuse_r
-  - reis_v
+  - cerf_s
 
 ---
 
@@ -86,6 +86,25 @@ offline identification process to derive a model of the dynamics of the system
 and a proportional-integral (PI) controller, on top of the Argo NRM
 infrastructure.
 
+# Results for 2021/2022
+
+We published our first study, using a preliminary offline identification
+process to derive a proportional-integral (PI) controller on top of the Argo
+NRM infrastructure, at Euro-Par 2021 {% cite cerf2021europar %}. This study
+includes a controller applied to several Grid5000 clusters, and controlling a
+singe memory-bound application, using Intel RAPL for power control.
+
+A second publication is in the works, more on the control theory aspects of the
+work. Following this, we will work on expanding our control design process to
+allow for various types of applications and applications with phases in
+particular. The goal is to improve the NRM infrastructure and the controller
+design to detect phases in application performance and adapt the control to
+them.
+
+{% person reis_v %} left Argonne for Groq in March 2021. {% person daoudi_i %}
+started working as an ANL-funded postdoc on this project in October 2021. {% person cerf_s %}
+became a INRIA research scientist in Lille in October 2021.
+
 ## Visits and meetings
 
 We schedule regular video meetings between the different members of the
@@ -94,12 +113,9 @@ project.
 {% person rutten_e %} visited ANL for two days to make progress on the project
 on April 18-19 2019.
 
-Once international travel can resume, we plan for {% person cerf_s %} to visit
-ANL.
+Once international travel can resume, we plan for several members to visit ANL.
 
 ## Impact and publications
-
-First publication under evaluation.
 
 {% bibliography --cited --file jlesc.bib %}
 
@@ -112,11 +128,6 @@ architectures on future systems, we are also planning to evaluate different
 actuators than RAPL (i.e. accelerator power capping). We also plan to consider
 more elaborate control techniques, to obtain controllers that are more robust
 or give a more efficient use of the system.
-
-On a longer term, we plan to start working on another feedback loop approach
-for HPC, at a higher-level than processor level : we believe that there are
-opportunities in combining control-based methods and scheduling-based
-techniques for the general problem of runtime allocation and placement.
 
 ## References
 
