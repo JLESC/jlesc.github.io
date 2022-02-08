@@ -39,7 +39,16 @@ In addition, Argonne collaborated with Clemson to develop a control loop allowin
 ## Results for 2020/2021
 The research on predictive delta compression continued at Riken and produced a paper accepted at IEEE CCGRID 2021. In parallel, the team at Argonne optimized the implementation of Huffman variable lenght coding on GPUs. This effort produced two publications at ACM PACT 2020 and IEEE IPDPS 2021. 
 
+## Results for 2021/2022
+The main result is the validatio from the EXAFEL team of RiobinSZ as a valid lossy compressor for crystallography. The validation experiment used RoibinSZ on Se-SAD SFX Dataset (Selenium Single-wavelength Anomalous Diffraction. Serial Femtosecond Crystallography), 5043 images (1480x1552x4bytes). Many metrics were used to perform the assesment: Number of hits: Number indexed, Rsplit, CC1/2, CCano, Rwork, Rfree, Map-model CC. Roibin SZ electron density successfully reconstructs the protein structure. The dataset compressed with RiobinSZ offered a better result overall compared to the non-compressed dataset. The current explanation is that RiobinSZ not only compress the data but also performs some denoising that results in improving the analysis quality. A paper is submited to IEEE Bigdata on using SZ3 for the Argonne Photon Source data. 
 
+The second main results concerns the compression using SZ3 of X-ray ptychographic data acquired at the Advanced Photon Source (APS).A Dectris Eiger detector (514 1030 pixels) was used to acquire diffraction patterns as X-ray beam scanned across the sample, and the 2D diffraction images were saved along the time dimension to form a 3D matrix array (19500 x 514 x 1030 for chip pillar and 16800 x 514 x 1030 for flat chip). When the decompression data is near lossless (i.e.,
+error bound less than 0:5), the compression ratio gain of the proposed compression pipeline is 18% on chip pillar and 12% on flat chip compared with the second best one.
+
+The third main results is the phychography of a Catalyst Particle Compressed with SZ2.1 (not RiobinSZ). The dataset is a single scan (diffraction patterns): 1856x1030x514. In practice we compressed 1856 images of 514x1030 pixels. For the spatial compression, the dataset is treated as a 3D dataset, so the SZ2.1 predictor adopts a 3D Lorenzo + 3D Linear regression; For the temporal compression, the compressor predicts each data point only based on the temporal dimension. We tested absolute error bound from 2 to 64.  Absolute error bound of 2 translates to (+/-) 2photon count error on the detector. The test consisted in a ptychographic reconstruction on (sz) decompressed diffraction patterns of a Catalyst Particle. The reconstruction used the Conjugate Gradient iterative method that took 300 steps. For spatial compression with an error bound of 4, the compression ratio reached 97 with a SSIM >0.96. For temporal compression with an error bound of 8, the compression ratio reaches: 245 for a SSIM >0.94. The SSIM results validates the use of SZ2.1 for phychrography at the APS.
+
+The research at Argonne also optimized the compression method for crystallography data resulting in ROIBIN-SZ3. This optimized compression strategy resulted in improvements to compression ratios as well as compression and decompression bandwidth subject to the user's quality constraints with publication forthcoming.
+Further improvements may be possible by lowering certain aspects of the ROIBIN-SZ3 process to the GPU pending further validation of correctness and effectiveness of the CPU implementation.
 
 ## Visits and meetings
 
@@ -51,6 +60,9 @@ Kazumoto Yoshii visited Riken-CCS and Riken Spring-8 facility in August 2019 for
 
 2021:
 There was no visit due to the Covid situaiton.
+
+2022: 
+There was no visit due to the COVID situation.
 
 ## Impact and publications
 
@@ -64,7 +76,8 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
 * A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. {% cite Rupak20 --file jlesc.bib %}
 * A paper at ACM PACT 2020 {% cite Tian20 --file jlesc.bib %}
 * A paper at IEEE CCGRID 2021 {% cite Rupak21 --file jlesc.bib %}
-* A paper at ACM IPDPS 2021 {% cite Tian21 --file jlesc.bib %}
+* A paper at IEEE IPDPS 2021 {% cite Tian21 --file jlesc.bib %}
+* A paper at SC/DRBSD 2021 workshop {% cite libpressio --file jlesc.bib %}
 
 {% bibliography --cited --file jlesc.bib %}
 
