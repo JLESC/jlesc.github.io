@@ -50,6 +50,8 @@ The third main results is the phychography of a Catalyst Particle Compressed wit
 The research at Argonne also optimized the compression method for crystallography data resulting in ROIBIN-SZ3. This optimized compression strategy resulted in improvements to compression ratios as well as compression and decompression bandwidth subject to the user's quality constraints with publication forthcoming.
 Further improvements may be possible by lowering certain aspects of the ROIBIN-SZ3 process to the GPU pending further validation of correctness and effectiveness of the CPU implementation.
 
+Riken released the compression code developed for SPRING-8: https://github.com/kento/TEZip
+
 ## Visits and meetings
 
 2020:
