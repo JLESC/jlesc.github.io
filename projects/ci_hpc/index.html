@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Continuous integration for HPC codes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/ci_hpc/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
+    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Continuous integration for HPC codes</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">I/O, Storage and In-Situ Processing</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">CI pipelines</span>
+          
+            <span class="clearfix">Research software engineering</span>
+          
+            <span class="clearfix">Workflows</span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Robert</span> <span class="person sur-name">Speck</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Ivo</span> <span class="person sur-name">Kabadshow</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Hitoshi</span> <span class="person sur-name">Murai</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Yoshifumi</span> <span class="person sur-name">Nakamura</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">George</span> <span class="person sur-name">Bosilca</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-starting">starting</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+<p>Scientific software is becoming increasingly important for the success of research and to generate new knowledge. Certain codes, critical for a scientific field, have all the characteristics of a research infrastructure: they are developed and maintained over decades, must meet the highest quality requirements, and need specialized personnel for operation and training of users. Therefore, Research Software Engineering (RSE) is forming as a new subject of investigation in many research centers, universities and laboratories.</p>
+
+<p>For HPC codes, clean and careful software engineering becomes even more crucial, but also more challenging. This is in particular true for continuous testing, integration, benchmarking, deployment (CT/CI/CB/CD = Cx): different architectures, different compilers, different degrees and types of parallelism, different software stacks, restricted access to machines and so on. All these aspects need to be addressed and while various approaches exist, a common strategy in the field of HPC is still missing.</p>
+
+<p>It is the goal of this project to investigate the different approaches taken by the JLESC HPC centers, to gather own, hands-on experiences with those approaches and to evaluate their pros and cons. The initial focus will be on continuous integration, a later extension to Cx is intended. Further partners are welcome at any time.</p>
+
+<p>Expected contributions:</p>
+
+<ul>
+  <li>Overview of CI solutions for HPC centers and codes</li>
+  <li>Best practice guide for teams/centers thinking about employing CI for their HPC machine</li>
+  <li>Community building and exchange in the field of RSE and Cx within the JLESC</li>
+</ul>
+
+<h2 id="results-for-20212022">
+<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+<p>None, the project started in early 2022.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<p>None.</p>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<p>None.</p>
+
+<ol class="bibliography"></ol>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>Planned results:</p>
+
+<ul>
+  <li>Internal report on existing CI solutions</li>
+  <li>White paper/best practice guide on CI for HPC</li>
+  <li>Similar results for Cx, if feasible</li>
+</ul>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<!-- <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ChienEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseChienEtAl2015Bibtex"
+                aria-expanded="false" aria-controls="collapseChienEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6"
+                 disabled="disabled" data-toggle="collapse" data-target="#collapseChienEtAl2015Abstract"
+                aria-expanded="false" aria-controls="collapseChienEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ChienEtAl2015">Chien, A., P. Balaji, P. Beckman, N. Dun, A. Fang, H. Fujita, K. Iskra, et al. 2015. “Versioned Distributed Arrays for Resilience in Scientific Applications: Global View
+    Resilience.” <i>Procedia Computer Science</i> 51: 29–38. doi:10.1016/j.procs.2015.05.187.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseChienEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{ChienEtAl2015,
+  author = {Chien, A. and Balaji, P. and Beckman, P. and Dun, N. and Fang, A. and Fujita, H. and Iskra, K. and Rubenstein, Z. and Zheng, Z. and Schreiber, R. and Hammond, J. and Dinan, J. and Laguna, I. and Richards, D. and Dubey, A. and van Straalen, B. and Hoemmen, M. and Heroux, M. and Teranishi, K. and Siegel, A.},
+  doi = {10.1016/j.procs.2015.05.187},
+  journal = {Procedia Computer Science},
+  note = {International Conference On Computational Science,
+      {ICCS} 2015 Computational Science at the Gates of Nature},
+  pages = {29 - 38},
+  title = {Versioned Distributed Arrays for Resilience in Scientific Applications: Global View
+      Resilience},
+  volume = {51},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          SayedEtAl2013
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSayedEtAl2013Bibtex"
+                aria-expanded="false" aria-controls="collapseSayedEtAl2013Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6"
+                 disabled="disabled" data-toggle="collapse" data-target="#collapseSayedEtAl2013Abstract"
+                aria-expanded="false" aria-controls="collapseSayedEtAl2013Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="SayedEtAl2013">Sayed, Salem, Stephan Graf, Michael Hennecke, Dirk Pleiter, Georg Schwarz, Heiko Schick, and Michael Stephan. 2013. “Supercomputing: 28th International Supercomputing Conference, ISC 2013, Leipzig, Germany,
+    June 16-20, 2013. Proceedings.” In , edited by Julian Martin Kunkel, Thomas Ludwig, and Hans Werner Meuer, 435–46. Berlin, Heidelberg: Springer Berlin Heidelberg. doi:10.1007/978-3-642-38750-0_33.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseSayedEtAl2013Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inbook{SayedEtAl2013,
+  address = {Berlin, Heidelberg},
+  author = {Sayed, Salem and Graf, Stephan and Hennecke, Michael and Pleiter, Dirk and Schwarz, Georg and Schick, Heiko and Stephan, Michael},
+  chapter = {Using GPFS to Manage NVRAM-Based Storage Cache},
+  doi = {10.1007/978-3-642-38750-0_33},
+  editor = {Kunkel, Julian Martin and Ludwig, Thomas and Meuer, Hans Werner},
+  pages = {435--446},
+  publisher = {Springer Berlin Heidelberg},
+  title = {Supercomputing: 28th International Supercomputing Conference, ISC 2013, Leipzig, Germany,
+      June 16-20, 2013. Proceedings},
+  year = {2013}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol> -->
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="nav-item">
+              <a class="nav-link" href="/about/imprint/">
+                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+
+<!--  -->
+
+  </body>
+</html>
