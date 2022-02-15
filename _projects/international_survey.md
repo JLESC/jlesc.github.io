@@ -6,7 +6,7 @@ updated: 2019-07-16
 navbar: Research
 subnavbar: Projects
 project_url: https://github.com/bosilca/MPIsurvey
-status: running
+status: suspended
 topics:
   - prog_lang
 keywords:
@@ -16,6 +16,9 @@ members:
   - bosilca_g
   - jeannot_e
   - ogura_t
+  - balasz_g
+  - ishikawa_y
+  
 ---
 
 ## Research topic and goals
@@ -70,10 +73,22 @@ finding appropriate learning mediums, and are not using recently
 introduced MPI features. We have submitted a journal paper to report
 the survey findings.
 
+## Results for 2021/2022
+
+The conducted survey gathered a total of 851 answers from 42 contributors
+(countries/regions) around the world. We believe that this survey at this
+scale provides a novel view on MPI users, differentiating from and complementing
+for the other MPI surveys. The large number of participants, mostly from academia,
+allowed us to have a more clear picture about the use of MPI in an academic
+setting. We analyzed and summarized these results in a journal paper
+{% cite ahori-PARCO21-survey %}. To help other researchers interested in
+usage patterns, we have published the entire archive as CSV files on the
+project github directory.
+
 ## Visits and meetings
 
-A number of online meetings, one to two meeting in a month, have been
-held for the MPI International survey.
+Due to the COVID situation, all meeting in the period 2021-2022 were online
+meetings. They occured regularly, mostly one to two meeting in a month.
 
 ## Impact and publications
 
@@ -103,6 +118,7 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 -->
 
 {% cite ahori-IPSJ-2019-July %}
+{% cite ahori-PARCO21-survey %}
 
 {% bibliography --cited --file jlesc.bib %}
 
