@@ -157,6 +157,14 @@
               <span class="person given-name">Takahiro</span> <span class="person sur-name">Ogura</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
             </span>
           
+            <span class="clearfix">
+              <span class="person given-name">Gerofi</span> <span class="person sur-name">Balasz</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Yukata</span> <span class="person sur-name">Ishikawa</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
+            </span>
+          
         </div>
       </li>
     
@@ -164,7 +172,7 @@
     <li class="list-group-item row">
       <label class="col-sm-4">Status</label>
       <div class="col-sm-8">
-        <span class="project-status project-status-running">running</span>
+        <span class="project-status project-status-suspended">suspended</span>
       </div>
     </li>
     
@@ -178,6 +186,7 @@
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-201820192020">Results for 2018/2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -242,11 +251,24 @@ finding appropriate learning mediums, and are not using recently
 introduced MPI features. We have submitted a journal paper to report
 the survey findings.</p>
 
+<h2 id="results-for-20212022">
+<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+
+<p>The conducted survey gathered a total of 851 answers from 42 contributors
+(countries/regions) around the world. We believe that this survey at this
+scale provides a novel view on MPI users, differentiating from and complementing
+for the other MPI surveys. The large number of participants, mostly from academia,
+allowed us to have a more clear picture about the use of MPI in an academic
+setting. We analyzed and summarized these results in a journal paper
+<a href="#ahori-PARCO21-survey">(Hori et al. 2021)</a>. To help other researchers interested in
+usage patterns, we have published the entire archive as CSV files on the
+project github directory.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
-<p>A number of online meetings, one to two meeting in a month, have been
-held for the MPI International survey.</p>
+<p>Due to the COVID situation, all meeting in the period 2021-2022 were online
+meetings. They occured regularly, mostly one to two meeting in a month.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -258,9 +280,56 @@ held for the MPI International survey.</p>
 
 -->
 
-<p><a href="#ahori-IPSJ-2019-July">(Hori et al. 2019)</a></p>
+<p><a href="#ahori-IPSJ-2019-July">(Hori et al. 2019)</a>
+<a href="#ahori-PARCO21-survey">(Hori et al. 2021)</a></p>
 
-<ol class="bibliography"><li>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ahori-PARCO21-survey
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseahori-PARCO21-surveyBibtex" aria-expanded="false" aria-controls="collapseahori-PARCO21-surveyBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseahori-PARCO21-surveyAbstract" aria-expanded="false" aria-controls="collapseahori-PARCO21-surveyAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ahori-PARCO21-survey">Hori, Atsushi, Emmanuel Jeannot, George Bosilca, Takahiro Ogura, Balazs Gerofi, Jie Yin, and Yutaka Ishikawa. 2021. “An International Survey on MPI Users.” <i>Parallel Computing</i> 108: 102853. doi:<a href="https://doi.org/10.1016/j.parco.2021.102853" target="_blank">https://doi.org/10.1016/j.parco.2021.102853</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseahori-PARCO21-surveyBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{ahori-PARCO21-survey,
+  title = {An international survey on MPI users},
+  journal = {Parallel Computing},
+  volume = {108},
+  pages = {102853},
+  year = {2021},
+  issn = {0167-8191},
+  doi = {https://doi.org/10.1016/j.parco.2021.102853},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167819121000983},
+  author = {Hori, Atsushi and Jeannot, Emmanuel and Bosilca, George and Ogura, Takahiro and Gerofi, Balazs and Yin, Jie and Ishikawa, Yutaka},
+  keywords = {Message Passing Interface (MPI), Survey}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
 <div class="bibtex-entry-container">
   <div>
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
@@ -302,7 +371,8 @@ held for the MPI International survey.</p>
   </div>
   
 </div>
-</li></ol>
+</li>
+</ol>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
