@@ -2,20 +2,23 @@
 layout: page_event
 title: 14th JLESC Workshop
 date: 2021-09-16
-updated: 2021-09-16
+updated: 2022-02-18
 navbar: Events
-event_location: GSI Bonn, Germany
-event_start: 2022-05-23
-event_end: 2022-05-25
+event_location: The University of Illinois at Urbana-Champaign
+event_start: 2022-09-26
+event_end: 2022-09-30
 event_short_url:
 event_url:
 wayback_url:
 logo:
 kind: workshop
-institute: jsc
+institute: uiuc
 permalink:
 page_type: event_page
 ---
+
+
+**UPDATE: new dates and new location!**
 
 The 14th JLESC Workshop, now hopefully back in the real world, gathers leading researchers in high-performance computing from the JLESC partners INRIA, the University of Illinois, Argonne National Laboratory, Barcelona Supercomputing Center,
 Jülich Supercomputing Centre, RIKEN Center for Computational Science and the University of Tennessee
