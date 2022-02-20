@@ -6,7 +6,7 @@ updated: 2019-07-16
 navbar: Research
 subnavbar: Projects
 project_url: https://github.com/bosilca/MPIsurvey
-status: suspended
+status: running
 topics:
   - prog_lang
 keywords:
