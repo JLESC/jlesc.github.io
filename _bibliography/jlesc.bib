@@ -338,12 +338,35 @@ number="34"
   year={2021}
 }
 
-@article{HuckelheimHascoet2021,
-  author = {H{\"u}ckelheim, Jan Christian and Hasco{\"e}t, Laurent},
-  journal = {In Review},
-  title = {Source-to-Source Automatic Differentiation of {OpenMP} Parallel Loops},
-  year = {2021},
+@article{HuckelheimHascoet2022,
+author = {H\"{u}ckelheim, Jan and Hasco\"{e}t, Laurent},
+title = {Source-to-Source Automatic Differentiation of OpenMP Parallel Loops},
+year = {2022},
+issue_date = {March 2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {48},
+number = {1},
+issn = {0098-3500},
+url = {https://doi.org/10.1145/3472796},
+doi = {10.1145/3472796},
+abstract = {This article presents our work toward correct and efficient automatic differentiation of OpenMP parallel worksharing loops in forward and reverse mode. Automatic differentiation is a method to obtain gradients of numerical programs, which are crucial in optimization, uncertainty quantification, and machine learning. The computational cost to compute gradients is a common bottleneck in practice. For applications that are parallelized for multicore CPUs or GPUs using OpenMP, one also wishes to compute the gradients in parallel. We propose a framework to reason about the correctness of the generated derivative code, from which we justify our OpenMP extension to the differentiation model. We implement this model in the automatic differentiation tool Tapenade and present test cases that are differentiated following our extended differentiation procedure. Performance of the generated derivative programs in forward and reverse mode is better than sequential, although our reverse mode often scales worse than the input programs.},
+journal = {ACM Trans. Math. Softw.},
+month = {feb},
+articleno = {7},
+numpages = {32},
+keywords = {Automatic differentiation, OpenMP, shared-memory parallel, multicore}
 }
+
+
+@conference{ppopp22_poster_ad_z3,
+	author = {{J}an {H}\"uckelheim and {L}aurent {H}asco\"et},
+	booktitle = {Principles and Practice of Parallel Programming (PPoPP) 2022},
+	date-added = {2022-03-15 08:59:01 -0500},
+	date-modified = {2022-03-15 09:01:06 -0500},
+	title = {{POSTER}: Automatic Differentiation of Parallel Loops with Formal Methods},
+	year = {2022}}
+
 
 @InProceedings{LeFevreEtAl2020,
   author        = {Valentin Le Fèvre and
