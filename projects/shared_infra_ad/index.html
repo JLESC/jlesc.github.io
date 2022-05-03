@@ -200,7 +200,7 @@
 
 <p>The differentiated codes produced by our new version of Tapenade achieve a speedup through parallelization compared with their serial counterparts in all our test cases. The scalability of the forward mode was generally as good as that of the original codes. The reverse-mode derivative codes generally scaled less well but still achieved over 2X speedups compared with sequential code. There is a choice between atomic updates (causing a runtime overhead) and reductions (causing a memory and runtime overhead) for the adjoint, where the best choice was case dependent. Since our adjoint test cases (and possibly many other real-world applications) contain parallel updates to the same output array with a low rate of conflicts between threads,  separate tool development was performed to enable faster and more memory-efficient reductions.</p>
 
-<p>We are currently extending this work by investigating the use of automated theorem provers to improve the precision of the static analysis in Tapenade, and improve the parallel scalability of generated derivative programs. Specifically, we build a model in the SMT solver Z3 that contains the knowledge about array index expressions that are accessed concurrently by the input program, and use that model to determine a subset of the array index expressions in the generated derivative code that can also safely be accessed concurrently. Preliminary results of this work are presented in <a href="#ppopp22_poster_ad_z3">(Jan Hückelheim and Laurent Hascoët 2022)</a>.</p>
+<p>We are currently extending this work by investigating the use of automated theorem provers to improve the precision of the static analysis in Tapenade, and improve the parallel scalability of generated derivative programs. Specifically, we build a model in the SMT solver Z3 that contains the knowledge about array index expressions that are accessed concurrently by the input program, and use that model to determine a subset of the array index expressions in the generated derivative code that can also safely be accessed concurrently. Preliminary results of this work are presented in <a href="#ppopp22-poster-ad-z3">(Jan Hückelheim and Laurent Hascoët 2022)</a>.</p>
 
 <p>We organized a minitutorial <em>Automatic Differentiation as a Tool for Computational Science</em> at the 2021 SIAM Conference on Computational Science and Engineering. The tutorial broadly provided an introduction to AD as well as advanced topics such as memory requirements and parallelism. We demonstrated the use of AD tools and developed resources such as Jupyter notebooks for hands-on use on Google Colab by the attendees <a href="#NarayananEtAl2021">(Hascoët et al. 2021)</a>.</p>
 
@@ -292,27 +292,27 @@
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
-          ppopp22_poster_ad_z3
+          ppopp22-poster-ad-z3
         </div>
       </div>
       <div class="row">
-        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseppopp22_poster_ad_z3Bibtex" aria-expanded="false" aria-controls="collapseppopp22_poster_ad_z3Bibtex">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseppopp22-poster-ad-z3Bibtex" aria-expanded="false" aria-controls="collapseppopp22-poster-ad-z3Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseppopp22_poster_ad_z3Abstract" aria-expanded="false" aria-controls="collapseppopp22_poster_ad_z3Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseppopp22-poster-ad-z3Abstract" aria-expanded="false" aria-controls="collapseppopp22-poster-ad-z3Abstract">
           Abstract
         </button>
       </div>
     </div>
 
     <div class="bibtex-ref-entry">
-      <span id="ppopp22_poster_ad_z3">———. 2022. “POSTER: Automatic Differentiation of Parallel Loops with Formal Methods.” In <i>Principles and Practice of Parallel Programming (PPoPP) 2022</i>.</span>
+      <span id="ppopp22-poster-ad-z3">———. 2022. “POSTER: Automatic Differentiation of Parallel Loops with Formal Methods.” In <i>Principles and Practice of Parallel Programming (PPoPP) 2022</i>.</span>
     </div>
   </div>
-  <div class="collapse" id="collapseppopp22_poster_ad_z3Bibtex">
+  <div class="collapse" id="collapseppopp22-poster-ad-z3Bibtex">
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
-        <pre><code>@conference{ppopp22_poster_ad_z3,
+        <pre><code>@conference{ppopp22-poster-ad-z3,
   author = {{J}an {H}\"uckelheim and {L}aurent {H}asco\"et},
   booktitle = {Principles and Practice of Parallel Programming (PPoPP) 2022},
   date-added = {2022-03-15 08:59:01 -0500},
