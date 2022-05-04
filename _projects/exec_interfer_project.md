@@ -2,7 +2,7 @@
 layout: page_project
 title: Modeling and avoiding execution interferences
 date: 2016-06-01
-updated: 2016-06-01
+updated: 2017-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

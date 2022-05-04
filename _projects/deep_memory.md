@@ -2,7 +2,7 @@
 layout: page_project
 title: Deep Memory Hierarchies
 date: 2019-01-29
-updated:
+updated: 2022-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

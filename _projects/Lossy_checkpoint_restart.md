@@ -2,7 +2,7 @@
 layout: page_project
 title: Checkpoint/Restart of/from lossy state
 date: 2016-03-25
-updated:
+updated: 2021-02-11
 navbar: Research
 subnavbar: Projects
 project_url:

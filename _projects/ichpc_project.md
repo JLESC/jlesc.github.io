@@ -2,7 +2,7 @@
 layout: page_project
 title: Mitigating I/O Interference in Concurrent HPC Applications
 date: 2016-02-11
-updated:
+updated: 2016-02-11
 navbar: Research
 subnavbar: Projects
 project_url:

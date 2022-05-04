@@ -2,7 +2,7 @@
 layout: page_project
 title: Exploiting the Omnisc'IO prediction approach for Exascale systems
 date: 2016-03-21
-updated:
+updated: 2016-03-21
 navbar: Research
 subnavbar: Projects
 project_url:

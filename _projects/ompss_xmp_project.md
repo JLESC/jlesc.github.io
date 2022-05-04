@@ -1,8 +1,8 @@
 ---
 layout: page_project
 title: Sharing and extension of OmpSs2 runtime for XMP 2.0 PGAS task model
-date: 2018-3-28
-updated: 
+date: 2018-03-28
+updated: 2019-03-28
 navbar: Research
 subnavbar: Projects
 project_url:

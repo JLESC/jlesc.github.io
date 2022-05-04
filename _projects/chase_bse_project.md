@@ -2,7 +2,7 @@
 layout: page_project
 title: The ChASE library for large Hermitian eigenvalue problems
 date: 2016-03-21
-updated: 2017-07-11
+updated: 2020-01-01
 navbar: Research
 subnavbar: Projects
 status: finished

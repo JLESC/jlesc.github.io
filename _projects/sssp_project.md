@@ -2,7 +2,7 @@
 layout: page_project
 title: Simplified Sustained System performance benchmark
 date: 2017-04-26
-updated:
+updated: 2022-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

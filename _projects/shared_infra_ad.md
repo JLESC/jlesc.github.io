@@ -2,7 +2,7 @@
 layout: page_project
 title: Shared Infrastructure for Source Transformation Automatic Differentiation
 date: 2016-04-18
-updated:
+updated: 2022-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

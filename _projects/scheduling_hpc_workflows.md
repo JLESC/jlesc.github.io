@@ -2,7 +2,7 @@
 layout: page_project
 title: Resource Management, Scheduling, and Fault-Tolerance for HPC Workflows
 date: 2016-03-21
-updated:
+updated: 2019-05-31
 navbar: Research
 subnavbar: Projects
 project_url:

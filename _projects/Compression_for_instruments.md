@@ -2,7 +2,7 @@
 layout: page_project
 title: Compression for instruments
 date: 2020-02-25
-updated:
+updated: 2022-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

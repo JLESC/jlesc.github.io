@@ -2,7 +2,7 @@
 layout: page_project
 title: Reducing Communication in Sparse Iterative and Direct Solvers
 date: 2020-02-26
-updated:
+updated: 2020-02-26
 navbar: Research
 subnavbar: Projects
 footer: true

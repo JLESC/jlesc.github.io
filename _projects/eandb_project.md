@@ -2,7 +2,7 @@
 layout: page_project
 title: Energy Efficiency and Load Balancing
 date: 2016-02-17
-updated:
+updated: 2016-02-17
 navbar: Research
 subnavbar: Projects
 footer: true

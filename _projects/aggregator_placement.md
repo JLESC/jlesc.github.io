@@ -2,7 +2,7 @@
 layout: page_project
 title: Toward taming large and complex data flows in data-centric supercomputing
 date: 2016-03-21
-updated:
+updated: 2018-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

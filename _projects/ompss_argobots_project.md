@@ -2,7 +2,7 @@
 layout: page_project
 title: Enhancing Asynchronous Parallelism in OmpSs with Argobots
 date: 2016-03-14
-updated:
+updated: 2016-03-14
 navbar: Research
 subnavbar: Projects
 project_url:

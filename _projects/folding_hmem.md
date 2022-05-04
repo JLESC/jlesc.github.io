@@ -2,7 +2,7 @@
 layout: page_project
 title: Use of the Folding profiler to assist on data distribution for heterogeneous memory systems
 date: 2016-03-22
-updated:
+updated: 2018-02-07
 navbar: Research
 subnavbar: Projects
 project_url:

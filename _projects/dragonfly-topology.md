@@ -2,7 +2,7 @@
 layout: page_project
 title: Network Simulations and Topology-aware Communications
 date: 2016-09-28
-updated:
+updated: 2018-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

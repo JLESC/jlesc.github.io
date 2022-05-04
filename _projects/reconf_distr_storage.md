@@ -2,7 +2,7 @@
 layout: page_project
 title: Reconfiguring Distributed Storage Systems on HPC infrastructures
 date: 2017-01-01
-updated:
+updated: 2020-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

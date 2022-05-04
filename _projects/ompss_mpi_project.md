@@ -2,7 +2,7 @@
 layout: page_project
 title: Hybrid resilience for MPI + tasks codes
 date: 2016-03-22
-updated:
+updated: 2016-03-22
 navbar: Research
 subnavbar: Projects
 project_url:

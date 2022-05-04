@@ -2,7 +2,7 @@
 layout: page_project
 title: A common workflow registry of compute endpoints and applications
 date: 2020-07-02
-updated:
+updated: 2022-01-01
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -114,7 +114,7 @@ published configurations and map them to our common schema
 3. Workflow developers could enter system and applications that they and their workflow users need
 
 
-## Results for 2020/2021
+## Results for 2020--2022
 
 The BSC team, in the context of the eFLows4HPC project, has developed an extension of the PyCOMPSs programming model to allow the integration of 3rd party software execution within a PyCOMPSs workflow with a simple JSON description. This integration is done with a new python decorator which is located on top of a python function which represent the 3rd party software invation, as indicated below. 
 ```

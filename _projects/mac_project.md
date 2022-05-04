@@ -2,7 +2,7 @@
 layout: page_project
 title: Monitoring the Arctic Climate
 date: 2018-03-08
-updated: 2018-03-08
+updated: 2020-03-08
 navbar: Research
 subnavbar: Projects
 project_url:

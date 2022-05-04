@@ -2,7 +2,7 @@
 layout: page_project
 title: Dynamic load balancing with Pampa in Alya
 date: 2016-03-22
-updated: 
+updated: 2017-03-22
 navbar: Research
 subnavbar: Projects
 project_url:

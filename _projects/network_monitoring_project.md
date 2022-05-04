@@ -2,7 +2,7 @@
 layout: page_project
 title: Towards accurate network utilization forecasting using portable MPI-level monitoring
 date: 2019-02-04
-updated:
+updated: 2020-02-04
 navbar: Research
 subnavbar: Projects
 project_url:

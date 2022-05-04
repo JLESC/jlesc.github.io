@@ -2,7 +2,7 @@
 layout: page_project
 title: Towards Storage-Based Convergence Between HPC and Big Data
 date: 2018-01-15
-updated:
+updated: 2019-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

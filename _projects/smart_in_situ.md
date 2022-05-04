@@ -2,7 +2,7 @@
 layout: page_project
 title: Smart In Situ Visualization
 date: 2016-03-21
-updated:
+updated: 2016-03-21
 navbar: Research
 subnavbar: Projects
 project_url:

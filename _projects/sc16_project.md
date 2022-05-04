@@ -2,7 +2,7 @@
 layout: page_project
 title: On-Demand Data Analytics and Storage for Extreme-Scale Simulations and Experiments
 date: 2016-05-31
-updated:
+updated: 2019-05-31
 navbar: Research
 subnavbar: Projects
 project_url:

@@ -2,7 +2,7 @@
 layout: page_project
 title: Advancing Chameleon and Grid'5000 testbeds
 date: 2017-06-07
-updated:
+updated: 2019-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

@@ -2,7 +2,7 @@
 layout: page_project
 title: Automatic Optimization of Multi-Physics Coupled Executions through Closed-Loop Resource Arbitration
 date: 2020-02-26
-updated:
+updated: 2020-02-26
 navbar: Research
 subnavbar: Projects
 project_url:

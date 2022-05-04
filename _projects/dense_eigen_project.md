@@ -2,7 +2,7 @@
 layout: page_project
 title: HPC libraries for solving dense symmetric eigenvalue problems
 date: 2016-03-23
-updated:
+updated: 2022-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

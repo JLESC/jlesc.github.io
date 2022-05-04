@@ -2,7 +2,7 @@
 layout: page_project
 title: Evaluating high-level programming models for FPGA platforms
 date: 2016-05-01
-updated:
+updated: 2022-02-07
 navbar: Research
 subnavbar: Projects
 project_url:

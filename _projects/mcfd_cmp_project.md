@@ -2,7 +2,7 @@
 layout: page_project
 title: Comparison of Meshing and CFD Methods for Accurate Flow Simulations on HPC systems
 date: 2016-03-02
-updated: 2017-05-08
+updated: 2019-01-01
 navbar: Research
 subnavbar: Projects
 project_url:

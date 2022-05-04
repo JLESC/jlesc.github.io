@@ -2,7 +2,7 @@
 layout: page_project
 title: International Survey
 date: 2019-02-15
-updated: 2019-07-16
+updated: 2022-01-01
 navbar: Research
 subnavbar: Projects
 project_url: https://github.com/bosilca/MPIsurvey

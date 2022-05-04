@@ -2,7 +2,7 @@
 layout: page_project
 title: Programming Model Extensions for Resilience
 date: 2016-02-10
-updated:
+updated: 2016-02-10
 navbar: Research
 subnavbar: Projects
 project_url:

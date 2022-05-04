@@ -2,7 +2,7 @@
 layout: page_project
 title: Elastic provisioning for data streams
 date: 2016-05-30
-updated:
+updated: 2016-05-30
 navbar: Research
 subnavbar: Projects
 project_url:
