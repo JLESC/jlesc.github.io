@@ -332,6 +332,15 @@ bouteiller_a:
   email: bouteill@icl.utk.edu
   homepage: http://www.icl.utk.edu/~bouteill/
 
+bouvier_t:
+  sur_name: Bouvier
+  given_name: Thomas
+  affiliation: inria
+  position: phd
+  topics:
+  email: thomas.bouvier@inria.fr
+  homepage: https://team.inria.fr/kerdata/thomas-bouvier/
+
 brown_m:
   sur_name: Maxine D.
   given_name: Brown
