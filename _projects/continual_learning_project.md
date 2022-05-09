@@ -15,7 +15,6 @@ keywords:
   - catastrophic forgetting
 head: nicolae_b
 members:
-  - nicolae_b
   - bouvier_t
   - costan_a
   - antoniu_g
