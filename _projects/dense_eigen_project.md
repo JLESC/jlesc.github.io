@@ -22,7 +22,7 @@ members:
 
 Many applications for example in Density Functional Theory (DFT) used in physics, chemistry, and materials science have to compute eigenvalues and eigenvectors of dense symmetric matrices.
 There are several libraries available for that task in high performance computing: ScaLAPACK, EigenExa, ELPA, and Elemental.
-On the other hand there exist different supercomputers like K-computer, BlueGene/Q, and Intel clusters with XeonPhi accelerators or with GPU accelerators.
+On the other hand there exist different supercomputers like K-computer, BlueGene/Q, and Intel clusters with Xeon Phi accelerators or with GPU accelerators.
 The eigensolver routines from the different libraries behave differently on the different computer architectures.
 In the first step, we evaluate the several aspects of the routines on the existing production and prototype supercomputers available to give the users recommendations which routine to use for their specific task.
 At the moment, evaluation is planned with respect to performance, accuracy and reproducibility in hybrid parallel execution. In the next step, we adapt the routines to the architectures.
@@ -36,7 +36,7 @@ In the next step tuning of the existing software should be done and the new resu
 ## Results for 2015/2016
 
 This project was submitted in August 2015, and started from January 2016, officially.
-The porting process has already started for couple of eigensolver libraries and on couple of systems.
+The porting process has already started for a couple of eigensolver libraries and on couple of systems.
 We selected three libraries, ELPA, Elemental and EigenExa, and available resources, the K computer, JUQUEEN, and JURECA.
 
 The present status is summarized in the following table.
@@ -67,7 +67,6 @@ We confirmed the libraries are ported and perform on the systems;
  * On K computer EigenExa best with as little MPI parallelization as necessary
  * On K computer ELPA2 best with pure MPI parallelization
  * If only 5 percent of eigenspectrum needed even on K computer ELPA2 pure MPI becomes fastest
-
 1. GPU or accelerator-based eigenvalue solver like MAGMA or ELPA must be examined in 2017/2018. Currently, we have not yet confirmed to build the ELPA GPU extension on JURECA. Also, we would enhance the EigenExa library with an acceleration of GPUs.
 
 ## Results for 2017/2018
@@ -104,22 +103,21 @@ We confirmed the libraries are ported and perform on the systems;
 ## Results for 2019/2020
 
 1. (Cont.) Distributed MPI/OpenMP Parallel
- * Progress will be delivered upto the machine replacement status.
+ * Progress will be delivered up to the machine replacement status.
 
 1. (Cont.) GPU extensions (standalone/cluster)
  * We have investigated the performance trend on three GPU-eigensolvers, cuSolver 10.0, MAGMA 2.5.0, and EigenG 2.2d.
- * On a Volta V100 board with CUDA 10.0+intel MKL library yieded excellent performance.
+ * On a Volta V100 board with CUDA 10.0+intel MKL library yielded excellent performance.
  * MAGMA (1stege kernel) and EigenG shows totally 700GFLOPS for a full diagonalization operation when N=9700.
- * For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximatedly 100 seconds, and it reached more than one TFLOPS.
+ * For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximately 100 seconds, and it reached more than one TFLOPS.
 
 ## Results for 2020/2021
 
-Basically, the activity in FY2020 was limited due to the Covid19 pandemic circumstance. However, some of our updates can be summarize as follow.
+Basically, the activity in FY2020 was limited due to the Covid19 pandemic circumstance. However, some of our updates can be summarized as follows:
 
 1. (Cont.) Distributed MPI/OpenMP Parallel
  * Implementation of the D&C routine on Fugaku in trial usage in 2020 and early evaluation from the official launch in March 2021.
  * Progress and preliminary results will be reported at the next JLESC meeting in 2021.
-
 1. (Cont.) GPU extensions (standalone/cluster)
  * Good acceleration both on JUWELS and JURECA all parts of the computation
  * ELPA1 is accelerated very high; however, ELPA2 only shows reasonable acceleration only at a few % of eigenvectors are computed rather than the pure CPU version.
@@ -131,7 +129,6 @@ Our activity in 2021/2022 was minimal as in 2020/2021. However, after the offici
 1. (Cont.) Distributed MPI/OpenMP Parallel
   * The latest EigenExa (version 2.11) was released in December 2021. It performs stably not only on Fugaku but other cluster systems.
   * With 4096 compute nodes (about 16PFLOPS), the eigenvalue calculation of a million-dimensional matrix was achieved in less than an hour. It is roughly comparable to the performance of the K-computer.
-
 2. (Cont.) GPU extensions (standalone/cluster)
   * EigenG, GPU version of EigenExa, was confirmed to perform on an A100 card with a matrix size up to 60.000 dimensions.
 
@@ -139,7 +136,7 @@ Our activity in 2021/2022 was minimal as in 2020/2021. However, after the offici
 
 * EigenExa : stable version 2.11 (relases on December 2021)
 * ELPA : 2018.11.001, 2019.05.001 for devel stage, and 2019.11.001 for next stage.
-       include support for GPU acceleration for ELPA1 and 2.
+       Include support for GPU acceleration for ELPA1 and 2.
 
 
 ## Visits and meetings
@@ -147,7 +144,7 @@ Our activity in 2021/2022 was minimal as in 2020/2021. However, after the offici
 In the 4th JLESC meeting at Bonn, we had a pre-meeting of this project with regard to a research update and planning in 2016 of each member.
 
 Frequent e-mail exchanges between Toshiyuki Imamura and Inge Gutheil.
-In the 5th JLESC meeting at Lyon,  both met and discussed about this project.
+In the 5th JLESC meeting at Lyon, both met and discussed about this project.
 Also, 6th JLESC meeting was hosted by AICS and Inge Gutheil visited AICS.
 Toshiyuki Imamura visited the 7th JLESC workshop in UIUC Urbana and the 8th JLESC workshop in Barcelona.
 He also visited Juelich on 23th of June after ISC17 to talk about KNL usage.

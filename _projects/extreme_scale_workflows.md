@@ -34,7 +34,7 @@ The goal of the Swift/Decaf/Damaris/FlowVR collaboration is to enhance the progr
  * M. Dreher and J. Wozniak developed an initial integration plan for Swift and Decaf.
  * M. Dreher presented an initial suite of workflows at the December 2015 meeting.
  * T. Peterka co-organized SC15 BOF on scientific workflows.
-* M. Dreher and B. Raffin integrated the Decaf redistribution component with FlowVR and we published a Cluster 2016 paper on this research {% cite DreherEtAl2016 --file jlesc.bib %}.
+ * M. Dreher and B. Raffin integrated the Decaf redistribution component with FlowVR and we published a Cluster 2016 paper on this research {% cite DreherEtAl2016 --file jlesc.bib %}.
 
 ## Results for 2016/2017
 
@@ -82,7 +82,7 @@ Current In Situ infrastructures adopt very often a fixed policy to manage mismat
 
  * Clement Mommessin (ANL), supervised by Matthieu Dreher (ANL), Bruno Raffin (INRIA) and Tom Peterka (ANL)
 
-Scientific workflows are an aggregation of several tasks exchanging messaging. Usually each task is developed independently as a single piece of software. When integrating these codes into a a workflow, the developer has to build interfaces to exchange data between each task. To get the best performance for a particular workflow, the user should only send necessary data. However, simulation and analysis codes are complex code hard to maintain. It is then desired that the user modify only once their respective code. This imposes that the developer should expose as much data as possible to cover the maximum of use cases. Yet this approach could create significant performance impact due to unnecessary data being send for a particular workflow. We are currently investigating the notion of contracts for tasks. A contract is a declaration by the user of all the data that a particular need to work and all the data that the task can emit. Given this information, we can perform several checks and optimizations. First we check that the user is not trying to connect incompatible tasks with a data model mismatch. Second we can check at runtime that each task is sending the correct data. Third we can filter the data at runtime to send only necessary data for each consumer. This work is currently being integrated in Decaf.
+Scientific workflows are an aggregation of several tasks exchanging messaging. Usually each task is developed independently as a single piece of software. When integrating these codes into a workflow, the developer has to build interfaces to exchange data between each task. To get the best performance for a particular workflow, the user should only send necessary data. However, simulation and analysis codes are complex code hard to maintain. It is then desired that the user modify only once their respective code. This imposes that the developer should expose as much data as possible to cover the maximum of use cases. Yet this approach could create significant performance impact due to unnecessary data being sent for a particular workflow. We are currently investigating the notion of contracts for tasks. A contract is a declaration by the user of all the data that a particular need to work and all the data that the task can emit. Given this information, we can perform several checks and optimizations. First we check that the user is not trying to connect incompatible tasks with a data model mismatch. Second we can check at runtime that each task is sending the correct data. Third we can filter the data at runtime to send only necessary data for each consumer. This work is currently being integrated in Decaf.
 
 ## Results for 2017/2018
 
@@ -133,13 +133,13 @@ Cluster 2017 {% cite drehercluster17 --file jlesc.bib %} and was presented by Ma
 
 Scientific workflows are an aggregation of several tasks exchanging data.
 Usually each task is developed independently as a single piece of software. When
-integrating these codes into a a workflow, the developer has to build interfaces
+integrating these codes into a workflow, the developer has to build interfaces
 to exchange data between each task. To get the best performance for a particular
 workflow, the user should only send necessary data. However, simulation and
 analysis codes are complex code hard to maintain. In order to minimize code
 changes, the developer often exposes as much data as possible to cover the
 maximum number of use cases. Yet this approach could create significant
-performance impact due to unnecessary data being send for a particular workflow.
+performance impact due to unnecessary data being sent for a particular workflow.
 We solved this problem with the notion of contracts for tasks. A contract is a
 declaration by the user of all the data that a particular need to work and all
 the data that the task can produce.  Given this information, we can perform
@@ -182,7 +182,7 @@ providing a single-program, integrated environment or a multiple-program,
 connected environment, both solutions having their own strengths and weaknesses.
 While these approaches might be appropriate for current production systems, the
 expected characteristics of exascale machines will shift current priorities.
-After surveying the tradeoffs and challenges of integrated and connected in situ
+After surveying the trade offs and challenges of integrated and connected in situ
 workflow solutions available today, we studied how exascale systems will impact
 those designs. In particular, we identified missing features of current system
 software required for the evolution of in situ workflows toward exascale and how
@@ -196,7 +196,7 @@ presented a concept paper at the SC17 ISAV workshop {% cite dreherisav17 --file 
 
  * Rosa Badia and Jorge Ejarque of BSC, Orcun Yildiz and Tom Peterka of ANL
 
-Workflow systems promise scientists an automated end-to-end path from hypothesis to discovery. However, it is impractical to expect any single system to deliver such a wide range of capabilities. A more practical solution is to compose the end-to-end workflow from more than one system. With this goal in mind, the integration between distributed and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of subworkflows, with different levels of the hierarchy using different programming, execution, and data models.
+Workflow systems promise scientists an automated end-to-end path from hypothesis to discovery. However, it is impractical to expect any single system to deliver such a wide range of capabilities. A more practical solution is to compose the end-to-end workflow from more than one system. With this goal in mind, the integration between distributed and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of sub-workflows, with different levels of the hierarchy using different programming, execution, and data models.
 
 In 2018, we finalized the implementation of this hierarchical workflow composition that uses PyCOMPSs and Decaf as the distributed and in situ workflow tools, respectively. We evaluated our approach by performing experiments in materials science. The in situ Decaf sub-workflow consists of the LAMMPS molecular dynamics simulation coupled to a parallel in situ feature detector that selects nucleated molecule clusters during crystallization. Meanwhile, the PyCOMPSs distributed area workflow launches an ensemble of in situ Decaf workflows with different initial conditions, saves results from experiments that successfully nucleated, and collects frames from those ensemble members into an animation. Our results reveal that heterogeneous workflow integration is advantageous to both distributed area and in situ workflow systems. This work is currently being reviewed for a journal publication.
 
@@ -209,7 +209,7 @@ In 2018, we finalized the implementation of this hierarchical workflow compositi
 Workflow systems promise scientists an automated end-to-end path from hypothesis to discovery. However, it is
 impractical to expect any single system to deliver such a wide range of capabilities. A more practical solution is to
 compose the end-to-end workflow from more than one system. With this goal in mind, the integration between distributed
-and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of subworkflows,
+and in situ workflows is explored, where the result is a hierarchical heterogeneous workflow composed of sub-workflows,
 with different levels of the hierarchy using different programming, execution, and data models.
 
 In 2019, we completed the implementation of this hierarchical workflow composition that uses PyCOMPSs and Decaf as the
@@ -237,7 +237,7 @@ In 2020, we started a new collaboration between ANL and UTK, and hosted Tanner H
 
 Today's science campaigns consist of multiple tasks with wide-ranging data and computing requirements, and rarely are all the required capabilities found in current in situ workflow systems. In this work, we explore providing increased capabilities for scientific computing by bringing new capabilities to in situ workflows: a flexible interface for workflow specification, heterogeneous task placement, and dynamic changes to the workflow task graph. We evaluate our approach using materials science and cosmology use cases. Our results show that our approach (i) can save time and resources in science workflows exhibiting dynamic patterns by enabling dynamic workflow changes during their lifetime; (ii) enables easier specification of large-scale workflows consisting of subgraphs and ensemble computations; (iii) efficiently coordinates heterogeneous tasks by enabling free intermixing of time and space partitioning, thus resulting in time and space savings.
 
-We have published our results in 2021 IEEE Workshop on Workflows in Support of Large-Scale Science (WORKS) {% cite yildiz2021dynamic --file jlesc.bib %}. In 2022, we will continue to apply our approach, dynamic heterogenous in situ workflows, to several science use cases including elastic distributed deep learning ones. This is a joint project between Orcun Yildiz, Bogdan Nicolae and Tom Peterka of ANL, and we are actively looking for students to help us with this project.
+We have published our results in 2021 IEEE Workshop on Workflows in Support of Large-Scale Science (WORKS) {% cite yildiz2021dynamic --file jlesc.bib %}. In 2022, we will continue to apply our approach, dynamic heterogeneous in situ workflows, to several science use cases including elastic distributed deep learning ones. This is a joint project between Orcun Yildiz, Bogdan Nicolae and Tom Peterka of ANL, and we are actively looking for students to help us with this project.
 
 ## Visits and meetings
 

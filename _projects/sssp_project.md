@@ -20,7 +20,7 @@ members:
 
 ## Research topic and goals
 
-The SSP (Sustained System Performance) metric is used to measure the performance of existing and future supercomputer systems at NERSC, NCSa, the Australian Bureau of Meterology and other sites. The SSP metric takes into account the performance of various scientific applications and input data sets (aka a “benchmark”), which represent some part of the sites’ workload. 
+The SSP (Sustained System Performance) metric is used to measure the performance of existing and future supercomputer systems at NERSC, NCSA, the Australian Bureau of Meterology and other sites. The SSP metric takes into account the performance of various scientific applications and input data sets (aka a “benchmark”), which represent some part of the sites’ workload. 
 
 In this collaboration, we propose the SSSP (Simplified Sustained System Performance) metric that makes performance projection using a set of simple existing benchmarks to the SPP metric for real applications. The benchmarks used as the “simple” may be existing simple benchmarks such as HPCC benchmark, HPL, parts of the SPECFP benchmark, and other simplified pseudo benchmarks which data already exist or easy to be measured.
 
@@ -54,7 +54,7 @@ The current vSSSP formula computed based on the results of applications and HPCG
 
 ## Results for 2019/2020
 
-We have performed several benchmarks and applications on larger systems than those used in previous years to compare the accuracy of the SSSP metric for large systems. We perform two kinds of performance projections : (1) SSSP metric for large systems using weighting factors computed from small systems, (2) SSSP metric for large systems using weighting factors computed from large systems. We have comfirmed while the (2) was more precise, the (1) method also gave appropriate insights about applications' performance of systems. 
+We have performed several benchmarks and applications on larger systems than those used in previous years to compare the accuracy of the SSSP metric for large systems. We perform two kinds of performance projections : (1) SSSP metric for large systems using weighting factors computed from small systems, (2) SSSP metric for large systems using weighting factors computed from large systems. We have confirmed while the (2) was more precise, the (1) method also gave appropriate insights about applications' performance of systems. 
 
 We have organized a mini symposium about performance metrics at SIAM PP20, Seattle, Feb 2020, "Meaningful  Performance Indicators for Scientific Computing". We had 4 invited speakers including two from this JLESC project:
  - "Why Run Real Benchmarks? Can't I Just Run Linpack to Understand My System?"  William T. Kramer 
@@ -64,11 +64,11 @@ We have organized a mini symposium about performance metrics at SIAM PP20, Seatt
 
 ## Results for 2020/2021
 
-We have published an article in Jornal of Supercomputing {% cite TsujEtAl2021 --file jlesc.bib %}. The manuscript includes discussions and experiments performed in this project. 
+We have published an article in Journal of Supercomputing {% cite TsujEtAl2021 --file jlesc.bib %}. The manuscript includes discussions and experiments performed in this project. 
 
 ## Results for 2021/2022
 
-We have performed some experiments on the supercomputer Fugaku, which started its oficial operation in March 2021, and have confirmed that the results were consistent with the previous experiments. 
+We have performed some experiments on the supercomputer Fugaku, which started its official operation in March 2021, and have confirmed that the results were consistent with the previous experiments. 
 
 ## Visits and meetings
 

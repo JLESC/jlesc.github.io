@@ -58,7 +58,7 @@ this writing has gathered more than 800 answers from more than 40 countries.
 
 As of 02.2019 the design of the questionnaire survey is almost
 done. Especially we also pay attention to China which is growing
-rapidly in the HPC field and we have been making great effort to have
+rapidly in the HPC field, and we have been making great effort to have
 answers from China. Unfortunately, our effort is not rewarded, 15
 answers from China at the time of this writing. We are now analyzing
 the answers and planning to submit a paper.
@@ -88,7 +88,7 @@ project github directory.
 ## Visits and meetings
 
 Due to the COVID situation, all meeting in the period 2021-2022 were online
-meetings. They occured regularly, mostly one to two meeting in a month.
+meetings. They occurred regularly, mostly one to two meeting in a month.
 
 ## Impact and publications
 

@@ -35,8 +35,8 @@ mechanisms for monitoring application memory accesses, we have shifted the work
 to focus on the intersection of machine learning and memory management.
 
 During his second visit to RIKEN, Aleix has investigated machine learning
-workloads from a systems perspective. Specifically, he has been focusing on
-memory management issues in pytorch and identified a number opportunities
+workloads from a system's perspective. Specifically, he has been focusing on
+memory management issues in pytorch and identified a number of opportunities
 for OS level performance improvement. This is an ongoing effort, which we
 anticipate to lead to another joint publication.
 
@@ -49,7 +49,7 @@ python distributed RL framework developed by RIKEN.
 
 ## Results for 2020/2021
 
-We have extended the gem5 simulator to support heterogeneous memory devices and
+We have extended the gem5 simulator to support heterogeneous memory devices, and
 we have been working on interfacing runtime information between gem5 and python
 based ML frameworks (e.g., pytorch). The ultimate goal is to drive decisions on
 memory allocations and data movement in heterogeneous memory environments using

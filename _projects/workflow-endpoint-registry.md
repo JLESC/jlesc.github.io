@@ -81,7 +81,7 @@ Read the comments carefully!
 
 ## Research topic and goals
 
-There is now a large and ever growing number of workflow systems, and we have lost hope in
+There is now a large and ever-growing number of workflow systems, and we have lost hope in
 encouraging users not to continue developing more. Instead, we want to focus on building
 shared elements that can help us with our own systems, as well as the users of those systems
 and the developers of applications that will increasingly be used as workflow elements in
@@ -201,9 +201,10 @@ Very few – no testing needs to be done at large scale, though we will need acc
 to a few HPC systems to test mechanisms for their use
 
 ### Expected results:
--	Paper describing the prototype
--	The prototype registry
--	Initial methods added to Parsl and PyCOMPs to use the registry
+
+* Paper describing the prototype
+*	The prototype registry
+*	Initial methods added to Parsl and PyCOMPs to use the registry
 
 
 ## References

@@ -29,7 +29,7 @@ members:
 ## Research topic and goals
 The end of Moore’s law poses a significant challenge for
 scientific computing: from the mid-2020s, performance will not improve
-any more from the CMOS technology progress. Reconfigurable computing
+anymore from the CMOS technology progress. Reconfigurable computing
 presents the unique opportunity of allowing performance progress by
 customization while still serving a large variety of applications,
 offering a true co-design vehicle. However, its adoption in scientific
@@ -67,7 +67,7 @@ We presented two technical posters related to high-level synthesis and custom FP
 We co-organized a panel session and a bird-of-feather session related to FPGA and reconfigurable computing with our collaborators in this field in SC18. We also organized two workshops related HPC and FPGAs in FPT18 in Japan.
 
 ## Results for 2019/2020
-Like previous year, we co-organized a panel session and a bird-of-feather session related to FPGA and reconfigurable computing with our collaborators in this field in SC19, which caputured a large audience. We also co-organized the ReHPC workshop in FPL2019.
+Like previous year, we co-organized a panel session and a bird-of-feather session related to FPGA and reconfigurable computing with our collaborators in this field in SC19, which captured a large audience. We also co-organized the ReHPC workshop in FPL2019.
 
 ## Results for 2020/2021
 We organized break-out session at JLESC 11th and 12th workshops titled "Heterogeneous and reconfigurable architectures for the future of computing". 
@@ -76,11 +76,12 @@ We organized break-out session at JLESC 11th and 12th workshops titled "Heteroge
 We organized break-out session at JLESC 13th workshops titled "Heterogeneous and reconfigurable architectures for the future of computing". 
 
 ## Visits and meetings
-{% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
-{% person sano_k %} visited ANL in August 2018 and spent one day for this project.
-{% person yoshii_k %}, {% person martorell_x %}, {% person rutten_e %} and {% person sano_k %} had a project meeting during FPT18 in Okinawa, Japan in Dec, 2018.
-{% person yoshii_k %}, {% person cappello_f %} visited RIKEN R-CCS and Sprint-8 facility in Aug, 2019 to discuss hardware compression technology.
-{% person yoshii_k %}, {% person sano_k %} had a couple of virtual-meetings in 2020 and 2021 to discuss collaborations and technical topics.
+
+* {% person cappello_f %} visited BSC for two weeks in July 2016 and spent two days for this project.
+* {% person sano_k %} visited ANL in August 2018 and spent one day for this project.
+* {% person yoshii_k %}, {% person martorell_x %}, {% person rutten_e %} and {% person sano_k %} had a project meeting during FPT18 in Okinawa, Japan in Dec, 2018.
+* {% person yoshii_k %}, {% person cappello_f %} visited RIKEN R-CCS and Sprint-8 facility in Aug, 2019 to discuss hardware compression technology.
+* {% person yoshii_k %}, {% person sano_k %} had a couple of virtual-meetings in 2020 and 2021 to discuss collaborations and technical topics.
 
 ## Impact and publications
 
@@ -89,7 +90,7 @@ The team is submitting a proposal to DOE on this topic.
 The team has also been making significant effort to develop a community about reconfigurable high-performance computing. We have successfully identified major players in this field and planning upcoming workloads co-held with major FPGA conferences.
 
 * A paper at Smokey Mountain Conference 2021 on hardware co-design methodology {% cite yoshii2021hardware --file jlesc.bib %}
-* A paper at IEEE ASAP 2021 on virtualization of networks of FPGA clusters  {% cite ueno2021virtual --file jlesc.bib %}
+* A paper at IEEE ASAP 2021 on virtualization of networks of FPGA clusters {% cite ueno2021virtual --file jlesc.bib %}
 
 {% bibliography --cited --file jlesc.bib %}
 

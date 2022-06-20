@@ -116,7 +116,7 @@ POP standard metrics applied in POP services performance analyses.
 
 ## Future plans
 
-Use of Scalasca/Score-P and Paraver/Extrae to analyse execution performance of RIKEN applications.
+Use of Scalasca/Score-P and Paraver/Extrae to analyze execution performance of RIKEN applications.
 Large-scale application performance measurements on Fugaku and other HPC systems.
 HPC Tunathon at JSC scaling applications on JUWELS CPUs and GPUs.
 Workshops and training organised under the auspices of VI-HPS 

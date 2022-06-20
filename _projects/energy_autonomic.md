@@ -23,12 +23,12 @@ members:
 
 ## Research topic and goals
 
-Behaviour of HPC systems, such as performance, power consumption, thermal
+Behavior of HPC systems, such as performance, power consumption, thermal
 distribution, are increasingly hard to predict due to process variations and
 dynamic processors, which conflicts with conventional bulk synchronous
-parallelism software models such as MPI. Additionally computing facilities are
+parallelism software models such as MPI. Additionally, computing facilities are
 now interested in limiting computing resources by power/energy budget rather
-than CPU time. Such idea is also negatively affected by unpredictable behaviour
+than CPU time. Such idea is also negatively affected by unpredictable behavior
 of modern HPC systems. Hardware-level power-limiting capability is becoming a
 standard feature in modern processors. Intel running average power limit
 (RAPL), for example, adjusts CPU core frequency (and CPU states if needed)
@@ -58,10 +58,10 @@ approaches to specificities of HPC and power management.
 
 ## Results for 2019/2020
 
-On the basis of the preliminary work done at ANL on instrumentation of HPC applications, Inria has begun work on a range of controllers for the runtime adaptation of the Power Cap level in RAPL. A first approach is considered, re-using results on other work concerning a different problem (regulating the degree of parallelism according to synchronization cost), but which could be transferred here. Another approach involves measuring progress and power and making decisions based on predictions.
+On the basis of the preliminary work done at ANL on instrumentation of HPC applications, INRIA has begun work on a range of controllers for the runtime adaptation of the Power Cap level in RAPL. A first approach is considered, re-using results on other work concerning a different problem (regulating the degree of parallelism according to synchronization cost), but which could be transferred here. Another approach involves measuring progress and power and making decisions based on predictions.
 
 Argonne completed the design and implementation of an infrastructure to perform
-control experiments using jupyter notebooks. This infrastructure can be
+control experiments using Jupyter notebooks. This infrastructure can be
 deployed on a wide range of servers, and allows collaborators to independently
 implement their own control algorithm using a simple interface and a high level
 language. The notebook then connect remotely to the existing Argo NRM
@@ -70,8 +70,8 @@ management.
 
 ## Results for 2020/2021
 
-{% person cerf_s %} started working as an Inria-funded postdoc on this project
-in October 2020. Using the jupyter notebook infrastructure and Grid'5000, we
+{% person cerf_s %} started working as an INRIA-funded postdoc on this project
+in October 2020. Using the Jupyter notebook infrastructure and Grid'5000, we
 are in the process on designing and validating control-theory based approaches
 to the problem of power/performance efficiency, with RAPL as the main actuator.
 We have identified our main objective for HPC systems: as applications
@@ -103,7 +103,7 @@ them.
 
 {% person reis_v %} left Argonne for Groq in March 2021. {% person daoudi_i %}
 started working as an ANL-funded postdoc on this project in October 2021. {% person cerf_s %}
-became a INRIA research scientist in Lille in October 2021.
+became an INRIA research scientist in Lille in October 2021.
 
 ## Visits and meetings
 

@@ -135,7 +135,7 @@ sources often contend for scarce available bandwidth. Adding to the I/O
 operations inherent to the failure-free execution of an application, I/O
 from checkpoint/restart (CR) operations (used to ensure progress in the presence
 of failures) place an additional burden as it increase I/O contention,
-leading to degraded performance.  We have  considered a cooperative scheduling policy that optimizes the
+leading to degraded performance.  We have considered a cooperative scheduling policy that optimizes the
 overall performance of concurrently executing CR-based applications which share
 valuable I/O resources.  First, we provide a theoretical model and then derive a set
 of necessary constraints needed to minimize the global waste on the
@@ -170,10 +170,7 @@ the performance of different approaches to
   usage.
 
 Also, the Inria partner has studied checkpointing strategies for workflows and has shown
-how to design an efficient strategy that achieves an efficient trade-off between extreme approaches where either  all application data is checkpointed, or no application data is
-  checkpointed.
-  Results demonstrate that our algorithm outperforms both the former approach,
-  because of lower checkpointing overhead, and the latter approach, because of better resilience to failures {% cite HanEtAl2018 --file external/ft_workflow_project.bib %},
+how to design an efficient strategy that achieves an efficient trade-off between extreme approaches where either all application data is checkpointed, or no application data is checkpointed. Results demonstrate that our algorithm outperforms both the former approach, because of lower checkpointing overhead, and the latter approach, because of better resilience to failures {% cite HanEtAl2018 --file external/ft_workflow_project.bib %},
 {% cite HanEtAl2018b --file external/ft_workflow_project.bib %}.
 
 
@@ -189,8 +186,7 @@ We compute
  the optimal checkpointing period Q for this strategy, which is much larger than P thereby
  decreasing I/O pressure.
 We show through simulations that using Q and the RESTART strategy, instead of P  and the usual NORESTART strategy, significantly decreases the overhead
-induced by replication,
-in terms of both total execution time and energy consumption.
+induced by replication, in terms of both total execution time and energy consumption.
 This work has appeared in the proceedings of SC'2019.
 
 
@@ -241,7 +237,7 @@ Assume that there are $n$ tasks, and that task $a_i$ has execution time $t_{i}$ 
 A naive strategy would
 checkpoint after each task. Another naive strategy would checkpoint at the end of each iteration. A strategy inspired by the Young/Daly formula would work for $\sqrt{2 \mu C}$ seconds, where $\mu$ is the application MTBF
 and C is the average checkpoint time, and checkpoint at the end of the current task (and repeat). Another strategy, also
-inspired by the Young/Daly formula, would  select the task $a_{min}$ with smallest checkpoint 
+inspired by the Young/Daly formula, would select the task $a_{min}$ with the smallest checkpoint 
 cost $c_{min}$ and would checkpoint after every p-th instance of that task, leading to a checkpointing period $p T$,  where $T = \sum_{i=0}^{n-1} a_{i}$ is the time per iteration. One would choose the period so that $p T \approx \sqrt{2 \mu c_{\min}}$ to obey the Young/Daly formula. 
 All these naive and Young/Daly strategies are suboptimal.
  Our main contribution is to show that the optimal checkpointing strategy is globally periodic, and to design a dynamic programming algorithm that computes the optimal checkpointing pattern. This pattern may well checkpoint many different tasks, and this across many different iterations. We show through simulations, both from synthetic and real-life application scenarios, that the optimal strategy outperforms the naive and Young/Daly strategies.
@@ -282,14 +278,14 @@ A simplistic assumption postulates that such structuring features
 would translate intact into a regime with failures.
 A notable aspect is if errors should be raised _uniformly_, that is
 the same error code is returned at all rank by the same collective operation.
-While this is desirable for the structuring aspect this gives to fault tolerant
+While this is desirable for the structuring aspect this gives to fault-tolerant
 codes, this also entails a significant overhead in most cases as
 it adds a supplementary concensus,
-an extra fault tolerant synchronization step that is not required by the
+an extra fault-tolerant synchronization step that is not required by the
 semantic of the underlying communication. Thus, to protect
 fault-free performance, users need to be able to control when such
-concensus are performed. The MPI_COMM_AGREE operation has provided
-an explicit means for users to synchronize in a fault tolerant fashion
+consensus are performed. The MPI_COMM_AGREE operation has provided
+an explicit means for users to synchronize in a fault-tolerant fashion
 when the need arises.
 We added a per-communicator property (practically,
 by setting specific MPI Info keys on the communicator) that
@@ -338,7 +334,7 @@ which allowed us to make progress on the project.
 
 {% person robert_y %} made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months, and a total of two months and a half for 2019/2020. 
 
-{% person lefevre_v %} has visited  Univ. Tenn. Knoxville for 10 days in February 2019,
+{% person lefevre_v %} has visited Univ. Tenn. Knoxville for 10 days in February 2019,
 and for 10 days in January 2020.
 
 Due to the Covid-19 sanitary situation, we have not had any visits since February 2020, 
@@ -347,7 +343,7 @@ but we had numerous virtual interactions.
 
 ## Impact and publications
 
-Two papers have been published in FTXS'17 {% cite benoitEtAl2017identifying --file jlesc.bib %},{% cite benoitEtAl2017optimal --file jlesc.bib %}.
+Two papers have been published in FTXS'17 {% cite benoitEtAl2017identifying --file jlesc.bib %}, {% cite benoitEtAl2017optimal --file jlesc.bib %}.
 
 The work combining fail-stop and silent errors has been published in JPDC
 {% cite BenoitEtAl2018 --file jlesc.bib %}.
