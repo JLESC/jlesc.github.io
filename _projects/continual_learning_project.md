@@ -2,7 +2,7 @@
 layout: page_project
 title: Towards Continual Learning at Scale
 date: 2022-05-07
-updated:
+updated: 2022-05-07
 navbar: Research
 subnavbar: Projects
 project_url:
