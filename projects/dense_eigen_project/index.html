@@ -187,7 +187,7 @@
 
 <p>Many applications for example in Density Functional Theory (DFT) used in physics, chemistry, and materials science have to compute eigenvalues and eigenvectors of dense symmetric matrices.
 There are several libraries available for that task in high performance computing: ScaLAPACK, EigenExa, ELPA, and Elemental.
-On the other hand there exist different supercomputers like K-computer, BlueGene/Q, and Intel clusters with XeonPhi accelerators or with GPU accelerators.
+On the other hand there exist different supercomputers like K-computer, BlueGene/Q, and Intel clusters with Xeon Phi accelerators or with GPU accelerators.
 The eigensolver routines from the different libraries behave differently on the different computer architectures.
 In the first step, we evaluate the several aspects of the routines on the existing production and prototype supercomputers available to give the users recommendations which routine to use for their specific task.
 At the moment, evaluation is planned with respect to performance, accuracy and reproducibility in hybrid parallel execution. In the next step, we adapt the routines to the architectures.</p>
@@ -201,7 +201,7 @@ In the next step tuning of the existing software should be done and the new resu
 <a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
 
 <p>This project was submitted in August 2015, and started from January 2016, officially.
-The porting process has already started for couple of eigensolver libraries and on couple of systems.
+The porting process has already started for a couple of eigensolver libraries and on couple of systems.
 We selected three libraries, ELPA, Elemental and EigenExa, and available resources, the K computer, JUQUEEN, and JURECA.</p>
 
 <p>The present status is summarized in the following table.
@@ -316,15 +316,15 @@ We confirmed the libraries are ported and perform on the systems;
 <ol>
   <li>(Cont.) Distributed MPI/OpenMP Parallel
     <ul>
-      <li>Progress will be delivered upto the machine replacement status.</li>
+      <li>Progress will be delivered up to the machine replacement status.</li>
     </ul>
   </li>
   <li>(Cont.) GPU extensions (standalone/cluster)
     <ul>
       <li>We have investigated the performance trend on three GPU-eigensolvers, cuSolver 10.0, MAGMA 2.5.0, and EigenG 2.2d.</li>
-      <li>On a Volta V100 board with CUDA 10.0+intel MKL library yieded excellent performance.</li>
+      <li>On a Volta V100 board with CUDA 10.0+intel MKL library yielded excellent performance.</li>
       <li>MAGMA (1stege kernel) and EigenG shows totally 700GFLOPS for a full diagonalization operation when N=9700.</li>
-      <li>For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximatedly 100 seconds, and it reached more than one TFLOPS.</li>
+      <li>For larger benchmark, when N=30000 and we used EigenG, the elapsed time for the full diagonalization took approximately 100 seconds, and it reached more than one TFLOPS.</li>
     </ul>
   </li>
 </ol>
@@ -332,7 +332,7 @@ We confirmed the libraries are ported and perform on the systems;
 <h2 id="results-for-20202021">
 <a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
 
-<p>Basically, the activity in FY2020 was limited due to the Covid19 pandemic circumstance. However, some of our updates can be summarize as follow.</p>
+<p>Basically, the activity in FY2020 was limited due to the Covid19 pandemic circumstance. However, some of our updates can be summarized as follows:</p>
 
 <ol>
   <li>(Cont.) Distributed MPI/OpenMP Parallel
@@ -374,7 +374,7 @@ We confirmed the libraries are ported and perform on the systems;
 <ul>
   <li>EigenExa : stable version 2.11 (relases on December 2021)</li>
   <li>ELPA : 2018.11.001, 2019.05.001 for devel stage, and 2019.11.001 for next stage.
-     include support for GPU acceleration for ELPA1 and 2.</li>
+     Include support for GPU acceleration for ELPA1 and 2.</li>
 </ul>
 
 <h2 id="visits-and-meetings">
@@ -383,7 +383,7 @@ We confirmed the libraries are ported and perform on the systems;
 <p>In the 4th JLESC meeting at Bonn, we had a pre-meeting of this project with regard to a research update and planning in 2016 of each member.</p>
 
 <p>Frequent e-mail exchanges between Toshiyuki Imamura and Inge Gutheil.
-In the 5th JLESC meeting at Lyon,  both met and discussed about this project.
+In the 5th JLESC meeting at Lyon, both met and discussed about this project.
 Also, 6th JLESC meeting was hosted by AICS and Inge Gutheil visited AICS.
 Toshiyuki Imamura visited the 7th JLESC workshop in UIUC Urbana and the 8th JLESC workshop in Barcelona.
 He also visited Juelich on 23th of June after ISC17 to talk about KNL usage.

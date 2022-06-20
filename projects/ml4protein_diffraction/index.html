@@ -210,16 +210,16 @@
 
 <p>An overview of our framework goes as follows, the diffraction patterns are processed by an autoencoder that captures key information and produces a tensor representation of each pattern. The autoencoder consists of an encoder and a decoder. The encoder has 3 convolutional filters and downsampling layers. The decoder has the reverse structure of the encoder. The new latent space is used to train and validate traditional machine learning models such as k-nearest neighbors (kNN). We use a kNN-angle regressor for predicting the orientation and a two kNN-classificators for predicting different protein conformations and types.</p>
 
-<p>We have explored increasingly complex protein diffraction imaging datasets: four imaging resolutions, two protein types: EF2 and ribosome, with 4 and 2 conformations respectively, and each conformations has the spatial orientation represented by the set of the three euler angles.</p>
+<p>We have explored increasingly complex protein diffraction imaging datasets: four imaging resolutions, two protein types: EF2 and ribosome, with 4 and 2 conformations respectively, and each conformation has the spatial orientation represented by the set of the three Euler angles.</p>
 
 <p>We quantify the classification accuracy and performance of XPSI, observing that as we increase the resolution of the images we obtain an orientation prediction error below 10 degrees for the three angles, four-conformation (1n0u, 1n0vc, 9a, bc) accuracy prediction of 93%, and two-protein (EF2, ribosome) types accuracy of 100%.</p>
 
 <h2 id="results-20212022">
 <a id="results-20212022" class="anchor" href="#results-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results 2021/2022</h2>
 
-<p>We added the prediction of the final property required to identify a protein structure which is the protein type. Moreover we identify and propose a solution to overcome symmetry challenges observed when predicting the 3rd rotational angle. We do this by changing the range for the third angle from 0 to 360 degrees to 0 to 180 degrees without affecting the science behind it. 
+<p>We added the prediction of the final property required to identify a protein structure which is the protein type. Moreover, we identify and propose a solution to overcome symmetry challenges observed when predicting the 3rd rotational angle. We do this by changing the range for the third angle from 0 to 360 degrees to 0 to 180 degrees without affecting the science behind it. 
 We quantify the accuracy of the predictions including the three angles of the orientation, the different conformations, and now the protein type. To this end we test XPSI on two protein types: EF2 and ribosome, with two conformations each (1n0u and 1n0vc for EF2 and 9a and bc for ribosome), and two imaging resolutions (high and low). For the high image resolution, we obtain an orientation prediction error up to 10 degrees, a difference in the predicted third angle up to 5 degrees, conformation accuracy prediction of 92%, and 100% of protein type accuracy prediction. We also provide a Jupyter Notebook for shareability and portability of our framework. 
-As next steps, we aim to test the framework with more data (i.e. three or more protein types with two or more conformations each); and compare our framework with a traditional XFEL slice matching approach which is used for 3D reconstruction and follows the premises of orientation prediction through multiple and time consuming iterations.</p>
+As next steps, we aim to test the framework with more data (i.e. three or more protein types with two or more conformations each); and compare our framework with a traditional XFEL slice matching approach which is used for 3D reconstruction and follows the premises of orientation prediction through multiple and time-consuming iterations.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -238,7 +238,7 @@ As next steps, we aim to test the framework with more data (i.e. three or more p
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
 
-<p>As next steps, we are working on 1) Sharing our current Jupyter Notebook on platforms like Wasabi or Google Collab; 2) testing the framework with new provided data 3) comparing our framework with a traditional XFEL slice matching approach which is used for 3D reconstruction and follows the premises of orientation prediction through multiple and time consuming iterations.</p>
+<p>As next steps, we are working on 1) Sharing our current Jupyter Notebook on platforms like Wasabi or Google Collab; 2) testing the framework with new provided data 3) comparing our framework with a traditional XFEL slice matching approach which is used for 3D reconstruction and follows the premises of orientation prediction through multiple and time-consuming iterations.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
