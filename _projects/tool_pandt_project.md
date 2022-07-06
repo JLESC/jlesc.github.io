@@ -18,9 +18,13 @@ head: wylie_b
 members:
   - tsuji_m
   - murai_h
+  - kobayashi_c
   - feld_c
   - gimenez_j
   - llort_g
+  - mercadal_l
+  - danalis_a
+  - jagode_h
 ---
 
 ## Research topic and goals
