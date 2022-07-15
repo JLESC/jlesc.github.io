@@ -8,11 +8,11 @@ subnavbar: Projects
 project_url:
 status: running
 topics:
-  - Advanced Architectures
+  - architectures
 keywords:
-  - Computing Continuum
-  - Reproducibility
-  - Methodology
+  - computing continuum
+  - reproducibility
+  - methodology
 head: keahey_k
 members:
   - rosendo_d
