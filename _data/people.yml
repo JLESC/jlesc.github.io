@@ -2154,6 +2154,15 @@ ropars_t:
   email: thomas.ropars@inria.fr
   homepage: http://people.bordeaux.inria.fr/tropars/
 
+rosendo_d:
+  sur_name: Rosendo
+  given_name: Daniel
+  affiliation: inria
+  position:
+  topics:
+  email: daniel.rosendo@inria.fr
+  homepage: https://team.inria.fr/kerdata/daniel-rosendo/
+
 ruettgers_m:
   sur_name: Rüttgers
   given_name: Mario
