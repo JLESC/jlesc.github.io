@@ -8,7 +8,7 @@ event_location: The University of Illinois at Urbana-Champaign
 event_start: 2022-09-28
 event_end: 2022-09-30
 event_short_url:
-event_url:
+event_url: https://publish.illinois.edu/14th-jlesc-workshop/
 wayback_url:
 logo:
 kind: workshop
