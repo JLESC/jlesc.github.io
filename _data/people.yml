@@ -584,6 +584,15 @@ darte_a:
   email: Alain.Darte@ens-lyon.fr
   homepage: http://perso.ens-lyon.fr/alain.darte/
 
+danalis_a:
+  sur_name: Danalis
+  given_name: Anthony
+  affiliation: utk
+  position:
+  topics: tools
+  email: adanalis@icl.utk.edu
+  homepage:
+
 daoudi_i:
   sur_name: Daoudi
   given_name: Idriss
@@ -1147,6 +1156,15 @@ jacob_r:
   email: jacob@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/~jacob/
 
+jagode_h:
+  sur_name: Jagode
+  given_name: Heike
+  position: permanent
+  affiliation: utk
+  topics: tools
+  email: jagode@icl.utk.edu
+  homepage:
+
 jaulmes_l:
   sur_name: Jaulmes
   given_name: Luc
@@ -1289,6 +1307,15 @@ klatt_t:
   position: alumnus
   topics: parallel-in-time integration
   email: t.klatt@fz-juelich.de
+  homepage:
+
+kobayashi_c:
+  sur_name: Kobayashi
+  given_name: Chigusa
+  affiliation: riken
+  topics: tools
+  position:
+  email: ckobayashi@riken.jp
   homepage:
 
 kotsuki_s:
@@ -1596,6 +1623,15 @@ mendes_c:
   topics:
   email: cmendes@illinois.edu
   homepage: http://charm.cs.uiuc.edu/people/cmendes
+
+mercadal_l:
+  sur_name: Mercadal
+  given_name: Lau
+  affiliation: bsc
+  position:
+  topics: tools
+  email: lau.mercadal@bsc.es
+  homepage:
 
 mikida_e:
   sur_name: Mikida
