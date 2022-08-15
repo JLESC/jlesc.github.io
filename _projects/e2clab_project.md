@@ -1,6 +1,6 @@
 ---
 layout: page_project
-title: Advancing Reproducibility in Computing Continuum Research
+title: Advancing Chameleon and Grid'5000 testbeds
 date: 2022-07-15
 updated:
 navbar: Research
@@ -93,29 +93,26 @@ choices. One important  challenge is to accurately reproduce relevant behaviors
 of a given application workflow and representative settings of the physical 
 infrastructure underlying this complex continuum {% cite DanielEtAl2022 --file jlesc.bib %}. 
 
-At Inria we introduced a rigorous methodology for such a process and validated 
-it through E2Clab {% cite DanielEtAl2020 --file jlesc.bib %}. It is the first 
-platform to support the complete analysis cycle of an application on the 
-Computing Continuum: (i) configuration of the experimental environment; (ii) 
-mapping between the application parts and machines on the Edge-Fog-Cloud; (iii) 
-deployment of the application on the infrastructure; (iv) automated execution; 
-(v) application optimization {% cite DanielEtAl2021 --file jlesc.bib %};
-and (vi) gathering of experiment metrics. 
+At Inria we introduced a rigorous methodology for such a process and validated it through 
+E2Clab {% cite DanielEtAl2020 --file jlesc.bib %}. It is the first platform to support the 
+complete analysis cycle of an application on the Computing Continuum: (i) configuration of 
+the experimental environment; (ii) mapping between the application parts and machines on 
+the Edge-Fog-Cloud; (iii) deployment of the application on the infrastructure; (iv) automated 
+execution; (v) application optimization {% cite DanielEtAl2021 --file jlesc.bib %}; and 
+(vi) gathering of experiment metrics.
 
 The main research goal of this project is to enable scientists to effectively 
 reproduce and explore experiments run in the Grid5000 platform by integrating 
-it with the Trovi portal {% cite ChameleonEtAl2022 --file external/e2clab_project.bib %}. The idea 
-of integrating testbeds such as Chameleon {% cite KateEtAl2020 --file external/e2clab_project.bib %} 
-and Grid5000 {% cite RaphaEtAl2006 --file external/e2clab_project.bib %} with Trovi is to 
-have an open access repository of research artifacts which are visible and 
-reproducible across testbeds.
+it with the Jupyter environment and the Trovi portal {% cite ChameleonEtAl2022 --file external/e2clab_project.bib %}. 
+The idea of integrating testbeds such as Chameleon {% cite KateEtAl2020 --file external/e2clab_project.bib %} 
+and Grid5000 {% cite RaphaEtAl2006 --file external/e2clab_project.bib %} with Trovi/Jupyter 
+is to have an open access repository of research artifacts which are visible and reproducible 
+across testbeds.
 
 The ultimate goal is to lower the barrier to reproducing research by combining 
-the reproducible artifacts and the experimental environment. We will validate 
-our methodology with a real-life hydrological application provided by 
-collaborators from Rutgers University. The goal is to illustrate how our 
-methodology helps scientists to reproduce complex Edge-to-Cloud workflows among 
-the various testbeds supported by Trovi.
+the reproducible artifacts and the experimental environment. We will demonstrate 
+how our Jupyter/Trovi approach for reproducibility helps scientists to reproduce 
+complex Edge-to-Cloud workflows across Chameleon/CHI@Edge/G5K.
 
 
 ## Results for 2022/2023
