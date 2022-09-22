@@ -34,11 +34,12 @@ We implemented two hash based incremental checkpointing algorithms that operate 
 
 ## Visits and meetings
  * Nigel Tan spent the summer of 2022 at ANL working on the project
+ * The team meets weekly during the entire year
 
 ## Impact and publications
- * Talk: 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: Towards Access Pattern Aware Checkpointing for Kokkos Applications
- * Poster: Nigel Tan, Bogdan, Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, and Michela Taufer, “Towards Access Pattern Aware Checkpointing For Kokkos Applications,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, St. Louis, MO, 2021.
- * Talk: SIAM Parallel Processing 22 Conference, 2022. Towards Access Pattern Aware Checkpointing For Kokkos Applications
+ * Talk: **Nigel Tan**, Elisabeth Giem, Matthew Whitlock, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer. 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: Towards Access Pattern Aware Checkpointing for Kokkos Applications
+ * Poster: **Nigel Tan**, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, and Michela Taufer, “Towards Access Pattern Aware Checkpointing For Kokkos Applications,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, St. Louis, MO, 2021.
+ * Talk: **Nigel Tan**, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer, SIAM Parallel Processing 22 Conference, 2022. Towards Access Pattern Aware Checkpointing For Kokkos Applications
 
 ## Future plans
 We will continue to improve our incremental checkpoint restart algorithm to better take advantage of available memory access pattern information. Runtime checkpoint performance analysis will be added in order to dynamically guide the checkpoint deduplication process. Other test applications and access patterns will be identified and used to improve checkpoint performance for a variety of applications relevant to the community.
