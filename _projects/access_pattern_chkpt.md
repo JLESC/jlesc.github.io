@@ -11,13 +11,13 @@ topics:
   - resilience
 keywords:
   - checkpoint restart
-head: taufer_m
+head: nicolae_b
 members: 
   - tan_n
-  - nicolae_b
-  - cappello_f
   - luettgau_j
   - roachell_b
+  - cappello_f
+  - taufer_m
 ---
 
 ## Research topic and goals
