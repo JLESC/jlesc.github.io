@@ -1516,6 +1516,15 @@ luehrs_s:
   email: s.luehrs@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/luehrs_s.html
 
+luettgau_j:
+  sur_name: Luettgau
+  given_name: Jakob
+  affiliation: utk
+  position:
+  topics:
+  email: jluettga@utk.edu
+  homepage:
+
 martorell_x:
   sur_name: Martorell
   given_name: Xavier
@@ -2136,6 +2145,15 @@ riteau_p:
   email: priteau@uchicago.edu
   homepage:
 
+roachell_b:
+  sur_name: Roachell
+  given_name: Brandan
+  affiliation: utk
+  position: 
+  topics: 
+  email: broachel@vols.utk.edu 
+  homepage: 
+
 ross_r:
   sur_name: Ross
   given_name: Rob
@@ -2557,6 +2575,15 @@ takizawa_s:
   position:
   topics:
   email: shinichiro.takizawa@riken.jp
+  homepage:
+
+tan_n:
+  sur_name: Tan
+  given_name: Nigel
+  affiliation: utk
+  position:
+  topics:
+  email: ntan1@vols.utk.edu
   homepage:
 
 tanaka_m:
