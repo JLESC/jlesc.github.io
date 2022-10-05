@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/torbjoernk/jekyll-git_metadata.git
+  remote: https://github.com/torbjoernk/jekyll-git_metadata.git
   revision: 61f9b2c0bd2ddcabc9274f28d4aa781cb67b2f6f
   tag: v0.0.5-torbjoernk
   specs:
@@ -7,7 +7,7 @@ GIT
       jekyll (~> 3.0)
 
 GIT
-  remote: git://github.com/torbjoernk/jekyll-toc.git
+  remote: https://github.com/torbjoernk/jekyll-toc.git
   revision: 8e0ba0157f1984f5e5a7d358550b10c8b753febe
   branch: feature/separate-filters
   specs:
@@ -17,8 +17,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     autoprefixer-rails (8.6.3)
       execjs
     bibtex-ruby (4.4.7)
@@ -100,13 +100,15 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
     mini_magick (4.9.5)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.8.0)
     namae (1.0.1)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.13.8)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (4.0.1)
+    public_suffix (5.0.0)
+    racc (1.6.0)
     rack (1.6.12)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
