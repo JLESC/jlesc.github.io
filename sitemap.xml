@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://jlesc.github.io/news/2022/10/17/15th-workshop/</loc>
+<lastmod>2022-10-17T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>https://jlesc.github.io/news/2021/09/16/14th-workshop/</loc>
 <lastmod>2021-09-16T00:00:00+00:00</lastmod>
 </url>
@@ -188,6 +192,9 @@
 </url>
 <url>
 <loc>https://jlesc.github.io/events/14th-jlesc-workshop/</loc>
+</url>
+<url>
+<loc>https://jlesc.github.io/events/15th-jlesc-workshop/</loc>
 </url>
 <url>
 <loc>https://jlesc.github.io/projects/activestorage_project/</loc>
