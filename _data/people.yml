@@ -197,6 +197,15 @@ balasz_g:
   email: bgerofi@riken.jp
   homepage: http://www-sys-aics.riken.jp/Members/gerofi.html
 
+bandet_a:
+  sur_name: Bandet
+  given_name: Alexis
+  affiliation: inria
+  position: phd
+  topics:
+  email: alexis.bandet@inria.fr
+  homepage: 
+
 barcelo_a:
   sur_name: Barcelo
   given_name: Alex
