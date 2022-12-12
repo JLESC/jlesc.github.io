@@ -35,7 +35,8 @@ Expected contributions:
 * Community building and exchange in the field of RSE and Cx within the JLESC
 
 ## Results for 2021/2022
-None, the project started in early 2022.
+The project started in early 2022 and the partners met during the 14th JLESC Workshop for a joint break-out session for the first time. There, topics like the connection between Github Actions and Gitlab runners, flaky tests, overflowing parameter spaces and CI on different HPC machines were discussed and further meetings of this kind are planned.
+
 
 ## Visits and meetings
 None.
