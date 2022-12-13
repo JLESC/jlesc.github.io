@@ -1,8 +1,8 @@
 ---
 layout: page_project
 title: Architecture and Hyperparameter Search for Super-Resolution Networks Operating on Medical Images
-date: 2022-12-15
-updated: 2022-12-15
+date: 2022-12-13
+updated: 2022-12-13
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -22,7 +22,6 @@ members:
   - ruettgers_m
   - aach_m
   - balaprakash_p
-  
 ---
 
 
