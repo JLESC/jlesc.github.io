@@ -49,4 +49,4 @@ The dataset consists of CT head recording from 65 patients. HR images were 1mm t
 * Manuscript for the special issue journal publication in the framework of the 15th JLESC workshop in Bordeaux, France
 
 ## References
-{% bibliography --file external/Hyperp_SR_project.bib %}
+{% bibliography --file external/hyperp_sr_project.bib %}
