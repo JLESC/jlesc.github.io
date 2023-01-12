@@ -320,6 +320,16 @@ The non-blocking shrink also gives an opportunity for overlap between the
 cost of rebuilding communicators with the cost of restoring the application
 dataset (e.g., reloading checkpoints, computing checksum on data, etc.).
 
+## Results for 2022/2023
+
+First, we have been further investigating the Young/Daly formula. This formula provides an approximation of the optimal checkpoint period for a parallel application executing on a supercomputing platform. It was originally designed for preemptible tightly-coupled applications. We provided some background and survey various application scenarios to assess the usefulness and limitations of the formula in {% cite BenoitEtAl2022 --file jlesc.bib %}. 
+
+Also, we have been revisiting distributed termination detection algorithms in the context of High-Performance Computing (HPC) applications. We introduced an efficient variant of the Credit Distribution Algorithm (CDA) and compared it to the original algorithm (HCDA) as well as to its two primary competitors: the Four Counters algorithm (4C) and the Efficient Delay-Optimal Distributed algorithm (EDOD). We analyzed the behavior of each algorithm for some simplified task-based kernels and showed the superiority of CDA in terms of the number of control messages. We then compared the implementation of these algorithms over a task-based runtime system, PaRSEC and showed the advantages and limitations of each approach on a practical implementation {% cite BosilcaEtAl2022 --file jlesc.bib %}. 
+
+Some progress on the projects mentionned in 2021-2022 were also done by UT Knoxville, in particular on integrating process, control-flow, and data resiliency layers using a hybrid Fenix/Kokkos approach, demonstrating that designing integrable systems rather than integrated systems allows for user-designed optimization and upgrading of resilience techniques while maintaining the simplicity and performance of all-in-one resilience solutions. More application-specific choice in resilience strategies allows for better long-term flexibility, performance, and - importantly - simplicity.
+
+Finally, we have initiated a study about the impact of I/O interference on application performance. HPC applications execute on dedicated nodes but share the I/O system. As a consequence, interferences surge when several applications perform I/O operations simultaneously, and each I/O operation takes much longer than expected because each application is only allotted a fraction of the I/O bandwidth. Checkpoint operations are periodic and high-volume I/O operations and, as such, are particularly sensitive to interferences.
+
 
 
 ## Visits and meetings
@@ -337,8 +347,9 @@ which allowed us to make progress on the project.
 {% person lefevre_v %} has visited Univ. Tenn. Knoxville for 10 days in February 2019,
 and for 10 days in January 2020.
 
-Due to the Covid-19 sanitary situation, we have not had any visits since February 2020, 
-but we had numerous virtual interactions. 
+Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. {% person robert_y %} made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month. 
+
+
 
 
 ## Impact and publications
@@ -360,6 +371,8 @@ The work on replication with checkpointing was published at SC'19 {% cite Benoit
 The work on the comparison of several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication was published at Resilience'20 {% cite LeFevreEtAl2020 --file jlesc.bib %}. 
 
 The work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms was published in IEEE TC in 2021 {% cite BenoitEtAl2021 --file jlesc.bib %}.
+
+In 2022, two joint publications were published from the project, the first one to assess the usefulness and limitations of the Young/Daly formula for checkpointing, in the IC3 conference {% cite BenoitEtAl2022 --file jlesc.bib %}, and the other one to compare distributed termination detection algorithms for modern HPC platform, in the IJNC journal {% cite BosilcaEtAl2022 --file jlesc.bib %}. 
 
 
 {% comment %}
