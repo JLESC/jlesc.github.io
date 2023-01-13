@@ -205,6 +205,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20222023">Results for 2022/2023</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -452,6 +453,17 @@ dataset (e.g., reloading checkpoints, computing checksum on data, etc.).</p>
   </li>
 </ul>
 
+<h2 id="results-for-20222023">
+<a id="results-for-20222023" class="anchor" href="#results-for-20222023" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2022/2023</h2>
+
+<p>First, we have been further investigating the Young/Daly formula. This formula provides an approximation of the optimal checkpoint period for a parallel application executing on a supercomputing platform. It was originally designed for preemptible tightly-coupled applications. We provided some background and survey various application scenarios to assess the usefulness and limitations of the formula in <a href="#BenoitEtAl2022">(Benoit et al. 2022)</a>.</p>
+
+<p>Also, we have been revisiting distributed termination detection algorithms in the context of High-Performance Computing (HPC) applications. We introduced an efficient variant of the Credit Distribution Algorithm (CDA) and compared it to the original algorithm (HCDA) as well as to its two primary competitors: the Four Counters algorithm (4C) and the Efficient Delay-Optimal Distributed algorithm (EDOD). We analyzed the behavior of each algorithm for some simplified task-based kernels and showed the superiority of CDA in terms of the number of control messages. We then compared the implementation of these algorithms over a task-based runtime system, PaRSEC and showed the advantages and limitations of each approach on a practical implementation <a href="#BosilcaEtAl2022">(Bosilca et al. 2022)</a>.</p>
+
+<p>Some progress on the projects mentionned in 2021-2022 were also done by UT Knoxville, in particular on integrating process, control-flow, and data resiliency layers using a hybrid Fenix/Kokkos approach, demonstrating that designing integrable systems rather than integrated systems allows for user-designed optimization and upgrading of resilience techniques while maintaining the simplicity and performance of all-in-one resilience solutions. More application-specific choice in resilience strategies allows for better long-term flexibility, performance, and - importantly - simplicity.</p>
+
+<p>Finally, we have initiated a study about the impact of I/O interference on application performance. HPC applications execute on dedicated nodes but share the I/O system. As a consequence, interferences surge when several applications perform I/O operations simultaneously, and each I/O operation takes much longer than expected because each application is only allotted a fraction of the I/O bandwidth. Checkpoint operations are periodic and high-volume I/O operations and, as such, are particularly sensitive to interferences.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -468,8 +480,7 @@ which allowed us to make progress on the project.</p>
 <p><span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) has visited Univ. Tenn. Knoxville for 10 days in February 2019,
 and for 10 days in January 2020.</p>
 
-<p>Due to the Covid-19 sanitary situation, we have not had any visits since February 2020, 
-but we had numerous virtual interactions.</p>
+<p>Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. <span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -492,7 +503,99 @@ on failure-prone HPC platforms was published in Resilience’18 <a href="#LeFevr
 
 <p>The work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms was published in IEEE TC in 2021 <a href="#BenoitEtAl2021">(Benoit et al. 2021)</a>.</p>
 
+<p>In 2022, two joint publications were published from the project, the first one to assess the usefulness and limitations of the Young/Daly formula for checkpointing, in the IC3 conference <a href="#BenoitEtAl2022">(Benoit et al. 2022)</a>, and the other one to compare distributed termination detection algorithms for modern HPC platform, in the IJNC journal <a href="#BosilcaEtAl2022">(Bosilca et al. 2022)</a>.</p>
+
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BenoitEtAl2022
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBenoitEtAl2022Bibtex" aria-expanded="false" aria-controls="collapseBenoitEtAl2022Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBenoitEtAl2022Abstract" aria-expanded="false" aria-controls="collapseBenoitEtAl2022Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BenoitEtAl2022">Benoit, Anne, Yishu Du, Thomas Herault, Loris Marchal, Guillaume Pallez, Lucas Perotin, Yves Robert, Hongyang Sun, and Frederic Vivien. 2022. “Checkpointing à La Young/Daly: An Overview.” In <i>Proceedings of the 2022 Fourteenth International Conference on Contemporary Computing</i>, 701–10. IC3-2022. New York, NY, USA: Association for Computing Machinery. doi:10.1145/3549206.3549328.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBenoitEtAl2022Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{BenoitEtAl2022,
+  author = {Benoit, Anne and Du, Yishu and Herault, Thomas and Marchal, Loris and Pallez, Guillaume and Perotin, Lucas and Robert, Yves and Sun, Hongyang and Vivien, Frederic},
+  title = {Checkpointing \`{a} La Young/Daly: An Overview},
+  year = {2022},
+  isbn = {9781450396752},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3549206.3549328},
+  doi = {10.1145/3549206.3549328},
+  booktitle = {Proceedings of the 2022 Fourteenth International Conference on Contemporary Computing},
+  pages = {701–710},
+  numpages = {10},
+  location = {Noida, India},
+  series = {IC3-2022}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BosilcaEtAl2022
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBosilcaEtAl2022Bibtex" aria-expanded="false" aria-controls="collapseBosilcaEtAl2022Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBosilcaEtAl2022Abstract" aria-expanded="false" aria-controls="collapseBosilcaEtAl2022Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BosilcaEtAl2022">Bosilca, George, Aurélien Bouteiller, Thomas Herault, Valentin Le Fèvre and Yves Robert, and Jack Dongarra. 2022. “Comparing Distributed Termination Detection Algorithms for Modern HPC Platforms.” <i>Int. J. of Networking and Computing</i> 12 (1): 26–46.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBosilcaEtAl2022Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{BosilcaEtAl2022,
+  title = {{Comparing distributed termination detection algorithms for modern HPC platforms}},
+  author = {Bosilca, George and Bouteiller, Aurélien and Herault, Thomas and Robert, Valentin Le F\`{e}vre\ and Yves and Dongarra, Jack},
+  journal = {Int. J. of Networking and Computing},
+  year = {2022},
+  volume = {12},
+  number = {1},
+  pages = {26-46}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
