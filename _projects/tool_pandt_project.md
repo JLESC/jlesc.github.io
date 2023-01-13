@@ -2,7 +2,7 @@
 layout: page_project
 title: Developer tools for porting and tuning parallel applications on extreme-scale parallel systems
 date: 2016-03-22
-updated: 2022-03-22
+updated: 2023-01-13
 navbar: Research
 subnavbar: Projects
 footer: true
@@ -103,13 +103,20 @@ and help direct development of new tool capabilities.
 * Virtual tools training for NHR/Erlangen, POP & LRZ using local HPC systems.
 * Virtual tutorial on POP parallel performance analysis methodology given at ISC-HPC'21.
 
+## Results for 2022/2023
+
+* Continued Score-P porting to Fugaku and Fujitsu compilers for A64FX.
+* 41st VI-HPS Tuning Workshop hosted virtually by JSC (2022/02/07-10) using JUWELS-Booster GPUs.
+* 42nd VI-HPS Tuning Workshop hosted virtually by JSC (2022/05/17-19) using JUSUF.
+
 ## Visits and meetings
 
 Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and ParCo conferences, and events hosted by project partners.  Meeting with MYX project {% cite MYXproject --file external/tool_pandt_project.bib %} members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.
 
 2015/12/01: RIKEN-AICS instructors visited JSC to deliver training with XcalableMP.
 2016/02/24-26: BSC & JSC instructors visited RIKEN-AICS to deliver training as part of VI-HPS Tuning Workshop.
-2019/04/09-12: BSC & JSC instructors visited UTK-ICL to deliver training as part of VI-HPS Tuning Workshop. 
+2019/04/09-12: BSC & JSC instructors visited UTK-ICL to deliver training as part of VI-HPS Tuning Workshop.
+2022/10/01-2022/11/04: JSC visit to NCSA & UTK-ICL to prepare for training as part of VI-HPS Tuning Workshops.
 Visits planned for the next 12 months: none
 
 ## Impact and publications
