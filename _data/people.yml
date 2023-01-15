@@ -467,6 +467,15 @@ cerf_s:
   email: sophie.cerf@inria.fr
   homepage:
 
+channing_g:
+  sur_name: Channing
+  given_name: Georgia
+  position:
+  affiliation: utk
+  topics:
+  email: gchannin@vols.utk.edu
+  homepage:
+
 chard_k:
   sur_name: Kyle
   given_name: Chard
@@ -1380,15 +1389,6 @@ lachat_c:
   topics:
   email: cedric.lachat@inria.fr
   homepage:
-  
-lama_v:
-  sur_name: Lama
-  given_name: Vanessa
-  affiliation: utk
-  position:
-  topics: HPC
-  email: vlama@vols.utk.edu
-  homepage:
 
 lanteri_s:
   sur_name: Lanteri
@@ -1909,6 +1909,15 @@ padoin_e:
   position:
   topics:
   email:  elpadoin@inf.ufrgs.br
+  homepage:
+  
+patel_r:
+  sur_name: Patel
+  given_name: Ria
+  position:
+  affiliation: utk
+  topics:
+  email: rpatel77@vols.utk.edu
   homepage:
 
 pearson_c:
@@ -2971,15 +2980,6 @@ lindquist_n:
   position:
   topics:
   email: nlindqu1@vols.utk.edu
-  homepage:
-
-wyatt_m:
-  sur_name: Wyatt
-  given_name: Michael
-  affiliation: utk
-  position:
-  topics:
-  email: mwyatt@vols.utk.edu
   homepage:
 
 tama_f:
