@@ -66,8 +66,8 @@ Taufer will meet Tama and Miyashita during her visit at RIKEN on Deb 6-9 for the
 
 ## Impact and publications
 
-* P. Olaya, S. Caino-Lores, V. Lama, R. Patel, A. Rorabaugh, O. Miyashita,  F. Tama, and M. Taufer, "Identifying Structural Properties of Proteins from X-ray Free Electron Laser Diffraction Patterns”. In Proceedings of the 18th IEEE International Conference on e-Science (eScience), pages 1–10, Salt Lake City, Utah, USA, October 10-14, 2022. IEEE Computer Society. Best paper candidate. (Acceptance Rate: 37/59, 62.7%).
-* R. Patel, A. Keller Rorabaugh, P. Olaya, S. Caino-Lores, G. Channing, C. Schuman, O. Miyashita, F. Tama, and M. Taufer, “A Methodology to Generate Efficient Neural Networks for Classification of Scientific Datasets”, In Proceedings of the 18th IEEE International Conference on e-Science (eScience), pages 1–2, Salt Lake City, Utah, USA, October 2022. IEEE Computer Society. (Short paper)
+* A paper at IEEE e-Science 2022 {% cite OlayaEtAl2022 --file jlesc.bib %}
+* A short paper at IEEE e-Science 2022 {% cite PatelEtAl2022 --file jlesc.bib %}
 * Talk: 14th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2022. Project Talk: Machine Learning-driven Predictive Analysis of Protein Diffraction Data.
 * Talk: 14th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2022. Short Talk: Methods, Workflows, and Data Commons for Reducing Training Costs in Neural Architecture Search on High-Performance Computing Platforms
 * Talk: 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: XPSI: XFEL-based Protein Structure Identifier.
