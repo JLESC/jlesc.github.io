@@ -476,6 +476,15 @@ chard_k:
   email: chard@uchicago.edu
   homepage:
 
+channing_g:
+  sur_name: Channing
+  given_name: Georgia
+  position:
+  affiliation: utk
+  topics:
+  email: gchannin@vols.utk.edu
+  homepage:
+
 chen_j:
   sur_name: Chen
   given_name: Jian
@@ -1909,6 +1918,15 @@ padoin_e:
   position:
   topics:
   email:  elpadoin@inf.ufrgs.br
+  homepage:
+
+patel_r:
+  sur_name: Patel
+  given_name: Ria
+  position:
+  affiliation: utk
+  topics:
+  email: rpatel77@vols.utk.edu
   homepage:
 
 pearson_c:
