@@ -2,7 +2,7 @@
 layout: page_project
 title: Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques
 date: 2018-04-17
-updated: 2022-02-07
+updated: 2023-01-15
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -104,6 +104,24 @@ them.
 {% person reis_v %} left Argonne for Groq in March 2021. {% person daoudi_i %}
 started working as an ANL-funded postdoc on this project in October 2021. {% person cerf_s %}
 became an INRIA research scientist in Lille in October 2021.
+
+## Results for 2022/2023
+
+We published our second publication, involving results from the MSc internship
+of Ismail Hawila {% cite hawila2022ccta %}. Observing limitations of our
+previous work regarding both modeling (nonlinear models with numerous
+parameters) and control performance (mainly instability caused by platform
+variations), we developed a novel adaptive control that is robust to the variety
+of execution platforms while maintaining the existing global goals of energy
+management. It improves the reusability and portability of our controller. We
+evaluated, on a real system using the Grid'5000 testbed, the robustness of the
+control to changes in initial parameters and to disturbances, and we compared it
+with the previous proportional-integral (PI) control. Our adaptive control
+approach allows for up to 25% energy savings. 
+
+We continue to improve the NRM infrastructure for robustness, and the
+evaluation of our control schemes towards supporting more applications and more
+hardware control knobs.
 
 ## Visits and meetings
 
