@@ -7,8 +7,8 @@ navbar: Events
 event_location: INRIA Bordeaux
 event_start: 2023-03-21
 event_end: 2023-03-23
-event_short_url:
-event_url: 
+event_short_url: https://events.hifis.net/e/jlesc15
+event_url: https://events.hifis.net/e/jlesc15
 wayback_url:
 logo:
 kind: workshop
