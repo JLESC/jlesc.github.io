@@ -192,12 +192,14 @@ For each half, we plan to do as follow.
 
 <!--We plan a minisymposium at PMAA 2018 in Zuerich with the title
 
- *Performance benchmark of standard eigensolver on KNL systems -->
+ <!--*Performance benchmark of standard eigensolver on KNL systems -->
 
 Apply to the computational resource such as
 "Large-scale HPC Challenge" Project, Joint Center for Advanced High Performance Computing (JCAHPC).
 
-Benchmarking on GPU acceleration systems.
+Benchmarking on GPU acceleration systems.-->
+
+The project finished in 2022.
 
 ## References
 
