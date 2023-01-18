@@ -6,7 +6,7 @@ updated: 2022-01-01
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: finished
 topics:
   - numerics
 keywords:
