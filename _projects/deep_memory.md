@@ -6,7 +6,7 @@ updated: 2022-01-01
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: finished
 topics:
   - storage
 keywords:
@@ -75,6 +75,12 @@ system simulators. On a number of HPC mini-applications we showed that the
 estimator predicts runtime with an average error of 4.4% compared to
 measurements on real hardware.  There is a paper in progress and a short talk
 about this work was given on the last JLESC Workshop.
+
+## Results for 2022/2023
+
+We have published our study on using high-frequency performance counter
+sampling to build performance estimates on memory placement at ISC2022.
+Following staff departures at RIKEN and BSC, this project is now closed.
 
 ## Visits and meetings
 
