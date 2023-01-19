@@ -79,7 +79,8 @@ about this work was given on the last JLESC Workshop.
 ## Results for 2022/2023
 
 We have published our study on using high-frequency performance counter
-sampling to build performance estimates on memory placement at ISC2022.
+sampling to build performance estimates on memory placement at ISC2022
+{% cite denoyelle2022isc %}.
 Following staff departures at RIKEN and BSC, this project is now closed.
 
 ## Visits and meetings
