@@ -728,6 +728,15 @@ dreher_m:
   email: mdreher@anl.gov
   homepage: http://www.mcs.anl.gov/person/matthieu-dreher
 
+dubey_a:
+  sur_name: Dubey
+  given_name: Anshu
+  affiliation: anl
+  position: permanent
+  topics: Applications
+  email: adubey@anl.gov
+  homepage: https://www.anl.gov/profile/anshu-dubey
+
 du_y:
   sur_name: Du
   given_name: Yishu
@@ -1884,6 +1893,16 @@ olson_l:
   email: lukeo@illinois.edu
   homepage: http://lukeo.cs.illinois.edu/
 
+oneal_j:
+  sur_name: O'Neal
+  given_name: Jared
+  affiliation: anl
+  position: permanent
+  topics:
+  email: joneal@anl.gov
+  homepage: https://www.anl.gov/profile/jared-p-o-neal
+
+
 onishi_k:
   sur_name: Onishi
   given_name: Keiji
@@ -2243,6 +2262,15 @@ rosendo_d:
   topics:
   email: daniel.rosendo@inria.fr
   homepage: https://team.inria.fr/kerdata/daniel-rosendo/
+
+rudi_j:
+  sur_name: Rudi
+  given_name: Johann
+  affiliation: external
+  position: permanent
+  topics:
+  email: jrudi@vt.edu
+  homepage: 
 
 ruettgers_m:
   sur_name: Rüttgers
