@@ -27,7 +27,7 @@ Flash-X is a multiphysics simulation instrument designed for heterogeneous hardw
 ## Results for 2022
 
 Flash-X was released in February 2022, with several features of the performance portability layer integrated. The release won an R&D 100 award
- {% cite dubeyEtAl2022 --file jlesc.bib %}. A paper was presented at Heteropar 2021 on one of the tools, Milhoja, which manages the runtime. {% cite onealEtAl2022 --file jlest.bib %} using a stand-alone simplified application.
+ {% cite dubeyEtAl2022 --file jlesc.bib %}. A paper was presented at Heteropar 2021 on one of the tools, Milhoja, which manages the runtime. {% cite onealEtAl2022 --file jlesc.bib %} using a stand-alone simplified application.
 
 
 ## Visits and meetings
