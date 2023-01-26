@@ -13,11 +13,10 @@ topics:
 keywords:
   - multiphysics
   - simulations 
-head: Dubey_A
+head: dubey_a
 members:
-  - O'neal_j
+  - oneal_j
   - Wahib_m
-  -
 ---
 
 ## Research topic and goals
