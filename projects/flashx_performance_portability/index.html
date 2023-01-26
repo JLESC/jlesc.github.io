@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Performance Portability in Flash-X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/flashx_performance_portability/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
+    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Performance Portability in Flash-X</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Advanced Architectures</span>
+          </span>
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Apps & Mini-Apps</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">multiphysics</span>
+          
+            <span class="clearfix">simulations</span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Anshu</span> <span class="person sur-name">Dubey</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Jared</span> <span class="person sur-name">O'Neal</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Mohamed</span> <span class="person sur-name">Wahib</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-running">running</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-2022">Results for 2022</a></li>
+<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+
+<p>Flash-X is a multiphysics simulation instrument designed for heterogeneous hardware platforms. The code is highly composable and can simulate physical phenomena in several scientific domains. It is derived from FLASH, which has been a community code for several communities over the last 20 years.  A language agnostic performance portability solution for the code was designed in this collaboration. The solution includes several tools that are individually relatively simple and easy to maintain by non-experts, but together deliver a comprehensive performance portability solution.</p>
+
+<h2 id="results-for-2022">
+<a id="results-for-2022" class="anchor" href="#results-for-2022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2022</h2>
+
+<p>Flash-X was released in February 2022, with several features of the performance portability layer integrated. The release won an R&amp;D 100 award
+ <a href="#dubeyEtAl2022">(Dubey et al. 2022)</a>. A paper was presented at Heteropar 2021 on one of the tools, Milhoja, which manages the runtime. <a href="#onealEtAl2022">(O’Neal et al. 2022)</a> using a stand-alone simplified application.</p>
+
+<h2 id="visits-and-meetings">
+<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+
+<p><span class="person given-name">Anshu</span> <span class="person sur-name">Dubey</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) will visit Riken in Feburary 2023. We met online on a bi-weekly basis until the release of Flash-X.</p>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          onealEtAl2022
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseonealEtAl2022Bibtex" aria-expanded="false" aria-controls="collapseonealEtAl2022Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseonealEtAl2022Abstract" aria-expanded="false" aria-controls="collapseonealEtAl2022Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="onealEtAl2022">O’Neal, Jared, Mohamed Wahib, Anshu Dubey, Klaus Weide, Tom Klosterman, and Johann Rudi. 2022. “Domain-Specific Runtime to Orchestrate Computation on Heterogeneous Platforms.” In <i>European Conference on Parallel Processing</i>, 154–65. Springer, Cham.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseonealEtAl2022Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{onealEtAl2022,
+  title = {Domain-specific runtime to orchestrate computation on heterogeneous platforms},
+  author = {O’Neal, Jared and Wahib, Mohamed and Dubey, Anshu and Weide, Klaus and Klosterman, Tom and Rudi, Johann},
+  booktitle = {European Conference on Parallel Processing},
+  pages = {154--165},
+  year = {2022},
+  organization = {Springer, Cham}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          dubeyEtAl2022
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsedubeyEtAl2022Bibtex" aria-expanded="false" aria-controls="collapsedubeyEtAl2022Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsedubeyEtAl2022Abstract" aria-expanded="false" aria-controls="collapsedubeyEtAl2022Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="dubeyEtAl2022">Dubey, Anshu, Klaus Weide, Jared O’Neal, Akash Dhruv, Sean Couch, J Austin Harris, Tom Klosterman, et al. 2022. “Flash-X: A Multiphysics Simulation Software Instrument.” <i>SoftwareX</i> 19. Elsevier: 101168.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsedubeyEtAl2022Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{dubeyEtAl2022,
+  title = {Flash-X: A multiphysics simulation software instrument},
+  author = {Dubey, Anshu and Weide, Klaus and O’Neal, Jared and Dhruv, Akash and Couch, Sean and Harris, J Austin and Klosterman, Tom and Jain, Rajeev and Rudi, Johann and Messer, Bronson and others},
+  journal = {SoftwareX},
+  volume = {19},
+  pages = {101168},
+  year = {2022},
+  publisher = {Elsevier}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>Next steps include integrating Milhoja with more complex physics in Flash-X, and also integrating it with other tools in the performance portability layer.</p>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          dubey2022macro
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsedubey2022macroBibtex" aria-expanded="false" aria-controls="collapsedubey2022macroBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsedubey2022macroAbstract" aria-expanded="false" aria-controls="collapsedubey2022macroAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="dubey2022macro">Dubey, Anshu, and Tom Klosterman. 2022. “Language Agnostic Approach for Unification of Implementation Variants for Different Computing Devices.” In <i>Parallel Processing and Applied Mathematics Conference</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsedubey2022macroBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{dubey2022macro,
+  title = {Language Agnostic Approach for Unification of Implementation Variants for Different Computing Devices},
+  author = {Dubey, Anshu and Klosterman, Tom},
+  booktitle = {Parallel Processing and Applied Mathematics Conference},
+  year = {2022}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          o2022domain
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseo2022domainBibtex" aria-expanded="false" aria-controls="collapseo2022domainBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseo2022domainAbstract" aria-expanded="false" aria-controls="collapseo2022domainAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="o2022domain">O’Neal, Jared, Mohamed Wahib, Anshu Dubey, Klaus Weide, Tom Klosterman, and Johann Rudi. 2022. “Domain-Specific Runtime to Orchestrate Computation on Heterogeneous Platforms.” In <i>European Conference on Parallel Processing</i>, 154–65. Springer, Cham.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseo2022domainBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{o2022domain,
+  title = {Domain-specific runtime to orchestrate computation on heterogeneous platforms},
+  author = {O’Neal, Jared and Wahib, Mohamed and Dubey, Anshu and Weide, Klaus and Klosterman, Tom and Rudi, Johann},
+  booktitle = {European Conference on Parallel Processing},
+  pages = {154--165},
+  year = {2022},
+  organization = {Springer, Cham}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          dubey2022flash
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsedubey2022flashBibtex" aria-expanded="false" aria-controls="collapsedubey2022flashBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsedubey2022flashAbstract" aria-expanded="false" aria-controls="collapsedubey2022flashAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="dubey2022flash">Dubey, Anshu, Klaus Weide, Jared O’Neal, Akash Dhruv, Sean Couch, J Austin Harris, Tom Klosterman, et al. 2022. “Flash-X: A Multiphysics Simulation Software Instrument.” <i>SoftwareX</i> 19. Elsevier: 101168.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsedubey2022flashBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{dubey2022flash,
+  title = {Flash-X: A multiphysics simulation software instrument},
+  author = {Dubey, Anshu and Weide, Klaus and O’Neal, Jared and Dhruv, Akash and Couch, Sean and Harris, J Austin and Klosterman, Tom and Jain, Rajeev and Rudi, Johann and Messer, Bronson and others},
+  journal = {SoftwareX},
+  volume = {19},
+  pages = {101168},
+  year = {2022},
+  publisher = {Elsevier}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          harris2022exascale
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseharris2022exascaleBibtex" aria-expanded="false" aria-controls="collapseharris2022exascaleBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseharris2022exascaleAbstract" aria-expanded="false" aria-controls="collapseharris2022exascaleAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="harris2022exascale">Harris, J Austin, Ran Chu, Sean M Couch, Anshu Dubey, Eirik Endeve, Antigoni Georgiadou, Rajeev Jain, et al. 2022. “Exascale Models of Stellar Explosions: Quintessential Multi-Physics Simulation.” <i>The International Journal of High Performance Computing Applications</i> 36 (1). SAGE Publications Sage UK: London, England: 59–77.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseharris2022exascaleBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{harris2022exascale,
+  title = {Exascale models of stellar explosions: Quintessential multi-physics simulation},
+  author = {Harris, J Austin and Chu, Ran and Couch, Sean M and Dubey, Anshu and Endeve, Eirik and Georgiadou, Antigoni and Jain, Rajeev and Kasen, Daniel and Laiu, M Paul and Messer, OE B and others},
+  journal = {The International Journal of High Performance Computing Applications},
+  volume = {36},
+  number = {1},
+  pages = {59--77},
+  year = {2022},
+  publisher = {SAGE Publications Sage UK: London, England}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          couch2021towards
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsecouch2021towardsBibtex" aria-expanded="false" aria-controls="collapsecouch2021towardsBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsecouch2021towardsAbstract" aria-expanded="false" aria-controls="collapsecouch2021towardsAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="couch2021towards">Couch, Sean M, Jared Carlson, Michael Pajkos, Brian W O’Shea, Anshu Dubey, and Tom Klosterman. 2021. “Towards Performance Portability in the Spark Astrophysical Magnetohydrodynamics Solver in the Flash-X Simulation Framework.” <i>Parallel Computing</i> 108. North-Holland: 102830.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsecouch2021towardsBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{couch2021towards,
+  title = {Towards performance portability in the Spark astrophysical magnetohydrodynamics solver in the Flash-X simulation framework},
+  author = {Couch, Sean M and Carlson, Jared and Pajkos, Michael and O’Shea, Brian W and Dubey, Anshu and Klosterman, Tom},
+  journal = {Parallel Computing},
+  volume = {108},
+  pages = {102830},
+  year = {2021},
+  publisher = {North-Holland}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          rudi2021codeflow
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapserudi2021codeflowBibtex" aria-expanded="false" aria-controls="collapserudi2021codeflowBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapserudi2021codeflowAbstract" aria-expanded="false" aria-controls="collapserudi2021codeflowAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="rudi2021codeflow">Rudi, Johann, Jared O’Neal, Mohamed Wahib, and Anshu Dubey. 2021. “CodeFlow: A Code Generation System for Flash-X Orchestration Runtime.” Argonne National Lab.(ANL), Argonne, IL (United States).</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapserudi2021codeflowBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@techreport{rudi2021codeflow,
+  title = {CodeFlow: A Code Generation System for Flash-X Orchestration Runtime},
+  author = {Rudi, Johann and O'Neal, Jared and Wahib, Mohamed and Dubey, Anshu},
+  year = {2021},
+  institution = {Argonne National Lab.(ANL), Argonne, IL (United States)}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="nav-item">
+              <a class="nav-link" href="/about/imprint/">
+                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+
+<!--  -->
+
+  </body>
+</html>
