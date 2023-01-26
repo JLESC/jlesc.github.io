@@ -6,7 +6,7 @@ updated: 2023-01-25
 navbar: Research
 subnavbar: Projects
 project_url:
-status: active
+status: running
 topics: 
   - architectures
   - apps
