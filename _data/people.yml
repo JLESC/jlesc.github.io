@@ -2266,8 +2266,8 @@ rosendo_d:
 rudi_j:
   sur_name: Rudi
   given_name: Johann
-  affiliation: anl, Virgina Tech
-  position:associate, permanent
+  affiliation: external
+  position: permanent
   topics:
   email: jrudi@vt.edu
   homepage: 
