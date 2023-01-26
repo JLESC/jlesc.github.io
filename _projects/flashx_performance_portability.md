@@ -9,7 +9,7 @@ project_url:
 status: active
 topics: 
   - architectures
-  - applications
+  - apps
 keywords:
   - multiphysics
   - simulations 
