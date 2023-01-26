@@ -16,7 +16,7 @@ keywords:
 head: dubey_a
 members:
   - oneal_j
-  - Wahib_m
+  - wahib_m
 ---
 
 ## Research topic and goals
