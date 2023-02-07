@@ -2,7 +2,7 @@
 layout: page_project
 title: Optimizing Checkpoint Restart Through Access Pattern Awareness
 date: 2022-09-22
-updated:
+updated: 2022-09-22
 navbar: Research
 subnavbar: Projects
 project_url:
