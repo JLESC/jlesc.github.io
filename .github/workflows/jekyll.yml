@@ -30,7 +30,16 @@ jobs:
           enable_cache: true
   
       - name: Build report
-        run: bundle exec ./bin/report_generator.rb
+        run: |
+          bundle exec ./bin/report_generator.rb
+          tar zcvf report.tar.gz latex_out
+      
+      - name: Uploading artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: report sources
+          path: |
+            report.tar.gz
           
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
