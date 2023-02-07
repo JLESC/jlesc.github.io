@@ -28,7 +28,10 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
-
+  
+      - name: Build report
+        run: bundle exec ./bin/report_generator.rb
+          
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' }}
