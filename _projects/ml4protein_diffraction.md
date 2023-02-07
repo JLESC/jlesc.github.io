@@ -75,6 +75,8 @@ Taufer will meet Tama and Miyashita during her visit at RIKEN on Deb 6-9 for the
 * Poster: Paula Olaya, Michael R. Wyatt II, Silvina Caino-Lores, Florence Tama, Osamu Miyashita, Piotr Luszczek, and Michela Taufer, “XPSI: X-ray Free Electron Laser based Protein Structure Identifier,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, Atlanta, GA, 2020.
 * Talk: 11th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2020. Short Talk: XPSI: XFEL-based Protein Structure Identifier.
 
+{% bibliography --cited --file jlesc.bib %}
+
 
 ## Future plans
 
