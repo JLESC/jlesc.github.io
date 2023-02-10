@@ -206,7 +206,7 @@ module Jekyll
           %w(running starting suspended closing finished).each do |status|
             topic_hash[:projects].each do |project|
               collections['projects'].docs.each do |project_doc|
-                if project_doc.data['updated'].year == Date.today.year
+                if project_doc.data['updated'].year >= Date.today.year - 5
                   if project_doc.data['status'] == status and project_doc.data['slug'] == project
                     output += "\\input{projects/#{project}}\n"
                   end
