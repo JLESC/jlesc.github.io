@@ -2,7 +2,7 @@
 layout: page_project
 title: Continuous integration for HPC codes
 date: 2022-02-11
-updated: 2022-02-11
+updated: 2023-02-11
 navbar: Research
 subnavbar: Projects
 project_url:
