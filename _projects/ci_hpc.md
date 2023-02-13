@@ -37,6 +37,9 @@ Expected contributions:
 ## Results for 2021/2022
 The project started in early 2022 and the partners met during the 14th JLESC Workshop for a joint break-out session for the first time. There, topics like the connection between Github Actions and Gitlab runners, flaky tests, overflowing parameter spaces and CI on different HPC machines were discussed and further meetings of this kind are planned.
 
+## Results for 2022/2023
+
+Based on the outcome of the meeting during the 2022 workshop, we started implementing a gitlab-Github coupling to enable the usage of custom gitlab runners for Github-hosted repositories automatically. The code as been released with a demo and documentation on Github: https://github.com/jakob-fritz/github2lab_action and is tested within the pySDC code developed at JSC.
 
 ## Visits and meetings
 None.
