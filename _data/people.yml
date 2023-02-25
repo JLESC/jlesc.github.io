@@ -136,6 +136,15 @@ antoniu_g:
   email: gabriel.antoniu@inria.fr
   homepage: https://team.inria.fr/kerdata/gabriel-antoniu/
 
+anzt_h:
+  sur_name: Anzt
+  given_name: Hartwig
+  affiliation: utk
+  position: permanent
+  topics: Numerical methods
+  email: hanzt@icl.utk.edu
+  homepage: https://hartwiganzt.github.io/
+
 artigues_a:
   sur_name: Artigues
   given_name: Antoni
@@ -3009,15 +3018,6 @@ luszczek_p:
   topics: Numerical methods
   email: luszczek@icl.utk.edu
   homepage: https://scholar.google.com/citations?user=a9df4xQAAAAJ&hl=en
-
-hartwig_a:
-  sur_name: Hartwig
-  given_name: Anzt
-  affiliation: utk
-  position: permanent
-  topics: Numerical methods
-  email: hanzt@icl.utk.edu
-  homepage: https://hartwiganzt.github.io/
 
 lindquist_n:
   sur_name: Lindquist
