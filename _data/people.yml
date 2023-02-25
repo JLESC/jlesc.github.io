@@ -2542,6 +2542,15 @@ speck_r:
   email: r.speck@fz-juelich.de
   homepage: http://www.fz-juelich.de/ias/jsc/speck_r
 
+sportisse_b:
+  sur_name: Sportisse
+  given_name: Bruno
+  affiliation: inria
+  position: permanent
+  topics: 
+  email: bruno.sportisse@inria.fr
+  homepage: https://www.inria.fr/en/bruno-sportisse
+
 steinbusch_b:
   sur_name: Steinbusch
   given_name: Benedikt
