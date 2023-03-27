@@ -6,13 +6,13 @@ updated:
 navbar: Research
 subnavbar: Projects
 project_url:
-status:proposed
+status: starting
 topics:
-  -Advanced Architectures
-  -Numerical Methods
+  - architectures
+  - numerics
 keywords:
-  -FPGA
-  -Linear Algebra
+  - FPGA
+  - Linear Algebra
 head:anzt_h
 members:
   -
@@ -136,4 +136,4 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 Replace 'YOUR_BIBTEX_FILE_NAME_HERE' with the name of the BibTeX file with the external references!
 {% endcomment %}
 
-{% bibliography --file external/YOUR_BIBTEX_FILE_NAME_HERE %}
+{% bibliography --file external/linear_algebra_on_fpga.bib %}

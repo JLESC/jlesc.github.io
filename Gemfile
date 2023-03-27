@@ -26,3 +26,5 @@ gem 'jekyll-git_metadata', github: 'torbjoernk/jekyll-git_metadata',
 
 gem 'jgd'
 gem 'jekyll-email-protect'
+
+gem "webrick", "~> 1.8"
