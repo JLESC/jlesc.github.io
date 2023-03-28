@@ -1,8 +1,8 @@
 ---
 layout: page_project
-title:Computational Linear Algebra on FPGAs
-date:09-03-2023
-updated:
+title: Computational Linear Algebra on FPGAs
+date: 2023-03-09
+updated: 2023-03-09
 navbar: Research
 subnavbar: Projects
 project_url:
