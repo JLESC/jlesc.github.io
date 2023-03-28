@@ -85,8 +85,9 @@ As the Dennard scaling ended, hardware manufacturers and application scientists 
 
 In this project, JSC researchers and ICL researchers will collaborate to develop and expand the existing linear algebra libraries and functionality. The project is expected to accelerate the development of linear algebra functionality for FPGAs, and ensure the functionality hits the architecture-specific performance limits.
 
-## Results for 2015/2016
+## Results for 2022/2023
 
+None yet.
 
 ## Visits and meetings
 
