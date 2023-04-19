@@ -85,11 +85,11 @@ Hartwig Anzt (UTK) and his team are developing the linear algebra library Ginkgo
 This JLESC project aims to bring nekRS and Ginkgo together. In a first step, the performance of Ginkgo for cold flows at scale is evaluated for multiple application cases. These cases range from mesoscale convection to complex cases with moving geometries. Throughput and scaling behavior will be studied on JUWELS Booster. Secondly, the potential of Ginkgo in the context of nekRS’s currently developed chemistry module is accessed. This includes the evaluation of batched solvers for solving coupled scalar equations. Finally, the combined behavior of nekRS and Ginkgo at Exascale size are tested on the new supercomputer JUPITER. Bottlenecks will be identified and improvements suggested. Ultimately, the goal is to provide a high-scaling, high-throughput version of nekRS for Exascale runs to the nekRS community.
 
 
-## Results for 2015/2016
-
+## Results for 2022/2023
+None yet.
 
 ## Visits and meetings
-
+None yet.
 
 ## Impact and publications
 
