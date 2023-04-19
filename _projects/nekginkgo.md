@@ -1,8 +1,8 @@
 ---
 layout: page_project
 title: nekRS and Ginkgo - Towards Exascale CFD
-date: 18.04.2023
-updated: 18.04.2023
+date: 2023-04-18
+updated: 2023-04-18
 navbar: Research
 subnavbar: Projects
 project_url:
