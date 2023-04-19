@@ -305,6 +305,15 @@ bleuse_r:
   email: raphael.bleuse@imag.fr
   homepage:
 
+bode_m:
+  sur_name: Bode
+  given_name: Mathis
+  affiliation: jsc
+  position:
+  topics:
+  email: m.bode@fz-juelich.de
+  homepage:
+
 boito_f:
   sur_name: Zanon Boito
   given_name: Francieli
@@ -2730,6 +2739,15 @@ trystram_d:
   topics:
   email: trystram@imag.fr
   homepage: http://moais.imag.fr/membres/denis.trystram/
+
+tsai_yh:
+  sur_name: Tsai
+  given_name: Yu-Hsiang
+  affiliation: external
+  position: 
+  topics:
+  email: yu-hsiang.tsai@kit.edu
+  homepage: 
 
 tsubokura_m:
   sur_name: Tsubokura
