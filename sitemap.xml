@@ -95,13 +95,13 @@
 <loc>https://jlesc.github.io/news/</loc>
 </url>
 <url>
-<loc>https://jlesc.github.io/events/</loc>
+<loc>https://jlesc.github.io/references/</loc>
 </url>
 <url>
 <loc>https://jlesc.github.io/software/</loc>
 </url>
 <url>
-<loc>https://jlesc.github.io/references/</loc>
+<loc>https://jlesc.github.io/events/</loc>
 </url>
 <url>
 <loc>https://jlesc.github.io/</loc>
@@ -360,6 +360,9 @@
 </url>
 <url>
 <loc>https://jlesc.github.io/projects/linear_algebra_on_fpga/</loc>
+</url>
+<url>
+<loc>https://jlesc.github.io/projects/nekginkgo/</loc>
 </url>
 <url>
 <loc>https://jlesc.github.io/software/pfasst/</loc>
