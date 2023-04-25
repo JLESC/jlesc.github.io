@@ -251,6 +251,15 @@ bautista_gomez_l:
   email: leonardo.bautista@bsc.es
   homepage: leobago.com
 
+baumann_t:
+  sur_name: Baumann
+  given_name: Thomas
+  affiliation: jsc
+  position: phd
+  topics: numerical methods, time integration, resilience
+  email: t.baumann@fz-juelich.de
+  homepage:
+
 baumeister_p:
   sur_name: Baumeister
   given_name: Paul
