@@ -13,7 +13,8 @@ topics:
 keywords:
 head: calhoun_j
 members:
-  - altenbernd_m
+  - underwood_r
+  - baumann_t
   - speck_r
   - cappello_f
 ---
