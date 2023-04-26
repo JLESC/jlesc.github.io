@@ -1741,6 +1741,15 @@ mohr_b:
   email: b.mohr@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/mohr_b.html
 
+monniot_j:
+  sur_name: Monniot
+  given_name: Julien
+  affiliation: inria
+  position: phd
+  topics:
+  email: julien.monniot@inria.fr
+  homepage: 
+
 moreno-chamarro_e:
   sur_name: Moreno-Chamarro
   given_name: Eduardo
@@ -2734,10 +2743,10 @@ teruel_x:
 tessier_f:
   sur_name: Tessier
   given_name: Francois
-  affiliation: anl
-  position: post_doc
+  affiliation: inria
+  position: permanent
   topics:
-  email: ftessier@anl.gov
+  email: francois.tessier@inria.fr
   homepage: http://www.francoistessier.info/
 
 trystram_d:
