@@ -25,3 +25,4 @@ This profusion of different technologies and architectures makes the use of thes
 In this JLESC project, we propose to analyze Darshan traces and Lustre metrics from several years of Blue Waters production to feed StorAlloc, a simulator of a storage-aware job scheduler developed within the Inria KerData’s team. The goal of work is twofold: to provide a post-mortem study on the sizing of Blue Waters’ storage system and to explore the design of future highly storage-disaggregated HPC systems.
 
 ## References
+{% bibliography --file external/storage_systems_design.bib %}
