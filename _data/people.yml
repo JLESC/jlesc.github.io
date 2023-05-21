@@ -816,6 +816,15 @@ feld_c:
   email: c.feld@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/feld_c.html
 
+ferrier_n:
+  sur_name: Ferrier
+  given_name: Nicola
+  affiliation: anl
+  position: Senior Computer Scientist
+  topics:
+  email: nferrier@anl.gov
+  homepage:
+
 finkel_h:
   sur_name: Finkel
   given_name: Hal
@@ -824,6 +833,15 @@ finkel_h:
   topics:
   email: hfinkel@anl.gov
   homepage: https://www.alcf.anl.gov/staff-directory/hal-finkel
+
+fischer_p:
+  sur_name: Fischer
+  given_name: Paul
+  affiliation: uiuc
+  position: Professor
+  topics:
+  email: fischerp@illinois.edu
+  homepage: 
 
 freitas_h:
   sur_name: Freitas
@@ -1183,6 +1201,15 @@ imamura_t:
   email: imamura.toshiyuki@riken.jp
   homepage: http://www.aics.riken.jp/labs/lpnctrt/en/
 
+insley_j:
+  sur_name: Insley
+  given_name: Joseph A.
+  affiliation: anl
+  position: Visualization and Data Analytics Team Lead
+  topics:
+  email: insley@anl.gov
+  homepage:
+
 ishikawa_y:
   sur_name: Ishikawa
   given_name: Yukata
@@ -1444,6 +1471,15 @@ lama_v:
   email: vlama@vols.utk.edu
   homepage:
 
+lan_y:
+  sur_name: Lan
+  given_name: Yu-Hsiang
+  affiliation: uiuc
+  position: phd student
+  topics:
+  email: lan14@illinois.edu
+  homepage:
+
 lanteri_s:
   sur_name: Lanteri
   given_name: Stéphane
@@ -1622,6 +1658,15 @@ maruyama_y:
   position:
   topics:
   email: yutaka.maruyama.ur@riken.jp
+  homepage:
+
+mateevitsi_v:
+  sur_name: Mateevitsi
+  given_name: Victor A.
+  affiliation: anl
+  position: Computer Scientist
+  topics:
+  email: vmateevitsi@anl.gov
   homepage:
 
 mateo_s:
@@ -2234,6 +2279,15 @@ riteau_p:
   position:
   topics:
   email: priteau@uchicago.edu
+  homepage:
+
+rizzi_s:
+  sur_name: Rizzi
+  given_name: Silvio
+  affiliation: anl
+  position: Computer Scientist
+  topics:
+  email: srizzi@alcf.anl.gov
   homepage:
 
 roachell_b:
@@ -2963,6 +3017,15 @@ wilson_j:
   position: post_doc
   topics: Molecular Dynamics
   email: wilsja@illinois.edu
+  homepage:
+
+windgassen_j:
+  sur_name: Windgassen
+  given_name: Jonathan
+  affiliation: jsc
+  position: student
+  topics: Visualization
+  email: j.windgassen@fz-juelich.de
   homepage:
 
 winkelmann_j:
