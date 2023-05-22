@@ -820,7 +820,7 @@ ferrier_n:
   sur_name: Ferrier
   given_name: Nicola
   affiliation: anl
-  position: Senior Computer Scientist
+  position:
   topics:
   email: nferrier@anl.gov
   homepage:
@@ -838,7 +838,7 @@ fischer_p:
   sur_name: Fischer
   given_name: Paul
   affiliation: uiuc
-  position: Professor
+  position:
   topics:
   email: fischerp@illinois.edu
   homepage: 
@@ -1205,7 +1205,7 @@ insley_j:
   sur_name: Insley
   given_name: Joseph A.
   affiliation: anl
-  position: Visualization and Data Analytics Team Lead
+  position:
   topics:
   email: insley@anl.gov
   homepage:
@@ -1475,7 +1475,7 @@ lan_y:
   sur_name: Lan
   given_name: Yu-Hsiang
   affiliation: uiuc
-  position: phd student
+  position: phd
   topics:
   email: lan14@illinois.edu
   homepage:
@@ -1664,7 +1664,7 @@ mateevitsi_v:
   sur_name: Mateevitsi
   given_name: Victor A.
   affiliation: anl
-  position: Computer Scientist
+  position:
   topics:
   email: vmateevitsi@anl.gov
   homepage:
@@ -2285,7 +2285,7 @@ rizzi_s:
   sur_name: Rizzi
   given_name: Silvio
   affiliation: anl
-  position: Computer Scientist
+  position:
   topics:
   email: srizzi@alcf.anl.gov
   homepage:
@@ -3023,8 +3023,8 @@ windgassen_j:
   sur_name: Windgassen
   given_name: Jonathan
   affiliation: jsc
-  position: student
-  topics: Visualization
+  position:
+  topics:
   email: j.windgassen@fz-juelich.de
   homepage:
 
