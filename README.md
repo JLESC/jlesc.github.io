@@ -20,3 +20,7 @@ There is also a comprehensive guide from GitHub on [sending pull requests](https
 Note that you can [edit](https://help.github.com/articles/editing-files-in-your-repository) or even [create](https://help.github.com/articles/creating-new-files/) files directly online, too!
 
 Please read https://github.com/JLESC/jlesc.github.io/wiki for much more and much more detailed instructions!
+
+## Local Development
+
+`docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:3.2.2 bash -c "bundle config set --local path '/usr/src/app/vendor' && bundle install && bundle exec jekyll serve --livereload"`
