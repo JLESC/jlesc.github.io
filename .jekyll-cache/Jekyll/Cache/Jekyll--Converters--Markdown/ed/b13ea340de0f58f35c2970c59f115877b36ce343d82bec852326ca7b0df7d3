@@ -1,0 +1,33 @@
+I"
+<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>As the Dennard scaling ended, hardware manufacturers and application scientists have turned to non-traditional architectures to serve the need for compute power while keeping the power-budget low. For mainstream CPU and GPU architectures, there exists a large collection of libraries providing basic linear algebra building blocks (vector and matrix operations) and numerical algorithms (linear solvers, preconditioners, etc.) that are developed either by the hardware manufacturers (“vendor libraries”) or the academic community. For exotic architectures like FPGAs, in many cases the user community is yet too small to drive the development on basic linear algebra subroutines or numerical algorithms. This, in turn, reduces the potential use of these architectures in scientific computations, in particular computational science.</p>
+
+<p>In this project, JSC researchers and ICL researchers will collaborate to develop and expand the existing linear algebra libraries and functionality. The project is expected to accelerate the development of linear algebra functionality for FPGAs, and ensure the functionality hits the architecture-specific performance limits.</p>
+
+<h2 id="results-for-20222023">Results for 2022/2023</h2>
+
+<p>None yet.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<p>We propose a 3-week research stay of Albert Njoroge Kahira at the University of Tennessee to collaborate with the ICL researchers and math library developers to design linear algebra functionality for FPGAs.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<!--
+
+
+
+
+
+-->
+
+<ol class="bibliography"></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"></ol>
+:ET

@@ -1,0 +1,173 @@
+I"�<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>Many complex simulation problems are tackled by coupling independent
+domain-specific physics solvers; e.g. fluid-structure simulations, or weather
+simulations combining models at different scales. Enabling efficient multi-code
+executions facilitates code reuse and is a natural way of increasing simulation
+capabilities of a specific framework. However, being the efficient exploitation
+of modern computing architectures already a challenging problem, combining
+different codes on a coupled execution can become even more complex. One of the
+problems is the distribution of resources among the various physics software
+that compose the model. A non-perfect distribution would result in some idle
+time, implying a waste of computational resources. For staggered coupling
+schemes, where the physics software are not running concurrently, the computing
+resources should be transferred from one physics software to the other. For
+monolithic or implicit approaches, a balance needs to be found so that both
+software instances spend the same time to reach the communication stage of the
+coupling. There are different strategies to be applied to achieve these goals,
+most of them relying on the malleability of the software being coupled.</p>
+
+<p>In this project we aim to investigate strategies to increase the efficiency of
+coupled executions on modern architectures. The investigation will be
+demonstrated on coupled executions with the multi-physiscs framework Alya,
+developed at the Computer Applications for Science and Engineering (CASE)
+department of the Barcelona Supercomputing Center (BSC). For the resource
+arbitration, we will be using Argonne’s Node Resource Manager, an
+infrastructure to partition resources among application components using
+control-theoretical methods. This infrastructure combine application monitoring
+(PMPI, performance counters) with multi-armed-bandit strategies to
+automatically learn the performance-resource sweet spot for a collection of
+application components. As such, it relies on accurate monitoring capabilities
+and the right set of actuators (resource arbitration mechanisms), that we will
+explore in depth for this set of use cases.</p>
+
+<h2 id="future-plans">Future Plans</h2>
+
+<p>We are in the process of identifying proper signals (MPI communications) that
+can be used to identify load imbalance and trigger load balancing.</p>
+
+<p>We expect to have a working solution for subsets of the Alya workloads within
+a year.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<p>The projects members met during previous JLESC meetings and at Supercomputing
+2019.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<ol class="bibliography"></ol>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BORRELL202031
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBORRELL202031Bibtex" aria-expanded="false" aria-controls="collapseBORRELL202031Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBORRELL202031Abstract" aria-expanded="false" aria-controls="collapseBORRELL202031Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BORRELL202031">Borrell, R., D. Dosimont, M. Garcia-Gasulla, G. Houzeaux, O. Lehmkuhl, V. Mehta, H. Owen, M. Vázquez, and G. Oyarzun. 2020. “Heterogeneous CPU/GPU Co-Execution of CFD Simulations on the POWER9 Architecture: Application to Airplane Aerodynamics.” <i>Future Generation Computer Systems</i> 107: 31–48.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBORRELL202031Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{BORRELL202031,
+  title = {Heterogeneous CPU/GPU co-execution of CFD simulations on the POWER9 architecture: Application to airplane aerodynamics},
+  journal = {Future Generation Computer Systems},
+  volume = {107},
+  pages = {31 - 48},
+  year = {2020},
+  author = {Borrell, R. and Dosimont, D. and Garcia-Gasulla, M. and Houzeaux, G. and Lehmkuhl, O. and Mehta, V. and Owen, H. and Vázquez, M. and Oyarzun, G.}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          cajas
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsecajasBibtex" aria-expanded="false" aria-controls="collapsecajasBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsecajasAbstract" aria-expanded="false" aria-controls="collapsecajasAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="cajas">Cajas, J., Guillaume Houzeaux, Mariano Vázquez, Marta Garcia-Gasulla, E. Casoni, Hadrien Calmet, Antoni Artigues, et al. 2018. “Fluid-Structure Interaction Based on HPC Multicode Coupling.” <i>SIAM Journal on Scientific Computing</i> 40 (January): C677–C703.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsecajasBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{cajas,
+  author = {Cajas, J. and Houzeaux, Guillaume and Vázquez, Mariano and Garcia-Gasulla, Marta and Casoni, E. and Calmet, Hadrien and Artigues, Antoni and Borrell, R. and Lehmkuhl, Oriol and Maldoando, Daniel and Yán͂ez, D. and Pons, R. and Martorell, J.},
+  year = {2018},
+  month = jan,
+  pages = {C677-C703},
+  title = {Fluid-Structure Interaction Based on HPC Multicode Coupling},
+  volume = {40},
+  journal = {SIAM Journal on Scientific Computing}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          VazquezEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVazquezEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseVazquezEtAl2015Abstract" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="VazquezEtAl2015">Vázquez, M., G. Houzeaux, S. Koric, A. Artigues, J. Aguado-Sierra, Arı́s R., D. Mira, et al. 2015. “Alya: Multiphysics Engineering Simulation Towards Exascale.” <i>J. Comput. Sci.</i></span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseVazquezEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{VazquezEtAl2015,
+  author = {V\'azquez, M. and Houzeaux, G. and Koric, S. and Artigues, A. and Aguado-Sierra, J. and Ar\'{\i}s, R. and Mira, D. and Calmet, H. and Cucchietti, F. and Owen, H. and Taha, A. and Burness, E.D. and Cela, J.M. and Valero, M.},
+  journal = {J. Comput. Sci.},
+  keywords = {Alya},
+  title = {Alya: Multiphysics Engineering Simulation Towards Exascale},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

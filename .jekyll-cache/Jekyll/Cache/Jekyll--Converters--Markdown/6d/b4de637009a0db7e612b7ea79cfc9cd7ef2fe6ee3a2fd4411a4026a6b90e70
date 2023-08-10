@@ -1,0 +1,274 @@
+I">
+<h2 id="research-topics-and-goals">Research topics and goals</h2>
+
+<p>In this project we propose to focus on the modern implementation of
+one of the oldest subspace iteration methods: the Chebyshev
+Accelerated Subspace Eigensolver (ChASE), recently developed at
+JSC. ChASE is tailored to compute a fraction not exceeding 20% of the
+extremal spectrum of dense Hermitian eigenproblems.</p>
+
+<h3 id="scaling-the-chase-for-large-hermitian-eigenvalue-problems">Scaling the ChASE for large Hermitian eigenvalue problems</h3>
+
+<p>State of the art eigensolvers used in Computational Science and
+Engineering present evidence of widely varying performance and serious
+limitations when it comes to scalability over thousands of
+cores. Scalability is often an issue intrinsic to the algorithms
+granularity which determines the amount of parallelism
+available. Ultimately, though, it is the rigid structure of the
+libraries imposing limitations on the optimal use of the hierarchical
+structure of the caches that creates serious restrictions to the level
+of scalability these routines can achieve.</p>
+
+<p>An appealing alternative to traditional algorithms for dense and
+sparse problems is a class of modern iterative eigensolvers based on
+subspace iteration with spectral projection. Thanks to their simple
+algorithmic structure and extended granularity, this class of
+algorithms are experiencing a revival as an alternative to traditional
+dense solvers. Moreover, at the sub-routine level the internal tasks
+can be designed so as to use almost exclusively low level kernels from
+specialized libraries, such as BLAS, guaranteeing performance
+portability.</p>
+
+<p>The objective of this topic is to port the ChASE library to the
+largest computing architectures currently available,
+generalize its interface so as to allow multiple parallelization schemes, and extend
+its applicability by supporting the solution of large
+Hermitian eigenvalue problems.</p>
+
+<h3 id="optimizing-chase-for-bethe-salpeter-computations-on-multi-gpus">Optimizing ChASE for Bethe-Salpeter computations on multi-GPUs</h3>
+
+<p>Accurate predictions for the interaction of light with matter are
+crucial, for instance, to design novel optoelectronic or photovoltaic
+materials and to understand their fundamental properties. To this end,
+atomistic first-principles methods are capable of computing absorption
+spectra or the complex frequency-dependent dielectric function. More
+specifically, by solving the Bethe-Salpeter equation for the optical
+polarization function, computational materials scientists can take
+excitonic effects into account when simulating optical properties of
+real materials. However, for modern complex systems such as
+lanthanum-aluminum oxide or indium oxide, this approach leads to large
+dense matrices with sizes reaching up to 400,000.</p>
+
+<p>To compute experimentally relevant exciton binding energies, only a
+fraction of the spectrum, corresponding to the lowest eigenpairs of
+these matrices, are of interest <a class="citation" href="#FuchsEtAl2008">(Fuchs et al. 2008)</a>. Due to its large computational
+cost, direct diagonalization using out-of-the-box libraries is not a
+workable option. In these instances iterative schemes provide a
+feasible alternative route, allowing to efficiently compute the lowest
+portion of the eigenspectrum by exploiting the massively parallel
+architecture of modern supercomputers.</p>
+
+<p>In this project we propose to test and customize ChASE,
+so as to facilitate the computation of the desired lowest eigenpairs
+of large dense eigenproblems on hybrid architectures. The positive
+outcome of the project will allow to draw conclusions with
+implications for electron-hole separation in solar cell absorbers and
+the overall optical properties of a material in the vicinity of the
+absorption onset. If this part of the project is successful, we
+envision exploring a folded-spectrum method to also access the
+high-energy range of the spectrum, which may become important to
+detect, for instance, Fano resonances.</p>
+
+<h4 id="contributions">Contributions</h4>
+
+<ul>
+  <li>Port and validate the robustness of the reference version of the ChASE library on Blue Waters;</li>
+  <li>Extend the reference implementation of ChASE to distributed memory platforms by porting the new hybrid parallelization of the Chebyshev filter;</li>
+  <li>Extend the hybrid parallelization to the Rayleigh-Ritz projection, QR factorization and residual computation;</li>
+  <li>Testing the scalability of ChASE when solving extremely large Hermitian eigenvalue problems extracted from specific applications.</li>
+</ul>
+
+<h2 id="results-for-20152016">Results for 2015/2016</h2>
+
+<p>This project was discussed for the first time during the JLESC meeting
+in December of 2015 in Bonn. Since then, both PIs set up the necessary testing
+infrastructure which involved creating an account for A. Schleife on JURECA,
+a 23 GB Globus file transfer from Blue Waters to JURECA, and compiling
+the existing conjugate-gradient eigensolver (KSCG) based code on JURECA.
+The transferred files were used to extract
+a number of matrices of increasing size to be diagonalized outside
+the Jena BSE code by using the existing ChASE
+eigensolver for comparison with the KSCG solver. We completed
+these steps and made sure to check the correctness of the solutions for
+the relative matrices. Already at this stage the ChASE solver showed to
+outperform KSCG out-of-the-box despite operating in sub-optimal conditions.
+These results were presented at the JLESC workshop in Lyon, France (2016).</p>
+
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
+
+<p>In a second phase, the ChASE library underwent a restructuring
+of the parallelization scheme in order to accommodate for a
+new paradigm based on MPI+CUDA. The initial effort concentrated on re-designing
+only the Chebyshev filter, which is the most computationally intensive
+routine of the ChASE solver.The rewriting effort was successfully tested
+on the JURECA nodes hosting 2 x K40 NVIDIA GPU cards using the same set of matrices
+created in the first phase of the project. The tests, run over up to 64 computing nodes
+showed the potential for ChASE to scale over hundreds
+of computing nodes and making use of multi-GPU cards per each node. The results were
+presented at the JLESC workshop in Kobe, Japan (2016).</p>
+
+<p>In the following phase, working accounts were opened on Blue Waters for the JSC team members.
+The JSC and UIUC teams met for a week in order to start
+integrating the ChASE solver into the Jena BSE code. First the ChASE solver was
+templated to work both in single (SP) and double precision (DP). Numerical tests showed that
+the Jena BSE does not require eigenpairs with a high precision so that ChASE can
+just operate in SP. The second step of this integration was successful carried
+out on one computing node showing that, already at this stage, Jena BSE + ChASE
+is about five times faster than Jena BSE using the KSCG solver. In the next step
+we will fully integrate the MPI+CUDA version of ChASE and run tests on Blue Waters.
+Eventually we plan to demonstrate the potential of the new solver by tackling
+a physical system of unprecedented size which will require thousands of computing nodes.</p>
+
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
+
+<p>In the third phase of this project, the ChASE library was completely
+re-written in order to separate the actual ChASE algorithm from the numerical kernels.
+As a C++ program such a separation is accomplished via a pure abstract class which
+defines the interface for the C++ numerical kernels. The ChASE algorithm
+implementation then uses this interface and all parallel operations and handling of
+data is performed by the subclass of the pure abstract ChASE class.
+Such rewrite allowed the library to accommodate several different parallelization
+scheme from MPI+CUDA to pure MPI using the linear algebra kernels and data distribution
+from the Elemental library. The new ChASE library has been tested using several different
+eigenvalue problems, as well as on sequences of eigenvalue problems where it
+outperforms even the most advanced direct eigensolvers. These results and the library
+description will appear in a manuscript submission in early March 2018.</p>
+
+<p>The new library is currently being tested over a new set of very large eigenproblems
+generated by the Jena BSE code. Such problems are described by matrices whose rank ranges
+from 300k up to 1000k. In this phase of the project we plan to solve these eigenproblems
+using as many computing nodes and GPU cards on Blue Waters as feasible for the size of the eigenproblem
+under scrutiny.</p>
+
+<h2 id="results-for-20182019">Results for 2018/2019</h2>
+
+<p>The original Jena VASP-BSE code that we based this project on used a legacy routine to read the Bethe-Salpeter Hamiltonian matrix. This matrix is written by another code and stored in binary format, distributed over hundreds of files for a typical production-run simulation. The legacy routine, implemented into an MPI parallelized code, then read and distributed these files over the different MPI ranks, however, it read in “serial” fashion, i.e., one MPI rank at a time. For large matrices, this slowed down the reading process tremendously, since it did not exploit parallel file access. The Blue Waters software team (Roland Haas, Victor Anisimov) helped us fix this problem, by restructuring the code, so it can read the matrix in parallel. This lead to a tremendous performance improvement, compared to the serial reading. In addition, the Blue Waters team also helped us address another issue, which is related to the distribution of the matrix in memory and over the different MPI ranks. By implementing a “redistribution” code, we can now read the matrix from the existing data format and redistribute it such that it is compatible with the ChASE library.</p>
+
+<h2 id="results-for-20192020">Results for 2019/2020</h2>
+
+<p>We have fully integrated a hybrid parallelization of
+the ChASE library into the Jena BSE code and tested scalability and efficiency of the ChASE library
+on the Blue Waters and JUWELS clusters using eigenproblems of increasing size and complexity.
+In particular, we tested the performance of ChASE for the diagonalization of Bethe-Salpeter matrices for different physical problems related to exciton binding energies in HfO2, In2O3 and Naphthalene. We used these systems to test
+the performance of the eigensolver in the strong and weak scaling regimes. We also
+explored the maximum number of k-points, which roughly determines the rank of a matrix, that we can now work with, using the new code. By doing so we were able to extrapolate more accurate physical results than were previously possible. We precisely quantified the performance improvements and also determined what new problems the modified code can address. All the collected data were used in preparing a scientific publication of these results which will be soon submitted to a tier-1 scientific journal. This will constitute the end of the project.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<ul>
+  <li>March 3 – 11 2017: Jan Winkelmann and Edoardo Di Napoli visited
+Andre Schleife in Urbana, Champaign. During the visit several
+important details were tackled, paving the way to a promising
+integration of the ChASE library into Jena BSE code.</li>
+</ul>
+
+<h4 id="compute-resource-needs">Compute resource needs</h4>
+
+<ul>
+  <li>Test account on JURECA for Matrix generation in the first phase of the project</li>
+  <li>Regular account on Blue Waters in the successive phases of the project.</li>
+  <li>Regular account on JUWELS in the final phase of the project.</li>
+</ul>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<ul>
+  <li>One journal publication presenting the new ChASE library was submitted in 2018 and published in April 2019 on ACM TOMS <a class="citation" href="#Winkelmann19">(Winkelmann, Springer, and Napoli 2019)</a></li>
+  <li>One journal publication presenting results related to the use of ChASE to solve very
+large eigenvalue problems generated by the BSE Jena code to be submitted in April 2020</li>
+</ul>
+
+<ol class="bibliography"></ol>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Winkelmann19
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseWinkelmann19Bibtex" aria-expanded="false" aria-controls="collapseWinkelmann19Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseWinkelmann19Abstract" aria-expanded="false" aria-controls="collapseWinkelmann19Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Winkelmann19">Winkelmann, Jan, Paul Springer, and Edoardo Di Napoli. 2019. “ChASE: a Chebyshev Accelerated Subspace Iteration
+      Eigensolver for Sequences of Hermitian Eigenvalue Problems.” <i>ACM Transactions on Mathematical Software</i> 2 (45): 34. https://doi.org/<a href="https://doi.org/10.1145/3313828" target="_blank">https://doi.org/10.1145/3313828</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseWinkelmann19Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Winkelmann19,
+  title = {ChASE: a Chebyshev Accelerated Subspace iteration
+        Eigensolver for sequences of Hermitian eigenvalue problems},
+  journal = {ACM Transactions on Mathematical Software},
+  volume = {2},
+  number = {45},
+  year = {2019},
+  pages = {34},
+  doi = {https://doi.org/10.1145/3313828},
+  author = {Winkelmann, Jan and Springer, Paul and Napoli, Edoardo Di}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          FuchsEtAl2008
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseFuchsEtAl2008Bibtex" aria-expanded="false" aria-controls="collapseFuchsEtAl2008Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseFuchsEtAl2008Abstract" aria-expanded="false" aria-controls="collapseFuchsEtAl2008Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="FuchsEtAl2008">Fuchs, F., C. Rödl, A. Schleife, and F. Bechstedt. 2008. “Efficient \MathcalO(N^2) Approach to Solve the Bethe-Salpeter Equation For
+    Excitonic Bound States.” <i>Phys. Rev. B</i> 78: 085103. https://doi.org/10.1103/PhysRevB.78.085103.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseFuchsEtAl2008Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{FuchsEtAl2008,
+  author = {Fuchs, F. and R\"odl, C. and Schleife, A. and Bechstedt, F.},
+  doi = {10.1103/PhysRevB.78.085103},
+  journal = {Phys. Rev. B},
+  numpages = {13},
+  pages = {085103},
+  title = {Efficient $\mathcal{O}({N}^{2})$ approach to solve the Bethe-Salpeter equation for
+      excitonic bound states},
+  url = {http://link.aps.org/doi/10.1103/PhysRevB.78.085103},
+  volume = {78},
+  year = {2008}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

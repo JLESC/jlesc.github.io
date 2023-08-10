@@ -1,0 +1,247 @@
+I"2<h2 id="research-topic-and-goals">Research topic and goals</h2>
+<p>The objective of this project is to use a runtime repartitioning library PAMPA <a class="citation" href="#LachatEtAl2014">(Lachat, Dobrzynski, and Pellegrini 2014)</a>, <a class="citation" href="#MbengoueEtAl2013">(Mbengoue et al. 2013)</a> to dynamically load balance a high performance computational mechanics code Alya <a class="citation" href="#HouzeauxEtAl2009">(Houzeaux et al. 2009)</a>, <a class="citation" href="#HouzeauxEtAl2011">(Houzeaux, Aubry, and Vázquez 2011)</a>, <a class="citation" href="#VazquezEtAl2015">(Vázquez et al. 2015)</a>.
+The main application is the particle transport in a fluid.</p>
+
+<p>In Alya, the transport of particles in a fluid is achieved using two parallel instances of the code.
+One instance is in charge of solving the flow equation and the other one of transporting the particles.
+The velocity field is sent from the first to the second one at the end of each time step through MPI.
+If a classical mesh partitioning based on the balancing of the number of elements is performed, the particles are likely to be located in very few subdomains, which obviously leads to a very poor load balance.
+In this project we aim at implementing the Pampa library in Alya in order to redistribute the elements among the MPI processes
+in order to dynamically balance the computation of particle transport.</p>
+
+<h2 id="results-for-20152016">Results for 2015/2016</h2>
+<p>The work have just started.
+The data structure required by Pampa was coded in Alya and Pampa was interfaced with Alya.</p>
+
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
+<p>Initially, bridges from Alya to Pampa and Pampa to Alya were created. To do so, the data structures of Alya were adapted to Pampa’s data structures. In fact, the parallelization strategy of Alya is based on a partition into disjoint element sets, where interface nodes on the interfaces are duplicated. Thus, Alya does not require halos. However, Pampa was based on disjoint sets of nodes, which made the interface between the two codes a bit complex and heavy to manage. As the Alya data structure is quite common in the finite element community, we decided it was more convenient to adapt Pampa to this format. This work has been carried out in the first months of this year and is now being tested in Alya.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<ul>
+  <li><span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) and <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 14-15 Oct. 2016.</li>
+  <li><span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) and <span class="person given-name">Vishal</span> <span class="person sur-name">Mehta</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 24-26 Feb. 2016.</li>
+  <li><span class="person given-name">Cédric</span> <span class="person sur-name">Lachat</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) met BSC team at Barcelona, 7-9- Dec. 2016.</li>
+</ul>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+<p>The first objective of this project is to dynamically load balance the particle transport.
+To achieve this, many efforts are required to reorganize the data structure in Alya to fit with Pampa’s.
+But among other features, Pampa allows parallel mesh adaptation and redistribution.
+Therefore all these efforts will enable to further use Pampa to perform mesh adaptation in Alya:</p>
+
+<ul>
+  <li>Dynamic load balance for other physical modules</li>
+  <li>Mesh adaptivity</li>
+</ul>
+
+<h2 id="future-plans">Future plans</h2>
+
+<ul>
+  <li>Implementation</li>
+  <li>Continuous validation</li>
+  <li>Application to particle transport</li>
+  <li>Scalability tests and performance analysis</li>
+</ul>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          VazquezEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVazquezEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseVazquezEtAl2015Abstract" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="VazquezEtAl2015">Vázquez, M., G. Houzeaux, S. Koric, A. Artigues, J. Aguado-Sierra, Arı́s R., D. Mira, et al. 2015. “Alya: Multiphysics Engineering Simulation Towards Exascale.” <i>J. Comput. Sci.</i></span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseVazquezEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{VazquezEtAl2015,
+  author = {V\'azquez, M. and Houzeaux, G. and Koric, S. and Artigues, A. and Aguado-Sierra, J. and Ar\'{\i}s, R. and Mira, D. and Calmet, H. and Cucchietti, F. and Owen, H. and Taha, A. and Burness, E.D. and Cela, J.M. and Valero, M.},
+  journal = {J. Comput. Sci.},
+  keywords = {Alya},
+  title = {Alya: Multiphysics Engineering Simulation Towards Exascale},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          LachatEtAl2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLachatEtAl2014Bibtex" aria-expanded="false" aria-controls="collapseLachatEtAl2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLachatEtAl2014Abstract" aria-expanded="false" aria-controls="collapseLachatEtAl2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="LachatEtAl2014">Lachat, Cédric, Cécile Dobrzynski, and François Pellegrini. 2014. “Parallel Mesh Adaptation Using Parallel Graph Partitioning.” In <i>5th European Conference on Computational Mechanics (ECCM V)</i>, 3:2612–23. CIMNE-International Center for Numerical Methods in Engineering.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLachatEtAl2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{LachatEtAl2014,
+  title = {Parallel mesh adaptation using parallel graph partitioning},
+  author = {Lachat, C{\'e}dric and Dobrzynski, C{\'e}cile and Pellegrini, Fran{\c{c}}ois},
+  booktitle = {5th European Conference on Computational Mechanics (ECCM V)},
+  volume = {3},
+  pages = {2612--2623},
+  year = {2014},
+  organization = {CIMNE-International Center for Numerical Methods in Engineering}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          MbengoueEtAl2013
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMbengoueEtAl2013Bibtex" aria-expanded="false" aria-controls="collapseMbengoueEtAl2013Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseMbengoueEtAl2013Abstract" aria-expanded="false" aria-controls="collapseMbengoueEtAl2013Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="MbengoueEtAl2013">Mbengoue, Dragan Amenga, Damien Genet, Cedric Lachat, Emeric Martin, Maxime Mogé, Vincent Perrier, Florent Renac, François Rue, and Mario Ricchiuto. 2013. “Comparison of Algorithm in Aerosol and Aghora for Compressible Flows.”</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseMbengoueEtAl2013Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{MbengoueEtAl2013,
+  title = {Comparison of algorithm in Aerosol and Aghora for compressible flows},
+  author = {Mbengoue, Dragan Amenga and Genet, Damien and Lachat, Cedric and Martin, Emeric and Mog{\'e}, Maxime and Perrier, Vincent and Renac, Florent and Rue, Fran{\c{c}}ois and Ricchiuto, Mario},
+  year = {2013}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HouzeauxEtAl2011
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2011Bibtex" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2011Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2011Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2011Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="HouzeauxEtAl2011">Houzeaux, G, R Aubry, and M Vázquez. 2011. “Extension of Fractional Step Techniques for Incompressible Flows: The Preconditioned Orthomin(1) for the Pressure Schur Complement.” <i>Cf</i> 44: 297–313.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHouzeauxEtAl2011Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{HouzeauxEtAl2011,
+  author = {Houzeaux, G and Aubry, R and V\'azquez, M},
+  journal = cf,
+  keywords = {Orthomin(1) iteration},
+  pages = {297-313},
+  title = {Extension of fractional step techniques for incompressible flows: The preconditioned Orthomin(1) for the pressure Schur complement},
+  volume = {44},
+  year = {2011}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HouzeauxEtAl2009
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2009Bibtex" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2009Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2009Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2009Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="HouzeauxEtAl2009">Houzeaux, G, M Vázquez, R Aubry, and JM Cela. 2009. “A Massively Parallel Fractional Step Solver for Incompressible Flows.” <i>Jcp</i> 228 (17): 6316–32.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHouzeauxEtAl2009Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{HouzeauxEtAl2009,
+  author = {Houzeaux, G and V\'azquez, M and Aubry, R and Cela, JM},
+  journal = jcp,
+  number = {17},
+  pages = {6316-6332},
+  title = {A Massively Parallel Fractional Step Solver for Incompressible Flows},
+  volume = {228},
+  year = {2009}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

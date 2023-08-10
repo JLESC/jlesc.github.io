@@ -1,0 +1,265 @@
+I"�4<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>This research action aims at improving the parallel scalability and robustness of the hybrid MPI/OpenMP high performance computational code Alya developed at BSC by using the parallel linear solvers designed at Inria.
+In that framework both parallel sparse direct and hybrid iterative/direct linear solvers will be integrated in the Alya code to study their performance and identify their possible bottlenecks.
+This action will contribute to the definition of the global API for the solver stack currently developed at Inria that will ease the integration and testing of the linear solver in any large simulation code.</p>
+
+<!-- ## Results for 2015/2016
+
+This activity has just started in February 2016, preliminary validation experiments have been performed but no scientific results yet. -->
+
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
+
+<p>A database with testcases has been created on Marenostrum. This database includes a series of representative examples to test unsymmetric, symmetric and SPD matrices. In addition, different mesh topologies have been considered to assess the effects of mesh anisotropy, computational domain elongation, etc.
+Benchmarking is currently carried out to compare Alya internal solvers and MAPHYS.</p>
+
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
+
+<ol>
+  <li>Full integration of the Inria solvers with their current individual API in the Alya code.</li>
+  <li>Scalability studies carried out on for CFD and solid mechanics applications.</li>
+  <li>New release of the PaStiX solver 6.0 :
+We have presented two approaches using a Block Low-Rank (BLR) compression technique to reduce the memory footprint and/or the time-to-solution of the sparse supernodal solver PaStiX (See <a class="citation" href="#pichon:hal-01485507">(Pichon et al. 2017)</a> and <a class="citation" href="#pichon:hal-01502215">(Pichon et al. 2017)</a>). Thanks to this compression technique, we have been able to solve a 1 billion unknown system (a 3D Laplacian matrix 100x100x100.000) on a single node with 3Tb of memory. The factorization time for this system was less than 6 hours using 96 cores, and the precision achieved at the first solve was 10e-5. With 10 additional iterative refinement steps, we reached easily 10e-8 in double precision. The cost of one solve was limited to 280 seconds. We were able to save 9Tb over the 11Tb that would be requested by the direct solver. The last release of the software includes these implementations and the description of the parameters are documented in <a href="http://pastix.gforge.inria.fr/doxygen/html/group__pastix__users.html">https://gitlab.inria.fr/solverstack/pastix</a>.</li>
+</ol>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<ul>
+  <li><span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) and <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 14-15 Oct. 2016.</li>
+  <li><span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 24-26 Feb. 2016.</li>
+  <li>INRIA met BSC team at Barcelona, Nov. 2016.</li>
+  <li><span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) visits INRIA, Nov. 2017.</li>
+</ul>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<p>None yet.</p>
+
+<!--
+
+-->
+
+<ol class="bibliography"></ol>
+
+<h2 id="future-plans">Future plans</h2>
+<p>We intend to complete the full integration of the Inria solvers with their current individual API in the Alya code so that scalability studies on different applications representative of Alya simulations can be performed (incompressible/compressible fluid, structure mechanics).
+Hopefully some of them will reveal numerical or software features to be further studied.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          pichon:hal-01485507
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsepichon:hal-01485507Bibtex" aria-expanded="false" aria-controls="collapsepichon:hal-01485507Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsepichon:hal-01485507Abstract" aria-expanded="false" aria-controls="collapsepichon:hal-01485507Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="pichon:hal-01485507">Pichon, G., M. Faverge, P. Ramet, and J. Roman. 2017. “Reordering Strategy for Blocking Optimization in Sparse Linear Solvers.” <i>SIAM Journal on Matrix Analysis and Applications</i>, SIAM Journal on Matrix Analysis and Applications, 38 (1): 226–48. https://doi.org/10.1137/16M1062454.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsepichon:hal-01485507Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{pichon:hal-01485507,
+  title = {{Reordering Strategy for Blocking Optimization in Sparse Linear Solvers}},
+  author = {Pichon, G. and Faverge, M. and Ramet, P. and Roman, J.},
+  url = {https://hal.inria.fr/hal-01485507},
+  journal = {{SIAM Journal on Matrix Analysis and Applications}},
+  publisher = {{Society for Industrial and Applied Mathematics}},
+  series = {SIAM Journal on Matrix Analysis and Applications},
+  volume = {38},
+  number = {1},
+  pages = {226 - 248},
+  year = {2017},
+  doi = {10.1137/16M1062454},
+  keywords = {Sparse},
+  pdf = {https://hal.inria.fr/hal-01485507/file/M106245.pdf},
+  hal_id = {hal-01485507},
+  hal_version = {v2}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          pichon:hal-01502215
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsepichon:hal-01502215Bibtex" aria-expanded="false" aria-controls="collapsepichon:hal-01502215Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsepichon:hal-01502215Abstract" aria-expanded="false" aria-controls="collapsepichon:hal-01502215Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="pichon:hal-01502215">Pichon, G., E. Darve, M. Faverge, P. Ramet, and J. Roman. 2017. “Sparse Supernodal Solver Using Block Low-Rank Compression.” In <i>18th IEEE International Workshop on Parallel and Distributed Scientific and Engineering Computing (PDSEC 2017)</i>. Orlando, United States. <a href="https://hal.inria.fr/hal-01502215" target="_blank">https://hal.inria.fr/hal-01502215</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsepichon:hal-01502215Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{pichon:hal-01502215,
+  title = {{Sparse Supernodal Solver Using Block Low-Rank Compression}},
+  author = {Pichon, G. and Darve, E. and Faverge, M. and Ramet, P. and Roman, J.},
+  url = {https://hal.inria.fr/hal-01502215},
+  booktitle = {{18th IEEE International Workshop on Parallel and Distributed Scientific and Engineering Computing (PDSEC 2017)}},
+  address = {Orlando, United States},
+  year = {2017},
+  month = jun,
+  keywords = {Sparse},
+  pdf = {https://hal.inria.fr/hal-01502215/file/blr-final.pdf},
+  hal_id = {hal-01502215},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          VazquezEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVazquezEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseVazquezEtAl2015Abstract" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="VazquezEtAl2015">Vázquez, M., G. Houzeaux, S. Koric, A. Artigues, J. Aguado-Sierra, Arı́s R., D. Mira, et al. 2015. “Alya: Multiphysics Engineering Simulation Towards Exascale.” <i>J. Comput. Sci.</i></span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseVazquezEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{VazquezEtAl2015,
+  author = {V\'azquez, M. and Houzeaux, G. and Koric, S. and Artigues, A. and Aguado-Sierra, J. and Ar\'{\i}s, R. and Mira, D. and Calmet, H. and Cucchietti, F. and Owen, H. and Taha, A. and Burness, E.D. and Cela, J.M. and Valero, M.},
+  journal = {J. Comput. Sci.},
+  keywords = {Alya},
+  title = {Alya: Multiphysics Engineering Simulation Towards Exascale},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HouzeauxEtAl2011
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2011Bibtex" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2011Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2011Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2011Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="HouzeauxEtAl2011">Houzeaux, G, R Aubry, and M Vázquez. 2011. “Extension of Fractional Step Techniques for Incompressible Flows: The Preconditioned Orthomin(1) for the Pressure Schur Complement.” <i>Comput. &amp; Fluids</i> 44: 297–313.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHouzeauxEtAl2011Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{HouzeauxEtAl2011,
+  author = {Houzeaux, G and Aubry, R and V\'azquez, M},
+  journal = {Comput. \&amp; Fluids},
+  keywords = {Orthomin(1) iteration},
+  pages = {297--313},
+  title = {Extension of fractional step techniques for incompressible flows: The preconditioned Orthomin(1) for the pressure Schur complement},
+  volume = {44},
+  year = {2011}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HouzeauxEtAl2009
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2009Bibtex" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2009Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2009Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2009Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="HouzeauxEtAl2009">Houzeaux, G, M Vázquez, R Aubry, and JM Cela. 2009. “A Massively Parallel Fractional Step Solver for Incompressible Flows.” <i>J. Comp. Phys</i> 228 (17): 6316–32.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHouzeauxEtAl2009Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{HouzeauxEtAl2009,
+  author = {Houzeaux, G and V\'azquez, M and Aubry, R and Cela, JM},
+  journal = {J. Comp. Phys},
+  number = {17},
+  pages = {6316--6332},
+  title = {A Massively Parallel Fractional Step Solver for Incompressible Flows},
+  volume = {228},
+  year = {2009}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

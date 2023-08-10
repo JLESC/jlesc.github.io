@@ -1,0 +1,137 @@
+I"9<h2 id="research-topic-and-goals">Research topic and goals</h2>
+<p>The research in this topic is based on a hardware and a software architecture, which both are currently under development: GVR and BGAS.
+GVR (Global View Resilience) is a user-level library that enables portable, efficient, application-controlled resilience <a class="citation" href="#ChienEtAl2015">(Chien et al. 2015)</a>.
+It focusses on achieving scalability and maximization of error recovery.
+BGAS (Blue Gene Active Storage) is a realisation of an active storage architecture based on custom flash memory cards which are integrated into Blue Gene/Q I/O drawers.
+Here JSC continues previous work on integration of non-volatile memory <a class="citation" href="#SayedEtAl2013">(Sayed et al. 2013)</a>.
+In this subproject our goal is to explore the opportunities of both architectures by integrating them.
+More specifically the following research questions are addressed:</p>
+
+<ul>
+  <li>How well can the software architecture of GVR exploit the BGAS hardware architecture?</li>
+  <li>How efficiently can both architectures be exploited?</li>
+  <li>What is the value of active storage for a which classes of large-scale scientific computing?</li>
+</ul>
+
+<h2 id="results-for-20152016">Results for 2015/2016</h2>
+<p>GVR has been successfully installed by the ANL team on Jülich’s BG/Q system JUQUEEN exploiting the attached BGAS nodes. This setup had been the basis for an extensive performance analysis, where results will be published at ISC16.</p>
+
+<p>The conclusions was that the NVM-based BGAS system provides a more efficient basis and opportunities for GVR versioning comparing to an traditional external storage systems attached to the same system, especially for flexible error recovery using random version access.
+Equipped with additional compute resource, e.g., idle cores on the I/O node (ION), in-situ analysis could be off-loaded to the ION.
+Such active storage concepts can potentially be exploited for enabling algorithm-based fault-tolerance (ABFT) error- checking.
+Further performance improvements might be attainable using the Direct Storage Access (DSA) interface instead of the local file system that was used within this project.</p>
+
+<p>With the presentation of the paper this project will come to an end.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+<p>Beyond regular contacts via email the following meetings involving most of the participants took place:</p>
+
+<ul>
+  <li>Meeting of <span class="person given-name">Andrew A.</span> <span class="person sur-name">Chien</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>), <span class="person given-name">Nan</span> <span class="person sur-name">Dun</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) and <span class="person given-name">Dirk</span> <span class="person sur-name">Pleiter</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>) at SC14 on November 17, 2014.</li>
+  <li>Technical update meeting on February 5, 2015.</li>
+  <li>Regular technical meetings thereafter until December 2015</li>
+</ul>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+<p>The project has submitted a publication to ISC16 that has been accepted.</p>
+
+<!--
+
+-->
+<ol class="bibliography"></ol>
+
+<h2 id="future-plans">Future plans</h2>
+<p>None</p>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ChienEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseChienEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseChienEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseChienEtAl2015Abstract" aria-expanded="false" aria-controls="collapseChienEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ChienEtAl2015">Chien, A., P. Balaji, P. Beckman, N. Dun, A. Fang, H. Fujita, K. Iskra, et al. 2015. “Versioned Distributed Arrays for Resilience in Scientific Applications: Global View
+    Resilience.” <i>Procedia Computer Science</i> 51: 29–38. https://doi.org/10.1016/j.procs.2015.05.187.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseChienEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{ChienEtAl2015,
+  author = {Chien, A. and Balaji, P. and Beckman, P. and Dun, N. and Fang, A. and Fujita, H. and Iskra, K. and Rubenstein, Z. and Zheng, Z. and Schreiber, R. and Hammond, J. and Dinan, J. and Laguna, I. and Richards, D. and Dubey, A. and van Straalen, B. and Hoemmen, M. and Heroux, M. and Teranishi, K. and Siegel, A.},
+  doi = {10.1016/j.procs.2015.05.187},
+  journal = {Procedia Computer Science},
+  note = {International Conference On Computational Science,
+      {ICCS} 2015 Computational Science at the Gates of Nature},
+  pages = {29 - 38},
+  title = {Versioned Distributed Arrays for Resilience in Scientific Applications: Global View
+      Resilience},
+  volume = {51},
+  year = {2015}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          SayedEtAl2013
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSayedEtAl2013Bibtex" aria-expanded="false" aria-controls="collapseSayedEtAl2013Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseSayedEtAl2013Abstract" aria-expanded="false" aria-controls="collapseSayedEtAl2013Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="SayedEtAl2013">Sayed, Salem, Stephan Graf, Michael Hennecke, Dirk Pleiter, Georg Schwarz, Heiko Schick, and Michael Stephan. 2013. “Supercomputing: 28th International Supercomputing Conference, ISC 2013, Leipzig, Germany,
+    June 16-20, 2013. Proceedings.” In , edited by Julian Martin Kunkel, Thomas Ludwig, and Hans Werner Meuer, 435–46. Berlin, Heidelberg: Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-642-38750-0_33.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseSayedEtAl2013Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inbook{SayedEtAl2013,
+  address = {Berlin, Heidelberg},
+  author = {Sayed, Salem and Graf, Stephan and Hennecke, Michael and Pleiter, Dirk and Schwarz, Georg and Schick, Heiko and Stephan, Michael},
+  chapter = {Using GPFS to Manage NVRAM-Based Storage Cache},
+  doi = {10.1007/978-3-642-38750-0_33},
+  editor = {Kunkel, Julian Martin and Ludwig, Thomas and Meuer, Hans Werner},
+  pages = {435--446},
+  publisher = {Springer Berlin Heidelberg},
+  title = {Supercomputing: 28th International Supercomputing Conference, ISC 2013, Leipzig, Germany,
+      June 16-20, 2013. Proceedings},
+  year = {2013}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

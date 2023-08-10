@@ -1,0 +1,46 @@
+I"û<p>The workshop will take place at Barcelona, will gather top researchers in HPC from INRIA, the
+University of Illinois, Argonne National Laboratory, Barcelona Supercomputing Center, JÃ¼lich
+Supercomputing Center and Riken AICS to explore research problems related to post Petascale /
+Exascale Supercomputers and present early results of their joint work.</p>
+
+<p>The workshop will feature technical sessions on five main topics: Application and Numerical
+libraries; Parallel Programming, runtime and tools; Resilience; Big Data, I/O and visualization;
+Cloud for HPC.</p>
+
+<p>The workshop will present an exceptional program with papers accepted or submitted to top level
+conferences.</p>
+
+<p>A key objective of the workshop is to identify new research collaborations and establish a roadmap
+for their implementation.</p>
+
+<p>The workshop is open to Illinois, INRIA, ANL, BSC, JSC and Riken AICS faculties, researchers,
+engineers and students who want to learn more about Post Petascale / Exascale Computing.</p>
+
+<h2 id="workshop-program">Workshop program</h2>
+
+<p>The plenary session will present 3 keynotes, each from a different region (America, Europe, Asia) on
+critical issues for Extreme Scale Computing and Data Analytics.</p>
+
+<p>The parallel sessions will cover the following topics:</p>
+
+<ul>
+  <li>Mini apps, Benchmarking, modeling</li>
+  <li>Resilience</li>
+  <li>Applications</li>
+  <li>Programming models</li>
+  <li>Performance tools</li>
+  <li>I/O, storage, Big data</li>
+  <li>in-situ data analytics, visualization</li>
+  <li>Numerical Methods/Algorithms.</li>
+  <li>Cloud for HPC</li>
+</ul>
+
+<h2 id="workshop-venue">Workshop venue</h2>
+
+<p>The workshop will take place in the <a href="http://www.barcelo.com/BarceloHotels/en_US/hotels/Spain/Barcelona/hotel-barcelo-sants/general-description.aspx">Barcelo Sant hotel</a>.
+The lodging for the workshop will also be at the Barcelo Sant hotel (Do not contact the hotel to
+book your room, just mention your check-in and check-out date in the workshop registration page).</p>
+
+<div class="row lightbox-container"><a href="#" class="lightbox-link" data-featherlight="/assets/images/3rd-jlesc-group-photo.jpg"><img src="/assets/images/3rd-jlesc-group-photo.jpg
+" alt="Participants of the 3rd JLESC Workshop" class="img-fluid" /></a></div>
+:ET

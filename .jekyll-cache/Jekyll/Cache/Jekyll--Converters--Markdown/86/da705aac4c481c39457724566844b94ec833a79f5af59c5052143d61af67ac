@@ -1,0 +1,80 @@
+I"<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>This project focuses on challenges posed by the increasing complexity of HPC workflows. To cope with the ever increasing size of data and the resulting increase in the number and complexity of workflows running on Extreme-scale HPC systems, it becomes necessary to share the HPC resources across multiple scientific workflows, as is already the case on cloud infrastructures. The first goal of this research project is to investigate approaches for resource sharing and scheduling that can preserve QoS requirements of scientific workflows running concurrently on a shared HPC system, while ensuring a high resource utilization of the infrastructure. We plan to investigate the possible trade-offs including Isolation vs. performance guarantee, consolidation vs. resource utilization, and dynamicity vs. resource provisioning. Additionally, it becomes necessary to make HPC workflows fault-tolerant at the relevant granularity level. The typical behavior of an HPC workflow when one of its tasks fails it to fail entirely, requiring user intervention to restart it. Yet depending on task dependencies and/or communications, the workflow management system should be able to reschedule a failed task without affecting other independent tasks, as done in the cloud for frameworks such as Hadoop. This project will focus on the Swift/T workflow management system. First we will find a way to provide task-level fault tolerance for independent tasks with no dependencies. The immediate application of this will be in managing ensemble simulations. As a second step we will explore ways to maintain fault tolerance for interdependent tasks, and in particular for tasks linked together with dataflows.</p>
+
+<h2 id="results-for-20152016">Results for 2015/2016</h2>
+
+<p>Our first sub-goal consisted of investigating the potential gain of sharing resources in a “cloud way” for HPC workflows. This initial study would provide an upper bound of the gain in resource usage when independent workflow share common resources in an HPC platform. This study was mainly conducted by Nathanael Cheriere at Argonne from January to June 2016.</p>
+
+<p>Results obtained using simulations with traces of real workflows showed no clear potential for resource sharing in the context of HPC workflows. Contrary to cloud workflows that can scale up and down depending on usage patterns, most HPC workflows already make the best use they can of the provided parallelism. Sharing resources presents more drawbacks than advantages and, in most cases, degrades resource utilization rather than improving it.</p>
+
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
+
+<p>The second goal of the project will investigate mechanisms by which an HPC workflow can become fault-tolerant at task-level, so that failure of a single task has the smallest impact possible on the overall workflow. We plan to implement and demonstrate these mechanisms on real HPC workflows. This study was mainly conducted by Matthieu Dorier and Justin Wozniak from November 2016 to March 2017.</p>
+
+<p>In terms of fault-tolerance, we proposed the addition of a new primitive, MPI_Comm_launch, for the MPI standard. This function enables to launch an MPI application inside another MPI application in a fault-tolerant manner. We leveraged a first implementation of MPI_Comm_launch to implement new constructs in the Swift/T language enabling a Swift workflow to be decomposed into sub-workflows. Failures in sub-workflows are reported to the parent workflow without causing it to fails, thus enabling task-level fault tolerance. We demonstrated these new features in the CODES-ESW workflow, a workflow meant for design-space exploration of network simulations.</p>
+
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
+
+<p>A paper with the aforementioned results has been published at the WORKS 2017 workshop <a class="citation" href="#DorierWORKS2017">(Dorier, Wozniak, and Ross 2017)</a>, held jointly with Supercomputing. We improved the Swift/T usage of MPI_Comm_launch to support launching multiple executables, and started working on in situ analysis use-cases of MPI_Comm_launch, with ADIOS and DataSpaces as transport layers between launched tasks.</p>
+
+<h2 id="results-for-20182019">Results for 2018/2019</h2>
+
+<p>We worked  with Cray to add support for functionalities similar to MPI_Comm_launch in Cray MPICH. A Paper has been submitted at CUG 2019 on “Implementing and Standardizing In Situ Job Launch for HPC Workflows”. In parallel, we started discussing with members of the MPI Forum to have the functionalities added to the MPI standard.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<p>Internship of Nathanael Cheriere at Argonne National Lab from January 2016 to June 2016, under the supervision of Matthieu Dorier and Rob Ross.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          DorierWORKS2017
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDorierWORKS2017Bibtex" aria-expanded="false" aria-controls="collapseDorierWORKS2017Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseDorierWORKS2017Abstract" aria-expanded="false" aria-controls="collapseDorierWORKS2017Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="DorierWORKS2017">Dorier, Matthieu, Justin Wozniak, and Robert Ross. 2017. “Supporting Task-Level Fault-Tolerance in HPC Workflows by Launching MPI Jobs inside MPI Jobs.” Workshop. In <i>Proceedings of the WORKS 2017 Workshop (SC17)</i>. <a href="https://dl.acm.org/citation.cfm?id=3151001" target="_blank">https://dl.acm.org/citation.cfm?id=3151001</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseDorierWORKS2017Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{DorierWORKS2017,
+  title = {{Supporting Task-level Fault-Tolerance in HPC Workflows by Launching MPI Jobs inside MPI Jobs}},
+  author = {Dorier, Matthieu and Wozniak, Justin and Ross, Robert},
+  booktitle = {{Proceedings of the WORKS 2017 workshop (SC17)}},
+  year = {2017},
+  type = {workshop},
+  url = {https://dl.acm.org/citation.cfm?id=3151001},
+  pdf = {http://delivery.acm.org/10.1145/3160000/3151001/a5-dorier.pdf}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>We plan to propose our MPI_Comm_launch feature to the MPI standard committee. We also plan to use MPI_Comm_launch in multiple other real-life use cases, in particular with in situ analysis workflows.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"></ol>
+:ET

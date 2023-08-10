@@ -1,0 +1,263 @@
+I"u.<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>We believe international surveys are suitable for the vision of
+JLESC. International survey would be another type of collaboration in
+JLESC to obtain the insights into Exascale computing.</p>
+
+<p>The International MPI survey has been being conducted as the first survey
+in this project. As part of a wide effort to understand the current
+usage of the Message Passing Interface (MPI) in the development of
+parallel applications and drive future additions to the MPI standard,
+the objective of this project is to get feedback from the largest MPI
+audience (past, current and potential users) to get a better
+understanding of their needs, and the impact of different MPI
+capabilities on the process of developing distributed
+applications. Since this questionnaire survey will be distributed
+worldwide, it is also expected to reveal country/region differences on
+the above aspects.</p>
+
+<p>Existing studies on MPI uses are focused on a restricted target domain,
+such as the Exascale Computing Project (ECP) study conducted in 2017 that focused
+on MPI usage in the context of ECP applications; and/or those that are geographically
+constrained to a single laboratory, funding agency or at best, country.</p>
+
+<p>Such studies inspired us to conduct a larger study, not focused on HPC, but
+targeting a wider audience and involving a larger spectrum of geographically
+distinct users. Since MPI has been a widely used vehicle for high-performance
+computing for decades, this larger-scale questionnaire survey would be
+beneficial not only for deciding the future direction of MPI, but also the
+feature differences of MPI users among countries and/or regions of the world.</p>
+
+<p>This survey was conducted from February to June 2019, and at the time of
+this writing has gathered more than 800 answers from more than 40 countries.</p>
+
+<h2 id="results-for-201820192020">Results for 2018/2019/2020</h2>
+
+<p>As of 02.2019 the design of the questionnaire survey is almost
+done. Especially we also pay attention to China which is growing
+rapidly in the HPC field, and we have been making great effort to have
+answers from China. Unfortunately, our effort is not rewarded, 15
+answers from China at the time of this writing. We are now analyzing
+the answers and planning to submit a paper.</p>
+
+<h2 id="results-for-20202021">Results for 2020/2021</h2>
+
+<p>We have successfully had more than 850 participants from over 40
+countries/regions.  This large-scale, worldwide survey can
+differentiate with the other surveys so far introduced. It is revealed
+that many MPI users are suffered from mastering MPI, are deploring not
+finding appropriate learning mediums, and are not using recently
+introduced MPI features. We have submitted a journal paper to report
+the survey findings.</p>
+
+<h2 id="results-for-20212022">Results for 2021/2022</h2>
+
+<p>The conducted survey gathered a total of 851 answers from 42 contributors
+(countries/regions) around the world. We believe that this survey at this
+scale provides a novel view on MPI users, differentiating from and complementing
+for the other MPI surveys. The large number of participants, mostly from academia,
+allowed us to have a more clear picture about the use of MPI in an academic
+setting. We analyzed and summarized these results in a journal paper
+<a class="citation" href="#ahori-PARCO21-survey">(Hori et al. 2021)</a>. To help other researchers interested in
+usage patterns, we have published the entire archive as CSV files on the
+project github directory.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<p>Due to the COVID situation, all meeting in the period 2021-2022 were online
+meetings. They occurred regularly, mostly one to two meeting in a month.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<!--
+
+
+
+
+-->
+
+<p><a class="citation" href="#ahori-IPSJ-2019-July">(Hori et al. 2019)</a>
+<a class="citation" href="#ahori-PARCO21-survey">(Hori et al. 2021)</a></p>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ahori-PARCO21-survey
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseahori-PARCO21-surveyBibtex" aria-expanded="false" aria-controls="collapseahori-PARCO21-surveyBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseahori-PARCO21-surveyAbstract" aria-expanded="false" aria-controls="collapseahori-PARCO21-surveyAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ahori-PARCO21-survey">Hori, Atsushi, Emmanuel Jeannot, George Bosilca, Takahiro Ogura, Balazs Gerofi, Jie Yin, and Yutaka Ishikawa. 2021. “An International Survey on MPI Users.” <i>Parallel Computing</i> 108: 102853. https://doi.org/<a href="https://doi.org/10.1016/j.parco.2021.102853" target="_blank">https://doi.org/10.1016/j.parco.2021.102853</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseahori-PARCO21-surveyBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{ahori-PARCO21-survey,
+  title = {An international survey on MPI users},
+  journal = {Parallel Computing},
+  volume = {108},
+  pages = {102853},
+  year = {2021},
+  issn = {0167-8191},
+  doi = {https://doi.org/10.1016/j.parco.2021.102853},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167819121000983},
+  author = {Hori, Atsushi and Jeannot, Emmanuel and Bosilca, George and Ogura, Takahiro and Gerofi, Balazs and Yin, Jie and Ishikawa, Yutaka},
+  keywords = {Message Passing Interface (MPI), Survey}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ahori-IPSJ-2019-July
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseahori-IPSJ-2019-JulyBibtex" aria-expanded="false" aria-controls="collapseahori-IPSJ-2019-JulyBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseahori-IPSJ-2019-JulyAbstract" aria-expanded="false" aria-controls="collapseahori-IPSJ-2019-JulyAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ahori-IPSJ-2019-July">Hori, Atsushi, George Bosilca, Emmanuel Jeannot, Takahiro Ogura, and Yutaka Ishikawa. 2019. “Is Japanese HPC Another Galapagos? - Interim Report of MPI International Survey -.” In <i>SIGHPC</i>. Information Processing Society of Japan.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseahori-IPSJ-2019-JulyBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{ahori-IPSJ-2019-July,
+  author = {Hori, Atsushi and Bosilca, George and Jeannot, Emmanuel and Ogura, Takahiro and Ishikawa, Yutaka},
+  title = {{Is Japanese HPC another Galapagos? - Interim Report of MPI International Survey -}},
+  journal = {SIGHPC},
+  issn = {},
+  publisher = {Information Processing Society of Japan},
+  year = {2019},
+  month = jul,
+  number = {34}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>The MPI International Survey is a touchstone of following JLESC survey
+projects. If you are interested in this survey project as a project
+member or a subject of international survey, just join this project.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ahori-PARCO21-survey
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseahori-PARCO21-surveyBibtex" aria-expanded="false" aria-controls="collapseahori-PARCO21-surveyBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseahori-PARCO21-surveyAbstract" aria-expanded="false" aria-controls="collapseahori-PARCO21-surveyAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ahori-PARCO21-survey">Hori, Atsushi, Emmanuel Jeannot, George Bosilca, Takahiro Ogura, Balazs Gerofi, Jie Yin, and Yutaka Ishikawa. 2021. “An International Survey on MPI Users.” <i>Parallel Computing</i> 108: 102853. https://doi.org/<a href="https://doi.org/10.1016/j.parco.2021.102853" target="_blank">https://doi.org/10.1016/j.parco.2021.102853</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseahori-PARCO21-surveyBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{ahori-PARCO21-survey,
+  title = {An international survey on MPI users},
+  journal = {Parallel Computing},
+  volume = {108},
+  pages = {102853},
+  year = {2021},
+  issn = {0167-8191},
+  doi = {https://doi.org/10.1016/j.parco.2021.102853},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167819121000983},
+  author = {Hori, Atsushi and Jeannot, Emmanuel and Bosilca, George and Ogura, Takahiro and Gerofi, Balazs and Yin, Jie and Ishikawa, Yutaka},
+  keywords = {Message Passing Interface (MPI), Survey}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ahori-IPSJ-2019-July
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseahori-IPSJ-2019-JulyBibtex" aria-expanded="false" aria-controls="collapseahori-IPSJ-2019-JulyBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseahori-IPSJ-2019-JulyAbstract" aria-expanded="false" aria-controls="collapseahori-IPSJ-2019-JulyAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ahori-IPSJ-2019-July">Hori, Atsushi, George Bosilca, Emmanuel Jeannot, Takahiro Ogura, and Yutaka Ishikawa. 2019. “Is Japanese HPC Another Galapagos? - Interim Report of MPI International Survey -.” In <i>SIGHPC</i>. Information Processing Society of Japan.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseahori-IPSJ-2019-JulyBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{ahori-IPSJ-2019-July,
+  author = {Hori, Atsushi and Bosilca, George and Jeannot, Emmanuel and Ogura, Takahiro and Ishikawa, Yutaka},
+  title = {{Is Japanese HPC another Galapagos? - Interim Report of MPI International Survey -}},
+  journal = {SIGHPC},
+  issn = {},
+  publisher = {Information Processing Society of Japan},
+  year = {2019},
+  month = jul,
+  number = {34}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

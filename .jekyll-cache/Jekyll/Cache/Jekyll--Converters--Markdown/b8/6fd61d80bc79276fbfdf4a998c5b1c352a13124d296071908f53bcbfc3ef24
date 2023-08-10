@@ -1,0 +1,88 @@
+I"V<h2 id="research-topic-and-goals">Research topic and goals</h2>
+<p>Data size and throughput is becoming one of the main limiting factors of extreme-scale simulations and experiments. With current system computational capabilities, extreme-scale scientific simulations and experiments can generate much more data than can be stored at a single site. Often a single site cannot simultaneously satisfy both computing and data analytics requirements. Finally, extreme-scale simulations and experiments tend to push toward a model where a group runs simulations that are then analyzed by many other groups (the one-simulation, many-groups model).</p>
+
+<p>The extreme-scale example considered here is taken from computational cosmology. The science requirements demand running very large simulations, such as N-body runs with trillions of particles. A trillion-particle simulation with the HACC code generates 20 PB of raw data which is is more than petascale systems such as Mira and Blue Waters can store for a single run in their file systems. Moreover, HACC is optimized for Mira, while other systems (BlueWaters, Titan and CORI) offers better data analytics capabilities. This suggests a combined on-demand storage and analytics infrastructure where the simulation is performed on a system (MIRA), the simulation results are sent as soon as they are produced to a storage facility and to other systems for analytics (Blue Waters) and further analytics is done on remote systems (Titan and Cori), using the data pulled from the storage facility.</p>
+
+<h2 id="results-for-20152016">Results for 2015/2016</h2>
+<p>This SC16 experiment we prepare covers several critical elements of the on-demand storage and analytics infrastructure. During the experiment a state-of-the-art cosmology simulation combining high spatial and temporal resolution in a large cosmological volume will be performed on Mira with 29 billion particles. All time snapshots (500) of the simulation (L1 data) will then be transmitted, as they are produced, to the SC16 NCSA Booth using Globus were the data will be stored in a DDN storage system. The goal here is to show 1PB/day communication/storage capability (using 100Gb/s link). The simulation data will also be sent to NCSA (before SC16). The L1 data analytics (producing L2 data) and visualization will be performed on BlueWaters during SC16. The goal here is to stream the L1 data visualization data to the SC16 NCSA booth. The L2 data will be sent from NCSA to the SC16 NCSA booth and stored in the DDN storage system. At least two sites (NERSC and ORNL) will play the role of data analytic centers. They will pull and analyze the L2 data from the DDN storage system and perform specific and different data analytics and visualization. The goal is to demonstrate that L2 data can be used by several cosmology research groups, remotely. The data analysis results will be streamed in ultra-high-resolution using the SAGE2 software to the SC16 NCSA booth on the show floor.</p>
+
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
+<ul>
+  <li>Technical: we successfully deployed the experiment, produced all the simulation snapshots and exercised all aspects of the infrastructure (simulation, analytics, transfer, workflow, vis.).</li>
+  <li>Scientific: the analysis of the data produced during the experiment is on going and results will be published in a cosmology journal.</li>
+</ul>
+
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
+
+<p>A paper presenting the data transfer aspect of the experiment has been accepted and presented at EEE/ACM SC17 Workshop on Innovating the Network for Data Intensive Science (INDIS 2017), Denver, CO, Nov. 2017. An extended version of this paper has been submitted to FGCS.</p>
+
+<h2 id="results-for-20182019">Results for 2018/2019</h2>
+
+<p>The analysis of the data produced by the simulation is not completed yet. Publications on the science aspect of the research are in preparation.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+<p>Weekly meeting since December 2015, until November 2016
+Franck Cappello (ANL) organized the weekly meeting from NCSA.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+<ul>
+  <li>White paper send at BDEC,</li>
+  <li>Presentation of the concept at BDEC,</li>
+  <li>Presentation of the infrastructure on the NCSA booth of SC16,</li>
+  <li>BOF at SC16 on the “On-Demand Data Analytics and Storage for Extreme-Scale Simulations and Experiments”,</li>
+  <li>BOF Report on the experiment: <a href="http://sc16.supercomputing.org/sc-archive/bof/bof_files/bof139s2.pdf">http://sc16.supercomputing.org/sc-archive/bof/bof_files/bof139s2.pdf</a></li>
+  <li>Joint NCSA-ANL announcement of the experiment</li>
+  <li>We discover performance limitation of GridFTP related to the computation of checksums</li>
+  <li>We needed to improve swift to consider external events</li>
+  <li>Presentation of the concept at Enabling Cosmological Resonances Between WFIRST and LSST (<a href="https://conference.ipac.caltech.edu/wfirst_lsst/page/agenda">https://conference.ipac.caltech.edu/wfirst_lsst/page/agenda</a>)</li>
+  <li>Concept will be further investigated and developed as part of Advisory Board for the Tri-Agency Cosmological Simulation (TACS) Task Force (NSF/DOE/NASA)</li>
+</ul>
+
+<p>Publication: <a class="citation" href="#Kettimuthua17">(Kettimuthua et al. 2017)</a></p>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Kettimuthua17
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseKettimuthua17Bibtex" aria-expanded="false" aria-controls="collapseKettimuthua17Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseKettimuthua17Abstract" aria-expanded="false" aria-controls="collapseKettimuthua17Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Kettimuthua17">Kettimuthua, Rajkumar, Zhengchun Liua, David Wheelerd, Ian Fostera, Katrin Heitmanna, and Franck Cappello. 2017. “Transferring a Petabyte in a Day.” In <i>IEEE/ACM SC17 Workshop on Innovating the Network for Data Intensive Science (INDIS 2017)</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseKettimuthua17Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Kettimuthua17,
+  title = {Transferring a Petabyte in a Day},
+  author = {Kettimuthua, Rajkumar and Liua, Zhengchun and Wheelerd, David and Fostera, Ian and Heitmanna, Katrin and Cappello, Franck},
+  booktitle = {IEEE/ACM SC17 Workshop on Innovating the Network for Data Intensive Science (INDIS 2017)},
+  year = {2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="future-plans">Future plans</h2>
+<p>See “Results” section.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"></ol>
+:ET

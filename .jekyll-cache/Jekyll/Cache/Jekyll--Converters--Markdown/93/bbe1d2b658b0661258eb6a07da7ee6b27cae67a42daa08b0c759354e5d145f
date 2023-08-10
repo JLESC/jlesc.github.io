@@ -1,0 +1,378 @@
+I"a<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>The expertise of the collaborators at the two centers AICS and JSC lies in the development of methods for Computational Fluid Dynamics (CFD) simulations on HPC systems.
+Despite the high efficiency of the simulation codes developed within the two groups on the K-computer and the JUQUEEN, respectively, the methods for the computation of the flow and meshing are quite different and have their advantages and disadvantages.
+While the AICS code relies on the Building Cube Method <a class="citation" href="#Ishikawa2011">(Ishikawa, Sasaki, and Nakahashi 2011)</a>, <a class="citation" href="#Onishi2014">(Onishi et al. 2014)</a> to generate the mesh and uses a structured solver with a Finite Difference method, the JSC code solves for the flow variables on hierarchical Cartesian meshes <a class="citation" href="#Lintermann2014">(Lintermann et al. 2014)</a> using a Finite Volume <a class="citation" href="#Hartmann2010">(Hartmann, Meinke, and Schröder 2011)</a>, <a class="citation" href="#Schneiders2016">(Schneiders et al. 2016)</a> or a Lattice-Boltzmann method <a class="citation" href="#Lintermann2013">(Lintermann, Meinke, and Schröder 2013)</a>.
+The aim of the proposed JLESC cooperation is to compare the accuracy and efficiency of the applied methods in the two CFD simulation codes on the two hardware architectures based on predefined benchmark cases.
+Within this scope, porting of the simulation software to both HPC systems, the K-computer and the JUQUEEN, is planned.
+This project will not only help to further develop an understanding for computational methods for large-scale CFD simulations for the next supercomputer generation, but will also characterize the efficiency of the current codes on different hardware architectures.
+That is, by a performance analysis of both codes on both machines drawbacks in current implementations will be exposed and architectural features will be explored for code acceleration.
+Such a cooperation is only possible by bilateral support activities which will lead to a knowledge exchange on the hardware side, in CFD methods, parallelization, and the associated meshing techniques.
+Hence, expertises of the centers in these fields will strongly be enhanced in the course of this project.
+To foster the cooperation, mutual short-time stays of the involved scientists are planned.</p>
+
+<h2 id="results-for-20152016">Results for 2015/2016</h2>
+
+<p>Both parties are about to create accounts on both machines such that the first task, i.e., the porting of the individual codes can be performed:</p>
+
+<ul>
+  <li>accounts have been created on K computer and JUQUEEN</li>
+  <li>AICS code has been ported to JUQUEEN</li>
+  <li>Scalability analysis of the AICS code has been performed on JUQUEEN</li>
+  <li>JSC C++11 code does not compile on K computer using the Fujitsu compiler, error messages will be collected and reported to AICS for compiler improvements</li>
+</ul>
+
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
+
+<ul>
+  <li>Deep knowlegde exchange w.r.t. the computational methods applied by both groups</li>
+  <li>JSC code has been compiled with node-installed GCC on K-computer; validity and performance tests are pending</li>
+  <li>AICS code has been ported to GPUs at JSC GPU Hackathon 2017</li>
+</ul>
+
+<h2 id="results-for-20182019">Results for 2018/2019</h2>
+
+<ul>
+  <li>project has been suspended due to resource limitations</li>
+  <li>joint organization of the mini-symposium “HPC-Based simulations for the wide industrial realm: aerospace, automotive, bio, construction, heavy…” on ECCOMAS ECCM ECFD 2018 in Glasgow, UK (11.06.2018 - 15.06.2018)</li>
+</ul>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<ul>
+  <li>11.06.2018 - 15.06.2018: Meeting of the PIs Makoto Tsubokura, Andreas Lintermann, and the researcher Keiji Onishi (RIKEN) at ECCOMAS ECCM ECFD 2018</li>
+  <li>28.02.2018 - 29.02.2018: Visit of Keiji Onishi (RIKEN) at JSC.</li>
+  <li>06.03.2017 - 10.03.2017: Rahul Bale, Wei-Hsiang Wang, Koji Nishiguchi (all RIKEN) -&gt; Participation GPU Hackathon at JSC Jülich; meeting at JSC</li>
+  <li>28.11.2016 - 02.12.2016: Thomas Schilden (RWTH, JSC) -&gt; Participation Young Researchers Workshop &amp; JLESC Riken</li>
+  <li>26.06.2016 - 29.06.2017: Andreas Lintermann (JSC) -&gt; Participation JLESC meeting Lyon</li>
+  <li>16.06.2016 - 17.06.2016: Keiji Onishi (RIKEN) -&gt; Visit RWTH Aachen University and JSC Jülich; meeting at JSC</li>
+</ul>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+<p>No publications yet.</p>
+
+<ol class="bibliography"></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>After accounts have been created on both machines, both groups will start to port their own codes to the according machines.
+Meanwhile, benchmarking cases for the performance and the accuracy analysis will be defined.
+Subsequently, simulations will be run to test the performance and accuracy.
+Finally, best-practice methods for high-performance CFD simulations will be defined, i.e., the results of the simulations will be evaluated to find optimal numerical methods for future CFD applications.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Schneiders2016
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSchneiders2016Bibtex" aria-expanded="false" aria-controls="collapseSchneiders2016Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSchneiders2016Abstract" aria-expanded="false" aria-controls="collapseSchneiders2016Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Schneiders2016">Schneiders, Lennart, Claudia Günther, Matthias Meinke, and Wolfgang Schröder. 2016. “An Efficient Conservative Cut-Cell Method for Rigid Bodies Interacting with Viscous Compressible Flows.” <i>Journal of Computational Physics</i> 311 (April): 62–86. https://doi.org/10.1016/j.jcp.2016.01.026.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseSchneiders2016Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Schneiders2016,
+  author = {Schneiders, Lennart and G{\"{u}}nther, Claudia and Meinke, Matthias and Schr{\"{o}}der, Wolfgang},
+  doi = {10.1016/j.jcp.2016.01.026},
+  journal = {Journal of Computational Physics},
+  month = apr,
+  pages = {62--86},
+  title = {{An efficient conservative cut-cell method for rigid bodies interacting with viscous compressible flows}},
+  url = {http://linkinghub.elsevier.com/retrieve/pii/S0021999116000346},
+  volume = {311},
+  year = {2016}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseSchneiders2016Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        A Cartesian cut-cell method for viscous flows interacting with freely moving boundaries is presented. The method enables a sharp resolution of the embedded boundaries and strictly conserves mass, momentum, and energy. A new explicit Runge–Kutta scheme (PC-RK) is introduced by which the overall computational time is reduced by a factor of up to 2.5. The new scheme is a predictor–corrector type reformulation of a popular class of Runge–Kutta methods which substantially reduces the computational effort for tracking the moving boundaries and subsequently reinitializing the solver impairing neither stability nor accuracy. The structural motion is computed by an implicit scheme with good stability properties due to a strong-coupling strategy and the conservative discretization of the flow solver at the material interfaces. A new formulation for the treatment of small cut cells is proposed with high accuracy and robustness for arbitrary geometries based on a weighted Taylor-series approach solved via singular-value decomposition. The efficiency and the accuracy of the new method are demonstrated for several three-dimensional cases of laminar and turbulent particulate flow. It is shown that the new method remains fully conservative even for large displacements of the boundaries leading to a fast convergence of the fluid–solid coupling while spurious force oscillations inherent to this class of methods are effectively suppressed. The results substantiate the good stability and accuracy properties of the scheme even on relatively coarse meshes.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Lintermann2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2014Bibtex" aria-expanded="false" aria-controls="collapseLintermann2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2014Abstract" aria-expanded="false" aria-controls="collapseLintermann2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Lintermann2014">Lintermann, Andreas, Stephan Schlimpert, J.H. Grimmen, Claudia Günther, Matthias Meinke, and Wolfgang Schröder. 2014. “Massively Parallel Grid Generation on HPC Systems.” <i>Computer Methods in Applied Mechanics and Engineering</i> 277 (May): 131–53. https://doi.org/10.1016/j.cma.2014.04.009.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLintermann2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Lintermann2014,
+  author = {Lintermann, Andreas and Schlimpert, Stephan and Grimmen, J.H. and G{\"{u}}nther, Claudia and Meinke, Matthias and Schr{\"{o}}der, Wolfgang},
+  doi = {10.1016/j.cma.2014.04.009},
+  journal = {Computer Methods in Applied Mechanics and Engineering},
+  month = may,
+  pages = {131--153},
+  title = {{Massively parallel grid generation on HPC systems}},
+  url = {http://linkinghub.elsevier.com/retrieve/pii/S0045782514001340},
+  volume = {277},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseLintermann2014Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        The automatic grid generation on high performance computers is a challenging task under the restriction of computational power and memory availability. The increasing demand for high grid resolutions to simulate complex flow configurations necessitates parallel grid generation on multicore machines with distributed memory. In this study, a new robust algorithm to automatically generate hierarchical Cartesian meshes on distributed multicore HPC systems with multiple levels of refinement is presented. The number of cells is only restricted by the number of available cores and memory. The algorithm efficiently realizes a computational domain decompositioning for an arbitrary number of cores based on a Hilbert curve. The grids are efficiently stored and accessed via a high capacity parallel I/O method. The efficiency of the approach is demonstrated by considering human nasal cavity and internal combustion engine flow problems.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Onishi2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseOnishi2014Bibtex" aria-expanded="false" aria-controls="collapseOnishi2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseOnishi2014Abstract" aria-expanded="false" aria-controls="collapseOnishi2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Onishi2014">Onishi, Keiji, Makoto Tsubokura, Shigeru Obayashi, and Kazuhiro Nakahashi. 2014. “Vehicle Aerodynamics Simulation for the Next Generation on the K Computer: Part 2 Use of Dirty CAD Data with Modified Cartesian Grid Approach.” <i>SAE International Journal of Passenger Cars - Mechanical Systems</i> 7 (2): 2014–01–0580. https://doi.org/10.4271/2014-01-0580.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseOnishi2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Onishi2014,
+  author = {Onishi, Keiji and Tsubokura, Makoto and Obayashi, Shigeru and Nakahashi, Kazuhiro},
+  doi = {10.4271/2014-01-0580},
+  journal = {SAE International Journal of Passenger Cars - Mechanical Systems},
+  month = apr,
+  number = {2},
+  pages = {2014--01--0580},
+  title = {{Vehicle Aerodynamics Simulation for the Next Generation on the K Computer: Part 2 Use of Dirty CAD Data with Modified Cartesian Grid Approach}},
+  url = {http://www.sae.org/technical/papers/2014-01-0580 http://papers.sae.org/2014-01-0580/},
+  volume = {7},
+  year = {2014}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseOnishi2014Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        The applicability of high-performance computing (HPC) to vehicle aerodynamics is presented using a Cartesian grid approach of computational fluid dynamics. Methodology that allows the user to avoid a large amount of manual work in preparing geometry is indispensable in HPC simulation whereas conventional methodologies require much manual work. The new frame work allowing a solver to treat ‘dirty’ computer-aided-design data directly was developed with a modified immersed boundary method. The efficiency of the calculation of the vehicle aerodynamics using HPC is discussed. The validation case of flow with a high Reynolds number around a sphere is presented. The preparation time for the calculation is approximately 10 minutes. The calculation time for flow computation is approximately one-tenth of that of conventional unstructured code. Results of large eddy simulation with a coarse grid differ greatly from experimental results, but there is an improvement in the prediction of the drag coefficient prediction when using 23 billion cells. A vehicle aerodynamics simulation was conducted using dirty computer-aided-design data and approximately 19 billion cells. The preparation for the calculation can be completed within a couple of hours. The calculation time for flow computation is approximately one-fifth of that of conventional unstructured code. Reasonable flow results around a vehicle were observed, and there is an improvement in the prediction of the drag coefficient prediction when using 19 billion cells. The possibility of the proposed methodology being an innovative scheme in computational fluid dynamics is shown.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Lintermann2013
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2013Bibtex" aria-expanded="false" aria-controls="collapseLintermann2013Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2013Abstract" aria-expanded="false" aria-controls="collapseLintermann2013Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Lintermann2013">Lintermann, Andreas, Matthias Meinke, and Wolfgang Schröder. 2013. “Fluid Mechanics Based Classification of the Respiratory Efficiency of Several Nasal Cavities.” <i>Computers in Biology and Medicine</i> 43 (11): 1833–52. https://doi.org/10.1016/j.compbiomed.2013.09.003.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLintermann2013Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Lintermann2013,
+  author = {Lintermann, Andreas and Meinke, Matthias and Schr{\"{o}}der, Wolfgang},
+  doi = {10.1016/j.compbiomed.2013.09.003},
+  journal = {Computers in Biology and Medicine},
+  keywords = {Heating capability,Lattice Boltzmann,Nasal cavity flows,Respiration capability,Thermal Lattice Boltzmann},
+  month = nov,
+  number = {11},
+  pages = {1833--1852},
+  title = {{Fluid mechanics based classification of the respiratory efficiency of several nasal cavities}},
+  url = {http://linkinghub.elsevier.com/retrieve/pii/S0010482513002540},
+  volume = {43},
+  year = {2013}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseLintermann2013Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        The flow in the human nasal cavity is of great importance to understand rhinologic pathologies like impaired respiration or heating capabilities, a diminished sense of taste and smell, and the presence of dry mucous membranes. To numerically analyze this flow problem a highly efficient and scalable Thermal Lattice-BGK (TLBGK) solver is used, which is very well suited for flows in intricate geometries. The generation of the computational mesh is completely automatic and highly parallelized such that it can be executed efficiently on High Performance Computers (HPC). An evaluation of the functionality of nasal cavities is based on an analysis of pressure drop, secondary flow structures, wall-shear stress distributions, and temperature variations from the nostrils to the pharynx. The results of the flow fields of three completely different nasal cavities allow their classification into ability groups and support the a priori decision process on surgical interventions.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Ishikawa2011
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseIshikawa2011Bibtex" aria-expanded="false" aria-controls="collapseIshikawa2011Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseIshikawa2011Abstract" aria-expanded="false" aria-controls="collapseIshikawa2011Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Ishikawa2011">Ishikawa, Noriyoshi, Disuke Sasaki, and Kazuhiro Nakahashi. 2011. “Large-Scale Distributed Computation Using Building-Cube Method.” In <i>49th AIAA Aerospace Sciences Meeting Including the New Horizons Forum and Aerospace Exposition</i>, 1–11. Reston, Virigina: American Institute of Aeronautics and Astronautics. https://doi.org/10.2514/6.2011-754.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseIshikawa2011Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Ishikawa2011,
+  address = {Reston, Virigina},
+  author = {Ishikawa, Noriyoshi and Sasaki, Disuke and Nakahashi, Kazuhiro},
+  booktitle = {49th AIAA Aerospace Sciences Meeting including the New Horizons Forum and Aerospace Exposition},
+  doi = {10.2514/6.2011-754},
+  month = jan,
+  number = {January},
+  pages = {1--11},
+  publisher = {American Institute of Aeronautics and Astronautics},
+  title = {{Large-scale Distributed Computation Using Building-Cube Method}},
+  url = {http://arc.aiaa.org/doi/abs/10.2514/6.2011-754},
+  year = {2011}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseIshikawa2011Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        This paper describes the development of a new parallel flow solver framework designed for Cartesian mesh with an Octree/Quadtree data structure. This framework is applied to a block-structured Cartesian mesh flow solver, the Building Cube Method to be parallelized on distributed-memory processors. In this approach, Hilbert curve, one of Space-filling Curve, is employed for domain decomposition to prevent discrete computational domains on a processor. The present approach demonstrated a scaled parallel efficiency on vector- parallel supercomputers of NEC SX-9.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Hartmann2010
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHartmann2010Bibtex" aria-expanded="false" aria-controls="collapseHartmann2010Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHartmann2010Abstract" aria-expanded="false" aria-controls="collapseHartmann2010Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Hartmann2010">Hartmann, Daniel, Matthias Meinke, and Wolfgang Schröder. 2011. “A Strictly Conservative Cartesian Cut-Cell Method for Compressible Viscous Flows on Adaptive Grids.” <i>Computer Methods in Applied Mechanics and Engineering</i> 200 (9-12): 1038–52. https://doi.org/10.1016/j.cma.2010.05.015.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHartmann2010Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Hartmann2010,
+  author = {Hartmann, Daniel and Meinke, Matthias and Schr{\"{o}}der, Wolfgang},
+  doi = {10.1016/j.cma.2010.05.015},
+  journal = {Computer Methods in Applied Mechanics and Engineering},
+  keywords = {Cartesian grid Cartesian grid methods,compressible Navier-Stokes equations,cut-cell method,finite-volume method,immersed boundary methods},
+  number = {9-12},
+  pages = {1038--1052},
+  title = {{A strictly conservative Cartesian cut-cell method for compressible viscous flows on adaptive grids}},
+  url = {http://www.sciencedirect.com/science/article/pii/S0045782510001647},
+  volume = {200},
+  year = {2011}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseHartmann2010Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        A Cartesian cut-cell method which allows the solution of two- and three-dimensional viscous, compressible flow problems on arbitrarily refined graded meshes is presented. The finite-volume method uses cut cells at the boundaries rendering the method strictly conservative in terms of mass, momentum, and energy. For threedimensional compressible flows, such a method has not been presented in the literature, yet. Since ghost cells can be arbitrarily positioned in space the proposed method is flexible in terms of shape and size of embedded boundaries. A key issue for Cartesian grid methods is the discretization at mesh interfaces and boundaries and the specification of boundary conditions. A linear least-squares method is used to reconstruct the cell center gradients in irregular regions of the mesh, which are used to formulate the surface ux. Expressions to impose boundary conditions and to compute the viscous terms on the boundary are derived. The overall discretization is shown to be second-order accurate in L1. The accuracy of the method and the quality of the solutions are demonstrated in several two- and three-dimensional test cases of steady and unsteady flows.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+:ET

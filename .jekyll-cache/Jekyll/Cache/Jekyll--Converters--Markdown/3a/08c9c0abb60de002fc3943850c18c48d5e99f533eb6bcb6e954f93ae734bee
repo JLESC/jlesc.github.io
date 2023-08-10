@@ -1,0 +1,391 @@
+I"�L<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>As parallel file systems reach their limits in HPC, an alternative approach is emerging:
+the creation of data services tailored to the needs of the application that uses it
+<a class="citation" href="#Dorier2018Methodology">(Dorier et al. 2018)</a>.
+In order to do so, a set of building blocks for data services (e.g. membership service, key-value store, …)
+has been developed as part of the Mochi project (https://www.mcs.anl.gov/research/projects/mochi/).
+In particular, some applications (typically workflows) have requirements in number of machines
+that vary over time, thus being able to rescale efficiently can be needed for data services
+co-deployed with malleable applications. Preliminary work by Cheriere et al. showed that
+the reconfiguration could be done in a short time when the amount of data per node is balanced.
+Our work in this context is to investigate the use of rescaling of distributed storage systems in HPC environments.</p>
+
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
+
+<p>We modelled the duration of the commision and decommission operations, for which we obtained
+theoretical lower bounds. Then we considered HDFS as a use case and we show that our model
+can explain the measured commission and decommission times. The existing decommission mechanism
+of HDFS is good when the network is the bottleneck, but could be accelerated by up to a factor 3
+when the storage is the limiting factor. We also show that commission in HDFS can largely be improved.
+The results on theoretical decommission time have been published at the IEEE BigData 2017
+conference <a class="citation" href="#Cheriere2017How">(Cheriere and Antoniu 2017)</a>. Results for the commission time have later
+been added and an extended paper has been submitted and is under review for Elsevier JPDC.
+These additional results are independently available as a research report <a class="citation" href="#Cheriere2018LowerCommission">(Cheriere, Dorier, and Antoniu 2018)</a>.</p>
+
+<h2 id="results-for-20182019">Results for 2018/2019</h2>
+
+<p>We introduced Pufferbench <a class="citation" href="#Cheriere2018Pufferbench">(Cheriere, Dorier, and Antoniu 2018)</a>, a benchmark for evaluating
+how fast one can scale up and down a distributed storage system on a given infrastructure and, thereby,
+how viably can one implement storage malleability on it. Besides, it can serve to quickly prototype and evaluate mechanisms
+for malleability in existing distributed storage systems. We validate Pufferbench against theoretical
+lower bounds for commission and decommission: it can achieve performance within 16% of them.
+We use Pufferbench to evaluate in practice these operations in HDFS: commission in HDFS could be
+accelerated by as much as 14 times! Our results show that: (1) the lower bounds for commission
+and decommission times we previously established are sound and can be approached in practice;
+(2) HDFS could handle these operations much more efficiently; most importantly,
+(3) malleability in distributed storage systems is viable and should be further leveraged
+for Big Data applications.</p>
+
+<p>We also studied from a theoretical point of view the potential opportunities provided by
+relaxing fault tolerance during decommission operations. Results of this work are available
+in a research report <a class="citation" href="#Cheriere2018LowerRelaxed">(Cheriere, Dorier, and Antoniu 2018)</a> and have been submitted to IEEE/ACM CCgrid 2019.</p>
+
+<p>Furthermore, we focused on understanding the requirements of distributed storage systems
+co-deployed with HPC-applications, designed a rescaling mechanism able to meet these
+requirements, and implemented it.</p>
+
+<h2 id="results-for-20192020">Results for 2019/2020</h2>
+
+<p>We developed PufferScale, a rescaling scheduler that aims to be integrated within Mochi
+microservices <a class="citation" href="#Dorier2018Methodology">(Dorier et al. 2018)</a>.
+Pufferscale was demonstrated with a set of microservice representative of a storage
+system designed for High Energy Physics applications, and evaluated on Grid’5000.
+This work led to a paper accepted for publication at IEEE/ACM CCgrid 2020 <a class="citation" href="#Cheriere2020Pufferscale">(Cheriere et al. 2020)</a>.</p>
+
+<p>Additionally, theoretical work on quantifying rescaling performance was accepted for
+publication in the Elsevier JPDC journal in early 2020 <a class="citation" href="#Cheriere2020HowFast">(Cheriere, Dorier, and Antoniu 2020)</a>.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<p>Nathanael Cheriere visited Argonne National laboratory from September to December 2018
+(2.5 months) and developed Pufferscale, a rescaling scheduler that keeps the load balanced
+across the nodes, while ensuring the speed and stability of the rescaling operations.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2020Pufferscale
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2020PufferscaleBibtex" aria-expanded="false" aria-controls="collapseCheriere2020PufferscaleBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCheriere2020PufferscaleAbstract" aria-expanded="false" aria-controls="collapseCheriere2020PufferscaleAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2020Pufferscale">Cheriere, Nathanael, Matthieu Dorier, Gabriel Antiniu, Stefan M Wild, Sven Leyffer, and Robert Ross. 2020. “Pufferscale: Rescaling HPC Data Services for High Energy Physics Applications.” In <i>Proceedings of the 20th IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (Ccgrid)</i>. CCgrid ’20. IEEE/ACM.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2020PufferscaleBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Cheriere2020Pufferscale,
+  author = {Cheriere, Nathanael and Dorier, Matthieu and Antiniu, Gabriel and Wild, Stefan M and Leyffer, Sven and Ross, Robert},
+  title = {Pufferscale: Rescaling HPC Data Services for High Energy Physics Applications},
+  booktitle = {Proceedings of the 20th IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (Ccgrid)},
+  series = {CCgrid '20},
+  year = {2020},
+  location = {Melbourne, Australia},
+  pages = {},
+  numpages = {},
+  url = {},
+  doi = {},
+  acmid = {},
+  publisher = {IEEE/ACM},
+  keywords = {Distributed Storage System, Elasticity, Rescaling, Load balancing, High Energy Physics},
+  pdf = {}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2020HowFast
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2020HowFastBibtex" aria-expanded="false" aria-controls="collapseCheriere2020HowFastBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCheriere2020HowFastAbstract" aria-expanded="false" aria-controls="collapseCheriere2020HowFastAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2020HowFast">Cheriere, Nathanael, Matthieu Dorier, and Gabriel Antoniu. 2020. “How Fast Can One Resize a Distributed File System?” <i>Journal of Parallel and Distributed Computing</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2020HowFastBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Cheriere2020HowFast,
+  title = {How Fast Can One Resize a Distributed File System?},
+  author = {Cheriere, Nathanael and Dorier, Matthieu and Antoniu, Gabriel},
+  journal = {Journal of Parallel and Distributed Computing},
+  volume = {},
+  pages = {},
+  year = {2020},
+  pdf = {},
+  url = {}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2018LowerCommission
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2018LowerCommissionBibtex" aria-expanded="false" aria-controls="collapseCheriere2018LowerCommissionBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCheriere2018LowerCommissionAbstract" aria-expanded="false" aria-controls="collapseCheriere2018LowerCommissionAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2018LowerCommission">Cheriere, Nathanaël, Matthieu Dorier, and Gabriel Antoniu. 2018. “A Lower Bound for the Commission Times in Replication-Based Distributed Storage Systems.” Research Report RR-9186. Inria Rennes - Bretagne Atlantique. <a href="https://hal.archives-ouvertes.fr/hal-01817638" target="_blank">https://hal.archives-ouvertes.fr/hal-01817638</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2018LowerCommissionBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@techreport{Cheriere2018LowerCommission,
+  title = {{A Lower Bound for the Commission Times in Replication-Based Distributed Storage Systems}},
+  author = {Cheriere, Nathana{\"e}l and Dorier, Matthieu and Antoniu, Gabriel},
+  url = {https://hal.archives-ouvertes.fr/hal-01817638},
+  type = {Research Report},
+  number = {RR-9186},
+  pages = {1-26},
+  institution = {{Inria Rennes - Bretagne Atlantique}},
+  year = {2018},
+  month = jun,
+  keywords = {Commission ; Elastic Storage ; Distributed File System ; Malleable File System ; Lower Bound},
+  pdf = {https://hal.archives-ouvertes.fr/hal-01817638/file/RR-9186.pdf},
+  hal_id = {hal-01817638},
+  hal_version = {v2}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2018Pufferbench
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2018PufferbenchBibtex" aria-expanded="false" aria-controls="collapseCheriere2018PufferbenchBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCheriere2018PufferbenchAbstract" aria-expanded="false" aria-controls="collapseCheriere2018PufferbenchAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2018Pufferbench">———. 2018. “Pufferbench: Evaluating and Optimizing Malleability of Distributed Storage.” In <i>PDSW-DISCS 2018: 3rd Joint International Workshop on Parallel Data Storage &amp; Data Intensive Scalable Computing Systems</i>, 1–10. Dallas, United States. <a href="https://hal.archives-ouvertes.fr/hal-01892713" target="_blank">https://hal.archives-ouvertes.fr/hal-01892713</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2018PufferbenchBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Cheriere2018Pufferbench,
+  title = {{Pufferbench: Evaluating and Optimizing Malleability of Distributed Storage}},
+  author = {Cheriere, Nathana{\"e}l and Dorier, Matthieu and Antoniu, Gabriel},
+  url = {https://hal.archives-ouvertes.fr/hal-01892713},
+  booktitle = {{PDSW-DISCS 2018: 3rd Joint International workshop on Parallel Data Storage \&amp; Data Intensive Scalable computing Systems}},
+  address = {Dallas, United States},
+  pages = {1-10},
+  year = {2018},
+  month = nov,
+  keywords = {Distributed Storage System Malleability ; Benchmark ; Pufferbench},
+  pdf = {https://hal.archives-ouvertes.fr/hal-01892713/file/Paper.pdf},
+  hal_id = {hal-01892713},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2018LowerRelaxed
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2018LowerRelaxedBibtex" aria-expanded="false" aria-controls="collapseCheriere2018LowerRelaxedBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCheriere2018LowerRelaxedAbstract" aria-expanded="false" aria-controls="collapseCheriere2018LowerRelaxedAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2018LowerRelaxed">———. 2018. “Lower Bounds for the Duration of Decommission Operations with Relaxed Fault Tolerance in Replication-Based Distributed Storage Systems.” Research Report RR-9229. Inria Rennes - Bretagne Atlantique. <a href="https://hal.archives-ouvertes.fr/hal-01943964" target="_blank">https://hal.archives-ouvertes.fr/hal-01943964</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2018LowerRelaxedBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@techreport{Cheriere2018LowerRelaxed,
+  title = {{Lower Bounds for the Duration of Decommission Operations with Relaxed Fault Tolerance in Replication-based Distributed Storage Systems}},
+  author = {Cheriere, Nathana{\"e}l and Dorier, Matthieu and Antoniu, Gabriel},
+  url = {https://hal.archives-ouvertes.fr/hal-01943964},
+  type = {Research Report},
+  number = {RR-9229},
+  pages = {1-28},
+  institution = {{Inria Rennes - Bretagne Atlantique}},
+  year = {2018},
+  month = dec,
+  keywords = {Distributed Storage Systems ; Malleable Storage ; Fault Tolerance ; Elastic Storage ; Syst{\`e}me de stockage distribu{\'e} ; Stockage {\'e}lastique ; Stockage mall{\'e}able ; D{\'e}commission ; Tol{\'e}rance aux pannes},
+  pdf = {https://hal.archives-ouvertes.fr/hal-01943964/file/Report.pdf},
+  hal_id = {hal-01943964},
+  hal_version = {v2}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Cheriere2017How
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriere2017HowBibtex" aria-expanded="false" aria-controls="collapseCheriere2017HowBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCheriere2017HowAbstract" aria-expanded="false" aria-controls="collapseCheriere2017HowAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Cheriere2017How">Cheriere, Nathanaël, and Gabriel Antoniu. 2017. “How Fast Can One Scale Down a Distributed File System?” In <i>BigData</i>. Boston, United States. https://doi.org/10.1109/BigData.2017.8257922.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriere2017HowBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Cheriere2017How,
+  title = {{How Fast Can One Scale Down a Distributed File System?}},
+  author = {Cheriere, Nathana{\"e}l and Antoniu, Gabriel},
+  url = {https://hal.archives-ouvertes.fr/hal-01644928},
+  booktitle = {{BigData}},
+  address = {Boston, United States},
+  year = {2017},
+  month = dec,
+  doi = {10.1109/BigData.2017.8257922},
+  keywords = {Decommission ; Model ; Malleable File System ; Distributed File System ; Elastic Storage},
+  pdf = {https://hal.archives-ouvertes.fr/hal-01644928/file/ModelingDecommision.pdf},
+  hal_id = {hal-01644928},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>We intend to explore how transient storage systems can be leveraged to support elastic in situ analytics.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Dorier2018Methodology
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDorier2018MethodologyBibtex" aria-expanded="false" aria-controls="collapseDorier2018MethodologyBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseDorier2018MethodologyAbstract" aria-expanded="false" aria-controls="collapseDorier2018MethodologyAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Dorier2018Methodology">Dorier, Matthieu, Philip Carns, Kevin Harms, Robert Latham, Robert Ross, Shane Snyder, Justin Wozniak, et al. 2018. “Methodology for the Rapid Development of Scalable HPC Data Services.” Workshop. In <i>Proceedings of the PDSW-DISC 2018 Workshop (SC18)</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseDorier2018MethodologyBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Dorier2018Methodology,
+  title = {{Methodology for the Rapid Development of Scalable HPC Data Services}},
+  author = {Dorier, Matthieu and Carns, Philip and Harms, Kevin and Latham, Robert and Ross, Robert and Snyder, Shane and Wozniak, Justin and Gutierrez, Samuel and Robey, Bob and Settlemyer, Brad and Shipman, Galen and Soumagne, Jerome and Kowalkowski, James and Paterno, Marc and Sehrish, Saba},
+  booktitle = {{Proceedings of the PDSW-DISC 2018 workshop (SC18)}},
+  year = {2018},
+  type = {workshop},
+  url = {},
+  pdf = {}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

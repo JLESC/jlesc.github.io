@@ -1,26 +1,63 @@
-This is the source repository for the JLESC website. 
+# Jekyll Advance Pro Theme
 
-### What?
-The [JLESC website](https://jlesc.github.io) is a set of static HTML5 pages generated with a tool written in [Ruby](https://www.ruby-lang.org/en/) called [Jekyll](https://jekyllrb.com).
+Jekyll Advance is a premium, multi-purpose Jekyll theme. It has 5 content-types for archetypical SMB and marketing websites. A modern semi-flat visual design with customisable hero images and full-width sections.
 
-### How?
-To add or modify the content of specific parts of the website, only a few plain text files written with the [Markdown](https://en.wikipedia.org/wiki/Markdown) markup language have to be edited.
+[Live Demo](https://jekyll-advance.netlify.app/) |
+[Live Docs](https://www.zerostatic.io/docs/jekyll-advance/v2.0/)
 
-There is one general rule for getting into editing:
+![Jekyll Advance Theme screenshot](https://www.zerostatic.io/theme/jekyll-advance/jekyll-advance-screenshot.png)
 
-> [Read the source, Luke!](http://blog.codinghorror.com/learn-to-read-the-source-luke/)
+## Installing Jekll
 
-It all comes down to this: create a pull request and wait for a maintainer to approve, that is:
+Make sure you have Ruby & Jekyll installed - For a step-by-step guide, read Jekyll docs [installation](https://jekyllrb.com/docs/installation/)
 
-1. Fork and clone the repository  
-2. Add new or correct and extend existing content  
-3. Push your changes to your fork and open a pull request.  
+## Install Theme
 
-There is also a comprehensive guide from GitHub on [sending pull requests](https://help.github.com/articles/using-pull-requests).
-Note that you can [edit](https://help.github.com/articles/editing-files-in-your-repository) or even [create](https://help.github.com/articles/creating-new-files/) files directly online, too!
+Extract the theme .zip file to your local computer. Navigate to the project root (it contains the README.md)
 
-Please read https://github.com/JLESC/jlesc.github.io/wiki for much more and much more detailed instructions!
+Run `bundle install` to install gems.
 
-## Local Development
+Then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
 
-`docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:3.2.2 bash -c "bundle config set --local path '/usr/src/app/vendor' && bundle install && bundle exec jekyll serve --livereload"`
+To build the Jekyll site run `bundle exec jekyll build`
+
+## Deploy
+
+### Netlify
+
+This theme is pre-configured to setup using Netlify's default settings for Jekyll.
+
+If you experience bundle install issues during the Netlify deployment, deleting the Gemfile.lock can sometimes help.
+
+### Github pages
+
+Jekyll Advance Pro is tested to work on Github pages.
+
+#### Configure Github Pages
+
+Github has a great guide on how to setup github pages - https://pages.github.com/
+
+#### Update baseurl
+
+If you are creating a Github pages "Project site" then your site will be in a sub-folder ie `http://username.github.io/repository`
+
+You will need to update the `baseurl` in the `_config.yml` for the asset paths to work correctly.
+
+```
+# _config.yml
+baseurl: '/jekyll-advance-pro' # This should be the name of your repo!
+```
+
+## Credits
+
+This theme uses open-source libraries and assets.
+
+### Font Awesome 5 Free
+
+- **Project:** https://fontawesome.com/
+- **License:** https://fontawesome.com/license/free
+
+### Demo content Images by Unsplash
+
+- **Unsplash** https://unsplash.com/
+- **License** https://unsplash.com/license

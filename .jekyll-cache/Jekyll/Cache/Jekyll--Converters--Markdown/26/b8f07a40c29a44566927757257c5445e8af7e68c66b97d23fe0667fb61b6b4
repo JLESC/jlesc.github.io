@@ -1,0 +1,155 @@
+I"�<h2 id="research-topic-and-goals">Research topic and goals</h2>
+<p>Electrochemical Double Layer Capacitors (EDLCs) have garnered significant
+interest due to their potential applications in novel energy storage devices.
+At the Maison de la Simulation, software is currently being developed that can
+accurately simulate these systems at constant electrostatic potential over long
+time scales (see, for example, the work of Reed et al.
+<a class="citation" href="#ReedEtAl2007">(Reed, Lanning, and Madden 2007)</a>
+for details of the computational techniques involved). By far the most expensive
+part of these simulations is the solving of a linear system that represents the
+interactions between the electrodes and electrolyte ions. Currently, this
+system is solved using dense linear algebra routines, however these routines
+scale cubically with the size of the system, which poses severe limitations on
+the maximum system size and time scales that can be treated.</p>
+
+<p>One alternative would be to use sparse matrix techniques. However, while sparse
+linear solvers reduce the scaling costs, the need to solve a large linear
+system at each iteration would impose a large cost and limit the length of
+simulations that can be practically performed. Recently, at RIKEN a new library
+called <a href="http://william-dawson.github.io/NTPoly">NTPoly</a>
+<a class="citation" href="#DawsNaka2017">(Dawson and Nakajima 2017)</a>
+has been developed that can compute the full inverse of sparse
+matrices in linear time. This library would allow the matrix inverse to be
+precomputed, allowing for fast iteration times and thus long simulations. For
+this project, we will investigate the properties of the matrices produced in
+these simulations, and determine if the techniques used in NTPoly are
+applicable.</p>
+
+<p>Goal Summary:</p>
+
+<ul>
+  <li>Develop a set of benchmark Ewald matrices using the software being developed
+at the Maison de la Simulation.</li>
+  <li>Create a benchmark program based on NTPoly that can be used to assess the
+accuracy and performance of NTPoly’s sparse matrix techniques.</li>
+  <li>Compile a report detailing the feasibility and potential benefits of
+integrating NTPoly or NTPoly’s techniques into the software being developed
+at the Maison de la Simulation.</li>
+</ul>
+
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
+<ul>
+  <li>Development of a program that can be used to test the accuracy and efficiency
+of NTPoly when applied to Ewald matrices.</li>
+  <li>Initial evaluation of the input parameters for applying NTPoly to Ewald
+matrices.</li>
+</ul>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+<p>None yet.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+<p>None yet.</p>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>Currently we have only investigated medium sized matrices which could be
+generated in serial using the software developed at the Maison de la
+Simulation. In the next year, we will take advantage of a parallelized version
+to generate larger matrices to investigate. We will also explore the use
+of the other matrix functions implemented in NTPoly for improving the solver.</p>
+
+<!--
+
+
+
+
+
+-->
+
+<ol class="bibliography"></ol>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          DawsNaka2017
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDawsNaka2017Bibtex" aria-expanded="false" aria-controls="collapseDawsNaka2017Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseDawsNaka2017Abstract" aria-expanded="false" aria-controls="collapseDawsNaka2017Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="DawsNaka2017">Dawson, William, and Takahito Nakajima. 2017. “Massively Parallel Sparse Matrix Function Calculations with NTPoly.” <i>Computer Physics Communications</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseDawsNaka2017Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{DawsNaka2017,
+  author = {Dawson, William and Nakajima, Takahito},
+  journal = {Computer Physics Communications},
+  publisher = {Elsevier},
+  title = {Massively parallel sparse matrix function calculations with NTPoly},
+  year = {2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ReedEtAl2007
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseReedEtAl2007Bibtex" aria-expanded="false" aria-controls="collapseReedEtAl2007Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseReedEtAl2007Abstract" aria-expanded="false" aria-controls="collapseReedEtAl2007Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ReedEtAl2007">Reed, Stewart K, Oliver J Lanning, and Paul A Madden. 2007. “Electrochemical Interface between an Ionic Liquid and a Model Metallic Electrode.” <i>The Journal of Chemical Physics</i> 126 (8): 084704.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseReedEtAl2007Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{ReedEtAl2007,
+  author = {Reed, Stewart K and Lanning, Oliver J and Madden, Paul A},
+  journal = {The Journal of chemical physics},
+  number = {8},
+  pages = {084704},
+  publisher = {AIP},
+  title = {Electrochemical interface between an ionic liquid and a model metallic electrode},
+  volume = {126},
+  year = {2007}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

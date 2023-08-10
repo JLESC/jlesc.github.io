@@ -1,0 +1,15 @@
+<div class="upcoming-events bg-base-bg-2 mt-2 py-3">
+  <div class="container">
+    <h2>Upcoming Events</h2>
+    {% for event in site.events_upcoming %}
+    <div>
+      {% include theme/cards/card-posts.html
+      title=event.title
+      date=event.event_start
+      url=event.event_short_url
+      style="column"
+      %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

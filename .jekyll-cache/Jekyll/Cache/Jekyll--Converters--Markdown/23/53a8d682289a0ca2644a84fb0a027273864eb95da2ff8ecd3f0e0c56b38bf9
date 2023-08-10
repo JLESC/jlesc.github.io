@@ -1,0 +1,359 @@
+I"T<h2 id="research-topic-and-goals">Research topic and goals</h2>
+<p>The aim of this project is to improve Chameleon (ANL) and
+Grid’5000 (Inria) testbeds, in particular with respect to interoperability and interconnection.</p>
+
+<p>Chameleon and Grid’5000 testbeds have proven their relevance to conduct
+experiments involving large scale distributed computing systems. However, those
+platforms does not share much for experiments design and setup, and it
+is difficult for their users to move from one platform to another or to
+perform cross-platform deployment.</p>
+
+<p>This project tries to improve this situation by developing bridges between
+each platform. First, it will extend existing software used in each testbed to
+enable portability of operating system images between them: users
+will be able to deploy their Chameleon appliances on Grid’5000 nodes and
+vice versa. As a second step, the project will explore existing solutions for
+efficient deployment of an Openstack-based Cloud, that would work on both
+Chameleon and Grid’5000. A document presenting challenges to address to
+overcome the differences between these platforms will also be produced.
+We will also test an advanced tool for conducting scientific evaluations of OpenStack.</p>
+
+<p>Overall the project is a step forward better usability for users of both
+testbeds, but also for their managers to share experience and best practices.</p>
+
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
+
+<h3 id="image-portability-between-chamelon-and-grid5000">Image portability between Chamelon and Grid’5000</h3>
+
+<p>To enable images portability between Chameleon and Grid’5000 platforms (first project’s goal), two tools have been produced:</p>
+
+<ul>
+  <li><a href="https://github.com/dloup/g5k2CC">g5k2CC</a>: Convert Grid’5000 image to Chameleon</li>
+  <li><a href="https://github.com/dloup/CC2G5K">CC2G5K</a>: Convert Chameleon image to Grid’5000</li>
+</ul>
+
+<p>When a user converts a Grid’5000 image to a Chameleon image, the image format is first converted from Grid’5000 to Chameleon ones. Then the configuration needed to run on Chameleon infrastructure is added (e.g., cloud-init is installed with Chameleon configuration file). This adds virtual machine contextualization ability from Chameleon backend.</p>
+
+<h3 id="a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000">A first step toward the deployment of OpenStack on Chameleon and Grid’5000</h3>
+
+<p>The second goal of the project is to study Openstack deployment tool that would work over both Chameleon and Grid’5000.
+Chameleon’s current solution is based on DevStack. Grid’5000 has two different solutions: <a href="https://enos.readthedocs.io/en/latest/">Enos</a> which is based on OpenStack’s <a href="https://wiki.openstack.org/wiki/Kolla">Kolla</a> containers and <a href="https://github.com/grid5000/xp5k-openstack">xp5k-openstack</a> which uses Puppet recipes also provided by OpenStack. As Chameleon solution is longer to deploy, our goal was to try porting a tool used in Grid’5000. Enos team already started porting Enos on Chameleon, so we focused on the other solution, so they can be compared later.</p>
+
+<p>Based on what is done on Grid’5000 with Puppet, we wrote a Heat template to deploy Openstack on Chameleon with a custom number of compute nodes. Once given this template, the Heat orchestrator will install the operating system and software on nodes, bootstrap a puppet server on one of the nodes and Puppet agents on the others to execute Puppet recipes that will install and configure an OpenStack controller and several compute nodes. The overall deployment time is approximately 20 minutes. A <a href="https://docs.google.com/spreadsheets/d/1emHefWvhkO7BJwQkvXLgaIKJ64NxCLnbtajoOqrpXBk/edit?usp=sharing">document</a> is available to compare the performances of the different solutions showing that Puppet-based method is faster than the DevStack one, but it might also be harder to maintain. A second <a href="https://docs.google.com/document/d/1PwgjST8I7xgeer75_0Xk7AQwlmpNGKvoBhEYYn4IhFI/edit?usp=sharing">document</a> was written to give more details about how the different solutions work.</p>
+
+<p>The repository that contains the Heat templates to use on Chameleon to run Openstack Liberty using the Puppet approach is available at <a href="https://github.com/dloup/CC_Openstack">https://github.com/dloup/CC_Openstack</a></p>
+
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
+
+<h3 id="toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack">Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack</h3>
+
+<p>OpenStack has become the de-facto solution to operate compute, network and storage resources in public and private clouds. However, developers and scientists are facing challenges when it comes to deploy and benchmark such a complex software stack.
+To address this problem, we developed Enos, an integrated framework that relies on container technologies for deploying and evaluating OpenStack on any testbed. Enos allows researchers to easily express different configurations, enabling fine-grained investigations of OpenStack services. Enos collects performance metrics at runtime and stores them for post-mortem analysis and sharing.
+The relevance of the <a href="http://enos.readthedocs.io/en/stable/">Enos</a> approach to reproducible research was illustrated by evaluating different OpenStack scenarios on the Grid’5000 testbed in 2016 as published at CCGRID <a class="citation" href="#CCGRID17Enos">(Cherrueau et al. 2017)</a> and also presented at the <a href="https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale">OpenStack summit in Barcelona</a>.</p>
+
+<p>Building on this success, in 2017, we extended the Enos framework to achieve performance experiments while doing traffic shaping.
+Our goal was to offer the opportunity to researchers to evaluate the impact of WAN communications on OpenStack.
+Latency is  a critical requirement for Internet Of Things and NFV/SDN applications that favors a more distributed Cloud Computing model deployed at the Edge.
+This model does not cope with the traditional vision that has been driving the development of OpenStack. Although some efforts such as multiple regions, federations, … may allow operators to administrate these new infrastructures, there are no studies that evaluate how OpenStack will behave in such a massively distributed context.
+To illustrate the interest of such extensions, we conducted additional experiments over the Grid’5000 and the Chameleon testbed as shown at the <a href="https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide">Boston OpenStack summit</a>. The port of Enos on top of Chameleon consisted in <a href="http://enos.readthedocs.io/en/stable/provider/index.html">developing a new provider</a> as presented in the Sydney OpenStack summit.</p>
+
+<h2 id="results-for-20182019">Results for 2018/2019</h2>
+
+<p>Lucas Nussbaum (Université de Lorraine, France) and Kate Keahey (University of Chicago, USA) partnered on the organization of two sessions at the third Global Experimentation for Future Internet <a href="http://indico.rnp.br/conferenceDisplay.py?confId=260">(GEFI 2018)</a> workshop that was held October 25-26, 2018 in Tokyo, Japan and hosted by the University of Tokyo. The objective of this workshops was to create a forum for the exchange of information and best practices among an international community of developers and operators of testbeds and related research infrastructure, as well as the researchers who make use of these facilities. Historically, these interactions were highly effective in building successful collaborations and coordinating activities among participating research infrastructures and this was thus a good forum to continue, and in some cases, broaden our collaboration.</p>
+
+<p>The sessions focused on current topics in both testbeds: (1) modern networking technologies, a central concern when performing experiments in the distributed systems context, and (2) reproducibility in experimentation (together with Violet Syrotiuk).  The sessions led to the discussion of current topics. Specifically, for networking the discussion focused on programmability and isolation, emulation technologies, as well as emergent use cases such interactions with IoT, and support for Big Data/AI scenarios. For reproducibility, the discussions focused on tools and services, data management practices, and lessons learned.</p>
+
+<p>The workshop produced a report co-authored by the participants <a class="citation" href="#BermanEtAl">(“Report of the Third Global Experimentation for Future Internet (GEFI 2018) Workshop” 2018)</a> that is currently in the process of preparation for a publication on current topics in testbed design.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+<p>David Loup was at Argonne National Laboratory from 3rd March to 20th April 2017 to work on this project.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+<p>This project has proposed tools for operating system image portability between Chameleon and Grid’5000 and a new (faster) method to deploy an Openstack infrastructure on Chameleon, in particular with the <a href="https://github.com/BeyondTheClouds/enos">Enos</a> framework.
+This makes it easier for users to deploy the same environment on Grid’5000 and Chameleon testbeds, easing experiments involving both platforms.
+The joint presentation at Boston OpenStack summit is avaible <a href="https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide">online</a>.</p>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BermanEtAl
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBermanEtAlBibtex" aria-expanded="false" aria-controls="collapseBermanEtAlBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBermanEtAlAbstract" aria-expanded="false" aria-controls="collapseBermanEtAlAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BermanEtAl">“Report of the Third Global Experimentation for Future Internet (GEFI 2018) Workshop.” 2018. Tokyo, Japan. <a href="http://indico.rnp.br/conferenceDisplay.py?confId=260" target="_blank">http://indico.rnp.br/conferenceDisplay.py?confId=260</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBermanEtAlBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{BermanEtAl,
+  title = {Report of the Third Global Experimentation for Future Internet (GEFI 2018) Workshop},
+  author = {},
+  address = {Tokyo, Japan},
+  url = {http://indico.rnp.br/conferenceDisplay.py?confId=260},
+  month = oct,
+  year = {2018}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>A remaining challenge is the data-plane federation of both testbeds, to enable experiments spanning both testbeds in a
+controlled networking environment. We will explore how to achieve that by interconnecting both testbeds to Internet Software Defined eXchange
+points (SDX), which would allow us to provide on-demand Level-2 link stitching, to provide per-experiment overlays.</p>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          g5k2CC
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseg5k2CCBibtex" aria-expanded="false" aria-controls="collapseg5k2CCBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseg5k2CCAbstract" aria-expanded="false" aria-controls="collapseg5k2CCAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="g5k2CC">Loup, David. 2017. “Tool to Convert Grid’5000 Images to Chameleon.” <a href="https://github.com/dloup/g5k2CC" target="_blank">https://github.com/dloup/g5k2CC</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseg5k2CCBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{g5k2CC,
+  title = {Tool to convert Grid'5000 images to Chameleon},
+  author = {Loup, David},
+  url = {https://github.com/dloup/g5k2CC},
+  year = {2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          CC2g5k
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCC2g5kBibtex" aria-expanded="false" aria-controls="collapseCC2g5kBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCC2g5kAbstract" aria-expanded="false" aria-controls="collapseCC2g5kAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="CC2g5k">———. 2017. “Tool to Convert Chameleon Images to Grid’5000.” <a href="https://github.com/dloup/CC2G5K" target="_blank">https://github.com/dloup/CC2G5K</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCC2g5kBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{CC2g5k,
+  title = {Tool to convert Chameleon images to Grid'5000},
+  author = {Loup, David},
+  url = {https://github.com/dloup/CC2G5K},
+  year = {2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Explainations
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseExplainationsBibtex" aria-expanded="false" aria-controls="collapseExplainationsBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseExplainationsAbstract" aria-expanded="false" aria-controls="collapseExplainationsAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Explainations">———. 2017. “How the Differents Studied Methods Works.” <a href="https://docs.google.com/document/d/1PwgjST8I7xgeer75_0Xk7AQwlmpNGKvoBhEYYn4IhFI/edit?usp=sharing" target="_blank">https://docs.google.com/document/d/1PwgjST8I7xgeer75_0Xk7AQwlmpNGKvoBhEYYn4IhFI/edit?usp=sharing</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseExplainationsBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{Explainations,
+  title = {How the differents studied methods works},
+  author = {Loup, David},
+  url = {https://docs.google.com/document/d/1PwgjST8I7xgeer75_0Xk7AQwlmpNGKvoBhEYYn4IhFI/edit?usp=sharing},
+  year = {2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Comparisons
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseComparisonsBibtex" aria-expanded="false" aria-controls="collapseComparisonsBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseComparisonsAbstract" aria-expanded="false" aria-controls="collapseComparisonsAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Comparisons">———. 2017. “Performances Comparison of the Differents Studied Methods.” <a href="https://docs.google.com/spreadsheets/d/1emHefWvhkO7BJwQkvXLgaIKJ64NxCLnbtajoOqrpXBk/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1emHefWvhkO7BJwQkvXLgaIKJ64NxCLnbtajoOqrpXBk/edit?usp=sharing</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseComparisonsBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{Comparisons,
+  title = {Performances comparison of the differents studied methods},
+  author = {Loup, David},
+  url = {https://docs.google.com/spreadsheets/d/1emHefWvhkO7BJwQkvXLgaIKJ64NxCLnbtajoOqrpXBk/edit?usp=sharing},
+  year = {2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Templates
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTemplatesBibtex" aria-expanded="false" aria-controls="collapseTemplatesBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseTemplatesAbstract" aria-expanded="false" aria-controls="collapseTemplatesAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Templates">———. 2017. “Heat Templates for Openstack Liberty Deployment on Chameleon.” <a href="https://github.com/dloup/CC_Openstack" target="_blank">https://github.com/dloup/CC_Openstack</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseTemplatesBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{Templates,
+  title = {Heat templates for Openstack Liberty deployment on Chameleon},
+  author = {Loup, David},
+  url = {https://github.com/dloup/CC_Openstack},
+  year = {2017}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          CCGRID17Enos
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCCGRID17EnosBibtex" aria-expanded="false" aria-controls="collapseCCGRID17EnosBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCCGRID17EnosAbstract" aria-expanded="false" aria-controls="collapseCCGRID17EnosAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="CCGRID17Enos">Cherrueau, R. A., D. Pertin, A. Simonet, A. Lebre, and M. Simonin. 2017. “Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack.” In <i>2017 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID)</i>, 544–48. https://doi.org/10.1109/CCGRID.2017.87.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCCGRID17EnosBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{CCGRID17Enos,
+  author = {Cherrueau, R. A. and Pertin, D. and Simonet, A. and Lebre, A. and Simonin, M.},
+  booktitle = {2017 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID)},
+  title = {Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack},
+  year = {2017},
+  volume = {},
+  number = {},
+  pages = {544-548},
+  keywords = {cloud computing;Enos;OpenStack;codebase;container technologies;postmortem analysis;private clouds;public clouds;scientific community;scientific evaluations;software project;Benchmark testing;Cloud computing;Containers;Measurement;Tools;Topology;Experiments;OpenStack;Performance;Reproducible Research},
+  doi = {10.1109/CCGRID.2017.87},
+  issn = {},
+  month = may
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

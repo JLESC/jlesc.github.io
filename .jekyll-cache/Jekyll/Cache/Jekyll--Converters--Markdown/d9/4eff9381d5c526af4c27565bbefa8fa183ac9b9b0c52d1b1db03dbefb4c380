@@ -1,0 +1,53 @@
+I"�<h2 id="research-topic-and-goals">Research topic and goals</h2>
+<p>In recent years, to address the growing gap between computing power and I/O bandwidth, storage tiers have multiplied within supercomputers. While the paradigm until then was a shared global file system (Lustre, IBM Storage Scale, …), storage is now available in a disaggregated form, still presenting a centralized storage system but completed with several intermediate layers such as node-local disks, burst buffers or network-attached storage (NVMeoF, CXL) to name a few.</p>
+
+<p>This profusion of different technologies and architectures makes the use of these resources complex and their sizing at the machine design stage risky. One approach to partially solving these problems is to model supercomputers equipped with several levels of storage, coupled with the simulation of the scheduling of an execution history of large-scale I/O intensive applications. This type of simulation allows us to observe the behavior of storage tiers in the face of real-world workloads. Recently, following the decommissioning of the machine, several years of execution traces (including I/O traces) of applications that ran on Blue Waters have been made public. This mass of information is invaluable to feed simulations and study the architecture of modern storage systems.</p>
+
+<p>In this JLESC project, we propose to analyze Darshan traces and Lustre metrics from several years of Blue Waters production to feed StorAlloc, a simulator of a storage-aware job scheduler developed within the Inria KerData’s team. The goal of work is twofold: to provide a post-mortem study on the sizing of Blue Waters’ storage system and to explore the design of future highly storage-disaggregated HPC systems.</p>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          monniot:hal-03683568
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsemonniot:hal-03683568Bibtex" aria-expanded="false" aria-controls="collapsemonniot:hal-03683568Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsemonniot:hal-03683568Abstract" aria-expanded="false" aria-controls="collapsemonniot:hal-03683568Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="monniot:hal-03683568">Monniot, Julien, François Tessier, Matthieu Robert, and Gabriel Antoniu. 2022. “StorAlloc: A Simulator for Job Scheduling on Heterogeneous Storage Resources.” In <i>HeteroPar 2022</i>. Glasgow, United Kingdom. <a href="https://inria.hal.science/hal-03683568" target="_blank">https://inria.hal.science/hal-03683568</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsemonniot:hal-03683568Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{monniot:hal-03683568,
+  title = {{StorAlloc: A Simulator for Job Scheduling on Heterogeneous Storage Resources}},
+  author = {Monniot, Julien and Tessier, Fran{\c c}ois and Robert, Matthieu and Antoniu, Gabriel},
+  url = {https://inria.hal.science/hal-03683568},
+  booktitle = {{HeteroPar 2022}},
+  address = {Glasgow, United Kingdom},
+  year = {2022},
+  month = aug,
+  pdf = {https://inria.hal.science/hal-03683568v2/file/StorAlloc_2022.pdf},
+  hal_id = {hal-03683568},
+  hal_version = {v2}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+:ET

@@ -1,0 +1,79 @@
+I"5<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>High-radix direct network topologies such as Dragonfly have been proposed for
+petascale and exascale supercomputers because they ensure fast interconnections
+and reduce the cost of the network compared with traditional network topologies.
+The design of new machines such as Theta with a Dragonfly network present an opportunity
+to further improve the performance of distributed applications by making the algorithms
+aware of the topology. Indeed, current algorithms do not consider the topology and thus
+lose numerous opportunities of optimization for performance that have been created by the topology.
+This project aims to explores ways to exploit the strengths of the Dragonfly network topology
+to propose and evaluate optimized algorithms  global communication operations, such as AllGather, Scatter, etc.</p>
+
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
+
+<p>We studied and extended existing algorithms for collective communication operations and use CODES,
+an event-driven simulator, to evaluate them. The simulations show expected results for AllGather, as well as surprising ones for Scatter:
+the naive algorithm perform oustandingly well on Dragonfly because they exploit the characteristics
+of the routers in the network. In particular, the Scatter operation could be accelerated up
+by a factor up to 2 times using a hardware aware algorithm.</p>
+
+<p>These results have been accepted as a poster for the ACM Student Research Competition at SC 2016 <a class="citation" href="#CheriereEtAl2016">(Cheriere and Dorier 2016)</a>, and Nathanael Cheriere won the 2nd prize of the ACM SRC.</p>
+
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
+
+<p>We developped a Swift/T-based workflow to automatize a large number of experiments using CODES, in order to boost design-space exploration. This workflow helped us reiterate our experiments with network models matching Argonne’s Theta machine. We submitted a paper at CCgrid 2018 presenting the results of these experiments.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<p>Internship of Nathanael Cheriere at Argonne National Lab from January 2016 to June 2016, under the supervision of Matthieu Dorier and Rob Ross.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          CheriereEtAl2016
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCheriereEtAl2016Bibtex" aria-expanded="false" aria-controls="collapseCheriereEtAl2016Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCheriereEtAl2016Abstract" aria-expanded="false" aria-controls="collapseCheriereEtAl2016Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="CheriereEtAl2016">Cheriere, Nathanael, and Matthieu Dorier. 2016. “Design and Evaluation of Topology-Aware Scatter and AllGather Algorithms for Dragonfly Networks.” In <i>IEEE/ACM International Conference for High Performance Computing, Networking, Storage and Analysis (SC) - ACM Student Research Competition</i>. <a href="http://sc16.supercomputing.org/sc-archive/src_poster/src_poster_pages/spost146.html" target="_blank">http://sc16.supercomputing.org/sc-archive/src_poster/src_poster_pages/spost146.html</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCheriereEtAl2016Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{CheriereEtAl2016,
+  title = {{Design and Evaluation of Topology-aware Scatter and AllGather Algorithms for Dragonfly Networks}},
+  author = {Cheriere, Nathanael and Dorier, Matthieu},
+  booktitle = {{IEEE/ACM International Conference for High Performance Computing, Networking, Storage and Analysis (SC) - ACM Student Research Competition}},
+  year = {2016},
+  url = {http://sc16.supercomputing.org/sc-archive/src_poster/src_poster_pages/spost146.html},
+  pdf = {http://sc16.supercomputing.org/sc-archive/src_poster/poster_files/spost146s2-file2.pdf}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>This project is finished.</p>
+
+<h2 id="references">References</h2>
+:ET
