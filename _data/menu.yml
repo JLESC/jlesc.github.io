@@ -27,40 +27,14 @@ main:
     url: /references
   - name: How to
     url: "https://github.com/JLESC/jlesc.github.io/wiki"
-footer_primary:
-  - name: Home
-    url: /
-    weight: 1
-  - name: Projects
-    url: /projects/
-    weight: 3
-  - name: Team
-    url: /team/
-    weight: 4
-footer_secondary:
-  - name: Blog
-    url: /blog/
-    weight: 1
-  - name: About
-    url: /about/
-    weight: 2
-  - name: Contact
-    url: /contact/
-    weight: 3
-footer_tertiary:
-  - name: Privacy Policy
-    url: /privacy-policy/
-    weight: 1
-  - name: Terms and Conditions
-    url: /terms-and-conditions/
-    weight: 2
-  - name: Buy Now
-    url: https://www.zerostatic.io/theme/jekyll-advance/
-    weight: 3
 bottom:
-  - name: Privacy Policy
-    url: /privacy-policy/
-    weight: 3
-  - name: Terms and Conditions
-    url: /terms-and-conditions/
+  - name: Imprint
+    url: /imprint/
     weight: 4
+  - name: Privacy
+    url: https://help.github.com/articles/github-privacy-statement/
+    weight: 3
+  - name: Sources
+    url: https://github.com/JLESC/jlesc.github.io
+  - name: Found a Typo?
+    url: https://github.com/JLESC/jlesc.github.io/issues

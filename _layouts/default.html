@@ -28,13 +28,10 @@
   {{ content }}
 </div>
 
-{% if site.footer.enable_footer %}
-  {% include framework/global/footer/footer.html %}
-{% endif %}
-
 {% if site.bottom.enable_bottom %}
   {% include framework/global/footer/bottom.html %}
 {% endif %}
+
 <script type="text/javascript" src="{{ '/assets/js/vendor/popper.min.js' | relative_url }}"></script>
 <script type="text/javascript" src="{{ '/assets/js/vendor/jquery-3.0.0.min.js' | relative_url }}"></script>
 <script type="text/javascript" src="{{ '/assets/js/vendor/bootstrap.bundle.min.js' | relative_url }}"></script>

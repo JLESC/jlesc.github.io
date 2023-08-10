@@ -1,6 +1,6 @@
 
 <div class="menu-main-mobile {% if site.menu.show_dropdown_items_in_mobile_menu %}nested{% endif %}" id="menu-main-mobile">
-  
+
   <div class="menu-main-mobile-top">
     <div id="close-overlay" class="menu-main-close">
       <div class="hamburger"></div>
@@ -46,15 +46,5 @@
       </ul>
     {% endif %}
   </div>
-
-  <div class="menu-main-mobile-bottom">
-    {% if site.menu.show_social_media_in_mobile_menu %}
-      {% include framework/blocks/components/social.html limit=3%}
-    {% endif %}
-    {% if site.darkmode.enable_dark_mode and site.darkmode.show_dark_mode_toggle_in_mobile_menu %}
-      {% include framework/blocks/components/dark-mode-switcher.html %}
-    {% endif %}
-  </div>
-
 </div>
 

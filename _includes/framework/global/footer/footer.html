@@ -27,7 +27,7 @@
                   {%  if site.footer.footer_primary_menu_title %}
                     <h3>{{ site.footer.footer_primary_menu_title }}</h3>
                   {% endif %}
-                  {% include framework/global/menu/menu-footer.html 
+                  {% include framework/global/menu/menu-footer.html
                     menu=site.data.menu.footer_primary
                   %}
                 </div>
@@ -40,7 +40,7 @@
                 {%  if site.footer.footer_secondary_menu_title %}
                   <h3>{{ site.footer.footer_secondary_menu_title }}</h3>
                 {% endif %}
-                {% include framework/global/menu/menu-footer.html 
+                {% include framework/global/menu/menu-footer.html
                   menu=site.data.menu.footer_secondary
                 %}
                 </div>
@@ -53,26 +53,15 @@
                 {%  if site.footer.footer_tertiary_menu_title %}
                   <h3>{{ site.footer.footer_tertiary_menu_title }}</h3>
                 {% endif %}
-                {% include framework/global/menu/menu-footer.html 
+                {% include framework/global/menu/menu-footer.html
                   menu=site.data.menu.footer_tertiary
                 %}
                 </div>
               </div>
             {% endif %}
-        
+
           </div>
         </div>
-      
     </div>
-    {% if site.footer.enable_contact_details %}
-    <div class="row justify-content-end mt-2">
-      <div class="col-12 col-md-4">
-        <h3>Contact Us</h3>
-        {% include framework/blocks/components/contact.html
-          contact=site.data.contact
-        %}
-      </div>
-    </div>
-    {% endif %}
   </div>
 </div>
