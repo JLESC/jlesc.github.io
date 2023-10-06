@@ -7,8 +7,8 @@ navbar: Events
 event_location: R-CCS Kobe
 event_start: 2024-04-16
 event_end: 2024-04-18
-event_short_url: 
-event_url: 
+event_short_url: https://sites.google.com/view/jlesc16
+event_url: https://sites.google.com/view/jlesc16
 wayback_url:
 logo:
 kind: workshop
