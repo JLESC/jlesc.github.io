@@ -15,7 +15,7 @@ We use **docker** to *prevent version* and *system differences*. So please, espe
 #### Run this in your console to update your dependencies
 
 ```bash
-docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:3.2.2 bash -c "bundle config set --local path '/usr/src/app/vendor' && bundle install"
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:3.1.3 bash -c "bundle config set --local path '/usr/src/app/vendor' && bundle install"
 ```
 
 ### Start the live preview of the page
@@ -25,7 +25,7 @@ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:3.2.2 bash -c "bundl
 #### Run this in your console to start the local preview
 
 ```bash
-docker run --rm -p 35729:35729 -p 4000:4000 -v "$PWD":/usr/src/app -w /usr/src/app ruby:3.2.2 bash -c "bundle config set --local path '/usr/src/app/vendor' && bundle exec jekyll serve --livereload --host=0.0.0.0"
+docker run --rm -p 35729:35729 -p 4000:4000 -v "$PWD":/usr/src/app -w /usr/src/app ruby:3.1.3 bash -c "bundle config set --local path '/usr/src/app/vendor' && bundle exec jekyll serve --livereload --host=0.0.0.0"
 ```
 
 ## III. Troubleshooting
