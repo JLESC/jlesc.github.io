@@ -1,9 +1,0 @@
-<li class="list-group-item container">
-  <div class="list-group-item-heading row col-xs-12">
-    <label class="tag tag-event-{{ event.kind }}">{% event_kind {{ event.kind }} %}</label>
-    <a href="{{site.baseurl}}{{ event.url }}">{{ event.title }}</a>
-  </div>
-  <footer class="event-meta row">
-    {% include event/meta.html %}
-  </footer>
-</li>

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "INRIA",
+    "image": "assets/images/partners/inria_logo.png",
+    "url": "https://www.inria.fr/en"
+  },
+  {
+    "title": "ANL",
+    "image": "assets/images/partners/anl_logo.jpg",
+    "url": "https://www.anl.gov/"
+  },
+  {
+    "title": "BSC",
+    "image": "assets/images/partners/bsc_logo.svg",
+    "url": "https://www.bsc.es/"
+  },
+  {
+    "title": "JSC",
+    "image": "assets/images/partners/jsc_logo.svg",
+    "url": "https://www.fz-juelich.de/en"
+  },
+  {
+    "title": "R-CCS",
+    "image": "assets/images/partners/riken_logo.png",
+    "url": "https://www.r-ccs.riken.jp/en/"
+  },
+  {
+    "title": "UTK",
+    "image": "assets/images/partners/utk.png",
+    "url": "https://www.utk.edu/"
+  }
+]
