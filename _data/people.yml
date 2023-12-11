@@ -431,6 +431,15 @@ calhoun_j:
   email: jonccal@clmeson.edu
   homepage: http://jonccal.people.clemson.edu/
 
+calmet_h:
+  sur_name: Calmet
+  given_name: Hadrien
+  affiliation: bsc
+  position: permanent
+  topics:
+  email: hadrien.calmet@bsc.es
+  homepage:
+
 cappello_f:
   sur_name: Cappello
   given_name: Franck
@@ -1291,6 +1300,15 @@ jung_j:
   email: jung@riken.jp
   homepage: http://www.riken.jp/TMS2012/cbp/en/member/profile/jaewoon_jung.html
 
+junya_o:
+  sur_name: Junya
+  given_name: Onishi
+  affiliation: riken
+  position: 
+  topics: 
+  email: junya.onishi@riken.jp
+  homepage: http://labs.aics.riken.jp/tsubokura.html
+
 herault_t:
   sur_name: Herault
   given_name: Thomas
@@ -1353,6 +1371,15 @@ katz_d:
   topics: 
   email: dskatz@illinois.edu
   homepage: http://danielskatz.org/
+
+kazuto_a:
+  sur_name: Kazuto
+  given_name: Ando
+  affiliation: riken
+  position: 
+  topics: 
+  email: kazuto.ando@riken.jp
+  homepage: http://labs.aics.riken.jp/tsubokura.html
 
 keahey_k:
   sur_name: Keahey
@@ -2182,6 +2209,15 @@ prabhu_t:
   email: tprabhu2@illinois.edu
   homepage: http://web.engr.illinois.edu/~tprabhu2/
 
+puri_r:
+  sur_name: Puri
+  given_name: Rishabh
+  affiliation: Engler-Bunte Institute - Combustion Technology, Karlsruhe Institute for Technology (KIT)
+  position: PhD student
+  topics: 
+  email: r.puri@fz-juelich.de
+  homepage:
+
 raffin_b:
   sur_name: Raffin
   given_name: Bruno
@@ -2541,6 +2577,15 @@ sharples_w:
   topics:
   email: w.sharples@fz-juelich.de
   homepage: https://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/sharples_w.html
+
+sharma_r:
+  sur_name: Sharma
+  given_name: Rakesh
+  affiliation: jsc
+  position: postdoc
+  topics:
+  email: r.sarma@fz-juelich.de
+  homepage: 
 
 shimazaki_t:
   sur_name: Shimazaki
