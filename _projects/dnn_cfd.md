@@ -19,7 +19,7 @@ keywords:
 head: lintermann_a
 members:
   - tsubokura_m
-  - onishi_y
+  - junya_o
   - kazuto_a
   - ruettgers_m
   - sharma_r
