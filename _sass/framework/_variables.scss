@@ -48,3 +48,16 @@ $spacers:
 // Theme Variables
 $header-height: 60px !default;
 $card-border-radius: 4px !default;
+
+$brand-primary:         #2780E3 !default;
+$brand-success:         #3FB618 !default;
+$brand-info:            #9954BB !default;
+$brand-warning:         #FF7518 !default;
+$brand-danger:          #FF0039 !default;
+
+$gray-base:                      #000 !default;
+$gray-darker:                    lighten($gray-base, 13.5%) !default;
+$gray-dark:                      lighten($gray-base, 20%) !default;
+$gray:                           lighten($gray-base, 33.5%) !default;
+$gray-light:                     lighten($gray-base, 60%) !default;
+$gray-lighter:                   lighten($gray-base, 90%) !default;

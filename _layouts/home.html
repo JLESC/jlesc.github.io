@@ -33,14 +33,17 @@ buttons=page.hero.buttons
 
 
 
+<div class="section d-flex flex-row row-cols-2">
 {% if page.intro.enabled %}
-<div class="section">
   <div class="container content">
     <h1>{{ page.intro.heading }}</h1>
     <p>{{ page.intro.sub_heading }}</p>
   </div>
-</div>
 {% endif %}
+{% if page.news.enabled %}
+{% include theme/custom-components/news.html %}
+{% endif %}
+</div>
 
 {% if page.partners.enabled %}
 {% assign partners = site.data.partners %}
@@ -130,10 +133,6 @@ buttons=page.hero.buttons
     %}
   </div>
 </div>
-{% endif %}
-
-{% if page.news.enabled %}
-{% include theme/custom-components/news.html %}
 {% endif %}
 
 {% if page.upcoming_events.enabled %}

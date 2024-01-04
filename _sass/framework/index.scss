@@ -23,6 +23,9 @@
 @import "bootstrap/grid";
 @import "bootstrap/buttons";
 @import "bootstrap/images";
+@import "bootstrap/card";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
 
 // 7. Include utilties overrides
 @import "utilities";
@@ -52,6 +55,7 @@
 @import "zerostatic/blocks/sections/title";
 @import "zerostatic/blocks/sections/info";
 @import "zerostatic/blocks/sections/partners";
+@import "zerostatic/blocks/sections/projects";
 @import "zerostatic/blocks/sections/heading";
 @import "zerostatic/blocks/sections/hero";
 
@@ -97,6 +101,45 @@ body {
   padding-right: $grid-gutter-width;
 }
 
+.text-xs-center {
+  text-align: center;
+}
+
 // Tweaks for dark mode
 html[data-mode="dark"] {
+}
+
+
+
+.bibtex-ref-meta {
+  .row {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .row button {
+    margin-top: 1rem;
+  }
+}
+
+.bibliography {
+  margin: 0 !important;
+}
+
+.bibliography > li {
+  margin-top: 4rem;
+  margin-left: 0 !important;
+  list-style-type: none;
+
+  .ref-label {
+    padding-left: 0;
+  }
+}
+
+.bibtex-ref-raw pre {
+  white-space: pre-wrap;
+}
+
+.bibtex-ref-entry {
+  padding: 0 1rem;
 }
