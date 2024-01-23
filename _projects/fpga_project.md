@@ -23,6 +23,7 @@ members:
   - rutten_e
   - sano_k
   - cappello_f
+  - miguel_j
 
 ---
 
@@ -86,9 +87,9 @@ We published two co-authored papers at workshops held with SC23. We released the
 * {% person yoshii_k %}, {% person cappello_f %} visited RIKEN R-CCS and Sprint-8 facility in Aug 2019 to discuss hardware compression technology.
 * {% person yoshii_k %}, {% person sano_k %} had a couple of virtual meetings in 2020 and 2021 to discuss collaborations and technical topics.
 * {% person yoshii_k %} visited RIKEN for two days in June 2023 to discuss the streaming hardware compressor design.
-* {% person carlos_a %} visited RIKEN in June 2023 to discuss porting the OmpSs@FPGA infrastructure to ESSPER.
-* {% person juan_m %} visited RIKEN in an internship program from June to September 2023 to port the OmpSs@FPGA infrastructure to ESSPER.
-% {% person tomohiro_u %} visited ANL in May 2023 to discuss hardware compressors and accelerator designs.
+* {% person alvarez_c %} visited RIKEN in June 2023 to discuss porting the OmpSs@FPGA infrastructure to ESSPER.
+* {% person ueno_t %} visited ANL in May 2023 to discuss hardware compressors and accelerator designs.
+
 
 ## Impact and publications
 
