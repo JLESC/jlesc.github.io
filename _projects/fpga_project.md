@@ -23,7 +23,6 @@ members:
   - rutten_e
   - sano_k
   - cappello_f
-  - miguel_j
 
 ---
 
