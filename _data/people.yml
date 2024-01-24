@@ -1875,6 +1875,15 @@ murai_h:
   email: h-murai@riken.jp
   homepage:
 
+muralikrishnan_s:
+  sur_name: Muralikrishnan
+  given_name: Sriramkrishnan
+  affiliation: jsc
+  position: post_doc
+  topics: Numerical methods
+  email: s.muralikrishnan@fz-juelich.de
+  homepage: https://www.fz-juelich.de/profile/muralikrishnan_s
+
 nakajima_t:
   sur_name: Nakajima
   given_name: Takahito
@@ -2865,6 +2874,15 @@ trystram_d:
   topics:
   email: trystram@imag.fr
   homepage: http://moais.imag.fr/membres/denis.trystram/
+
+tsai_s:
+  sur_name: Tsai
+  given_name: Shin-Rong
+  affiliation: uiuc 
+  position: phd
+  topics: In-situ visualization
+  email: srtsai@illinois.edu 
+  homepage: https://ischool.illinois.edu/people/shin-rong-tsai 
 
 tsai_yh:
   sur_name: Tsai
