@@ -2,7 +2,7 @@
 layout: page_project
 title: Towards Continual Learning at Scale
 date: 2022-05-07
-updated: 2022-05-07
+updated: 2024-01-26
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -97,7 +97,7 @@ Our first series of experiments focuses on evaluating the performance and scalab
 
 A publication with our insights is currently under review.
 
-## Results for 2022/2023
+## Results for 2023/2024
 
 With a growing diversity of rehearsal techniques, it becomes important to decouple the rehearsal buffer from the learning task, such that it becomes a generic, reusable abstraction that can store additional state information as needed by more advanced rehearsal-based CL algorithms. To this end, we propose a generalization of rehearsal buffers to support both classification and generative learning tasks, as well as more advanced rehearsal strategies (notably dark experience replay, leveraging knowledge distillation). We illustrate this approach with a real-life HPC streaming application from the domain of ptychographic image reconstruction.
 
