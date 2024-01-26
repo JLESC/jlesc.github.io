@@ -2,7 +2,7 @@
 layout: page_project
 title: Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques
 date: 2018-04-17
-updated: 2023-01-15
+updated: 2024-01-26
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -129,7 +129,7 @@ We continue to improve the NRM infrastructure for robustness, and the
 evaluation of our control schemes towards supporting more applications and more
 hardware control knobs.
 
-## Results for 2023
+## Results for 2023/2024
 
 A MSc internship at Inria Lille, co-advised by {% person cerf_s %} and {%
 person bleuse_r %} at Inria Grenoble, was performed by Kouds Halitim, on
