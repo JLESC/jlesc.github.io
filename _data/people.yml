@@ -870,6 +870,15 @@ frings_w:
   email: w.frings@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/frings_w.html
 
+fritz_j:
+  sur_name: Fritz
+  given_name: Jakob
+  affiliation: jsc
+  position: 
+  topics: CI, benchmarking, RSE
+  email: j.fritz@fz-juelich.de
+  homepage: https://www.fz-juelich.de/profile/fritz_j
+
 fujita_k:
   sur_name: Fujita
   given_name: Kohei
