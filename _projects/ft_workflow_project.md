@@ -2,7 +2,7 @@
 layout: page_project
 title: Optimization of Fault-Tolerance Strategies for Workflow Applications
 date: 2016-03-16
-updated: 2022-01-28
+updated: 2024-01-30
 navbar: Research
 subnavbar: Projects
 project_url:
