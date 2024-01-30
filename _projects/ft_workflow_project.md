@@ -19,7 +19,6 @@ members:
   - bosilca_g
   - bouteiller_a
   - cappello_f
-  - du_y
   - herault_t
   - perotin_l
   - robert_y
@@ -332,6 +331,18 @@ Finally, we have initiated a study about the impact of I/O interference on appli
 
 
 
+## Results for 2023/2024
+
+This year, as a follow-up to our joint work published last year in {% cite BenoitEtAl2022 --file jlesc.bib %}, we have extended this paper by adding contributions of other JLESC members
+(Leonardo Bautista-Gomez from BSC, and Sheng Di from ANL). Hence, we have considerably extended the scope of our survey, and we have submitted this contribution, entitled "A Survey on Checkpointing Strategies: Should We Always Checkpoint à la Young/Daly?",  to the special issue of FGCS scheduled for 2024 and which will focus on JLESC collaboration results. We are covering several new topics such as multi-level checkpointing, checkpointing preemptible applications in practice, checkpoints taking variable times, silent error detectors, imperfect verifications, cases where the order of the optimal checkpointing period changes, and the combination of checkpointing with replication. 
+
+
+We have also considered applications executing for a fixed duration, namely the length of the reservation that it has been granted. The checkpoint duration is a stochastic random variable that obeys some well-known probability distribution law. The question is when to take a checkpoint towards the end of the execution, so that the expectation of the work done is maximized. We addressed two scenarios. In the first scenario, a checkpoint can be taken at any time; despite its simplicity, this natural problem has not been considered yet (to the best of our knowledge). We provided the optimal solution for a variety of probability distribution laws modeling checkpoint duration. The second scenario was more involved: the application is a linear workflow consisting of a chain of tasks with IID stochastic execution times, and a checkpoint can be taken only at the end of a task. First, we introduced a static strategy where we computed the optimal number of tasks before the application checkpoints at the beginning of the execution. Then, we designed a dynamic strategy that decides whether to checkpoint or to continue executing at the end of each task. We instantiated this second scenario with several examples of probability distribution laws for task durations. This work has been published in FTXS’2023, a workshop co-located with SC’2023 
+{% cite BarbutEtAl2023 --file jlesc.bib %}.
+
+
+
+
 ## Visits and meetings
 
 {% person cavelan_a %} visited {% person cappello_f %} in Chicago for three months (March, April, and May 2016) to initiate the project. Furthermore, we have been meeting regularly in the previous years. In particular,
@@ -348,8 +359,7 @@ which allowed us to make progress on the project.
 and for 10 days in January 2020.
 
 Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. {% person robert_y %} made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month. 
-
-
+{% person robert_y %} made four visits to Univ. Tenn. Knoxville in 2023, for a total of approximately one month and a half. 
 
 
 ## Impact and publications
@@ -373,6 +383,8 @@ The work on the comparison of several fault-tolerance methods for the detection 
 The work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms was published in IEEE TC in 2021 {% cite BenoitEtAl2021 --file jlesc.bib %}.
 
 In 2022, two joint publications were published from the project, the first one to assess the usefulness and limitations of the Young/Daly formula for checkpointing, in the IC3 conference {% cite BenoitEtAl2022 --file jlesc.bib %}, and the other one to compare distributed termination detection algorithms for modern HPC platform, in the IJNC journal {% cite BosilcaEtAl2022 --file jlesc.bib %}. 
+
+In 2023, we have published one joint publication {% cite BarbutEtAl2023 --file jlesc.bib %} on when to checkpoint at the end of a fixed-length reservation, and we have written a collaborative survey between several JLESC institutions, that has been submitted at the end of the year. 
 
 
 {% comment %}
@@ -415,7 +427,7 @@ This causes several new challenges that we hope to address in the future.
 
 
 ## Former members
-{% person cavelan_a %}, {% person lefevre_v %}, {% person han_l %}. 
+{% person cavelan_a %}, {% person lefevre_v %}, {% person han_l %}, {% person du_y %}. 
 
 
 
