@@ -157,10 +157,6 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Yishu</span> <span class="person sur-name">Du</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
               <span class="person given-name">Thomas</span> <span class="person sur-name">Herault</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
             </span>
           
@@ -206,6 +202,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20222023">Results for 2022/2023</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20232024">Results for 2023/2024</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -464,6 +461,15 @@ dataset (e.g., reloading checkpoints, computing checksum on data, etc.).</p>
 
 <p>Finally, we have initiated a study about the impact of I/O interference on application performance. HPC applications execute on dedicated nodes but share the I/O system. As a consequence, interferences surge when several applications perform I/O operations simultaneously, and each I/O operation takes much longer than expected because each application is only allotted a fraction of the I/O bandwidth. Checkpoint operations are periodic and high-volume I/O operations and, as such, are particularly sensitive to interferences.</p>
 
+<h2 id="results-for-20232024">
+<a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
+
+<p>This year, as a follow-up to our joint work published last year in <a href="#BenoitEtAl2022">(Benoit et al. 2022)</a>, we have extended this paper by adding contributions of other JLESC members
+(Leonardo Bautista-Gomez from BSC, and Sheng Di from ANL). Hence, we have considerably extended the scope of our survey, and we have submitted this contribution, entitled “A Survey on Checkpointing Strategies: Should We Always Checkpoint à la Young/Daly?”,  to the special issue of FGCS scheduled for 2024 and which will focus on JLESC collaboration results. We are covering several new topics such as multi-level checkpointing, checkpointing preemptible applications in practice, checkpoints taking variable times, silent error detectors, imperfect verifications, cases where the order of the optimal checkpointing period changes, and the combination of checkpointing with replication.</p>
+
+<p>We have also considered applications executing for a fixed duration, namely the length of the reservation that it has been granted. The checkpoint duration is a stochastic random variable that obeys some well-known probability distribution law. The question is when to take a checkpoint towards the end of the execution, so that the expectation of the work done is maximized. We addressed two scenarios. In the first scenario, a checkpoint can be taken at any time; despite its simplicity, this natural problem has not been considered yet (to the best of our knowledge). We provided the optimal solution for a variety of probability distribution laws modeling checkpoint duration. The second scenario was more involved: the application is a linear workflow consisting of a chain of tasks with IID stochastic execution times, and a checkpoint can be taken only at the end of a task. First, we introduced a static strategy where we computed the optimal number of tasks before the application checkpoints at the beginning of the execution. Then, we designed a dynamic strategy that decides whether to checkpoint or to continue executing at the end of each task. We instantiated this second scenario with several examples of probability distribution laws for task durations. This work has been published in FTXS’2023, a workshop co-located with SC’2023 
+<a href="#BarbutEtAl2023">(Barbut et al. 2023)</a>.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 
@@ -480,7 +486,8 @@ which allowed us to make progress on the project.</p>
 <p><span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) has visited Univ. Tenn. Knoxville for 10 days in February 2019,
 and for 10 days in January 2020.</p>
 
-<p>Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. <span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month.</p>
+<p>Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. <span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month. 
+<span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made four visits to Univ. Tenn. Knoxville in 2023, for a total of approximately one month and a half.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -504,6 +511,8 @@ on failure-prone HPC platforms was published in Resilience’18 <a href="#LeFevr
 <p>The work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms was published in IEEE TC in 2021 <a href="#BenoitEtAl2021">(Benoit et al. 2021)</a>.</p>
 
 <p>In 2022, two joint publications were published from the project, the first one to assess the usefulness and limitations of the Young/Daly formula for checkpointing, in the IC3 conference <a href="#BenoitEtAl2022">(Benoit et al. 2022)</a>, and the other one to compare distributed termination detection algorithms for modern HPC platform, in the IJNC journal <a href="#BosilcaEtAl2022">(Bosilca et al. 2022)</a>.</p>
+
+<p>In 2023, we have published one joint publication <a href="#BarbutEtAl2023">(Barbut et al. 2023)</a> on when to checkpoint at the end of a fixed-length reservation, and we have written a collaborative survey between several JLESC institutions, that has been submitted at the end of the year.</p>
 
 <ol class="bibliography">
 <li>
@@ -1014,6 +1023,47 @@ on Failure-Prone HPC Platforms?” In <i>Resilience: 11th Workshop on Resiliency
   
 </div>
 </li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BarbutEtAl2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBarbutEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseBarbutEtAl2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBarbutEtAl2023Abstract" aria-expanded="false" aria-controls="collapseBarbutEtAl2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="BarbutEtAl2023">Barbut, Quentin, Anne Benoit, Thomas Herault, Yves Robert, and Frédéric Vivien. 2023. “When to Checkpoint at the End of a Fixed-Length Reservation?” In <i>Fault Tolerance for HPC at EXtreme Scales (FTXS) Workshop</i>. <a href="https://inria.hal.science/hal-04215554" target="_blank">https://inria.hal.science/hal-04215554</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBarbutEtAl2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{BarbutEtAl2023,
+  author = {Barbut, Quentin and Benoit, Anne and Herault, Thomas and Robert, Yves and Vivien, Frédéric},
+  title = {When to checkpoint at the end of a fixed-length reservation?},
+  booktitle = {Fault Tolerance for HPC at eXtreme Scales (FTXS) Workshop},
+  url = {https://inria.hal.science/hal-04215554},
+  location = {Denver, United States},
+  date = {2023-11-12}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 </ol>
 
 <h2 id="future-plans">
@@ -1032,7 +1082,7 @@ This causes several new challenges that we hope to address in the future.</p>
 
 <h2 id="former-members">
 <a id="former-members" class="anchor" href="#former-members" aria-hidden="true"><span class="octicon octicon-link"></span></a>Former members</h2>
-<p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), <span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), <span class="person given-name">Li</span> <span class="person sur-name">Han</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>).</p>
+<p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), <span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), <span class="person given-name">Li</span> <span class="person sur-name">Han</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), <span class="person given-name">Yishu</span> <span class="person sur-name">Du</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>).</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
