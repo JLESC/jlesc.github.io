@@ -2083,6 +2083,15 @@ padoin_e:
   email:  elpadoin@inf.ufrgs.br
   homepage:
 
+papka_m:
+  sur_name: Papka
+  given_name: Michael E.
+  affiliation: anl
+  position: permanent
+  topics:
+  email: papka@anl.gov
+  homepage: https://www.anl.gov/profile/michael-e-papka
+
 patel_r:
   sur_name: Patel
   given_name: Ria
