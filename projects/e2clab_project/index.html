@@ -173,6 +173,7 @@
           </div>
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20232024">Results for 2023/2024</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20222023">Results for 2022/2023</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
@@ -217,6 +218,19 @@ across testbeds.</p>
 the reproducible artifacts and the experimental environment. We will demonstrate 
 how our Jupyter/Trovi approach for reproducibility helps scientists to reproduce 
 complex Edge-to-Cloud workflows across Chameleon/CHI@Edge/G5K.</p>
+
+<h2 id="results-for-20232024">
+<a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
+
+<p>In 2023, the collaboration between INRIA and ANL continued principally via discussions on reproducibility as well as around an emergent common interest in edge computing.</p>
+
+<p>On the reproducibility front, Daniel Rosendo presented a paper on practical reproducibility in Edge-to-Cloud experiments at the ACM REP conference on June 27, 2023 <a href="#RosendoEtAl2023">(Rosendo et al. 2023)</a>. The results presented in the paper were largely an outcome of the joint work performed in the prior year.</p>
+
+<p>On the ANL side, we continued our investment in reproducibility topics by engaging a wide community of researchers and educators to advance the mission of popularizing the concept of practical reproducibility in Computer Science. This work was performed as part of the ANL-led REPETO project <a href="#Repeto2024">(“REPETO: Reimagining Experimentation - The Path to Replicable Science” 2024)</a>. We held four reproducibility hackathons in collaboration with major CS conferences, including at FAST 2023, ACM REP 2023, ATC/OSDI 2023, and IC2E 2023. In addition, we organized two additional hackathons with the Chameleon community (one at the Chameleon User Meeting in May 2023 and another virtual hackathon in Dec. 2023). These events showed attendees how to package experiments for practical reproducibility and share them on Chameleon’s Trovi service so others could reproduce them. Furthermore, we published a paper (Three Pillars of Practical Reproducibility) at the 2023 IEEE eScience ReWorDS Workshop, outlining the methodology and support needed for practical reproducibility <a href="#KeaheyEtAl2023">(Keahey et al. 2023)</a>.</p>
+
+<p>Over the summer of 2023, members of the REPETO project hosted the first Summer of Reproducibility program. The program offers summer internship opportunities for students and mentors who are interested in reproducibility for computer science research. It is modeled on Google Summer of Code: mentors propose a project and students apply for it. We particularly sponsor projects that package experiments to advance practical reproducibility, i.e., the idea that reproducibility can be a mainstream method of scientific exploration, similar to what reading papers is today. Those experiments can be replayed – and potentially modified and improved to propose and test new ideas – on Chameleon. The program provides funding for both US-based and international students and collaborations. In 2024, the REPETO project will continue to support the Summer of Reproducibility initiative and a call for projects for this summer is already underway.</p>
+
+<p>The discussions of edge computing are emergent with both INRIA and ANL making separate investigations for the time being. The ANL team is working in the context of the CHI@Edge platform on Chameleon (missing reference) and FLOTO projects <a href="#KeaheyEtAl2023b">(Keahey et al. 2023)</a>. The INRIA team is focusing on two challenges: (1) the efficient provenance data capture at the edge, for reproducibility purposes <a href="#RosendoEtAl2023b">(Rosendo et al. 2023)</a>, and (2) enabling continual learning and federated learning at the edge, in the context of the ENGAGE project <a href="#Engage2024">(“Engage Project” 2024)</a>, where initial results target the efficient deployment of such workloads on the edge-cloud continuum <a href="#PrigentEtAl2022">(Prigent et al. 2022)</a> and securing the learning in the heterogeneous and volatile edge environments <a href="#ChelliEtAl2023">(Chelli et al. 2023)</a>.</p>
 
 <h2 id="results-for-20222023">
 <a id="results-for-20222023" class="anchor" href="#results-for-20222023" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2022/2023</h2>
@@ -283,6 +297,55 @@ data, environment, and results shared easily.</p>
 -->
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          RosendoEtAl2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRosendoEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseRosendoEtAl2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseRosendoEtAl2023Abstract" aria-expanded="false" aria-controls="collapseRosendoEtAl2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="RosendoEtAl2023">Rosendo, Daniel, Kate Keahey, Alexandru Costan, Matthieu Simonin, Patrick Valduriez, and Gabriel Antoniu. 2023. “KheOps: Cost-Effective Repeatability, Reproducibility, and Replicability of Edge-to-Cloud Experiments.” In <i>Proceedings of the 2023 ACM Conference on Reproducibility and Replicability</i>, 62–73. ACM REP ’23. New York, NY, USA: Association for Computing Machinery. doi:10.1145/3589806.3600032.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseRosendoEtAl2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{RosendoEtAl2023,
+  author = {Rosendo, Daniel and Keahey, Kate and Costan, Alexandru and Simonin, Matthieu and Valduriez, Patrick and Antoniu, Gabriel},
+  title = {KheOps: Cost-effective Repeatability, Reproducibility, and Replicability of Edge-to-Cloud Experiments},
+  year = {2023},
+  isbn = {9798400701764},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3589806.3600032},
+  doi = {10.1145/3589806.3600032},
+  booktitle = {Proceedings of the 2023 ACM Conference on Reproducibility and Replicability},
+  pages = {62–73},
+  numpages = {12},
+  keywords = {Workflows, Reproducibility, Replicability, Repeatability, Edge Computing, Computing Continuum, Cloud Computing},
+  location = {Santa Cruz, CA, USA},
+  series = {ACM REP '23}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -444,6 +507,303 @@ different testbeds, such as the Grid5000 + FIT IoT LAB.</p>
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
+          Repeto2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRepeto2024Bibtex" aria-expanded="false" aria-controls="collapseRepeto2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseRepeto2024Abstract" aria-expanded="false" aria-controls="collapseRepeto2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Repeto2024">“REPETO: Reimagining Experimentation - The Path to Replicable Science.” 2024. <a href="https://repeto.cs.uchicago.edu/" target="_blank">https://repeto.cs.uchicago.edu/</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseRepeto2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@online{Repeto2024,
+  addendum = {(accessed: 01.31.2024)},
+  title = {{REPETO: Reimagining Experimentation - The Path to Replicable Science}},
+  url = {https://repeto.cs.uchicago.edu/},
+  year = {2024}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ChiEdge2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseChiEdge2024Bibtex" aria-expanded="false" aria-controls="collapseChiEdge2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseChiEdge2024Abstract" aria-expanded="false" aria-controls="collapseChiEdge2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ChiEdge2024">“CHI@Edge.” 2024. <a href="https://www.chameleoncloud.org/experiment/chiedge/" target="_blank">https://www.chameleoncloud.org/experiment/chiedge/</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseChiEdge2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@online{ChiEdge2024,
+  addendum = {(accessed: 01.31.2024)},
+  title = {{CHI@Edge}},
+  url = {https://www.chameleoncloud.org/experiment/chiedge/},
+  year = {2024}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Engage2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseEngage2024Bibtex" aria-expanded="false" aria-controls="collapseEngage2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseEngage2024Abstract" aria-expanded="false" aria-controls="collapseEngage2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Engage2024">“Engage Project.” 2024. <a href="https://engage.inria.fr/" target="_blank">https://engage.inria.fr/</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseEngage2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@online{Engage2024,
+  addendum = {(accessed: 01.31.2024)},
+  title = {{Engage Project}},
+  url = {https://engage.inria.fr/},
+  year = {2024}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ChelliEtAl2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseChelliEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseChelliEtAl2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseChelliEtAl2023Abstract" aria-expanded="false" aria-controls="collapseChelliEtAl2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="ChelliEtAl2023">Chelli, Melvin, Cédric Prigent, René Schubotz, Alexandru Costan, Gabriel Antoniu, Loïc Cudennec, and Philipp Slusallek. 2023. “FedGuard: Selective Parameter Aggregation for Poisoning Attack Mitigation in Federated Learning.” In <i>2023 IEEE International Conference on Cluster Computing (CLUSTER)</i>, 72–81. doi:10.1109/CLUSTER52292.2023.00014.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseChelliEtAl2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{ChelliEtAl2023,
+  author = {Chelli, Melvin and Prigent, Cédric and Schubotz, René and Costan, Alexandru and Antoniu, Gabriel and Cudennec, Loïc and Slusallek, Philipp},
+  booktitle = {2023 IEEE International Conference on Cluster Computing (CLUSTER)},
+  doi = {10.1109/CLUSTER52292.2023.00014},
+  keywords = {Training;Federated learning;Computational modeling;Image edge detection;Cluster computing;Sensor systems and applications;Data models;federated learning;malicious peer detection;robust federated learning;adversarial attacks;generative models},
+  number = {},
+  pages = {72-81},
+  title = {FedGuard: Selective Parameter Aggregation for Poisoning Attack Mitigation in Federated Learning},
+  volume = {},
+  year = {2023}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          KeaheyEtAl2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseKeaheyEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseKeaheyEtAl2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseKeaheyEtAl2023Abstract" aria-expanded="false" aria-controls="collapseKeaheyEtAl2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="KeaheyEtAl2023">Keahey, Kate, Jason Anderson, Mark Powers, and Adam Cooper. 2023. “Three Pillars of Practical Reproducibility.” In <i>2023 IEEE 19th International Conference on e-Science (e-Science)</i>, 1–6. doi:10.1109/e-Science58273.2023.10254846.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseKeaheyEtAl2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{KeaheyEtAl2023,
+  author = {Keahey, Kate and Anderson, Jason and Powers, Mark and Cooper, Adam},
+  booktitle = {2023 IEEE 19th International Conference on e-Science (e-Science)},
+  doi = {10.1109/e-Science58273.2023.10254846},
+  keywords = {Computer science;Ecosystems;Buildings;Refining;Packaging;Information age;Reproducibility of results;reproducibility;infrastructure;scientific platforms;resource management},
+  number = {},
+  pages = {1-6},
+  title = {Three Pillars of Practical Reproducibility},
+  volume = {},
+  year = {2023}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          KeaheyEtAl2023b
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseKeaheyEtAl2023bBibtex" aria-expanded="false" aria-controls="collapseKeaheyEtAl2023bBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseKeaheyEtAl2023bAbstract" aria-expanded="false" aria-controls="collapseKeaheyEtAl2023bAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="KeaheyEtAl2023b">Keahey, Kate, Nick Feamster, Guilherme Martins, Mark Powers, Marc Richardson, Alexis Schrubbe, and Michael Sherman. 2023. “Discovery Testbed: An Observational Instrument for Broadband Research.” In <i>2023 IEEE 19th International Conference on e-Science (e-Science)</i>, 1–4. doi:10.1109/e-Science58273.2023.10254876.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseKeaheyEtAl2023bBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{KeaheyEtAl2023b,
+  author = {Keahey, Kate and Feamster, Nick and Martins, Guilherme and Powers, Mark and Richardson, Marc and Schrubbe, Alexis and Sherman, Michael},
+  booktitle = {2023 IEEE 19th International Conference on e-Science (e-Science)},
+  doi = {10.1109/e-Science58273.2023.10254876},
+  keywords = {Computers;Instruments;Distributed databases;Data collection;Hardware;Broadband communication;Reliability;infrastructure;instruments;broadband;scientific platforms},
+  number = {},
+  pages = {1-4},
+  title = {Discovery Testbed: An Observational Instrument for Broadband Research},
+  year = {2023},
+  volume = {}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          RosendoEtAl2023b
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRosendoEtAl2023bBibtex" aria-expanded="false" aria-controls="collapseRosendoEtAl2023bBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseRosendoEtAl2023bAbstract" aria-expanded="false" aria-controls="collapseRosendoEtAl2023bAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="RosendoEtAl2023b">Rosendo, D., M. Mattoso, A. Costan, R. Souza, D. Pina, P. Valduriez, and G. Antoniu. 2023. “ProvLight: Efficient Workflow Provenance Capture on the Edge-to-Cloud Continuum.” In <i>2023 IEEE International Conference on Cluster Computing (CLUSTER)</i>, 221–33. Los Alamitos, CA, USA: IEEE Computer Society. doi:10.1109/CLUSTER52292.2023.00026.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseRosendoEtAl2023bBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{RosendoEtAl2023b,
+  address = {Los Alamitos, CA, USA},
+  author = {Rosendo, D. and Mattoso, M. and Costan, A. and Souza, R. and Pina, D. and Valduriez, P. and Antoniu, G.},
+  booktitle = {2023 IEEE International Conference on Cluster Computing (CLUSTER)},
+  doi = {10.1109/CLUSTER52292.2023.00026},
+  issn = {},
+  keywords = {protocols;memory management;key performance indicator;data compression;cluster computing;data models;performance analysis},
+  month = nov,
+  pages = {221-233},
+  publisher = {IEEE Computer Society},
+  title = {ProvLight: Efficient Workflow Provenance Capture on the Edge-to-Cloud Continuum},
+  url = {https://doi.ieeecomputersociety.org/10.1109/CLUSTER52292.2023.00026},
+  volume = {},
+  year = {2023}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
           ChameleonEtAl2022
         </div>
       </div>
@@ -465,9 +825,53 @@ different testbeds, such as the Grid5000 + FIT IoT LAB.</p>
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
         <pre><code>@online{ChameleonEtAl2022,
+  addendum = {(accessed: 07.14.2022)},
   title = {{Trovi: Practical Open Reproducibility}},
   url = {https://chameleoncloud.gitbook.io/trovi/},
-  addendum = {(accessed: 07.14.2022)},
+  year = {2022}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          PrigentEtAl2022
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePrigentEtAl2022Bibtex" aria-expanded="false" aria-controls="collapsePrigentEtAl2022Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePrigentEtAl2022Abstract" aria-expanded="false" aria-controls="collapsePrigentEtAl2022Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="PrigentEtAl2022">Prigent, Cédric, Alexandru Costan, Gabriel Antoniu, and Loïc Cudennec. 2022. “Supporting Efficient Workflow Deployment of Federated Learning Systems across the Computing Continuum.” <i>SC 2022 - International Conference for High Performance Computing, Networking, Storage, and Analysis (Posters)</i>. <a href="https://inria.hal.science/hal-03878254" target="_blank">https://inria.hal.science/hal-03878254</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsePrigentEtAl2022Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{PrigentEtAl2022,
+  author = {Prigent, C{\'e}dric and Costan, Alexandru and Antoniu, Gabriel and Cudennec, Lo{\"i}c},
+  booktitle = {{SC 2022 - International Conference for High Performance Computing, Networking, Storage, and Analysis (Posters)}},
+  keywords = {Computing Continuum ; Federated Learning ; Workflow ; Hyperparameter optimization},
+  month = nov,
+  note = {Poster},
+  pdf = {https://inria.hal.science/hal-03878254/file/Poster.pdf},
+  title = {{Supporting Efficient Workflow Deployment of Federated Learning Systems across the Computing Continuum}},
+  url = {https://inria.hal.science/hal-03878254},
   year = {2022}
 }
 </code></pre>
@@ -504,10 +908,10 @@ different testbeds, such as the Grid5000 + FIT IoT LAB.</p>
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
         <pre><code>@inproceedings{KateEtAl2020,
-  title = {Lessons learned from the chameleon testbed},
   author = {Keahey, Kate and Anderson, Jason and Zhen, Zhuo and Riteau, Pierre and Ruth, Paul and Stanzione, Dan and Cevik, Mert and Colleran, Jacob and Gunawi, Haryadi S and Hammock, Cody and others},
   booktitle = {2020 USENIX Annual Technical Conference (USENIX ATC 20)},
-  pages = {219--233},
+  pages = {219-233},
+  title = {Lessons learned from the chameleon testbed},
   year = {2020}
 }
 </code></pre>
@@ -544,18 +948,18 @@ different testbeds, such as the Grid5000 + FIT IoT LAB.</p>
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
         <pre><code>@article{RaphaEtAl2006,
-  title = {{Grid'5000: A Large Scale And Highly Reconfigurable Experimental Grid Testbed}},
   author = {Bolze, Rapha{\"e}l and Cappello, Franck and Caron, Eddy and Dayde, Michel and Desprez, Fr{\'e}d{\'e}ric and Jeannot, Emmanuel and J{\'e}gou, Yvon and Lanteri, Stephane and Leduc, Julien and Melab, Nouredine and Mornet, Guillaume and Namyst, Raymond and Primet, Pascale and Qu{\'e}tier, Benjamin and Richard, Olivier and Talbi, El-Ghazali and Touche, Ir{\'e}a},
-  url = {https://hal.inria.fr/hal-00684943},
-  journal = {{International Journal of High Performance Computing Applications}},
-  publisher = {{SAGE Publications}},
-  volume = {20},
-  number = {4},
-  pages = {481-494},
-  year = {2006},
   doi = {10.1177/1094342006070078},
   hal_id = {hal-00684943},
-  hal_version = {v1}
+  hal_version = {v1},
+  journal = {{International Journal of High Performance Computing Applications}},
+  number = {4},
+  pages = {481-494},
+  publisher = {{SAGE Publications}},
+  title = {{Grid'5000: A Large Scale And Highly Reconfigurable Experimental Grid Testbed}},
+  url = {https://hal.inria.fr/hal-00684943},
+  volume = {20},
+  year = {2006}
 }
 </code></pre>
       </div>
