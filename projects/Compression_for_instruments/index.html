@@ -179,6 +179,7 @@
 <li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20232024">Results for 2023/2024</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h3"><a href="#papers">Papers</a></li>
@@ -215,7 +216,7 @@ We propose to:</p>
 
 <h2 id="results-for-20212022">
 <a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
-<p>The main result is the validatio from the EXAFEL team of RiobinSZ as a valid lossy compressor for crystallography. The validation experiment used RoibinSZ on Se-SAD SFX Dataset (Selenium Single-wavelength Anomalous Diffraction. Serial Femtosecond Crystallography), 5043 images (1480x1552x4bytes). Many metrics were used to perform the assesment: Number of hits: Number indexed, Rsplit, CC1/2, CCano, Rwork, Rfree, Map-model CC. Roibin SZ electron density successfully reconstructs the protein structure. The dataset compressed with RiobinSZ offered a better result overall compared to the non-compressed dataset. The current explanation is that RiobinSZ not only compress the data but also performs some denoising that results in improving the analysis quality. A paper is submited to IEEE Bigdata on using SZ3 for the Argonne Photon Source data.</p>
+<p>The main result is the validation from the EXAFEL team of RiobinSZ as a valid lossy compressor for crystallography. The validation experiment used RoibinSZ on Se-SAD SFX Dataset (Selenium Single-wavelength Anomalous Diffraction. Serial Femtosecond Crystallography), 5043 images (1480x1552x4bytes). Many metrics were used to perform the assesment: Number of hits: Number indexed, Rsplit, CC1/2, CCano, Rwork, Rfree, Map-model CC. Roibin SZ electron density successfully reconstructs the protein structure. The dataset compressed with RiobinSZ offered a better result overall compared to the non-compressed dataset. The current explanation is that RiobinSZ not only compress the data but also performs some denoising that results in improving the analysis quality. A paper is submited to IEEE Bigdata on using SZ3 for the Argonne Photon Source data.</p>
 
 <p>The second main results concerns the compression using SZ3 of X-ray ptychographic data acquired at the Advanced Photon Source (APS). A Dectris Eiger detector (514x1030 pixels) was used to acquire diffraction patterns as X-ray beam scanned across the sample, and the 2D diffraction images were saved along the time dimension to form a 3D matrix array (19500 x 514 x 1030 for chip pillar and 16800 x 514 x 1030 for flat chip). When the decompression data is near lossless (i.e.,
 error bound less than 0:5), the compression ratio gain of the proposed compression pipeline is 18% on chip pillar and 12% on flat chip compared with the second-best one.</p>
@@ -226,6 +227,24 @@ error bound less than 0:5), the compression ratio gain of the proposed compressi
 Further improvements may be possible by lowering certain aspects of the ROIBIN-SZ3 process to the GPU pending further validation of correctness and effectiveness of the CPU implementation.</p>
 
 <p>Riken released the compression code developed for SPRING-8: https://github.com/kento/TEZip</p>
+
+<h2 id="results-for-20232024">
+<a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
+
+<p>Robert Underwood (Argonne), Kento Sato (Riken), and Amarjit Singh(Riken) supervised a summer student at Riken, Isita, to integrate LibPressio with TEZip.
+This integration allows for more exhaustive comparisons between TEZip and other compressor such as SZ3 and ROIBIN-SZ.
+There were several technical challenges to overcome for this integration:
+1) LibPressio and the other compressors are implemented in C++, but TEZip is written in python, 
+2) to make the comparisons possible and efficient, extensions were need to use shared memory to avoid the use of the file system for these large files, 
+3) TEZip makes radically different assumptions about input formats that needed to be overcome.
+These preliminary results show that TEZip may have an advantage at extremely high compression ratios, but at the cost of low bandwidth while compressors developed at Argonne have only high compression ratios but at much higher speed.
+A poster on these efforts was presented by Isita to SC23.
+Robert Underwood will visit Riken in April 2024 to help complete and submit these results for publication.</p>
+
+<p>At Argonne, forward progress was also made on RoIBIN-SZ.
+RoIBIN-SZ was successfully deployed and used at scale in the S3DM data reduction pipeline cluster at SLAC National Accelerator Center for their SFX workflow demonstrating the viability of this approach in production workflows.
+Additionally, there were efforts to port portions of the RoIBIN-SZ pipeline to the GPU – these efforts show a end-to-end improvement over the CPU with only a potion of the current pipeline on the GPU indicating that even with transfers to/from the GPU it is possible to accelerate this workflow on the GPU.  In the next year, we hope to complete porting of ROIBIN-SZ to the GPU and evaluate its improved performance which should remove the needs to transfer to/from the GPU dramatically improving performance.
+An overview of RoIBIN-SZ was included as invited paper to Synchrotron Radiation News.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -244,6 +263,15 @@ There was no visit due to the Covid situaiton.</p>
 <p>2022: 
 There was no visit due to the COVID situation.</p>
 
+<p>2023: 
+There was no visit in 2023.</p>
+
+<p>2024:</p>
+
+<ul>
+  <li>Robert Underwood will visit Riken in April advance of the JLESC workshop for 1 week.</li>
+</ul>
+
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
@@ -254,6 +282,10 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
 <a id="papers" class="anchor" href="#papers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Papers</h3>
 
 <ul>
+  <li>A paper at Synchrotron Radiation News providing an overview RoIBIN-SZ <a href="#UnderwoodEtAl2023">(“ROIBIN-SZ: Fast and Science-Preserving Compression for Serial Crystallography” 2023)</a>
+</li>
+  <li>A poster at SC23 discussing preliminary evaluation of TEZip against other leading lossy compressors <a href="#TalukdarEtAl2023">(“Integrating TEZip into LibPressio: A Acase Study of Integrating a Dynamic Application into a Static C Envionment” 2023)</a>
+</li>
   <li>A paper at IPDPS on fix ratio compression using control loop <a href="#Underwood20">(Underwood et al. 2020)</a>
 </li>
   <li>A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. <a href="#Rupak20">(Roy et al. 2019)</a>
@@ -269,6 +301,90 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
 </ul>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          UnderwoodEtAl2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseUnderwoodEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseUnderwoodEtAl2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseUnderwoodEtAl2023Abstract" aria-expanded="false" aria-controls="collapseUnderwoodEtAl2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="UnderwoodEtAl2023">“ROIBIN-SZ: Fast and Science-Preserving Compression for Serial Crystallography.” 2023. <i>Synchrotron Radiation News</i> 36 (4). Taylor &amp; Francis: 17–22. doi:10.1080/08940886.2023.2245722.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseUnderwoodEtAl2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{UnderwoodEtAl2023,
+  author = {},
+  title = {ROIBIN-SZ: Fast and Science-Preserving Compression for Serial Crystallography},
+  journal = {Synchrotron Radiation News},
+  volume = {36},
+  number = {4},
+  pages = {17-22},
+  year = {2023},
+  publisher = {Taylor &amp; Francis},
+  doi = {10.1080/08940886.2023.2245722},
+  url = {https://doi.org/10.1080/08940886.2023.2245722},
+  eprint = {https://doi.org/10.1080/08940886.2023.2245722}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          TalukdarEtAl2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTalukdarEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseTalukdarEtAl2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTalukdarEtAl2023Abstract" aria-expanded="false" aria-controls="collapseTalukdarEtAl2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="TalukdarEtAl2023">“Integrating TEZip into LibPressio: A Acase Study of Integrating a Dynamic Application into a Static C Envionment.” 2023.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseTalukdarEtAl2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{TalukdarEtAl2023,
+  author = {},
+  title = {Integrating TEZip into LibPressio: A Acase Study of Integrating a Dynamic Application into a Static C Envionment},
+  year = {2023}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
