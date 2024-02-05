@@ -60,12 +60,26 @@ In Year 4, we will work on the following:
 * We will make the advanced framework available through open-source software, with Jupyter notebook tutorials to increase access to our technology.
 * We will compare our framework with a traditional XFEL slice matching approach used for 3D reconstruction and follow the premises of orientation prediction through multiple and time-consuming iterations.
 
+## Results for 2023/2024
+In the 2023-2024 period, our group made significant strides in the field of computational biology by developing A4NN, a highly efficient, composable workflow designed to enhance Neural Architecture Search (NAS) for predicting various protein properties (i.e., orientation, conformation, and protein type) using protein diffraction patterns across different beam intensities (i.e., low, medium, and high). Our workflow's performance was rigorously evaluated against the standalone NAS approach, specifically NSGA-Net, to find models with high validation accuracy and low computational demand (FLOPS). The evaluation yielded impressive results:
+
+At low beam intensity, A4NN achieved 99.8% accuracy under 650 FLOPS, compared to NSGA-Net's 98.1% accuracy with approximately 650 FLOPS.
+Our workflow reached 100% accuracy for medium beam intensity using below 500 FLOPS, surpassing NSGA-Net's 99% accuracy with around 700 FLOPS.
+Both A4NN and NSGA-Net recorded a 99.9% accuracy at high beam intensity, but A4NN required less than 450 FLOPS, matching NSGA-Net's computational cost.
+
+These results underscore A4NN's superiority in optimizing accuracy and efficiency across varying experimental conditions. Moreover, our workflow demonstrated a remarkable capacity to cut down training time and resource usage by up to 37% and reduce the number of training epochs by up to 38%, all while achieving a prediction accuracy of 100% in classifying protein conformations.
+
+Complementing these technical achievements, our team has provided reproducibility artifacts available on GitHub, including detailed metadata and outcomes from executing our workflow across various protein diffraction datasets and GPU configurations. This commitment to transparency and replicability underscores our approach's robustness and the potential for A4NN to be deployed across a broader spectrum of NAS applications and datasets, showcasing its adaptability and the extensive groundwork laid for future advancements in the classification of protein conformations.
 
 ## Visits and meetings
 Taufer will meet Tama and Miyashita during her visit at RIKEN on Deb 6-9 for the DOE/MEXT and R-CCS meeting.
+During the summer of 2023, Ria Patel (First-year graduate student in Taufer’s group) interned at RIKEN, Japan, working with the Riken project members at that institution: Florence Tama and Osamu Miyashita. 
+Michela Taufer and Georgia Channing attended France's Joint Laboratory for Extreme Scale Computing (JLESC) meeting at INRIA Bordeaux from March 21 to 23, 2023.
 
 ## Impact and publications
-
+* Georgia Channings dedicated two years to this project with the University of Tennessee, Knoxville (UTK) team. In spring 2023, she applied for graduate fellowships. Her applications were successful, earning her three prestigious ones: the NSF Graduate Fellowship, which offers four years of support for students at U.S. institutions; an Oxford Fellowship; and a Cambridge Fellowship, both in the UK. Ultimately, she accepted the Oxford Fellowship and is currently a graduate student there.
+* The project's outcomes have been documented in a comprehensive paper accepted and published at the ICPP 2023 conference. Please see the full citation in the publications section below for more details. Michela Taufer and Georgia Channing participated in the ICPP conferences. At the event, Georgia took the stage to present the paper and also showcased a poster that detailed the same findings.
+* Additionally, Michela Taufer was a featured speaker at the 6th RCCS Symposium. You can find more information about the symposium here: https://www.r-ccs.riken.jp/R-CCS-Symposium/2024/. During her talk, "Analytics4NN: Accelerating Neural Architecture Search through Modeling and High-Performance Computing Techniques," she shared the insights gained from this project.
 * A paper at IEEE e-Science 2022 {% cite OlayaEtAl2022 --file jlesc.bib %}
 * A short paper at IEEE e-Science 2022 {% cite PatelEtAl2022 --file jlesc.bib %}
 * Talk: 14th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2022. Project Talk: Machine Learning-driven Predictive Analysis of Protein Diffraction Data.
@@ -79,8 +93,27 @@ Taufer will meet Tama and Miyashita during her visit at RIKEN on Deb 6-9 for the
 
 
 ## Future plans
-
-Looking ahead, we are working on understanding the qualities of successful neural architectures and visualizing them in an interactive software package. Currently, we are testing a NN-based solution with a suite of popular neural architecture search workflows and assessing their suitability for predicting protein structural properties. In Year 4, we will package the findings into our software framework and an associated Jupyter notebook to allow for the widespread use of our NNs in XFEL image analysis. Our package will integrate a multi-type output layer that predicts regression and classification results from a single run rather than two distinct runs. By the end of 2023, we will have the results of tests of our prediction engine with at least three different NASes on our XFEL image dataset. The results of all these tests will be available in a NN data commons. 
+Moving forward, we focus on identifying the characteristics of effective neural network (NN) designs and making them accessible through an interactive software tool. We will evaluate an NN-based approach by applying it across various established neural architecture search (NAS) methods to determine its effectiveness in predicting protein structures. We will incorporate these insights into our software platform, alongside a Jupyter notebook, to facilitate the broader application of our neural networks in analyzing XFEL (X-ray Free Electron Laser) images. Our software will feature an advanced output layer capable of delivering regression and classification outcomes in a single execution instead of requiring separate processes. By the end of 2024, we plan to complete testing of A4NN using at least three different NAS workflows on XFEL image data. The findings from these evaluations will be shared within the community at large.
 
 ## References
 [Github Repository](https://github.com/TauferLab/XPSI)
+
+**Papers:**
+Georgia Channing, Ria Patel, Paula Olaya, Ariel Rorabaugh, Osamu Miyashita, Silvina Caino-Lores, Catherine Schuman, Florence Tama, and Michela Taufer. 2023. Composable Workflow for Accelerating Neural Architecture Search Using In Situ Analytics for Protein Classification. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP '23). Association for Computing Machinery, New York, NY, USA. https://doi.org/10.1145/3605573.3605636
+
+**Posters:**
+Georgia Channing. Composable Workflow for Accelerating Neural Architecture Search Using In Situ Analytics for Protein Classification. Poster at the 52nd International Conference on Parallel Processing (ICPP '23). Salt Lake City, Utah, US. August 7-10, 2023.
+
+**Abstract:**
+Georgia Channing, Ria Patel, Ariel Rorabaugh, Silvina Caino-Lores, Catherine Schumann, Florence Tama, Osamu Miyashita, Michela Taufer. Generating Efficient Neural Networks for Protein Diffraction Data. Report of the 15th JLESC Workshop. INRIA, Bordeaux, France. March 21-23, 2023.
+
+**Talks:**
+Georgia Channing. Composable Workflow for Accelerating Neural Architecture Search Using In Situ Analytics for Protein Classification. Talk at the 52nd International Conference on Parallel Processing (ICPP '23). August 7-10, 2023, Salt Lake City, Utah, US.
+
+Michela Taufer. Analytics4NN: Accelerating Neural Architecture Search through Modeling and High-Performance Computing Techniques. Talk at the  6th R-CCS International Symposium. Jan. 29-30 2024, Kobe, Japan.
+
+Georgia Channing. Generating Efficient Neural Networks for Protein Diffraction Data. Talk at the 15th JLESC Workshop. March 21-23, 2023, INRIA, Bordeaux, France.
+
+**Reproducibility budgets:**
+We delivered two ACM reproducibility artifacts (artifact available and artifact evaluated-functional) for our work in the ICPP paper that contain metadata and results from our workflow executions on several protein diffraction datasets for different GPU distributions – (https://github.com/TauferLab/Reproducibility_A4NN_ICPP23) 
+
