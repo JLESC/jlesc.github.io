@@ -2,7 +2,7 @@
 layout: page_project
 title: Performance Portability in Flash-X
 date: 2023-01-25
-updated: 2023-01-25
+updated: 2024-02-05
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -28,10 +28,12 @@ Flash-X is a multiphysics simulation instrument designed for heterogeneous hardw
 Flash-X was released in February 2022, with several features of the performance portability layer integrated. The release won an R&D 100 award
  {% cite dubeyEtAl2022 --file jlesc.bib %}. A paper was presented at Heteropar 2021 on one of the tools, Milhoja, which manages the runtime. {% cite onealEtAl2022 --file jlesc.bib %} using a stand-alone simplified application.
 
+## Results for 2023
+This year we worked on various code generation tools that each focus on one aspect of code generation, but are needed to integrate the performance portability layer with various physics. We were able to integrate a full-featured hydrodynamics solver with two tools: CGKit and Milhoja and explored impact on performance.
 
 ## Visits and meetings
 
-{% person dubey_a %} will visit Riken in Feburary 2023. We met online on a bi-weekly basis until the release of Flash-X.
+{% person dubey_a %} visited Riken in Feburary 2023. We continued to meet online on a regular basis and when personnel are at the same conferences.
 
 ## Impact and publications
 
@@ -40,7 +42,7 @@ Flash-X was released in February 2022, with several features of the performance 
 
 ## Future plans
 
-Next steps include integrating Milhoja with more complex physics in Flash-X, and also integrating it with other tools in the performance portability layer.
+Continue to integrate Milhoja and CGKit with more complex physics in Flash-X and continue to explore performance.
 
 
 ## References
