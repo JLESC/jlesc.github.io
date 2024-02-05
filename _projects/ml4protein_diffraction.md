@@ -99,7 +99,7 @@ Moving forward, we focus on identifying the characteristics of effective neural 
 [Github Repository](https://github.com/TauferLab/XPSI)
 
 **Papers:**
-Georgia Channing, Ria Patel, Paula Olaya, Ariel Rorabaugh, Osamu Miyashita, Silvina Caino-Lores, Catherine Schuman, Florence Tama, and Michela Taufer. 2023. Composable Workflow for Accelerating Neural Architecture Search Using In Situ Analytics for Protein Classification. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP '23). Association for Computing Machinery, New York, NY, USA. https://doi.org/10.1145/3605573.3605636
+{% cite ChanningEtAl2023 --file jlesc.bib %}
 
 **Posters:**
 Georgia Channing. Composable Workflow for Accelerating Neural Architecture Search Using In Situ Analytics for Protein Classification. Poster at the 52nd International Conference on Parallel Processing (ICPP '23). Salt Lake City, Utah, US. August 7-10, 2023.
