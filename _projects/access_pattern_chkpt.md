@@ -60,7 +60,7 @@ In Year 4 of this project, we will investigate using Merkle trees as metadata fo
  * **Poster:** **Nigel Tan**, Michela Taufer. Modernizing Simulation Software for the Exascale Era. 12 posters selected. Supercomputing 2023 Doctoral Showcase, 2023.
  * **Talk:** **Michela Taufer**. Scalable GPU-Accelerated Incremental Checkpointing of Sparsely Updated Data. Mini-symposium on “Performance in I/O and Fault Tolerance for Scientific Applications.” Platform for Advanced Scientific Computing (PASC) Conference, June 26-28, 2023, Davos, Switzerland.
  * **Nigel Tan** was selected as a lead student volunteer at the Supercomputing 2023 conference
- * **Publication:** **Nigel Tan**, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.
+ * **Publication:** {% cite TanEtAl2023 --file jlesc.bib %}
  * **Talk:** **Nigel Tan**, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.
  * **Poster:** **Nigel Tan**, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.
  * **Travel award:** **Nigel Tan** was awarded a travel grant for attending ICPP in Salt Lake City UT.
@@ -72,7 +72,7 @@ In Year 4 of this project, we will investigate using Merkle trees as metadata fo
 We will study how our checkpointing can dynamically guide the duplication process at runtime. We will improve our incremental checkpoint restart algorithm to maximize available memory access pattern information. We will test new applications and access patterns to improve checkpoint performance for various applications relevant to the JLESC community.
 
 ## References
-N. Tan, B. Nicolae, J. Luettgau, J. Marquez, K. Teranishi, N. Morales, S. Bhowmick, M. Taufer, and F. Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.
+{% bibliography --cited --file jlesc.bib  %}
 
 ## Reproducibility badges
 We delivered three ACM reproducibility artifacts ( result replicated, artifact available, and artifact evaluated-functional) for our work in the ICPP paper that contains metadata and results from our workflow executions for different GPU distributions and compression techniques – (https://github.com/TauferLab/Reproducibility_Scalar_GPU_Dedup_ICPP23_Results)  
