@@ -1,8 +1,8 @@
 ---
 layout: page_project
 title: Optimizing Checkpoint Restart Through Access Pattern Awareness
-date: 2022-09-22
-updated: 2022-09-22
+date: 2024-02-05
+updated: 2024-02-05
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -14,7 +14,6 @@ keywords:
 head: nicolae_b
 members: 
   - tan_n
-  - luettgau_j
   - cappello_f
   - taufer_m
 ---
@@ -41,17 +40,39 @@ We used our method to checkpoint the graph alignment application ORANGES, demons
 
 In Year 3 of this project, we will compare our method with existing compression methods, investigate alternative hash functions for lossy deduplication, and evaluate other applications that exhibit sparse patterns or different patterns that gradually change over time.
 
+## Results for 2023/2024
+
+In Year 3 of this project, we published our novel metadata compaction method at the 52nd International Conference on Parallel Processing (ICPP). We use our method to improve the de-duplication ratio and de-duplication throughput for graph-matching applications by significant margins (up to orders of magnitude) compared with other incremental checkpointing methods. Unlike high-throughput compression techniques, our method's performance improves with increasing checkpointing frequency.
+
+Nigel applied for and received a student travel grant to attend ICPP 2023 in person. Nigel presented the paper and a poster at the Salt Lake City, UT conference. We collected valuable feedback on potential future paths and suggestions for evaluating performance. Nigel presented this work as part of his doctoral showcase poster at Supercomputing 2023. Nigel formed his committee and successfully defended his thesis proposal.
+
+We began investigating the use of checkpoint histories for reproducibility purposes. By comparing the intermediate states between application runs, we better understand the non-deterministic behavior, including when and where the runs diverge from one another. We are engaging with undergraduate and graduate student researchers. Providing mentorship and training in de-duplication and HPC concepts. Jay Ashworth, an early career graduate student at UTK, joined the project.
+
+In Year 4 of this project, we will investigate using Merkle trees as metadata for accelerating comparisons of checkpoints between different runs. Comparing intermediate checkpoints from different runs will help quantify and verify the reproducibility of applications. We further augment our hash-based techniques with a fuzzy hash well suited for floating-point data.
+
 ## Visits and meetings
  * Nigel Tan spent the summer of 2022 at ANL working on the project
  * The team meets weekly during the entire year
+ * The team from UTK and ANL met in person at the ICPP 2023 in Salt Lake City in August 2023 and at SC23 in Denver, Colorado in November 2023.
 
 ## Impact and publications
- * Talk: **Nigel Tan**, Elisabeth Giem, Matthew Whitlock, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer. 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: Towards Access Pattern Aware Checkpointing for Kokkos Applications
- * Poster: **Nigel Tan**, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, and Michela Taufer, “Towards Access Pattern Aware Checkpointing For Kokkos Applications,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, St. Louis, MO, 2021.
- * Talk: **Nigel Tan**, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer, SIAM Parallel Processing 22 Conference, 2022. Towards Access Pattern Aware Checkpointing For Kokkos Applications
+ * **Talk:** **Nigel Tan**, Michela Taufer. Modernizing Simulation Software for the Exascale Era. Supercomputing 2023 Doctoral Showcase, 2023.
+ * **Poster:** **Nigel Tan**, Michela Taufer. Modernizing Simulation Software for the Exascale Era. 12 posters selected. Supercomputing 2023 Doctoral Showcase, 2023.
+ * **Talk:** **Michela Taufer**. Scalable GPU-Accelerated Incremental Checkpointing of Sparsely Updated Data. Mini-symposium on “Performance in I/O and Fault Tolerance for Scientific Applications.” Platform for Advanced Scientific Computing (PASC) Conference, June 26-28, 2023, Davos, Switzerland.
+ * **Nigel Tan** was selected as a lead student volunteer at the Supercomputing 2023 conference
+ * **Publication:** **Nigel Tan**, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.
+ * **Talk:** **Nigel Tan**, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.
+ * **Poster:** **Nigel Tan**, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.
+ * **Travel award:** **Nigel Tan** was awarded a travel grant for attending ICPP in Salt Lake City UT.
+ * **Talk:** **Nigel Tan**, Elisabeth Giem, Matthew Whitlock, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer. 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: Towards Access Pattern Aware Checkpointing for Kokkos Applications
+ * **Poster:** **Nigel Tan**, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, and Michela Taufer, “Towards Access Pattern Aware Checkpointing For Kokkos Applications,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, St. Louis, MO, 2021.
+ * **Talk:** **Nigel Tan**, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer, SIAM Parallel Processing 22 Conference, 2022. Towards Access Pattern Aware Checkpointing For Kokkos Applications
 
 ## Future plans
-We will study how our checkpointing can dynamically guide the duplication process at runtime. We will improve our incremental checkpoint restart algorithm to take advantage of available memory access pattern information. We will test new applications and access patterns to improve checkpoint performance for various applications relevant to the JLESC community.
+We will study how our checkpointing can dynamically guide the duplication process at runtime. We will improve our incremental checkpoint restart algorithm to maximize available memory access pattern information. We will test new applications and access patterns to improve checkpoint performance for various applications relevant to the JLESC community.
 
 ## References
+N. Tan, B. Nicolae, J. Luettgau, J. Marquez, K. Teranishi, N. Morales, S. Bhowmick, M. Taufer, and F. Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.
 
+## Reproducibility badges
+We delivered three ACM reproducibility artifacts ( result replicated, artifact available, and artifact evaluated-functional) for our work in the ICPP paper that contains metadata and results from our workflow executions for different GPU distributions and compression techniques – (https://github.com/TauferLab/Reproducibility_Scalar_GPU_Dedup_ICPP23_Results)  
