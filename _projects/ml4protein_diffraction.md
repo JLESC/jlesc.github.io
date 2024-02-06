@@ -117,3 +117,4 @@ Georgia Channing. Generating Efficient Neural Networks for Protein Diffraction D
 **Reproducibility budgets:**
 We delivered two ACM reproducibility artifacts (artifact available and artifact evaluated-functional) for our work in the ICPP paper that contain metadata and results from our workflow executions on several protein diffraction datasets for different GPU distributions – (https://github.com/TauferLab/Reproducibility_A4NN_ICPP23) 
 
+{% bibliography --file external/ml4protein_diffraction.bib %}
