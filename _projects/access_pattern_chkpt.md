@@ -67,9 +67,13 @@ In Year 4 of this project, we will investigate using Merkle trees as metadata fo
  * **Talk:** **Nigel Tan**, Elisabeth Giem, Matthew Whitlock, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer. 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: Towards Access Pattern Aware Checkpointing for Kokkos Applications
  * **Poster:** **Nigel Tan**, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, and Michela Taufer, “Towards Access Pattern Aware Checkpointing For Kokkos Applications,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, St. Louis, MO, 2021.
  * **Talk:** **Nigel Tan**, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer, SIAM Parallel Processing 22 Conference, 2022. Towards Access Pattern Aware Checkpointing For Kokkos Applications
- * **Reproducibility badges**:We delivered three ACM reproducibility artifacts ( result replicated, artifact available, and artifact evaluated-functional) for our work in the ICPP paper that contains metadata and results from our workflow executions for different GPU distributions and compression techniques – https://github.com/TauferLab/Reproducibility_Scalar_GPU_Dedup_ICPP23_Results 
+ * **Reproducibility badges**:We delivered three ACM reproducibility artifacts ( result replicated, artifact available, and artifact evaluated-functional) for our work in the ICPP paper that contains metadata and results from our workflow executions for different GPU distributions and compression techniques – https://github.com/TauferLab/Reproducibility_Scalar_GPU_Dedup_ICPP23_Results
+
+{% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
 We will study how our checkpointing can dynamically guide the duplication process at runtime. We will improve our incremental checkpoint restart algorithm to maximize available memory access pattern information. We will test new applications and access patterns to improve checkpoint performance for various applications relevant to the JLESC community.
 
 ## References
+
+{% bibliography --file external/access_pattern_chkpt.bib %}
