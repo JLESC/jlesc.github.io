@@ -78,7 +78,7 @@ Michela Taufer and Georgia Channing attended France's Joint Laboratory for Extre
 
 ## Impact and publications
 * Georgia Channings dedicated two years to this project with the University of Tennessee, Knoxville (UTK) team. In spring 2023, she applied for graduate fellowships. Her applications were successful, earning her three prestigious ones: the NSF Graduate Fellowship, which offers four years of support for students at U.S. institutions; an Oxford Fellowship; and a Cambridge Fellowship, both in the UK. Ultimately, she accepted the Oxford Fellowship and is currently a graduate student there.
-* The project's outcomes have been documented in a comprehensive paper accepted and published at the ICPP 2023 conference. Please see the full citation in the publications section below for more details. Michela Taufer and Georgia Channing participated in the ICPP conferences. At the event, Georgia took the stage to present the paper and also showcased a poster that detailed the same findings.
+* The project's outcomes have been documented in a comprehensive paper accepted and published at the ICPP 2023 conference: {% cite ChanningEtAl2023 --file jlesc.bib %}. Michela Taufer and Georgia Channing participated in the ICPP conferences. At the event, Georgia took the stage to present the paper and also showcased a poster that detailed the same findings: 
 * Additionally, Michela Taufer was a featured speaker at the 6th RCCS Symposium. You can find more information about the symposium here: https://www.r-ccs.riken.jp/R-CCS-Symposium/2024/. During her talk, "Analytics4NN: Accelerating Neural Architecture Search through Modeling and High-Performance Computing Techniques," she shared the insights gained from this project.
 * A paper at IEEE e-Science 2022 {% cite OlayaEtAl2022 --file jlesc.bib %}
 * A short paper at IEEE e-Science 2022 {% cite PatelEtAl2022 --file jlesc.bib %}
@@ -88,6 +88,13 @@ Michela Taufer and Georgia Channing attended France's Joint Laboratory for Extre
 * Talk: 12th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: XPSI: XFEL-based Protein Structure Identifier.
 * Poster: Paula Olaya, Michael R. Wyatt II, Silvina Caino-Lores, Florence Tama, Osamu Miyashita, Piotr Luszczek, and Michela Taufer, “XPSI: X-ray Free Electron Laser based Protein Structure Identifier,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, Atlanta, GA, 2020.
 * Talk: 11th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2020. Short Talk: XPSI: XFEL-based Protein Structure Identifier.
+* [Github Repository](https://github.com/TauferLab/XPSI)
+* Poster: Georgia Channing. Composable Workflow for Accelerating Neural Architecture Search Using In Situ Analytics for Protein Classification. Poster at the 52nd International Conference on Parallel Processing (ICPP '23). Salt Lake City, Utah, US. August 7-10, 2023.
+* Talk: Michela Taufer. Analytics4NN: Accelerating Neural Architecture Search through Modeling and High-Performance Computing Techniques. Talk at the  6th R-CCS International Symposium. Jan. 29-30 2024, Kobe, Japan.
+* Talk: Georgia Channing. Generating Efficient Neural Networks for Protein Diffraction Data. Talk at the 15th JLESC Workshop. March 21-23, 2023, INRIA, Bordeaux, France.
+
+**Reproducibility badges:**
+We delivered two ACM reproducibility artifacts (artifact available and artifact evaluated-functional) for our work in the ICPP paper that contain metadata and results from our workflow executions on several protein diffraction datasets for different GPU distributions – (https://github.com/TauferLab/Reproducibility_A4NN_ICPP23) 
 
 {% bibliography --cited --file jlesc.bib %}
 
@@ -96,24 +103,5 @@ Michela Taufer and Georgia Channing attended France's Joint Laboratory for Extre
 Moving forward, we focus on identifying the characteristics of effective neural network (NN) designs and making them accessible through an interactive software tool. We will evaluate an NN-based approach by applying it across various established neural architecture search (NAS) methods to determine its effectiveness in predicting protein structures. We will incorporate these insights into our software platform, alongside a Jupyter notebook, to facilitate the broader application of our neural networks in analyzing XFEL (X-ray Free Electron Laser) images. Our software will feature an advanced output layer capable of delivering regression and classification outcomes in a single execution instead of requiring separate processes. By the end of 2024, we plan to complete testing of A4NN using at least three different NAS workflows on XFEL image data. The findings from these evaluations will be shared within the community at large.
 
 ## References
-[Github Repository](https://github.com/TauferLab/XPSI)
 
-**Papers:**
-{% cite ChanningEtAl2023 --file jlesc.bib %}
-
-**Posters:**
-Georgia Channing. Composable Workflow for Accelerating Neural Architecture Search Using In Situ Analytics for Protein Classification. Poster at the 52nd International Conference on Parallel Processing (ICPP '23). Salt Lake City, Utah, US. August 7-10, 2023.
-
-**Abstract:**
-Georgia Channing, Ria Patel, Ariel Rorabaugh, Silvina Caino-Lores, Catherine Schumann, Florence Tama, Osamu Miyashita, Michela Taufer. Generating Efficient Neural Networks for Protein Diffraction Data. Report of the 15th JLESC Workshop. INRIA, Bordeaux, France. March 21-23, 2023.
-
-**Talks:**
-Georgia Channing. Composable Workflow for Accelerating Neural Architecture Search Using In Situ Analytics for Protein Classification. Talk at the 52nd International Conference on Parallel Processing (ICPP '23). August 7-10, 2023, Salt Lake City, Utah, US.
-
-Michela Taufer. Analytics4NN: Accelerating Neural Architecture Search through Modeling and High-Performance Computing Techniques. Talk at the  6th R-CCS International Symposium. Jan. 29-30 2024, Kobe, Japan.
-
-Georgia Channing. Generating Efficient Neural Networks for Protein Diffraction Data. Talk at the 15th JLESC Workshop. March 21-23, 2023, INRIA, Bordeaux, France.
-
-**Reproducibility budgets:**
-We delivered two ACM reproducibility artifacts (artifact available and artifact evaluated-functional) for our work in the ICPP paper that contain metadata and results from our workflow executions on several protein diffraction datasets for different GPU distributions – (https://github.com/TauferLab/Reproducibility_A4NN_ICPP23) 
-
+{% bibliography --file external/ml4protein_diffraction.bib %}
