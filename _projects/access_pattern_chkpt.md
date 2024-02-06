@@ -72,7 +72,8 @@ In Year 4 of this project, we will investigate using Merkle trees as metadata fo
 We will study how our checkpointing can dynamically guide the duplication process at runtime. We will improve our incremental checkpoint restart algorithm to maximize available memory access pattern information. We will test new applications and access patterns to improve checkpoint performance for various applications relevant to the JLESC community.
 
 ## References
-{% bibliography --cited --file jlesc.bib %}
+
+{% bibliography --file external/access_pattern_chkpt.bib %}
 
 ## Reproducibility badges
 We delivered three ACM reproducibility artifacts ( result replicated, artifact available, and artifact evaluated-functional) for our work in the ICPP paper that contains metadata and results from our workflow executions for different GPU distributions and compression techniques – (https://github.com/TauferLab/Reproducibility_Scalar_GPU_Dedup_ICPP23_Results)  
