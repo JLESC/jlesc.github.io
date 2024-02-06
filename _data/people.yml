@@ -737,6 +737,15 @@ doblas_reyes_f:
   email: francisco.doblas-reyes@bsc.es
   homepage: https://www.bsc.es/about-bsc/staff-directory/doblas-reyes-francisco-j
 
+domke_j:
+  sur_name: Domke
+  given_name: Jens
+  affiliation: riken
+  position: permanent
+  topics: Benchmarking
+  email: jens.domke@riken.jp
+  homepage: https://domke.gitlab.io/
+
 dongarra_j:
   sur_name: Dongarra
   given_name: Jack
