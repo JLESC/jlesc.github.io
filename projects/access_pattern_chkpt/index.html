@@ -143,10 +143,6 @@
             </span>
           
             <span class="clearfix">
-              <span class="person given-name">Jakob</span> <span class="person sur-name">Luettgau</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
-            </span>
-          
-            <span class="clearfix">
               <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
             </span>
           
@@ -175,10 +171,12 @@
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20222023">Results for 2022/2023</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20232024">Results for 2023/2024</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
+<li class="toc-entry toc-h2"><a href="#reproducibility-badges">Reproducibility badges</a></li>
 </ul>
         </section>
       </aside>
@@ -209,28 +207,112 @@ VeloC addresses these resilience challenges: it takes advantage of the different
 
 <p>In Year 3 of this project, we will compare our method with existing compression methods, investigate alternative hash functions for lossy deduplication, and evaluate other applications that exhibit sparse patterns or different patterns that gradually change over time.</p>
 
+<h2 id="results-for-20232024">
+<a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
+
+<p>In Year 3 of this project, we published our novel metadata compaction method at the 52nd International Conference on Parallel Processing (ICPP). We use our method to improve the de-duplication ratio and de-duplication throughput for graph-matching applications by significant margins (up to orders of magnitude) compared with other incremental checkpointing methods. Unlike high-throughput compression techniques, our method’s performance improves with increasing checkpointing frequency.</p>
+
+<p>Nigel applied for and received a student travel grant to attend ICPP 2023 in person. Nigel presented the paper and a poster at the Salt Lake City, UT conference. We collected valuable feedback on potential future paths and suggestions for evaluating performance. Nigel presented this work as part of his doctoral showcase poster at Supercomputing 2023. Nigel formed his committee and successfully defended his thesis proposal.</p>
+
+<p>We began investigating the use of checkpoint histories for reproducibility purposes. By comparing the intermediate states between application runs, we better understand the non-deterministic behavior, including when and where the runs diverge from one another. We are engaging with undergraduate and graduate student researchers. Providing mentorship and training in de-duplication and HPC concepts. Jay Ashworth, an early career graduate student at UTK, joined the project.</p>
+
+<p>In Year 4 of this project, we will investigate using Merkle trees as metadata for accelerating comparisons of checkpoints between different runs. Comparing intermediate checkpoints from different runs will help quantify and verify the reproducibility of applications. We further augment our hash-based techniques with a fuzzy hash well suited for floating-point data.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
 <ul>
   <li>Nigel Tan spent the summer of 2022 at ANL working on the project</li>
   <li>The team meets weekly during the entire year</li>
+  <li>The team from UTK and ANL met in person at the ICPP 2023 in Salt Lake City in August 2023 and at SC23 in Denver, Colorado in November 2023.</li>
 </ul>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 <ul>
-  <li>Talk: <strong>Nigel Tan</strong>, Elisabeth Giem, Matthew Whitlock, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer. 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: Towards Access Pattern Aware Checkpointing for Kokkos Applications</li>
-  <li>Poster: <strong>Nigel Tan</strong>, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, and Michela Taufer, “Towards Access Pattern Aware Checkpointing For Kokkos Applications,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, St. Louis, MO, 2021.</li>
-  <li>Talk: <strong>Nigel Tan</strong>, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer, SIAM Parallel Processing 22 Conference, 2022. Towards Access Pattern Aware Checkpointing For Kokkos Applications</li>
+  <li>
+<strong>Talk:</strong> <strong>Nigel Tan</strong>, Michela Taufer. Modernizing Simulation Software for the Exascale Era. Supercomputing 2023 Doctoral Showcase, 2023.</li>
+  <li>
+<strong>Poster:</strong> <strong>Nigel Tan</strong>, Michela Taufer. Modernizing Simulation Software for the Exascale Era. 12 posters selected. Supercomputing 2023 Doctoral Showcase, 2023.</li>
+  <li>
+<strong>Talk:</strong> <strong>Michela Taufer</strong>. Scalable GPU-Accelerated Incremental Checkpointing of Sparsely Updated Data. Mini-symposium on “Performance in I/O and Fault Tolerance for Scientific Applications.” Platform for Advanced Scientific Computing (PASC) Conference, June 26-28, 2023, Davos, Switzerland.</li>
+  <li>
+<strong>Nigel Tan</strong> was selected as a lead student volunteer at the Supercomputing 2023 conference</li>
+  <li>
+<strong>Publication:</strong> <a href="#TanEtAl2023">(Tan, Nigel and Luettgau, Jakob and Marquez, Jack and Teranishi, Keita and Morales, Nicolas and Bhowmick, Sanjukta and Cappello, Franck and Taufer, Michela and Nicolae, Bogdan 2023)</a>
+</li>
+  <li>
+<strong>Talk:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.</li>
+  <li>
+<strong>Poster:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.</li>
+  <li>
+<strong>Travel award:</strong> <strong>Nigel Tan</strong> was awarded a travel grant for attending ICPP in Salt Lake City UT.</li>
+  <li>
+<strong>Talk:</strong> <strong>Nigel Tan</strong>, Elisabeth Giem, Matthew Whitlock, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer. 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: Towards Access Pattern Aware Checkpointing for Kokkos Applications</li>
+  <li>
+<strong>Poster:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, and Michela Taufer, “Towards Access Pattern Aware Checkpointing For Kokkos Applications,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, St. Louis, MO, 2021.</li>
+  <li>
+<strong>Talk:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer, SIAM Parallel Processing 22 Conference, 2022. Towards Access Pattern Aware Checkpointing For Kokkos Applications</li>
 </ul>
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
-<p>We will study how our checkpointing can dynamically guide the duplication process at runtime. We will improve our incremental checkpoint restart algorithm to take advantage of available memory access pattern information. We will test new applications and access patterns to improve checkpoint performance for various applications relevant to the JLESC community.</p>
+<p>We will study how our checkpointing can dynamically guide the duplication process at runtime. We will improve our incremental checkpoint restart algorithm to maximize available memory access pattern information. We will test new applications and access patterns to improve checkpoint performance for various applications relevant to the JLESC community.</p>
 
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<ol class="bibliography"><li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          TanEtAl2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTanEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseTanEtAl2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTanEtAl2023Abstract" aria-expanded="false" aria-controls="collapseTanEtAl2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
 
+    <div class="bibtex-ref-entry">
+      <span id="TanEtAl2023">Tan, Nigel and Luettgau, Jakob and Marquez, Jack and Teranishi, Keita and Morales, Nicolas and Bhowmick, Sanjukta and Cappello, Franck and Taufer, Michela and Nicolae, Bogdan. 2023. “Scalable Incremental Checkpointing Using GPU-Accelerated De-Duplication.” In <i>Proceedings of the 52nd International Conference on Parallel Processing</i>, 665–74. ICPP ’23. New York, NY, USA: Association for Computing Machinery. doi:10.1145/3605573.3605639.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseTanEtAl2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{TanEtAl2023,
+  address = {New York, NY, USA},
+  author = {{Tan, Nigel and Luettgau, Jakob and Marquez, Jack and Teranishi, Keita and Morales, Nicolas and Bhowmick, Sanjukta and Cappello, Franck and Taufer, Michela and Nicolae, Bogdan}},
+  booktitle = {{Proceedings of the 52nd International Conference on Parallel Processing}},
+  doi = {10.1145/3605573.3605639},
+  isbn = {9798400708435},
+  keywords = {incremental storage, de-duplication, data versioning, GPU parallelization, Checkpointing},
+  location = {Salt Lake City, UT, USA},
+  numpages = {10},
+  pages = {665–674},
+  publisher = {{Association for Computing Machinery}},
+  series = {ICPP '23},
+  title = {{Scalable Incremental Checkpointing using GPU-Accelerated De-Duplication}},
+  url = {https://doi.org/10.1145/3605573.3605639},
+  year = {2023}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="reproducibility-badges">
+<a id="reproducibility-badges" class="anchor" href="#reproducibility-badges" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reproducibility badges</h2>
+<p>We delivered three ACM reproducibility artifacts ( result replicated, artifact available, and artifact evaluated-functional) for our work in the ICPP paper that contains metadata and results from our workflow executions for different GPU distributions and compression techniques – (https://github.com/TauferLab/Reproducibility_Scalar_GPU_Dedup_ICPP23_Results)</p>
 
       </div>
     </div>
