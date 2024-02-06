@@ -195,7 +195,7 @@
 
 <h2 id="results-for-20232024">
 <a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
-<p>This year we worked on various code generation tools that each focus on one aspect of code generation, but are needed to integrate the performance portability layer with various physics. We were able to integrate a full-featured hydrodynamics solver with two tools: CGKit and Milhoja and explored impact on performance.</p>
+<p>This year we worked on various code generation tools that each focus on one aspect of code generation, but are needed to integrate the performance portability layer with various physics. We used the tool CGKit for generated different control flow variants of the primary hydrodynamics solver in Flash-X. The results were put in a paper that was submitted to the FGCS special issue on jlesc. The paper is also on arxiv <a href="#rudi2024cgkit">(Rudi et al. 2024)</a>. We were also able to integrate a full-featured hydrodynamics solver with CGKit (for control flow) and Milhoja (for data movement). We are currently exploring performance of the code with these tools.</p>
 
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
@@ -206,6 +206,48 @@
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          rudi2024cgkit
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapserudi2024cgkitBibtex" aria-expanded="false" aria-controls="collapserudi2024cgkitBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapserudi2024cgkitAbstract" aria-expanded="false" aria-controls="collapserudi2024cgkitAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="rudi2024cgkit">Rudi, Johann, Youngjun Lee, Aidan H. Chadha, Mohamed Wahib, Klaus Weide, Jared P. O’Neal, and Anshu Dubey. 2024. “CG-Kit: Code Generation Toolkit for Performant and Maintainable Variants of Source Code Applied to Flash-X Hydrodynamics Simulations.”</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapserudi2024cgkitBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{rudi2024cgkit,
+  title = {CG-Kit: Code Generation Toolkit for Performant and Maintainable Variants of Source Code Applied to Flash-X Hydrodynamics Simulations},
+  author = {Rudi, Johann and Lee, Youngjun and Chadha, Aidan H. and Wahib, Mohamed and Weide, Klaus and O'Neal, Jared P. and Dubey, Anshu},
+  year = {2024},
+  eprint = {2401.03378},
+  archiveprefix = {arXiv},
+  note = {submitted to FGCS},
+  primaryclass = {cs.DC}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
