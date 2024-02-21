@@ -170,6 +170,7 @@
           <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
 <li class="toc-entry toc-h2"><a href="#results-for-20162022">Results for 2016–2022</a></li>
+<li class="toc-entry toc-h2"><a href="#results-for-20232024">Results for 2023/2024</a></li>
 <li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
 <li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
 <li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
@@ -181,7 +182,7 @@
         
         <h2 id="research-topic-and-goals">
 <a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
-<p>Our goal is to pursue development of Algorithmic Differentiation (AD) tools, to enhance their applicability to HPC codes. We focus on the adjoint mode of AD, which is the most effective way of obtaining gradients of large HPC simulations. We focus on AD tools by source transformation because of the efficiency of the code they produce. One of our goals is to implement cooperation at the algorithmic level between OpenAD, the AD tool developed at ANL and Tapenade, the AD tool developed at INRIA. Another goal is to develop and maintain AMPI, and open-source library wrapped around MPI that implements the adjoint operations corresponding to the most commonly used MPI communication primitives, and to develop a methodology to compute adjoints of OpenMP-parallel programs, relying on a runtime support library for adjoint OpenMP that can be shared between OpenAD and Tapenade.</p>
+<p>Our goal is to pursue development of Algorithmic Differentiation (AD) tools, to enhance their applicability to HPC codes. We focus on the adjoint mode of AD, which is the most effective way of obtaining gradients of large HPC simulations. We focus on AD tools by source transformation because of the efficiency of the code they produce.</p>
 
 <h2 id="results-for-20162022">
 <a id="results-for-20162022" class="anchor" href="#results-for-20162022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016–2022</h2>
@@ -204,9 +205,13 @@
 
 <p>We organized a minitutorial <em>Automatic Differentiation as a Tool for Computational Science</em> at the 2021 SIAM Conference on Computational Science and Engineering. The tutorial broadly provided an introduction to AD as well as advanced topics such as memory requirements and parallelism. We demonstrated the use of AD tools and developed resources such as Jupyter notebooks for hands-on use on Google Colab by the attendees <a href="#NarayananEtAl2021">(Hascoët et al. 2021)</a>.</p>
 
+<h2 id="results-for-20232024">
+<a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
+<p>We have successfully used Tapenade to differentiate the Massachusetts Institute of Technology General Circulation Model (MITgcm)<a href="#GaikwadEtAl2024">(Gaikwad et al. 2024)</a>, a code which is widely used by the climate science community to simulate planetary atmosphere and ocean circulations. A defining feature of the MITgcm is that it has been developed to be compatible with an algorithmic differentiation (AD) tool, TAF, enabling the generation of tangent-linear and adjoint models.  A subset of MITgcm was also previously differentiated using OpenAD. The tangent-linear and adjoint models provide gradient information which enables dynamics-based sensitivity and attribution studies, state and parameter estimation, and rigorous uncertainty quantification. Importantly, gradient information is essential for computing comprehensive sensitivities and performing efficient large-scale data assimilation, ensuring that observations collected from satellites and in-situ measuring instruments can be effectively used to optimize a large uncertain control space. As a result, the MITgcm forms the dynamical core of a key data assimilation product employed by the physical oceanography research community: Estimating the Circulation and Climate of the Ocean (ECCO) state estimate. Although MITgcm and ECCO are used extensively within the research community, the AD tool TAF is proprietary and hence inaccessible to a large proportion of these users.</p>
+
 <h2 id="visits-and-meetings">
 <a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
-<p>Frequent e-mail exchanges between <span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) and <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), and twice-weekly video meetings between <span class="person given-name">Jan</span> <span class="person sur-name">Hückelheim</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) and <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>). <span class="person given-name">Jan</span> <span class="person sur-name">Hückelheim</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) has visited INRIA in 2019. In 2019, <span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) met with <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) for joint work on MITgcm. <span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>), <span class="person given-name">Jan</span> <span class="person sur-name">Hückelheim</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>), <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), <span class="person given-name">Paul</span> <span class="person sur-name">Hovland</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) frequently met virtually in 2020 and 2021 to prepare for the SIAM CSE21 minitutorial.</p>
+<p>Frequent e-mail exchanges between <span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) and <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), and twice-weekly video meetings between <span class="person given-name">Jan</span> <span class="person sur-name">Hückelheim</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) and <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>). <span class="person given-name">Jan</span> <span class="person sur-name">Hückelheim</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>), and <span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) visited INRIA in 2023 when EuroAD was hosted there.</p>
 
 <h2 id="impact-and-publications">
 <a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
@@ -216,6 +221,7 @@
   <li>In 2017, we have given a talk in USNCCM, included our work at the DOE Applied Math PI meeting in a poster.</li>
   <li>In 2021, we have submitted a paper on automatic differentiation of OpenMP programs;</li>
   <li>In 2021, we have organized a minitutorial at SIAM CSE21.</li>
+  <li>In 2023, we have submitted a paper on the differentiation of MITgcm using Tapenade.</li>
 </ul>
 
 <!--
@@ -227,6 +233,53 @@
 -->
 
 <ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          GaikwadEtAl2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseGaikwadEtAl2024Bibtex" aria-expanded="false" aria-controls="collapseGaikwadEtAl2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseGaikwadEtAl2024Abstract" aria-expanded="false" aria-controls="collapseGaikwadEtAl2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="GaikwadEtAl2024">Gaikwad, Shreyas Sunil, Sri Hari Krishna Narayanan, Laurent Hascoet, Jean-Michel Campin, Helen Pillar, An Nguyen, Jan Hückelheim, Paul Hovland, and Patrick Heimbach. 2024. “MITgcm-AD v2: Open Source Tangent Linear and Adjoint Modeling Framework for the Oceans and Atmosphere Enabled by the Automatic Differentiation Tool Tapenade.” <i>ArXiv e-Prints</i>, January, arXiv:2401.11952. doi:10.48550/arXiv.2401.11952.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseGaikwadEtAl2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{GaikwadEtAl2024,
+  author = {{Gaikwad}, Shreyas Sunil and {Krishna Narayanan}, Sri Hari and {Hascoet}, Laurent and {Campin}, Jean-Michel and {Pillar}, Helen and {Nguyen}, An and {H{\"u}ckelheim}, Jan and {Hovland}, Paul and {Heimbach}, Patrick},
+  title = {{{MITgcm-AD} v2: Open source tangent linear and adjoint modeling framework for the oceans and atmosphere enabled by the Automatic Differentiation tool Tapenade}},
+  journal = {arXiv e-prints},
+  keywords = {Physics - Atmospheric and Oceanic Physics},
+  year = {2024},
+  month = jan,
+  eid = {arXiv:2401.11952},
+  pages = {arXiv:2401.11952},
+  doi = {10.48550/arXiv.2401.11952},
+  archiveprefix = {arXiv},
+  eprint = {2401.11952},
+  primaryclass = {physics.ao-ph}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
 <li>
 <div class="bibtex-entry-container">
   <div>
@@ -413,7 +466,7 @@
 
 <h2 id="future-plans">
 <a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
-<p>We plan to continue to integrate Tapenade and OpenAD infrastructures. Additionally, we plan to explore other
+<p>We plan to continue to work on applying and improving Tapenade. Additionally, we plan to explore other
 topics in the field of algorithmic differentiation.</p>
 
 <h2 id="references">
