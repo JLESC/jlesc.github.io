@@ -203,10 +203,10 @@ module Jekyll
           output += "\n"
           # Note: reorder the status keywords here to enforce a different ordering in the report
           # exclude reports from the final document HERE
-          %w(running starting suspended closing finished).each do |status|
+          %w(running starting).each do |status|
             topic_hash[:projects].each do |project|
               collections['projects'].docs.each do |project_doc|
-                if project_doc.data['updated'].year >= Date.today.year - 5
+                if project_doc.data['updated'].year >= Date.today.year - 1
                   if project_doc.data['status'] == status and project_doc.data['slug'] == project
                     output += "\\input{projects/#{project}}\n"
                   end
