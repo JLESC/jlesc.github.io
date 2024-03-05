@@ -737,6 +737,15 @@ doblas_reyes_f:
   email: francisco.doblas-reyes@bsc.es
   homepage: https://www.bsc.es/about-bsc/staff-directory/doblas-reyes-francisco-j
 
+domke_j:
+  sur_name: Domke
+  given_name: Jens
+  affiliation: riken
+  position: permanent
+  topics: Benchmarking
+  email: jens.domke@riken.jp
+  homepage: https://domke.gitlab.io/
+
 dongarra_j:
   sur_name: Dongarra
   given_name: Jack
@@ -2083,6 +2092,15 @@ padoin_e:
   email:  elpadoin@inf.ufrgs.br
   homepage:
 
+papka_m:
+  sur_name: Papka
+  given_name: Michael E.
+  affiliation: anl
+  position: permanent
+  topics:
+  email: papka@anl.gov
+  homepage: https://www.anl.gov/profile/michael-e-papka
+
 patel_r:
   sur_name: Patel
   given_name: Ria
@@ -3260,4 +3278,13 @@ aach_m:
   position:
   topics:
   email: m.aach@fz-juelich.de
+  homepage:
+
+egele_r:
+  sur_name: Egele
+  given_name: Romain
+  affiliation: anl
+  position:
+  topics:
+  email: romain.egele@universite-paris-saclay.fr
   homepage:

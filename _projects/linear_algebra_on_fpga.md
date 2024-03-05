@@ -87,7 +87,9 @@ In this project, JSC researchers and ICL researchers will collaborate to develop
 
 ## Results for 2022/2023
 
-None yet.
+Albert spent 3 months at ICL and worked extensively on LU Decomposition Kernel for Xilinx FPGA, specifically, U55C. This kernel was integrated with the public release of OOPS library under the OPTIMA Project(https://optima-hpc.eu/). Furthermore, the results of this kernel we part  of Deliverable 5.5(https://optima-hpc.eu/wp-content/uploads/2023/12/D5.5.pdf). 
+Besides the deliverable, we also gained expertise in performance measurements for linear algebra routines and that is also reflected in Deliverable 6.2 of the OPTIMA Project. 
+
 
 ## Visits and meetings
 
@@ -96,6 +98,9 @@ We propose a 3-week research stay of Albert Njoroge Kahira at the University of 
 
 
 ## Impact and publications
+
+The collaboration helped the successful completion of the OPTIMA HPC project and was highlighted as a KPI in the project. 
+
 
 <!--
 {% comment %}

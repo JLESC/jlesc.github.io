@@ -24,5 +24,12 @@ This profusion of different technologies and architectures makes the use of thes
 
 In this JLESC project, we propose to analyze Darshan traces and Lustre metrics from several years of Blue Waters production to feed StorAlloc, a simulator of a storage-aware job scheduler developed within the Inria KerData’s team. The goal of work is twofold: to provide a post-mortem study on the sizing of Blue Waters’ storage system and to explore the design of future highly storage-disaggregated HPC systems.
 
+## Results for 2023/2024
+We introduce Fives, a storage system simulator based on WRENCH and SimGrid, two simulation frameworks in the field. Fives, currently under development, is capable of reproducing the behavior of a Lustre file system. Using Darshan execution traces to both calibrate and validate the simulator, Fives can extract a number of metrics and correlation indices demonstrating a reasonable level of accuracy between real and simulated I/O times. The traces currently used in Fives come from machines for which only aggregated Darshan traces are publicly available. We are currently working on using Blue Waters traces to feed our simulator.
+
+A paper presenting our first results is in preparation and will be submitted in the first half of 2024.
+
+In a second time, we will consider new calibration opportunities offered by the union of Blue Waters Darshan, Torque (resource manager) and Lustre traces. In particular, we expect this new data to allow finer calibration and validation of the Lustre model inside our simulator.
+
 ## References
 {% bibliography --file external/storage_systems_design.bib %}

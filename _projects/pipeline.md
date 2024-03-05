@@ -2,7 +2,7 @@
 layout: page_project
 title: Advanced data and visualization pipelines on the example of nekRS
 date: 2023-05-20
-updated: 2023-05-21
+updated: 2024-01-31
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -21,6 +21,7 @@ members:
   - rizzi_s
   - fischer_p
   - lan_y
+  - papka_m
 ---
 {% comment %}
 ================================
@@ -99,8 +100,11 @@ Our goal is to deliver a high-performance, flexible, and user-friendly data and 
 ## Results for 2022/2023
 None yet.
 
+## Results for 2023/2024
+We have examined the developments in relation to different visualization strategies and at scale. We detailed our approach of instrumenting NekRS, a GPU-focused thermal-fluid simulation code employing the spectral element method (SEM), and analyzed varied \textit{in situ} and \text{in transit} strategies for data rendering. Additionally, we provided concrete scientific use-cases and reported on runs performed on Polaris, Argonne Leadership Computing Facility's (ALCF) 44 Petaflop supercomputer and Jülich Wizard for European Leadership Science (JUWELS) Booster, Jülich Supercomputing Centre's (JSC) 71 Petaflop High Performance Computing (HPC) system, offering practical insight into the implications of our methodology. Our results were presented at the ISAV23, awarded with the best paper award, and publish in the ISAV23 proceeding {% cite MateevitsiEtAl2023 --file jlesc.bib %}.
+
 ## Visits and meetings
-None yet.
+ * Mathis Bode visited ANL in April 2023 to coordinate better on the visualization strategies.
 
 ## Impact and publications
 
