@@ -2,7 +2,7 @@
 layout: page_project
 title: Machine Learning-driven Predictive Analysis of Protein Diffraction Data
 date: 2020-01-31
-updated: 2022-01-24
+updated: 2024-01-24
 navbar: Research
 subnavbar: Projects
 project_url:
