@@ -2,7 +2,7 @@
 layout: page_project
 title: Computational Linear Algebra on FPGAs
 date: 2023-03-09
-updated: 2023-03-09
+updated: 2024-01-01
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -85,7 +85,7 @@ As the Dennard scaling ended, hardware manufacturers and application scientists 
 
 In this project, JSC researchers and ICL researchers will collaborate to develop and expand the existing linear algebra libraries and functionality. The project is expected to accelerate the development of linear algebra functionality for FPGAs, and ensure the functionality hits the architecture-specific performance limits.
 
-## Results for 2022/2023
+## Results for 2023/2024
 
 Albert spent 3 months at ICL and worked extensively on LU Decomposition Kernel for Xilinx FPGA, specifically, U55C. This kernel was integrated with the public release of OOPS library under the OPTIMA Project(https://optima-hpc.eu/). Furthermore, the results of this kernel we part  of Deliverable 5.5(https://optima-hpc.eu/wp-content/uploads/2023/12/D5.5.pdf). 
 Besides the deliverable, we also gained expertise in performance measurements for linear algebra routines and that is also reflected in Deliverable 6.2 of the OPTIMA Project. 
