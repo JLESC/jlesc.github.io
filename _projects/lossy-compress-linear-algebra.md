@@ -88,7 +88,7 @@ performance for certain kernels and access patterns. This work is being
 compiled into a publication for 2022. These works will be used in the current
 integration of lossy compression into [pySDC](https://parallel-in-time.org/pySDC/).
 
-## Results for 2023
+## Results for 2023/2024
 
 We experimented with compressing parts of the collocation problem, which requires keeping multiple solution-size objects in memory.
 Sansriti Ranjan at Clemson University implemented a version with a cache in [pySDC](https://parallel-in-time.org/pySDC/).
