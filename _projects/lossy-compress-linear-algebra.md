@@ -2,7 +2,7 @@
 layout: page_project
 title: Effective Use of Lossy Compression for Numerical Linear Algebra Resilience and Performance 
 date: 2019-01-22
-updated: 2022-01-25
+updated: 2024-03-05
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -88,11 +88,22 @@ performance for certain kernels and access patterns. This work is being
 compiled into a publication for 2022. These works will be used in the current
 integration of lossy compression into [pySDC](https://parallel-in-time.org/pySDC/).
 
+## Results for 2023
+
+We experimented with compressing parts of the collocation problem, which requires keeping multiple solution-size objects in memory.
+Sansriti Ranjan at Clemson University implemented a version with a cache in [pySDC](https://parallel-in-time.org/pySDC/).
+Once the cache fills up, older objects are compressed and decompressed only when needed.
+She analysed this with lossless compression using zstd for various types of problems and wrote it up in her masters thesis.
+Unfortunately, she was unable to significantly reduce the memory footprint and the computational overhead due to compression was very large.
+We showed in some simple experiments that SDC can still converge to limited accuracy when using lossy compression.
+Continuing Sansriti's work with lossy compression is planned by Jon as this is more promising for reducing the memory requirements.
+
 ## Visits and meetings
 
 * Completed: Visit by Mirco Altenbernd to Clemson, Spring 2019 for 2 months.
 * Completed: Present talk at JLESC Meeting in Knoxville, April 2019.
 * Completed: Brief meetup and presented in progress work at SPPEXA workshop in Dresden, October 2019.
+* Completed: Visit by Robert and Thomas to Clemson, Spring 2023 for 1 week.
 
 
 
