@@ -74,7 +74,7 @@ We organized break-out session at JLESC 11th and 12th workshops titled "Heteroge
 ## Results for 2021/2022
 We organized a break-out session at the JLESC 13th and 14th workshops titled "Heterogeneous and reconfigurable architectures for the future of computing." 
 
-## Results for 2022/2023
+## Results for 2023/2024
 We organized a break-out session at the JLESC 15th workshop in France and a workshop at the HEART symposium in Japan.
 We published two co-authored papers at workshops held with SC23. We released the source code associated with the SC23 DRBSD paper.
 
