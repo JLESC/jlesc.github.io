@@ -93,7 +93,7 @@ Besides the deliverable, we also gained expertise in performance measurements fo
 
 ## Visits and meetings
 
-We propose a 3-week research stay of Albert Njoroge Kahira at the University of Tennessee to collaborate with the ICL researchers and math library developers to design linear algebra functionality for FPGAs. 
+* 3-month stay of Albert Njoroge Kahira (JSC) at the University of Tennessee 
 
 
 
