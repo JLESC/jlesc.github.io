@@ -43,7 +43,7 @@ Based on the outcome of the meeting during the 2022 workshop, we started impleme
 
 ## Results for 2023/2024
 
-We have worked on continuous testing as well as continuous benchmarking in this period. In the field of continuous testing, the solution to automatically mirror code from github to gitlab was further improved. Now different workflows are supported better (e.g. not only working with branches in the same repository but also working with Pull-Requests from forks). The development of the tool can be found on github: https://github.com/jakob-fritz/github2lab_action.Furthermore, continuous testing has been extended to enhance storage and visualization the recorded performance data. See an example of that approach here: https://gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc.
+We have worked on continuous testing as well as continuous benchmarking in this period. In the field of continuous testing, the solution to automatically mirror code from github to gitlab was further improved. Now different workflows are supported better (e.g. not only working with branches in the same repository but also working with Pull-Requests from forks). The development of the tool can be found on github: https://github.com/jakob-fritz/github2lab_action. Furthermore, continuous testing has been extended to enhance storage and visualization the recorded performance data. See an example of that approach here: https://gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc.
 
 ## Visits and meetings
 None.
