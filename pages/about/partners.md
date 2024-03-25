@@ -2,7 +2,7 @@
 layout: home
 title: "Founding Partners"
 header_transparent: false
-permalink: "/about/partners"
+permalink: "/about/partners.html"
 hero:
   enabled: false
 ---

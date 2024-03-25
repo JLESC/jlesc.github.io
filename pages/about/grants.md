@@ -2,7 +2,7 @@
 layout: home
 title: "Grants"
 header_transparent: false
-permalink: "/about/grants"
+permalink: "/about/grants.html"
 hero:
   enabled: false
 ---
