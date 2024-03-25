@@ -6,11 +6,11 @@ main:
     - name: JLESC
       url: /#about
     - name: Partners
-      url: /about/partners
+      url: /about/partners.html
     - name: People
       url: /about/people
     - name: Grants
-      url: /about/grants
+      url: /about/grants.html
   - name: News
     url: /news/
     weight: 1
