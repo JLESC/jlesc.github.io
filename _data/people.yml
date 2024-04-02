@@ -118,6 +118,15 @@ alvarez_c:
   email: calvarez@ac.upc.edu
   homepage:
 
+ alvarez_d:
+  sur_name: Alvarez
+  given_name: David
+  affiliation: bsc
+  position: phd
+  topics: 
+  email: david.alvarez@bsc.es
+  homepage:
+
 amer_a:
   sur_name: Amer
   given_name: Abdelhalim
