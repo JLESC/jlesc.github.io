@@ -44,4 +44,3 @@ None yet.
 Study new reconfiguration strategies.
 
 ## References
-{% bibliography --file external/serghei-dmr.bib %}
