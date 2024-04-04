@@ -1,3 +1,4 @@
+---
 layout: page_project
 title: Malleable implementation of SERGHEI-SWE with DMR
 date: 2024-04-24
