@@ -3297,3 +3297,21 @@ egele_r:
   topics:
   email: romain.egele@universite-paris-saclay.fr
   homepage:
+
+iserte_s:
+  sur_name: Iserte
+  given_name: Sergio
+  affiliation: bsc
+  position: post_doc
+  topics:
+  email: sergio.iserte@bsc.es
+  homepage: http://bit.ly/siserte
+
+morales-hernandez_m:
+  sur_name: Morales-Hernández
+  given_name: Mario
+  affiliation: external
+  position: 
+  topics:
+  email: 
+  homepage: 
