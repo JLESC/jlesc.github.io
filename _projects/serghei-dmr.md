@@ -8,8 +8,8 @@ subnavbar: Projects
 project_url:
 status: active
 topics:
-  - Apps & Mini-Apps
-  - Programming Languages and Runtimes
+  - apps
+  - prog_lang
 keywords:
   - Dynamic Resources
   - Malleability
