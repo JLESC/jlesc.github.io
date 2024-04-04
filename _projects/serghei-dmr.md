@@ -16,13 +16,13 @@ keywords:
   - Shallow-water Solver
   - Computer Simulation
   - Performance-aware Computing
-head: Sergio Iserte
+head: iserte_s
 members:
-  - Mario Morales-Hernández
-  - José Segovia
-  - Pablo Vallés
-  - Daniel Caviedes-Voullième
-  - Antonio J. Peña
+  - morales-hernandez_m
+  - segovia_j
+  - valles_p
+  - caviedes-voullieme_d
+  - pena_a
 ---
 
 ## Research topic and goals
