@@ -41,6 +41,6 @@ None yet.
 
 ## Future plans
 
-Study new reconfiguration strategies.
+Study new reconfiguration strategies and evaluate them in a large workload.
 
 ## References
