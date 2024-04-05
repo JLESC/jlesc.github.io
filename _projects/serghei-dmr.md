@@ -6,7 +6,7 @@ updated: 2024-04-04
 navbar: Research
 subnavbar: Projects
 project_url:
-status: active
+status: starting
 topics:
   - apps
   - prog_lang
