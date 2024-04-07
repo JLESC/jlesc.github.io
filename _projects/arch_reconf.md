@@ -5,7 +5,7 @@ date: 2024-01-01
 updated: 2024-04-27
 navbar: Research
 subnavbar: Projects
-project_url:
+project_url: 
 status: running
 topics: 
   - architectures
