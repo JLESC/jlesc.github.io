@@ -1,6 +1,6 @@
 ---
 layout: page_project
-title: Exploring the Future of Computing: Evaluating and Enhancing Reconfigurable Architectures for HPC, AI, and Edge Computing
+title: "Exploring the Future of Computing: Evaluating and Enhancing Reconfigurable Architectures for HPC, AI, and Edge Computing"
 date: 2024-01-01
 updated: 2024-04-27
 navbar: Research
