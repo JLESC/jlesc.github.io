@@ -26,6 +26,7 @@ members:
   - jimenez_d
   - martorell_x
   - cappello_f
+  - applencourt_t
 
 ---
 
