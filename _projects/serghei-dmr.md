@@ -5,7 +5,6 @@ date: 2024-04-24
 updated: 2024-04-04
 navbar: Research
 subnavbar: Projects
-project_url:
 status: starting
 topics:
   - apps
@@ -32,9 +31,11 @@ SERGHEI-SWE is a performance-portable high-performance parallel-computing shallo
 This project aims to design, develop, and implement a malleable version of SERGHEI-SWE with the Dynamic Management of Resources (DMR) technology, providing a flexible framework for enabling malleability in HPC applications. 
 
 This project aims to:
-* Increase cluster productivity in terms of completed simulations per unit of time when running several instances of SERGHEI-SWE malleable in an HPC cluster.
-* Extend DMR with performance-aware reconfiguration techniques.
-* Design efficient data redistribution strategies for dynamic resources in SERGHEI-SWE.
+<ul>
+<li>Increase cluster productivity in terms of completed simulations per unit of time when running several instances of SERGHEI-SWE malleable in an HPC cluster.</li>
+<li>Extend DMR with performance-aware reconfiguration techniques.</li>
+<li>Design efficient data redistribution strategies for dynamic resources in SERGHEI-SWE.</li>
+</ul>
 
 ## Impact and publications
 
