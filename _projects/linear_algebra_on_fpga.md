@@ -2,11 +2,11 @@
 layout: page_project
 title: Computational Linear Algebra on FPGAs
 date: 2023-03-09
-updated: 2024-01-01
+updated: 2024-04-08
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: finished
 topics:
   - architectures
   - numerics
@@ -130,7 +130,7 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 
 ## Future plans
-
+None.
 
 ## References
 
