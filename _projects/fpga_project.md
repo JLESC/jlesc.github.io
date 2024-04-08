@@ -6,7 +6,7 @@ updated: 2024-01-24
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: finished
 topics: 
   - architectures
 keywords: 

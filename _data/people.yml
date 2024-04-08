@@ -92,6 +92,15 @@ acosta_m:
   email: mario.acosta@bsc.es
   homepage:
 
+adhi_b:
+  sur_name: Adhi
+  given_name: Boma
+  affiliation: riken
+  position:
+  topics:
+  email:
+  homepage:
+
 agullo_e:
   sur_name: Agullo
   given_name: Emmanuel
@@ -163,6 +172,15 @@ anzt_h:
   topics: Numerical methods
   email: hanzt@icl.utk.edu
   homepage: https://hartwiganzt.github.io/
+
+applencourt_t:
+  sur_name: Applencourt
+  given_name: Thomas
+  affiliation: anl
+  position:
+  topics:
+  email: tapplencourt@anl.gov
+  homepage:
 
 artigues_a:
   sur_name: Artigues
