@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JLESC &mdash; Malleable implementation of SERGHEI-SWE with DMR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
+">
+  <link rel="canonical" href="https://jlesc.github.io/projects/serghei-dmr/">
+
+  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
+  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
+</head>
+
+  <body>
+    <header>
+  <noscript>
+    <div class="container-fluid">
+      <div class="card card-block card-danger row">
+        <p class="card-text text-sm-center">
+          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
+          <br />
+          Please activate Javascript for this website. We are not loading content from other domains.
+        </p>
+      </div>
+    </div>
+  </noscript>
+  <nav>
+    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+      <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+          <i class="fa fa-bars fa-fw"></i>
+        </button>
+
+        <a class="navbar-brand" href="/">JLESC</a>
+
+        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+  <div class="dropdown-menu">
+    <a href="/about/" class="dropdown-item">JLESC</a>
+    <a href="/about/partners/" class="dropdown-item">Partners</a>
+    <a href="/about/people/" class="dropdown-item">People</a>
+    <a href="/about/grants/" class="dropdown-item">Grants</a>
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a href="/news/" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events/">Events</a>
+            </li>
+            <li class="nav-item dropdown active">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
+  <div class="dropdown-menu">
+    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
+    <a href="/projects/" class="dropdown-item active">Projects</a>
+    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
+    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  </div>
+</li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/references/">References</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link"
+                 href="https://github.com/JLESC/jlesc.github.io/wiki"
+                 target="_blank"
+                 title="How to contribute"
+                 data-toggle="tooltip"
+                 data-placement="left">
+                <i class="fa fa-fw fa-book"></i>
+                How To
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <div class="container">
+        <div class="post post-project">
+  <article class="post-content">
+    <div class="row">
+      <header class="col-sm-12 post-header">
+        <h1 class="pull-left">Malleable implementation of SERGHEI-SWE with DMR</h1>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
+        <section class="group-meta card">
+  <div class="card-header">
+    Project Profile
+  </div>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item row">
+      <label class="col-sm-4">Topics</label>
+      <div class="col-sm-8">
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Apps & Mini-Apps</span>
+          </span>
+        
+          <span class="clearfix">
+            <span class="topic topic-title">Programming Languages and Runtimes</span>
+          </span>
+        
+      </div>
+    </li>
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Keywords</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">Dynamic Resources</span>
+          
+            <span class="clearfix">Malleability</span>
+          
+            <span class="clearfix">Shallow-water Solver</span>
+          
+            <span class="clearfix">Computer Simulation</span>
+          
+            <span class="clearfix">Performance-aware Computing</span>
+          
+        </div>
+      </li>
+    
+    
+    
+      <li class="list-group-item row">
+        <label class="col-sm-4">Members</label>
+        <div class="col-sm-8">
+          
+            <span class="clearfix">
+              <span class="person given-name">Sergio</span> <span class="person sur-name">Iserte</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+              <span class="pull-right">
+                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
+              </span>
+            </span>
+          
+          
+            <span class="clearfix">
+              <span class="person given-name">Mario</span> <span class="person sur-name">Morales-Hernández</span> (<abbr title="External partner" class="initialism" data-toggle="tooltip">EXT</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">José</span> <span class="person sur-name">Segovia</span> (<abbr title="External partner" class="initialism" data-toggle="tooltip">EXT</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Pablo</span> <span class="person sur-name">Vallés</span> (<abbr title="External partner" class="initialism" data-toggle="tooltip">EXT</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Caviedes-Voullième</span> <span class="person sur-name">Daniel</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
+            </span>
+          
+            <span class="clearfix">
+              <span class="person given-name">Antonio J.</span> <span class="person sur-name">Peña</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
+            </span>
+          
+        </div>
+      </li>
+    
+    
+    <li class="list-group-item row">
+      <label class="col-sm-4">Status</label>
+      <div class="col-sm-8">
+        <span class="project-status project-status-starting">starting</span>
+      </div>
+    </li>
+    
+  </ul>
+</section>
+        <section class="card" id="toc">
+          <div class="card-header">
+            Table of Contents
+          </div>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
+<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
+<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul>
+        </section>
+      </aside>
+      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+        
+        <h2 id="research-topic-and-goals">
+<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+
+<p>SERGHEI-SWE is a performance-portable high-performance parallel-computing shallow-water solver for hydrology and environmental studies. A key application is flood simulation, in which the wet computational domain can dramatically change size. Wet areas are much more computationally expensive to simulate than dry ones, so counting with additional data processing resources for high water stages is critical for providing results in a reasonable time frame. However, underutilizing the resources during dry stages harms the productivity and resource use efficiency of the HPC facility while being unfair to the rest of the users who see delayed their experiments. The variability of the flood size cannot be determined a priori, and therefore optimal resource selection for the job is difficult, especially for long simulations.</p>
+
+<p>This project aims to design, develop, and implement a malleable version of SERGHEI-SWE with the Dynamic Management of Resources (DMR) technology, providing a flexible framework for enabling malleability in HPC applications.</p>
+
+<p>This project aims to:</p>
+<ul>
+<li>Increase cluster productivity in terms of completed simulations per unit of time when running several instances of SERGHEI-SWE malleable in an HPC cluster.</li>
+<li>Extend DMR with performance-aware reconfiguration techniques.</li>
+<li>Design efficient data redistribution strategies for dynamic resources in SERGHEI-SWE.</li>
+</ul>
+
+<h2 id="impact-and-publications">
+<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+
+<p>None yet.</p>
+
+<h2 id="future-plans">
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+
+<p>Study new reconfiguration strategies and evaluate them in a large workload.</p>
+
+<h2 id="references">
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Caviedes2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCaviedes2023Bibtex" aria-expanded="false" aria-controls="collapseCaviedes2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCaviedes2023Abstract" aria-expanded="false" aria-controls="collapseCaviedes2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="Caviedes2023">Caviedes-Voullième, Daniel, Mario Morales-Hernández, Matthew R. Norman, and Ilhan Özgen-Xian. 2023. “SERGHEI (SERGHEI-SWE) v1.0: a Performance-Portable High-Performance Parallel-Computing Shallow-Water Solver for Hydrology and Environmental Hydraulics.” <i>Geoscientific Model Development</i> 16 (3). Copernicus GmbH: 977–1008. doi:10.5194/gmd-16-977-2023.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCaviedes2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Caviedes2023,
+  author = {Caviedes-Voulli\`eme, Daniel and Morales-Hern\'andez, Mario and Norman, Matthew R. and \"Ozgen-Xian, Ilhan},
+  journal = {Geoscientific Model Development},
+  title = {{SERGHEI} ({SERGHEI}-{SWE}) v1.0: a performance-portable high-performance parallel-computing shallow-water solver for hydrology and environmental hydraulics},
+  year = {2023},
+  month = feb,
+  number = {3},
+  pages = {977--1008},
+  volume = {16},
+  doi = {10.5194/gmd-16-977-2023},
+  file = {:Caviedes2023.pdf:PDF},
+  groups = {Surface flows},
+  publisher = {Copernicus {GmbH}}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          iserte_dmrlib_2021
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseiserte_dmrlib_2021Bibtex" aria-expanded="false" aria-controls="collapseiserte_dmrlib_2021Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseiserte_dmrlib_2021Abstract" aria-expanded="false" aria-controls="collapseiserte_dmrlib_2021Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="iserte_dmrlib_2021">Iserte, Sergio, Rafael Mayo, Enrique S. Quintana-Ortí, and Antonio J. Peña. 2021. “DMRlib: Easy-Coding and Efficient Resource Management for Job Malleability.” <i>IEEE Transactions on Computers</i> 70 (9): 1443–57. doi:10.1109/TC.2020.3022933.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseiserte_dmrlib_2021Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{iserte_dmrlib_2021,
+  title = {{DMRlib}: {Easy}-{Coding} and {Efficient} {Resource} {Management} for {Job} {Malleability}},
+  volume = {70},
+  copyright = {All rights reserved},
+  issn = {1557-9956},
+  shorttitle = {{DMRlib}},
+  url = {https://ieeexplore.ieee.org/document/9190024},
+  doi = {10.1109/TC.2020.3022933},
+  number = {9},
+  urldate = {2024-01-23},
+  journal = {IEEE Transactions on Computers},
+  author = {Iserte, Sergio and Mayo, Rafael and Quintana-Ortí, Enrique S. and Peña, Antonio J.},
+  month = sep,
+  year = {2021},
+  note = {Conference Name: IEEE Transactions on Computers},
+  pages = {1443--1457},
+  file = {Full Text:C\:\\Users\\siser\\Zotero\\storage\\7H5IJ6XY\\Iserte et al. - 2021 - DMRlib Easy-Coding and Efficient Resource Managem.pdf:application/pdf}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseiserte_dmrlib_2021Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        Process malleability has proved to have a highly positive impact on the resource utilization and global productivity in data centers compared with the conventional static resource allocation policy. However, the non-negligible additional development effort this solution imposes has constrained its adoption by the scientific programming community. In this work, we present DMRlib, a library designed to offer the global advantages of process malleability while providing a minimalist MPI-like syntax. The library includes a series of predefined communication patterns that greatly ease the development of malleable applications. In addition, we deploy several scenarios to demonstrate the positive impact of process malleability featuring different scalability patterns. Concretely, we study two job submission modes (rigid and moldable) in order to identify the best-case scenarios for malleability using metrics such as resource allocation rate, completed jobs per second, and energy consumption. The experiments prove that our elastic approach may improve global throughput by a factor higher than 3x compared to the traditional workloads of non-malleable jobs.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </article>
+  
+</div>
+
+      </div>
+    </main>
+    <footer id="site-footer">
+  <div class="navbar navbar-full navbar-light">
+    <div class="container">
+      <div class="row small">
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="nav-item">
+              <a class="nav-link" href="/about/imprint/">
+                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 hidden-xs-down">
+          <div class="nav navbar-nav text-xs-center">
+            <span class="credit">
+              Powered by
+              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
+              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
+                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
+                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+
+<!--  -->
+
+  </body>
+</html>
