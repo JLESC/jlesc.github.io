@@ -25,6 +25,7 @@ members:
   - alvarez_c
   - jimenez_d
   - martorell_x
+  - miguel_j
   - cappello_f
   - applencourt_t
 
@@ -42,6 +43,7 @@ The end of transistor scaling encourages us to challenge innovative architectura
 ## Visits and meetings
 
 * {% person yoshii_k %} visited RIKEN for two days in June 2023 to discuss the streaming hardware compressor design.
+* {% person miguel_j %} visited RIKEN as an intern in 2023 to port the OmpSs@FPGA infrastructure to ESSPER.
 * {% person alvarez_c %} visited RIKEN in June 2023 to discuss porting the OmpSs@FPGA infrastructure to ESSPER.
 * {% person ueno_t %} visited ANL in May 2023 to discuss hardware compressors and accelerator designs.
 
