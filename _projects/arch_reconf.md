@@ -52,9 +52,8 @@ The end of transistor scaling encourages us to challenge innovative architectura
 
 * A paper at Smokey Mountain Conference 2021 on hardware co-design methodology {% cite yoshii2021hardware --file jlesc.bib %}
 * A paper at IEEE ASAP 2021 on virtualization of networks of FPGA clusters {% cite ueno2021virtual --file jlesc.bib %}
-
-{% bibliography --cited --file jlesc.bib %}
-
+* A paper at SC23 PMBS workshop {% cite yoshii2023hardware --file jlesc.bib %}
+* A paper at SC23 DRBS workshop {% cite yoshii2023streaming --file jlesc.bib %}
 
 ## Future plans
 
