@@ -55,6 +55,8 @@ The end of transistor scaling encourages us to challenge innovative architectura
 * A paper at SC23 PMBS workshop {% cite yoshii2023hardware --file jlesc.bib %}
 * A paper at SC23 DRBS workshop {% cite yoshii2023streaming --file jlesc.bib %}
 
+{% bibliography --cited --file jlesc.bib %}
+
 ## Future plans
 
 We evaluate existing reconfigurable architectures and explore hardware designs to accelerate our target workloads. These include numerical algorithms, streaming data compression, and real-time AI at the edge. We will also investigate various architecture designs, the design workflow (including design, verification, layout, etc.), compiler technologies, architecture emulation/simulation, and emerging technologies such as Chiplets, structured ASICs, and FPGA/CGRA generators. Our goal is to demonstrate the enhanced computing efficiency of selected workloads on reconfigurable architectures and highlight the potential of custom hardware designs, even for extensive distributed resources.
