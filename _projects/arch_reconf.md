@@ -25,6 +25,7 @@ members:
   - alvarez_c
   - jimenez_d
   - martorell_x
+  - miguel_j
   - cappello_f
   - applencourt_t
 
@@ -42,6 +43,7 @@ The end of transistor scaling encourages us to challenge innovative architectura
 ## Visits and meetings
 
 * {% person yoshii_k %} visited RIKEN for two days in June 2023 to discuss the streaming hardware compressor design.
+* {% person miguel_j %} visited RIKEN as an intern in 2023 to port the OmpSs@FPGA infrastructure to ESSPER.
 * {% person alvarez_c %} visited RIKEN in June 2023 to discuss porting the OmpSs@FPGA infrastructure to ESSPER.
 * {% person ueno_t %} visited ANL in May 2023 to discuss hardware compressors and accelerator designs.
 
@@ -50,9 +52,10 @@ The end of transistor scaling encourages us to challenge innovative architectura
 
 * A paper at Smokey Mountain Conference 2021 on hardware co-design methodology {% cite yoshii2021hardware --file jlesc.bib %}
 * A paper at IEEE ASAP 2021 on virtualization of networks of FPGA clusters {% cite ueno2021virtual --file jlesc.bib %}
+* A paper at SC23 PMBS workshop {% cite yoshii2023hardware --file jlesc.bib %}
+* A paper at SC23 DRBS workshop {% cite yoshii2023streaming --file jlesc.bib %}
 
 {% bibliography --cited --file jlesc.bib %}
-
 
 ## Future plans
 
