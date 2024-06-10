@@ -3374,7 +3374,7 @@ huber_d:
 schreiber_m:
   sur_name: Schreiber
   given_name: Martin
-  affiliation: intria
+  affiliation: inria
   position: permanent
   topics:
   email:
@@ -3383,7 +3383,7 @@ schreiber_m:
 dutot_p:
   sur_name: Dutot
   given_name: Pierre-François
-  affiliation: intria
+  affiliation: inria
   position: permanent
   topics:
   email:
