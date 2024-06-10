@@ -3362,9 +3362,32 @@ zhou_a:
   email: amelie.czhou@gmail.com
   homepage: https://team.inria.fr/kerdata/amelie-chi-zhou/
 
+huber_d:
+  sur_name: Huber
+  given_name: Dominik
+  affiliation: inria
+  position: phd
+  topics:
+  email: domi.huber@tum.de
+  homepage:
 
+schreiber_m:
+  sur_name: Schreiber
+  given_name: Martin
+  affiliation: intria
+  position: permanent
+  topics:
+  email:
+  homepage:
 
-
+dutot_p:
+  sur_name: Dutot
+  given_name: Pierre-François
+  affiliation: intria
+  position: permanent
+  topics:
+  email:
+  homepage:
   
 
 
