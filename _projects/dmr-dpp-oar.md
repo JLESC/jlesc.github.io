@@ -33,7 +33,7 @@ OAR RJMS introduces the job envelope to support DRM. As resources are requested 
 
 Dynamic Processes with PSets (DPP) {% cite huber2024design --file dmr-dpp-oar.bib %} is a set of design paradigms for generic dynamic resource support in parallel programming models deduced from prior work. The DPP design paradigms are based on a system-application co-design and aim for a flexible and programming model agnostic abstraction. As a proof-of-concept, the DPP paradigms have been realized in a prototype based on Open-MPI, OpenPMIx, and PRRTE.
 
-The Dynamic Management of Resources (DMR) framework {% cite iserte_dmrlib_2021 --file dmr-dpp-oar.bib %} is a high-level API that facilitates the adoption of dynamicity in HPC codes. Particularly, DMR can abstract the use of different MPI dynamic solutions into the same syntax. In a nutshell, for instance, in an iterative code, DMR provides a series of operations around the main loop, which makes all the dynamic logic transparent to the user behind the scenes.
+The Dynamic Management of Resources (DMR) framework {% cite external/iserte_dmrlib_2021 --file external/dmr-dpp-oar.bib %} is a high-level API that facilitates the adoption of dynamicity in HPC codes. Particularly, DMR can abstract the use of different MPI dynamic solutions into the same syntax. In a nutshell, for instance, in an iterative code, DMR provides a series of operations around the main loop, which makes all the dynamic logic transparent to the user behind the scenes.
 
 Once provided with the DRM framework, several scientific applications and benchmarks will be updated with the dynamic resources paradigm and evaluated regarding coding usability and reconfiguration performance.
 
