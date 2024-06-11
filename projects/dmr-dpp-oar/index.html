@@ -200,9 +200,9 @@
 
 <p>OAR RJMS introduces the job envelope to support DRM. As resources are requested or freed, a new RJMS job is created and linked to the initial job envelope, replacing any previous job. This creates a sequence of jobs with different associated resources, forming a virtual global dynamic job.</p>
 
-<p>Dynamic Processes with PSets (DPP) is a set of design paradigms for generic dynamic resource support in parallel programming models deduced from prior work. The DPP design paradigms are based on a system-application co-design and aim for a flexible and programming model agnostic abstraction. As a proof-of-concept, the DPP paradigms have been realized in a prototype based on Open-MPI, OpenPMIx, and PRRTE.</p>
+<p>Dynamic Processes with PSets (DPP) <a href="#huber2024design">(Huber et al. 2024)</a> is a set of design paradigms for generic dynamic resource support in parallel programming models deduced from prior work. The DPP design paradigms are based on a system-application co-design and aim for a flexible and programming model agnostic abstraction. As a proof-of-concept, the DPP paradigms have been realized in a prototype based on Open-MPI, OpenPMIx, and PRRTE.</p>
 
-<p>The Dynamic Management of Resources (DMR) framework is a high-level API that facilitates the adoption of dynamicity in HPC codes. Particularly, DMR can abstract the use of different MPI dynamic solutions into the same syntax. In a nutshell, for instance, in an iterative code, DMR provides a series of operations around the main loop, which makes all the dynamic logic transparent to the user behind the scenes.</p>
+<p>The Dynamic Management of Resources (DMR) framework <a href="#iserte_dmrlib_2021">(Iserte et al. 2021)</a> is a high-level API that facilitates the adoption of dynamicity in HPC codes. Particularly, DMR can abstract the use of different MPI dynamic solutions into the same syntax. In a nutshell, for instance, in an iterative code, DMR provides a series of operations around the main loop, which makes all the dynamic logic transparent to the user behind the scenes.</p>
 
 <p>Once provided with the DRM framework, several scientific applications and benchmarks will be updated with the dynamic resources paradigm and evaluated regarding coding usability and reconfiguration performance.</p>
 
@@ -227,7 +227,49 @@
 <h2 id="references">
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
 
-<ol class="bibliography"><li>
+<ol class="bibliography">
+<li>
+<div class="bibtex-entry-container">
+  <div>
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          huber2024design
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsehuber2024designBibtex" aria-expanded="false" aria-controls="collapsehuber2024designBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsehuber2024designAbstract" aria-expanded="false" aria-controls="collapsehuber2024designAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry">
+      <span id="huber2024design">Huber, Dominik, Martin Schreiber, Martin Schulz, Howard Pritchard, and Daniel Holmes. 2024. “Design Principles of Dynamic Resource Management for High-Performance Parallel Programming Models.”</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsehuber2024designBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{huber2024design,
+  title = {Design Principles of Dynamic Resource Management for High-Performance Parallel Programming Models},
+  author = {Huber, Dominik and Schreiber, Martin and Schulz, Martin and Pritchard, Howard and Holmes, Daniel},
+  year = {2024},
+  eprint = {2403.17107},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.DC}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li>
 <div class="bibtex-entry-container">
   <div>
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
@@ -285,7 +327,8 @@
   </div>
   
 </div>
-</li></ol>
+</li>
+</ol>
 
       </div>
     </div>
