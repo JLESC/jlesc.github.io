@@ -82,8 +82,8 @@ For the full list refer to the +Gemfile.lock+ file on commit SHA +9afcb40fbda60c
 =end
 
 require 'bundler/setup'
-Bundler.require(:default)
 require 'jekyll'
+Bundler.require(:default)
 require 'bibtex'
 
 BIBLIOGRAPHY_MATCHER = /{%\sbibliography\s.*--file\s(?<bibfile>[\w\/]*)\.bib\s%}/
