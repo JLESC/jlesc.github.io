@@ -2,11 +2,11 @@
 layout: post
 title: A common workflow registry of compute endpoints and applications
 date: 2020-07-02
-updated: 2022-01-01
+updated: 2024-01-12
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: suspended
 topics:
   - prog_lang
 keywords:

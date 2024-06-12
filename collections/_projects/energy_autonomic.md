@@ -2,7 +2,7 @@
 layout: post
 title: Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques
 date: 2018-04-17
-updated: 2023-01-15
+updated: 2024-01-26
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -58,7 +58,13 @@ approaches to specificities of HPC and power management.
 
 ## Results for 2019/2020
 
-On the basis of the preliminary work done at ANL on instrumentation of HPC applications, INRIA has begun work on a range of controllers for the runtime adaptation of the Power Cap level in RAPL. A first approach is considered, re-using results on other work concerning a different problem (regulating the degree of parallelism according to synchronization cost), but which could be transferred here. Another approach involves measuring progress and power and making decisions based on predictions.
+On the basis of the preliminary work done at ANL on instrumentation of HPC
+applications, INRIA has begun work on a range of controllers for the runtime
+adaptation of the Power Cap level in RAPL. A first approach is considered,
+re-using results on other work concerning a different problem (regulating the
+degree of parallelism according to synchronization cost), but which could be
+transferred here. Another approach involves measuring progress and power and
+making decisions based on predictions.
 
 Argonne completed the design and implementation of an infrastructure to perform
 control experiments using Jupyter notebooks. This infrastructure can be
@@ -123,6 +129,29 @@ We continue to improve the NRM infrastructure for robustness, and the
 evaluation of our control schemes towards supporting more applications and more
 hardware control knobs.
 
+## Results for 2023/2024
+
+A MSc internship at Inria Lille, co-advised by {% person cerf_s %} and {%
+person bleuse_r %} at Inria Grenoble, was performed by Kouds Halitim, on
+"Enhancing Efficiency through Control theory in Compute-Intensive
+Applications". It extended on previous work by adding a compute-intensive
+benchmark (NAS EP) to possible workloads. Modeling was carried-out on extensive
+experimentations on various Grid’5000 clusters, following the identification
+techniques from Control Theory. The approach additionally explored novel
+control strategies, in the form of cascaded control such as PI control and MPC
+to enable better robustness e.g., w.r.t. noisy signals from sensors. INRIA
+hired an engineer, Jonathan Bleuzen, as a support for experimentations around
+NRM, and automation of identification and validation of controller on
+Grid'5000.  The NRM infrastructure continues to improve, a new software release
+with better stability and event management, as well as additional actuators is
+scheduled for early 2024.
+
+We are working on a journal paper to be submitted, on the methodological and
+instrumentation aspects of implementing managers, based on Control Theory or
+Reinforcement Learning, in HPC systems, based on our experiences, and
+documenting the concrete problems of implementing sensors and actuators, as
+well as integrating the controllers.
+
 ## Visits and meetings
 
 We schedule regular video meetings between the different members of the
@@ -131,7 +160,8 @@ project.
 {% person rutten_e %} visited ANL for two days to make progress on the project
 on April 18-19 2019.
 
-Once international travel can resume, we plan for several members to visit ANL.
+{% person perarnau_s %} visited INRIA in December 2023.
+
 
 ## Impact and publications
 
@@ -139,13 +169,15 @@ Once international travel can resume, we plan for several members to visit ANL.
 
 ## Future plans
 
-Initial results on the approach are encouraging, but have highlighted potential
-shortcomings of the NRM infrastructure (precision/stability of measurements)
-and need to be validated on a wider range of benchmarks. Given the expected
-architectures on future systems, we are also planning to evaluate different
-actuators than RAPL (i.e. accelerator power capping). We also plan to consider
-more elaborate control techniques, to obtain controllers that are more robust
-or give a more efficient use of the system.
+We now have a reasonable collection of controller designs to experiment on, and
+are focusing on improving our designs towards a wider range of benchmarks. Our
+experience is that adding applications to monitor or control tends to highlight
+shortcomings in the controller designs or the signals used to characterize
+performance.  Given the expected architectures on future systems, we are also
+planning to evaluate different actuators than RAPL (i.e. accelerator power
+capping). We also plan to consider more elaborate control techniques, to obtain
+controllers that are more robust to generic applications, including phases,
+tracing OpenMP or MPI, or using performance counters in monitoring.
 
 ## References
 

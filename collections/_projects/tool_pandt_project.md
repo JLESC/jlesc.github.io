@@ -2,7 +2,7 @@
 layout: post
 title: Developer tools for porting and tuning parallel applications on extreme-scale parallel systems
 date: 2016-03-22
-updated: 2023-01-13
+updated: 2024-02-06
 navbar: Research
 subnavbar: Projects
 footer: true
@@ -18,6 +18,7 @@ head: wylie_b
 members:
   - tsuji_m
   - murai_h
+  - domke_j
   - kobayashi_c
   - feld_c
   - gimenez_j
@@ -29,8 +30,8 @@ members:
 
 ## Research topic and goals
 
-Application developers targeting extreme-scale HPC systems such as Fugaku, heterogeneous systems such as MN4 CTE-POWER/ARM/AMD,
-and modular supercomputing architectures such as JUWELS Cluster+Booster, need effective tools to assist with porting and tuning for these unusual systems.
+Application developers targeting extreme-scale HPC systems such as Fugaku & JUPITER, heterogeneous systems such as MareNostrum CTE-POWER/ARM/AMD, 
+and modular supercomputing architectures such as JUWELS Cluster+Booster, need effective tools to assist with porting and tuning for these unusual systems. 
 The XcalableMP compilation system (and directive-based language) {% cite LeeSato2010 --file external/tool_pandt_project.bib %}
 {% cite TsujiEtAl2013 --file external/tool_pandt_project.bib  %}, Scalasca/Score-P execution
 measurement and analysis tools {% cite GeimerEtAl2010 --file external/tool_pandt_project.bib  %}
@@ -109,6 +110,15 @@ and help direct development of new tool capabilities.
 * 41st VI-HPS Tuning Workshop hosted virtually by JSC (2022/02/07-10) using JUWELS-Booster GPUs.
 * 42nd VI-HPS Tuning Workshop hosted virtually by JSC (2022/05/17-19) using JUSUF.
 
+## Results for 2023/2024
+
+* Continued Score-P porting to Fugaku and Fujitsu compilers for A64FX with assistance of Jens Domke and Fujitsu.
+* Provision of Scalasca/Score-P on Fugaku using GCC & LLVM compilers for A64FX.
+* Hands-on tools tutorial at SC23 (Denver/CO, USA, 2023/11/13) using JUWELS-Booster GPUs.
+* EU-ASEAN HPC School (W.Java, Indonesia, 2023/12/11-16) Scalasca/Score-P exercises using Fugaku. 
+* 43rd VI-HPS Tuning Workshop hosted by CALMIP Mesocentre in Toulouse/France (2024/01/29-02/01) using Turpan (Ampere Altra Q80 ARM 8.2 CPU + Nvidia Ampere A100 GPU nodes).
+* Article prepared for FGCS on joint parallel application performance analysis/tools training.
+
 ## Visits and meetings
 
 Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and ParCo conferences, and events hosted by project partners.  Meeting with MYX project {% cite MYXproject --file external/tool_pandt_project.bib %} members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.
@@ -117,7 +127,8 @@ Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and 
 2016/02/24-26: BSC & JSC instructors visited RIKEN-AICS to deliver training as part of VI-HPS Tuning Workshop.
 2019/04/09-12: BSC & JSC instructors visited UTK-ICL to deliver training as part of VI-HPS Tuning Workshop.
 2022/10/01-2022/11/04: JSC visit to NCSA & UTK-ICL to prepare for training as part of VI-HPS Tuning Workshops.
-Visits planned for the next 12 months: none
+Visits planned for the next 12 months:
+2024/07: JSC instructors to visit RIKEN-CCS to deliver tools training as part of workshop for Fugaku users, in conjunction with 14th International HPC Summer School in Kobe (2024/07/07-12).
 
 ## Impact and publications
 

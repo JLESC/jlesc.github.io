@@ -2,7 +2,7 @@
 layout: post
 title: Shared Infrastructure for Source Transformation Automatic Differentiation
 date: 2016-04-18
-updated: 2022-01-01
+updated: 2024-02-21
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -19,7 +19,7 @@ members:
 ---
 
 ## Research topic and goals
-Our goal is to pursue development of Algorithmic Differentiation (AD) tools, to enhance their applicability to HPC codes. We focus on the adjoint mode of AD, which is the most effective way of obtaining gradients of large HPC simulations. We focus on AD tools by source transformation because of the efficiency of the code they produce. One of our goals is to implement cooperation at the algorithmic level between OpenAD, the AD tool developed at ANL and Tapenade, the AD tool developed at INRIA. Another goal is to develop and maintain AMPI, and open-source library wrapped around MPI that implements the adjoint operations corresponding to the most commonly used MPI communication primitives, and to develop a methodology to compute adjoints of OpenMP-parallel programs, relying on a runtime support library for adjoint OpenMP that can be shared between OpenAD and Tapenade.
+Our goal is to pursue development of Algorithmic Differentiation (AD) tools, to enhance their applicability to HPC codes. We focus on the adjoint mode of AD, which is the most effective way of obtaining gradients of large HPC simulations. We focus on AD tools by source transformation because of the efficiency of the code they produce.
 
 ## Results for 2016--2022
 
@@ -41,8 +41,11 @@ We are currently extending this work by investigating the use of automated theor
 
 We organized a minitutorial *Automatic Differentiation as a Tool for Computational Science* at the 2021 SIAM Conference on Computational Science and Engineering. The tutorial broadly provided an introduction to AD as well as advanced topics such as memory requirements and parallelism. We demonstrated the use of AD tools and developed resources such as Jupyter notebooks for hands-on use on Google Colab by the attendees {% cite NarayananEtAl2021 --file jlesc.bib %}.
 
+## Results for 2023/2024
+We have successfully used Tapenade to differentiate the Massachusetts Institute of Technology General Circulation Model (MITgcm){% cite GaikwadEtAl2024 --file jlesc.bib %}, a code which is widely used by the climate science community to simulate planetary atmosphere and ocean circulations. A defining feature of the MITgcm is that it has been developed to be compatible with an algorithmic differentiation (AD) tool, TAF, enabling the generation of tangent-linear and adjoint models.  A subset of MITgcm was also previously differentiated using OpenAD. The tangent-linear and adjoint models provide gradient information which enables dynamics-based sensitivity and attribution studies, state and parameter estimation, and rigorous uncertainty quantification. Importantly, gradient information is essential for computing comprehensive sensitivities and performing efficient large-scale data assimilation, ensuring that observations collected from satellites and in-situ measuring instruments can be effectively used to optimize a large uncertain control space. As a result, the MITgcm forms the dynamical core of a key data assimilation product employed by the physical oceanography research community: Estimating the Circulation and Climate of the Ocean (ECCO) state estimate. Although MITgcm and ECCO are used extensively within the research community, the AD tool TAF is proprietary and hence inaccessible to a large proportion of these users.
+
 ## Visits and meetings
-Frequent e-mail exchanges between {% person narayanan_s %} and {% person hascoet_l %}, and twice-weekly video meetings between {% person hueckelheim_j %} and {% person hascoet_l %}. {% person hueckelheim_j %} has visited INRIA in 2019. In 2019, {% person narayanan_s %} met with {% person hascoet_l %} for joint work on MITgcm. {% person narayanan_s %}, {% person hueckelheim_j %}, {% person hascoet_l %}, {% person hovland_p %} frequently met virtually in 2020 and 2021 to prepare for the SIAM CSE21 minitutorial.
+Frequent e-mail exchanges between {% person narayanan_s %} and {% person hascoet_l %}, and twice-weekly video meetings between {% person hueckelheim_j %} and {% person hascoet_l %}. {% person hueckelheim_j %}, and {% person narayanan_s %} visited INRIA in 2023 when EuroAD was hosted there. 
 
 ## Impact and publications
 
@@ -50,7 +53,7 @@ Frequent e-mail exchanges between {% person narayanan_s %} and {% person hascoet
 * In 2017, we have given a talk in USNCCM, included our work at the DOE Applied Math PI meeting in a poster.
 * In 2021, we have submitted a paper on automatic differentiation of OpenMP programs;
 * In 2021, we have organized a minitutorial at SIAM CSE21.
-
+* In 2023, we have submitted a paper on the differentiation of MITgcm using Tapenade.
 
 <!--
 {% comment %}
@@ -80,7 +83,7 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 
 ## Future plans
-We plan to continue to integrate Tapenade and OpenAD infrastructures. Additionally, we plan to explore other
+We plan to continue to work on applying and improving Tapenade. Additionally, we plan to explore other
 topics in the field of algorithmic differentiation.
 
 ## References

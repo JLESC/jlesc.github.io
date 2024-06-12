@@ -2,7 +2,7 @@
 layout: post
 title: Extreme-Scale Workflow Tools - Swift, Decaf, Damaris, FlowVR
 date: 2016-03-21
-updated: 2022-01-01
+updated: 2024-01-01
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -238,6 +238,16 @@ In 2020, we started a new collaboration between ANL and UTK, and hosted Tanner H
 Today's science campaigns consist of multiple tasks with wide-ranging data and computing requirements, and rarely are all the required capabilities found in current in situ workflow systems. In this work, we explore providing increased capabilities for scientific computing by bringing new capabilities to in situ workflows: a flexible interface for workflow specification, heterogeneous task placement, and dynamic changes to the workflow task graph. We evaluate our approach using materials science and cosmology use cases. Our results show that our approach (i) can save time and resources in science workflows exhibiting dynamic patterns by enabling dynamic workflow changes during their lifetime; (ii) enables easier specification of large-scale workflows consisting of subgraphs and ensemble computations; (iii) efficiently coordinates heterogeneous tasks by enabling free intermixing of time and space partitioning, thus resulting in time and space savings.
 
 We have published our results in 2021 IEEE Workshop on Workflows in Support of Large-Scale Science (WORKS) {% cite yildiz2021dynamic --file jlesc.bib %}. In 2022, we will continue to apply our approach, dynamic heterogeneous in situ workflows, to several science use cases including elastic distributed deep learning ones. This is a joint project between Orcun Yildiz, Bogdan Nicolae and Tom Peterka of ANL, and we are actively looking for students to help us with this project.
+
+## Results for 2023/2024
+
+### LowFive: In Situ Data Transport for High-Performance Workflows
+
+* Tom Peterka, Orcun Yildiz, and Bogdan Nicolae of ANL
+
+We describe LowFive, a new data transport layer based on the HDF5 data model, for in situ workflows. Executables using LowFive can communicate in situ (using in-memory data and MPI message passing), reading and writing traditional HDF5 files to physical storage, and combining the two modes. Minimal and often no source-code modification is needed for programs that already use HDF5. LowFive maintains deep copies or shallow references of datasets, configurable by the user. More than one task can produce (write) data, and more than one task can consume (read) data, accommodating fan-in and fan-out in the workflow task graph. LowFive supports data redistribution from n producer processes to m consumer processes. We demonstrate the above features in a series of experiments featuring both synthetic benchmarks as well as a representative use case from a scientific workflow, and we also compare with other data transport solutions in the literature.
+
+We have published our results in 2023 International Parallel and Distributed Processing Symposium (IPDPS) {% cite peterka2023lowfive --file jlesc.bib %}.
 
 ## Visits and meetings
 

@@ -2,7 +2,7 @@
 layout: post
 title: Compression for instruments
 date: 2020-02-25
-updated: 2022-01-01
+updated: 2024-01-01
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -40,7 +40,7 @@ In addition, Argonne collaborated with Clemson to develop a control loop allowin
 The research on predictive delta compression continued at Riken and produced a paper accepted at IEEE CCGRID 2021. In parallel, the team at Argonne optimized the implementation of Huffman variable lenght coding on GPUs. This effort produced two publications at ACM PACT 2020 and IEEE IPDPS 2021.
 
 ## Results for 2021/2022
-The main result is the validatio from the EXAFEL team of RiobinSZ as a valid lossy compressor for crystallography. The validation experiment used RoibinSZ on Se-SAD SFX Dataset (Selenium Single-wavelength Anomalous Diffraction. Serial Femtosecond Crystallography), 5043 images (1480x1552x4bytes). Many metrics were used to perform the assesment: Number of hits: Number indexed, Rsplit, CC1/2, CCano, Rwork, Rfree, Map-model CC. Roibin SZ electron density successfully reconstructs the protein structure. The dataset compressed with RiobinSZ offered a better result overall compared to the non-compressed dataset. The current explanation is that RiobinSZ not only compress the data but also performs some denoising that results in improving the analysis quality. A paper is submited to IEEE Bigdata on using SZ3 for the Argonne Photon Source data.
+The main result is the validation from the EXAFEL team of RiobinSZ as a valid lossy compressor for crystallography. The validation experiment used RoibinSZ on Se-SAD SFX Dataset (Selenium Single-wavelength Anomalous Diffraction. Serial Femtosecond Crystallography), 5043 images (1480x1552x4bytes). Many metrics were used to perform the assesment: Number of hits: Number indexed, Rsplit, CC1/2, CCano, Rwork, Rfree, Map-model CC. Roibin SZ electron density successfully reconstructs the protein structure. The dataset compressed with RiobinSZ offered a better result overall compared to the non-compressed dataset. The current explanation is that RiobinSZ not only compress the data but also performs some denoising that results in improving the analysis quality. A paper is submited to IEEE Bigdata on using SZ3 for the Argonne Photon Source data. 
 
 The second main results concerns the compression using SZ3 of X-ray ptychographic data acquired at the Advanced Photon Source (APS). A Dectris Eiger detector (514x1030 pixels) was used to acquire diffraction patterns as X-ray beam scanned across the sample, and the 2D diffraction images were saved along the time dimension to form a 3D matrix array (19500 x 514 x 1030 for chip pillar and 16800 x 514 x 1030 for flat chip). When the decompression data is near lossless (i.e.,
 error bound less than 0:5), the compression ratio gain of the proposed compression pipeline is 18% on chip pillar and 12% on flat chip compared with the second-best one.
@@ -51,6 +51,24 @@ The research at Argonne also optimized the compression method for crystallograph
 Further improvements may be possible by lowering certain aspects of the ROIBIN-SZ3 process to the GPU pending further validation of correctness and effectiveness of the CPU implementation.
 
 Riken released the compression code developed for SPRING-8: https://github.com/kento/TEZip
+
+## Results for 2023/2024
+
+Robert Underwood (Argonne), Kento Sato (Riken), and Amarjit Singh(Riken) supervised a summer student at Riken, Isita, to integrate LibPressio with TEZip.
+This integration allows for more exhaustive comparisons between TEZip and other compressor such as SZ3 and ROIBIN-SZ.
+There were several technical challenges to overcome for this integration:
+1) LibPressio and the other compressors are implemented in C++, but TEZip is written in python, 
+2) to make the comparisons possible and efficient, extensions were need to use shared memory to avoid the use of the file system for these large files, 
+3) TEZip makes radically different assumptions about input formats that needed to be overcome.
+These preliminary results show that TEZip may have an advantage at extremely high compression ratios, but at the cost of low bandwidth while compressors developed at Argonne have only high compression ratios but at much higher speed.
+A poster on these efforts was presented by Isita to SC23.
+Robert Underwood will visit Riken in April 2024 to help complete and submit these results for publication.
+
+At Argonne, forward progress was also made on RoIBIN-SZ.
+RoIBIN-SZ was successfully deployed and used at scale in the S3DM data reduction pipeline cluster at SLAC National Accelerator Center for their SFX workflow demonstrating the viability of this approach in production workflows.
+Additionally, there were efforts to port portions of the RoIBIN-SZ pipeline to the GPU -- these efforts show a end-to-end improvement over the CPU with only a potion of the current pipeline on the GPU indicating that even with transfers to/from the GPU it is possible to accelerate this workflow on the GPU.  In the next year, we hope to complete porting of ROIBIN-SZ to the GPU and evaluate its improved performance which should remove the needs to transfer to/from the GPU dramatically improving performance.
+An overview of RoIBIN-SZ was included as invited paper to Synchrotron Radiation News.
+
 
 ## Visits and meetings
 
@@ -66,6 +84,13 @@ There was no visit due to the Covid situaiton.
 2022:
 There was no visit due to the COVID situation.
 
+2023: 
+There was no visit in 2023.
+
+2024:
+
+* Robert Underwood will visit Riken in April advance of the JLESC workshop for 1 week.
+
 ## Impact and publications
 
 The first presentation of this collaboration was made during the DOE-MEXT meeting at Chicago in May 2019.
@@ -74,6 +99,8 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
 
 ### Papers
 
+* A paper at Synchrotron Radiation News providing an overview RoIBIN-SZ {% cite UnderwoodEtAl2023 --file jlesc.bib %}
+* A poster at SC23 discussing preliminary evaluation of TEZip against other leading lossy compressors {% cite TalukdarEtAl2023 --file jlesc.bib %}
 * A paper at IPDPS on fix ratio compression using control loop {% cite Underwood20 --file jlesc.bib %}
 * A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. {% cite Rupak20 --file jlesc.bib %}
 * A paper at ACM PACT 2020 {% cite Tian20 --file jlesc.bib %}

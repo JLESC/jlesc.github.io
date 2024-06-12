@@ -2,7 +2,7 @@
 layout: post
 title: Optimization of Fault-Tolerance Strategies for Workflow Applications
 date: 2016-03-16
-updated: 2022-01-28
+updated: 2024-01-30
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -19,7 +19,6 @@ members:
   - bosilca_g
   - bouteiller_a
   - cappello_f
-  - du_y
   - herault_t
   - perotin_l
   - robert_y
@@ -192,30 +191,30 @@ This work has appeared in the proceedings of SC'2019.
 
 ## Results for 2020/2021
 
-We have first focused on the resilient scheduling of parallel jobs on high performance computing (HPC) platforms to minimize the overall completion time, or makespan. We have revisited the problem by assuming that jobs are subject to transient or silent errors, and hence may need to be re-executed each time they fail to complete successfully. This work generalizes the classical framework where jobs are known offline and do not fail: in this classical framework, list scheduling that gives priority to longest jobs is known to be a 3-approximation when imposing to use shelves, and a 2-approximation without this restriction. We show that when jobs can fail, using shelves can be arbitrarily bad, but unrestricted list scheduling remains a 2-approximation. We have designed several heuristics, some list-based and some shelf-based, along with different priority rules and backfilling options. We have assessed and compared their performance through an extensive set of simulations, using both synthetic jobs and log traces from the Mira supercomputer. This work has appeared at APDCM'2020, and an extended version appeared in IJNC.
+We have first focused on the resilient scheduling of parallel jobs on high performance computing (HPC) platforms to minimize the overall completion time, or makespan. We have revisited the problem by assuming that jobs are subject to transient or silent errors, and hence may need to be re-executed each time they fail to complete successfully. This work generalizes the classical framework where jobs are known offline and do not fail: in this classical framework, list scheduling that gives priority to longest jobs is known to be a 3-approximation when imposing to use shelves, and a 2-approximation without this restriction. We show that when jobs can fail, using shelves can be arbitrarily bad, but unrestricted list scheduling remains a 2-approximation. We have designed several heuristics, some list-based and some shelf-based, along with different priority rules and backfilling options. We have assessed and compared their performance through an extensive set of simulations, using both synthetic jobs and log traces from the Mira supercomputer. This work has appeared at APDCM'2020, and an extended version appeared in IJNC. 
 
-We have then focused the resilient scheduling of moldable parallel jobs on high-performance
-computing (HPC) platforms. Moldable jobs allow for choosing a processor allocation before execution,
-and their execution time obeys various speedup models. The objective is to minimize
-the overall completion time of the jobs, or the makespan, when jobs can fail due to silent errors
-and hence may need to be re-executed after each failure until successful completion.
-Again, this work generalizes the classical scheduling framework for failure-free jobs. To cope with silent errors,
-we introduce two resilient scheduling algorithms, LPA-List and Batch-List, both of which use the List strategy
-to schedule the jobs. Without knowing a priori how many times each job will fail, LPA-List relies
-on a local strategy to allocate processors to the jobs, while Batch-List schedules the jobs in batches
-and allows only a restricted number of failures per job in each batch. We prove new approximation ratios
-for the two algorithms under several prominent speedup models (e.g., roofline, communication,
-Amdahl, power, monotonic, and a mixed model). An extensive set of simulations is conducted
-to evaluate different variants of the two algorithms, and the results show that they consistently
-outperform some baseline heuristics. Overall, our best algorithm is within a factor of 1.6 of
-a lower bound on average over the entire set of experiments, and within a factor of 4.2 in the worst case. Preliminary results with a subset of speedup models have been published in
-Cluster'2020.
+We have then focused the resilient scheduling of moldable parallel jobs on high-performance 
+computing (HPC) platforms. Moldable jobs allow for choosing a processor allocation before execution, 
+and their execution time obeys various speedup models. The objective is to minimize 
+the overall completion time of the jobs, or the makespan, when jobs can fail due to silent errors 
+and hence may need to be re-executed after each failure until successful completion. 
+Again, this work generalizes the classical scheduling framework for failure-free jobs. To cope with silent errors, 
+we introduce two resilient scheduling algorithms, LPA-List and Batch-List, both of which use the List strategy 
+to schedule the jobs. Without knowing a priori how many times each job will fail, LPA-List relies 
+on a local strategy to allocate processors to the jobs, while Batch-List schedules the jobs in batches 
+and allows only a restricted number of failures per job in each batch. We prove new approximation ratios 
+for the two algorithms under several prominent speedup models (e.g., roofline, communication, 
+Amdahl, power, monotonic, and a mixed model). An extensive set of simulations is conducted 
+to evaluate different variants of the two algorithms, and the results show that they consistently 
+outperform some baseline heuristics. Overall, our best algorithm is within a factor of 1.6 of 
+a lower bound on average over the entire set of experiments, and within a factor of 4.2 in the worst case. Preliminary results with a subset of speedup models have been published in 
+Cluster'2020. 
 
-In parallel, we have also been working on the comparison of several fault-tolerance methods
-for the detection and correction of floating-point errors in matrix-matrix multiplication.
+In parallel, we have also been working on the comparison of several fault-tolerance methods 
+for the detection and correction of floating-point errors in matrix-matrix multiplication.  
 These methods include replication,
 triplication, Algorithm-Based Fault Tolerance (ABFT) and residual checking
-(RC).  Error correction for ABFT can be achieved either by recovering the
+(RC).  Error correction for ABFT can be achieved either by recovering the 
 corrupted entries from the correct data and the checksums by
 solving a small-size
 linear system of equations, or by recomputing corrupted coefficients. We show
@@ -229,16 +228,16 @@ respect to the literature, we have considered relatively high error rates.
 
 At Inria, we have pursued the work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms, and an extension of the results has been published in Transactions on Computers (TC) in August 2021 {% cite BenoitEtAl2021 --file jlesc.bib %}.
 
-We have also proposed an optimal checkpointing strategy to protect iterative applications from fail-stop errors.
-We consider a general framework, where the application repeats the same execution pattern
+We have also proposed an optimal checkpointing strategy to protect iterative applications from fail-stop errors. 
+We consider a general framework, where the application repeats the same execution pattern 
 by executing consecutive iterations, and where each iteration is composed of several tasks.
-These tasks have different execution lengths and different checkpoint costs.
+These tasks have different execution lengths and different checkpoint costs.  
 Assume that there are $n$ tasks, and that task $a_i$ has execution time $t_{i}$ and checkpoint cost $c_{i}$.
 A naive strategy would
 checkpoint after each task. Another naive strategy would checkpoint at the end of each iteration. A strategy inspired by the Young/Daly formula would work for $\sqrt{2 \mu C}$ seconds, where $\mu$ is the application MTBF
 and C is the average checkpoint time, and checkpoint at the end of the current task (and repeat). Another strategy, also
-inspired by the Young/Daly formula, would select the task $a_{min}$ with the smallest checkpoint
-cost $c_{min}$ and would checkpoint after every p-th instance of that task, leading to a checkpointing period $p T$,  where $T = \sum_{i=0}^{n-1} a_{i}$ is the time per iteration. One would choose the period so that $p T \approx \sqrt{2 \mu c_{\min}}$ to obey the Young/Daly formula.
+inspired by the Young/Daly formula, would select the task $a_{min}$ with the smallest checkpoint 
+cost $c_{min}$ and would checkpoint after every p-th instance of that task, leading to a checkpointing period $p T$,  where $T = \sum_{i=0}^{n-1} a_{i}$ is the time per iteration. One would choose the period so that $p T \approx \sqrt{2 \mu c_{\min}}$ to obey the Young/Daly formula. 
 All these naive and Young/Daly strategies are suboptimal.
  Our main contribution is to show that the optimal checkpointing strategy is globally periodic, and to design a dynamic programming algorithm that computes the optimal checkpointing pattern. This pattern may well checkpoint many different tasks, and this across many different iterations. We show through simulations, both from synthetic and real-life application scenarios, that the optimal strategy outperforms the naive and Young/Daly strategies.
  These results have been published in IEEE Transactions on Parallel and Distributed Systems (TPDS) in 2022 {% cite DuEtAl2022 --file jlesc.bib %}.
@@ -296,7 +295,7 @@ distinction between pure communication operations (which are often critical for
 performance) and setup/management operations (like operations that create
 new communicators, or operations that change the logical epoch in the algorithm).
 
-* Asynchronous Recovery:
+* Asynchronous Recovery: 
 The MPI_COMM_SHRINK operation provides the operational
 construct that permits recreating a fully functional communication
 context in which not only select point-to-point communication but
@@ -322,13 +321,25 @@ dataset (e.g., reloading checkpoints, computing checksum on data, etc.).
 
 ## Results for 2022/2023
 
-First, we have been further investigating the Young/Daly formula. This formula provides an approximation of the optimal checkpoint period for a parallel application executing on a supercomputing platform. It was originally designed for preemptible tightly-coupled applications. We provided some background and survey various application scenarios to assess the usefulness and limitations of the formula in {% cite BenoitEtAl2022 --file jlesc.bib %}.
+First, we have been further investigating the Young/Daly formula. This formula provides an approximation of the optimal checkpoint period for a parallel application executing on a supercomputing platform. It was originally designed for preemptible tightly-coupled applications. We provided some background and survey various application scenarios to assess the usefulness and limitations of the formula in {% cite BenoitEtAl2022 --file jlesc.bib %}. 
 
-Also, we have been revisiting distributed termination detection algorithms in the context of High-Performance Computing (HPC) applications. We introduced an efficient variant of the Credit Distribution Algorithm (CDA) and compared it to the original algorithm (HCDA) as well as to its two primary competitors: the Four Counters algorithm (4C) and the Efficient Delay-Optimal Distributed algorithm (EDOD). We analyzed the behavior of each algorithm for some simplified task-based kernels and showed the superiority of CDA in terms of the number of control messages. We then compared the implementation of these algorithms over a task-based runtime system, PaRSEC and showed the advantages and limitations of each approach on a practical implementation {% cite BosilcaEtAl2022 --file jlesc.bib %}.
+Also, we have been revisiting distributed termination detection algorithms in the context of High-Performance Computing (HPC) applications. We introduced an efficient variant of the Credit Distribution Algorithm (CDA) and compared it to the original algorithm (HCDA) as well as to its two primary competitors: the Four Counters algorithm (4C) and the Efficient Delay-Optimal Distributed algorithm (EDOD). We analyzed the behavior of each algorithm for some simplified task-based kernels and showed the superiority of CDA in terms of the number of control messages. We then compared the implementation of these algorithms over a task-based runtime system, PaRSEC and showed the advantages and limitations of each approach on a practical implementation {% cite BosilcaEtAl2022 --file jlesc.bib %}. 
 
 Some progress on the projects mentionned in 2021-2022 were also done by UT Knoxville, in particular on integrating process, control-flow, and data resiliency layers using a hybrid Fenix/Kokkos approach, demonstrating that designing integrable systems rather than integrated systems allows for user-designed optimization and upgrading of resilience techniques while maintaining the simplicity and performance of all-in-one resilience solutions. More application-specific choice in resilience strategies allows for better long-term flexibility, performance, and - importantly - simplicity.
 
 Finally, we have initiated a study about the impact of I/O interference on application performance. HPC applications execute on dedicated nodes but share the I/O system. As a consequence, interferences surge when several applications perform I/O operations simultaneously, and each I/O operation takes much longer than expected because each application is only allotted a fraction of the I/O bandwidth. Checkpoint operations are periodic and high-volume I/O operations and, as such, are particularly sensitive to interferences.
+
+
+
+## Results for 2023/2024
+
+This year, as a follow-up to our joint work published last year in {% cite BenoitEtAl2022 --file jlesc.bib %}, we have extended this paper by adding contributions of other JLESC members
+(Leonardo Bautista-Gomez from BSC, and Sheng Di from ANL). Hence, we have considerably extended the scope of our survey, and we have submitted this contribution, entitled "A Survey on Checkpointing Strategies: Should We Always Checkpoint à la Young/Daly?",  to the special issue of FGCS scheduled for 2024 and which will focus on JLESC collaboration results. We are covering several new topics such as multi-level checkpointing, checkpointing preemptible applications in practice, checkpoints taking variable times, silent error detectors, imperfect verifications, cases where the order of the optimal checkpointing period changes, and the combination of checkpointing with replication. 
+
+
+We have also considered applications executing for a fixed duration, namely the length of the reservation that it has been granted. The checkpoint duration is a stochastic random variable that obeys some well-known probability distribution law. The question is when to take a checkpoint towards the end of the execution, so that the expectation of the work done is maximized. We addressed two scenarios. In the first scenario, a checkpoint can be taken at any time; despite its simplicity, this natural problem has not been considered yet (to the best of our knowledge). We provided the optimal solution for a variety of probability distribution laws modeling checkpoint duration. The second scenario was more involved: the application is a linear workflow consisting of a chain of tasks with IID stochastic execution times, and a checkpoint can be taken only at the end of a task. First, we introduced a static strategy where we computed the optimal number of tasks before the application checkpoints at the beginning of the execution. Then, we designed a dynamic strategy that decides whether to checkpoint or to continue executing at the end of each task. We instantiated this second scenario with several examples of probability distribution laws for task durations. This work has been published in FTXS’2023, a workshop co-located with SC’2023 
+{% cite BarbutEtAl2023 --file jlesc.bib %}.
+
 
 
 
@@ -342,14 +353,13 @@ We represented the JLESC at the Inria booth during these conferences.
 When not meeting in person, we have stayed in close collaboration through regular Skype meetings,
 which allowed us to make progress on the project.
 
-{% person robert_y %} made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months, and a total of two months and a half for 2019/2020.
+{% person robert_y %} made several visits in 2018/2019 to Univ. Tenn. Knoxville, for a total of approximately two months, and a total of two months and a half for 2019/2020. 
 
 {% person lefevre_v %} has visited Univ. Tenn. Knoxville for 10 days in February 2019,
 and for 10 days in January 2020.
 
-Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. {% person robert_y %} made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month.
-
-
+Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. {% person robert_y %} made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month. 
+{% person robert_y %} made four visits to Univ. Tenn. Knoxville in 2023, for a total of approximately one month and a half. 
 
 
 ## Impact and publications
@@ -368,11 +378,13 @@ on failure-prone HPC platforms was published in Resilience'18 {% cite LeFevreEtA
 
 The work on replication with checkpointing was published at SC'19 {% cite BenoitEtAl2019 --file jlesc.bib %}.
 
-The work on the comparison of several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication was published at Resilience'20 {% cite LeFevreEtAl2020 --file jlesc.bib %}.
+The work on the comparison of several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication was published at Resilience'20 {% cite LeFevreEtAl2020 --file jlesc.bib %}. 
 
 The work on resilient scheduling of moldable parallel jobs on high-performance computing (HPC) platforms was published in IEEE TC in 2021 {% cite BenoitEtAl2021 --file jlesc.bib %}.
 
-In 2022, two joint publications were published from the project, the first one to assess the usefulness and limitations of the Young/Daly formula for checkpointing, in the IC3 conference {% cite BenoitEtAl2022 --file jlesc.bib %}, and the other one to compare distributed termination detection algorithms for modern HPC platform, in the IJNC journal {% cite BosilcaEtAl2022 --file jlesc.bib %}.
+In 2022, two joint publications were published from the project, the first one to assess the usefulness and limitations of the Young/Daly formula for checkpointing, in the IC3 conference {% cite BenoitEtAl2022 --file jlesc.bib %}, and the other one to compare distributed termination detection algorithms for modern HPC platform, in the IJNC journal {% cite BosilcaEtAl2022 --file jlesc.bib %}. 
+
+In 2023, we have published one joint publication {% cite BarbutEtAl2023 --file jlesc.bib %} on when to checkpoint at the end of a fixed-length reservation, and we have written a collaborative survey between several JLESC institutions, that has been submitted at the end of the year. 
 
 
 {% comment %}
@@ -415,7 +427,7 @@ This causes several new challenges that we hope to address in the future.
 
 
 ## Former members
-{% person cavelan_a %}, {% person lefevre_v %}, {% person han_l %}.
+{% person cavelan_a %}, {% person lefevre_v %}, {% person han_l %}, {% person du_y %}. 
 
 
 

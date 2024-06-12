@@ -2,11 +2,11 @@
 layout: post
 title: nekRS and Ginkgo - Towards Exascale CFD
 date: 2023-04-18
-updated: 2023-04-18
+updated: 2024-01-31
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: suspended
 topics:
   - numerics
 keywords:

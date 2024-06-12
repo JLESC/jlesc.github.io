@@ -2,11 +2,11 @@
 layout: post
 title: Continuous integration for HPC codes
 date: 2022-02-11
-updated: 2023-02-11
+updated: 2024-01-26
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - storage
 keywords:
@@ -15,10 +15,10 @@ keywords:
   - Workflows
 head: speck_r
 members:
+  - fritz_j
   - kabadshow_i
   - murai_h
   - nakamura_y
-  - bosilca_g
 ---
 
 ## Research topic and goals
@@ -40,6 +40,10 @@ The project started in early 2022 and the partners met during the 14th JLESC Wor
 ## Results for 2022/2023
 
 Based on the outcome of the meeting during the 2022 workshop, we started implementing a gitlab-Github coupling to enable the usage of custom gitlab runners for Github-hosted repositories automatically. The code as been released with a demo and documentation on Github: https://github.com/jakob-fritz/github2lab_action and is tested within the pySDC code developed at JSC.
+
+## Results for 2023/2024
+
+We have worked on continuous testing as well as continuous benchmarking in this period. In the field of continuous testing, the solution to automatically mirror code from github to gitlab was further improved. Now different workflows are supported better (e.g. not only working with branches in the same repository but also working with Pull-Requests from forks). The development of the tool can be found on github: https://github.com/jakob-fritz/github2lab_action. Furthermore, continuous testing has been extended to enhance storage and visualization the recorded performance data. See an example of that approach here: https://gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc.
 
 ## Visits and meetings
 None.
