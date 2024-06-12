@@ -1,5 +1,5 @@
 ---
-layout: page_project
+layout: post
 title: A Comprehensive Software Stack for Dynamic Resources Management.
 date: 2024-06-08
 updated: 2024-06-10

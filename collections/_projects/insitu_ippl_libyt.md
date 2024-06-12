@@ -1,5 +1,5 @@
 ---
-layout: page_project
+layout: post
 title: In-situ visualization and analysis for large-scale particle-mesh simulations
 date: 2023-09-06
 updated: 2024-01-24

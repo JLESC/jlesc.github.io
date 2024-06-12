@@ -1,5 +1,5 @@
 ---
-layout: page_project
+layout: post
 title: Malleable implementation of SERGHEI-SWE with DMR
 date: 2024-04-04
 updated: 2024-04-08
