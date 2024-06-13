@@ -1,0 +1,29 @@
+{% assign text=include.text %}
+{% assign url=include.url %}
+{% assign external=include.external %}
+{% assign size=include.size %}
+{% assign outline=include.outline %}
+{% assign style=include.style | default: "primary" %}
+{% assign fa_icon=include.fa_icon %}
+
+{% capture button_style %}
+  mr-1 button
+  {% if style == "primary" %}
+    {% if outline %}button button-outline-primary{% else %}button button-primary{% endif %}
+  {% endif %}
+  {% if style == "light" %}
+    {% if outline %}button button-outline-light{% else %}button button-light{% endif %}
+  {% endif %}
+  {% if style == "dark" %}
+    {% if outline %}button button-outline-dark{% else %}button button-dark{% endif %}
+  {% endif %}
+  {% if size == 'small' %}button button-sm{% endif %}
+  {% if size == 'large' %}button button-lg{% endif %}
+{% endcapture %}
+
+<a href="{% if external %}{{url}}{% else %}{{url | relative_url }}{% endif %}" {% if external %}target="_blank" rel="noopener"{% endif %} class="{{ button_style}}">
+  {{ text }}
+  {% if fa_icon %}
+    <i class="{{ fa_icon}} ml-1"></i>
+  {% endif %}
+</a>

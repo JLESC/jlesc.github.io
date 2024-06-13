@@ -1,0 +1,42 @@
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  
+  .menu-footer {
+    font-size: 16px;
+    a {
+      color: var(--color-primary-text);
+    }
+  }
+}
+
+.grid-footer {
+  .grid-view-more-button {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-primary);
+    font-family: $font-family-base;
+  }
+}
+.grid-header {
+  h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-base);
+    font-family: $font-family-heading;
+  }
+}
+
+.bottom {
+  background-color: var(--color-primary-2);
+  color: var(--color-primary-text);
+}
+
+.page.page-home {
+  .card-services {
+    padding: 25px;
+    background-color: var(--color-base-bg-3);
+  }
+}

@@ -1,39 +1,91 @@
 ---
-layout: page
+layout: default
+body_classes: page-blog
 title: News
-navbar: News
+description: "See the latest JLESC News"
+header_transparent: false
+
+hero:
+  enabled: false
 ---
 
-<div id="news-index">
-  {% for post in paginator.posts %}
-    {% include article_index.html %}
-  {% endfor %}
+{% if page.hero.enabled %}
+  {% include framework/blocks/sections/hero.html
+    heading=page.hero.heading
+    sub_heading=page.hero.sub_heading
+    background_image=page.hero.background_image
+    background_image_blend_mode=page.hero.background_image_blend_mode
+    background_color=page.hero.background_color
+    background_gradient=page.hero.background_gradient
+    text_color=page.hero.text_color
+    fullscreen_mobile=page.hero.fullscreen_mobile
+    fullscreen_desktop=page.hero.fullscreen_desktop
+    height=page.hero.height
+    buttons=page.hero.buttons
+  %}
+{% else %}
+  <div class="section">
+    <div class="container">
+    {% include framework/blocks/sections/title.html
+      fa_icon=page.fa_icon
+      icon=page.icon
+      title=page.title
+      description=page.description
+      image=page.image
+    %}
+    </div>
+  </div>
+{% endif %}
+
+{% assign post_pages = site.posts  %}
+
+<div class="section strip-base">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="row">
+          {% for post in paginator.posts %}
+            <div class="col-12 mb-3 mb-md-9">
+              {% include theme/cards/card-posts.html
+                style="row"
+                date=post.date
+                title=post.title
+                description=post.description
+                thumbnail=post.thumbnail
+                url=post.url
+                categories=post.categories
+                show_read_more=false
+              %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-3">
+        <div class="sidebar">
+          <h5>Categories</h5>
+          <ul>
+            {% for category in site.categories %}
+              {% capture category_name %}
+                {{ category | first }}
+              {% endcapture %}
+              <li>
+                <a href="/category/{{ category_name | slugify }}">{{ category_name | camelcase }}</a>
+                <span>
+                  ({{ category[1].size }})</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        {% include framework/blocks/components/paginator.html %}
+      </div>
+    </div>
+
+  </div>
 </div>
-
-{% include contribute_footer.html
-  content='news'
-  link='https://github.com/JLESC/jlesc.github.io/wiki/Editing-Pages#editing-news'
-%}
-
-<nav class="row">
-  <div class="col-xs-3 col-md-4">
-    <a href="{% if paginator.next_page %}{{ paginator.next_page_path }}{% else %}#{% endif %}"
-       class="btn btn-sm btn-secondary{% unless paginator.next_page %}-outline{% endunless %} pull-xs-left{% unless paginator.next_page %} disabled{% endunless %}"
-       role="button">
-      <i class="fa fa-long-arrow-left fa-fw"></i>
-      <span class="hidden-sm-down"> Older</span>
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-4 text-xs-center">
-    <a href="{{ site.baseurl }}/news/archive/" class="btn btn-sm btn-secondary" role="button">
-      <span class="hidden-sm-down">News </span>Archive
-    </a>
-  </div>
-  <div class="col-xs-3 col-md-4">
-    <a href="{% if paginator.previous_page %}{{ paginator.previous_page_path }}{% else %}#{% endif %}"
-       class="btn btn-sm btn-secondary{% unless paginator.previous_page %}-outline{% endunless %} pull-xs-right{% unless paginator.previous_page %} disabled{% endunless %}"
-       role="button">
-      <span class="hidden-sm-down">Newer </span><i class="fa fa-long-arrow-right fa-fw"></i>
-    </a>
-  </div>
-</nav>

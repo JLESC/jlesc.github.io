@@ -1,0 +1,13 @@
+<div class="news container">
+  <h2 class="title">News</h2>
+  {% for post in site.posts limit: 5 %}
+  <div>
+    {% include theme/cards/card-posts.html
+    title=post.title
+    date=post.date
+    url=post.url
+    description=post.description
+    %}
+  </div>
+  {% endfor %}
+</div>

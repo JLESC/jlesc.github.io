@@ -1,0 +1,63 @@
+// Bootstrap Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1360px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$grid-gutter-width: 60px;
+$section-gutter: 30px;
+
+$spacers:
+  (
+    "gutter": $grid-gutter-width,
+    "gutter-half": $grid-gutter-width / 2,
+    0: 0,
+    1: 10px,
+    2: 20px,
+    3: 30px,
+    4: 40px,
+    5: 50px,
+    6: 60px,
+    7: 70px,
+    8: 80px,
+    9: 90px,
+    10: 100px,
+    11: 110px,
+    12: 120px,
+    13: 130px,
+    14: 140px,
+    15: 150px,
+    16: 160px,
+    17: 170px,
+    18: 180px,
+    19: 190px,
+    20: 200px
+);
+
+// Theme Variables
+$header-height: 60px !default;
+$card-border-radius: 4px !default;
+
+$brand-primary:         #2780E3 !default;
+$brand-success:         #3FB618 !default;
+$brand-info:            #9954BB !default;
+$brand-warning:         #FF7518 !default;
+$brand-danger:          #FF0039 !default;
+
+$gray-base:                      #000 !default;
+$gray-darker:                    lighten($gray-base, 13.5%) !default;
+$gray-dark:                      lighten($gray-base, 20%) !default;
+$gray:                           lighten($gray-base, 33.5%) !default;
+$gray-light:                     lighten($gray-base, 60%) !default;
+$gray-lighter:                   lighten($gray-base, 90%) !default;

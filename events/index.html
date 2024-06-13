@@ -1,36 +1,28 @@
 ---
-layout: page
-title: Events
-date: 2014-06-11 14:38
-navbar: Events
+layout: default
+body_classes: page-basic
+
+title: "Events"
 ---
 
-<div class="row">
-  <div class="col-xs-12 col-md-6">
-    <h2>Upcoming</h2>
-    <ul class="list-group">
-      {% assign sorted_pages = site.events_upcoming | sort:'event_start' %}
-      {% for event in sorted_pages %}
-        {% if event.page_type == 'event_page' %}
-          {% include event/overview_item.html %}
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="col-xs-12 col-md-6">
-    <h2>Past</h2>
-    <ul class="list-group">
-      {% assign sorted_pages = site.events_past | sort:'event_start' %}
-      {% for event in sorted_pages %}
-        {% if event.page_type == 'event_page' %}
-          {% include event/overview_item.html %}
-        {% endif %}
-      {% endfor %}
-    </ul>
+<div class="section">
+  <div class="container">
+    <div class="title">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-10">
+          <div class="title-heading">
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-{% include contribute_footer.html
-  content='event'
-  link='https://github.com/JLESC/jlesc.github.io/wiki/Editing-Pages#editing-events'
-%}
+<div class="section bg-base-bg-2">
+  {% include theme/custom-components/upcoming-events.html %}
+</div>
+
+<div class="section">
+  {% include theme/custom-components/past-events.html %}
+</div>

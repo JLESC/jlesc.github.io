@@ -1,82 +1,21 @@
-# Site settings
-title: Joint Laboratory on Extreme Scale Computing
-email: 
-author: "JLESC Committee"
-description: > # this means to ignore newlines until "baseurl:"
-  The Joint Laboratory for Extreme Scale Computing includes researchers from the French National
-  Institute for Research in Computer Science and Control (INRIA), the University of Illinois at
-  Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing
-  Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich
-  Supercomputing Center and Riken/AICS.
-  The Joint Lab is part of Parallel@Illinois.
+# -------------------
+# Jekyll Config
+# --------------------
 baseurl: ""
-url: "https://jlesc.github.io"
-logo: jlesc-header_180910.jpg
-
-timezone: UTC
-encoding: utf-8
-
-exclude:
-  - bin/
-  - vendor/
-  - latex_out/
-  - travis_deploy_rsa.enc
-  - travis_deploy_rsa.pub
-  - .travis.yml
-  - Gemfile
-  - Gemfile.lock
-  - CONTRIBUTORS
-  - CONTRIBUTING.md
-
+url: ""
+permalink: pretty
 markdown: kramdown
+highlighter: rouge
+collections_dir: collections
 
+# Plugins
 plugins:
-  - jekyll-assets
+  - jekyll-environment-variables
   - jekyll-paginate
-  - jekyll-toc
-  - jekyll-feed
-  - jekyll-git_metadata
   - jekyll/scholar
-  - jekyll-sitemap
 
-paginate: 5
-paginate_path: "/news/page:num/"
-
-excerpt_separator: '<!--more-->'
-
-defaults:
-  -
-    scope:
-      path: ''
-    values:
-      toc: true
-
-# this is used for news posts
-permalink: /news/:year/:month/:day/:slug/
-
-assets:
-  compress:
-    css: true
-    js: true
-  cache: .asset-cache
-  prefix: '/assets'
-  assets:
-    - 'main.scss'
-    - 'main.js'
-    - '*.png'
-    - '*.jpg'
-    - '*.jpeg'
-    - '*.svg'
-    - '*.otf'
-    - '*.eot'
-    - '*.ttf'
-    - '*.woff'
-    - '*.woff2'
-  digest: true
-  features:
-    liquid: false
-    automatic_img_size: false
-    automatic_img_alt: false
+paginate: 6
+paginate_path: "/news/page/:num"
 
 collections:
   events_upcoming:
@@ -91,6 +30,166 @@ collections:
   projects:
     output: true
     permalink: /projects/:title/
+
+
+defaults:
+  - scope:
+      path: ""
+      type: team
+    values:
+      layout: team
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      weight: 999
+  # - scope:
+  #     path: ""
+  #     type: events_upcoming
+  #   values:
+  #     layout: post
+  - scope:
+      path: "images"
+    values:
+      image: true
+  - scope:
+      path: "categories"
+    values:
+      permalink: /category/:basename/
+  - scope:
+      path: "pages"
+    values:
+      permalink: /:basename/
+  - scope:
+      path: "pages/*"
+    values:
+      permalink: /:basename/
+
+# SCSS
+sass:
+  style: compact
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - netlify.toml
+
+
+# -------------------
+# Theme Config
+# --------------------
+title: "Jekyll Advance"
+category_dir: category
+
+colors:
+  #light-mode colors
+  primary: "#2b3af7"
+  primary_2: "#424ff8"
+  primary_text: "#fdfcf9"
+  secondary: "#702bf7"
+  background: "#FFFFFF"
+  background_2: "#f8f9ff"
+  background_3: "#f1f3f4"
+  # Background 4 was added manually
+  background_4: "#333333"
+  text: "#0d042b"
+  text_2: "#3b364c"
+  logo_text: "#FFFFFF"
+  menu_text: "#FFFFFF"
+
+  # dark-mode colors (disabled)
+  # primary_dark: "#4486f2"
+  # primary_2_dark: "#2f74e5"
+  # primary_text_dark: "#fdfcf9"
+  # secondary_dark: "#8215cb"
+  # background_dark: "#333333"
+  # background_2_dark: "#f8f9ff"
+  # background_3_dark: "#222124"
+  # text_dark: "#f5f5ec"
+  # text_2_dark: "#b6c3d6"
+  # logo_text_dark: "#2b3af7"
+  # menu_text_dark: "#FFFFFF"
+
+fonts:
+  google_fonts: "https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap"
+  heading: "Lato"
+  base: "Source Sans Pro"
+  monospace: "Fira Mono"
+  logo: "Lato"
+
+logo:
+  logo_text: "JLESC"
+  # logo_image: assets/images/logo.jpg
+  # logo_image_mobile: assets/images/logo.jpg
+  # logo_image_invert: assets/images/logo.jpg
+  # logo_image_invert_mobile: assets/images/logo.jpg
+  logo_image_desktop_height: "44px"
+  logo_image_desktop_width: "167px"
+  logo_image_mobile_height: "44"
+  logo_image_mobile_width: "167"
+  show_logo_image_on_mobile: false
+  show_logo_image_on_desktop: false
+  show_logo_text_on_mobile: true
+  show_logo_text_on_desktop: true
+
+seo:
+  meta_opengraph_type: "website"
+  meta_twitter_card: "summary"
+  meta_twitter_site: "@zerostaticio"
+  meta_twitter_creator: "@zerostaticio"
+
+header:
+  fixed: true
+
+darkmode:
+  enable_dark_mode: false
+  show_dark_mode_toggle_in_header: false
+  show_dark_mode_toggle_in_bottom: false
+  show_dark_mode_toggle_in_mobile_menu: false
+
+analytics:
+  google_analytics_id: ""
+
+disqus:
+  shortname: "" # Your disqus shortcode. leave this blank to disable comments globally
+
+mailchimp:
+  form_action_url: https://zerostatic.us13.list-manage.com/subscribe/post?u=675276692aebec1c007f8156d&amp;id=3e3da720c2
+
+contact_form:
+  use_netlify_form: true
+  use_formspree_form: false
+  formspree_endpoint: https://formspree.io/f/moqyklqv
+  netlify_form_name: "contact"
+
+menu:
+  show_dropdown_items_in_mobile_menu: false
+  show_social_media_in_mobile_menu: true
+
+footer:
+  enable_footer: true # show/hide the entire footer
+  footer_title: "Jekyll Advance"
+  footer_description: "Advance is a multi-purpose premium Jekyll theme. Modern design, clean code and highly configurable."
+  enable_social_media_icons: true
+  enable_contact_details: true
+  enable_menu_footer_primary: true
+  enable_menu_footer_secondary: true
+  enable_menu_footer_tertiary: true
+  footer_primary_menu_title: "Product"
+  footer_secondary_menu_title: "Company"
+  footer_tertiary_menu_title: "Other"
+
+bottom:
+  enable_bottom: true # show/hide the entire bottom (below the footer)
+  enable_bottom_menu: true # if enabled, the bottom menu can be edited in `_data/menu.yml`
+
+sidebar:
+  enable_sidebar_projects: false
+  enable_breadcrumbs_projects: true
 
 scholar:
   bibtex_filters:
@@ -115,6 +214,3 @@ scholar:
   details_link:   Details
 
   query: "@*"
-
-# Google services
-# google_analytics: UA-89097376-1

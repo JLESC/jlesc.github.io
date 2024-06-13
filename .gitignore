@@ -7,6 +7,7 @@ travis_deploy_rsa
 _site/
 .asset-cache/
 .jekyll-metadata
+.jekyll-cache/
 
 
 ### Ruby ###
@@ -81,3 +82,4 @@ Temporary Items
 
 ### IDEs ###
 .idea/
+.vscode/

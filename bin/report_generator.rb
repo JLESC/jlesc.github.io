@@ -82,8 +82,8 @@ For the full list refer to the +Gemfile.lock+ file on commit SHA +9afcb40fbda60c
 =end
 
 require 'bundler/setup'
-Bundler.require(:default)
 require 'jekyll'
+Bundler.require(:default)
 require 'bibtex'
 
 BIBLIOGRAPHY_MATCHER = /{%\sbibliography\s.*--file\s(?<bibfile>[\w\/]*)\.bib\s%}/
@@ -518,7 +518,7 @@ module Jekyll
       end
 
       # copy the JLESC logo to the LaTeX directory
-      FileUtils.cp(File.join(@site.source, '_assets', 'images', 'jlesc-header_180910.jpg'),
+      FileUtils.cp(File.join(@site.source, 'assets', 'images', 'jlesc-header_180910.jpg'),
                    File.join(@latex_path, 'jlesc_logo.png'))
 
     end

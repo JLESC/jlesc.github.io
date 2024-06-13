@@ -1,0 +1,86 @@
+---
+layout: default
+body_classes: page-basic
+---
+<div class="section">
+  <div class="container">
+    <div class="title">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-10">
+          <div class="title-heading">
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if page.executive_directors.enabled %}
+<div class="bg-base-bg-2 section">
+  <div class="container">
+    <h1>Executive Directors</h1>
+    <div class="row mt-5">
+      {% for director in page.executive_directors.list %}
+
+      {% assign image = director.image | default: 'assets/images/person_placeholder.jpg' %}
+
+      <div class="col-12 col-md-4 col-lg-4 my-2">
+        {% include theme/cards/card-posts.html
+        title=director.name
+        description=director.description
+        categories=director.categories
+        thumbnail=image
+        %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if page.steering_committee.enabled %}
+<div class="bg-base section">
+  <div class="container">
+    <h1>Steering Committee</h1>
+    <div class="row mt-5">
+      {% for member in page.steering_committee.list %}
+
+      {% assign image = director.image | default: 'assets/images/person_placeholder.jpg' %}
+
+      <div class="col-12 col-md-4 col-lg-4 my-2">
+        {% include theme/cards/card-posts.html
+        title=member.name
+        description=member.description
+        categories=member.categories
+        thumbnail=image
+        %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if page.early_career_committee.enabled %}
+<div class="bg-base-bg-2 section">
+  <div class="container">
+    <h1>Early Career Committee</h1>
+    <div class="row mt-5">
+      {% for member in page.early_career_committee.list %}
+
+      {% assign image = director.image | default: 'assets/images/person_placeholder.jpg' %}
+
+      <div class="col-12 col-md-4 col-lg-4 my-2">
+        {% include theme/cards/card-posts.html
+        title=member.name
+        description=member.description
+        categories=member.categories
+        thumbnail=image
+        %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}

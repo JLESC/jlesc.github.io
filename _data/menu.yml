@@ -1,0 +1,40 @@
+main:
+  - name: About
+    url: /#about
+    weight: 1
+    child:
+    - name: JLESC
+      url: /#about
+    - name: Partners
+      url: /about/partners.html
+    - name: People
+      url: /about/people
+    - name: Grants
+      url: /about/grants.html
+  - name: News
+    url: /news/
+    weight: 1
+  - name: Events
+    url: /events/
+    weight: 1
+  - name: Research
+    child:
+    - name: Collaboration
+      url: /research/collaboration
+    - name: Projects
+      url: /projects
+  - name: References
+    url: /references
+  - name: How to
+    url: "https://github.com/JLESC/jlesc.github.io/wiki"
+bottom:
+  - name: Imprint
+    url: /imprint/
+    weight: 4
+  - name: Privacy
+    url: https://help.github.com/articles/github-privacy-statement/
+    weight: 3
+  - name: Sources
+    url: https://github.com/JLESC/jlesc.github.io
+  - name: Found a Typo?
+    url: https://github.com/JLESC/jlesc.github.io/issues

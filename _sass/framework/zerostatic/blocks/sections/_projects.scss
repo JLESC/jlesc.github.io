@@ -1,0 +1,128 @@
+@import "../../../../theme/variables";
+
+#project-states-stats-list {
+  li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  li + li {
+    margin-left: 2rem;
+  }
+}
+
+#project-categories-accordion {
+  a h4 {
+    margin-bottom: 0;
+  }
+}
+
+.project-status-help_wanted-bg {
+  background-color: lighten($brand-primary, 30%);
+  .project-status-help_wanted {
+    color: inherit
+  }
+}
+.project-status-help_wanted {
+  color: $brand-primary;
+}
+
+.project-status-proposed-bg {
+  background-color: lighten($brand-primary, 15%);
+  .project-status-proposed {
+    color: inherit;
+  }
+}
+.project-status-proposed {
+  color: $brand-primary;
+}
+
+.project-status-starting-bg {
+  background-color: lighten($brand-info, 15%);
+  .project-status-starting {
+    color: inherit;
+  }
+}
+.project-status-starting {
+  color: $brand-info;
+}
+
+.project-status-running-bg {
+  background-color: lighten($brand-success, 25%);
+  .project-status-running {
+    color: inherit;
+  }
+}
+.project-status-running {
+  color: $brand-success;
+}
+
+.project-status-suspended-bg {
+  background-color: lighten($gray, 25%);
+  .project-status-suspended {
+    color: inherit;
+  }
+}
+.project-status-suspended {
+  color: $gray;
+}
+
+.project-status-closing-bg {
+  background-color: lighten($brand-warning, 15%);
+  .project-status-closing {
+    color: inherit;
+  }
+}
+.project-status-closing {
+  color: $brand-warning;
+}
+
+.project-finished-bg {
+  .project-status-finished {
+    color: inherit;
+  }
+}
+.project-status-finished {
+}
+
+#project-index {
+  .card-block {
+    padding: 1rem;
+  }
+  .card-footer, .card-header {
+    padding: 0.25rem 1rem;
+  }
+}
+
+table.person-months-table {
+  tr {
+    td:last-of-type {
+      text-align: right;
+    }
+  }
+}
+
+#project-categories-accordion {
+  .card {
+    position: relative;
+    display: block;
+    margin-bottom: 0.75rem;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 1px #ddd;
+  }
+
+  .card-columns {
+    -webkit-column-count:3;
+    column-count: 3;
+    -webkit-column-gap: 1.25rem;
+    column-gap: 1.25rem
+  }
+
+  .card-columns .card {
+    display: inline-block;
+    width: 100%
+  }
+
+  .card-block {
+    padding: 1rem;
+  }
+}

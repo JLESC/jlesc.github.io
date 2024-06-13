@@ -1,0 +1,16 @@
+<div class="upcoming-events mt-2 py-3">
+  <div class="container">
+    <h2>Past</h2>
+    {% for event in site.events_past %}
+    {% assign url = event.event_short_url | event.event_url %}
+    <div>
+      {% include theme/cards/card-posts.html
+      title=event.title
+      date=event.date
+      url=event.id
+      style="column"
+      %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
