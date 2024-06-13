@@ -1,199 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Compression for instruments</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
-">
-  <link rel="canonical" href="https://jlesc.github.io/projects/Compression_for_instruments/">
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
-  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
-</head>
+    <title>Compression for instruments - Jekyll Advance</title>
 
-  <body>
-    <header>
-  <noscript>
-    <div class="container-fluid">
-      <div class="card card-block card-danger row">
-        <p class="card-text text-sm-center">
-          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
-          <br />
-          Please activate Javascript for this website. We are not loading content from other domains.
-        </p>
-      </div>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/Compression_for_instruments/"/>
+
+  <meta property="og:title" content="Compression for instruments"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
     </div>
-  </noscript>
-  <nav>
-    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
-      <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
-          <i class="fa fa-bars fa-fw"></i>
-        </button>
-
-        <a class="navbar-brand" href="/">JLESC</a>
-
-        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-  <div class="dropdown-menu">
-    <a href="/about/" class="dropdown-item">JLESC</a>
-    <a href="/about/partners/" class="dropdown-item">Partners</a>
-    <a href="/about/people/" class="dropdown-item">People</a>
-    <a href="/about/grants/" class="dropdown-item">Grants</a>
   </div>
-</li>
 
-            <li class="nav-item">
-              <a href="/news/" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/events/">Events</a>
-            </li>
-            <li class="nav-item dropdown active">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
-  <div class="dropdown-menu">
-    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
-    <a href="/projects/" class="dropdown-item active">Projects</a>
-    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
-    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
   </div>
-</li>
+</div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/references/">References</a>
-            </li>
-          </ul>
 
-          <ul class="nav navbar-nav pull-right">
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://github.com/JLESC/jlesc.github.io/wiki"
-                 target="_blank"
-                 title="How to contribute"
-                 data-toggle="tooltip"
-                 data-placement="left">
-                <i class="fa fa-fw fa-book"></i>
-                How To
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 
-    <main>
-      <div class="container">
-        <div class="post post-project">
-  <article class="post-content">
-    <div class="row">
-      <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Compression for instruments</h1>
-      </header>
-    </div>
-    <div class="row">
-      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
-        <section class="group-meta card">
-  <div class="card-header">
-    Project Profile
-  </div>
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
   
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item row">
-      <label class="col-sm-4">Topics</label>
-      <div class="col-sm-8">
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
         
-          <span class="clearfix">
-            <span class="topic topic-title">I/O, Storage and In-Situ Processing</span>
-          </span>
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
         
-      </div>
-    </li>
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
     
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
     
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
     
-      <li class="list-group-item row">
-        <label class="col-sm-4">Members</label>
-        <div class="col-sm-8">
-          
-            <span class="clearfix">
-              <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-              <span class="pull-right">
-                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
-              </span>
-            </span>
-          
-          
-            <span class="clearfix">
-              <span class="person given-name">Sheng</span> <span class="person sur-name">Di</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Ali Murat</span> <span class="person sur-name">Gok</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Kento</span> <span class="person sur-name">Sato</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Kentaro</span> <span class="person sur-name">Sano</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Tomohiro</span> <span class="person sur-name">Ueno</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Jon</span> <span class="person sur-name">Calhoun</span> (<abbr title="External partner" class="initialism" data-toggle="tooltip">EXT</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Robert</span> <span class="person sur-name">Underwood</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-        </div>
-      </li>
-    
-    
-    <li class="list-group-item row">
-      <label class="col-sm-4">Status</label>
-      <div class="col-sm-8">
-        <span class="project-status project-status-running">running</span>
-      </div>
-    </li>
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
     
   </ul>
-</section>
-        <section class="card" id="toc">
-          <div class="card-header">
-            Table of Contents
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">25 February 2020</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
           </div>
-          <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20232024">Results for 2023/2024</a></li>
-<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
-<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h3"><a href="#papers">Papers</a></li>
-<li class="toc-entry toc-h3"><a href="#funding">Funding</a></li>
-<li class="toc-entry toc-h3"><a href="#impact-on-other-projects">Impact on other projects</a></li>
-<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>
-        </section>
-      </aside>
-      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+          <div class="post-title">
+            <h1>Compression for instruments</h1>
+          </div>
+          
+
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         
-        <h2 id="research-topic-and-goals">
-<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
 
 <p>Scientific instruments, simulation and data analytics applications are generating or using extremely large datasets that are difficult (if not impossible) to move, store and transform in full. Compression of scientific data, either lossless or lossy, is considered as one of the solutions to address this problem. Already several applications, including ECP applications, are relying on compression to reduce their data. The purpose of the collaboration is first to explore the compression needs at ANL and RCCS from instruments (in particular light sources like the APS and Spring-8), simulations and data analytics involving ML/DL. Second, the collaboration will design new compression algorithms or adapt existing ones responding to ANL and RCCS application needs. Third, the collaboration will explore advanced implementations in FPGA and GPU of the designed compression pipelines.
 We propose to:</p>
@@ -203,19 +309,16 @@ We propose to:</p>
   <li>Design and implementation of hardware accelerators for compression pipelines</li>
 </ul>
 
-<h2 id="results-for-20192020">
-<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
+<h2 id="results-for-20192020">Results for 2019/2020</h2>
 
 <p>One of the promising approaches is predictive delta compression. Predictive delta compression is a technique to store only difference between original data and predicted data or the difference between consecutive predicted frames. Therefore, accurate prediction to the original data, which is data to compress, is important for increasing the compression ratio. Because the image data from sensors are time-evolutional images, we need a technique to accuracy predict future image frames. Predictive neural network is a predictive coding based deep convolutional neural network which learns to predict future frames of a video sequence. PredNet is such an architecture which is trained to predict the future movement of objects. We use PredNet to predict the future frames from the given time-evolutional frames. In the evaluation, we observe that we can compress SPring-8 data by a factor of 600 compared to original size using a combination of predictive delta compression and the SZ compressor developed at Argonne with a PSNR of 56dB.</p>
 
 <p>In addition, Argonne collaborated with Clemson to develop a control loop allowing the automatic setting of lossy compressor error bound from user defined analysis metrics. The first implementation of the control loop targeted the fix ratio compression objective. The control loop was used to search for the compressor error bound providing the best accuracy for the targeted compression ratio. A paper has been accepted at IPDPS on this topic.</p>
 
-<h2 id="results-for-20202021">
-<a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
+<h2 id="results-for-20202021">Results for 2020/2021</h2>
 <p>The research on predictive delta compression continued at Riken and produced a paper accepted at IEEE CCGRID 2021. In parallel, the team at Argonne optimized the implementation of Huffman variable lenght coding on GPUs. This effort produced two publications at ACM PACT 2020 and IEEE IPDPS 2021.</p>
 
-<h2 id="results-for-20212022">
-<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+<h2 id="results-for-20212022">Results for 2021/2022</h2>
 <p>The main result is the validation from the EXAFEL team of RiobinSZ as a valid lossy compressor for crystallography. The validation experiment used RoibinSZ on Se-SAD SFX Dataset (Selenium Single-wavelength Anomalous Diffraction. Serial Femtosecond Crystallography), 5043 images (1480x1552x4bytes). Many metrics were used to perform the assesment: Number of hits: Number indexed, Rsplit, CC1/2, CCano, Rwork, Rfree, Map-model CC. Roibin SZ electron density successfully reconstructs the protein structure. The dataset compressed with RiobinSZ offered a better result overall compared to the non-compressed dataset. The current explanation is that RiobinSZ not only compress the data but also performs some denoising that results in improving the analysis quality. A paper is submited to IEEE Bigdata on using SZ3 for the Argonne Photon Source data.</p>
 
 <p>The second main results concerns the compression using SZ3 of X-ray ptychographic data acquired at the Advanced Photon Source (APS). A Dectris Eiger detector (514x1030 pixels) was used to acquire diffraction patterns as X-ray beam scanned across the sample, and the 2D diffraction images were saved along the time dimension to form a 3D matrix array (19500 x 514 x 1030 for chip pillar and 16800 x 514 x 1030 for flat chip). When the decompression data is near lossless (i.e.,
@@ -228,8 +331,7 @@ Further improvements may be possible by lowering certain aspects of the ROIBIN-S
 
 <p>Riken released the compression code developed for SPRING-8: https://github.com/kento/TEZip</p>
 
-<h2 id="results-for-20232024">
-<a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
+<h2 id="results-for-20232024">Results for 2023/2024</h2>
 
 <p>Robert Underwood (Argonne), Kento Sato (Riken), and Amarjit Singh(Riken) supervised a summer student at Riken, Isita, to integrate LibPressio with TEZip.
 This integration allows for more exhaustive comparisons between TEZip and other compressor such as SZ3 and ROIBIN-SZ.
@@ -246,8 +348,7 @@ RoIBIN-SZ was successfully deployed and used at scale in the S3DM data reduction
 Additionally, there were efforts to port portions of the RoIBIN-SZ pipeline to the GPU – these efforts show a end-to-end improvement over the CPU with only a potion of the current pipeline on the GPU indicating that even with transfers to/from the GPU it is possible to accelerate this workflow on the GPU.  In the next year, we hope to complete porting of ROIBIN-SZ to the GPU and evaluate its improved performance which should remove the needs to transfer to/from the GPU dramatically improving performance.
 An overview of RoIBIN-SZ was included as invited paper to Synchrotron Radiation News.</p>
 
-<h2 id="visits-and-meetings">
-<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <p>2020:</p>
 <ul>
@@ -260,7 +361,7 @@ An overview of RoIBIN-SZ was included as invited paper to Synchrotron Radiation 
 <p>2021:
 There was no visit due to the Covid situaiton.</p>
 
-<p>2022: 
+<p>2022:
 There was no visit due to the COVID situation.</p>
 
 <p>2023: 
@@ -272,38 +373,26 @@ There was no visit in 2023.</p>
   <li>Robert Underwood will visit Riken in April advance of the JLESC workshop for 1 week.</li>
 </ul>
 
-<h2 id="impact-and-publications">
-<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<h2 id="impact-and-publications">Impact and publications</h2>
 
 <p>The first presentation of this collaboration was made during the DOE-MEXT meeting at Chicago in May 2019.
 Franck Cappello presentation of lossy compression for photon source at the International Forum on Detectors for Photon Science March-April 2020 [cancelled because of COVID-19].</p>
 
-<h3 id="papers">
-<a id="papers" class="anchor" href="#papers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Papers</h3>
+<h3 id="papers">Papers</h3>
 
 <ul>
-  <li>A paper at Synchrotron Radiation News providing an overview RoIBIN-SZ <a href="#UnderwoodEtAl2023">(“ROIBIN-SZ: Fast and Science-Preserving Compression for Serial Crystallography” 2023)</a>
-</li>
-  <li>A poster at SC23 discussing preliminary evaluation of TEZip against other leading lossy compressors <a href="#TalukdarEtAl2023">(“Integrating TEZip into LibPressio: A Acase Study of Integrating a Dynamic Application into a Static C Envionment” 2023)</a>
-</li>
-  <li>A paper at IPDPS on fix ratio compression using control loop <a href="#Underwood20">(Underwood et al. 2020)</a>
-</li>
-  <li>A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. <a href="#Rupak20">(Roy et al. 2019)</a>
-</li>
-  <li>A paper at ACM PACT 2020 <a href="#Tian20">(Tian et al. 2020)</a>
-</li>
-  <li>A paper at IEEE CCGRID 2021 <a href="#Rupak21">(Roy et al. 2020)</a>
-</li>
-  <li>A paper at IEEE IPDPS 2021 <a href="#Tian21">(Tian et al. 2021)</a>
-</li>
-  <li>A paper at SC/DRBSD 2021 workshop <a href="#libpressio">(Underwood et al. 2021)</a>
-</li>
+  <li>A paper at Synchrotron Radiation News providing an overview RoIBIN-SZ <a class="citation" href="#UnderwoodEtAl2023">(“ROIBIN-SZ: Fast and Science-Preserving Compression for Serial Crystallography” 2023)</a></li>
+  <li>A poster at SC23 discussing preliminary evaluation of TEZip against other leading lossy compressors <a class="citation" href="#TalukdarEtAl2023">(“Integrating TEZip into LibPressio: A Acase Study of Integrating a Dynamic Application into a Static C Envionment” 2023)</a></li>
+  <li>A paper at IPDPS on fix ratio compression using control loop <a class="citation" href="#Underwood20">(Underwood et al. 2020)</a></li>
+  <li>A poster presented the results of the delta compression developed at Riken combined with the SZ compressor developed at Argonne. <a class="citation" href="#Rupak20">(Roy et al. 2019)</a></li>
+  <li>A paper at ACM PACT 2020 <a class="citation" href="#Tian20">(Tian et al. 2020)</a></li>
+  <li>A paper at IEEE CCGRID 2021 <a class="citation" href="#Rupak21">(Roy et al. 2020)</a></li>
+  <li>A paper at IEEE IPDPS 2021 <a class="citation" href="#Tian21">(Tian et al. 2021)</a></li>
+  <li>A paper at SC/DRBSD 2021 workshop <a class="citation" href="#libpressio">(Underwood et al. 2021)</a></li>
 </ul>
 
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -314,14 +403,14 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseUnderwoodEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseUnderwoodEtAl2023Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseUnderwoodEtAl2023Abstract" aria-expanded="false" aria-controls="collapseUnderwoodEtAl2023Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseUnderwoodEtAl2023Abstract" aria-expanded="false" aria-controls="collapseUnderwoodEtAl2023Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="UnderwoodEtAl2023">“ROIBIN-SZ: Fast and Science-Preserving Compression for Serial Crystallography.” 2023. <i>Synchrotron Radiation News</i> 36 (4). Taylor &amp; Francis: 17–22. doi:10.1080/08940886.2023.2245722.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="UnderwoodEtAl2023">“ROIBIN-SZ: Fast and Science-Preserving Compression for Serial Crystallography.” 2023. <i>Synchrotron Radiation News</i> 36 (4): 17–22. https://doi.org/10.1080/08940886.2023.2245722.</span>
     </div>
   </div>
   <div class="collapse" id="collapseUnderwoodEtAl2023Bibtex">
@@ -347,9 +436,8 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -360,13 +448,13 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTalukdarEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseTalukdarEtAl2023Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTalukdarEtAl2023Abstract" aria-expanded="false" aria-controls="collapseTalukdarEtAl2023Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseTalukdarEtAl2023Abstract" aria-expanded="false" aria-controls="collapseTalukdarEtAl2023Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="TalukdarEtAl2023">“Integrating TEZip into LibPressio: A Acase Study of Integrating a Dynamic Application into a Static C Envionment.” 2023.</span>
     </div>
   </div>
@@ -385,9 +473,8 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -398,14 +485,14 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapselibpressioBibtex" aria-expanded="false" aria-controls="collapselibpressioBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapselibpressioAbstract" aria-expanded="false" aria-controls="collapselibpressioAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapselibpressioAbstract" aria-expanded="false" aria-controls="collapselibpressioAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="libpressio">Underwood, Robert, Victoriana Malvoso, Jon C. Calhoun, Sheng Di, and Franck Cappello. 2021. “Productive and Performant Generic Lossy Data Compression with LibPressio.” In <i>2021 7th International Workshop on Data Analysis and Reduction for Big Scientific Data (DRBSD-7)</i>, 1–10. doi:10.1109/DRBSD754563.2021.00005.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="libpressio">Underwood, Robert, Victoriana Malvoso, Jon C. Calhoun, Sheng Di, and Franck Cappello. 2021. “Productive and Performant Generic Lossy Data Compression with LibPressio.” In <i>2021 7th International Workshop on Data Analysis and Reduction for Big Scientific Data (DRBSD-7)</i>, 1–10. https://doi.org/10.1109/DRBSD754563.2021.00005.</span>
     </div>
   </div>
   <div class="collapse" id="collapselibpressioBibtex">
@@ -428,9 +515,8 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -441,13 +527,13 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTian21Bibtex" aria-expanded="false" aria-controls="collapseTian21Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTian21Abstract" aria-expanded="false" aria-controls="collapseTian21Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseTian21Abstract" aria-expanded="false" aria-controls="collapseTian21Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="Tian21">Tian, Jiannan, Cody Rivera, Sheng Di, Jieyang Chen, Liang Xin, Dingwen Tao, and Franck Cappello. 2021. “Revisiting Huffman Coding: Toward Extreme Performance on Modern GPU Architectures.” In <i>IPDPS’21: 35th IEEE International Parallel and Distributed Processing Symposium</i>.</span>
     </div>
   </div>
@@ -467,9 +553,8 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -480,13 +565,13 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTian20Bibtex" aria-expanded="false" aria-controls="collapseTian20Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTian20Abstract" aria-expanded="false" aria-controls="collapseTian20Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseTian20Abstract" aria-expanded="false" aria-controls="collapseTian20Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="Tian20">Tian, Jiannan, Sheng Di, Kai Zhao, Rivera Cody, Megan Hickman, Robert Underwood, Sian Jin, et al. 2020. “CuSZ: An Efficient GPU Based Error-Bounded Lossy Compression, Framework for Scientific Data.” In <i>PACT’20: ACM International Conference on Parallel Architectures and Compilation Techniques</i>.</span>
     </div>
   </div>
@@ -506,9 +591,8 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -519,13 +603,13 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRupak21Bibtex" aria-expanded="false" aria-controls="collapseRupak21Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseRupak21Abstract" aria-expanded="false" aria-controls="collapseRupak21Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseRupak21Abstract" aria-expanded="false" aria-controls="collapseRupak21Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="Rupak21">Roy, Rupak, Kento Sato, Subhadeep Bhattacharya, Xingang Fang, Yasumasa Joti, Takaki Hatsui, Toshiyuki Hiraki, Jian Guo, and Weikuan Yu. 2020. “Compression of Time Evolutionary Image Data through Predictive Deep Neural Networks.” In <i>CCGRID’21: IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing</i>.</span>
     </div>
   </div>
@@ -545,9 +629,8 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -558,13 +641,13 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseUnderwood20Bibtex" aria-expanded="false" aria-controls="collapseUnderwood20Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseUnderwood20Abstract" aria-expanded="false" aria-controls="collapseUnderwood20Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseUnderwood20Abstract" aria-expanded="false" aria-controls="collapseUnderwood20Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="Underwood20">Underwood, Robert, Sheng Di, Jon Calhoun, and Franck Cappello. 2020. “FRaZ: A Generic High-Fidelity Fixed-Ratio Lossy Compression Framework for Scientific Floating-Point Data.” In <i>IPDPS20: 34th IEEE International Parallel and Distributed Processing Symposium</i>.</span>
     </div>
   </div>
@@ -584,9 +667,8 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -597,13 +679,13 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRupak20Bibtex" aria-expanded="false" aria-controls="collapseRupak20Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseRupak20Abstract" aria-expanded="false" aria-controls="collapseRupak20Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseRupak20Abstract" aria-expanded="false" aria-controls="collapseRupak20Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="Rupak20">Roy, Rupak, Kento Sato, Jian Guo, Jens Domke, Weikuan Yu, Takaki Hatsui, and Yasumasa Joti. 2019. “Poster: Improving Data Compression with Deep Predictive Neural Network for Time Evolutional Data.” In <i>SC’2019, the IEEE/ACM Conference on High Performance Computing Networking, Storage and Analysis</i>. ACM Press.</span>
     </div>
   </div>
@@ -623,16 +705,13 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
   </div>
   
 </div>
-</li>
-</ol>
+</li></ol>
 
-<h3 id="funding">
-<a id="funding" class="anchor" href="#funding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Funding</h3>
+<h3 id="funding">Funding</h3>
 
 <p>Robert Underwood from Clemson (Jon Calhoun’s group) received a DOE funding for his 6 months stay at Argonne.</p>
 
-<h3 id="impact-on-other-projects">
-<a id="impact-on-other-projects" class="anchor" href="#impact-on-other-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact on other projects</h3>
+<h3 id="impact-on-other-projects">Impact on other projects</h3>
 
 <p>The compression scheme (ROI-SZ) developed by Argonne is in extensive testing at LCLS for integration in the data reduction pipeline of the LCLS2. It will be also tested in Germany.
 This project has a direct impact on the APS (Argonne Photon Source) and Spring-8 instruments.
@@ -640,17 +719,13 @@ This project has a broad impact on other photo sources. Results from this projec
 
 <p>The implementation of Huffman variable length coding in SZ (part of ROI-S) is the first high performance implementation of Huffman coding on GPU. We will make it stand alone and available for the community, independently of SZ.</p>
 
-<h2 id="future-plans">
-<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+<h2 id="future-plans">Future plans</h2>
 
 <p>Exchange results of experiments and testing of the compression schemes.</p>
 
-<h2 id="references">
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -661,13 +736,13 @@ This project has a broad impact on other photo sources. Results from this projec
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseUnderwoodEtAl2020Bibtex" aria-expanded="false" aria-controls="collapseUnderwoodEtAl2020Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseUnderwoodEtAl2020Abstract" aria-expanded="false" aria-controls="collapseUnderwoodEtAl2020Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseUnderwoodEtAl2020Abstract" aria-expanded="false" aria-controls="collapseUnderwoodEtAl2020Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="UnderwoodEtAl2020">Underwood, Robert, Jon Calhoun, Sheng Di, and Franck Cappello. 2020. “FRaZ: A Generic High-Fidelity Fixed-Ratio Lossy Compression Framework For
       Scientific Data.” In <i>2020 IEEE International Parallel and Distributed Processing Symposium,
                IPDPS 2020, New Orleans, USA, May 18-22, 2020</i>. IEEE.</span>
@@ -694,9 +769,8 @@ This project has a broad impact on other photo sources. Results from this projec
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -707,13 +781,13 @@ This project has a broad impact on other photo sources. Results from this projec
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRezaEtAl2019Bibtex" aria-expanded="false" aria-controls="collapseRezaEtAl2019Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseRezaEtAl2019Abstract" aria-expanded="false" aria-controls="collapseRezaEtAl2019Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseRezaEtAl2019Abstract" aria-expanded="false" aria-controls="collapseRezaEtAl2019Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="RezaEtAl2019">Reza, Tasmia, Jon Calhoun, Kristopher Keipert, Sheng Di, and Franck Cappello. 2019. “ Analyzing the Performance and Accuracy of Lossy Checkpointing on Sub-Iteration 
       of NWChem.” In <i>2019 IEEE/ACM 5th International Workshop on Data Analysis and Reduction for Big 
       Scientific Data (DRBSD)</i>.</span>
@@ -743,9 +817,8 @@ This project has a broad impact on other photo sources. Results from this projec
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -756,13 +829,13 @@ This project has a broad impact on other photo sources. Results from this projec
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSasakiETAl2015Bibtex" aria-expanded="false" aria-controls="collapseSasakiETAl2015Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseSasakiETAl2015Abstract" aria-expanded="false" aria-controls="collapseSasakiETAl2015Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseSasakiETAl2015Abstract" aria-expanded="false" aria-controls="collapseSasakiETAl2015Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="SasakiETAl2015">Sasaki, N., K. Sato, T. Endo, and S. Matsuoka. 2015. “Exploration of Lossy Compression for Application-Level Checkpoint/Restart.” In <i>Parallel and Distributed Processing Symposium (IPDPS), 2015 IEEE International</i>, 914–22.</span>
     </div>
   </div>
@@ -784,9 +857,8 @@ This project has a broad impact on other photo sources. Results from this projec
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -797,13 +869,13 @@ This project has a broad impact on other photo sources. Results from this projec
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseNiETAl2014Bibtex" aria-expanded="false" aria-controls="collapseNiETAl2014Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseNiETAl2014Abstract" aria-expanded="false" aria-controls="collapseNiETAl2014Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseNiETAl2014Abstract" aria-expanded="false" aria-controls="collapseNiETAl2014Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="NiETAl2014">Ni, Xiang, Tanzima Islam, Kathryn Mohror, Adam Moody, and Laxmikant V Kale. 2014. “Lossy Compression for Checkpointing: Fallible or Feasible?” In <i>International Conference for High Performance Computing, Networking, Storage and Analysis (SC)</i>.</span>
     </div>
   </div>
@@ -823,9 +895,8 @@ This project has a broad impact on other photo sources. Results from this projec
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -836,14 +907,14 @@ This project has a broad impact on other photo sources. Results from this projec
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseIbteshamETAl2012Bibtex" aria-expanded="false" aria-controls="collapseIbteshamETAl2012Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseIbteshamETAl2012Abstract" aria-expanded="false" aria-controls="collapseIbteshamETAl2012Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseIbteshamETAl2012Abstract" aria-expanded="false" aria-controls="collapseIbteshamETAl2012Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="IbteshamETAl2012">Ibtesham, Dewan, Dorian Arnold, Kurt B. Ferreira, and Patrick G. Bridges. 2012. “On the Viability of Checkpoint Compression for Extreme Scale Fault Tolerance.” In <i>Proceedings of the 2011 International Conference on Parallel Processing - Volume 2</i>, 302–11. Euro-Par’11. Berlin, Heidelberg: Springer-Verlag. doi:10.1007/978-3-642-29740-3_34.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="IbteshamETAl2012">Ibtesham, Dewan, Dorian Arnold, Kurt B. Ferreira, and Patrick G. Bridges. 2012. “On the Viability of Checkpoint Compression for Extreme Scale Fault Tolerance.” In <i>Proceedings of the 2011 International Conference on Parallel Processing - Volume 2</i>, 302–11. Euro-Par’11. Berlin, Heidelberg: Springer-Verlag. https://doi.org/10.1007/978-3-642-29740-3_34.</span>
     </div>
   </div>
   <div class="collapse" id="collapseIbteshamETAl2012Bibtex">
@@ -873,9 +944,8 @@ This project has a broad impact on other photo sources. Results from this projec
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -886,13 +956,13 @@ This project has a broad impact on other photo sources. Results from this projec
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLindstromETAl2006Bibtex" aria-expanded="false" aria-controls="collapseLindstromETAl2006Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLindstromETAl2006Abstract" aria-expanded="false" aria-controls="collapseLindstromETAl2006Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLindstromETAl2006Abstract" aria-expanded="false" aria-controls="collapseLindstromETAl2006Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="LindstromETAl2006">Lindstrom, P., and M. Isenburg. 2006. “Fast and Efficient Compression of Floating-Point Data.” <i>IEEE Transactions on Visualization and Computer Graphics</i> 12 (5): 1245–50.</span>
     </div>
   </div>
@@ -915,63 +985,107 @@ This project has a broad impact on other photo sources. Results from this projec
   </div>
   
 </div>
-</li>
-</ol>
-
-      </div>
-    </div>
-  </article>
-  
+</li></ol>
 </div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/Compression_for_instruments/';
+      this.page.identifier = '/projects/Compression_for_instruments/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 
-      </div>
-    </main>
-    <footer id="site-footer">
-  <div class="navbar navbar-full navbar-light">
-    <div class="container">
-      <div class="row small">
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item">
-              <a class="nav-link" href="/about/imprint/">
-                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 hidden-xs-down">
-          <div class="nav navbar-nav text-xs-center">
-            <span class="credit">
-              Powered by
-              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
-              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
-            </span>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
           </div>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
-                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
-            </li>
-          </ul>
-        </div>
+        
+        
       </div>
+
     </div>
   </div>
-</footer>
+</div>
 
-    <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+</div>
 
-<!--  -->
 
-  </body>
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
 </html>

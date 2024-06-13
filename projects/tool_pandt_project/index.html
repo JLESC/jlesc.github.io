@@ -1,277 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Developer tools for porting and tuning parallel applications on extreme-scale parallel systems</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
-">
-  <link rel="canonical" href="https://jlesc.github.io/projects/tool_pandt_project/">
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
-  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
-</head>
+    <title>Developer tools for porting and tuning parallel applications on extreme-scale parallel systems - Jekyll Advance</title>
 
-  <body>
-    <header>
-  <noscript>
-    <div class="container-fluid">
-      <div class="card card-block card-danger row">
-        <p class="card-text text-sm-center">
-          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
-          <br />
-          Please activate Javascript for this website. We are not loading content from other domains.
-        </p>
-      </div>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/tool_pandt_project/"/>
+
+  <meta property="og:title" content="Developer tools for porting and tuning parallel applications on extreme-scale parallel systems"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
     </div>
-  </noscript>
-  <nav>
-    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
-      <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
-          <i class="fa fa-bars fa-fw"></i>
-        </button>
-
-        <a class="navbar-brand" href="/">JLESC</a>
-
-        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-  <div class="dropdown-menu">
-    <a href="/about/" class="dropdown-item">JLESC</a>
-    <a href="/about/partners/" class="dropdown-item">Partners</a>
-    <a href="/about/people/" class="dropdown-item">People</a>
-    <a href="/about/grants/" class="dropdown-item">Grants</a>
   </div>
-</li>
 
-            <li class="nav-item">
-              <a href="/news/" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/events/">Events</a>
-            </li>
-            <li class="nav-item dropdown active">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
-  <div class="dropdown-menu">
-    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
-    <a href="/projects/" class="dropdown-item active">Projects</a>
-    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
-    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
   </div>
-</li>
+</div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/references/">References</a>
-            </li>
-          </ul>
 
-          <ul class="nav navbar-nav pull-right">
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://github.com/JLESC/jlesc.github.io/wiki"
-                 target="_blank"
-                 title="How to contribute"
-                 data-toggle="tooltip"
-                 data-placement="left">
-                <i class="fa fa-fw fa-book"></i>
-                How To
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 
-    <main>
-      <div class="container">
-        <div class="post post-project">
-  <article class="post-content">
-    <div class="row">
-      <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Developer tools for porting and tuning parallel applications on extreme-scale parallel systems</h1>
-      </header>
-    </div>
-    <div class="row">
-      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
-        <section class="group-meta card">
-  <div class="card-header">
-    Project Profile
-  </div>
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
   
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item row">
-      <label class="col-sm-4">Topics</label>
-      <div class="col-sm-8">
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
         
-          <span class="clearfix">
-            <span class="topic topic-title">Performance Tools</span>
-          </span>
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
         
-      </div>
-    </li>
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
     
-      <li class="list-group-item row">
-        <label class="col-sm-4">Keywords</label>
-        <div class="col-sm-8">
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
           
-            <span class="clearfix">porting</span>
-          
-            <span class="clearfix">tuning</span>
-          
-            <span class="clearfix">tools</span>
-          
-        </div>
-      </li>
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
     
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
     
-    
-      <li class="list-group-item row">
-        <label class="col-sm-4">Members</label>
-        <div class="col-sm-8">
-          
-            <span class="clearfix">
-              <span class="person given-name">Brian J.N.</span> <span class="person sur-name">Wylie</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
-              <span class="pull-right">
-                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
-              </span>
-            </span>
-          
-          
-            <span class="clearfix">
-              <span class="person given-name">Miwako</span> <span class="person sur-name">Tsuji</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Hitoshi</span> <span class="person sur-name">Murai</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Jens</span> <span class="person sur-name">Domke</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Chigusa</span> <span class="person sur-name">Kobayashi</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Christian</span> <span class="person sur-name">Feld</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Judit</span> <span class="person sur-name">Gimenez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">German</span> <span class="person sur-name">Llort</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Lau</span> <span class="person sur-name">Mercadal</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Anthony</span> <span class="person sur-name">Danalis</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Heike</span> <span class="person sur-name">Jagode</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
-            </span>
-          
-        </div>
-      </li>
-    
-    
-    <li class="list-group-item row">
-      <label class="col-sm-4">Status</label>
-      <div class="col-sm-8">
-        <span class="project-status project-status-running">running</span>
-      </div>
-    </li>
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
     
   </ul>
-</section>
-        <section class="card" id="toc">
-          <div class="card-header">
-            Table of Contents
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">22 March 2016</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
           </div>
-          <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20142015">Results for 2014/2015</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20222023">Results for 2022/2023</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20232024">Results for 2023/2024</a></li>
-<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
-<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>
-        </section>
-      </aside>
-      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+          <div class="post-title">
+            <h1>Developer tools for porting and tuning parallel applications on extreme-scale parallel systems</h1>
+          </div>
+          
+
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         
-        <h2 id="research-topic-and-goals">
-<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
 
 <p>Application developers targeting extreme-scale HPC systems such as Fugaku &amp; JUPITER, heterogeneous systems such as MareNostrum CTE-POWER/ARM/AMD, 
 and modular supercomputing architectures such as JUWELS Cluster+Booster, need effective tools to assist with porting and tuning for these unusual systems. 
-The XcalableMP compilation system (and directive-based language) <a href="#LeeSato2010">(Lee and Sato 2010)</a>
-<a href="#TsujiEtAl2013">(Tsuji et al. 2013)</a>, Scalasca/Score-P execution
-measurement and analysis tools <a href="#GeimerEtAl2010">(Geimer et al. 2010)</a>
-<a href="#KnuepferEtAl2012">(Knüpfer et al. 2012)</a> (using SIONlib scalable file I/O 
-<a href="#FringsEtAl2009">(Frings, Wolf, and Petkov 2009)</a>) and Paraver/Extrae/Dimemas measurement and analysis tools <a href="#BSCtools">(“BSC Tools for Performance Analysis” 2017)</a> are notable examples of 
-tools developed by RIKEN, JSC and BSC for this purpose. This project proposes to extend their support for 
-JLESC HPC systems and exploit their capabilities in an integrated work flow.<br>
+The XcalableMP compilation system (and directive-based language) <a class="citation" href="#LeeSato2010">(Lee and Sato 2010)</a>
+<a class="citation" href="#TsujiEtAl2013">(Tsuji et al. 2013)</a>, Scalasca/Score-P execution
+measurement and analysis tools <a class="citation" href="#GeimerEtAl2010">(Geimer et al. 2010)</a>
+<a class="citation" href="#KnuepferEtAl2012">(Knüpfer et al. 2012)</a> (using SIONlib scalable file I/O
+<a class="citation" href="#FringsEtAl2009">(Frings, Wolf, and Petkov 2009)</a>) and Paraver/Extrae/Dimemas measurement and analysis tools <a class="citation" href="#BSCtools">(“BSC Tools for Performance Analysis” 2017)</a> are notable examples of
+tools developed by RIKEN, JSC and BSC for this purpose. This project proposes to extend their support for
+JLESC HPC systems and exploit their capabilities in an integrated work flow.
 Existing training material will be adapted to collaborators large-scale HPC systems, augmented
 with newly prepared material, and refined for better uptake based on participant evaluations
 and feedback. Travel and accommodation expenses of training presenters to participate in
-joint training events (such as VI-HPS Tuning Workshops <a href="#VIHPSTWS">(“VI-HPS Tuning Workshop Series” 2016)</a>) will be supported. 
+joint training events (such as VI-HPS Tuning Workshops <a class="citation" href="#VIHPSTWS">(“VI-HPS Tuning Workshop Series” 2016)</a>) will be supported.
 Collaborative work with application developers will assess the effectiveness of the current (and revised) tools,
 and help direct development of new tool capabilities.</p>
 
-<h2 id="results-for-20142015">
-<a id="results-for-20142015" class="anchor" href="#results-for-20142015" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2014/2015</h2>
+<h2 id="results-for-20142015">Results for 2014/2015</h2>
 
 <ul>
   <li>Initial planning.</li>
   <li>XcalableMP training material translated into English, and Scalasca/Score-P training material translated into Japanese.</li>
 </ul>
 
-<h2 id="results-for-20152016">
-<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<h2 id="results-for-20152016">Results for 2015/2016</h2>
 
 <ul>
   <li>XcalableMP tutorial held at JSC (2015-12-01).</li>
-  <li>Organisation of 20th VI-HPS Tuning Workshop hosted by RIKEN AICS (2016/02/24-26) <a href="#VIHPSTWS">(“VI-HPS Tuning Workshop Series” 2016)</a> covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) on K computer and local Fujitsu FX10 (pi).</li>
-  <li>Performance analysis of RIKEN FIBER <a href="#FIBER">(“FIBER Mini-App Suite” 2016)</a> mini-app NTChem on pi/K.</li>
-  <li>Performance analysis of ABySS-P <a href="#KitayamaEtAl2015">(Kitayama, Wylie, and Maeda 2015)</a> and NEST neuronal network simulation tool <a href="#NEST">(“NEST Neural Simulation Tool” 2016)</a> on K computer.</li>
+  <li>Organisation of 20th VI-HPS Tuning Workshop hosted by RIKEN AICS (2016/02/24-26) <a class="citation" href="#VIHPSTWS">(“VI-HPS Tuning Workshop Series” 2016)</a> covering tools from BSC (Paraver/Extrae/Dimemas) and JSC (Scalasca/Score-P/CUBE) on K computer and local Fujitsu FX10 (pi).</li>
+  <li>Performance analysis of RIKEN FIBER <a class="citation" href="#FIBER">(“FIBER Mini-App Suite” 2016)</a> mini-app NTChem on pi/K.</li>
+  <li>Performance analysis of ABySS-P <a class="citation" href="#KitayamaEtAl2015">(Kitayama, Wylie, and Maeda 2015)</a> and NEST neuronal network simulation tool <a class="citation" href="#NEST">(“NEST Neural Simulation Tool” 2016)</a> on K computer.</li>
 </ul>
 
-<h2 id="results-for-20162017">
-<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
 
 <ul>
   <li>Specification of XMPT generic tool interface for XcalableMP PGAS runtime (based on OMPT).</li>
   <li>Initial prototype implementation of XMPT interface in Omni XMP compiler, used by Extrae/Paraver.</li>
-  <li>Definition of POP standard metrics for MPI and OpenMP applications <a href="#POPmetrics2016">(“POP Standard Metrics for Parallel Performance Analysis” 2016)</a>.</li>
-  <li>Document how to obtain POP standard metrics in Paraver <a href="#POPmetParaver2016">(“Paraver Efficiencies Guide” 2016)</a>
-</li>
+  <li>Definition of POP standard metrics for MPI and OpenMP applications <a class="citation" href="#POPmetrics2016">(“POP Standard Metrics for Parallel Performance Analysis” 2016)</a>.</li>
+  <li>Document how to obtain POP standard metrics in Paraver <a class="citation" href="#POPmetParaver2016">(“Paraver Efficiencies Guide” 2016)</a></li>
   <li>Calculation of POP standard metrics as derived metrics by CUBE.</li>
   <li>Tools training for NERSC, DKRZ, IT4I, EPCC/Southampton and RWTH using local HPC systems.</li>
 </ul>
 
-<h2 id="results-for-20172018">
-<a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
 
 <ul>
   <li>Prototype implementation in Omni XMP compiler of XMPT events for detecting data races of coarrays and for profiling coarray programs.</li>
@@ -279,12 +352,11 @@ and help direct development of new tool capabilities.</p>
   <li>Tools training at BSC (2017-04) and TERATEC (2017-10) using local HPC systems.</li>
 </ul>
 
-<h2 id="results-for-20182019">
-<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+<h2 id="results-for-20182019">Results for 2018/2019</h2>
 
 <ul>
   <li>Omni XMP compiler updated with XMPT-defined runtime events, including for local/remote co-array accesses
-<a href="#XMPhandbook">(“XMP Handbook” 2018)</a>.</li>
+<a class="citation" href="#XMPhandbook">(“XMP Handbook” 2018)</a>.</li>
   <li>BSC prototyping recording and analysis of additional XMPT events (Impact3D benchmark).</li>
   <li>Initial Scalasca/Score-P performance measurements of JURECA-MSA (Cluster+Booster).</li>
   <li>Prototype integration of POP metrics within CUBE GUI.</li>
@@ -292,8 +364,7 @@ and help direct development of new tool capabilities.</p>
   <li>30th VI-HPS Tuning Workshop hosted by BSC (2019/01/21-25) using MN4 and CTE-POWER9 compute nodes.</li>
 </ul>
 
-<h2 id="results-for-20192020">
-<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
+<h2 id="results-for-20192020">Results for 2019/2020</h2>
 
 <ul>
   <li>Initial Score-P port to AMD Epyc Rome and Fujitsu Arm A64FX test systems (new compilers and MPI libraries).</li>
@@ -304,8 +375,7 @@ and help direct development of new tool capabilities.</p>
   <li>33rd VI-HPS Tuning Workshop hosted by JSC (2019/06/24-28) using JURECA.</li>
 </ul>
 
-<h2 id="results-for-20202021">
-<a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
+<h2 id="results-for-20202021">Results for 2020/2021</h2>
 
 <ul>
   <li>Initial Score-P porting to Fugaku.</li>
@@ -313,8 +383,7 @@ and help direct development of new tool capabilities.</p>
   <li>Virtual tools training for EPCC, HLRS, CINECA &amp; CSC/Frankfurt using local HPC systems.</li>
 </ul>
 
-<h2 id="results-for-20212022">
-<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+<h2 id="results-for-20212022">Results for 2021/2022</h2>
 
 <ul>
   <li>Continued Score-P porting to Fugaku.</li>
@@ -322,8 +391,7 @@ and help direct development of new tool capabilities.</p>
   <li>Virtual tutorial on POP parallel performance analysis methodology given at ISC-HPC’21.</li>
 </ul>
 
-<h2 id="results-for-20222023">
-<a id="results-for-20222023" class="anchor" href="#results-for-20222023" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2022/2023</h2>
+<h2 id="results-for-20222023">Results for 2022/2023</h2>
 
 <ul>
   <li>Continued Score-P porting to Fugaku and Fujitsu compilers for A64FX.</li>
@@ -331,8 +399,7 @@ and help direct development of new tool capabilities.</p>
   <li>42nd VI-HPS Tuning Workshop hosted virtually by JSC (2022/05/17-19) using JUSUF.</li>
 </ul>
 
-<h2 id="results-for-20232024">
-<a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
+<h2 id="results-for-20232024">Results for 2023/2024</h2>
 
 <ul>
   <li>Continued Score-P porting to Fugaku and Fujitsu compilers for A64FX with assistance of Jens Domke and Fujitsu.</li>
@@ -343,10 +410,9 @@ and help direct development of new tool capabilities.</p>
   <li>Article prepared for FGCS on joint parallel application performance analysis/tools training.</li>
 </ul>
 
-<h2 id="visits-and-meetings">
-<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<h2 id="visits-and-meetings">Visits and meetings</h2>
 
-<p>Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and ParCo conferences, and events hosted by project partners.  Meeting with MYX project <a href="#MYXproject">(“Project MYX” 2016)</a> members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.</p>
+<p>Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and ParCo conferences, and events hosted by project partners.  Meeting with MYX project <a class="citation" href="#MYXproject">(“Project MYX” 2016)</a> members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.</p>
 
 <p>2015/12/01: RIKEN-AICS instructors visited JSC to deliver training with XcalableMP.
 2016/02/24-26: BSC &amp; JSC instructors visited RIKEN-AICS to deliver training as part of VI-HPS Tuning Workshop.
@@ -355,29 +421,24 @@ and help direct development of new tool capabilities.</p>
 Visits planned for the next 12 months:
 2024/07: JSC instructors to visit RIKEN-CCS to deliver tools training as part of workshop for Fugaku users, in conjunction with 14th International HPC Summer School in Kobe (2024/07/07-12).</p>
 
-<h2 id="impact-and-publications">
-<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<h2 id="impact-and-publications">Impact and publications</h2>
 
 <p>POP standard metrics applied in POP services performance analyses.</p>
 <ol class="bibliography"></ol>
 
-<h2 id="future-plans">
-<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+<h2 id="future-plans">Future plans</h2>
 
 <p>Use of Scalasca/Score-P and Paraver/Extrae to analyze execution performance of RIKEN applications.
 Large-scale application performance measurements on Fugaku and other HPC systems.
 HPC Tunathon at JSC scaling applications on JUWELS CPUs and GPUs.
-Workshops and training organised under the auspices of VI-HPS 
-<a href="#VIHPS">(“Virtual Institute – High Productivity Supercomputing” 2016)</a> 
-or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and Productivity: EU Centre of Excellence” 2015)</a>.</p>
+Workshops and training organised under the auspices of VI-HPS
+<a class="citation" href="#VIHPS">(“Virtual Institute – High Productivity Supercomputing” 2016)</a>
+or the POP Centre of Excellence <a class="citation" href="#POP">(“Performance Optimisation and Productivity: EU Centre of Excellence” 2015)</a>.</p>
 
-<h2 id="references">
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<h2 id="references">References</h2>
 
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -388,13 +449,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseXMPhandbookBibtex" aria-expanded="false" aria-controls="collapseXMPhandbookBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseXMPhandbookAbstract" aria-expanded="false" aria-controls="collapseXMPhandbookAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseXMPhandbookAbstract" aria-expanded="false" aria-controls="collapseXMPhandbookAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="XMPhandbook">“XMP Handbook.” 2018. <a href="http://xcalablemp.org/handbook/" target="_blank">http://xcalablemp.org/handbook/</a>.</span>
     </div>
   </div>
@@ -413,9 +474,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -426,13 +486,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBSCtoolsBibtex" aria-expanded="false" aria-controls="collapseBSCtoolsBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBSCtoolsAbstract" aria-expanded="false" aria-controls="collapseBSCtoolsAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBSCtoolsAbstract" aria-expanded="false" aria-controls="collapseBSCtoolsAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="BSCtools">“BSC Tools for Performance Analysis.” 2017. <a href="http://tools.bsc.es/" target="_blank">http://tools.bsc.es/</a>.</span>
     </div>
   </div>
@@ -451,9 +511,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -464,13 +523,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseFIBERBibtex" aria-expanded="false" aria-controls="collapseFIBERBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseFIBERAbstract" aria-expanded="false" aria-controls="collapseFIBERAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseFIBERAbstract" aria-expanded="false" aria-controls="collapseFIBERAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="FIBER">“FIBER Mini-App Suite.” 2016. <a href="http://fiber-miniapp.github.io/" target="_blank">http://fiber-miniapp.github.io/</a>.</span>
     </div>
   </div>
@@ -489,9 +548,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -502,13 +560,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMYXprojectBibtex" aria-expanded="false" aria-controls="collapseMYXprojectBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseMYXprojectAbstract" aria-expanded="false" aria-controls="collapseMYXprojectAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseMYXprojectAbstract" aria-expanded="false" aria-controls="collapseMYXprojectAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="MYXproject">“Project MYX.” 2016. <a href="http://doc.itc.rwth-aachen.de/display/CCP/Project+MYX" target="_blank">http://doc.itc.rwth-aachen.de/display/CCP/Project+MYX</a>.</span>
     </div>
   </div>
@@ -527,9 +585,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -540,13 +597,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseNESTBibtex" aria-expanded="false" aria-controls="collapseNESTBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseNESTAbstract" aria-expanded="false" aria-controls="collapseNESTAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseNESTAbstract" aria-expanded="false" aria-controls="collapseNESTAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="NEST">“NEST Neural Simulation Tool.” 2016. <a href="http://www.nest-simulator.org/" target="_blank">http://www.nest-simulator.org/</a>.</span>
     </div>
   </div>
@@ -565,9 +622,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -578,13 +634,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePOPmetrics2016Bibtex" aria-expanded="false" aria-controls="collapsePOPmetrics2016Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePOPmetrics2016Abstract" aria-expanded="false" aria-controls="collapsePOPmetrics2016Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsePOPmetrics2016Abstract" aria-expanded="false" aria-controls="collapsePOPmetrics2016Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="POPmetrics2016">“POP Standard Metrics for Parallel Performance Analysis.” 2016. <a href="https://pop-coe.eu/node/69" target="_blank">https://pop-coe.eu/node/69</a>.</span>
     </div>
   </div>
@@ -603,9 +659,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -616,13 +671,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePOPmetParaver2016Bibtex" aria-expanded="false" aria-controls="collapsePOPmetParaver2016Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePOPmetParaver2016Abstract" aria-expanded="false" aria-controls="collapsePOPmetParaver2016Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsePOPmetParaver2016Abstract" aria-expanded="false" aria-controls="collapsePOPmetParaver2016Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="POPmetParaver2016">“Paraver Efficiencies Guide.” 2016. <a href="https://pop-coe.eu/sites/default/files/pop_files/paraverefficenciesguide.pdf" target="_blank">https://pop-coe.eu/sites/default/files/pop_files/paraverefficenciesguide.pdf</a>.</span>
     </div>
   </div>
@@ -641,9 +696,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -654,13 +708,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVIHPSBibtex" aria-expanded="false" aria-controls="collapseVIHPSBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseVIHPSAbstract" aria-expanded="false" aria-controls="collapseVIHPSAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseVIHPSAbstract" aria-expanded="false" aria-controls="collapseVIHPSAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="VIHPS">“Virtual Institute – High Productivity Supercomputing.” 2016. <a href="http://www.vi-hps.org/" target="_blank">http://www.vi-hps.org/</a>.</span>
     </div>
   </div>
@@ -679,9 +733,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -692,13 +745,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVIHPSTWSBibtex" aria-expanded="false" aria-controls="collapseVIHPSTWSBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseVIHPSTWSAbstract" aria-expanded="false" aria-controls="collapseVIHPSTWSAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseVIHPSTWSAbstract" aria-expanded="false" aria-controls="collapseVIHPSTWSAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="VIHPSTWS">“VI-HPS Tuning Workshop Series.” 2016. <a href="http://www.vi-hps.org/training/tws/" target="_blank">http://www.vi-hps.org/training/tws/</a>.</span>
     </div>
   </div>
@@ -717,9 +770,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -730,13 +782,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseKitayamaEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseKitayamaEtAl2015Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseKitayamaEtAl2015Abstract" aria-expanded="false" aria-controls="collapseKitayamaEtAl2015Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseKitayamaEtAl2015Abstract" aria-expanded="false" aria-controls="collapseKitayamaEtAl2015Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="KitayamaEtAl2015">Kitayama, Itaru, Brian J. N. Wylie, and Toshiyuki Maeda. 2015. “Execution Performance Analysis of the ABySS Genome Sequence Assembler Using Scalasca on the K Computer.” In <i>Proc. Int’l Conf. on Parallel Computing (ParCo, Edinburgh, Scotland)</i>. IOS Press. <a href="https://juser.fz-juelich.de/record/279895" target="_blank">https://juser.fz-juelich.de/record/279895</a>.</span>
     </div>
   </div>
@@ -759,9 +811,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -772,13 +823,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePOPBibtex" aria-expanded="false" aria-controls="collapsePOPBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsePOPAbstract" aria-expanded="false" aria-controls="collapsePOPAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsePOPAbstract" aria-expanded="false" aria-controls="collapsePOPAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="POP">“Performance Optimisation and Productivity: EU Centre of Excellence.” 2015. <a href="https://www.pop-coe.eu/" target="_blank">https://www.pop-coe.eu/</a>.</span>
     </div>
   </div>
@@ -797,9 +848,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -810,13 +860,13 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVIHPS2015Bibtex" aria-expanded="false" aria-controls="collapseVIHPS2015Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseVIHPS2015Abstract" aria-expanded="false" aria-controls="collapseVIHPS2015Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseVIHPS2015Abstract" aria-expanded="false" aria-controls="collapseVIHPS2015Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="VIHPS2015">“VI-HPS Tools Guide.” 2015. <a href="http://www.vi-hps.org/upload/material/general/ToolsGuide.pdf" target="_blank">http://www.vi-hps.org/upload/material/general/ToolsGuide.pdf</a>.</span>
     </div>
   </div>
@@ -836,9 +886,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -849,16 +898,16 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTsujiEtAl2013Bibtex" aria-expanded="false" aria-controls="collapseTsujiEtAl2013Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTsujiEtAl2013Abstract" aria-expanded="false" aria-controls="collapseTsujiEtAl2013Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseTsujiEtAl2013Abstract" aria-expanded="false" aria-controls="collapseTsujiEtAl2013Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="TsujiEtAl2013">Tsuji, Miwako, Mitsuhisa Sato, Maxime R. Hugues, and Serge G. Petiton. 2013. “Multiple-SPMD Programming Environment Based on PGAS and Workflow
     toward Post-Petascale Computing.” In <i>42nd International Conference on Parallel Processing, ICPP 2013,
-    Lyon, France, October 1-4, 2013</i>, 480–85. doi:10.1109/ICPP.2013.58.</span>
+    Lyon, France, October 1-4, 2013</i>, 480–85. https://doi.org/10.1109/ICPP.2013.58.</span>
     </div>
   </div>
   <div class="collapse" id="collapseTsujiEtAl2013Bibtex">
@@ -886,9 +935,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -899,16 +947,16 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseKnuepferEtAl2012Bibtex" aria-expanded="false" aria-controls="collapseKnuepferEtAl2012Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseKnuepferEtAl2012Abstract" aria-expanded="false" aria-controls="collapseKnuepferEtAl2012Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseKnuepferEtAl2012Abstract" aria-expanded="false" aria-controls="collapseKnuepferEtAl2012Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="KnuepferEtAl2012">Knüpfer, A., C. Rössel, D. an Mey, S. Biersdorff, K. Diethelm, D. Eschweiler, M. Geimer, et al. 2012. “Score-P: A Joint Performance Measurement Run-Time Infrastructure for Periscope,
     Scalasca, TAU, and Vampir.” In <i>Tools for High Performance Computing 2011, Proceedings of the 5th
-    International Workshop on Parallel Tools for High Performance Computing (Dresden, September 2011)</i>. doi:10.1007/978-3-642-31476-6_7.</span>
+    International Workshop on Parallel Tools for High Performance Computing (Dresden, September 2011)</i>. https://doi.org/10.1007/978-3-642-31476-6_7.</span>
     </div>
   </div>
   <div class="collapse" id="collapseKnuepferEtAl2012Bibtex">
@@ -940,9 +988,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -953,14 +1000,14 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseGeimerEtAl2010Bibtex" aria-expanded="false" aria-controls="collapseGeimerEtAl2010Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseGeimerEtAl2010Abstract" aria-expanded="false" aria-controls="collapseGeimerEtAl2010Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseGeimerEtAl2010Abstract" aria-expanded="false" aria-controls="collapseGeimerEtAl2010Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="GeimerEtAl2010">Geimer, Markus, Felix Wolf, Brian J. N. Wylie, Erika Ábrahám, Daniel Becker, and Bernd Mohr. 2010. “The Scalasca Performance Toolset Architecture.” <i>Concurr. Comput. : Pract. Exper.</i> 22 (6). John Wiley and Sons Ltd.: 702–19. doi:10.1002/cpe.v22:6.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="GeimerEtAl2010">Geimer, Markus, Felix Wolf, Brian J. N. Wylie, Erika Ábrahám, Daniel Becker, and Bernd Mohr. 2010. “The Scalasca Performance Toolset Architecture.” <i>Concurr. Comput. : Pract. Exper.</i> 22 (6): 702–19. https://doi.org/10.1002/cpe.v22:6.</span>
     </div>
   </div>
   <div class="collapse" id="collapseGeimerEtAl2010Bibtex">
@@ -991,9 +1038,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -1004,16 +1050,16 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLeeSato2010Bibtex" aria-expanded="false" aria-controls="collapseLeeSato2010Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLeeSato2010Abstract" aria-expanded="false" aria-controls="collapseLeeSato2010Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLeeSato2010Abstract" aria-expanded="false" aria-controls="collapseLeeSato2010Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="LeeSato2010">Lee, Jinpil, and Mitsuhisa Sato. 2010. “Implementation and Performance Evaluation of XcalableMP: A Parallel
     Programming Language for Distributed Memory Systems.” In <i>39th International Conference on Parallel Processing, ICPP Workshops
-     2010, San Diego, California, USA, 13-16 September 2010</i>, 413–20. doi:10.1109/ICPPW.2010.62.</span>
+     2010, San Diego, California, USA, 13-16 September 2010</i>, 413–20. https://doi.org/10.1109/ICPPW.2010.62.</span>
     </div>
   </div>
   <div class="collapse" id="collapseLeeSato2010Bibtex">
@@ -1040,9 +1086,8 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -1053,15 +1098,15 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseFringsEtAl2009Bibtex" aria-expanded="false" aria-controls="collapseFringsEtAl2009Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseFringsEtAl2009Abstract" aria-expanded="false" aria-controls="collapseFringsEtAl2009Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseFringsEtAl2009Abstract" aria-expanded="false" aria-controls="collapseFringsEtAl2009Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="FringsEtAl2009">Frings, Wolfgang, Felix Wolf, and Ventsislav Petkov. 2009. “Scalable Massively Parallel I/O to Task-Local Files.” In <i>Proceedings of the Conference on High Performance Computing Networking, Storage and 
-    Analysis</i>, 17:1–17:11. SC ’09. ACM. doi:10.1145/1654059.1654077.</span>
+    Analysis</i>, 17:1–17:11. SC ’09. ACM. https://doi.org/10.1145/1654059.1654077.</span>
     </div>
   </div>
   <div class="collapse" id="collapseFringsEtAl2009Bibtex">
@@ -1090,92 +1135,107 @@ or the POP Centre of Excellence <a href="#POP">(“Performance Optimisation and 
   </div>
   
 </div>
-</li>
-</ol>
-
-      </div>
-    </div>
-  </article>
-  
-    <footer class="card-deck-wrapper text-muted small">
-      <div class="card-deck">
-        
-
-
-
-
-  
-    <div class="card card-block">
-  
-      <i class="fa fa-folder-o"></i> <span class="hidden-sm-down">Created on </span><time datetime="2016-03-22T00:00:00+00:00">22 Mar 2016</time>
-  
-    </div>
-  
-
-
-
-  
-    <div class="card card-block">
-  
-      <i class="fa fa-pencil"></i> <span class="hidden-sm-down">Updated on </span><time datetime="2024-02-06T00:00:00+00:00" data-updated="true">06 Feb 2024</time>
-  
-    </div>
-  
-
-
-      </div>
-    </footer>
-  
+</li></ol>
 </div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/tool_pandt_project/';
+      this.page.identifier = '/projects/tool_pandt_project/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 
-      </div>
-    </main>
-    <footer id="site-footer">
-  <div class="navbar navbar-full navbar-light">
-    <div class="container">
-      <div class="row small">
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item">
-              <a class="nav-link" href="/about/imprint/">
-                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 hidden-xs-down">
-          <div class="nav navbar-nav text-xs-center">
-            <span class="credit">
-              Powered by
-              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
-              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
-            </span>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
           </div>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
-                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
-            </li>
-          </ul>
-        </div>
+        
+        
       </div>
+
     </div>
   </div>
-</footer>
+</div>
 
-    <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+</div>
 
-<!--  -->
 
-  </body>
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
 </html>

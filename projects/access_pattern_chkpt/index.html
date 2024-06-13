@@ -1,213 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Optimizing Checkpoint Restart Through Access Pattern Awareness</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
-">
-  <link rel="canonical" href="https://jlesc.github.io/projects/access_pattern_chkpt/">
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
-  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
-</head>
+    <title>Optimizing Checkpoint Restart Through Access Pattern Awareness - Jekyll Advance</title>
 
-  <body>
-    <header>
-  <noscript>
-    <div class="container-fluid">
-      <div class="card card-block card-danger row">
-        <p class="card-text text-sm-center">
-          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
-          <br />
-          Please activate Javascript for this website. We are not loading content from other domains.
-        </p>
-      </div>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/access_pattern_chkpt/"/>
+
+  <meta property="og:title" content="Optimizing Checkpoint Restart Through Access Pattern Awareness"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
     </div>
-  </noscript>
-  <nav>
-    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
-      <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
-          <i class="fa fa-bars fa-fw"></i>
-        </button>
-
-        <a class="navbar-brand" href="/">JLESC</a>
-
-        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-  <div class="dropdown-menu">
-    <a href="/about/" class="dropdown-item">JLESC</a>
-    <a href="/about/partners/" class="dropdown-item">Partners</a>
-    <a href="/about/people/" class="dropdown-item">People</a>
-    <a href="/about/grants/" class="dropdown-item">Grants</a>
   </div>
-</li>
 
-            <li class="nav-item">
-              <a href="/news/" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/events/">Events</a>
-            </li>
-            <li class="nav-item dropdown active">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
-  <div class="dropdown-menu">
-    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
-    <a href="/projects/" class="dropdown-item active">Projects</a>
-    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
-    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
   </div>
-</li>
+</div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/references/">References</a>
-            </li>
-          </ul>
 
-          <ul class="nav navbar-nav pull-right">
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://github.com/JLESC/jlesc.github.io/wiki"
-                 target="_blank"
-                 title="How to contribute"
-                 data-toggle="tooltip"
-                 data-placement="left">
-                <i class="fa fa-fw fa-book"></i>
-                How To
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 
-    <main>
-      <div class="container">
-        <div class="post post-project">
-  <article class="post-content">
-    <div class="row">
-      <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Optimizing Checkpoint Restart Through Access Pattern Awareness</h1>
-      </header>
-    </div>
-    <div class="row">
-      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
-        <section class="group-meta card">
-  <div class="card-header">
-    Project Profile
-  </div>
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
   
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item row">
-      <label class="col-sm-4">Topics</label>
-      <div class="col-sm-8">
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
         
-          <span class="clearfix">
-            <span class="topic topic-title">Resilience</span>
-          </span>
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
         
-      </div>
-    </li>
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
     
-      <li class="list-group-item row">
-        <label class="col-sm-4">Keywords</label>
-        <div class="col-sm-8">
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
           
-            <span class="clearfix">checkpoint restart</span>
-          
-        </div>
-      </li>
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
     
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
     
-    
-      <li class="list-group-item row">
-        <label class="col-sm-4">Members</label>
-        <div class="col-sm-8">
-          
-            <span class="clearfix">
-              <span class="person given-name">Bogdan</span> <span class="person sur-name">Nicolae</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-              <span class="pull-right">
-                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
-              </span>
-            </span>
-          
-          
-            <span class="clearfix">
-              <span class="person given-name">Nigel</span> <span class="person sur-name">Tan</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Michela</span> <span class="person sur-name">Taufer</span> (<abbr title="University of Tennessee" class="initialism" data-toggle="tooltip">UTK</abbr>)
-            </span>
-          
-        </div>
-      </li>
-    
-    
-    <li class="list-group-item row">
-      <label class="col-sm-4">Status</label>
-      <div class="col-sm-8">
-        <span class="project-status project-status-running">running</span>
-      </div>
-    </li>
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
     
   </ul>
-</section>
-        <section class="card" id="toc">
-          <div class="card-header">
-            Table of Contents
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">05 February 2024</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
           </div>
-          <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20222023">Results for 2022/2023</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20232024">Results for 2023/2024</a></li>
-<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
-<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>
-        </section>
-      </aside>
-      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+          <div class="post-title">
+            <h1>Optimizing Checkpoint Restart Through Access Pattern Awareness</h1>
+          </div>
+          
+
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         
-        <h2 id="research-topic-and-goals">
-<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
 <p>Checkpoint restart is a common resilience strategy used by many applications. Naively writing checkpoints to the parallel filesystem incurs unacceptable overheads due to three challenges.
-First, limited I/O bandwidth combined with frequent large checkpoints by multiple processes makes checkpointing difficult at scale. 
-Second, the heterogeneity of the storage hierarchy increases the complexity of performing resilient checkpoints. 
-Last, developers are often unaware of the storage hierarchy’s high cost or need to learn how to efficiently leverage the complex storage tiers. 
+First, limited I/O bandwidth combined with frequent large checkpoints by multiple processes makes checkpointing difficult at scale.
+Second, the heterogeneity of the storage hierarchy increases the complexity of performing resilient checkpoints.
+Last, developers are often unaware of the storage hierarchy’s high cost or need to learn how to efficiently leverage the complex storage tiers.
 VeloC addresses these resilience challenges: it takes advantage of the different storage tiers and provides scalable asynchronous checkpoints. This project combines VeloC with the Kokkos performance portability framework to enable performance-portable, resilient checkpointing at runtime.</p>
 
 <p>Specifically, this project will improve checkpoint restart scalability and performance by leveraging information about the memory access patterns in large-scale applications at runtime. Memory access patterns describe how an application updates its data over time. We use the information to reduce checkpoint sizes, increase checkpoint frequency, and ultimately alleviate pressure on the I/O system. Sparse update patterns, in which applications update very little data between checkpoints, can significantly benefit from VeloC. Sparse update patterns frequently occur in graph applications such as graph alignment. Checkpointing the entire piece of sparsely updated data is inefficient. A better strategy is to make an incremental checkpoint that only saves the sparse updates. The project studies different hash-based techniques for efficiently identifying differences between checkpoints. Objectives include analyzing the various methods’ checkpoint size and runtime tradeoffs on both CPU and GPU platforms. Graph alignment is only one of the applications considered in this project; other applications and access patterns will be selected among those of interest to the JLESC community.</p>
 
-<h2 id="results-for-20212022">
-<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+<h2 id="results-for-20212022">Results for 2021/2022</h2>
 
 <p>In Year 1 of this project, we devised a framework for providing portable, efficient checkpoint restart capabilities for Kokkos applications. The portability abstractions of Kokkos are combined with the scalable checkpoint restart runtime VeloC to allow Kokkos applications to add resilience capabilities with minimal developer effort. We further enhance our solution by developing memory access pattern-aware checkpointing. We used the Kokkos Resilience intermediary layer to analyze applications and identify common memory access patterns. Ultimately, VeloC can use the new knowledge to make more efficient checkpoints.</p>
 
 <p>In a preliminary characterization of graph algorithms, we identified a typical memory access pattern, such as the sparse update patterns. We used a graph alignment application developed at the University of North Texas in collaboration with the University of Tennessee Knoxville as a use case. We implemented hash-based incremental checkpointing techniques to reduce checkpoint size drastically in the application. Specifically, we implemented two hash-based incremental checkpointing algorithms that operate efficiently on both CPUs and GPUs. The first algorithm uses a simple hash list to compare two memory snapshots associated with two checkpoints. The second algorithm uses Merkle trees to reduce the cost of comparisons between the current and prior states of the data. Our preliminary results show that both algorithms dramatically reduce checkpoint size and cost compared with a full checkpoint.</p>
 
-<h2 id="results-for-20222023">
-<a id="results-for-20222023" class="anchor" href="#results-for-20222023" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2022/2023</h2>
+<h2 id="results-for-20222023">Results for 2022/2023</h2>
 <p>During Year 2 of this project, we defined and tuned a novel metadata compaction method to reduce checkpoint size by shrinking the restart metadata. Our method efficiently identifies the set of metadata needed to restart the checkpoint. We introduced additional performance optimizations in the method that reduced the time spent gathering scattered data for checkpointing.</p>
 
 <p>We used our method to checkpoint the graph alignment application ORANGES, demonstrating sparse update patterns. We compared different incremental checkpointing methods with our solution for a rich pool of input graphs with different sparse update patterns. We ran our tests on single nodes and distributed systems, quantifying the tradeoffs between checkpoint size and runtime performance.</p>
 
 <p>In Year 3 of this project, we will compare our method with existing compression methods, investigate alternative hash functions for lossy deduplication, and evaluate other applications that exhibit sparse patterns or different patterns that gradually change over time.</p>
 
-<h2 id="results-for-20232024">
-<a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
+<h2 id="results-for-20232024">Results for 2023/2024</h2>
 
 <p>In Year 3 of this project, we published our novel metadata compaction method at the 52nd International Conference on Parallel Processing (ICPP). We use our method to improve the de-duplication ratio and de-duplication throughput for graph-matching applications by significant margins (up to orders of magnitude) compared with other incremental checkpointing methods. Unlike high-throughput compression techniques, our method’s performance improves with increasing checkpointing frequency.</p>
 
@@ -217,47 +331,31 @@ VeloC addresses these resilience challenges: it takes advantage of the different
 
 <p>In Year 4 of this project, we will investigate using Merkle trees as metadata for accelerating comparisons of checkpoints between different runs. Comparing intermediate checkpoints from different runs will help quantify and verify the reproducibility of applications. We further augment our hash-based techniques with a fuzzy hash well suited for floating-point data.</p>
 
-<h2 id="visits-and-meetings">
-<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<h2 id="visits-and-meetings">Visits and meetings</h2>
 <ul>
   <li>Nigel Tan spent the summer of 2022 at ANL working on the project</li>
   <li>The team meets weekly during the entire year</li>
   <li>The team from UTK and ANL met in person at the ICPP 2023 in Salt Lake City in August 2023 and at SC23 in Denver, Colorado in November 2023.</li>
 </ul>
 
-<h2 id="impact-and-publications">
-<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<h2 id="impact-and-publications">Impact and publications</h2>
 <ul>
-  <li>
-<strong>Talk:</strong> <strong>Nigel Tan</strong>, Michela Taufer. Modernizing Simulation Software for the Exascale Era. Supercomputing 2023 Doctoral Showcase, 2023.</li>
-  <li>
-<strong>Poster:</strong> <strong>Nigel Tan</strong>, Michela Taufer. Modernizing Simulation Software for the Exascale Era. 12 posters selected. Supercomputing 2023 Doctoral Showcase, 2023.</li>
-  <li>
-<strong>Talk:</strong> <strong>Michela Taufer</strong>. Scalable GPU-Accelerated Incremental Checkpointing of Sparsely Updated Data. Mini-symposium on “Performance in I/O and Fault Tolerance for Scientific Applications.” Platform for Advanced Scientific Computing (PASC) Conference, June 26-28, 2023, Davos, Switzerland.</li>
-  <li>
-<strong>Nigel Tan</strong> was selected as a lead student volunteer at the Supercomputing 2023 conference</li>
-  <li>
-<strong>Publication:</strong> <a href="#TanEtAl2023">(Tan, Nigel and Luettgau, Jakob and Marquez, Jack and Teranishi, Keita and Morales, Nicolas and Bhowmick, Sanjukta and Cappello, Franck and Taufer, Michela and Nicolae, Bogdan 2023)</a>
-</li>
-  <li>
-<strong>Talk:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.</li>
-  <li>
-<strong>Poster:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.</li>
-  <li>
-<strong>Travel award:</strong> <strong>Nigel Tan</strong> was awarded a travel grant for attending ICPP in Salt Lake City UT.</li>
-  <li>
-<strong>Talk:</strong> <strong>Nigel Tan</strong>, Elisabeth Giem, Matthew Whitlock, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer. 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: Towards Access Pattern Aware Checkpointing for Kokkos Applications</li>
-  <li>
-<strong>Poster:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, and Michela Taufer, “Towards Access Pattern Aware Checkpointing For Kokkos Applications,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, St. Louis, MO, 2021.</li>
-  <li>
-<strong>Talk:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer, SIAM Parallel Processing 22 Conference, 2022. Towards Access Pattern Aware Checkpointing For Kokkos Applications</li>
-  <li>
-<strong>Reproducibility badges</strong>:We delivered three ACM reproducibility artifacts ( result replicated, artifact available, and artifact evaluated-functional) for our work in the ICPP paper that contains metadata and results from our workflow executions for different GPU distributions and compression techniques – https://github.com/TauferLab/Reproducibility_Scalar_GPU_Dedup_ICPP23_Results</li>
+  <li><strong>Talk:</strong> <strong>Nigel Tan</strong>, Michela Taufer. Modernizing Simulation Software for the Exascale Era. Supercomputing 2023 Doctoral Showcase, 2023.</li>
+  <li><strong>Poster:</strong> <strong>Nigel Tan</strong>, Michela Taufer. Modernizing Simulation Software for the Exascale Era. 12 posters selected. Supercomputing 2023 Doctoral Showcase, 2023.</li>
+  <li><strong>Talk:</strong> <strong>Michela Taufer</strong>. Scalable GPU-Accelerated Incremental Checkpointing of Sparsely Updated Data. Mini-symposium on “Performance in I/O and Fault Tolerance for Scientific Applications.” Platform for Advanced Scientific Computing (PASC) Conference, June 26-28, 2023, Davos, Switzerland.</li>
+  <li><strong>Nigel Tan</strong> was selected as a lead student volunteer at the Supercomputing 2023 conference</li>
+  <li><strong>Publication:</strong> <a class="citation" href="#TanEtAl2023">(Tan, Nigel and Luettgau, Jakob and Marquez, Jack and Teranishi, Keita and Morales, Nicolas and Bhowmick, Sanjukta and Cappello, Franck and Taufer, Michela and Nicolae, Bogdan 2023)</a></li>
+  <li><strong>Talk:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.</li>
+  <li><strong>Poster:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Jakob Luettgau, Jack Marquez, Keita Teranishi, Nicolas Morales, Sanjukta Bhowmick, Michela Taufer, and Franck Cappello. Scalable Checkpointing of Applications with Sparsely Updated Data. In Proceedings of the 52nd International Conference on Parallel Processing (ICPP), 2023.</li>
+  <li><strong>Travel award:</strong> <strong>Nigel Tan</strong> was awarded a travel grant for attending ICPP in Salt Lake City UT.</li>
+  <li><strong>Talk:</strong> <strong>Nigel Tan</strong>, Elisabeth Giem, Matthew Whitlock, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer. 13th Joint Laboratory for Extreme Scale Computing (JLESC) Workshop, 2021. Short Talk: Towards Access Pattern Aware Checkpointing for Kokkos Applications</li>
+  <li><strong>Poster:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, and Michela Taufer, “Towards Access Pattern Aware Checkpointing For Kokkos Applications,” ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis, Research Poster, St. Louis, MO, 2021.</li>
+  <li><strong>Talk:</strong> <strong>Nigel Tan</strong>, Bogdan Nicolae, Nicolas Morales, Keita Teranishi, Sanjukta Bhowmick, Franck Cappello, and Michela Taufer, SIAM Parallel Processing 22 Conference, 2022. Towards Access Pattern Aware Checkpointing For Kokkos Applications</li>
+  <li><strong>Reproducibility badges</strong>:We delivered three ACM reproducibility artifacts ( result replicated, artifact available, and artifact evaluated-functional) for our work in the ICPP paper that contains metadata and results from our workflow executions for different GPU distributions and compression techniques – https://github.com/TauferLab/Reproducibility_Scalar_GPU_Dedup_ICPP23_Results</li>
 </ul>
 
-<ol class="bibliography"><li>
-<div class="bibtex-entry-container">
-  <div>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -268,14 +366,14 @@ VeloC addresses these resilience challenges: it takes advantage of the different
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTanEtAl2023Bibtex" aria-expanded="false" aria-controls="collapseTanEtAl2023Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTanEtAl2023Abstract" aria-expanded="false" aria-controls="collapseTanEtAl2023Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseTanEtAl2023Abstract" aria-expanded="false" aria-controls="collapseTanEtAl2023Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="TanEtAl2023">Tan, Nigel and Luettgau, Jakob and Marquez, Jack and Teranishi, Keita and Morales, Nicolas and Bhowmick, Sanjukta and Cappello, Franck and Taufer, Michela and Nicolae, Bogdan. 2023. “Scalable Incremental Checkpointing Using GPU-Accelerated De-Duplication.” In <i>Proceedings of the 52nd International Conference on Parallel Processing</i>, 665–74. ICPP ’23. New York, NY, USA: Association for Computing Machinery. doi:10.1145/3605573.3605639.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="TanEtAl2023">Tan, Nigel and Luettgau, Jakob and Marquez, Jack and Teranishi, Keita and Morales, Nicolas and Bhowmick, Sanjukta and Cappello, Franck and Taufer, Michela and Nicolae, Bogdan. 2023. “Scalable Incremental Checkpointing Using GPU-Accelerated De-Duplication.” In <i>Proceedings of the 52nd International Conference on Parallel Processing</i>, 665–74. ICPP ’23. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3605573.3605639.</span>
     </div>
   </div>
   <div class="collapse" id="collapseTanEtAl2023Bibtex">
@@ -305,69 +403,112 @@ VeloC addresses these resilience challenges: it takes advantage of the different
 </div>
 </li></ol>
 
-<h2 id="future-plans">
-<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+<h2 id="future-plans">Future plans</h2>
 <p>We will study how our checkpointing can dynamically guide the duplication process at runtime. We will improve our incremental checkpoint restart algorithm to maximize available memory access pattern information. We will test new applications and access patterns to improve checkpoint performance for various applications relevant to the JLESC community.</p>
 
-<h2 id="references">
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<h2 id="references">References</h2>
 
 <ol class="bibliography"></ol>
-
-      </div>
-    </div>
-  </article>
-  
 </div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/access_pattern_chkpt/';
+      this.page.identifier = '/projects/access_pattern_chkpt/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 
-      </div>
-    </main>
-    <footer id="site-footer">
-  <div class="navbar navbar-full navbar-light">
-    <div class="container">
-      <div class="row small">
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item">
-              <a class="nav-link" href="/about/imprint/">
-                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 hidden-xs-down">
-          <div class="nav navbar-nav text-xs-center">
-            <span class="credit">
-              Powered by
-              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
-              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
-            </span>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
           </div>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
-                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
-            </li>
-          </ul>
-        </div>
+        
+        
       </div>
+
     </div>
   </div>
-</footer>
+</div>
 
-    <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+</div>
 
-<!--  -->
 
-  </body>
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
 </html>

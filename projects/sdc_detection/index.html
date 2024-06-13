@@ -1,214 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; New Techniques to Design Silent Data Corruption Detectors</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
-">
-  <link rel="canonical" href="https://jlesc.github.io/projects/sdc_detection/">
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
-  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
-</head>
+    <title>New Techniques to Design Silent Data Corruption Detectors - Jekyll Advance</title>
 
-  <body>
-    <header>
-  <noscript>
-    <div class="container-fluid">
-      <div class="card card-block card-danger row">
-        <p class="card-text text-sm-center">
-          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
-          <br />
-          Please activate Javascript for this website. We are not loading content from other domains.
-        </p>
-      </div>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/sdc_detection/"/>
+
+  <meta property="og:title" content="New Techniques to Design Silent Data Corruption Detectors"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
     </div>
-  </noscript>
-  <nav>
-    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
-      <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
-          <i class="fa fa-bars fa-fw"></i>
-        </button>
-
-        <a class="navbar-brand" href="/">JLESC</a>
-
-        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-  <div class="dropdown-menu">
-    <a href="/about/" class="dropdown-item">JLESC</a>
-    <a href="/about/partners/" class="dropdown-item">Partners</a>
-    <a href="/about/people/" class="dropdown-item">People</a>
-    <a href="/about/grants/" class="dropdown-item">Grants</a>
   </div>
-</li>
 
-            <li class="nav-item">
-              <a href="/news/" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/events/">Events</a>
-            </li>
-            <li class="nav-item dropdown active">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
-  <div class="dropdown-menu">
-    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
-    <a href="/projects/" class="dropdown-item active">Projects</a>
-    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
-    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
   </div>
-</li>
+</div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/references/">References</a>
-            </li>
-          </ul>
 
-          <ul class="nav navbar-nav pull-right">
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://github.com/JLESC/jlesc.github.io/wiki"
-                 target="_blank"
-                 title="How to contribute"
-                 data-toggle="tooltip"
-                 data-placement="left">
-                <i class="fa fa-fw fa-book"></i>
-                How To
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 
-    <main>
-      <div class="container">
-        <div class="post post-project">
-  <article class="post-content">
-    <div class="row">
-      <header class="col-sm-12 post-header">
-        <h1 class="pull-left">New Techniques to Design Silent Data Corruption Detectors</h1>
-      </header>
-    </div>
-    <div class="row">
-      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
-        <section class="group-meta card">
-  <div class="card-header">
-    Project Profile
-  </div>
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
   
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item row">
-      <label class="col-sm-4">Topics</label>
-      <div class="col-sm-8">
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
         
-          <span class="clearfix">
-            <span class="topic topic-title">Resilience</span>
-          </span>
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
         
-      </div>
-    </li>
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
     
-      <li class="list-group-item row">
-        <label class="col-sm-4">Keywords</label>
-        <div class="col-sm-8">
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
           
-            <span class="clearfix"></span>
-          
-        </div>
-      </li>
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
     
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
     
-    
-      <li class="list-group-item row">
-        <label class="col-sm-4">Members</label>
-        <div class="col-sm-8">
-          
-            <span class="clearfix">
-              <span class="person given-name">Leonardo</span> <span class="person sur-name">Bautista Gomez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-              <span class="pull-right">
-                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
-              </span>
-            </span>
-          
-          
-            <span class="clearfix">
-              <span class="person given-name">Prasanna</span> <span class="person sur-name">Balaprakash</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Anne</span> <span class="person sur-name">Benoit</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Osman</span> <span class="person sur-name">Unsal</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Sheng</span> <span class="person sur-name">Di</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Atsushi</span> <span class="person sur-name">Hori</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Balazs</span> <span class="person sur-name">Gerofi</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Marc</span> <span class="person sur-name">Snir</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-        </div>
-      </li>
-    
-    
-    <li class="list-group-item row">
-      <label class="col-sm-4">Status</label>
-      <div class="col-sm-8">
-        <span class="project-status project-status-suspended">suspended</span>
-      </div>
-    </li>
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
     
   </ul>
-</section>
-        <section class="card" id="toc">
-          <div class="card-header">
-            Table of Contents
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">11 May 2016</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
           </div>
-          <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
-<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
-<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>
-        </section>
-      </aside>
-      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+          <div class="post-title">
+            <h1>New Techniques to Design Silent Data Corruption Detectors</h1>
+          </div>
+          
+
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         
-        <h2 id="research-topic-and-goals">
-<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
 
 <p>With the increase in number of components and the power constrains for next
 generation supercomputers, reliability is one of the mayor concerns that needs
@@ -221,11 +312,10 @@ challenging due to the silent nature of those errors. Our objective is to
 develop novel software-level strategies that can detect most SDC occurring in
 future supercomputers.</p>
 
-<h2 id="results-for-20152016">
-<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<h2 id="results-for-20152016">Results for 2015/2016</h2>
 
-<p>During 2015/2016 we tackled several challenges related to silent corruption <a href="#BautEtAl2015">(Bautista-Gomez and Cappello 2015)</a> and tested preliminary approaches <a href="#di2015detect">(Di, Berrocal, and Cappello 2015)</a>. We developed a lightweight, adaptive,
-impact-driven detector for detecting the silent data corruptions <a href="#ShengEtCappello2016">(Di and Cappello 2016)</a>. (1) We carefully characterize 18 HPC
+<p>During 2015/2016 we tackled several challenges related to silent corruption <a class="citation" href="#BautEtAl2015">(Bautista-Gomez and Cappello 2015)</a> and tested preliminary approaches <a class="citation" href="#di2015detect">(Di, Berrocal, and Cappello 2015)</a>. We developed a lightweight, adaptive,
+impact-driven detector for detecting the silent data corruptions <a class="citation" href="#ShengEtCappello2016">(Di and Cappello 2016)</a>. (1) We carefully characterize 18 HPC
 applications/benchmarks and discuss the runtime data features, as well as the
 impact of the SDCs on their execution results. (2) We propose an impact-driven
 detection model that does not blindly improve the prediction accuracy, but
@@ -236,18 +326,17 @@ false alarms. Another question we answered was related to the use of multiple
 SDC detectors with different characteristics. We designed a strategy that
 allows users to decide which SDC detector use and at which frequency, having
 the choice among several SDC detectors with different performance, recall and
-precision. This research was published as a full paper at HiPC2015 <a href="#BautEtAl2015b">(Bautista-Gomez et al. 2015)</a> and we wrote an extension full of details and
-new result and published it <a href="#bautista2016coping">(Bautista-Gomez et al. 2016)</a>. In
+precision. This research was published as a full paper at HiPC2015 <a class="citation" href="#BautEtAl2015b">(Bautista-Gomez et al. 2015)</a> and we wrote an extension full of details and
+new result and published it <a class="citation" href="#bautista2016coping">(Bautista-Gomez et al. 2016)</a>. In
 addition, we investigated how to create SDC detectors based on support vector
 machines (SVM) and compare them with the state-of-the-art SDC detectors. Our
 evaluation with multiple large-scale HPC applications shows that SVM is a good
 technique that can learn about the behavior of the datasets and detect the vast
 majority of anomalies while imposing a negligible overhead. Our technique
 performs better than the existent ones in most of the cases. We published this
-results at CCGrid2016 <a href="#SubasiEtAl2016">(Subasi et al. 2016)</a>.</p>
+results at CCGrid2016 <a class="citation" href="#SubasiEtAl2016">(Subasi et al. 2016)</a>.</p>
 
-<h2 id="results-for-20162017">
-<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
 
 <p>During 2016/2017 we have implemented a new SDC detection algorithm that
 leverages multiple regression and detection mechanisms in a dynamic fashion in
@@ -260,14 +349,13 @@ overhead than state-of-the-art techniques. This work has been submitted to an
 international conference and it is currently under review. The software
 prototype, called MACORD, is pending approval for open source publication. In
 addition, several separate efforts across have been made in order to test
-selective replication for dealing with SDC in HPC systems <a href="#subasi2017rep">(Subasi et al. 2017)</a>, in particular for task-based programming languages <a href="#subasi2016run">(Subasi et al. 2016)</a>.</p>
+selective replication for dealing with SDC in HPC systems <a class="citation" href="#subasi2017rep">(Subasi et al. 2017)</a>, in particular for task-based programming languages <a class="citation" href="#subasi2016run">(Subasi et al. 2016)</a>.</p>
 
-<h2 id="results-for-20172018">
-<a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
 
 <p>A comprehensive study of support vector machines capabilities on detecting
 silent data corruption was published as part of the sustainable computing
-journal <a href="#Subasi2018">(Subasi et al. 2018)</a>. This is an extension and
+journal <a class="citation" href="#Subasi2018">(Subasi et al. 2018)</a>. This is an extension and
 aggregation of several research efforts done within this project.  After all
 the results produced by this project, most of the partners in the project
 started working on different topics, some of them related to resilience others
@@ -277,19 +365,16 @@ after six months.  However, due to renewed interest on the project with fresh
 ideas, the project was restarted. Currently, BSC and RIKEN are investigating
 energy-free alternatives to SDC quantification in large scale supercomputers.</p>
 
-<h2 id="results-for-20182019">
-<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
-<p>We developed a neural network based detector <a href="#clusterWangDCS18">(Wang et al. 2018)</a>.<br>
+<h2 id="results-for-20182019">Results for 2018/2019</h2>
+<p>We developed a neural network based detector <a class="citation" href="#clusterWangDCS18">(Wang et al. 2018)</a>.
 Compared to state of the art generic SDC detectors, this detector can detect SDCs multiple iterations after they were injected.
 We have evaluated our detector with 6 FLASH applications and 2 Mantevo mini-apps.
 Experiments show that our detector can detect more than 89% of SDCs with a false positive rate of less than 2%.</p>
 
-<h2 id="results-for-20192020">
-<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
+<h2 id="results-for-20192020">Results for 2019/2020</h2>
 <p>Most of the partners of this project started working in other projects and there has not been any recent update/work done on this topic. Therefore, we are suspending the project and potentially mark it as finished in 6 months if no further comments/petitions are raised by any of the partners.</p>
 
-<h2 id="visits-and-meetings">
-<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <ul>
   <li>August 2nd, 2015 - November 6th, 2015: Omer internship at ANL</li>
@@ -298,13 +383,10 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   <li>2019: Franck visit to BSC</li>
 </ul>
 
-<h2 id="impact-and-publications">
-<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<h2 id="impact-and-publications">Impact and publications</h2>
 
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -315,13 +397,13 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseclusterWangDCS18Bibtex" aria-expanded="false" aria-controls="collapseclusterWangDCS18Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseclusterWangDCS18Abstract" aria-expanded="false" aria-controls="collapseclusterWangDCS18Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseclusterWangDCS18Abstract" aria-expanded="false" aria-controls="collapseclusterWangDCS18Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="clusterWangDCS18">Wang, Chen, Nikoli Dryden, Franck Cappello, and Marc Snir. 2018. “Neural Network Based Silent Error Detector.” In <i>IEEE International Conference on Cluster Computing, CLUSTER 2018,
                Belfast, UK, September 10-13, 2018</i>, 168–78.</span>
     </div>
@@ -344,9 +426,8 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -357,14 +438,14 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSubasi2018Bibtex" aria-expanded="false" aria-controls="collapseSubasi2018Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseSubasi2018Abstract" aria-expanded="false" aria-controls="collapseSubasi2018Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseSubasi2018Abstract" aria-expanded="false" aria-controls="collapseSubasi2018Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="Subasi2018">Subasi, Omer, Sheng Di, Leonardo Bautista-Gomez, Prasanna Balaprakash, Osman Unsal, Jesus Labarta, Adrian Cristal, Sriram Krishnamoorthy, and Franck Cappello. 2018. “Exploring the Capabilities of Support Vector Machines in Detecting Silent Data Corruptions .” <i>Sustainable Computing: Informatics and Systems </i>. doi:<a href="https://doi.org/10.1016/j.suscom.2018.01.004" target="_blank">https://doi.org/10.1016/j.suscom.2018.01.004</a>.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Subasi2018">Subasi, Omer, Sheng Di, Leonardo Bautista-Gomez, Prasanna Balaprakash, Osman Unsal, Jesus Labarta, Adrian Cristal, Sriram Krishnamoorthy, and Franck Cappello. 2018. “Exploring the Capabilities of Support Vector Machines in Detecting Silent Data Corruptions .” <i>Sustainable Computing: Informatics and Systems </i>. https://doi.org/<a href="https://doi.org/10.1016/j.suscom.2018.01.004" target="_blank">https://doi.org/10.1016/j.suscom.2018.01.004</a>.</span>
     </div>
   </div>
   <div class="collapse" id="collapseSubasi2018Bibtex">
@@ -390,9 +471,8 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -403,13 +483,13 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsesubasi2017repBibtex" aria-expanded="false" aria-controls="collapsesubasi2017repBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsesubasi2017repAbstract" aria-expanded="false" aria-controls="collapsesubasi2017repAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsesubasi2017repAbstract" aria-expanded="false" aria-controls="collapsesubasi2017repAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="subasi2017rep">Subasi, Omer, Gulay Yalcin, Ferad Zyulkyarov, Osman Unsal, and Jesus Labarta. 2017. “Designing and Modelling Selective Replication for Fault-Tolerant HPC Applications.” In <i>2017 IEEE International Conference on Cluster Cloud and Grid Computing (CCGrid’17)</i>. IEEE.</span>
     </div>
   </div>
@@ -430,9 +510,8 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -443,14 +522,14 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseShengEtCappello2016Bibtex" aria-expanded="false" aria-controls="collapseShengEtCappello2016Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseShengEtCappello2016Abstract" aria-expanded="false" aria-controls="collapseShengEtCappello2016Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseShengEtCappello2016Abstract" aria-expanded="false" aria-controls="collapseShengEtCappello2016Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="ShengEtCappello2016">Di, Sheng, and Franck Cappello. 2016. “ Adaptive-Impact Driven Detection of Silent Data Corruption for HPC Applications.” <i>IEEE Transactions on Parallel and Distributed Computing</i>. Phoenix, United States.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="ShengEtCappello2016">Di, Sheng, and Franck Cappello. 2016. “ Adaptive-Impact Driven Detection of Silent Data Corruption for HPC Applications.” <i>IEEE Transactions on Parallel and Distributed Computing</i>.</span>
     </div>
   </div>
   <div class="collapse" id="collapseShengEtCappello2016Bibtex">
@@ -470,9 +549,8 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -483,13 +561,13 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSubasiEtAl2016Bibtex" aria-expanded="false" aria-controls="collapseSubasiEtAl2016Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseSubasiEtAl2016Abstract" aria-expanded="false" aria-controls="collapseSubasiEtAl2016Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseSubasiEtAl2016Abstract" aria-expanded="false" aria-controls="collapseSubasiEtAl2016Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="SubasiEtAl2016">Subasi, Omer, Sheng Di, Leonardo Bautista-Gomez, Prasanna Balaprakash, Osman Unsal, Jesus Labarta, Adrian Cristal, and Franck Cappello. 2016. “Spatial Support Vector Regression to Detect Silent Errors in the Exascale Era.” In <i>Proceedings of the 2016 IEEE/ACM International Symposium on Cluster Cloud And
       Grid Computing</i>. IEEE.</span>
     </div>
@@ -512,9 +590,8 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -525,14 +602,14 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsebautista2016copingBibtex" aria-expanded="false" aria-controls="collapsebautista2016copingBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsebautista2016copingAbstract" aria-expanded="false" aria-controls="collapsebautista2016copingAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsebautista2016copingAbstract" aria-expanded="false" aria-controls="collapsebautista2016copingAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="bautista2016coping">Bautista-Gomez, Leonardo, Anne Benoit, Aurélien Cavelan, Saurabh K Raina, Yves Robert, and Hongyang Sun. 2016. “Coping with Recall and Precision of Soft Error Detectors.” <i>Journal of Parallel and Distributed Computing</i> 98. Elsevier: 8–24.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="bautista2016coping">Bautista-Gomez, Leonardo, Anne Benoit, Aurélien Cavelan, Saurabh K Raina, Yves Robert, and Hongyang Sun. 2016. “Coping with Recall and Precision of Soft Error Detectors.” <i>Journal of Parallel and Distributed Computing</i> 98: 8–24.</span>
     </div>
   </div>
   <div class="collapse" id="collapsebautista2016copingBibtex">
@@ -554,9 +631,8 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -567,13 +643,13 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsesubasi2016runBibtex" aria-expanded="false" aria-controls="collapsesubasi2016runBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsesubasi2016runAbstract" aria-expanded="false" aria-controls="collapsesubasi2016runAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsesubasi2016runAbstract" aria-expanded="false" aria-controls="collapsesubasi2016runAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="subasi2016run">Subasi, Omer, Gulay Yalcin, Ferad Zyulkyarov, Osman Unsal, and Jesus Labarta. 2016. “A Runtime Heuristic to Selectively Replicate Tasks for Application-Specific Reliability Targets.” In <i>2016 IEEE International Conference on Cluster Computing (CLUSTER’16)</i>, 498–505. IEEE.</span>
     </div>
   </div>
@@ -595,9 +671,8 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -608,13 +683,13 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBautEtAl2015bBibtex" aria-expanded="false" aria-controls="collapseBautEtAl2015bBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBautEtAl2015bAbstract" aria-expanded="false" aria-controls="collapseBautEtAl2015bAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBautEtAl2015bAbstract" aria-expanded="false" aria-controls="collapseBautEtAl2015bAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="BautEtAl2015b">Bautista-Gomez, Leonardo, Anne Benoit, Aurélien Cavelan, Saurabh K Raina, Yves Robert, and Hongyang Sun. 2015. “Which Verification for Soft Error Detection?” In <i>Proceedings of the 24th International Conference on High-Performance Performance Computing</i>. IEEE.</span>
     </div>
   </div>
@@ -635,9 +710,8 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -648,13 +722,13 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBautEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseBautEtAl2015Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBautEtAl2015Abstract" aria-expanded="false" aria-controls="collapseBautEtAl2015Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBautEtAl2015Abstract" aria-expanded="false" aria-controls="collapseBautEtAl2015Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="BautEtAl2015">Bautista-Gomez, Leonardo Arturo, and Franck Cappello. 2015. “Detecting and Correcting Data Corruption in Stencil Applications through Multivariate Interpolation.” In <i>Proceedings of the 2015 IEEE International Conference on Cluster Computing</i>, 595–602. IEEE Computer Society.</span>
     </div>
   </div>
@@ -676,9 +750,8 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -689,13 +762,13 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsedi2015detectBibtex" aria-expanded="false" aria-controls="collapsedi2015detectBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsedi2015detectAbstract" aria-expanded="false" aria-controls="collapsedi2015detectAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsedi2015detectAbstract" aria-expanded="false" aria-controls="collapsedi2015detectAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="di2015detect">Di, Sheng, Eduardo Berrocal, and Franck Cappello. 2015. “An Efficient Silent Data Corruption Detection Method with Error-Feedback Control and Even Sampling for HPC Applications.” In <i>2015 IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid’15)</i>, 271–80. IEEE.</span>
     </div>
   </div>
@@ -716,73 +789,115 @@ Experiments show that our detector can detect more than 89% of SDCs with a false
   </div>
   
 </div>
-</li>
-</ol>
+</li></ol>
 
-<h2 id="future-plans">
-<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+<h2 id="future-plans">Future plans</h2>
 
 <p>No future plans.</p>
 
-<h2 id="references">
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<h2 id="references">References</h2>
 
 <ol class="bibliography"></ol>
-
-      </div>
-    </div>
-  </article>
-  
 </div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/sdc_detection/';
+      this.page.identifier = '/projects/sdc_detection/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 
-      </div>
-    </main>
-    <footer id="site-footer">
-  <div class="navbar navbar-full navbar-light">
-    <div class="container">
-      <div class="row small">
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item">
-              <a class="nav-link" href="/about/imprint/">
-                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 hidden-xs-down">
-          <div class="nav navbar-nav text-xs-center">
-            <span class="credit">
-              Powered by
-              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
-              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
-            </span>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
           </div>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
-                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
-            </li>
-          </ul>
-        </div>
+        
+        
       </div>
+
     </div>
   </div>
-</footer>
+</div>
 
-    <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+</div>
 
-<!--  -->
 
-  </body>
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
 </html>

@@ -1,191 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Iterative and direct parallel linear solvers in a hybrid MPI/OpenMP high performance computational engineering simulations</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
-">
-  <link rel="canonical" href="https://jlesc.github.io/projects/alya_project/">
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
-  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
-</head>
+    <title>Iterative and direct parallel linear solvers in a hybrid MPI/OpenMP high performance computational engineering simulations - Jekyll Advance</title>
 
-  <body>
-    <header>
-  <noscript>
-    <div class="container-fluid">
-      <div class="card card-block card-danger row">
-        <p class="card-text text-sm-center">
-          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
-          <br />
-          Please activate Javascript for this website. We are not loading content from other domains.
-        </p>
-      </div>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/alya_project/"/>
+
+  <meta property="og:title" content="Iterative and direct parallel linear solvers in a hybrid MPI/OpenMP high performance computational engineering simulations"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
     </div>
-  </noscript>
-  <nav>
-    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
-      <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
-          <i class="fa fa-bars fa-fw"></i>
-        </button>
-
-        <a class="navbar-brand" href="/">JLESC</a>
-
-        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-  <div class="dropdown-menu">
-    <a href="/about/" class="dropdown-item">JLESC</a>
-    <a href="/about/partners/" class="dropdown-item">Partners</a>
-    <a href="/about/people/" class="dropdown-item">People</a>
-    <a href="/about/grants/" class="dropdown-item">Grants</a>
   </div>
-</li>
 
-            <li class="nav-item">
-              <a href="/news/" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/events/">Events</a>
-            </li>
-            <li class="nav-item dropdown active">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
-  <div class="dropdown-menu">
-    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
-    <a href="/projects/" class="dropdown-item active">Projects</a>
-    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
-    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
   </div>
-</li>
+</div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/references/">References</a>
-            </li>
-          </ul>
 
-          <ul class="nav navbar-nav pull-right">
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://github.com/JLESC/jlesc.github.io/wiki"
-                 target="_blank"
-                 title="How to contribute"
-                 data-toggle="tooltip"
-                 data-placement="left">
-                <i class="fa fa-fw fa-book"></i>
-                How To
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 
-    <main>
-      <div class="container">
-        <div class="post post-project">
-  <article class="post-content">
-    <div class="row">
-      <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Iterative and direct parallel linear solvers in a hybrid MPI/OpenMP high performance computational engineering simulations</h1>
-      </header>
-    </div>
-    <div class="row">
-      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
-        <section class="group-meta card">
-  <div class="card-header">
-    Project Profile
-  </div>
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
   
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item row">
-      <label class="col-sm-4">Topics</label>
-      <div class="col-sm-8">
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
         
-          <span class="clearfix">
-            <span class="topic topic-title">Numerical Methods</span>
-          </span>
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
         
-      </div>
-    </li>
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
     
-      <li class="list-group-item row">
-        <label class="col-sm-4">Keywords</label>
-        <div class="col-sm-8">
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
           
-            <span class="clearfix"></span>
-          
-        </div>
-      </li>
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
     
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
     
-    
-      <li class="list-group-item row">
-        <label class="col-sm-4">Members</label>
-        <div class="col-sm-8">
-          
-            <span class="clearfix">
-              <span class="person given-name">Pierre</span> <span class="person sur-name">Ramet</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-              <span class="pull-right">
-                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
-              </span>
-            </span>
-          
-          
-            <span class="clearfix">
-              <span class="person given-name">Emmanuel</span> <span class="person sur-name">Agullo</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Antoni</span> <span class="person sur-name">Artigues</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-            </span>
-          
-        </div>
-      </li>
-    
-    
-    <li class="list-group-item row">
-      <label class="col-sm-4">Status</label>
-      <div class="col-sm-8">
-        <span class="project-status project-status-suspended">suspended</span>
-      </div>
-    </li>
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
     
   </ul>
-</section>
-        <section class="card" id="toc">
-          <div class="card-header">
-            Table of Contents
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">29 March 2016</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
           </div>
-          <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
-<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
-<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>
-        </section>
-      </aside>
-      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+          <div class="post-title">
+            <h1>Iterative and direct parallel linear solvers in a hybrid MPI/OpenMP high performance computational engineering simulations</h1>
+          </div>
+          
+
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         
-        <h2 id="research-topic-and-goals">
-<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
 
 <p>This research action aims at improving the parallel scalability and robustness of the hybrid MPI/OpenMP high performance computational code Alya developed at BSC by using the parallel linear solvers designed at Inria.
 In that framework both parallel sparse direct and hybrid iterative/direct linear solvers will be integrated in the Alya code to study their performance and identify their possible bottlenecks.
@@ -195,37 +309,30 @@ This action will contribute to the definition of the global API for the solver s
 
 This activity has just started in February 2016, preliminary validation experiments have been performed but no scientific results yet. -->
 
-<h2 id="results-for-20162017">
-<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
 
-<p>A database with testcases has been created on Marenostrum. This database includes a series of representative examples to test unsymmetric, symmetric and SPD matrices. In addition, different mesh topologies have been considered to assess the effects of mesh anisotropy, computational domain elongation, etc. 
+<p>A database with testcases has been created on Marenostrum. This database includes a series of representative examples to test unsymmetric, symmetric and SPD matrices. In addition, different mesh topologies have been considered to assess the effects of mesh anisotropy, computational domain elongation, etc.
 Benchmarking is currently carried out to compare Alya internal solvers and MAPHYS.</p>
 
-<h2 id="results-for-20172018">
-<a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
 
 <ol>
   <li>Full integration of the Inria solvers with their current individual API in the Alya code.</li>
   <li>Scalability studies carried out on for CFD and solid mechanics applications.</li>
   <li>New release of the PaStiX solver 6.0 :
-We have presented two approaches using a Block Low-Rank (BLR) compression technique to reduce the memory footprint and/or the time-to-solution of the sparse supernodal solver PaStiX (See <a href="#pichon:hal-01485507">(Pichon et al. 2017)</a> and <a href="#pichon:hal-01502215">(Pichon et al. 2017)</a>). Thanks to this compression technique, we have been able to solve a 1 billion unknown system (a 3D Laplacian matrix 100x100x100.000) on a single node with 3Tb of memory. The factorization time for this system was less than 6 hours using 96 cores, and the precision achieved at the first solve was 10e-5. With 10 additional iterative refinement steps, we reached easily 10e-8 in double precision. The cost of one solve was limited to 280 seconds. We were able to save 9Tb over the 11Tb that would be requested by the direct solver. The last release of the software includes these implementations and the description of the parameters are documented in <a href="http://pastix.gforge.inria.fr/doxygen/html/group__pastix__users.html">https://gitlab.inria.fr/solverstack/pastix</a>.</li>
+We have presented two approaches using a Block Low-Rank (BLR) compression technique to reduce the memory footprint and/or the time-to-solution of the sparse supernodal solver PaStiX (See <a class="citation" href="#pichon:hal-01485507">(Pichon et al. 2017)</a> and <a class="citation" href="#pichon:hal-01502215">(Pichon et al. 2017)</a>). Thanks to this compression technique, we have been able to solve a 1 billion unknown system (a 3D Laplacian matrix 100x100x100.000) on a single node with 3Tb of memory. The factorization time for this system was less than 6 hours using 96 cores, and the precision achieved at the first solve was 10e-5. With 10 additional iterative refinement steps, we reached easily 10e-8 in double precision. The cost of one solve was limited to 280 seconds. We were able to save 9Tb over the 11Tb that would be requested by the direct solver. The last release of the software includes these implementations and the description of the parameters are documented in <a href="http://pastix.gforge.inria.fr/doxygen/html/group__pastix__users.html">https://gitlab.inria.fr/solverstack/pastix</a>.</li>
 </ol>
 
-<h2 id="visits-and-meetings">
-<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <ul>
-  <li>
-<span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) and <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 14-15 Oct. 2016.</li>
-  <li>
-<span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 24-26 Feb. 2016.</li>
+  <li><span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) and <span class="person given-name">Mariano</span> <span class="person sur-name">Vázquez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 14-15 Oct. 2016.</li>
+  <li><span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) met INRIA team at Bordeaux, 24-26 Feb. 2016.</li>
   <li>INRIA met BSC team at Barcelona, Nov. 2016.</li>
-  <li>
-<span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) visits INRIA, Nov. 2017.</li>
+  <li><span class="person given-name">Guillaume</span> <span class="person sur-name">Houzeaux</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) visits INRIA, Nov. 2017.</li>
 </ul>
 
-<h2 id="impact-and-publications">
-<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<h2 id="impact-and-publications">Impact and publications</h2>
 
 <p>None yet.</p>
 
@@ -235,18 +342,14 @@ We have presented two approaches using a Block Low-Rank (BLR) compression techni
 
 <ol class="bibliography"></ol>
 
-<h2 id="future-plans">
-<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+<h2 id="future-plans">Future plans</h2>
 <p>We intend to complete the full integration of the Inria solvers with their current individual API in the Alya code so that scalability studies on different applications representative of Alya simulations can be performed (incompressible/compressible fluid, structure mechanics).
 Hopefully some of them will reveal numerical or software features to be further studied.</p>
 
-<h2 id="references">
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<h2 id="references">References</h2>
 
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -257,14 +360,14 @@ Hopefully some of them will reveal numerical or software features to be further 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsepichon:hal-01485507Bibtex" aria-expanded="false" aria-controls="collapsepichon:hal-01485507Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsepichon:hal-01485507Abstract" aria-expanded="false" aria-controls="collapsepichon:hal-01485507Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsepichon:hal-01485507Abstract" aria-expanded="false" aria-controls="collapsepichon:hal-01485507Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="pichon:hal-01485507">Pichon, G., M. Faverge, P. Ramet, and J. Roman. 2017. “Reordering Strategy for Blocking Optimization in Sparse Linear Solvers.” <i>SIAM Journal on Matrix Analysis and Applications</i>, SIAM Journal on Matrix Analysis and Applications, 38 (1). Society for Industrial and Applied Mathematics: 226–48. doi:10.1137/16M1062454.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="pichon:hal-01485507">Pichon, G., M. Faverge, P. Ramet, and J. Roman. 2017. “Reordering Strategy for Blocking Optimization in Sparse Linear Solvers.” <i>SIAM Journal on Matrix Analysis and Applications</i>, SIAM Journal on Matrix Analysis and Applications, 38 (1): 226–48. https://doi.org/10.1137/16M1062454.</span>
     </div>
   </div>
   <div class="collapse" id="collapsepichon:hal-01485507Bibtex">
@@ -294,9 +397,8 @@ Hopefully some of them will reveal numerical or software features to be further 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -307,13 +409,13 @@ Hopefully some of them will reveal numerical or software features to be further 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsepichon:hal-01502215Bibtex" aria-expanded="false" aria-controls="collapsepichon:hal-01502215Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapsepichon:hal-01502215Abstract" aria-expanded="false" aria-controls="collapsepichon:hal-01502215Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsepichon:hal-01502215Abstract" aria-expanded="false" aria-controls="collapsepichon:hal-01502215Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="pichon:hal-01502215">Pichon, G., E. Darve, M. Faverge, P. Ramet, and J. Roman. 2017. “Sparse Supernodal Solver Using Block Low-Rank Compression.” In <i>18th IEEE International Workshop on Parallel and Distributed Scientific and Engineering Computing (PDSEC 2017)</i>. Orlando, United States. <a href="https://hal.inria.fr/hal-01502215" target="_blank">https://hal.inria.fr/hal-01502215</a>.</span>
     </div>
   </div>
@@ -340,9 +442,8 @@ Hopefully some of them will reveal numerical or software features to be further 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -353,13 +454,13 @@ Hopefully some of them will reveal numerical or software features to be further 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseVazquezEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseVazquezEtAl2015Abstract" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseVazquezEtAl2015Abstract" aria-expanded="false" aria-controls="collapseVazquezEtAl2015Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="VazquezEtAl2015">Vázquez, M., G. Houzeaux, S. Koric, A. Artigues, J. Aguado-Sierra, Arı́s R., D. Mira, et al. 2015. “Alya: Multiphysics Engineering Simulation Towards Exascale.” <i>J. Comput. Sci.</i></span>
     </div>
   </div>
@@ -380,9 +481,8 @@ Hopefully some of them will reveal numerical or software features to be further 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -393,13 +493,13 @@ Hopefully some of them will reveal numerical or software features to be further 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2011Bibtex" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2011Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHouzeauxEtAl2011Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2011Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2011Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2011Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="HouzeauxEtAl2011">Houzeaux, G, R Aubry, and M Vázquez. 2011. “Extension of Fractional Step Techniques for Incompressible Flows: The Preconditioned Orthomin(1) for the Pressure Schur Complement.” <i>Comput. &amp; Fluids</i> 44: 297–313.</span>
     </div>
   </div>
@@ -422,9 +522,8 @@ Hopefully some of them will reveal numerical or software features to be further 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -435,13 +534,13 @@ Hopefully some of them will reveal numerical or software features to be further 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2009Bibtex" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2009Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseHouzeauxEtAl2009Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2009Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseHouzeauxEtAl2009Abstract" aria-expanded="false" aria-controls="collapseHouzeauxEtAl2009Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="HouzeauxEtAl2009">Houzeaux, G, M Vázquez, R Aubry, and JM Cela. 2009. “A Massively Parallel Fractional Step Solver for Incompressible Flows.” <i>J. Comp. Phys</i> 228 (17): 6316–32.</span>
     </div>
   </div>
@@ -463,63 +562,107 @@ Hopefully some of them will reveal numerical or software features to be further 
   </div>
   
 </div>
-</li>
-</ol>
-
-      </div>
-    </div>
-  </article>
-  
+</li></ol>
 </div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/alya_project/';
+      this.page.identifier = '/projects/alya_project/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 
-      </div>
-    </main>
-    <footer id="site-footer">
-  <div class="navbar navbar-full navbar-light">
-    <div class="container">
-      <div class="row small">
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item">
-              <a class="nav-link" href="/about/imprint/">
-                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 hidden-xs-down">
-          <div class="nav navbar-nav text-xs-center">
-            <span class="credit">
-              Powered by
-              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
-              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
-            </span>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
           </div>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
-                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
-            </li>
-          </ul>
-        </div>
+        
+        
       </div>
+
     </div>
   </div>
-</footer>
+</div>
 
-    <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+</div>
 
-<!--  -->
 
-  </body>
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
 </html>

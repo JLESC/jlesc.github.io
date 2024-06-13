@@ -1,262 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Mitigating I/O Interference in Concurrent HPC Applications</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
-">
-  <link rel="canonical" href="https://jlesc.github.io/projects/ichpc_project/">
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
-  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
-</head>
+    <title>Mitigating I/O Interference in Concurrent HPC Applications - Jekyll Advance</title>
 
-  <body>
-    <header>
-  <noscript>
-    <div class="container-fluid">
-      <div class="card card-block card-danger row">
-        <p class="card-text text-sm-center">
-          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
-          <br />
-          Please activate Javascript for this website. We are not loading content from other domains.
-        </p>
-      </div>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/ichpc_project/"/>
+
+  <meta property="og:title" content="Mitigating I/O Interference in Concurrent HPC Applications"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
     </div>
-  </noscript>
-  <nav>
-    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
-      <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
-          <i class="fa fa-bars fa-fw"></i>
-        </button>
-
-        <a class="navbar-brand" href="/">JLESC</a>
-
-        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-  <div class="dropdown-menu">
-    <a href="/about/" class="dropdown-item">JLESC</a>
-    <a href="/about/partners/" class="dropdown-item">Partners</a>
-    <a href="/about/people/" class="dropdown-item">People</a>
-    <a href="/about/grants/" class="dropdown-item">Grants</a>
   </div>
-</li>
 
-            <li class="nav-item">
-              <a href="/news/" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/events/">Events</a>
-            </li>
-            <li class="nav-item dropdown active">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
-  <div class="dropdown-menu">
-    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
-    <a href="/projects/" class="dropdown-item active">Projects</a>
-    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
-    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
   </div>
-</li>
+</div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/references/">References</a>
-            </li>
-          </ul>
 
-          <ul class="nav navbar-nav pull-right">
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://github.com/JLESC/jlesc.github.io/wiki"
-                 target="_blank"
-                 title="How to contribute"
-                 data-toggle="tooltip"
-                 data-placement="left">
-                <i class="fa fa-fw fa-book"></i>
-                How To
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 
-    <main>
-      <div class="container">
-        <div class="post post-project">
-  <article class="post-content">
-    <div class="row">
-      <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Mitigating I/O Interference in Concurrent HPC Applications</h1>
-      </header>
-    </div>
-    <div class="row">
-      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
-        <section class="group-meta card">
-  <div class="card-header">
-    Project Profile
-  </div>
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
   
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item row">
-      <label class="col-sm-4">Topics</label>
-      <div class="col-sm-8">
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
         
-          <span class="clearfix">
-            <span class="topic topic-title">I/O, Storage and In-Situ Processing</span>
-          </span>
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
         
-      </div>
-    </li>
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
     
-      <li class="list-group-item row">
-        <label class="col-sm-4">Keywords</label>
-        <div class="col-sm-8">
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
           
-            <span class="clearfix"></span>
-          
-        </div>
-      </li>
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
     
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
     
-    
-      <li class="list-group-item row">
-        <label class="col-sm-4">Members</label>
-        <div class="col-sm-8">
-          
-            <span class="clearfix">
-              <span class="person given-name">Matthieu</span> <span class="person sur-name">Dorier</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-              <span class="pull-right">
-                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
-              </span>
-            </span>
-          
-          
-            <span class="clearfix">
-              <span class="person given-name">Gabriel</span> <span class="person sur-name">Antoniu</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Shadi</span> <span class="person sur-name">Ibrahim</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Orcun</span> <span class="person sur-name">Yildiz</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Rob</span> <span class="person sur-name">Ross</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-        </div>
-      </li>
-    
-    
-    <li class="list-group-item row">
-      <label class="col-sm-4">Status</label>
-      <div class="col-sm-8">
-        <span class="project-status project-status-finished">finished</span>
-      </div>
-    </li>
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
     
   </ul>
-</section>
-        <section class="card" id="toc">
-          <div class="card-header">
-            Table of Contents
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">11 February 2016</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
           </div>
-          <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20142015">Results for 2014/2015</a></li>
-<li class="toc-entry toc-h3"><a href="#sub-goal-1">Sub-goal 1:</a></li>
-<li class="toc-entry toc-h3"><a href="#results">Results:</a></li>
-<li class="toc-entry toc-h3"><a href="#sub-goal-2">Sub-goal 2:</a></li>
-<li class="toc-entry toc-h3"><a href="#results-1">Results:</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20152016">Results for 2015/2016</a></li>
-<li class="toc-entry toc-h3"><a href="#sub-goal-1-1">Sub-goal 1:</a></li>
-<li class="toc-entry toc-h3"><a href="#results-2">Results:</a></li>
-<li class="toc-entry toc-h4"><a href="#sub-goal-2-1">Sub-goal 2:</a></li>
-<li class="toc-entry toc-h4"><a href="#results-3">Results:</a></li>
-<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
-<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>
-        </section>
-      </aside>
-      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+          <div class="post-title">
+            <h1>Mitigating I/O Interference in Concurrent HPC Applications</h1>
+          </div>
+          
+
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         
-        <h2 id="research-topic-and-goals">
-<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
 
 <p>With million-core supercomputers comes the problem of I/O interference between distinct applications
-accessing a shared file system in a concurrent manner <a href="#LofsteadEtAl2010">(Lofstead et al. 2010)</a>.
+accessing a shared file system in a concurrent manner <a class="citation" href="#LofsteadEtAl2010">(Lofstead et al. 2010)</a>.
 Our work in this context is twofold. We aim to investigate and quantify this interference effect, as well as find its root causes, and we aimto mitigate I/O interference through novel approaches
 based on scheduling and cross-application communication and coordination.
 In previous work, experiments done during Matthieu Dorier’s internship at ANL (2013) led to a better understanding of the I/O
 interference phenomena, and to the implementation of a prototype of the CALCioM approach with
 currently includes 3 scheduling strategies.
-As a result of this work, a paper was published at IEEE IPDPS 2014 <a href="#DorierEtAl2014a">(Dorier et al. 2014)</a>.</p>
+As a result of this work, a paper was published at IEEE IPDPS 2014 <a class="citation" href="#DorierEtAl2014a">(Dorier et al. 2014)</a>.</p>
 
-<h2 id="results-for-20142015">
-<a id="results-for-20142015" class="anchor" href="#results-for-20142015" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2014/2015</h2>
+<h2 id="results-for-20142015">Results for 2014/2015</h2>
 
-<h3 id="sub-goal-1">
-<a id="sub-goal-1" class="anchor" href="#sub-goal-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sub-goal 1:</h3>
+<h3 id="sub-goal-1">Sub-goal 1:</h3>
 <p>Having exemplified the interference phenomenon on synthetic benchmarks, we
 are now interested in showing how often such interference occurs and the nature of the applications
 that are involved in this phenomenon. This investigation was done through the analysis of traces
 produced by the Darshan library on ANL’s Intrepid BlueGene/P system.</p>
 
-<h3 id="results">
-<a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results:</h3>
+<h3 id="results">Results:</h3>
 <p>We developed Darshan-Ruby and Darshan-Web (<a href="http://darshan-ruby.gforge.inria.fr">http://darshan-ruby.gforge.inria.fr</a>). Darshan-Ruby is a Ruby wrapper to ANL’s Darshan library. Darshan-Web is a Web
 platform for online analysis of Darshan log files. This platform is based on Ruby on Rails, D3.js,
 and AJAX technologies. A demo is available here: <a href="http://darshan-web.irisa.fr">http://darshan-web.irisa.fr</a>.</p>
 
-<h3 id="sub-goal-2">
-<a id="sub-goal-2" class="anchor" href="#sub-goal-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sub-goal 2:</h3>
+<h3 id="sub-goal-2">Sub-goal 2:</h3>
 <p>Our second goal was to find a way to improve CALCioM by modeling and
 predicting I/O patterns. This prediction should be made at run time, with no prior knowledge of
 the application, and should converge toward an accurate model of the application’s I/O within a
 few iterations only.</p>
 
-<h3 id="results-1">
-<a id="results-1" class="anchor" href="#results-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results:</h3>
+<h3 id="results-1">Results:</h3>
 <p>To this end, we developed Omnisc’IO, an approach that leverages format grammars
 to model and predict the I/O behavior of HPC applications. Omnisc’IO was evaluated with four
-real application: CM1 <a href="#BryanFritsch2002">(Bryan and Fritsch. 2002)</a>, Nek5000 <a href="#LottesEtAL2008">(James W. Lottes and Kerkemeier 2008)</a>,
-LAMMPS <a href="#LAMMPS2010">(2010)</a> and GTC <a href="#GTC2010">(2010)</a>, and our results led to a paper
-at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
+real application: CM1 <a class="citation" href="#BryanFritsch2002">(Bryan and Fritsch. 2002)</a>, Nek5000 <a class="citation" href="#LottesEtAL2008">(James W. Lottes and Kerkemeier 2008)</a>,
+LAMMPS <a class="citation" href="#LAMMPS2010">(2010)</a> and GTC <a class="citation" href="#GTC2010">(2010)</a>, and our results led to a paper
+at SC’14 <a class="citation" href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
 
-<h2 id="results-for-20152016">
-<a id="results-for-20152016" class="anchor" href="#results-for-20152016" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2015/2016</h2>
+<h2 id="results-for-20152016">Results for 2015/2016</h2>
 
-<h3 id="sub-goal-1-1">
-<a id="sub-goal-1-1" class="anchor" href="#sub-goal-1-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sub-goal 1:</h3>
+<h3 id="sub-goal-1-1">Sub-goal 1:</h3>
 <p>We continued maintaining and developing Darshan-Ruby in order to adapt it to the new Darshan 3 format.</p>
 
-<h3 id="results-2">
-<a id="results-2" class="anchor" href="#results-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results:</h3>
+<h3 id="results-2">Results:</h3>
 
 <p>The development of Darshan-Ruby for Darshan 3 was moved to Argonne (<a href="https://xgitlab.cels.anl.gov/darshan/darshan-ruby">https://xgitlab.cels.anl.gov/darshan/darshan-ruby</a>). A new tool called Quarshan was developed to efficiently query a large number of log files and perform operations on Darshan data.</p>
 
-<h4 id="sub-goal-2-1">
-<a id="sub-goal-2-1" class="anchor" href="#sub-goal-2-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sub-goal 2:</h4>
+<h4 id="sub-goal-2-1">Sub-goal 2:</h4>
 <p>Research efforts from the literature on mitigating I/O interference focus on a single potential cause of interference (e.g., the network). Yet the root causes of I/O interference can be diverse. In this research direction, we aim to better understand the root causes of I/O interference, and to propose new I/O scheduling techniques to solve the interference issue.</p>
 
-<h4 id="results-3">
-<a id="results-3" class="anchor" href="#results-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results:</h4>
+<h4 id="results-3">Results:</h4>
 
-<p>We conducted an extensive experimental campaign to explore the various root causes of I/O interference in HPC storage systems. We used microbenchmarks on the Grid’5000 testbed to evaluate how the applications’ access pattern, the network components, the file system’s configuration, and the backend storage devices influence I/O interference. The results of this campaign have been published at the IPDPS 2016 conference <a href="#YildizIPDPS2016">(Yildiz et al. 2016)</a>.</p>
+<p>We conducted an extensive experimental campaign to explore the various root causes of I/O interference in HPC storage systems. We used microbenchmarks on the Grid’5000 testbed to evaluate how the applications’ access pattern, the network components, the file system’s configuration, and the backend storage devices influence I/O interference. The results of this campaign have been published at the IPDPS 2016 conference <a class="citation" href="#YildizIPDPS2016">(Yildiz et al. 2016)</a>.</p>
 
-<h2 id="visits-and-meetings">
-<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <ul>
   <li>June 2, 2014 - June 6: Rob Ross visited KerData in Rennes.</li>
@@ -265,13 +361,10 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
   <li>July - September 2015: Internship of Orcun Yildiz at Argonne National Laboratory.</li>
 </ul>
 
-<h2 id="impact-and-publications">
-<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<h2 id="impact-and-publications">Impact and publications</h2>
 
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -282,13 +375,13 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseYildizIPDPS2016Bibtex" aria-expanded="false" aria-controls="collapseYildizIPDPS2016Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseYildizIPDPS2016Abstract" aria-expanded="false" aria-controls="collapseYildizIPDPS2016Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseYildizIPDPS2016Abstract" aria-expanded="false" aria-controls="collapseYildizIPDPS2016Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="YildizIPDPS2016">Yildiz, Orcun, Matthieu Dorier, Shadi Ibrahim, Rob Ross, and Gabriel Antoniu. 2016. “On the Root Causes of Cross-Application I/O Interference in HPC Storage Systems.” In <i>IPDPS - International Parallel and Distributed Processing Symposium</i>. Chicago, United States. <a href="https://hal.inria.fr/hal-01270630" target="_blank">https://hal.inria.fr/hal-01270630</a>.</span>
     </div>
   </div>
@@ -315,9 +408,8 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -328,15 +420,15 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDorierEtAl2014aBibtex" aria-expanded="false" aria-controls="collapseDorierEtAl2014aBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseDorierEtAl2014aAbstract" aria-expanded="false" aria-controls="collapseDorierEtAl2014aAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseDorierEtAl2014aAbstract" aria-expanded="false" aria-controls="collapseDorierEtAl2014aAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="DorierEtAl2014a">Dorier, Matthieu, Shadi Ibrahim, Gabriel Antoniu, and Rob Ross. 2014. “Omnisc’IO: A Grammar-Based Approach to Spatial and Temporal I/O Patterns Prediction.” In <i>Proceedings of the International Conference for High Performance Computing,
-    Networking, Storage and Analysis</i>, 623–34. SC ’14. Piscataway, NJ, USA: IEEE Press. doi:10.1109/SC.2014.56.</span>
+    Networking, Storage and Analysis</i>, 623–34. SC ’14. Piscataway, NJ, USA: IEEE Press. https://doi.org/10.1109/SC.2014.56.</span>
     </div>
   </div>
   <div class="collapse" id="collapseDorierEtAl2014aBibtex">
@@ -366,9 +458,8 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -379,13 +470,13 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDorierEtAl2014bBibtex" aria-expanded="false" aria-controls="collapseDorierEtAl2014bBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseDorierEtAl2014bAbstract" aria-expanded="false" aria-controls="collapseDorierEtAl2014bAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseDorierEtAl2014bAbstract" aria-expanded="false" aria-controls="collapseDorierEtAl2014bAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="DorierEtAl2014b">Dorier, Matthieu, Gabriel Antoniu, Robert Ross, Dries Kimpe, and Shadi Ibrahim. 2014. “CALCioM: Mitigating I/O Interference in HPC Systems through Cross-Application
     Coordination.” In <i>IPDPS - International Parallel and Distributed Processing Symposium</i>. Phoenix, United States. <a href="https://hal.inria.fr/hal-00916091" target="_blank">https://hal.inria.fr/hal-00916091</a>.</span>
     </div>
@@ -412,16 +503,12 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
   </div>
   
 </div>
-</li>
-</ol>
+</li></ol>
 
-<h2 id="references">
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<h2 id="references">References</h2>
 
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -432,15 +519,15 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLofsteadEtAl2010Bibtex" aria-expanded="false" aria-controls="collapseLofsteadEtAl2010Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLofsteadEtAl2010Abstract" aria-expanded="false" aria-controls="collapseLofsteadEtAl2010Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLofsteadEtAl2010Abstract" aria-expanded="false" aria-controls="collapseLofsteadEtAl2010Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="LofsteadEtAl2010">Lofstead, Jay, Fang Zheng, Qing Liu, Scott Klasky, Ron Oldfield, Todd Kordenbrock, Karsten Schwan, and Matthew Wolf. 2010. “Managing Variability in the IO Performance of Petascale Storage Systems.” In <i>Proceedings of the 2010 ACM/IEEE International Conference for High Performance
-    Computing, Networking, Storage and Analysis</i>, 1–12. SC ’10. Washington, DC, USA: IEEE Computer Society. doi:10.1109/SC.2010.32.</span>
+    Computing, Networking, Storage and Analysis</i>, 1–12. SC ’10. Washington, DC, USA: IEEE Computer Society. https://doi.org/10.1109/SC.2010.32.</span>
     </div>
   </div>
   <div class="collapse" id="collapseLofsteadEtAl2010Bibtex">
@@ -468,9 +555,8 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -481,13 +567,13 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseGTC2010Bibtex" aria-expanded="false" aria-controls="collapseGTC2010Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseGTC2010Abstract" aria-expanded="false" aria-controls="collapseGTC2010Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseGTC2010Abstract" aria-expanded="false" aria-controls="collapseGTC2010Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="GTC2010">2010. <a href="http://phoenix.ps.uci.edu/GTC/" target="_blank">http://phoenix.ps.uci.edu/GTC/</a>.</span>
     </div>
   </div>
@@ -505,9 +591,8 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -518,13 +603,13 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLAMMPS2010Bibtex" aria-expanded="false" aria-controls="collapseLAMMPS2010Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLAMMPS2010Abstract" aria-expanded="false" aria-controls="collapseLAMMPS2010Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLAMMPS2010Abstract" aria-expanded="false" aria-controls="collapseLAMMPS2010Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="LAMMPS2010">2010. <a href="http://lammps.sandia.gov/" target="_blank">http://lammps.sandia.gov/</a>.</span>
     </div>
   </div>
@@ -542,9 +627,8 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -555,13 +639,13 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLottesEtAL2008Bibtex" aria-expanded="false" aria-controls="collapseLottesEtAL2008Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLottesEtAL2008Abstract" aria-expanded="false" aria-controls="collapseLottesEtAL2008Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLottesEtAL2008Abstract" aria-expanded="false" aria-controls="collapseLottesEtAL2008Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="LottesEtAL2008">James W. Lottes, P. F. Fischer, and Stefan G. Kerkemeier. 2008. <a href="http://nek5000.mcs.anl.gov" target="_blank">http://nek5000.mcs.anl.gov</a>.</span>
     </div>
   </div>
@@ -580,9 +664,8 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -593,14 +676,14 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBryanFritsch2002Bibtex" aria-expanded="false" aria-controls="collapseBryanFritsch2002Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBryanFritsch2002Abstract" aria-expanded="false" aria-controls="collapseBryanFritsch2002Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBryanFritsch2002Abstract" aria-expanded="false" aria-controls="collapseBryanFritsch2002Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="BryanFritsch2002">Bryan, George H., and J. Michael Fritsch. 2002. “A Benchmark Simulation for Moist Nonhydrostatic Numerical Models.” doi:10.1175/1520-0493(2002)130%3C2917:ABSFMN%3E2.0.CO;2.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="BryanFritsch2002">Bryan, George H., and J. Michael Fritsch. 2002. “A Benchmark Simulation for Moist Nonhydrostatic Numerical Models.” https://doi.org/10.1175/1520-0493(2002)130%3C2917:ABSFMN%3E2.0.CO;2.</span>
     </div>
   </div>
   <div class="collapse" id="collapseBryanFritsch2002Bibtex">
@@ -618,63 +701,107 @@ at SC’14 <a href="#DorierEtAl2014b">(Dorier et al. 2014)</a>.</p>
   </div>
   
 </div>
-</li>
-</ol>
-
-      </div>
-    </div>
-  </article>
-  
+</li></ol>
 </div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/ichpc_project/';
+      this.page.identifier = '/projects/ichpc_project/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 
-      </div>
-    </main>
-    <footer id="site-footer">
-  <div class="navbar navbar-full navbar-light">
-    <div class="container">
-      <div class="row small">
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item">
-              <a class="nav-link" href="/about/imprint/">
-                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 hidden-xs-down">
-          <div class="nav navbar-nav text-xs-center">
-            <span class="credit">
-              Powered by
-              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
-              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
-            </span>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
           </div>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
-                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
-            </li>
-          </ul>
-        </div>
+        
+        
       </div>
+
     </div>
   </div>
-</footer>
+</div>
 
-    <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+</div>
 
-<!--  -->
 
-  </body>
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
 </html>

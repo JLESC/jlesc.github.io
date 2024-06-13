@@ -1,221 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Advancing Chameleon and Grid'5000 testbeds</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
-">
-  <link rel="canonical" href="https://jlesc.github.io/projects/interop_chameleon_g5k/">
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
-  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
-</head>
+    <title>Advancing Chameleon and Grid'5000 testbeds - Jekyll Advance</title>
 
-  <body>
-    <header>
-  <noscript>
-    <div class="container-fluid">
-      <div class="card card-block card-danger row">
-        <p class="card-text text-sm-center">
-          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
-          <br />
-          Please activate Javascript for this website. We are not loading content from other domains.
-        </p>
-      </div>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/interop_chameleon_g5k/"/>
+
+  <meta property="og:title" content="Advancing Chameleon and Grid'5000 testbeds"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
     </div>
-  </noscript>
-  <nav>
-    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
-      <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
-          <i class="fa fa-bars fa-fw"></i>
-        </button>
-
-        <a class="navbar-brand" href="/">JLESC</a>
-
-        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-  <div class="dropdown-menu">
-    <a href="/about/" class="dropdown-item">JLESC</a>
-    <a href="/about/partners/" class="dropdown-item">Partners</a>
-    <a href="/about/people/" class="dropdown-item">People</a>
-    <a href="/about/grants/" class="dropdown-item">Grants</a>
   </div>
-</li>
 
-            <li class="nav-item">
-              <a href="/news/" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/events/">Events</a>
-            </li>
-            <li class="nav-item dropdown active">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
-  <div class="dropdown-menu">
-    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
-    <a href="/projects/" class="dropdown-item active">Projects</a>
-    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
-    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
   </div>
-</li>
+</div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/references/">References</a>
-            </li>
-          </ul>
 
-          <ul class="nav navbar-nav pull-right">
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://github.com/JLESC/jlesc.github.io/wiki"
-                 target="_blank"
-                 title="How to contribute"
-                 data-toggle="tooltip"
-                 data-placement="left">
-                <i class="fa fa-fw fa-book"></i>
-                How To
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 
-    <main>
-      <div class="container">
-        <div class="post post-project">
-  <article class="post-content">
-    <div class="row">
-      <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Advancing Chameleon and Grid'5000 testbeds</h1>
-      </header>
-    </div>
-    <div class="row">
-      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
-        <section class="group-meta card">
-  <div class="card-header">
-    Project Profile
-  </div>
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
   
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item row">
-      <label class="col-sm-4">Topics</label>
-      <div class="col-sm-8">
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
         
-          <span class="clearfix">
-            <span class="topic topic-title">Advanced Architectures</span>
-          </span>
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
         
-      </div>
-    </li>
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
     
-      <li class="list-group-item row">
-        <label class="col-sm-4">Keywords</label>
-        <div class="col-sm-8">
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
           
-            <span class="clearfix">Testbeds</span>
-          
-            <span class="clearfix">Experimentation platforms</span>
-          
-            <span class="clearfix">Chameleon</span>
-          
-            <span class="clearfix">Grid'5000</span>
-          
-        </div>
-      </li>
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
     
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
     
-    
-      <li class="list-group-item row">
-        <label class="col-sm-4">Members</label>
-        <div class="col-sm-8">
-          
-            <span class="clearfix">
-              <span class="person given-name">Kate</span> <span class="person sur-name">Keahey</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-              <span class="pull-right">
-                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
-              </span>
-            </span>
-          
-          
-            <span class="clearfix">
-              <span class="person given-name">David</span> <span class="person sur-name">Loup</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Adrien</span> <span class="person sur-name">Lebre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Matthieu</span> <span class="person sur-name">Simonin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Ronan Alexandre</span> <span class="person sur-name">Cherrueau</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Dimitri</span> <span class="person sur-name">Pertin</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Pierre</span> <span class="person sur-name">Riteau</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Simon</span> <span class="person sur-name">Delamare</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Lucas</span> <span class="person sur-name">Nussbaum</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Christian</span> <span class="person sur-name">Perez</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
-            </span>
-          
-        </div>
-      </li>
-    
-    
-    <li class="list-group-item row">
-      <label class="col-sm-4">Status</label>
-      <div class="col-sm-8">
-        <span class="project-status project-status-suspended">suspended</span>
-      </div>
-    </li>
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
     
   </ul>
-</section>
-        <section class="card" id="toc">
-          <div class="card-header">
-            Table of Contents
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">07 June 2017</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
           </div>
-          <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20162017">Results for 2016/2017</a></li>
-<li class="toc-entry toc-h3"><a href="#image-portability-between-chamelon-and-grid5000">Image portability between Chamelon and Grid’5000</a></li>
-<li class="toc-entry toc-h3"><a href="#a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000">A first step toward the deployment of OpenStack on Chameleon and Grid’5000</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20172018">Results for 2017/2018</a></li>
-<li class="toc-entry toc-h3"><a href="#toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack">Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20182019">Results for 2018/2019</a></li>
-<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
-<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>
-        </section>
-      </aside>
-      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+          <div class="post-title">
+            <h1>Advancing Chameleon and Grid'5000 testbeds</h1>
+          </div>
+          
+
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         
-        <h2 id="research-topic-and-goals">
-<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
 <p>The aim of this project is to improve Chameleon (ANL) and
 Grid’5000 (Inria) testbeds, in particular with respect to interoperability and interconnection.</p>
 
@@ -238,25 +322,20 @@ We will also test an advanced tool for conducting scientific evaluations of Open
 <p>Overall the project is a step forward better usability for users of both
 testbeds, but also for their managers to share experience and best practices.</p>
 
-<h2 id="results-for-20162017">
-<a id="results-for-20162017" class="anchor" href="#results-for-20162017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2016/2017</h2>
+<h2 id="results-for-20162017">Results for 2016/2017</h2>
 
-<h3 id="image-portability-between-chamelon-and-grid5000">
-<a id="image-portability-between-chamelon-and-grid5000" class="anchor" href="#image-portability-between-chamelon-and-grid5000" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image portability between Chamelon and Grid’5000</h3>
+<h3 id="image-portability-between-chamelon-and-grid5000">Image portability between Chamelon and Grid’5000</h3>
 
 <p>To enable images portability between Chameleon and Grid’5000 platforms (first project’s goal), two tools have been produced:</p>
 
 <ul>
-  <li>
-<a href="https://github.com/dloup/g5k2CC">g5k2CC</a>: Convert Grid’5000 image to Chameleon</li>
-  <li>
-<a href="https://github.com/dloup/CC2G5K">CC2G5K</a>: Convert Chameleon image to Grid’5000</li>
+  <li><a href="https://github.com/dloup/g5k2CC">g5k2CC</a>: Convert Grid’5000 image to Chameleon</li>
+  <li><a href="https://github.com/dloup/CC2G5K">CC2G5K</a>: Convert Chameleon image to Grid’5000</li>
 </ul>
 
 <p>When a user converts a Grid’5000 image to a Chameleon image, the image format is first converted from Grid’5000 to Chameleon ones. Then the configuration needed to run on Chameleon infrastructure is added (e.g., cloud-init is installed with Chameleon configuration file). This adds virtual machine contextualization ability from Chameleon backend.</p>
 
-<h3 id="a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000">
-<a id="a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000" class="anchor" href="#a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000" aria-hidden="true"><span class="octicon octicon-link"></span></a>A first step toward the deployment of OpenStack on Chameleon and Grid’5000</h3>
+<h3 id="a-first-step-toward-the-deployment-of-openstack-on-chameleon-and-grid5000">A first step toward the deployment of OpenStack on Chameleon and Grid’5000</h3>
 
 <p>The second goal of the project is to study Openstack deployment tool that would work over both Chameleon and Grid’5000.
 Chameleon’s current solution is based on DevStack. Grid’5000 has two different solutions: <a href="https://enos.readthedocs.io/en/latest/">Enos</a> which is based on OpenStack’s <a href="https://wiki.openstack.org/wiki/Kolla">Kolla</a> containers and <a href="https://github.com/grid5000/xp5k-openstack">xp5k-openstack</a> which uses Puppet recipes also provided by OpenStack. As Chameleon solution is longer to deploy, our goal was to try porting a tool used in Grid’5000. Enos team already started porting Enos on Chameleon, so we focused on the other solution, so they can be compared later.</p>
@@ -265,44 +344,38 @@ Chameleon’s current solution is based on DevStack. Grid’5000 has two differe
 
 <p>The repository that contains the Heat templates to use on Chameleon to run Openstack Liberty using the Puppet approach is available at <a href="https://github.com/dloup/CC_Openstack">https://github.com/dloup/CC_Openstack</a></p>
 
-<h2 id="results-for-20172018">
-<a id="results-for-20172018" class="anchor" href="#results-for-20172018" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2017/2018</h2>
+<h2 id="results-for-20172018">Results for 2017/2018</h2>
 
-<h3 id="toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack">
-<a id="toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack" class="anchor" href="#toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack</h3>
+<h3 id="toward-a-holistic-framework-for-conducting-scientific-evaluations-of-openstack">Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack</h3>
 
 <p>OpenStack has become the de-facto solution to operate compute, network and storage resources in public and private clouds. However, developers and scientists are facing challenges when it comes to deploy and benchmark such a complex software stack.
 To address this problem, we developed Enos, an integrated framework that relies on container technologies for deploying and evaluating OpenStack on any testbed. Enos allows researchers to easily express different configurations, enabling fine-grained investigations of OpenStack services. Enos collects performance metrics at runtime and stores them for post-mortem analysis and sharing.
-The relevance of the <a href="http://enos.readthedocs.io/en/stable/">Enos</a> approach to reproducible research was illustrated by evaluating different OpenStack scenarios on the Grid’5000 testbed in 2016 as published at CCGRID <a href="#CCGRID17Enos">(Cherrueau et al. 2017)</a> and also presented at the <a href="https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale">OpenStack summit in Barcelona</a>.</p>
+The relevance of the <a href="http://enos.readthedocs.io/en/stable/">Enos</a> approach to reproducible research was illustrated by evaluating different OpenStack scenarios on the Grid’5000 testbed in 2016 as published at CCGRID <a class="citation" href="#CCGRID17Enos">(Cherrueau et al. 2017)</a> and also presented at the <a href="https://www.openstack.org/summit/barcelona-2016/summit-schedule/events/15977/chasing-1000-nodes-scale">OpenStack summit in Barcelona</a>.</p>
 
 <p>Building on this success, in 2017, we extended the Enos framework to achieve performance experiments while doing traffic shaping.
-Our goal was to offer the opportunity to researchers to evaluate the impact of WAN communications on OpenStack.<br>
+Our goal was to offer the opportunity to researchers to evaluate the impact of WAN communications on OpenStack.
 Latency is  a critical requirement for Internet Of Things and NFV/SDN applications that favors a more distributed Cloud Computing model deployed at the Edge.
 This model does not cope with the traditional vision that has been driving the development of OpenStack. Although some efforts such as multiple regions, federations, … may allow operators to administrate these new infrastructures, there are no studies that evaluate how OpenStack will behave in such a massively distributed context.
 To illustrate the interest of such extensions, we conducted additional experiments over the Grid’5000 and the Chameleon testbed as shown at the <a href="https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide">Boston OpenStack summit</a>. The port of Enos on top of Chameleon consisted in <a href="http://enos.readthedocs.io/en/stable/provider/index.html">developing a new provider</a> as presented in the Sydney OpenStack summit.</p>
 
-<h2 id="results-for-20182019">
-<a id="results-for-20182019" class="anchor" href="#results-for-20182019" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2018/2019</h2>
+<h2 id="results-for-20182019">Results for 2018/2019</h2>
 
 <p>Lucas Nussbaum (Université de Lorraine, France) and Kate Keahey (University of Chicago, USA) partnered on the organization of two sessions at the third Global Experimentation for Future Internet <a href="http://indico.rnp.br/conferenceDisplay.py?confId=260">(GEFI 2018)</a> workshop that was held October 25-26, 2018 in Tokyo, Japan and hosted by the University of Tokyo. The objective of this workshops was to create a forum for the exchange of information and best practices among an international community of developers and operators of testbeds and related research infrastructure, as well as the researchers who make use of these facilities. Historically, these interactions were highly effective in building successful collaborations and coordinating activities among participating research infrastructures and this was thus a good forum to continue, and in some cases, broaden our collaboration.</p>
 
 <p>The sessions focused on current topics in both testbeds: (1) modern networking technologies, a central concern when performing experiments in the distributed systems context, and (2) reproducibility in experimentation (together with Violet Syrotiuk).  The sessions led to the discussion of current topics. Specifically, for networking the discussion focused on programmability and isolation, emulation technologies, as well as emergent use cases such interactions with IoT, and support for Big Data/AI scenarios. For reproducibility, the discussions focused on tools and services, data management practices, and lessons learned.</p>
 
-<p>The workshop produced a report co-authored by the participants <a href="#BermanEtAl">(“Report of the Third Global Experimentation for Future Internet (GEFI 2018) Workshop” 2018)</a> that is currently in the process of preparation for a publication on current topics in testbed design.</p>
+<p>The workshop produced a report co-authored by the participants <a class="citation" href="#BermanEtAl">(“Report of the Third Global Experimentation for Future Internet (GEFI 2018) Workshop” 2018)</a> that is currently in the process of preparation for a publication on current topics in testbed design.</p>
 
-<h2 id="visits-and-meetings">
-<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<h2 id="visits-and-meetings">Visits and meetings</h2>
 <p>David Loup was at Argonne National Laboratory from 3rd March to 20th April 2017 to work on this project.</p>
 
-<h2 id="impact-and-publications">
-<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<h2 id="impact-and-publications">Impact and publications</h2>
 <p>This project has proposed tools for operating system image portability between Chameleon and Grid’5000 and a new (faster) method to deploy an Openstack infrastructure on Chameleon, in particular with the <a href="https://github.com/BeyondTheClouds/enos">Enos</a> framework.
 This makes it easier for users to deploy the same environment on Grid’5000 and Chameleon testbeds, easing experiments involving both platforms.
 The joint presentation at Boston OpenStack summit is avaible <a href="https://www.openstack.org/summit/boston-2017/summit-schedule/events/17952/toward-fog-edge-and-nfv-deployments-evaluating-openstack-wanwide">online</a>.</p>
 
-<ol class="bibliography"><li>
-<div class="bibtex-entry-container">
-  <div>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -313,13 +386,13 @@ The joint presentation at Boston OpenStack summit is avaible <a href="https://ww
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBermanEtAlBibtex" aria-expanded="false" aria-controls="collapseBermanEtAlBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseBermanEtAlAbstract" aria-expanded="false" aria-controls="collapseBermanEtAlAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBermanEtAlAbstract" aria-expanded="false" aria-controls="collapseBermanEtAlAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="BermanEtAl">“Report of the Third Global Experimentation for Future Internet (GEFI 2018) Workshop.” 2018. Tokyo, Japan. <a href="http://indico.rnp.br/conferenceDisplay.py?confId=260" target="_blank">http://indico.rnp.br/conferenceDisplay.py?confId=260</a>.</span>
     </div>
   </div>
@@ -342,19 +415,15 @@ The joint presentation at Boston OpenStack summit is avaible <a href="https://ww
 </div>
 </li></ol>
 
-<h2 id="future-plans">
-<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+<h2 id="future-plans">Future plans</h2>
 
 <p>A remaining challenge is the data-plane federation of both testbeds, to enable experiments spanning both testbeds in a
 controlled networking environment. We will explore how to achieve that by interconnecting both testbeds to Internet Software Defined eXchange
 points (SDX), which would allow us to provide on-demand Level-2 link stitching, to provide per-experiment overlays.</p>
 
-<h2 id="references">
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -365,13 +434,13 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseg5k2CCBibtex" aria-expanded="false" aria-controls="collapseg5k2CCBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseg5k2CCAbstract" aria-expanded="false" aria-controls="collapseg5k2CCAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseg5k2CCAbstract" aria-expanded="false" aria-controls="collapseg5k2CCAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="g5k2CC">Loup, David. 2017. “Tool to Convert Grid’5000 Images to Chameleon.” <a href="https://github.com/dloup/g5k2CC" target="_blank">https://github.com/dloup/g5k2CC</a>.</span>
     </div>
   </div>
@@ -391,9 +460,8 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -404,13 +472,13 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCC2g5kBibtex" aria-expanded="false" aria-controls="collapseCC2g5kBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCC2g5kAbstract" aria-expanded="false" aria-controls="collapseCC2g5kAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCC2g5kAbstract" aria-expanded="false" aria-controls="collapseCC2g5kAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="CC2g5k">———. 2017. “Tool to Convert Chameleon Images to Grid’5000.” <a href="https://github.com/dloup/CC2G5K" target="_blank">https://github.com/dloup/CC2G5K</a>.</span>
     </div>
   </div>
@@ -430,9 +498,8 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -443,13 +510,13 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseExplainationsBibtex" aria-expanded="false" aria-controls="collapseExplainationsBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseExplainationsAbstract" aria-expanded="false" aria-controls="collapseExplainationsAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseExplainationsAbstract" aria-expanded="false" aria-controls="collapseExplainationsAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="Explainations">———. 2017. “How the Differents Studied Methods Works.” <a href="https://docs.google.com/document/d/1PwgjST8I7xgeer75_0Xk7AQwlmpNGKvoBhEYYn4IhFI/edit?usp=sharing" target="_blank">https://docs.google.com/document/d/1PwgjST8I7xgeer75_0Xk7AQwlmpNGKvoBhEYYn4IhFI/edit?usp=sharing</a>.</span>
     </div>
   </div>
@@ -469,9 +536,8 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -482,13 +548,13 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseComparisonsBibtex" aria-expanded="false" aria-controls="collapseComparisonsBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseComparisonsAbstract" aria-expanded="false" aria-controls="collapseComparisonsAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseComparisonsAbstract" aria-expanded="false" aria-controls="collapseComparisonsAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="Comparisons">———. 2017. “Performances Comparison of the Differents Studied Methods.” <a href="https://docs.google.com/spreadsheets/d/1emHefWvhkO7BJwQkvXLgaIKJ64NxCLnbtajoOqrpXBk/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1emHefWvhkO7BJwQkvXLgaIKJ64NxCLnbtajoOqrpXBk/edit?usp=sharing</a>.</span>
     </div>
   </div>
@@ -508,9 +574,8 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -521,13 +586,13 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTemplatesBibtex" aria-expanded="false" aria-controls="collapseTemplatesBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseTemplatesAbstract" aria-expanded="false" aria-controls="collapseTemplatesAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseTemplatesAbstract" aria-expanded="false" aria-controls="collapseTemplatesAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
       <span id="Templates">———. 2017. “Heat Templates for Openstack Liberty Deployment on Chameleon.” <a href="https://github.com/dloup/CC_Openstack" target="_blank">https://github.com/dloup/CC_Openstack</a>.</span>
     </div>
   </div>
@@ -547,9 +612,8 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -560,14 +624,14 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCCGRID17EnosBibtex" aria-expanded="false" aria-controls="collapseCCGRID17EnosBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseCCGRID17EnosAbstract" aria-expanded="false" aria-controls="collapseCCGRID17EnosAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCCGRID17EnosAbstract" aria-expanded="false" aria-controls="collapseCCGRID17EnosAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="CCGRID17Enos">Cherrueau, R. A., D. Pertin, A. Simonet, A. Lebre, and M. Simonin. 2017. “Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack.” In <i>2017 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID)</i>, 544–48. doi:10.1109/CCGRID.2017.87.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="CCGRID17Enos">Cherrueau, R. A., D. Pertin, A. Simonet, A. Lebre, and M. Simonin. 2017. “Toward a Holistic Framework for Conducting Scientific Evaluations of OpenStack.” In <i>2017 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID)</i>, 544–48. https://doi.org/10.1109/CCGRID.2017.87.</span>
     </div>
   </div>
   <div class="collapse" id="collapseCCGRID17EnosBibtex">
@@ -592,63 +656,107 @@ points (SDX), which would allow us to provide on-demand Level-2 link stitching, 
   </div>
   
 </div>
-</li>
-</ol>
-
-      </div>
-    </div>
-  </article>
-  
+</li></ol>
 </div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/interop_chameleon_g5k/';
+      this.page.identifier = '/projects/interop_chameleon_g5k/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 
-      </div>
-    </main>
-    <footer id="site-footer">
-  <div class="navbar navbar-full navbar-light">
-    <div class="container">
-      <div class="row small">
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item">
-              <a class="nav-link" href="/about/imprint/">
-                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 hidden-xs-down">
-          <div class="nav navbar-nav text-xs-center">
-            <span class="credit">
-              Powered by
-              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
-              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
-            </span>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
           </div>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
-                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
-            </li>
-          </ul>
-        </div>
+        
+        
       </div>
+
     </div>
   </div>
-</footer>
+</div>
 
-    <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+</div>
 
-<!--  -->
 
-  </body>
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
 </html>

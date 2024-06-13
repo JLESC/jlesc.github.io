@@ -1,218 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JLESC &mdash; Deep Neural Networks for CFD Simulations</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Joint Laboratory for Extreme Scale Computing includes researchers from the French National Institute for Research in Computer Science and Control (INRIA), the University of Illinois at Urbana-Champaign’s Center for Extreme-Scale Computation, the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Julich Supercomputing Center and Riken/AICS. The Joint Lab is part of Parallel@Illinois.
-">
-  <link rel="canonical" href="https://jlesc.github.io/projects/dnn_cfd/">
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link type="application/atom+xml" rel="alternate" href="https://jlesc.github.io/feed.xml" title="" />
-  <link type="text/css" rel="stylesheet" href="/assets/main-1121dc6ec5d1807973ca79a9ef9ac00b1a6150a25e54d3549d42c6d793195499.css">    
-</head>
+    <title>Deep Neural Networks for CFD Simulations - Jekyll Advance</title>
 
-  <body>
-    <header>
-  <noscript>
-    <div class="container-fluid">
-      <div class="card card-block card-danger row">
-        <p class="card-text text-sm-center">
-          You have Javascript disabled. This website might not work as intended and will look not as good as it can.
-          <br />
-          Please activate Javascript for this website. We are not loading content from other domains.
-        </p>
-      </div>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/dnn_cfd/"/>
+
+  <meta property="og:title" content="Deep Neural Networks for CFD Simulations"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
     </div>
-  </noscript>
-  <nav>
-    <div class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
-      <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
-          <i class="fa fa-bars fa-fw"></i>
-        </button>
-
-        <a class="navbar-brand" href="/">JLESC</a>
-
-        <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-  <div class="dropdown-menu">
-    <a href="/about/" class="dropdown-item">JLESC</a>
-    <a href="/about/partners/" class="dropdown-item">Partners</a>
-    <a href="/about/people/" class="dropdown-item">People</a>
-    <a href="/about/grants/" class="dropdown-item">Grants</a>
   </div>
-</li>
 
-            <li class="nav-item">
-              <a href="/news/" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/events/">Events</a>
-            </li>
-            <li class="nav-item dropdown active">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
-  <div class="dropdown-menu">
-    <a href="/research/collaboration/" class="dropdown-item">On Collaboration</a>
-    <a href="/projects/" class="dropdown-item active">Projects</a>
-    <!-- <a href="/software/" class="dropdown-item">Software</a> -->
-    <!-- <a href="/research/visits/" class="dropdown-item">Visits</a> -->
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
   </div>
-</li>
+</div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/references/">References</a>
-            </li>
-          </ul>
 
-          <ul class="nav navbar-nav pull-right">
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://github.com/JLESC/jlesc.github.io/wiki"
-                 target="_blank"
-                 title="How to contribute"
-                 data-toggle="tooltip"
-                 data-placement="left">
-                <i class="fa fa-fw fa-book"></i>
-                How To
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 
-    <main>
-      <div class="container">
-        <div class="post post-project">
-  <article class="post-content">
-    <div class="row">
-      <header class="col-sm-12 post-header">
-        <h1 class="pull-left">Deep Neural Networks for CFD Simulations</h1>
-      </header>
-    </div>
-    <div class="row">
-      <aside class="col-lg-5 col-sm-12 pull-lg-right collapse in" id="meta-aside">
-        <section class="group-meta card">
-  <div class="card-header">
-    Project Profile
-  </div>
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
   
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item row">
-      <label class="col-sm-4">Topics</label>
-      <div class="col-sm-8">
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
         
-          <span class="clearfix">
-            <span class="topic topic-title">Apps & Mini-Apps</span>
-          </span>
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
         
-          <span class="clearfix">
-            <span class="topic topic-title">Numerical Methods</span>
-          </span>
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
+    
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
         
-      </div>
-    </li>
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
     
-      <li class="list-group-item row">
-        <label class="col-sm-4">Keywords</label>
-        <div class="col-sm-8">
-          
-            <span class="clearfix">CFD</span>
-          
-            <span class="clearfix">deep neural networks</span>
-          
-            <span class="clearfix">physics-informed neural networks</span>
-          
-            <span class="clearfix">reduced order models</span>
-          
-            <span class="clearfix">graph neural networks</span>
-          
-        </div>
-      </li>
-    
-    
-    
-      <li class="list-group-item row">
-        <label class="col-sm-4">Members</label>
-        <div class="col-sm-8">
-          
-            <span class="clearfix">
-              <span class="person given-name">Andreas</span> <span class="person sur-name">Lintermann</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
-              <span class="pull-right">
-                <a title="Project Head" data-toggle="tooltip"><i class="fa fa-graduation-cap fa-fw"></i></a>
-              </span>
-            </span>
-          
-          
-            <span class="clearfix">
-              <span class="person given-name">Makoto</span> <span class="person sur-name">Tsubokura</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Onishi</span> <span class="person sur-name">Junya</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Ando</span> <span class="person sur-name">Kazuto</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Mario</span> <span class="person sur-name">Rüttgers</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Rakesh</span> <span class="person sur-name">Sharma</span> (<abbr title="Jülich Supercomputing Centre" class="initialism" data-toggle="tooltip">JSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Hadrien</span> <span class="person sur-name">Calmet</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>)
-            </span>
-          
-            <span class="clearfix">
-              <span class="person given-name">Rishabh</span> <span class="person sur-name">Puri</span> (<abbr title="External partner" class="initialism" data-toggle="tooltip">EXT</abbr>)
-            </span>
-          
-        </div>
-      </li>
-    
-    
-    <li class="list-group-item row">
-      <label class="col-sm-4">Status</label>
-      <div class="col-sm-8">
-        <span class="project-status project-status-running">running</span>
-      </div>
-    </li>
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
     
   </ul>
-</section>
-        <section class="card" id="toc">
-          <div class="card-header">
-            Table of Contents
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">16 December 2019</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
           </div>
-          <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#research-topic-and-goals">Research topic and goals</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20192020">Results for 2019/2020</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20202021">Results for 2020/2021</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20212022">Results for 2021/2022</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20222023">Results for 2022/2023</a></li>
-<li class="toc-entry toc-h2"><a href="#results-for-20232024">Results for 2023/2024</a></li>
-<li class="toc-entry toc-h2"><a href="#visits-and-meetings">Visits and meetings</a></li>
-<li class="toc-entry toc-h2"><a href="#impact-and-publications">Impact and publications</a></li>
-<li class="toc-entry toc-h2"><a href="#future-plans">Future plans</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>
-        </section>
-      </aside>
-      <div class="col-lg-7 col-sm-12 pull-lg-left content" id="main-content">
+          <div class="post-title">
+            <h1>Deep Neural Networks for CFD Simulations</h1>
+          </div>
+          
+
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         
-        <h2 id="research-topic-and-goals">
-<a id="research-topic-and-goals" class="anchor" href="#research-topic-and-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research topic and goals</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
 
 <p>Simulation-based optimization in engineering requires high computational power and may benefit from system heterogeneity. Highly scalable CFD solvers have been developed at R-CCS, JSC, and BSC to conduct large-scale simulations. R-CCS focuses on full-scale simulations of vehicles aerodynamics. JSC and BSC investigate respiratory flows to improve medical treatments. Due to massive amounts of data produced, the analysis of the results is becoming a time-consuming process. Data-driven approaches have the potential to speed up analyses or to even replace certain physics in simulations. Deep learning methods have proven to be a fast alternative to extract multi-scale features from high-dimensional data sets. Deep neural networks (DNN) are able to predict the steady-state flow and aerodynamic coefficients around bluff bodies and airfoils, and unsteady laminar vortex shedding over circular bodies. Autoencoders (AE) or generative models, like variational AEs or generative adversarial networks (GANs), have shown great potential in predicting 2D and 3D flow fields.</p>
 
@@ -232,44 +319,38 @@ strongly promoted in the course of this project. To foster the
 cooperation, mutual short-time stays of the involved scientists are
 planned.</p>
 
-<h2 id="results-for-20192020">
-<a id="results-for-20192020" class="anchor" href="#results-for-20192020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2019/2020</h2>
+<h2 id="results-for-20192020">Results for 2019/2020</h2>
 <p>None.</p>
 
-<h2 id="results-for-20202021">
-<a id="results-for-20202021" class="anchor" href="#results-for-20202021" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2020/2021</h2>
+<h2 id="results-for-20202021">Results for 2020/2021</h2>
 <p>Due to the CODID-19 pandemic, the activities in the project had to be reduced. Unfortunately, a planned research stay of JSC’s Ph.D. student Mario Rüttgers at R-CCS could not take place. An exchange of research ideas took, however, place online via video conferences (see Visits and meetings below).</p>
 
-<p>JSC was able to continue its work on DNNs. The architecture for such a neural network was developed to predict the sound pressure level in a 2D square domain. It was trained by numerical results from up to 20,000 GPU-based lattice-Boltzmann simulations that include randomly distributed rectangular and circular objects, and monopole sources. Types of boundary conditions, the monopole locations, and cell distances for objects and monopoles serve as input to the network. Parameters were studied to tune the predictions and to increase their accuracy. An optimal choice of the parameters lead to network-predicted results that are in good agreement with the simulated findings. The results have been presented at the International Conference on High Performance Computing - ISC High Performance 2020. A peer-reviewed article has been published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS)<a href="#Ruttgers2020">(Rüttgers et al. 2020)</a>.</p>
+<p>JSC was able to continue its work on DNNs. The architecture for such a neural network was developed to predict the sound pressure level in a 2D square domain. It was trained by numerical results from up to 20,000 GPU-based lattice-Boltzmann simulations that include randomly distributed rectangular and circular objects, and monopole sources. Types of boundary conditions, the monopole locations, and cell distances for objects and monopoles serve as input to the network. Parameters were studied to tune the predictions and to increase their accuracy. An optimal choice of the parameters lead to network-predicted results that are in good agreement with the simulated findings. The results have been presented at the International Conference on High Performance Computing - ISC High Performance 2020. A peer-reviewed article has been published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS)<a class="citation" href="#Ruttgers2020">(Rüttgers et al. 2020)</a>.</p>
 
 <p>R-CCS contributed with their talk “Distributed Learning for Three-dimensional Flow Field Mode Decomposition on Fugaku” to the 34th Computational Fluid Dynamics Symposium, which was held online on Dec. 21-23, 2020 (K. Ando, K. Onishi, R. Bale, M. Tsubokura, A. Kuroda, and K. Minami). In their research, R-CCS developed and investigated non-linear CNN-based mode decompositioning methods for three-dimensional flow fields around circular cylinder configurations. For the distributed learning, up to 25,250 nodes (1,212,000 cores) on the supercomputer Fugaku were used. Scalable model parallelization techniques for auto-encoder neural networks with a sustained performance of 7.8PFLOPs on 25,250 nodes were implemented.</p>
 
-<h2 id="results-for-20212022">
-<a id="results-for-20212022" class="anchor" href="#results-for-20212022" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2021/2022</h2>
+<h2 id="results-for-20212022">Results for 2021/2022</h2>
 <p>The still ongoing pandemic lead again to reduced project activities. Nevertheless, both groups from JSC and R-CCS were able to continue their research.</p>
 
-<p>JSC mainly worked on developing and integrating novel AI technologies into their CFD workflows. Reinforcement learning (RL) was implemented for shape optimization problems. For a generic case, i.e., a 2D channel with a constriction, RL was used to satisfy an optimum criterion that is a function of the pressure loss in the channel and the increase of the temperature given by the heat transfer at the channel wall. The work was presented at the International Conference on High Performance Computing - ISC High Performance 2021. A peer-reviewed article was published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS)<a href="#Ruttgers2021ISC">(Rüttgers et al. 2021)</a>. An application of this technique to the shape optimization of a human nasal cavity is currently ongoing. At the JLESC meeting in 02/2021, the results of automating CFD workflows with a focus on the application to nasal cavity simulation workflows was presented. These results were later integrated into a journal article <a href="#Ruttgers2022APIN">(Rüttgers et al. 2022)</a>.</p>
+<p>JSC mainly worked on developing and integrating novel AI technologies into their CFD workflows. Reinforcement learning (RL) was implemented for shape optimization problems. For a generic case, i.e., a 2D channel with a constriction, RL was used to satisfy an optimum criterion that is a function of the pressure loss in the channel and the increase of the temperature given by the heat transfer at the channel wall. The work was presented at the International Conference on High Performance Computing - ISC High Performance 2021. A peer-reviewed article was published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS)<a class="citation" href="#Ruttgers2021ISC">(Rüttgers et al. 2021)</a>. An application of this technique to the shape optimization of a human nasal cavity is currently ongoing. At the JLESC meeting in 02/2021, the results of automating CFD workflows with a focus on the application to nasal cavity simulation workflows was presented. These results were later integrated into a journal article <a class="citation" href="#Ruttgers2022APIN">(Rüttgers et al. 2022)</a>.</p>
 
-<p>R-CCS continued their work on developing DNNs for mode decompositioning of flow fields. They also participated in the International Conference on High Performance Computing - ISC High Performance 2021, with a talk “Nonlinear Mode Decomposition and Reduced-Order Modeling for Three-Dimensional Cylinder Flow by Distributed Learning on Fugaku”. They used CNNs to perform a parallel mode decompositioning of the flow field and employed long short-term memory networks (LSTMs) to predict the temporal development of the flow via the modes. The performance of this method was evaluated for different numbers of modes. A peer-reviewed article was published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS)<a href="#Ando2021ISC">(Ando et al. 2021)</a></p>
+<p>R-CCS continued their work on developing DNNs for mode decompositioning of flow fields. They also participated in the International Conference on High Performance Computing - ISC High Performance 2021, with a talk “Nonlinear Mode Decomposition and Reduced-Order Modeling for Three-Dimensional Cylinder Flow by Distributed Learning on Fugaku”. They used CNNs to perform a parallel mode decompositioning of the flow field and employed long short-term memory networks (LSTMs) to predict the temporal development of the flow via the modes. The performance of this method was evaluated for different numbers of modes. A peer-reviewed article was published in the corresponding Springer series as part of the Lecture Notes in Computer Science (LNCS)<a class="citation" href="#Ando2021ISC">(Ando et al. 2021)</a></p>
 
-<h2 id="results-for-20222023">
-<a id="results-for-20222023" class="anchor" href="#results-for-20222023" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2022/2023</h2>
+<h2 id="results-for-20222023">Results for 2022/2023</h2>
 <p>Rakesh Sarma and Rishabh Puri joined the JLESC activities from the JSC side, and Onishi Junya from the R-CCS side. JSC and R-CCS jointly developed PINNs for flow predictions in classical problems of fluid dynamics, i.e., Poisueille flow, potential flow, Blasius boundary layer flow, and the Taylor-Green vortex. Rhishabh Puri presented the results at the Platform for Advanced Scientific Computing 2023 (PASC23) conference in Davos, Switzerland.</p>
 
-<p>JSC and R-CCS jointly developed a GNN for the prediction of flow around air foils. The GNN uses computational grids of the simulation framework “multiphysics-Aerodynamisches Institut Aachen” (m-AIA), an extended version of the formerly known “Zonal Flow Solver”<a href="#Lintermann2020">(Lintermann, Meinke, and Schröder 2020)</a>, and automatically generates an adjacency matrix that contains information about nodes and neighbouring nodes. First steps have been initiated to develop an open access library for GNN-based flow predictions. The PINN and GNN activities were intensified by a research visit of Onishi Junya at JSC in August 2023.</p>
+<p>JSC and R-CCS jointly developed a GNN for the prediction of flow around air foils. The GNN uses computational grids of the simulation framework “multiphysics-Aerodynamisches Institut Aachen” (m-AIA), an extended version of the formerly known “Zonal Flow Solver”<a class="citation" href="#Lintermann2020">(Lintermann, Meinke, and Schröder 2020)</a>, and automatically generates an adjacency matrix that contains information about nodes and neighbouring nodes. First steps have been initiated to develop an open access library for GNN-based flow predictions. The PINN and GNN activities were intensified by a research visit of Onishi Junya at JSC in August 2023.</p>
 
 <p>Regarding the AI-based reduced-order model, in this fiscal year, the functionality of the model has been enhanced. That is, a variational autoencoder (VAE) has been integrated for outputting latent variables in the model. Due to this modification, the reduction performance was increased for turbulent flow simulation data. These results have been presented at the ParCFD2022 and WCCM2022 conferences.</p>
 
-<h2 id="results-for-20232024">
-<a id="results-for-20232024" class="anchor" href="#results-for-20232024" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results for 2023/2024</h2>
+<h2 id="results-for-20232024">Results for 2023/2024</h2>
 <p>Rishabh Puri starts his PhD programme at KIT, but continues the JLESC activities as an associated researcher. Hadrien Calmet joined the JLESC activities from the BSC side. After demonstrating the robustness of PINNs for flow predictions in classical flow problems, the activities regarding PINNs are extended to vehicle aerodynamics. That is, flow fields around a road vehicle are predicted based on sparse spatial data at the vehicles’s surface, to derive force coefficients such as drag or lift. In a first step, the sparse surface data are extracted from CFD simulations conducted by the R-CCS side, as discussed during a research visit of Mario Rüttgers at R-CCS in October 2023. After this proof-of-concept, the sparse surface data could stem from experimental measurements at a driving vehicle.</p>
 
-<p>The activities regarding GNNs are extended to respiratory flows. Hadrien Calmet aims to investigate GNNs by initiating the first phase, which involves employing the existing 2D algorithm of Graph Convolutional Neural Networks (GCNN) <a href="#Ogoke2021">(Ogoke et al. 2021)</a> and evaluating its efficacy with a 3D dataset. The goal is to predict respiratory system flow features such as air resistance, wall shear stress, and energy flux within the human nasal cavity during inspiration. The initial step involves generating a virtual population through random scaling applied simultaneously to length, width, and height. Three distinct geometries are chosen, including an average one based on 35 healthy patients, a Caucasian healthy patient, and an Asian healthy patient. Once the neural network demonstrates satisfactory accuracy, a second phase is planned to assess the algorithm’s performance. This evaluation will utilize Paraver, a performance tool developed at BSC. Additionally, there is a consideration for the implementation of multi-GPU using PyTorch, allowing for a performance comparison. The final step involves testing the AI4HPC open-source library to train the dataset with the GNN algorithm and engaging in a discussion about the obtained results.</p>
+<p>The activities regarding GNNs are extended to respiratory flows. Hadrien Calmet aims to investigate GNNs by initiating the first phase, which involves employing the existing 2D algorithm of Graph Convolutional Neural Networks (GCNN) <a class="citation" href="#Ogoke2021">(Ogoke et al. 2021)</a> and evaluating its efficacy with a 3D dataset. The goal is to predict respiratory system flow features such as air resistance, wall shear stress, and energy flux within the human nasal cavity during inspiration. The initial step involves generating a virtual population through random scaling applied simultaneously to length, width, and height. Three distinct geometries are chosen, including an average one based on 35 healthy patients, a Caucasian healthy patient, and an Asian healthy patient. Once the neural network demonstrates satisfactory accuracy, a second phase is planned to assess the algorithm’s performance. This evaluation will utilize Paraver, a performance tool developed at BSC. Additionally, there is a consideration for the implementation of multi-GPU using PyTorch, allowing for a performance comparison. The final step involves testing the AI4HPC open-source library to train the dataset with the GNN algorithm and engaging in a discussion about the obtained results.</p>
 
 <p>Regarding the AI-based reduced-order model, the scope of application is extended. First, the method is applied to the turbulent flow around a vehicle calculated with 260 million cells. Distributed training was conducted for over 14 hours using 55,000 Fugaku computing nodes. Since the model is still in the early stages of learning, small-period eddies could not yet be reproduced, but large-scale structure could be reconstructed. Second, the robustness of the model is addressed for a two-dimensional flow around two square cylinders, which have a varying distances. It is demonstrated that flow configurations that did not belong to the training data are successfully reproduced using 24 modes. It is planned to submit these results to the JLESC special issue of the journal “Future Generation Computer Systems”.</p>
 
-<h2 id="visits-and-meetings">
-<a id="visits-and-meetings" class="anchor" href="#visits-and-meetings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visits and meetings</h2>
+<h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <ul>
   <li>throughout 2020: discussions of hosting a JSC researcher at R-CCS (canceled due to the COVID-19 pandemic)</li>
@@ -284,13 +365,10 @@ planned.</p>
   <li>24.10.2023 - 27.10.2023: Research exchange: Mario Rüttgers visits researchers from R-CCS at R-CCS.</li>
 </ul>
 
-<h2 id="impact-and-publications">
-<a id="impact-and-publications" class="anchor" href="#impact-and-publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact and publications</h2>
+<h2 id="impact-and-publications">Impact and publications</h2>
 
-<ol class="bibliography">
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -301,14 +379,14 @@ planned.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRuttgers2022APINBibtex" aria-expanded="false" aria-controls="collapseRuttgers2022APINBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseRuttgers2022APINAbstract" aria-expanded="false" aria-controls="collapseRuttgers2022APINAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseRuttgers2022APINAbstract" aria-expanded="false" aria-controls="collapseRuttgers2022APINAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="Ruttgers2022APIN">Rüttgers, Mario, Moritz Waldmann, Wolfgang Schröder, and Andreas Lintermann. 2022. “A Machine-Learning-Based Method for Automatizing Lattice-Boltzmann Simulations of Respiratory Flows.” <i>Applied Intelligence</i>, no. first online (January). doi:10.1007/s10489-021-02808-2.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Ruttgers2022APIN">Rüttgers, Mario, Moritz Waldmann, Wolfgang Schröder, and Andreas Lintermann. 2022. “A Machine-Learning-Based Method for Automatizing Lattice-Boltzmann Simulations of Respiratory Flows.” <i>Applied Intelligence</i>, no. first online (January). https://doi.org/10.1007/s10489-021-02808-2.</span>
     </div>
   </div>
   <div class="collapse" id="collapseRuttgers2022APINBibtex">
@@ -332,9 +410,8 @@ planned.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -345,14 +422,14 @@ planned.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseOgoke2021Bibtex" aria-expanded="false" aria-controls="collapseOgoke2021Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseOgoke2021Abstract" aria-expanded="false" aria-controls="collapseOgoke2021Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseOgoke2021Abstract" aria-expanded="false" aria-controls="collapseOgoke2021Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="Ogoke2021">Ogoke, Francis, Kazem Meidani, Amirreza Hashemi, and Amir Barati Farimani. 2021. “Graph Convolutional Networks Applied to Unstructured Flow Field Data.” <i>Machine Learning: Science and Technology</i> 2 (September). doi:10.1088/2632-2153/ac1fc9.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Ogoke2021">Ogoke, Francis, Kazem Meidani, Amirreza Hashemi, and Amir Barati Farimani. 2021. “Graph Convolutional Networks Applied to Unstructured Flow Field Data.” <i>Machine Learning: Science and Technology</i> 2 (September). https://doi.org/10.1088/2632-2153/ac1fc9.</span>
     </div>
   </div>
   <div class="collapse" id="collapseOgoke2021Bibtex">
@@ -375,9 +452,8 @@ planned.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -388,14 +464,14 @@ planned.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRuttgers2021ISCBibtex" aria-expanded="false" aria-controls="collapseRuttgers2021ISCBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseRuttgers2021ISCAbstract" aria-expanded="false" aria-controls="collapseRuttgers2021ISCAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseRuttgers2021ISCAbstract" aria-expanded="false" aria-controls="collapseRuttgers2021ISCAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="Ruttgers2021ISC">Rüttgers, Mario, Moritz Waldmann, Wolfgang Schröder, and Andreas Lintermann. 2021. “Machine-Learning-Based Control of Perturbed and Heated Channel Flows.” In <i>High Performance Computing, Proceedings of the 36th International Conference, ISC High Performance 2021</i>, 7–22. Frankfurt/Main, Germany: Springer International Publishing. doi:10.1007/978-3-030-90539-2_1.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Ruttgers2021ISC">Rüttgers, Mario, Moritz Waldmann, Wolfgang Schröder, and Andreas Lintermann. 2021. “Machine-Learning-Based Control of Perturbed and Heated Channel Flows.” In <i>High Performance Computing, Proceedings of the 36th International Conference, ISC High Performance 2021</i>, 7–22. Frankfurt/Main, Germany: Springer International Publishing. https://doi.org/10.1007/978-3-030-90539-2_1.</span>
     </div>
   </div>
   <div class="collapse" id="collapseRuttgers2021ISCBibtex">
@@ -419,9 +495,8 @@ planned.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -432,14 +507,14 @@ planned.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseAndo2021ISCBibtex" aria-expanded="false" aria-controls="collapseAndo2021ISCBibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseAndo2021ISCAbstract" aria-expanded="false" aria-controls="collapseAndo2021ISCAbstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseAndo2021ISCAbstract" aria-expanded="false" aria-controls="collapseAndo2021ISCAbstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="Ando2021ISC">Ando, Kazuto, Keiji Onishi, Rahul Bale, Makoto Tsubokura, Akiyoshi Kuroda, and Kazuo Minami. 2021. “Nonlinear Mode Decomposition and Reduced-Order Modeling for Three-Dimensional Cylinder Flow by Distributed Learning on Fugaku.” In <i>High Performance Computing, Proceedings of the 36th International Conference, ISC High Performance 2021</i>, 122–37. Frankfurt/Main, Germany: Springer International Publishing. doi:10.1007/978-3-030-90539-2_8.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Ando2021ISC">Ando, Kazuto, Keiji Onishi, Rahul Bale, Makoto Tsubokura, Akiyoshi Kuroda, and Kazuo Minami. 2021. “Nonlinear Mode Decomposition and Reduced-Order Modeling for Three-Dimensional Cylinder Flow by Distributed Learning on Fugaku.” In <i>High Performance Computing, Proceedings of the 36th International Conference, ISC High Performance 2021</i>, 122–37. Frankfurt/Main, Germany: Springer International Publishing. https://doi.org/10.1007/978-3-030-90539-2_8.</span>
     </div>
   </div>
   <div class="collapse" id="collapseAndo2021ISCBibtex">
@@ -463,9 +538,8 @@ planned.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -476,14 +550,14 @@ planned.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2020Bibtex" aria-expanded="false" aria-controls="collapseLintermann2020Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseLintermann2020Abstract" aria-expanded="false" aria-controls="collapseLintermann2020Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLintermann2020Abstract" aria-expanded="false" aria-controls="collapseLintermann2020Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="Lintermann2020">Lintermann, Andreas, Matthias Meinke, and Wolfgang Schröder. 2020. “Zonal Flow Solver (ZFS): a Highly Efficient Multi- Physics Simulation Framework.” <i>International Journal of Computational Fluid Dynamics</i> 34 (March). doi:10.1080/10618562.2020.1742328.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Lintermann2020">Lintermann, Andreas, Matthias Meinke, and Wolfgang Schröder. 2020. “Zonal Flow Solver (ZFS): a Highly Efficient Multi- Physics Simulation Framework.” <i>International Journal of Computational Fluid Dynamics</i> 34 (March). https://doi.org/10.1080/10618562.2020.1742328.</span>
     </div>
   </div>
   <div class="collapse" id="collapseLintermann2020Bibtex">
@@ -506,9 +580,8 @@ planned.</p>
   
 </div>
 </li>
-<li>
-<div class="bibtex-entry-container">
-  <div>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
@@ -519,14 +592,14 @@ planned.</p>
         <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRuttgers2020Bibtex" aria-expanded="false" aria-controls="collapseRuttgers2020Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled data-toggle="collapse" data-target="#collapseRuttgers2020Abstract" aria-expanded="false" aria-controls="collapseRuttgers2020Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseRuttgers2020Abstract" aria-expanded="false" aria-controls="collapseRuttgers2020Abstract">
           Abstract
         </button>
       </div>
     </div>
 
-    <div class="bibtex-ref-entry">
-      <span id="Ruttgers2020">Rüttgers, Mario, Seong-Ryong Koh, Jenia Jitsev, Wolfgang Schröder, and Andreas Lintermann. 2020. “Prediction of Acoustic Fields Using a Lattice-Boltzmann Method and Deep Learning.” In <i>High Performance Computing, Proceedings of the 35th International Conference, ISC High Performance 2020</i>, 81–101. Frankfurt/Main, Germany: Springer International Publishing. doi:10.1007/978-3-030-59851-8_6.</span>
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Ruttgers2020">Rüttgers, Mario, Seong-Ryong Koh, Jenia Jitsev, Wolfgang Schröder, and Andreas Lintermann. 2020. “Prediction of Acoustic Fields Using a Lattice-Boltzmann Method and Deep Learning.” In <i>High Performance Computing, Proceedings of the 35th International Conference, ISC High Performance 2020</i>, 81–101. Frankfurt/Main, Germany: Springer International Publishing. https://doi.org/10.1007/978-3-030-59851-8_6.</span>
     </div>
   </div>
   <div class="collapse" id="collapseRuttgers2020Bibtex">
@@ -549,71 +622,113 @@ planned.</p>
   </div>
   
 </div>
-</li>
-</ol>
+</li></ol>
 
-<h2 id="future-plans">
-<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future plans</h2>
+<h2 id="future-plans">Future plans</h2>
 <p>Further intensification of the cooperation and planning of research stays for a post-pandemic phase.</p>
 
-<h2 id="references">
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<h2 id="references">References</h2>
 
-
-      </div>
-    </div>
-  </article>
-  
 </div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/dnn_cfd/';
+      this.page.identifier = '/projects/dnn_cfd/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 
-      </div>
-    </main>
-    <footer id="site-footer">
-  <div class="navbar navbar-full navbar-light">
-    <div class="container">
-      <div class="row small">
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item">
-              <a class="nav-link" href="/about/imprint/">
-                <i class="fa fa-copyright fa-fw"></i><span class="hidden-md-down">Imprint</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://help.github.com/articles/github-privacy-statement/">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Privacy</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 hidden-xs-down">
-          <div class="nav navbar-nav text-xs-center">
-            <span class="credit">
-              Powered by
-              <a class="nav-link" href="https://jekyllrb.com">Jekyll</a> and
-              <a class="nav-link" href="https://getbootstrap.com">Twitter Bootstrap</a>
-            </span>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
           </div>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io">
-                <i class="fa fa-github fa-fw"></i><span class="hidden-md-down">Sources</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/JLESC/jlesc.github.io/issues">
-                <i class="fa fa-bug fa-fw"></i><span class="hidden-md-down">Found a typo?</span></a>
-            </li>
-          </ul>
-        </div>
+        
+        
       </div>
+
     </div>
   </div>
-</footer>
+</div>
 
-    <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="/assets/main-f379c72bc0f1ca6c99205f5005786103a2b61210898a52b504597ea1e2e75917.js"></script>
+</div>
 
-<!--  -->
 
-  </body>
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
 </html>
