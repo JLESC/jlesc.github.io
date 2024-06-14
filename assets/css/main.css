@@ -2574,7 +2574,7 @@ table.person-months-table tr td:last-of-type { text-align: right; }
 
 .heading .heading-image img { max-width: 100%; }
 
-.hero { position: relative; display: flex; align-content: center; align-items: center; flex-direction: row; background-color: var(--color-base-2); aspect-ratio: 3593 / 880; }
+.hero { position: relative; display: flex; align-content: center; align-items: center; flex-direction: row; background-color: var(--color-base-2); aspect-ratio: 3616 / 681; }
 
 .hero.hero-gradient { background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary)); }
 
