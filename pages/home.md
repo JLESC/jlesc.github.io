@@ -12,7 +12,7 @@ hero:
 
   # The aspect ratio of the picture is hardcoded in the corresponding scss file.
   # You should also change the aspect ratio if you change the background image!
-  background_image: "/assets/images/jlesc_logo.jpg"
+  background_image: "/assets/images/jlesc_logo_hires.jpg"
   fullscreen_mobile: false
   fullscreen_desktop: false
   height: "auto"

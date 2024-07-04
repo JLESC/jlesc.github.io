@@ -518,8 +518,8 @@ module Jekyll
       end
 
       # copy the JLESC logo to the LaTeX directory
-      FileUtils.cp(File.join(@site.source, 'assets', 'images', 'jlesc-header_180910.jpg'),
-                   File.join(@latex_path, 'jlesc_logo.png'))
+      FileUtils.cp(File.join(@site.source, 'assets', 'images', 'jlesc_logo_hires.jpg'),
+                   File.join(@latex_path, 'jlesc_logo_hires.jpg'))
 
     end
   end
