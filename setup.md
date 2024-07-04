@@ -15,7 +15,7 @@ We use **docker** to *prevent version* and *system differences*. So please, espe
 #### Run this in your console to update your dependencies
 
 ```bash
-docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:3.1.3 bash -c "bundle config set --local path '/usr/src/app/vendor' && bundle install"
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:3.3.3 bash -c "bundle config set --local path '/usr/src/app/vendor' && bundle install"
 ```
 
 ### Start the live preview of the page
