@@ -1,6 +1,6 @@
 ---
 layout: about_people
-title: People
+title: Board
 permalink: /about/people/
 hero:
   enabled: false
@@ -8,8 +8,9 @@ hero:
 executive_directors:
   enabled: true
   list:
-  - name: "Robert Speck"
-    description: "JSC"
+  - name: "Jülich Supercomputing Centre (JSC)"
+    description: <a href="https://www.fz-juelich.de/profile/speck_r">Robert Speck</a> (director), <a href="https://www.fz-juelich.de/profile/speck_r">Ruth Partzsch</a> (deputy)
+    image: "/assets/images/people/JSC.jpg"
     categories: "Director"
   - name: "Bill Kramer"
     description: "UIUC, NCSA"
@@ -49,14 +50,16 @@ early_career_committee:
   - name: "Ruth Schöbel"
     description: "JSC"
     categories: "Leader"
-  - name: "Robert Underwood"
-    description: "ANL"
   - name: "Colleen Heinemann"
     description: "UIUC"
   - name: "Alexis Bandet"
     description: "INRIA"
-  - name: "Kevin Sala"
-    description: "BSC"
+  - name: "Robert Underwood, ANL"
+    description: <a href="https://www.anl.gov/profile/robert-underwood">more</a> 
+    image: "/assets/images/people/Underwood.jpeg"
+  - name: "David Álvarez, BSC"
+    description: <a href="https://www.bsc.es/alvarez-robert-david">more</a> 
+    image: "/assets/images/people/Alvarez.jpg"
   - name: "Daichi Mukunoki"
     description: "R-CCS"
   - name: "Daniel Barry"

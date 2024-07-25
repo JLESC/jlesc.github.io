@@ -16,6 +16,14 @@ body_classes: page-basic
   </div>
 </div>
 
+<div class="content container my-5">
+  <dl id="grants">
+  <dt>The board consists of the Executive Directors, the Steering Committee and the Early Career Committee.
+The Executive Directors and the Early Career Committee keep the daily JLESC business running and are happy to answer all inquiries. The Early Career Committee focuses in particular on early career scientists such as students, doctoral students and postdocs.</dt>
+</dl>
+</div>
+
+
 {% if page.executive_directors.enabled %}
 <div class="bg-base-bg-2 section">
   <div class="container">
@@ -69,8 +77,7 @@ body_classes: page-basic
     <div class="row mt-5">
       {% for member in page.early_career_committee.list %}
 
-      {% assign image = director.image | default: 'assets/images/person_placeholder.jpg' %}
-
+      {% assign image = member.image | default: 'assets/images/person_placeholder.jpg' %} 
       <div class="col-12 col-md-4 col-lg-4 my-2">
         {% include theme/cards/card-posts.html
         title=member.name
