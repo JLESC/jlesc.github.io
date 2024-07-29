@@ -12,7 +12,7 @@ executive_directors:
   - name: "JSC"
     description: <a href="https://www.fz-juelich.de/profile/speck_r">Robert Speck</a>, <a href="https://www.fz-juelich.de/profile/partzsch_r">Ruth Partzsch</a> 
     image: "/assets/images/people/Executive_Directors/JSC.jpg"
-    categories: "Director"
+    #categories: "Director"
   - name: "UIUC, NCSA"
     description: <a href="https://siebelschool.illinois.edu/about/people/faculty/wtkramer">Bill Kramer</a>, <a href="https://newfrontiers.illinois.edu/about/leadership">Kjellrun Olson</a> 
     image: "/assets/images/people/Executive_Directors/UIUC.jpg"
@@ -26,7 +26,7 @@ executive_directors:
     description: <a href="https://www.anl.gov/profile/franck-cappello">Franck Cappello</a>
     image: "/assets/images/people/Executive_Directors/ANL.jpg"
   - name: "RIKEN"
-    description: <a href="https://www.riken.jp/en/research/labs/r-ccs/processor/index.html">Kentaro Sano</a>
+    description: <a href="https://www.riken.jp/en/research/labs/r-ccs/processor/index.html">Kentaro Sano</a>, Tomohiro Ueno
     image: "/assets/images/people/Executive_Directors/RIKEN.jpg"
 
 
@@ -35,7 +35,7 @@ steering_committee:
   list:
   - name: "William Gropp"
     description: "UIUC"
-    categories: "HEAD"
+    #categories: "HEAD"
   - name: "Valerie Taylor"
     description: "ANL"
   - name: "Bruno Sportisse"
