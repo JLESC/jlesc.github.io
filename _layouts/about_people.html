@@ -56,7 +56,7 @@ body_classes: page-basic
     <div class="row mt-5">
       {% for member in page.steering_committee.list %}
 
-      {% assign image = director.image | default: 'assets/images/person_placeholder.jpg' %}
+      {% assign image = member.image | default: 'assets/images/person_placeholder.jpg' %}
 
       <div class="col-12 col-md-4 col-lg-4 my-2">
         {% include theme/cards/card-posts.html
