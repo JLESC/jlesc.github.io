@@ -33,19 +33,25 @@ executive_directors:
 steering_committee:
   enabled: true
   list:
-  - name: "William Gropp"
-    description: "UIUC"
+  - name: "UIUC"
+    description: <a href="https://wgropp.cs.illinois.edu/">William Gropp</a>
+    image: "/assets/images/people/Steering_Committee/UIUC.jpg"
     #categories: "HEAD"
-  - name: "Valerie Taylor"
-    description: "ANL"
-  - name: "Bruno Sportisse"
-    description: "INRIA"
-  - name: "Mateo Valero"
-    description: "BSC"
-  - name: "Thomas Lippert"
-    description: "JSC"
-  - name: "Satoshi Matsuoka"
-    description: "R-CCS"
+  - name: "ANL"
+    description: <a href="https://www.anl.gov/profile/valerie-e-taylor">Valerie Taylor</a>
+    image: "/assets/images/people/Steering_Committee/ANL.jpg"
+  - name: "INRIA"
+    description: <a href="https://www.inria.fr/en/bruno-sportisse">Bruno Sportisse</a>
+    image: "/assets/images/people/Steering_Committee/INRIA.jpg"
+  - name: "BSC"
+    description: <a href="https://www.bsc.es/valero-cortes-mateo">Mateo Valero</a>
+    image: "/assets/images/people/Steering_Committee/BSC.jpg"
+  - name: "JSC"
+    description: <a href="https://www.fz-juelich.de/profile/lippert_th">Thomas Lippert</a>
+    image: "/assets/images/people/Steering_Committee/JSC.jpg"
+  - name: "R-CCS"
+    description: <a href="https://www.r-ccs.riken.jp/en/about/leadership/">Satoshi Matsuoka</a>
+    image: "/assets/images/people/Steering_Committee/RIKEN.jpg"
   #- name: "Hartwig Anzt"
   #  description: "UTK"
 
