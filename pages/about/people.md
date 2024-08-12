@@ -72,7 +72,8 @@ early_career_committee:
     description: <a href="https://www.bsc.es/alvarez-robert-david">David Álvarez</a> 
     image: "/assets/images/people/Early_Career_Committee/BSC.jpg"
   - name: "R-CCS"
-    description: "Daichi Mukunoki"
+    description: "Akira Jinguji"
+    image: "/assets/images/people/Early_Career_Committee/Riken.jpg"
   #- name: "Daniel Barry"
   #  description: "UTK"
 ---
