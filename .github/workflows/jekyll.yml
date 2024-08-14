@@ -16,7 +16,7 @@ jobs:
         run: git config --global url."https://".insteadOf git://
 
       - name: 📂 setup
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
@@ -35,7 +35,7 @@ jobs:
           tar zcvf report.tar.gz latex_out
 
       - name: Uploading artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: report sources
           path: |
