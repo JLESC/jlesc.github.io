@@ -1,5 +1,5 @@
 ---
-layout: page_event
+layout: post
 title: 15th JLESC Workshop
 date: 2022-10-17
 updated: 2022-10-17
