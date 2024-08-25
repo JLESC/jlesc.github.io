@@ -316,33 +316,27 @@
 
 <p>During the past decade, Deep learning (DL) supported the shift from rule-based systems towards statistical models. Deep Neural Networks (DNNs) revolutionized how we address problems in a wide range of applications by extracting patterns from complex yet labelled datasets. In the same way that more-powerful computers made it possible to design networks with vastly more neurons, ever-growing volumes of data act as a driving force for advancements in this field. Bigger models and larger centralized datasets demand for distributed strategies to leverage multiple compute nodes.</p>
 
-<p>Most existing supervised learning algorithms operate under the assumptions that the data is (i) i.i.d. and (ii) available before the training process. However, these constraints stand in the way of many real-life scenarios where the aforementioned datasets are replaced by high volume, high velocity data streams generated over time by distributed (sometimes geographically) devices. It is unfeasible to keep training the models in an offline fashion from scratch every time new data arrives, as this would lead to prohibitive time and/or resource constraints. Also, typical DNNs suffer from catastrophic forgetting in this context, a phenomenon causing them to reinforce new patterns at the expense of previously acquired knowledge (i.e., a bias towards new samples). Some authors have shown that memory replay methods are effective in mitigating accuracy degradation in such settings. However, their performance is still far from that of oracles with full access to the static dataset. The problem of Continual Learning (CL) remains an open research question.</p>
+<p>Most existing supervised learning algorithms operate under the assumptions that the data is (1) independent and identically distributed (i.i.d.); and (2) available before the training process. However, these constraints stand in the way of many real-life scenarios where the aforementioned datasets are replaced by high volume, high velocity data streams generated over time by distributed (sometimes geographically) devices. It is unfeasible to keep training the models in an offline fashion from scratch every time new data arrives, as this would lead to prohibitive time and/or resource constraints. Also, typical DNNs suffer from catastrophic forgetting in this context, a phenomenon causing them to reinforce new patterns at the expense of previously acquired knowledge (i.e., a bias towards new samples). Some authors have shown that memory replay methods are effective in mitigating accuracy degradation in such settings. However, their performance is still far from that of oracles with full access to the static dataset. The problem of Continual Learning (CL) remains an open research question.</p>
 
-<p>Existing research typically addresses distributed DL and CL separately. At INRIA, we are interested in how CL methods can take advantage of data parallelization across nodes, which is one of the main techniques to achieve training scalability on HPC systems. The aggregated memory could benefit the accuracy achieved by such algorithms by instantiating distributed replay buffers. The main research goals of this project are the (i) design and implementation of a distributed replay buffer leveraging distributed systems effectively and the (ii) study of trade-offs introduced by large-scale CL in terms of training time, accuracy and memory usage.</p>
+<p>Existing research typically addresses distributed DL and CL separately. At INRIA, we are interested in how CL methods can take advantage of data parallelization across nodes, which is one of the main techniques to achieve training scalability on HPC systems. The aggregated memory could benefit the accuracy achieved by such algorithms by instantiating distributed replay buffers. The main research goals of this project are the (1) design and implementation of a distributed replay buffer leveraging distributed systems effectively and the (2) study of trade-offs introduced by large-scale CL in terms of training time, accuracy and memory usage.</p>
 
 <h2 id="results-for-20212022">Results for 2021/2022</h2>
 
 <p>We kicked off this project in December 2021. We are studying techniques based on rehearsal (augment mini-batches with representative samples previously encountered during training) to address the aforementioned challenges. The key novelty is how to adopt rehearsal in the context of data-parallel training, which is one of the main techniques to achieve training scalability on HPC systems. In this sense, the goal is to design and implement a distributed rehearsal buffer that handles the selection of representative samples and the augmentation of mini-batches asynchronously in the background.</p>
 
-<p>Our first series of experiments focuses on evaluating the performance and scalability of our proposal for classification problems. We run extensive experiments on up to 128 GPUs of the ThetaGPU supercomputer to compare our approach with baselines representative of training-from-scratch (the upper bound in terms of accuracy) and incremental training (the lower bound).</p>
-
-<p>A publication with our insights is currently under review.</p>
+<p>Our first series of experiments focuses on evaluating the performance and scalability of our proposal for classification problems. We run extensive experiments on up to 128 GPUs of ANL’s ThetaGPU supercomputer to compare our approach with baselines representative of training-from-scratch (the upper bound in terms of accuracy) and incremental training (the lower bound) <a class="citation" href="#bouvierEtAl2024">(Bouvier et al. 2024)</a>.</p>
 
 <h2 id="results-for-20232024">Results for 2023/2024</h2>
 
-<p>With a growing diversity of rehearsal techniques, it becomes important to decouple the rehearsal buffer from the learning task, such that it becomes a generic, reusable abstraction that can store additional state information as needed by more advanced rehearsal-based CL algorithms. To this end, we propose a generalization of rehearsal buffers to support both classification and generative learning tasks, as well as more advanced rehearsal strategies (notably dark experience replay, leveraging knowledge distillation). We illustrate this approach with a real-life HPC streaming application from the domain of ptychographic image reconstruction.</p>
-
-<p>A journal publication with our insights is currently under review.</p>
+<p>With a growing diversity of rehearsal techniques, it becomes important to decouple the rehearsal buffer from the learning task, such that it becomes a generic, reusable abstraction that can store additional state information as needed by more advanced rehearsal-based CL algorithms. To this end, we propose a generalization of rehearsal buffers to support both classification and generative learning tasks, as well as more advanced rehearsal strategies (notably Dark Experience Replay, leveraging knowledge distillation). We illustrate this approach with a real-life HPC streaming application from the domain of ptychographic image reconstruction, leveraging data acquired at ANL’s Advanced Photon Source (APS) <a class="citation" href="#bouvierEtAl2024b">(Bouvier et al. 2024)</a>.</p>
 
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <p>We schedule regular video meetings between the different members of the project.</p>
 
-<p><span class="person given-name">Thomas</span> <span class="person sur-name">Bouvier</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited ANL in the context of a Student Appointment during summer 2022.</p>
+<p><span class="person given-name">Thomas</span> <span class="person sur-name">Bouvier</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited ANL in the context of a 3-month appointment during summer 2022.</p>
 
 <h2 id="impact-and-publications">Impact and publications</h2>
-
-<p>None yet.</p>
 
 <!--
 
@@ -352,9 +346,112 @@
 
 -->
 
-<ol class="bibliography"></ol>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          bouvierEtAl2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsebouvierEtAl2024Bibtex" aria-expanded="false" aria-controls="collapsebouvierEtAl2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsebouvierEtAl2024Abstract" aria-expanded="false" aria-controls="collapsebouvierEtAl2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="bouvierEtAl2024">Bouvier, Thomas, Bogdan Nicolae, Hugo Chaugier, Alexandru Costan, Ian Foster, and Gabriel Antoniu. 2024. “Efficient Data-Parallel Continual Learning with Asynchronous Distributed Rehearsal
+    Buffers.” In <i>CCGrid 2024 - IEEE 24th International Symposium on Cluster, Cloud and Internet
+    Computing</i>, 1–10. Philadelphia (PA), United States. https://doi.org/10.1109/CCGrid59990.2024.00036.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsebouvierEtAl2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{bouvierEtAl2024,
+  address = {Philadelphia (PA), United States},
+  author = {Bouvier, Thomas and Nicolae, Bogdan and Chaugier, Hugo and Costan, Alexandru and Foster, Ian and Antoniu, Gabriel},
+  booktitle = {{CCGrid 2024 - IEEE 24th International Symposium on Cluster, Cloud and Internet
+      Computing}},
+  doi = {10.1109/CCGrid59990.2024.00036},
+  hal_id = {hal-04600107},
+  hal_version = {v1},
+  keywords = {continual learning ; data-parallel training ; experience replay ; distributed
+      rehearsal buffers ; asynchronous data management ; scalability},
+  month = may,
+  pages = {1-10},
+  pdf = {https://inria.hal.science/hal-04600107/file/paper.pdf},
+  title = {{Efficient Data-Parallel Continual Learning with Asynchronous Distributed Rehearsal
+      Buffers}},
+  url = {https://inria.hal.science/hal-04600107},
+  year = {2024}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          bouvierEtAl2024b
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsebouvierEtAl2024bBibtex" aria-expanded="false" aria-controls="collapsebouvierEtAl2024bBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsebouvierEtAl2024bAbstract" aria-expanded="false" aria-controls="collapsebouvierEtAl2024bAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="bouvierEtAl2024b">Bouvier, Thomas, Bogdan Nicolae, Alexandru Costan, Tekin Bicer, Ian Foster, and Gabriel Antoniu. 2024. “Efficient Distributed Continual Learning for Steering Experiments in Real-Time.” <i>Future Generation Computer Systems</i>, July. https://doi.org/10.1016/j.future.2024.07.016.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsebouvierEtAl2024bBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{bouvierEtAl2024b,
+  author = {Bouvier, Thomas and Nicolae, Bogdan and Costan, Alexandru and Bicer, Tekin and Foster, Ian and Antoniu, Gabriel},
+  doi = {10.1016/j.future.2024.07.016},
+  hal_id = {hal-04664176},
+  hal_version = {v2},
+  journal = {{Future Generation Computer Systems}},
+  keywords = {continual learning ; data-parallel training ; experience replay ; distributed
+      rehearsal buffers ; asynchronous data management ; scalability ; streaming ; generative AI},
+  month = jul,
+  pdf = {https://inria.hal.science/hal-04664176v2/file/paper.pdf},
+  publisher = {{Elsevier}},
+  title = {{Efficient Distributed Continual Learning for Steering Experiments in Real-Time}},
+  url = {https://inria.hal.science/hal-04664176},
+  year = {2024}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
 
 <h2 id="future-plans">Future plans</h2>
+
+<ul>
+  <li>Apply rehearsal-based CL to LLM training, by integrating the distributed rehearsal buffer into training runtimes like DeepSpeed.</li>
+  <li>Use the distributed rehearsal buffer as a retriever for Retrieval Augmented Generation (RAG).</li>
+</ul>
 
 <h2 id="references">References</h2>
 
