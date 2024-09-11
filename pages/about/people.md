@@ -59,7 +59,8 @@ early_career_committee:
   enabled: true
   list:
   - name: "JSC"
-    description: Sina Mattfeldt
+    description: <a href="https://www.fz-juelich.de/profile/mattfeldt_s">Sina Mattfeldt</a>, <a href="https://www.fz-juelich.de/profile/fritz_j"> Jakob Fritz</a> 
+    image: "/assets/images/people/Early_Career_Committee/JSC.jpg"
     #categories: "Leader"
   - name: "UIUC"
     description: "Colleen Heinemann"
