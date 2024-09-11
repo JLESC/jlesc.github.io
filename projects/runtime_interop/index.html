@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Enhancing Interoperability in Task-based Programming Models through Common Low-Level Interfaces - Jekyll Advance</title>
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/runtime_interop/"/>
+
+  <meta property="og:title" content="Enhancing Interoperability in Task-based Programming Models through Common Low-Level Interfaces"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/early_career.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Early Career</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
+    
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">11 September 2024</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Enhancing Interoperability in Task-based Programming Models through Common Low-Level Interfaces</h1>
+          </div>
+          
+
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>Task-based programming models are a promising approach to exploiting complex
+distributed and heterogeneous systems. Recently, these models have emerged as a
+viable alternative to traditional message-passing and fork-join approaches,
+reflecting the research community’s growing interest in their numerous
+benefits. Despite these advantages, the broader adoption within the scientific
+and industrial sectors remains limited. A major barrier is the poor
+interoperability among existing runtime systems, which prevents the development
+of complex applications through the integration of multiple components or
+libraries written in different task-based programming models. Such
+interoperability issues often lead to oversubscription, significantly impairing
+applications’ performance. Maintainability presents another significant challenge within task-based programming models, encountered by projects at varying stages. The relatively modest level of effort anticipated in a future steady-state raises critical questions about the sustainability of support for these models. Can the organization of software, potentially through the utilization of shared code bases for sub-components, facilitate easier maintenance? Such an approach could potentially streamline the support process, thereby enhancing the long-term viability and operational efficiency of task-based systems.</p>
+
+<p>Our project aims to address these challenges by identifying the low-level
+primitives necessary for building efficient and scalable task-based runtime
+systems. Based on these findings, we will develop unified low-level tasking
+interfaces to enhance interoperability among different runtime systems,
+optimizing performance and encouraging broader adoption of task-based
+programming models.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<p>We had a BoF session in the Kobe workshop, where we decided to start this project.
+There are no planned visits yet.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<ul>
+  <li>Solve interoperability problems between task-based programming models</li>
+  <li>Increase software development productivity and reach of task-based
+programming models</li>
+  <li>Research and document needs from higher-level programming systems (Charm++,
+HPX, Legion, OpenMP, OmpSs, ..) for the task-based execution systems</li>
+  <li>Explore possibility of creating a standard that allows for different use
+cases currently served,  either via a flexible design or allowing for
+extensions</li>
+</ul>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>not defined yet.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          DBLP:conf/ipps/0006S024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseDBLP:conf/ipps/0006S024Bibtex" aria-expanded="false" aria-controls="collapseDBLP:conf/ipps/0006S024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseDBLP:conf/ipps/0006S024Abstract" aria-expanded="false" aria-controls="collapseDBLP:conf/ipps/0006S024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="DBLP:conf/ipps/0006S024">Álvarez, David, Kevin Sala, and Vicenç Beltran. 2024. “NOS-V: Co-Executing HPC Applications Using System-Wide Task Scheduling.” In <i>IEEE International Parallel and Distributed Processing Symposium,
+                  IPDPS 2024, San Francisco, CA, USA, May 27-31, 2024</i>, 312–24. IEEE. https://doi.org/10.1109/IPDPS57955.2024.00035.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseDBLP:conf/ipps/0006S024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{DBLP:conf/ipps/0006S024,
+  author = {{\'{A}}lvarez, David and Sala, Kevin and Beltran, Vicen{\c{c}}},
+  title = {nOS-V: Co-Executing {HPC} Applications Using System-Wide Task Scheduling},
+  booktitle = {{IEEE} International Parallel and Distributed Processing Symposium,
+                    {IPDPS} 2024, San Francisco, CA, USA, May 27-31, 2024},
+  pages = {312--324},
+  publisher = {{IEEE}},
+  year = {2024},
+  url = {https://doi.org/10.1109/IPDPS57955.2024.00035},
+  doi = {10.1109/IPDPS57955.2024.00035},
+  timestamp = {Wed, 17 Jul 2024 15:59:37 +0200},
+  biburl = {https://dblp.org/rec/conf/ipps/0006S024.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          10.1007/978-3-642-03869-3_80
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapse10.1007/978-3-642-03869-3_80Bibtex" aria-expanded="false" aria-controls="collapse10.1007/978-3-642-03869-3_80Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapse10.1007/978-3-642-03869-3_80Abstract" aria-expanded="false" aria-controls="collapse10.1007/978-3-642-03869-3_80Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="10.1007/978-3-642-03869-3_80">Augonnet, Cédric, Samuel Thibault, Raymond Namyst, and Pierre-André Wacrenier. 2009. “StarPU: A Unified Platform for Task Scheduling on Heterogeneous Multicore Architectures.” In <i>Euro-Par 2009 Parallel Processing</i>, edited by Henk Sips, Dick Epema, and Hai-Xiang Lin, 863–74. Berlin, Heidelberg: Springer Berlin Heidelberg.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapse10.1007/978-3-642-03869-3_80Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{10.1007/978-3-642-03869-3_80,
+  author = {Augonnet, C{\'e}dric and Thibault, Samuel and Namyst, Raymond and Wacrenier, Pierre-Andr{\'e}},
+  editor = {Sips, Henk and Epema, Dick and Lin, Hai-Xiang},
+  title = {StarPU: A Unified Platform for Task Scheduling on Heterogeneous Multicore Architectures},
+  booktitle = {Euro-Par 2009 Parallel Processing},
+  year = {2009},
+  publisher = {Springer Berlin Heidelberg},
+  address = {Berlin, Heidelberg},
+  pages = {863--874},
+  isbn = {978-3-642-03869-3}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapse10.1007/978-3-642-03869-3_80Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        In the field of HPC, the current hardware trend is to design multiprocessor architectures that feature heterogeneous technologies such as specialized coprocessors (e.g. Cell/BE SPUs) or data-parallel accelerators (e.g. GPGPUs).
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          508060
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapse508060Bibtex" aria-expanded="false" aria-controls="collapse508060Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapse508060Abstract" aria-expanded="false" aria-controls="collapse508060Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="508060">Kale, L.V., M. Bhandarkar, N. Jagathesan, S. Krishnan, and J. Yelon. 1996. “Converse: an Interoperable Framework for Parallel Programming.” In <i>Proceedings of International Conference on Parallel Processing</i>, 212–17. https://doi.org/10.1109/IPPS.1996.508060.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapse508060Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{508060,
+  author = {Kale, L.V. and Bhandarkar, M. and Jagathesan, N. and Krishnan, S. and Yelon, J.},
+  booktitle = {Proceedings of International Conference on Parallel Processing},
+  title = {Converse: an interoperable framework for parallel programming},
+  year = {1996},
+  volume = {},
+  number = {},
+  pages = {212-217},
+  keywords = {Parallel programming;Object oriented programming;Parallel languages;Runtime},
+  doi = {10.1109/IPPS.1996.508060}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+</div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/runtime_interop/';
+      this.page.identifier = '/projects/runtime_interop/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
+</html>
