@@ -11,6 +11,8 @@ main:
       url: /about/people
     - name: Grants
       url: /about/grants.html
+    - name: Early Career
+      url: /about/early_career.html
   - name: News
     url: /news/
     weight: 1

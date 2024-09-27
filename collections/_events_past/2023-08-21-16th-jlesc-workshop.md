@@ -1,5 +1,5 @@
 ---
-layout: page_event
+layout: post
 title: 16th JLESC Workshop
 date: 2023-08-21
 updated: 2023-08-21

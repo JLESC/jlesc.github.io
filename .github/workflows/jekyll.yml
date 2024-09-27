@@ -16,7 +16,7 @@ jobs:
         run: git config --global url."https://".insteadOf git://
 
       - name: 📂 setup
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
@@ -35,14 +35,15 @@ jobs:
           tar zcvf report.tar.gz latex_out
 
       - name: Uploading artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: report sources
+          name: website and report sources
           path: |
             report.tar.gz
+            _site
 
       - name: 🚀 deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.event_name == 'push' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

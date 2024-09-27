@@ -198,6 +198,14 @@ attig_n:
   email: n.attig@fz-juelich.de
   homepage: http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/attig_n.html
 
+aumage_o:
+  sur_name: Aumage
+  given_name: Olivier
+  affiliation: inria
+  position: permanent
+  email: olivier.aumage@inria.fr
+  homepage:
+
 aupy_g:
   sur_name: Pallez
   given_name: Guillaume

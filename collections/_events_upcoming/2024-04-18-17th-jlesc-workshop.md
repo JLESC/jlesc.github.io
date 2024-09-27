@@ -1,5 +1,5 @@
 ---
-layout: page_event
+layout: post
 title: 17th JLESC Workshop
 date: 2024-04-18
 updated: 2024-04-18
