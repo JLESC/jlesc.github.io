@@ -41,6 +41,20 @@ body_classes: page-post page-post-1
             </div>
           {% endif %}
 
+          <ul class="event-meta mb-2">
+              {% if page.event_url | size > 0 %}
+              <li><a href="{{ page.event_url }}" target="_blank">Homepage</a></li>
+              {% endif %}
+              {% if page.event_location | size > 0 %}
+              <li>Location: {{ page.event_location }}</li>
+              {% endif %}
+              {% if page.event_start | size > 0 %}
+              <li>Start: {{ page.event_start | date_to_string }}</li>
+              {% endif %}
+              {% if page.event_end | size > 0 %}
+              <li>End: {{ page.event_end | date_to_string }}</li>
+              {% endif %}
+          </ul>
       </div>
     </div>
           
@@ -60,7 +74,6 @@ body_classes: page-post page-post-1
 <div class="section pt-0">
   <div class="container">
     <div class="row justify-content-center">
-
       <div class="col-12 col-lg-8">
         <div class="content">{{ content }}</div>
         {% if site.disqus.shortname %}
