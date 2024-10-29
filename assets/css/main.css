@@ -23865,6 +23865,12 @@ html[data-mode=dark] .card.card-service .card-icon img {
   margin-right: 8px;
 }
 
+.event-meta {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-base-text-2);
+}
+
 .page-team .team-image {
   margin-bottom: 40px;
 }
