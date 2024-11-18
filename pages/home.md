@@ -46,7 +46,7 @@ intro:
       <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='University of Illinois at Urbana-Champaign'>UIUC</abbr>.
       Further members are <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Argonne National Laboratory'>ANL</abbr>, <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Centro Nacional de Supercomputación'>BSC</abbr>,
       <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Jülich Supercomputing Centre'>JSC</abbr> and <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='RIKEN Center for Computational Science'>R-CCS</abbr>.
-      <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='University of Tennessee'>UTK</abbr> is a research member.<br><br>JLESC involves computer scientists, engineers and scientists from other disciplines as well as
+      <br><br>JLESC involves computer scientists, engineers and scientists from other disciplines as well as
       from industry, to ensure that the research facilitated by the Laboratory addresses science and
       engineering's most critical needs and takes advantage of the continuing evolution of computing
       technologies."
