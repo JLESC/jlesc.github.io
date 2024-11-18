@@ -6,7 +6,7 @@ header_transparent: false
 permalink: "/about/"
 ---
 
-The University of Illinois at Urbana-Champaign, INRIA, the French national computer science institute, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre and the RIKEN Center for Computational Science formed the Joint Laboratory on Extreme Scale Computing, a follow-up of the Inria-Illinois Joint Laboratory for Petascale Computing. The Joint Laboratory is based at Illinois and includes researchers from INRIA, and the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre, RIKEN Center for Computational Science as well as JLESC Fellows. It focuses on software challenges found in extreme scale high-performance computers.
+The University of Illinois at Urbana-Champaign, INRIA, the French national computer science institute, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre and the RIKEN Center for Computational Science formed the Joint Laboratory on Extreme Scale Computing, a follow-up of the Inria-Illinois Joint Laboratory for Petascale Computing. The Joint Laboratory is based at Illinois and includes researchers from INRIA, and the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre, and RIKEN Center for Computational Science as well as JLESC Fellows. It focuses on software challenges found in extreme scale high-performance computers.
 
 ## Research areas include:
 
