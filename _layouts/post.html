@@ -42,6 +42,28 @@ body_classes: page-post page-post-1
               {% if page.event_url | size > 0 %}
               <li><a href="{{ page.event_url }}" target="_blank">Homepage</a></li>
               {% endif %}
+              {% if page.project_url | size > 0 %}
+              <li><a href="{{ page.project_url }}" target="_blank">Homepage</a></li>
+              {% endif %}
+              {% if page.head | size > 0 %}
+              <li><b>Head</b></li>
+              {% assign head = site.data.people[page.head] %}
+              {% assign institute = site.data.institutes[head.affiliation] %}
+              <li>{{ head.sur_name }} {{ head.given_name }} ({{ institute.abbr }})</li>
+              {% endif %}
+              {% if page.members | size > 0 %}
+              <li><b>Members</b></li>
+              {% for member in page.members %}
+              {% assign memberData = site.data.people[member] %}
+              {% assign memberInstitute = site.data.institutes[memberData.affiliation] %}
+              <li>
+                  {{ memberData.sur_name }} {{ memberData.given_name }} ({{ memberInstitute.abbr }})
+              </li>
+              {% endfor %}
+              {% endif %}
+              {% if page.institute | size > 0 %}
+              <li>{{ site.data.institutes[page.institute].title }}</li>
+              {% endif %}
               {% if page.event_location | size > 0 %}
               <li>Location: {{ page.event_location }}</li>
               {% endif %}
