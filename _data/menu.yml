@@ -7,6 +7,8 @@ main:
       url: /#about
     - name: Partners
       url: /about/partners.html
+    - name: Fellows
+      url: /about/fellows.html
     - name: People
       url: /about/people
     - name: Grants

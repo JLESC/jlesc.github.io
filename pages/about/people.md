@@ -23,7 +23,7 @@ executive_directors:
     description: <a href="https://www.bsc.es/beltran-vicenc">Vicenç Beltran</a>, <a href="https://www.bsc.es/pena-antonio">Antonio J. Peña</a>
     image: "/assets/images/people/Executive_Directors/BSC.jpg"
   - name: "ANL"
-    description: <a href="https://www.anl.gov/profile/franck-cappello">Franck Cappello</a>
+    description: <a href="https://www.anl.gov/profile/franck-cappello">Franck Cappello</a>, <a href="https://www.anl.gov/profile/bogdan-nicolae">Bogdan Nicolae</a>
     image: "/assets/images/people/Executive_Directors/ANL.jpg"
   - name: "RIKEN"
     description: <a href="https://www.riken.jp/en/research/labs/r-ccs/processor/index.html">Kentaro Sano</a>, Tomohiro Ueno

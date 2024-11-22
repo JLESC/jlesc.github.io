@@ -1,12 +1,15 @@
 ---
 layout: home
-title: "Founding Partners"
+title: "Partners"
 header_transparent: false
 permalink: "/about/partners.html"
 hero:
   enabled: false
 ---
 
+# Founding partners
+
+<br><br>
 {% include framework/blocks/sections/info.html
   align="row"
   heading="NCSA"
@@ -160,6 +163,8 @@ Taken from
   JSC "About page"
 </a>
 
+<br><br>
+
 {% include framework/blocks/sections/info.html
   heading="R-CCS"
   sub_heading="RIKEN Center for Computational Science"
@@ -179,9 +184,8 @@ Taken from
   R-CCS main page
 </a>
 
-<br><br>
 
-# Research partner
+<!-- # Research partner
 
 <br><br>
 
@@ -202,4 +206,4 @@ ICL is a research laboratory in the College of Engineering at the University of 
 Taken from
 <a href="http://www.icl.utk.edu/" target="_blank">http://www.icl.utk.edu</a>
 
-<br>
+<br> -->
