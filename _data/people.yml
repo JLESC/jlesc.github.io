@@ -1381,6 +1381,15 @@ jin_z:
   email: zjin@anl.gov
   homepage: https://www.alcf.anl.gov/staff-directory/zheming-jin
 
+jolivel_t:
+  sur_name: Jolivel
+  given_name: Théo
+  affiliation: inria
+  position: phd
+  topics:
+  email: theo.jolivel@inria.fr
+  homepage:
+
 jung_j:
   sur_name: Jung
   given_name: Jaewoon
