@@ -33,9 +33,11 @@ A paper presenting our first results is in preparation and will be submitted in 
 In a second time, we will consider new calibration opportunities offered by the union of Blue Waters Darshan, Torque (resource manager) and Lustre traces. In particular, we expect this new data to allow finer calibration and validation of the Lustre model inside our simulator.
 
 ## Results for 2024/2025
-A conference paper presenting Fives {% cite monniot:hal-04784808 --file external/storage_systems_design.bib %}, an HPC storage system simulator, has been accepted at HiPC'24 (Bengalore, India). Although Fives uses Darshan traces from an ANL system (Theta), an extended version of the paper exploiting Blue Waters traces is in preparation.
+A conference paper presenting Fives {% cite monniotEtAl2024 --file jlesc.bib %}, an HPC storage system simulator, has been accepted at HiPC'24 (Bengalore, India). Although Fives uses Darshan traces from an ANL system (Theta), an extended version of the paper exploiting Blue Waters traces is in preparation.
 
-We also introduced MOSAIC {% cite jolivel:hal-04808300 --file external/storage_systems_design.bib %}, an approach to categorize execution traces and give information about the general behavior of applications from an I/O perspective. we analyze a full year of I/O execution traces of Blue Waters from which, we determine a set of non-exclusive categories to describe the I/O behavior of jobs, including the temporality and the periodicity of the accesses and the metadata overhead. This paper has been accepted in the SC'24 PDSW workshop. This work is currently being pursued, with several lines of research focusing in particular on automating the clustering of I/O operations.
+We also introduced MOSAIC {% cite jolivelEtAl2024 --file jlesc.bib %}, an approach to categorize execution traces and give information about the general behavior of applications from an I/O perspective. we analyze a full year of I/O execution traces of Blue Waters from which, we determine a set of non-exclusive categories to describe the I/O behavior of jobs, including the temporality and the periodicity of the accesses and the metadata overhead. This paper has been accepted in the SC'24 PDSW workshop. This work is currently being pursued, with several lines of research focusing in particular on automating the clustering of I/O operations.
 
 ## References
+{% bibliography --cited --file jlesc.bib %}
+
 {% bibliography --cited --file external/storage_systems_design.bib %}
