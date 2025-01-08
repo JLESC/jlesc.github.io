@@ -2,7 +2,7 @@
 layout: page_project
 title: A Comprehensive Software Stack for Dynamic Resources Management.
 date: 2024-06-08
-updated: 2024-06-10
+updated: 2025-01-08
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -48,10 +48,12 @@ This project aims to:
 ## Visits and meetings
 
  * May - July 2024: Dominik internship at UGA.
+ * February 2025: Sergio internship at UGA.
 
 ## Impact and publications
 
-None yet.
+{% cite tarraf_malleability_2024 --file external/dmr-dpp-oar.bib %}
+{% cite dutot_leveraging_2024 --file external/dmr-dpp-oar.bib %}
 
 ## Future plans
 
