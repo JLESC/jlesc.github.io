@@ -45,6 +45,10 @@ This project aims to:
 <li>Evaluate coding usability and performance of the new dynamic resources management approach compared to the current state-of-the-art.</li>
 </ul>
 
+## Visits and meetings
+
+ * May - July 2024: Dominik internship at UGA.
+
 ## Impact and publications
 
 None yet.
