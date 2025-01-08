@@ -2,7 +2,7 @@
 layout: page_project
 title: Malleable implementation of SERGHEI-SWE with DMR
 date: 2024-04-04
-updated: 2024-04-08
+updated: 2025-01-08
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -37,6 +37,10 @@ This project aims to:
 <li>Extend DMR with performance-aware reconfiguration techniques.</li>
 <li>Design efficient data redistribution strategies for dynamic resources in SERGHEI-SWE.</li>
 </ul>
+
+## Visits and meetings
+
+ * October 2024: Unizar researchers attend MNHack24 at BSC.
 
 ## Impact and publications
 
