@@ -38,6 +38,10 @@ This project aims to:
 <li>Design efficient data redistribution strategies for dynamic resources in SERGHEI-SWE.</li>
 </ul>
 
+## Visits and meetings
+
+ * October 2024: Unizar researchers attend MNHack24 at BSC.
+
 ## Impact and publications
 
 None yet.

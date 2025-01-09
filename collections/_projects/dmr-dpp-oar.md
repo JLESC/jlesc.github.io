@@ -45,9 +45,15 @@ This project aims to:
 <li>Evaluate coding usability and performance of the new dynamic resources management approach compared to the current state-of-the-art.</li>
 </ul>
 
+## Visits and meetings
+
+ * May - July 2024: Dominik internship at UGA.
+ * February 2025: Sergio internship at UGA.
+
 ## Impact and publications
 
-None yet.
+{% cite tarraf_malleability_2024 --file external/dmr-dpp-oar.bib %}
+{% cite dutot_leveraging_2024 --file external/dmr-dpp-oar.bib %}
 
 ## Future plans
 
