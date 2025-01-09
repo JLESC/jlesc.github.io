@@ -48,8 +48,7 @@ We have worked on continuous testing as well as continuous benchmarking in this 
 ## Results for 2024/2025
 
 On Fugaku, CI/CD workflows for compute nodes have been successfully implemented using the [Jacamar CI](https://gitlab.com/ecp-ci/jacamar-ci) framework. This system was adapted to work with Fugaku’s batch job system by adding support for the Fujitsu Job Manager (PJM). This improvement, contributed through updates like Merge Request [#525](https://gitlab.com/ecp-ci/jacamar-ci/-/merge_requests/525), enabled Jacamar CI to efficiently handle batch jobs. With these adjustments, CI pipelines were seamlessly integrated with Fugaku’s compute nodes.
-
-For Spack, setting up CI/CD is more challenging due to the large number of CI-pipelines. Testing all of them is not practical, so the focus has been on using a smaller set of CI-pipelines for both login and compute nodes. Work is ongoing to improve speed and efficiency, such as parallelizing jobs and addressing slow file access on the Fujitsu Exa-Scale File System. Future plans include further parallelizing independent jobs and testing faster file systems. These efforts aim to make the CI/CD process for Spack on Fugaku more reliable and scalable.
+For Spack-CI on Fugaku, setting up CI/CD is more challenging due to the large number of CI-pipelines. Testing all of them is not practical, so the focus has been on using a smaller set of CI-pipelines for both login and compute nodes. Work is ongoing to improve speed and efficiency, such as parallelizing jobs and addressing slow file access on the Fujitsu Exa-Scale File System. Future plans include further parallelizing independent jobs and testing faster file systems. These efforts aim to make the CI/CD process for Spack on Fugaku more reliable and scalable.
 
 ## Visits and meetings
 None.
