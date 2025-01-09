@@ -38,6 +38,10 @@ This project aims to:
 <li>Design efficient data redistribution strategies for dynamic resources in SERGHEI-SWE.</li>
 </ul>
 
+## Results for 2024/2025
+
+During the Marenostrum hackathon, we studied data redistribution strategies for different dimenssions of the domain.
+
 ## Visits and meetings
 
  * October 2024: Unizar researchers attend MNHack24 at BSC.
