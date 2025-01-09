@@ -2,7 +2,7 @@
 layout: post
 title: Continuous integration for HPC codes
 date: 2022-02-11
-updated: 2024-01-26
+updated: 2025-01-09
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -44,6 +44,11 @@ Based on the outcome of the meeting during the 2022 workshop, we started impleme
 ## Results for 2023/2024
 
 We have worked on continuous testing as well as continuous benchmarking in this period. In the field of continuous testing, the solution to automatically mirror code from github to gitlab was further improved. Now different workflows are supported better (e.g. not only working with branches in the same repository but also working with Pull-Requests from forks). The development of the tool can be found on github: https://github.com/jakob-fritz/github2lab_action. Furthermore, continuous testing has been extended to enhance storage and visualization the recorded performance data. See an example of that approach here: https://gitlab.jsc.fz-juelich.de/SLPP/pepc/pepc.
+
+## Results for 2024/2025
+
+On Fugaku, CI/CD workflows for compute nodes have been successfully implemented using the [Jacamar CI](https://gitlab.com/ecp-ci/jacamar-ci) framework. This system was adapted to work with Fugaku’s batch job system by adding support for the Fujitsu Job Manager (PJM). This improvement, contributed through updates like Merge Request [#525](https://gitlab.com/ecp-ci/jacamar-ci/-/merge_requests/525), enabled Jacamar CI to efficiently handle batch jobs. With these adjustments, CI pipelines were seamlessly integrated with Fugaku’s compute nodes.
+For Spack-CI on Fugaku, setting up CI/CD is more challenging due to the large number of CI-pipelines. Testing all of them is not practical, so the focus has been on using a smaller set of CI-pipelines for both login and compute nodes. Work is ongoing to improve speed and efficiency, such as parallelizing jobs and addressing slow file access on the Fujitsu Exa-Scale File System. Future plans include further parallelizing independent jobs and testing faster file systems. These efforts aim to make the CI/CD process for Spack on Fugaku more reliable and scalable.
 
 ## Visits and meetings
 None.
