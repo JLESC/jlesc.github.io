@@ -45,9 +45,25 @@ This project aims to:
 <li>Evaluate coding usability and performance of the new dynamic resources management approach compared to the current state-of-the-art.</li>
 </ul>
 
+## Results for 2024/2025
+
+- The integration of DMR and DPP has been improved as part of a collaboration between UGA and BSC.
+- We plan to work on the common API during this term.
+
+## Visits and meetings
+
+- May - July 2024: Dominiks - research stay at UGA.
+- February 2025: Sergio - research stay at UGA.
+
+## Funding
+
+- Sergio Iserte from BSC received the BSC's Severo Ochoa Mobility Grant for his 1 month stay at UGA.
+- Martin Schreiber received travel support from Inria to attend JLESC meetings.
+
 ## Impact and publications
 
-None yet.
+{% cite tarraf_malleability_2024 --file external/dmr-dpp-oar.bib %}
+{% cite dutot_leveraging_2024 --file external/dmr-dpp-oar.bib %}
 
 ## Future plans
 
