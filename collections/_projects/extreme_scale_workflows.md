@@ -20,8 +20,7 @@ members:
   - raffin_b
   - nicolae_b
   - taufer_m
-  - huang_j
-  - hobson_t
+  - badia_r
 ---
 
 ## Research topic and goals
@@ -248,6 +247,24 @@ We have published our results in 2021 IEEE Workshop on Workflows in Support of L
 We describe LowFive, a new data transport layer based on the HDF5 data model, for in situ workflows. Executables using LowFive can communicate in situ (using in-memory data and MPI message passing), reading and writing traditional HDF5 files to physical storage, and combining the two modes. Minimal and often no source-code modification is needed for programs that already use HDF5. LowFive maintains deep copies or shallow references of datasets, configurable by the user. More than one task can produce (write) data, and more than one task can consume (read) data, accommodating fan-in and fan-out in the workflow task graph. LowFive supports data redistribution from n producer processes to m consumer processes. We demonstrate the above features in a series of experiments featuring both synthetic benchmarks as well as a representative use case from a scientific workflow, and we also compare with other data transport solutions in the literature.
 
 We have published our results in 2023 International Parallel and Distributed Processing Symposium (IPDPS) {% cite peterka2023lowfive --file jlesc.bib %}.
+
+## Results for 2024/2025
+
+### Wilkins: HPC In Situ Workflows Made Easy
+
+* Orcun Yildiz, Tom Peterka, and Bogdan Nicolae of ANL
+
+In situ approaches can accelerate the pace of scientific discoveries by allowing scientists to perform data analysis at simulation time. Current in situ workflow systems, however, face challenges in handling the growing complexity and diverse computational requirements of scientific tasks. In this work, we present Wilkins, an in situ workflow system that is designed for ease-of-use while providing scalable and efficient execution of workflow tasks. Wilkins provides a flexible workflow description interface, employs a high-performance data transport layer based on HDF5, and supports tasks with disparate data rates by providing a flow control mechanism. Wilkins seamlessly couples scientific tasks that already use HDF5, without requiring task code modifications. We demonstrate the above features using both synthetic benchmarks and two science use cases in materials science and cosmology.
+
+We have published our results in the Frontiers in HPC journal {% cite yildiz2024wilkins --file jlesc.bib %}.
+
+### Extreme-scale workflows: A perspective from the JLESC international community
+
+* Orcun Yildiz and Tom Peterka of ANL, Bruno Raffin of Inria, and Rosa M. Badia of BSC
+
+The Joint Laboratory for Extreme-Scale Computing (JLESC) focuses on software challenges in high-performance computing systems to meet the needs of today’s science campaigns, which often require large resources, consist of multiple tasks, and generate vast amounts of data. In this context, extreme-scale workflows have been the key factor in enabling scientific discoveries by helping scientists automate the dependencies and data exchanges between workflow tasks, instead of managing those manually. In this paper we present representative extreme- scale workflows and feature workflow systems developed by JLESC participating institutions. We present lessons learned while developing these tools, alongside with the open challenges and future research directions in the field of extreme-scale workflows.
+
+We have published our results in the Elsevier FGCS Journal {% cite yildiz2024extreme --file jlesc.bib %}.
 
 ## Visits and meetings
 
