@@ -40,7 +40,7 @@ The dataset consists of CT head recording from 65 patients. HR images were 1mm t
 In 2023, we started a collaboration with IAS-8 (Data Analytics and Machine Learning) in Forschungszentrum Jülich, to include a data efficient training method {% cite quercia2023 --file external/hyperp_sr_project.bib %} to bias SGD towards more relevant image regions, leading to faster convergence and more stable results. By the end of 2023, we summarized current results and submitted to the JLESC special issue. In addition, a webpage applction has been under development using the JSC Coud computing resources, to allow users upload their coarse CT head data and make prediction of fine CT data uisng the SRN developed in this project.
 
 ## Results for 2024/2025
-In 2024, results of the project was published in the special issue journal within the framework of the 15th JLESC workshop. Furthermore, the prototype of aforementioned webpage applction was developed and access policy is under discussion with Data Protection Officer in JSC, in order to be publsihed on JSC Coud computing platform.
+In 2024, the submitted manuscript was published in the JLESC special issue of the journalof Future Generation Computer Systems. Furthermore, the prototype of aforementioned webpage applction was developed and access policy is under discussion with Data Protection Officer in JSC, in order to be publsihed on JSC Coud computing platform.
 
 ## Visits and meetings
 * 28-30, Sep 2022: Mario Rüttgers participated in 14th JLESC Workshop at The University of Illinois at Urbana-Champaign and started the collaboration
@@ -49,7 +49,7 @@ In 2024, results of the project was published in the special issue journal withi
 * 16-18, Apr 2024: Xin Liu participated in 16th JLESC Workshop at R-CCS, Kobe to present project progress
 
 ## Impact and publications
-The outcome of the project was published in the special issue of Future Generation Computer Systems. {% cite liu2024refining --file jlesc.bib %}
+The outcome of the project was published in the JLESC special issue of Future Generation Computer Systems. {% cite liu2024refining --file jlesc.bib %}
 
 {% bibliography --cited --file jlesc.bib %}
 
