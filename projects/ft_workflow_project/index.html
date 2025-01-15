@@ -633,6 +633,13 @@ dataset (e.g., reloading checkpoints, computing checksum on data, etc.).</p>
 <p>We have also considered applications executing for a fixed duration, namely the length of the reservation that it has been granted. The checkpoint duration is a stochastic random variable that obeys some well-known probability distribution law. The question is when to take a checkpoint towards the end of the execution, so that the expectation of the work done is maximized. We addressed two scenarios. In the first scenario, a checkpoint can be taken at any time; despite its simplicity, this natural problem has not been considered yet (to the best of our knowledge). We provided the optimal solution for a variety of probability distribution laws modeling checkpoint duration. The second scenario was more involved: the application is a linear workflow consisting of a chain of tasks with IID stochastic execution times, and a checkpoint can be taken only at the end of a task. First, we introduced a static strategy where we computed the optimal number of tasks before the application checkpoints at the beginning of the execution. Then, we designed a dynamic strategy that decides whether to checkpoint or to continue executing at the end of each task. We instantiated this second scenario with several examples of probability distribution laws for task durations. This work has been published in FTXS’2023, a workshop co-located with SC’2023 
 <a class="citation" href="#BarbutEtAl2023">(Barbut et al. 2023)</a>.</p>
 
+<h2 id="results-for-20242025">Results for 2024/2025</h2>
+
+<p>This year, we have published a survey on the FGCS special issue focusing on JLESC collaboration results,
+see <a class="citation" href="#BautistaEtAl2024">(Bautista-Gomez et al. 2024)</a>. The Young/Daly formula provides an approximation of the optimal checkpointing period for a parallel application executing on a supercomputing platform. It was originally designed to handle fail-stop errors for preemptible tightly-coupled applications, but has been extended to other application and resilience frameworks. We provide some background and survey various scenarios to assess the usefulness and limitations of the formula, both for preemptible applications and workflow applications represented as a graph of tasks. We also discuss scenarios with uncertainties, and extend the study to silent errors. We exhibit cases where the optimal period is of a different order than that dictated by the Young/Daly formula, and finally we explain how checkpointing can be further combined with replication.</p>
+
+<p>As a follow-up of our work published the previous year at FTXS’2023, a workshop co-located with SC’2023 <a class="citation" href="#BarbutEtAl2023">(Barbut et al. 2023)</a>, we have considered checkpointing strategies for a parallel application executing on a large-scale platform whose nodes are subject to failures. The application executes for a fixed duration, namely the length of the reservation that it has been granted. We have shown the difficulty of the problem with small examples: it turns out that the optimal checkpointing strategy neither always uses periodic checkpoints nor always takes its last checkpoint exactly at the end of the reservation. Then, we have introduced a dynamic heuristic that is periodic and decides for the checkpointing frequency based upon thresholds for the time left; we have determined threshold times Tn such that it is best to plan for exactly n checkpoints if the time left (or initially the length of the reservation) is between Tn and Tn+1. Next, we have used time discretization and designed a (complicated) dynamic programming algorithm that computes the optimal solution, without any restriction on the checkpointing strategy. Finally, we have reported the results of an extensive simulation campaign that shows that the optimal solution is far more efficient than the Young/Daly periodic approach for short or mid-size reservations. These results have been published at FTXS’2024, see <a class="citation" href="#BenoitEtAl2024">(Benoit et al. 2024)</a>.</p>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <p><span class="person given-name">Aurélien</span> <span class="person sur-name">Cavelan</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited <span class="person given-name">Franck</span> <span class="person sur-name">Cappello</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) in Chicago for three months (March, April, and May 2016) to initiate the project. Furthermore, we have been meeting regularly in the previous years. In particular,
@@ -648,8 +655,13 @@ which allowed us to make progress on the project.</p>
 <p><span class="person given-name">Valentin</span> <span class="person sur-name">Le Fèvre</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) has visited Univ. Tenn. Knoxville for 10 days in February 2019,
 and for 10 days in January 2020.</p>
 
-<p>Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. <span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month. 
-<span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made four visits to Univ. Tenn. Knoxville in 2023, for a total of approximately one month and a half.</p>
+<p>Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions.</p>
+
+<p><span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month.</p>
+
+<p><span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made four visits to Univ. Tenn. Knoxville in 2023, for a total of approximately one month and a half.</p>
+
+<p><span class="person given-name">Yves</span> <span class="person sur-name">Robert</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) made one visit to Univ. Tenn. Knoxville in 2024 for 9 days. The partners have attended SC’24 in Atlanta, USA, and had project discussions during the conference.</p>
 
 <h2 id="impact-and-publications">Impact and publications</h2>
 
@@ -673,9 +685,103 @@ on failure-prone HPC platforms was published in Resilience’18 <a class="citati
 
 <p>In 2022, two joint publications were published from the project, the first one to assess the usefulness and limitations of the Young/Daly formula for checkpointing, in the IC3 conference <a class="citation" href="#BenoitEtAl2022">(Benoit et al. 2022)</a>, and the other one to compare distributed termination detection algorithms for modern HPC platform, in the IJNC journal <a class="citation" href="#BosilcaEtAl2022">(Bosilca et al. 2022)</a>.</p>
 
-<p>In 2023, we have published one joint publication <a class="citation" href="#BarbutEtAl2023">(Barbut et al. 2023)</a> on when to checkpoint at the end of a fixed-length reservation, and we have written a collaborative survey between several JLESC institutions, that has been submitted at the end of the year.</p>
+<p>In 2023, we have published one joint publication <a class="citation" href="#BarbutEtAl2023">(Barbut et al. 2023)</a> on when to checkpoint at the end of a fixed-length reservation.</p>
+
+<p>In 2024, we have published  a survey on the FGCS special issue focusing on JLESC collaboration results 
+<a class="citation" href="#BautistaEtAl2024">(Bautista-Gomez et al. 2024)</a>, and a publication on checkpointing strategies for a fixed-length execution <a class="citation" href="#BenoitEtAl2024">(Benoit et al. 2024)</a>.</p>
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BautistaEtAl2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBautistaEtAl2024Bibtex" aria-expanded="false" aria-controls="collapseBautistaEtAl2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBautistaEtAl2024Abstract" aria-expanded="false" aria-controls="collapseBautistaEtAl2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="BautistaEtAl2024">Bautista-Gomez, Leonardo, Anne Benoit, Sheng Di, Thomas Herault, Yves Robert, and Hongyang Sun. 2024. “A Survey on Checkpointing Strategies: Should We Always Checkpoint à La Young/Daly?” <i>Future Generation Computer Systems</i> 161: 315–28. https://doi.org/<a href="https://doi.org/10.1016/j.future.2024.07.022" target="_blank">https://doi.org/10.1016/j.future.2024.07.022</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBautistaEtAl2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{BautistaEtAl2024,
+  title = {{A survey on checkpointing strategies: Should we always checkpoint à la Young/Daly?}},
+  journal = {Future Generation Computer Systems},
+  volume = {161},
+  pages = {315-328},
+  year = {2024},
+  issn = {0167-739X},
+  doi = {https://doi.org/10.1016/j.future.2024.07.022},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167739X24003777},
+  author = {Bautista-Gomez, Leonardo and Benoit, Anne and Di, Sheng and Herault, Thomas and Robert, Yves and Sun, Hongyang},
+  keywords = {Checkpointing, Optimal period, Young/Daly formula, Resilience},
+  hal_id = {hal-04767137},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BenoitEtAl2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBenoitEtAl2024Bibtex" aria-expanded="false" aria-controls="collapseBenoitEtAl2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBenoitEtAl2024Abstract" aria-expanded="false" aria-controls="collapseBenoitEtAl2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="BenoitEtAl2024">Benoit, Anne, Lucas Perotin, Yves Robert, and Frédéric Vivien. 2024. “Checkpointing Strategies for a Fixed-Length Execution.” In <i>14th Workshop on Fault-Tolerance for HPC at EXtreme Scale (FTXS 2024)</i>. Atlanta, United States. <a href="https://inria.hal.science/hal-04714372" target="_blank">https://inria.hal.science/hal-04714372</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBenoitEtAl2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{BenoitEtAl2024,
+  title = {{Checkpointing strategies for a fixed-length execution}},
+  author = {Benoit, Anne and Perotin, Lucas and Robert, Yves and Vivien, Fr{\'e}d{\'e}ric},
+  url = {https://inria.hal.science/hal-04714372},
+  booktitle = {{14th Workshop on Fault-Tolerance for HPC at eXtreme Scale (FTXS 2024)}},
+  address = {Atlanta, United States},
+  year = {2024},
+  month = nov,
+  keywords = {Checkpointing ; failures ; fail-stop errors ; fixed-length execution ; fixed-size reservation},
+  pdf = {https://inria.hal.science/hal-04714372v1/file/ckpt-resa.pdf},
+  hal_id = {hal-04714372},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
