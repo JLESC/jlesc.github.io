@@ -341,6 +341,12 @@ We have also considered applications executing for a fixed duration, namely the 
 {% cite BarbutEtAl2023 --file jlesc.bib %}.
 
 
+## Results for 2024/2025
+
+This year, we have published a survey on the FGCS special issue focusing on JLESC collaboration results,
+see {% cite BautistaEtAl2024 --file jlesc.bib %}. The Young/Daly formula provides an approximation of the optimal checkpointing period for a parallel application executing on a supercomputing platform. It was originally designed to handle fail-stop errors for preemptible tightly-coupled applications, but has been extended to other application and resilience frameworks. We provide some background and survey various scenarios to assess the usefulness and limitations of the formula, both for preemptible applications and workflow applications represented as a graph of tasks. We also discuss scenarios with uncertainties, and extend the study to silent errors. We exhibit cases where the optimal period is of a different order than that dictated by the Young/Daly formula, and finally we explain how checkpointing can be further combined with replication.
+
+As a follow-up of our work published the previous year at FTXS'2023, a workshop co-located with SC’2023 {% cite BarbutEtAl2023 --file jlesc.bib %}, we have considered checkpointing strategies for a parallel application executing on a large-scale platform whose nodes are subject to failures. The application executes for a fixed duration, namely the length of the reservation that it has been granted. We have shown the difficulty of the problem with small examples: it turns out that the optimal checkpointing strategy neither always uses periodic checkpoints nor always takes its last checkpoint exactly at the end of the reservation. Then, we have introduced a dynamic heuristic that is periodic and decides for the checkpointing frequency based upon thresholds for the time left; we have determined threshold times Tn such that it is best to plan for exactly n checkpoints if the time left (or initially the length of the reservation) is between Tn and Tn+1. Next, we have used time discretization and designed a (complicated) dynamic programming algorithm that computes the optimal solution, without any restriction on the checkpointing strategy. Finally, we have reported the results of an extensive simulation campaign that shows that the optimal solution is far more efficient than the Young/Daly periodic approach for short or mid-size reservations. These results have been published at FTXS'2024, see {% cite BenoitEtAl2024 --file jlesc.bib %}. 
 
 
 ## Visits and meetings
@@ -358,8 +364,13 @@ which allowed us to make progress on the project.
 {% person lefevre_v %} has visited Univ. Tenn. Knoxville for 10 days in February 2019,
 and for 10 days in January 2020.
 
-Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. {% person robert_y %} made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month. 
+Due to the Covid-19 sanitary situation, we have not had any visits for two years (March 2020 - February 2022), but we had numerous virtual interactions. 
+
+{% person robert_y %} made three visits to Univ. Tenn. Knoxville in 2022, for a total of approximately one month. 
+
 {% person robert_y %} made four visits to Univ. Tenn. Knoxville in 2023, for a total of approximately one month and a half. 
+
+{% person robert_y %} made one visit to Univ. Tenn. Knoxville in 2024 for 9 days. The partners have attended SC'24 in Atlanta, USA, and had project discussions during the conference. 
 
 
 ## Impact and publications
@@ -384,7 +395,10 @@ The work on resilient scheduling of moldable parallel jobs on high-performance c
 
 In 2022, two joint publications were published from the project, the first one to assess the usefulness and limitations of the Young/Daly formula for checkpointing, in the IC3 conference {% cite BenoitEtAl2022 --file jlesc.bib %}, and the other one to compare distributed termination detection algorithms for modern HPC platform, in the IJNC journal {% cite BosilcaEtAl2022 --file jlesc.bib %}. 
 
-In 2023, we have published one joint publication {% cite BarbutEtAl2023 --file jlesc.bib %} on when to checkpoint at the end of a fixed-length reservation, and we have written a collaborative survey between several JLESC institutions, that has been submitted at the end of the year. 
+In 2023, we have published one joint publication {% cite BarbutEtAl2023 --file jlesc.bib %} on when to checkpoint at the end of a fixed-length reservation. 
+
+In 2024, we have published  a survey on the FGCS special issue focusing on JLESC collaboration results 
+{% cite BautistaEtAl2024 --file jlesc.bib %}, and a publication on checkpointing strategies for a fixed-length execution {% cite BenoitEtAl2024 --file jlesc.bib %}.
 
 
 {% comment %}
