@@ -15,8 +15,6 @@ keywords:
   - simulations
 head: dubey_a
 members:
-  - lee_y
-  - weide_k
   - wahib_m
 ---
 
