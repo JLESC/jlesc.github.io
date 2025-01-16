@@ -15,7 +15,6 @@ keywords:
   - simulations
 head: dubey_a
 members:
-  - oneal_j
   - wahib_m
 ---
 
@@ -30,6 +29,9 @@ Flash-X was released in February 2022, with several features of the performance 
 
 ## Results for 2023/2024
 This year we worked on various code generation tools that each focus on one aspect of code generation, but are needed to integrate the performance portability layer with various physics. We used the tool CGKit for generated different control flow variants of the primary hydrodynamics solver in Flash-X. The results were put in a paper that was submitted to the FGCS special issue on jlesc. The paper is also on arxiv {% cite rudi2024cgkit --file jlesc.bib %}. We were also able to integrate a full-featured hydrodynamics solver with CGKit (for control flow) and Milhoja (for data movement). We are currently exploring performance of the code with these tools. 
+
+## Results for 2024/2025
+The paper on CGKit was published in FGCS special issue. We built code generators for patching recipe translation with the runtime and used it to experiment with variations in configurations for two different applications. The first was a hydrodynamics only application, while the second use a specialized equation of state and nuclear burning also. In both cases we varied the disctribution of work between the CPU and the GPU by simply changing the recipe with no modification in the source code. Some of the results from these experiments were presented in a poster at SC24. A paper using these results will be submitted shortly.
 
 ## Visits and meetings
 
