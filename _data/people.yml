@@ -1633,6 +1633,16 @@ lefevre_v:
   email: valentin.le-fevre@ens-lyon.fr
   homepage:
 
+lee_y:
+  sur_name: Lee
+  given_name: Youngjun
+  affiliation: anl
+  position: post-doc
+  topics:
+  email: leey@anl.gov
+  homepage:
+  
+
 lee_j:
   sur_name: Lee
   given_name: Jinpil
@@ -3239,9 +3249,18 @@ wahib_m:
   sur_name: Wahib
   given_name: Mohamed
   affiliation: riken
-  position:
+  position: permanent
   topics:
   email: mohamed.attia@riken.jp
+  homepage:
+
+weide_k:
+  sur_name: Weide
+  given_name: Klaus
+  affiliation: anl
+  position: permanent
+  topics:
+  email: kweide@uchicago.edu
   homepage:
 
 wheeler_d:
