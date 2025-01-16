@@ -16,6 +16,7 @@ members:
   - antoniu_g
   - monniot_j
   - jolivel_t
+  - luettgau_j
 ---
 
 ## Research topic and goals
