@@ -35,10 +35,16 @@ members:
 
 The end of transistor scaling encourages us to challenge innovative architectural approaches for the future of computing. Reconfigurable architectures, such as field-programmable gate arrays (FPGA) and coarse-grained reconfigurable architecture (CGRA), offer significant potential for architectural exploration. Many emerging AI accelerators (e.g., Cerebras and Groq) are built on reconfigurability and dataflow design principles, often combining significantly distributed on-chip memories, high-speed interconnects, and domain-specific languages. In this project,  we will evaluate existing reconfigurable architectures and explore hardware designs to accelerate our target workloads, which include numerical algorithms, streaming data compression, and real-time AI at the edge. We will also investigate architecture designs, design workflow (design, verification, layout, etc.), compiler technologies, architecture emulation/simulation, and emerging technologies such as Chiplet, structured ASICs, and FPGA/CGRA generators. We aim to demonstrate enhanced computing efficiency of selected workloads on reconfigurable architectures and highlight the potential of custom hardware designs even for extensive distributed resources.
 
+## Results for 2024/2025
+
+* Organized a break-out session at the JLESC 16th workshop in Japan (Apr 2024)
+* Organized SC24 BoF session: Open-Source Hardware Tools: Advancing Architecture Research and Chip Prototyping (Nov 2024)
+* Held a technical meeting in Japan to discuss streaming data compressor algorithms and designs (Dec 2024)
+
 ## Results for 2023/2024
 
-* organized a break-out session at the JLESC 15th workshop in France and a workshop at the HEART symposium in Japan.
-* published two co-authored papers at workshops held with SC23. We released the source code associated with the SC23 DRBSD paper.
+* Organized a break-out session at the JLESC 15th workshop in France and a workshop at the HEART symposium in Japan.
+* Published two co-authored papers at workshops held with SC23. We released the source code associated with the SC23 DRBSD paper.
 
 ## Visits and meetings
 
