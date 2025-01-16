@@ -323,6 +323,18 @@
               
               
               
+              <li>
+                  Lee Youngjun (ANL)
+              </li>
+              
+              
+              
+              <li>
+                  Weide Klaus (ANL)
+              </li>
+              
+              
+              
               
               
               
@@ -356,7 +368,7 @@
 <p>This year we worked on various code generation tools that each focus on one aspect of code generation, but are needed to integrate the performance portability layer with various physics. We used the tool CGKit for generated different control flow variants of the primary hydrodynamics solver in Flash-X. The results were put in a paper that was submitted to the FGCS special issue on jlesc. The paper is also on arxiv <a class="citation" href="#rudi2024cgkit">(Rudi et al. 2024)</a>. We were also able to integrate a full-featured hydrodynamics solver with CGKit (for control flow) and Milhoja (for data movement). We are currently exploring performance of the code with these tools.</p>
 
 <h2 id="results-for-20242025">Results for 2024/2025</h2>
-<p>The paper on CGKit was published in FGCS special issue. We built code generators for patching recipe translation with the runtime and used it to experiment with variations in configurations for two different applications. The first was a hydrodynamics only application, while the second use a specialized equation of state and nuclear burning also. In both cases we varied the disctribution of work between the CPU and the GPU by simply changing the recipe with no modification in the source code. Some of the results from these experiments were presented in a poster at SC24. A paper using these results will be submitted shortly.</p>
+<p>The paper on CGKit was published in FGCS special issue <a class="citation" href="#RUDI2025107511">(Rudi et al. 2025)</a>. We built code generators for patching recipe translation with the runtime and used it to experiment with variations in configurations for two different applications. The first was a hydrodynamics only application, while the second use a specialized equation of state and nuclear burning also. In both cases we varied the disctribution of work between the CPU and the GPU by simply changing the recipe with no modification in the source code. Some of the results from these experiments were presented in a poster at SC24 <a class="citation" href="#Lee2024">(Lee et al. 2024)</a>. A paper using these results will be submitted shortly.</p>
 
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
@@ -365,6 +377,49 @@
 <h2 id="impact-and-publications">Impact and publications</h2>
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          RUDI2025107511
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRUDI2025107511Bibtex" aria-expanded="false" aria-controls="collapseRUDI2025107511Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseRUDI2025107511Abstract" aria-expanded="false" aria-controls="collapseRUDI2025107511Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="RUDI2025107511">Rudi, Johann, Youngjun Lee, Aidan H. Chadha, Mohamed Wahib, Klaus Weide, Jared P. O’Neal, and Anshu Dubey. 2025. “CG-Kit: Code Generation Toolkit for Performant and Maintainable Variants of Source Code Applied to Flash-X Hydrodynamics Simulations.” <i>Future Generation Computer Systems</i> 163: 107511. https://doi.org/<a href="https://doi.org/10.1016/j.future.2024.107511" target="_blank">https://doi.org/10.1016/j.future.2024.107511</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseRUDI2025107511Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{RUDI2025107511,
+  title = {{CG-K}it: Code Generation Toolkit for performant and maintainable variants of source code applied to {F}lash-{X} hydrodynamics simulations},
+  journal = {Future Generation Computer Systems},
+  volume = {163},
+  pages = {107511},
+  year = {2025},
+  issn = {0167-739X},
+  doi = {https://doi.org/10.1016/j.future.2024.107511},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167739X24004758},
+  author = {Rudi, Johann and Lee, Youngjun and Chadha, Aidan H. and Wahib, Mohamed and Weide, Klaus and O’Neal, Jared P. and Dubey, Anshu}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
@@ -383,7 +438,7 @@
     </div>
 
     <div class="bibtex-ref-entry col-md-9 col-sm-12">
-      <span id="rudi2024cgkit">Rudi, Johann, Youngjun Lee, Aidan H. Chadha, Mohamed Wahib, Klaus Weide, Jared P. O’Neal, and Anshu Dubey. 2024. “CG-Kit: Code Generation Toolkit for Performant and Maintainable Variants of Source Code Applied to Flash-X Hydrodynamics Simulations.”</span>
+      <span id="rudi2024cgkit">———. 2024. “CG-Kit: Code Generation Toolkit for Performant and Maintainable Variants of Source Code Applied to Flash-X Hydrodynamics Simulations.”</span>
     </div>
   </div>
   <div class="collapse" id="collapserudi2024cgkitBibtex">
@@ -397,6 +452,44 @@
   archiveprefix = {arXiv},
   note = {submitted to FGCS},
   primaryclass = {cs.DC}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Lee2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLee2024Bibtex" aria-expanded="false" aria-controls="collapseLee2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLee2024Abstract" aria-expanded="false" aria-controls="collapseLee2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Lee2024">Lee, Y., W. Kwiecinski, K. Weide, J. Rudi, J. O’Neal, E. Vatai, M. Wahib, T. Klosterman, and A. Dubey. 2024. “ORCHA: A Performance Portability System For Flash-X.” In <i>SC24, Poster</i>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLee2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Lee2024,
+  title = {ORCHA: A Performance Portability System For Flash-X},
+  author = {Lee, Y. and Kwiecinski, W. and Weide, K. and Rudi, J. and O’Neal, J. and Vatai, E. and Wahib, M. and Klosterman, T. and Dubey, A.},
+  year = {2024},
+  booktitle = {SC24, poster}
 }
 </code></pre>
       </div>
