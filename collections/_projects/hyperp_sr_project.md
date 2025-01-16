@@ -2,11 +2,11 @@
 layout: post
 title: Architecture and Hyperparameter Search for Super-Resolution Networks Operating on Medical Images
 date: 2022-12-13
-updated: 2024-01-26
+updated: 2025-01-16
 navbar: Research
 subnavbar: Projects
 project_url:
-status: suspended
+status: running
 topics:
   - numerics
   - apps
