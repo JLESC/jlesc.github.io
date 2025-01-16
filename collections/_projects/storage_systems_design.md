@@ -38,6 +38,8 @@ A conference paper presenting Fives {% cite monniotEtAl2024 --file jlesc.bib %},
 
 We also introduced MOSAIC {% cite jolivelEtAl2024 --file jlesc.bib %}, an approach to categorize execution traces and give information about the general behavior of applications from an I/O perspective. we analyze a full year of I/O execution traces of Blue Waters from which, we determine a set of non-exclusive categories to describe the I/O behavior of jobs, including the temporality and the periodicity of the accesses and the metadata overhead. This paper has been accepted in the SC'24 PDSW workshop. This work is currently being pursued, with several lines of research focusing in particular on automating the clustering of I/O operations.
 
+Finally, still using Blue Waters traces among others, we proposed an in-depth study of access temporality on large-scale storage systems. This work has been accepted at IPDPS 2025 {% cite boitoEtAl2024 --file jlesc.bib %}.
+
 ## References
 {% bibliography --cited --file jlesc.bib %}
 
