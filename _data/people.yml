@@ -1637,7 +1637,7 @@ lee_y:
   sur_name: Lee
   given_name: Youngjun
   affiliation: anl
-  position: post-doc
+  position: post_doc
   topics:
   email: leey@anl.gov
   homepage:
