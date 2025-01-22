@@ -2,7 +2,7 @@
 layout: post
 title: Optimizing Checkpoint Restart Through Access Pattern Awareness
 date: 2024-02-05
-updated: 2024-02-05
+updated: 2025-01-22
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -14,6 +14,8 @@ keywords:
 head: nicolae_b
 members:
   - tan_n
+  - assogba_k
+  - malkmus_z
   - cappello_f
   - taufer_m
 ---
@@ -25,7 +27,7 @@ Second, the heterogeneity of the storage hierarchy increases the complexity of p
 Last, developers are often unaware of the storage hierarchy's high cost or need to learn how to efficiently leverage the complex storage tiers.
 VeloC addresses these resilience challenges: it takes advantage of the different storage tiers and provides scalable asynchronous checkpoints. This project combines VeloC with the Kokkos performance portability framework to enable performance-portable, resilient checkpointing at runtime.
 
-Specifically, this project will improve checkpoint restart scalability and performance by leveraging information about the memory access patterns in large-scale applications at runtime. Memory access patterns describe how an application updates its data over time. We use the information to reduce checkpoint sizes, increase checkpoint frequency, and ultimately alleviate pressure on the I/O system. Sparse update patterns, in which applications update very little data between checkpoints, can significantly benefit from VeloC. Sparse update patterns frequently occur in graph applications such as graph alignment. Checkpointing the entire piece of sparsely updated data is inefficient. A better strategy is to make an incremental checkpoint that only saves the sparse updates. The project studies different hash-based techniques for efficiently identifying differences between checkpoints. Objectives include analyzing the various methods' checkpoint size and runtime tradeoffs on both CPU and GPU platforms. Graph alignment is only one of the applications considered in this project; other applications and access patterns will be selected among those of interest to the JLESC community.
+Specifically, this project will improve checkpoint restart scalability and performance by leveraging information about the memory access patterns in large-scale applications at runtime. Memory access patterns describe how an application updates its data over time. We use the information to reduce checkpoint sizes, increase checkpoint frequency, and ultimately alleviate pressure on the I/O system. Sparse update patterns, in which applications update very little data between checkpoints, can significantly benefit from VeloC. Sparse update patterns frequently occur in graph applications such as graph alignment. Checkpointing the entire piece of sparsely updated data is inefficient. A better strategy is to make an incremental checkpoint that only saves the sparse updates. The project studies different hash-based techniques for efficiently identifying differences between checkpoints. Objectives include analyzing the various methods' checkpoint size and runtime tradeoffs on both CPU and GPU platforms. Graph alignment is only one of the applications considered in this project; other applications and access patterns will be selected among those of interest to the JLESC community such as reproducibility analysis.
 
 ## Results for 2021/2022
 
@@ -50,12 +52,31 @@ We began investigating the use of checkpoint histories for reproducibility purpo
 
 In Year 4 of this project, we will investigate using Merkle trees as metadata for accelerating comparisons of checkpoints between different runs. Comparing intermediate checkpoints from different runs will help quantify and verify the reproducibility of applications. We further augment our hash-based techniques with a fuzzy hash well suited for floating-point data.
 
+## Results for 2024/2025
+In Year 4 of this project, we expanded our Merkle tree-based metadata techniques to improve reproducibility analysis. Kevin Assogba, a PhD student, and his advisor Professor M. Mustafa Rafique from the Rochester Institute of Technology joined the project. 
+
+We formulate an innovative method to address the growing reproducibility crisis by using scalable capture and comparing intermediate multi-run results. By capitalizing on intermediate checkpoints and hash-based techniques with user-defined error bounds, our method identifies divergences early in the execution paths. We employ Merkle trees for checkpoint data to reduce the I/O overhead associated with loading historical data. Our evaluations on the nondeterministic HACC cosmology simulation show that our method effectively captures differences above a predefined error bound and significantly reduces I/O overhead. Our solution provides a robust and scalable method for improving reproducibility, ensuring that scientific applications on HPC systems yield trustworthy and reliable results. The results of this work were published and presented at the 2024 Middleware conference in Hong Kong, China.
+
+At the 16th JLESC workshop, UTK presented a tutorial on LLNL's Flux resource manager, a next-generation resource manager designed from the ground up to support exascale systems (e.g., El Capitan) and novel, advanced applications (e.g., workflows). Zackary Malkmus joined the project as a graduate student at UTK. Nigel Tan successfully defended his PhD dissertation in August 2024. Nigel will continue to provide support and mentorship to Zackary and Kevin. Nigel and Kevin attended SC24 in Atlanta, Georgia, as a participant in the early career program and a lead student volunteer, respectively.
+
+In Year 5 of this project, we will explore integrating our techniques into ADIOS2 for rapidly creating and storing metadata for later efficient retrieval. We will extend our techniques to the online analysis of application reproducibility, introducing optimizations for efficient IO pipelining and minimum interference with running applications in a journal paper. We will also improve our incremental diff restore implementation and investigate using dynamic chunk sizes and error tolerances for greater deduplication efficiency and data analysis.
+
 ## Visits and meetings
+ * Michela Taufer and Nigel Tan attended the 2024 JLESC workshop in Kobe Japan
  * Nigel Tan spent the summer of 2022 at ANL working on the project
  * The team meets weekly during the entire year
  * The team from UTK and ANL met in person at the ICPP 2023 in Salt Lake City in August 2023 and at SC23 in Denver, Colorado in November 2023.
 
 ## Impact and publications
+ * **Publication:** {% cite TanEtAl2024 –file jlesc.bib %}
+ * **Talk:** Nigel Tan, Kevin Assogba, Jay Ashworth, Befikir Bogale, Franck Cappello, M. Mustafa Rafique, Michela Taufer, and Bogdan Nicolae, Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results. 25th International Middleware Conference, December 2024, Hong Kong.
+ * **Poster:** Nigel Tan, Kevin Assogba, Jay Ashworth, Befikir Bogale, Franck Cappello, M. Mustafa Rafique, Michela Taufer, and Bogdan Nicolae, Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results. 25th International Middleware Conference, December 2024, Hong Kong.
+ * **Talk:** Kevin Assogba, Bogdan Nicolae, M. Mustafa Rafique. Accelerating HPC Workflow Results and Performance Reproducibility Analytics. Supercomputing 2024 Doctoral Showcase, 2024.
+ * **Poster:** Kevin Assogba, Bogdan Nicolae, M. Mustafa Rafique. Accelerating HPC Workflow Results and Performance Reproducibility Analytics. 16 posters selected. Supercomputing 2024 Doctoral Showcase, 2024.
+ * **Tutorial:** Ian Lumsden, Michela Tafuer, and Nigel Tan presented a tutorial on LLNL's Flux resource manager, a next-generation resource manager designed from the ground up to support exascale systems (e.g., El Capitan) and novel, advanced applications (e.g., workflows).
+ * **Nigel Tan** was selected for the Early Career program at the Supercomputing 2024 conference
+ * **Kevin Assogba** was selected as a lead student volunteer at the Supercomputing 2024 conference
+ * **Michela Taufer** was selected as a JLESC Fellow
  * **Talk:** **Nigel Tan**, Michela Taufer. Modernizing Simulation Software for the Exascale Era. Supercomputing 2023 Doctoral Showcase, 2023.
  * **Poster:** **Nigel Tan**, Michela Taufer. Modernizing Simulation Software for the Exascale Era. 12 posters selected. Supercomputing 2023 Doctoral Showcase, 2023.
  * **Talk:** **Michela Taufer**. Scalable GPU-Accelerated Incremental Checkpointing of Sparsely Updated Data. Mini-symposium on “Performance in I/O and Fault Tolerance for Scientific Applications.” Platform for Advanced Scientific Computing (PASC) Conference, June 26-28, 2023, Davos, Switzerland.
