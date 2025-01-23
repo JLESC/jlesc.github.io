@@ -76,6 +76,18 @@ The activities regarding GNNs are extended to respiratory flows. Hadrien Calmet 
 
 Regarding the AI-based reduced-order model, the scope of application is extended. First, the method is applied to the turbulent flow around a vehicle calculated with 260 million cells. Distributed training was conducted for over 14 hours using 55,000 Fugaku computing nodes. Since the model is still in the early stages of learning, small-period eddies could not yet be reproduced, but large-scale structure could be reconstructed. Second, the robustness of the model is addressed for a two-dimensional flow around two square cylinders, which have a varying distances. It is demonstrated that flow configurations that did not belong to the training data are successfully reproduced using 24 modes. It is planned to submit these results to the JLESC special issue of the journal "Future Generation Computer Systems".
 
+## Results for 2024/2025
+The work on PINNs in collaboration between JSC and RIKEN is published in the JLESC special issue of *Future Generation Computer Systems*{% cite Puri2024 --file jlesc.bib %}. In this work, the accuracy and performance of PINNs is compared to DNNs for classical flow problems. The work quantifies and compares the accuracy of the networks when a fraction of training data is available for training. This comparison also considered the computational effort for training the networks. Furthermore, the effect of location of the training data in the computational domain and potential noise are also assessed. It is found that in most cases, PINNs outperform DNNs in terms of accuracy, especially when the training data is positioned in certain Regions of Interest, such as near the wall. These findings are especially interesting for future investigations in vehicle aerodynamics, where sensor data is sparse and mostly available close to the wall of the vehicle body. 
+
+Currently, RIKEN is leading another development to the PINN model, where it is extended to predict flow fields under arbitrary flow conditions, such as Reynolds numbers and inflow velocity distributions, by introducing a Deep Operator Network (DeepONet). This approach is expected to facilitate the performance of a large number of simulations for various scenarios at a low cost. 
+
+Hadrien Calmet from BSC is continuing his work on the GCNN applied to respiratory flow problems. The objective is to predict the pressure drop and wall shear stress for flow in the nasal cavity with GCNN. Additionally, a data augmentation strategy is developed to generate a virtual population from a limited amount of real data, addressing the problem of data accessibility and enabling generalization to unseen real geometries. The trainings are facilitated by the AI4HPC framework developed at JSC, which enables large scale trainings of ML models in HPC systems. The work is currenly under progress and is planned to be submitted to a journal. 
+
+In this project period, Mario Rüttgers from JSC started working at the Data-Driven Fluid Engineering (DDFE) Lab at Inha University in South Korea. However, he continues to be associated to the JLESC activities in this project. The current efforts are directed towards development of physics-aware GCNNs for different use-cases in respiratory flows, urban flows, and combustion. Apart from the baseline development, model parallelism is being investigated for the GCNN model with graph partitioning approaches in collaboration with JSC.
+
+The work on AI-based reduced-order models between JSC and RIKEN is published in the JLESC special issue of *Future Generation Computer Systems*{% cite Higashida2024 --file jlesc.bib %}.
+The robustness of an artificial neural network for model order reduction of flow field data is studied, using large-scale distributed learning on up to 6259 nodes of the Fugaku supercomputer. Flow around two square cylinders with varying center distances is analyzed using simulation data for training and testing. The network's ability to reconstruct flow fields with 2, 12, and 24 modes is evaluated, showing that 2 modes fail to capture both low- and high-frequency structures, while 12 and 24 modes yield more accurate reconstructions, especially for high-frequency waves near the cylinders. With 24 modes, the network produces smooth velocity fields that reproduce all relevant flow features for all geometric variations. Comparisons with proper orthogonal decomposition (POD) using 24 modes reveal that the neural network achieves lower mean squared errors across all cases, highlighting its superiority over linear methods like POD for reconstructing non-linear flow fields.
+
 ## Visits and meetings
 
 * throughout 2020: discussions of hosting a JSC researcher at R-CCS (canceled due to the COVID-19 pandemic)
@@ -88,13 +100,16 @@ Regarding the AI-based reduced-order model, the scope of application is extended
 * 21.03.2023 - 23.03.2023: Ando Kazuto presents the jointly developed results at the 15th JLESC workshop in Bordeaux, France.
 * 03.07.2023 - 07.07.2023: Research exchange: Onishi Junya from R-CCS visits researchers from JSC at JSC.
 * 24.10.2023 - 27.10.2023: Research exchange: Mario Rüttgers visits researchers from R-CCS at R-CCS.
+* 16.04.2024 - 18.04.2024: Rakesh Sarma (JSC), Junya Onishi (R-CCS) and Hadrien Calmet (BSC) present the jointly developed results at the 16th JLESC workshop in Kobe, Japan.
+* 02.09.2024 - 04.09.2024: Mario Rüttgers (JSC), Rishabh Puri (KIT), Rakesh Sarma (JSC), Hadrien Calmet (BSC) and Junya Onishi (R-CCS) presented at the 35th Parallel Computational Fluid Dynamics (ParCFD) conference in Bonn, Germany.
+* 08.09.2024 - 11.09.2024: Makoto Tsubokura from R-CCS and Mario Rüttgers from JSC presented at the 15th International Conference on Parallel Processing and Applied Mathematics (PPAM), Ostrava, Czech Republic.
 
 ## Impact and publications
 
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
-Further intensification of the cooperation and planning of research stays for a post-pandemic phase.
+Future plans are discussed in regular meetings. Furthermore, Makoto Tsubokura intends to visit JSC in 03/2025 to further discuss the future project plan.
 
 ## References
 
