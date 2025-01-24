@@ -395,6 +395,15 @@ bosilca_g:
   email: bosilca@icl.utk.edu
   homepage: http://www.icl.utk.edu/~bosilca/
 
+bouchot_j:
+  sur_name: Jean Luc
+  given_name: Bouchot
+  affiliation: inria
+  position: permanent
+  topics: automatic differentiation, static analysis, compilers
+  email: jean-luc.bouchot@inria.fr
+  homepage: https://jlbouchot.github.io/
+  
 bouge_l:
   sur_name: Bougé
   given_name: Luc
@@ -457,6 +466,15 @@ cainolores_s:
   topics:
   email: scainolo@utk.edu
   homepage:
+
+caillau_j:
+  sur_name:  Jean-Baptiste
+  given_name: Caillau
+  affiliation: inria
+  position: permanent
+  topics: automatic differentiation, optimization
+  email: jean-baptiste.caillau@univ-cotedazur.fr
+  homepage: https://caillau.perso.math.cnrs.fr/
 
 caklovic_g:
   sur_name: Caklovic
@@ -1976,6 +1994,15 @@ monniot_j:
   email: julien.monniot@inria.fr
   homepage: 
 
+montoison_a:
+  sur_name: Montoison
+  given_name: Alexis
+  affiliation: anl
+  position: post_doc
+  topics: automatic differentiation, optimization, Julia
+  email: amontoison@anl.gov
+  homepage: https://github.com/amontoison
+  
 morales-hernandez_m:
   sur_name: Morales-Hernández
   given_name: Mario
@@ -2070,7 +2097,7 @@ narayanan_s:
   given_name: Sri Hari Krishna
   affiliation: anl
   position: permanent
-  topics: ADIC, Performance Bounds
+  topics: automatic differentiation, compilers, earth system models
   email: snarayan@mcs.anl.gov
   homepage: http://www.mcs.anl.gov/person/sri-hari-krishna-narayanan
 
