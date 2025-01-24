@@ -2,7 +2,7 @@
 layout: post
 title: Deep Neural Networks for CFD Simulations
 date: 2019-12-16
-updated: 2024-01-01
+updated: 2025-01-24
 navbar: Research
 subnavbar: Projects
 project_url:
