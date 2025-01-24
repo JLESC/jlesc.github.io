@@ -430,6 +430,18 @@ planned.</p>
 
 <p>Regarding the AI-based reduced-order model, the scope of application is extended. First, the method is applied to the turbulent flow around a vehicle calculated with 260 million cells. Distributed training was conducted for over 14 hours using 55,000 Fugaku computing nodes. Since the model is still in the early stages of learning, small-period eddies could not yet be reproduced, but large-scale structure could be reconstructed. Second, the robustness of the model is addressed for a two-dimensional flow around two square cylinders, which have a varying distances. It is demonstrated that flow configurations that did not belong to the training data are successfully reproduced using 24 modes. It is planned to submit these results to the JLESC special issue of the journal “Future Generation Computer Systems”.</p>
 
+<h2 id="results-for-20242025">Results for 2024/2025</h2>
+<p>The work on PINNs in collaboration between JSC and RIKEN is published in the JLESC special issue of <em>Future Generation Computer Systems</em><a class="citation" href="#Puri2024">(Puri et al. 2024)</a>. In this work, the accuracy and performance of PINNs is compared to DNNs for classical flow problems. The work quantifies and compares the accuracy of the networks when a fraction of training data is available for training. This comparison also considered the computational effort for training the networks. Furthermore, the effect of location of the training data in the computational domain and potential noise are also assessed. It is found that in most cases, PINNs outperform DNNs in terms of accuracy, especially when the training data is positioned in certain Regions of Interest, such as near the wall. These findings are especially interesting for future investigations in vehicle aerodynamics, where sensor data is sparse and mostly available close to the wall of the vehicle body.</p>
+
+<p>Currently, RIKEN is leading another development to the PINN model, where it is extended to predict flow fields under arbitrary flow conditions, such as Reynolds numbers and inflow velocity distributions, by introducing a Deep Operator Network (DeepONet). This approach is expected to facilitate the performance of a large number of simulations for various scenarios at a low cost.</p>
+
+<p>Hadrien Calmet from BSC is continuing his work on the GCNN applied to respiratory flow problems. The objective is to predict the pressure drop and wall shear stress for flow in the nasal cavity with GCNN. Additionally, a data augmentation strategy is developed to generate a virtual population from a limited amount of real data, addressing the problem of data accessibility and enabling generalization to unseen real geometries. The trainings are facilitated by the AI4HPC framework developed at JSC, which enables large scale trainings of ML models in HPC systems. The work is currenly under progress and is planned to be submitted to a journal.</p>
+
+<p>In this project period, Mario Rüttgers from JSC started working at the Data-Driven Fluid Engineering (DDFE) Lab at Inha University in South Korea. However, he continues to be associated to the JLESC activities in this project. The current efforts are directed towards development of physics-aware GCNNs for different use-cases in respiratory flows, urban flows, and combustion. Apart from the baseline development, model parallelism is being investigated for the GCNN model with graph partitioning approaches in collaboration with JSC.</p>
+
+<p>The work on AI-based reduced-order models between JSC and RIKEN is published in the JLESC special issue of <em>Future Generation Computer Systems</em><a class="citation" href="#Higashida2024">(Higashida et al. 2024)</a>.
+The robustness of an artificial neural network for model order reduction of flow field data is studied, using large-scale distributed learning on up to 6259 nodes of the Fugaku supercomputer. Flow around two square cylinders with varying center distances is analyzed using simulation data for training and testing. The network’s ability to reconstruct flow fields with 2, 12, and 24 modes is evaluated, showing that 2 modes fail to capture both low- and high-frequency structures, while 12 and 24 modes yield more accurate reconstructions, especially for high-frequency waves near the cylinders. With 24 modes, the network produces smooth velocity fields that reproduce all relevant flow features for all geometric variations. Comparisons with proper orthogonal decomposition (POD) using 24 modes reveal that the neural network achieves lower mean squared errors across all cases, highlighting its superiority over linear methods like POD for reconstructing non-linear flow fields.</p>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <ul>
@@ -443,11 +455,110 @@ planned.</p>
   <li>21.03.2023 - 23.03.2023: Ando Kazuto presents the jointly developed results at the 15th JLESC workshop in Bordeaux, France.</li>
   <li>03.07.2023 - 07.07.2023: Research exchange: Onishi Junya from R-CCS visits researchers from JSC at JSC.</li>
   <li>24.10.2023 - 27.10.2023: Research exchange: Mario Rüttgers visits researchers from R-CCS at R-CCS.</li>
+  <li>16.04.2024 - 18.04.2024: Rakesh Sarma (JSC), Junya Onishi (R-CCS) and Hadrien Calmet (BSC) present the jointly developed results at the 16th JLESC workshop in Kobe, Japan.</li>
+  <li>02.09.2024 - 04.09.2024: Mario Rüttgers (JSC), Rishabh Puri (KIT), Rakesh Sarma (JSC), Hadrien Calmet (BSC) and Junya Onishi (R-CCS) presented at the 35th Parallel Computational Fluid Dynamics (ParCFD) conference in Bonn, Germany.</li>
+  <li>08.09.2024 - 11.09.2024: Makoto Tsubokura from R-CCS and Mario Rüttgers from JSC presented at the 15th International Conference on Parallel Processing and Applied Mathematics (PPAM), Ostrava, Czech Republic.</li>
 </ul>
 
 <h2 id="impact-and-publications">Impact and publications</h2>
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Puri2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsePuri2024Bibtex" aria-expanded="false" aria-controls="collapsePuri2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsePuri2024Abstract" aria-expanded="false" aria-controls="collapsePuri2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Puri2024">Puri, Rishabh, Junya Onishi, Mario Rüttgers, Rakesh Sarma, Makoto Tsubokura, and Andreas Lintermann. 2024. “On the Choice of Physical Constraints in Artificial Neural Networks for Predicting Flow Fields.” <i>Future Generation Computer Systems</i> 161 (December): 361–75. https://doi.org/10.1016/j.future.2024.07.009.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsePuri2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Puri2024,
+  author = {Puri, Rishabh and Onishi, Junya and R{\"{u}}ttgers, Mario and Sarma, Rakesh and Tsubokura, Makoto and Lintermann, Andreas},
+  doi = {10.1016/j.future.2024.07.009},
+  issn = {0167739X},
+  journal = {Future Generation Computer Systems},
+  month = dec,
+  pages = {361--375},
+  title = {{On the choice of physical constraints in artificial neural networks for predicting flow fields}},
+  url = {https://linkinghub.elsevier.com/retrieve/pii/S0167739X24003728},
+  volume = {161},
+  year = {2024}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Higashida2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHigashida2024Bibtex" aria-expanded="false" aria-controls="collapseHigashida2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHigashida2024Abstract" aria-expanded="false" aria-controls="collapseHigashida2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Higashida2024">Higashida, Aito, Kazuto Ando, Mario Rüttgers, Andreas Lintermann, and Makoto Tsubokura. 2024. “Robustness Evaluation of Large-Scale Machine Learning-Based Reduced Order Models for Reproducing Flow Fields.” <i>Future Generation Computer Systems</i> 159 (October): 243–54. https://doi.org/10.1016/j.future.2024.05.005.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHigashida2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Higashida2024,
+  author = {Higashida, Aito and Ando, Kazuto and R{\"{u}}ttgers, Mario and Lintermann, Andreas and Tsubokura, Makoto},
+  doi = {10.1016/j.future.2024.05.005},
+  issn = {0167739X},
+  journal = {Future Generation Computer Systems},
+  month = oct,
+  pages = {243--254},
+  title = {{Robustness evaluation of large-scale machine learning-based reduced order models for reproducing flow fields}},
+  url = {https://linkinghub.elsevier.com/retrieve/pii/S0167739X24002176},
+  volume = {159},
+  year = {2024}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseHigashida2024Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        The robustness of an artificial neural network that performs model order reduction for flow field data is studied. The network is trained with a large-scale distributed learning approach using up to 6, 259 nodes of the supercomputer Fugaku. Flow around two square cylinders with a varying distance between their centers is investigated. The network is trained and tested with data from numerical simulations. First, the capability to reproduce flow fields with 2, 12, and 24 modes is investigated by comparing the reconstructed flow data to simulated data. It is shown, that reconstructions based on 2 modes cannot capture both, low- and high-frequency flow structures correctly, whereas predictions based on 12 and 24 modes yield improved flow fields, especially in the case of high-frequency waves in the vicinity of the square cylinders. Reconstructions with 24 modes provide smooth velocity fields that reproduce all relevant low- and high-frequency waves for all variations of the distance between the two square cylinders. Second, the performance of the machine learning-based reconstructions are compared to proper orthogonal decomposition, which is a commonly used reduced order model technique. The comparison only includes flow fields based on 24 modes. For all geometric variations, the mean squared errors of the reconstructions by the conventional method are higher than those of the machine learning model. This underlines the advantage of artificial neural networks over linear methods like proper orthogonal decomposition for tasks like reconstructing flow fields that are characterized by non-linear governing equations.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
@@ -705,7 +816,7 @@ planned.</p>
 </li></ol>
 
 <h2 id="future-plans">Future plans</h2>
-<p>Further intensification of the cooperation and planning of research stays for a post-pandemic phase.</p>
+<p>Future plans are discussed in regular meetings. Furthermore, Makoto Tsubokura intends to visit JSC in 03/2025 to further discuss the future project plan.</p>
 
 <h2 id="references">References</h2>
 
