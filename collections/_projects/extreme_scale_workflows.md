@@ -266,6 +266,12 @@ The Joint Laboratory for Extreme-Scale Computing (JLESC) focuses on software cha
 
 We have published our results in the Elsevier FGCS Journal {% cite yildiz2024extreme --file jlesc.bib %}.
 
+### Accelerating Neural Architecture Search With Wilkins
+
+* Orcun Yildiz and Tom Peterka of ANL, Kin Wai Ng and Michela Taufer of UTK
+
+Finding accurate neural networks for specific scientific datasets or problems often involves searching through thousands of architectures, resulting in high computational costs. To address this, the Global Computing Lab (GCL) at UTK and Argonne National Laboratory (ANL) have collaborated to advance neural architecture search (NAS) algorithms by integrating two tools: Analytics for Neural Networks (A4NN), developed by GCL, and Wilkins, developed by ANL. The A4NN workflow is designed to significantly reduce the time and resources required to identify accurate and efficient neural network (NN) architectures. Wilkins is a workflow orchestrator that enhances A4NN by providing a flexible interface for workflow specification, a high-performance HDF5-based data transport layer, and flow control mechanisms for tasks with varying data rates. This integration simplifies the execution of decoupled tasks in A4NN, including early stopping of NN training through parametric modeling or identifying redundant networks based on structural similarity. Preliminary results on baseline datasets demonstrated minimal overhead while significantly improving flexibility and time savings compared to the previous A4NN version. For future work, we plan to rigorously evaluate the enhanced workflow on diverse scientific datasets and incorporate additional decoupled tasks, such as incremental checkpointing strategies, to optimize storage utilization and further enhance the efficiency of NAS processes.
+
 ## Visits and meetings
 
  * Pierre-Louis Guhur of ENS 9 months at ANL in 2016
