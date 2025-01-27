@@ -2,11 +2,11 @@
 layout: post
 title: Advanced data and visualization pipelines on the example of nekRS
 date: 2023-05-20
-updated: 2024-01-31
+updated: 2025-01-27
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - storage
 keywords:
@@ -103,8 +103,12 @@ None yet.
 ## Results for 2023/2024
 We have examined the developments in relation to different visualization strategies and at scale. We detailed our approach of instrumenting NekRS, a GPU-focused thermal-fluid simulation code employing the spectral element method (SEM), and analyzed varied \textit{in situ} and \text{in transit} strategies for data rendering. Additionally, we provided concrete scientific use-cases and reported on runs performed on Polaris, Argonne Leadership Computing Facility's (ALCF) 44 Petaflop supercomputer and Jülich Wizard for European Leadership Science (JUWELS) Booster, Jülich Supercomputing Centre's (JSC) 71 Petaflop High Performance Computing (HPC) system, offering practical insight into the implications of our methodology. Our results were presented at the ISAV23, awarded with the best paper award, and publish in the ISAV23 proceeding {% cite MateevitsiEtAl2023 --file jlesc.bib %}.
 
+## Results for 2024/2025
+We have continued our in situ work with nekRS and, building on the publication of ISAV23, extended the workflow towards ASCENT. We tested the nekRS-ASCENT coupled workflow on JUWELS Booster, Polaris and Leonardo Booster and successfully used it in a simulation to analyze the boundary layer structures in Rayleigh-B\'enard convection (RBC) at high Rayleigh numbers. We summarized the results in a paper {% cite bodeEtAl2025 --file jlesc.bib %}. The JuMonC tool was successfully developed to better monitor the coupled workflows. It was published as a paper in the JLESC Special Issue {% cite witzlerEtAl2025 --file jlesc.bib %}.
+
 ## Visits and meetings
  * Mathis Bode visited ANL in April 2023 to coordinate better on the visualization strategies.
+ * JSC organized the NEK User Meeting 2024 in J\"ulich; the meeting was used for further in-person discussions on this project.
 
 ## Impact and publications
 
