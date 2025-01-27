@@ -335,6 +335,24 @@
               
               
               
+              <li>
+                  Jean-Baptiste Caillau (INRIA)
+              </li>
+              
+              
+              
+              <li>
+                  Jean Luc Bouchot (INRIA)
+              </li>
+              
+              
+              
+              <li>
+                  Montoison Alexis (ANL)
+              </li>
+              
+              
+              
               
               
               
@@ -381,8 +399,13 @@
 <h2 id="results-for-20232024">Results for 2023/2024</h2>
 <p>We have successfully used Tapenade to differentiate the Massachusetts Institute of Technology General Circulation Model (MITgcm)<a class="citation" href="#GaikwadEtAl2024">(Gaikwad et al. 2024)</a>, a code which is widely used by the climate science community to simulate planetary atmosphere and ocean circulations. A defining feature of the MITgcm is that it has been developed to be compatible with an algorithmic differentiation (AD) tool, TAF, enabling the generation of tangent-linear and adjoint models.  A subset of MITgcm was also previously differentiated using OpenAD. The tangent-linear and adjoint models provide gradient information which enables dynamics-based sensitivity and attribution studies, state and parameter estimation, and rigorous uncertainty quantification. Importantly, gradient information is essential for computing comprehensive sensitivities and performing efficient large-scale data assimilation, ensuring that observations collected from satellites and in-situ measuring instruments can be effectively used to optimize a large uncertain control space. As a result, the MITgcm forms the dynamical core of a key data assimilation product employed by the physical oceanography research community: Estimating the Circulation and Climate of the Ocean (ECCO) state estimate. Although MITgcm and ECCO are used extensively within the research community, the AD tool TAF is proprietary and hence inaccessible to a large proportion of these users.</p>
 
+<h2 id="results-for-20242025">Results for 2024/2025</h2>
+<p>We have added new profiling capability to Tapenade. Checkpointing is a cornerstone of data-flow reversal in adjoint algorithmic differentiation. Checkpointing is a storage/recomputation trade-off that can be applied at different levels, one of which being the call tree. We are looking for good placements of checkpoints onto the call tree of a given application, to reduce run time and memory footprint of its adjoint. There is no known optimal solution to this problem other than a combinatorial search on all placements. We have implemented a heuristics based on run-time profiling of the adjoint code. We have applied it on test cases taken from the MITgcm ocean and atmospheric global circulation model which we have previously differentiated using Tapenade.</p>
+
+<p>We have differentiated HFBTHO using Tapenade. The HFBTHO code  implements a nuclear energy density functional solver useful for modeling the structure of atomic nuclei. HFBTHO has previously been used to calibrate energy functionals by using derivative-free optimization methods. To enable gradient-based optimization approaches, we must compute the derivatives of HFBTHO with respect to the parameters of the energy functional, which are a subset of all input parameters of the code. The derivatives obtained by using AD match well with those obtained by finite-difference approximation.</p>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
-<p>Frequent e-mail exchanges between <span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) and <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), and twice-weekly video meetings between <span class="person given-name">Jan</span> <span class="person sur-name">Hückelheim</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) and <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>). <span class="person given-name">Jan</span> <span class="person sur-name">Hückelheim</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>), and <span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) visited INRIA in 2023 when EuroAD was hosted there.</p>
+<p>requent e-mail exchanges and virtual meetings between the members of the project.</p>
 
 <h2 id="impact-and-publications">Impact and publications</h2>
 
@@ -392,6 +415,8 @@
   <li>In 2021, we have submitted a paper on automatic differentiation of OpenMP programs;</li>
   <li>In 2021, we have organized a minitutorial at SIAM CSE21.</li>
   <li>In 2023, we have submitted a paper on the differentiation of MITgcm using Tapenade.</li>
+  <li>In 2024, we submitted a paper on run-time profiling of the adjoint code generated by Tapenade.</li>
+  <li>In 2024, <span class="person given-name">Paul</span> <span class="person sur-name">Hovland</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>), <span class="person given-name">Laurent</span> <span class="person sur-name">Hascoët</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>), <span class="person given-name">Jan</span> <span class="person sur-name">Hückelheim</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>), and <span class="person given-name">Sri Hari Krishna</span> <span class="person sur-name">Narayanan</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) were organizers for the AD2024 conference.</li>
 </ul>
 
 <!--
