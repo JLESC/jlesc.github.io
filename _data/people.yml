@@ -190,6 +190,15 @@ artigues_a:
   email: antoni.artigues@bsc.es
   homepage: https://www.bsc.es/about-bsc/staff-directory/artigues-antoni
 
+assogba_k:
+  sur_name: Assogba
+  given_name: Kevin
+  affiliation: anl
+  position:
+  topics:
+  email: kassogba@anl.gov
+  homepage:
+
 attig_n:
   sur_name: Attig
   given_name: Norbert
@@ -1804,6 +1813,15 @@ luszczek_p:
   topics: Numerical methods
   email: luszczek@icl.utk.edu
   homepage: https://scholar.google.com/citations?user=a9df4xQAAAAJ&hl=en
+
+malkmus_z:
+  sur_name: Malkmus
+  given_name: Zackary
+  affiliation: utk
+  position:
+  topics:
+  email: zmalkmus@vols.utk.edu
+  homepage:
 
 martorell_x:
   sur_name: Martorell
