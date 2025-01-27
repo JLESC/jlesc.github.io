@@ -410,9 +410,13 @@
 <h2 id="results-for-20232024">Results for 2023/2024</h2>
 <p>We have examined the developments in relation to different visualization strategies and at scale. We detailed our approach of instrumenting NekRS, a GPU-focused thermal-fluid simulation code employing the spectral element method (SEM), and analyzed varied \textit{in situ} and \text{in transit} strategies for data rendering. Additionally, we provided concrete scientific use-cases and reported on runs performed on Polaris, Argonne Leadership Computing Facility’s (ALCF) 44 Petaflop supercomputer and Jülich Wizard for European Leadership Science (JUWELS) Booster, Jülich Supercomputing Centre’s (JSC) 71 Petaflop High Performance Computing (HPC) system, offering practical insight into the implications of our methodology. Our results were presented at the ISAV23, awarded with the best paper award, and publish in the ISAV23 proceeding <a class="citation" href="#MateevitsiEtAl2023">(Mateevitsi et al. 2023)</a>.</p>
 
+<h2 id="results-for-20242025">Results for 2024/2025</h2>
+<p>We have continued our in situ work with nekRS and, building on the publication of ISAV23, extended the workflow towards ASCENT. We tested the nekRS-ASCENT coupled workflow on JUWELS Booster, Polaris and Leonardo Booster and successfully used it in a simulation to analyze the boundary layer structures in Rayleigh-B'enard convection (RBC) at high Rayleigh numbers. We summarized the results in a paper <a class="citation" href="#bodeEtAl2025">(Bode et al. 2025)</a>. The JuMonC tool was successfully developed to better monitor the coupled workflows. It was published as a paper in the JLESC Special Issue <a class="citation" href="#witzlerEtAl2025">(Witzer et al. 2025)</a>.</p>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 <ul>
   <li>Mathis Bode visited ANL in April 2023 to coordinate better on the visualization strategies.</li>
+  <li>JSC organized the NEK User Meeting 2024 in J"ulich; the meeting was used for further in-person discussions on this project.</li>
 </ul>
 
 <h2 id="impact-and-publications">Impact and publications</h2>
@@ -426,6 +430,88 @@
 -->
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          bodeEtAl2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsebodeEtAl2025Bibtex" aria-expanded="false" aria-controls="collapsebodeEtAl2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsebodeEtAl2025Abstract" aria-expanded="false" aria-controls="collapsebodeEtAl2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="bodeEtAl2025">Bode, Mathis, Damian Alvarez, Paul Fischer, Christos E. Frouzakis, Jens Henrik Göbbert, Joseph A. Insley, Yu-Hsiang Lan, et al. 2025. “Deciphering Boundary Layer Effects in High-Rayleigh-Number Convection Using 3360 GPUs and a High-Scaling in-Situ Workflow.” <a href="http://arxiv.org/abs/2501.13240" target="_blank">http://arxiv.org/abs/2501.13240</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsebodeEtAl2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@unpublished{bodeEtAl2025,
+  title = {{Deciphering boundary layer effects in high-Rayleigh-number convection using 3360 GPUs and a high-scaling in-situ workflow}},
+  year = {2025},
+  url = {http://arxiv.org/abs/2501.13240},
+  pdf = {https://arxiv.org/pdf/2501.13240},
+  author = {Bode, Mathis and Alvarez, Damian and Fischer, Paul and Frouzakis, Christos E. and G\"obbert, Jens Henrik and Insley, Joseph A. and Lan, Yu-Hsiang and Mateevitsi, Victor A. and Min, Misun and Papka, Michael E. and Rizzi, Silvio and Samuel, Roshan, J. and Schumacher, J\"org}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          witzlerEtAl2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsewitzlerEtAl2025Bibtex" aria-expanded="false" aria-controls="collapsewitzlerEtAl2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsewitzlerEtAl2025Abstract" aria-expanded="false" aria-controls="collapsewitzlerEtAl2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="witzlerEtAl2025">Witzer, Christian, Filipe Souze Mendes Guimarães, Daniel Mira, Hartwig Anzt, Jens Henrik Göbbert, Wolfgang Frings, and Mathis Bode. 2025. “JuMonC: A RESTful Tool for Enabling Monitoring and Control of Simulations at Scale.” <i>Future Generation Computer Systems</i> 164: 107541. https://doi.org/<a href="https://doi.org/10.1016/j.future.2024.107541" target="_blank">https://doi.org/10.1016/j.future.2024.107541</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsewitzlerEtAl2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{witzlerEtAl2025,
+  title = {{JuMonC: A RESTful tool for enabling monitoring and control of simulations at scale}},
+  journal = {Future Generation Computer Systems},
+  volume = {164},
+  pages = {107541},
+  year = {2025},
+  issn = {0167-739X},
+  doi = {https://doi.org/10.1016/j.future.2024.107541},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167739X24005053},
+  author = {Witzer, Christian and Guimar\~aes, Filipe Souze Mendes and Mira, Daniel and Anzt, Hartwig and G\"obbert, Jens Henrik and Frings, Wolfgang and Bode, Mathis}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
