@@ -2,11 +2,11 @@
 layout: post
 title: Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques
 date: 2018-04-17
-updated: 2024-01-26
+updated: 2025-01-28
 navbar: Research
 subnavbar: Projects
 project_url:
-status: running
+status: suspended
 topics:
   - architectures
 keywords:
