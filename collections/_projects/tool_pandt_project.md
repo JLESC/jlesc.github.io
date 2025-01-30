@@ -2,7 +2,7 @@
 layout: post
 title: Developer tools for porting and tuning parallel applications on extreme-scale parallel systems
 date: 2016-03-22
-updated: 2024-02-06
+updated: 2025-01-30
 navbar: Research
 subnavbar: Projects
 footer: true
@@ -30,7 +30,7 @@ members:
 
 ## Research topic and goals
 
-Application developers targeting extreme-scale HPC systems such as Fugaku & JUPITER, heterogeneous systems such as MareNostrum CTE-POWER/ARM/AMD, 
+Application developers targeting extreme-scale HPC systems such as Fugaku & JUPITER, heterogeneous systems such as MareNostrum, 
 and modular supercomputing architectures such as JUWELS Cluster+Booster, need effective tools to assist with porting and tuning for these unusual systems. 
 The XcalableMP compilation system (and directive-based language) {% cite LeeSato2010 --file external/tool_pandt_project.bib %}
 {% cite TsujiEtAl2013 --file external/tool_pandt_project.bib  %}, Scalasca/Score-P execution
@@ -119,6 +119,14 @@ and help direct development of new tool capabilities.
 * 43rd VI-HPS Tuning Workshop hosted by CALMIP Mesocentre in Toulouse/France (2024/01/29-02/01) using Turpan (Ampere Altra Q80 ARM 8.2 CPU + Nvidia Ampere A100 GPU nodes).
 * Article prepared for FGCS on joint parallel application performance analysis/tools training.
 
+## Results for 2024/2025
+
+* Publication of FGCS article on joint parallel application performance analysis/tools training.
+* Hands-on performance tools/analysis tutorial at ISC-HPC'24 (Hamburg).
+* Virtual tools training for RWTH Aachen/TU Dresden, LRZ and EuroCC/IT4I using local HPC systems.
+* Installation of tools on EuroHPC computer systems, including MareNostrum5.
+* Extension of POP analysis methodology and metrics for GPU-accelerated application execution measurements.
+
 ## Visits and meetings
 
 Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and ParCo conferences, and events hosted by project partners.  Meeting with MYX project {% cite MYXproject --file external/tool_pandt_project.bib %} members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.
@@ -128,10 +136,11 @@ Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and 
 2019/04/09-12: BSC & JSC instructors visited UTK-ICL to deliver training as part of VI-HPS Tuning Workshop.
 2022/10/01-2022/11/04: JSC visit to NCSA & UTK-ICL to prepare for training as part of VI-HPS Tuning Workshops.
 Visits planned for the next 12 months:
-2024/07: JSC instructors to visit RIKEN-CCS to deliver tools training as part of workshop for Fugaku users, in conjunction with 14th International HPC Summer School in Kobe (2024/07/07-12).
+Instructors to visit RIKEN-CCS to deliver tools training as part of workshop for Fugaku users.
 
 ## Impact and publications
 
+Joint development of Scalasca & Paraver toolsets and associated training summarised in JLESC special issue of Future Generation Computer Systems {% cite Wylie2025 --file jlesc.bib %}
 POP standard metrics applied in POP services performance analyses.
 {% bibliography --cited --file jlesc.bib %}
 
@@ -140,7 +149,7 @@ POP standard metrics applied in POP services performance analyses.
 
 Use of Scalasca/Score-P and Paraver/Extrae to analyze execution performance of RIKEN applications.
 Large-scale application performance measurements on Fugaku and other HPC systems.
-HPC Tunathon at JSC scaling applications on JUWELS CPUs and GPUs.
+Hackathon at JSC analysing and scaling applications on JUPITER.
 Workshops and training organised under the auspices of VI-HPS
 {% cite VIHPS --file external/tool_pandt_project.bib %}
 or the POP Centre of Excellence {% cite POP --file external/tool_pandt_project.bib %}.
