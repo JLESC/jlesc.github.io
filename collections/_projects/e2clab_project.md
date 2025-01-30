@@ -2,7 +2,7 @@
 layout: post
 title: Advancing Chameleon and Grid'5000 testbeds II
 date: 2022-07-15
-updated: 2024-01-31
+updated: 2024-01-30
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -170,6 +170,13 @@ Over the summer of 2023, members of the REPETO project hosted the first Summer o
 
 The discussions of edge computing are emergent with both INRIA and ANL making separate investigations for the time being. The ANL team is working in the context of the CHI@Edge platform on Chameleon {% cite ChiEdge2024 --file external/e2clab_project.bib %} and FLOTO projects {% cite KeaheyEtAl2023b --file external/e2clab_project.bib %}. The INRIA team is focusing on two challenges: (1) the efficient provenance data capture at the edge, for reproducibility purposes {% cite RosendoEtAl2023b --file external/e2clab_project.bib %}, and (2) enabling continual learning and federated learning at the edge, in the context of the ENGAGE project {% cite Engage2024 --file external/e2clab_project.bib %}, where initial results target the efficient deployment of such workloads on the edge-cloud continuum {% cite PrigentEtAl2022 --file external/e2clab_project.bib %} and securing the learning in the heterogeneous and volatile edge environments {% cite ChelliEtAl2023 --file external/e2clab_project.bib %}.
 
+## Results for 2024/2025
+
+This research work started during the summer internship of Cédric Prigent (INRIA) at ANL (July to September 2024).
+
+We started this project with the objective of deploying and studying the behavior of Federated Learning (FL) systems on real-world edge devices. For this purpose, our target was to deploy air-quality stations across the UChicago campus. The first step was to effectively design such air-quality stations. We built a set of prototypes based on Raspberry Pis and air-quality sensors (monitoring particulate matter concentrations, temperature, humidity and air pressure), and developed a set of micro-services to collect air quality measurements, pre-process air-quality data, and perform FL local training tasks. Then, with the help of technical staff from UChicago, we identified suitable locations and deployed our devices in 8 fresh air intakes from the university buildings.
+
+After deployments of our air-quality stations, our objective was to study the behaviour of FL systems at the Edge. More specifically, we were interested in investigating the differences between simulation, emulation and real-world deployments with regard to performance and reproducibility of experiments. We deployed the same training tasks in different settings i.e., real-world air-quality stations, emulation on distributed testbeds (Grid’5000 and Chameleon), and simulation on a single compute node, and drew several conclusions regarding the type of infrastructure that could be used to validate different experimental aspects, as well as the advantages and shortcomings of such real-world deployments. Simulation provides good results for reproducing model based performance metrics (e.g., model convergence, accuracy), whereas emulation on distributed testbeds can more accurately reproduce system related metrics (e.g., execution time, CPU and memory usage). The results of this work were put in a paper submitted to the IEEE CCGrid’2025 conference.
 
 ## Visits and meetings
 
@@ -177,6 +184,8 @@ We schedule regular meetings between the members of the project.
 
 {% person rosendo_d %} visited ANL in the context of a Student Appointment during summer
 2022 (July to September).
+
+Cédric Prigent (INRIA) visited ANL in the context of a 10-weeks appointment during summer 2024. 
 
 ## Impact and publications
 
