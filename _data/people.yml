@@ -1438,7 +1438,7 @@ junya_o:
 herault_t:
   sur_name: Herault
   given_name: Thomas
-  affiliation: utk
+  affiliation: inria
   position: permanent
   topics: HPC, Resilience
   email: herault@icl.utk.edu

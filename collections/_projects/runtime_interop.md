@@ -46,10 +46,21 @@ interfaces to enhance interoperability among different runtime systems,
 optimizing performance and encouraging broader adoption of task-based
 programming models.
 
+## Results for 2024/2025
+
+Since the project's inception in September 2024, we have established a monthly video call to coordinate activities and ensure continuous progress.
+
+Our work is currently organized around two main objectives:
+* Survey and Documentation of Runtime System Components
+We are actively discussing and documenting key components of various runtime systems, including schedulers, dependency management, and communication libraries. This effort aims to identify commonalities and opportunities for cross-runtime interoperability. We plan to consolidate our findings into a survey paper that will highlight similarities and differences among existing runtime systems and propose reusable components that could benefit multiple implementations.
+* Porting StarPU and PaRSEC to nOS-V
+We have initiated work on adapting StarPU and PaRSEC to run on top of nOS-V. A working prototype of StarPU/nOS-V has already been developed, marking a significant milestone. To further advance this effort, we have secured a summer internship for 2025 in collaboration with Inria and BSC. This internship will focus on improving the integration and evaluating the performance of StarPU and PaRSEC within the nOS-V environment
+
 ## Visits and meetings
 
-We had a BoF session in the Kobe workshop, where we decided to start this project.
-There are no planned visits yet.
+* We had a BoF session in the Kobe 2024 workshop, where we decided to start this project.
+* We are organizing another BoF session at the upcoming Argonne 2025 workshop
+* We have planned a summer internship from June to August 2025, from BSC to Inria.
 
 ## Impact and publications
 
@@ -61,10 +72,6 @@ There are no planned visits yet.
 * Explore possibility of creating a standard that allows for different use
   cases currently served,  either via a flexible design or allowing for
 extensions
-
-## Future plans
-
-not defined yet.
 
 ## References
 
