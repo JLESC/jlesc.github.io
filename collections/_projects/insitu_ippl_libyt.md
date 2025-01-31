@@ -2,11 +2,11 @@
 layout: post
 title: In-situ visualization and analysis for large-scale particle-mesh simulations
 date: 2023-09-06
-updated: 2024-01-24
+updated: 2025-01-30
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - storage
 keywords:
@@ -34,6 +34,10 @@ Expected contributions:
 An in-situ interface in IPPL is created based on Paraview Catalyst. libyt has been configured to launch jupyter kernel. We are now in the 
 process of creating a libyt interface in IPPL.
 
+## Results for 2024/2025
+1) Paraview Catalyst based in-situ interface generalized and modified to work with the latest version of IPPL.
+2) New steering functonality added and is in the phase of testing.
+3) An Ascent based in-situ interface for IPPL is created and is also in the testing phase.
 
 ## Visits and meetings
 None.
@@ -44,6 +48,10 @@ None.
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
+
+1) Do performance measurements on multiple systems.
+2) In-transit visualization taking advantage of both CPUs and GPUs using ADIOS catalyst.
+3) Use computational steering to modify external fields in particle accelerator simulations.
 
 
 
