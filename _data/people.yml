@@ -440,6 +440,24 @@ bouvier_t:
   email: thomas.bouvier@inria.fr
   homepage: https://team.inria.fr/kerdata/thomas-bouvier/
 
+bremond_m:
+  sur_name: Brémond
+  given_name: Maurice
+  affiliation: Inria
+  position: Research engineer
+  topics:
+  email: Maurice.Bremond@inria.fr
+  homepage: https://sed.inrialpes.fr/people/bremond/
+
+brunie_h:
+  sur_name: Brunie
+  given_name: Hugo
+  affiliation: University of Grenoble Alpes / Inria
+  position: PostDoc
+  topics:
+  email: hugo.brunie@univ-grenoble-alpes.fr
+  homepage: 
+
 brown_m:
   sur_name: Maxine D.
   given_name: Brown
@@ -746,6 +764,15 @@ dawson_w:
   email: william.dawson@riken.jp
   homepage: http://william-dawson.github.io
 
+debreu_l:
+  sur_name: Debreu
+  given_name: Laurent
+  affiliation: Inria
+  position: Research director, INRIA
+  topics:
+  email: Laurent.Debreu@inria.fr
+  homepage: https://team.inria.fr/airsea/en/laurent-debreu/
+
 delamare_s:
   sur_name: Delamare
   given_name: Simon
@@ -754,7 +781,6 @@ delamare_s:
   topics:
   email: Simon Delamare <simon.delamare@ens-lyon.fr>
   homepage:
-
 
 denis_a:
   sur_name: Denis
@@ -1706,6 +1732,15 @@ lehmkuhl_o:
   email: oriol.lehmkuhl@bsc.es
   homepage: https://www.bsc.es/lehmkuhl-oriol
 
+lemarie_f:
+  sur_name: Lemarie
+  given_name: Florian
+  affiliation: Inria
+  position: Researcher, INRIA
+  topics:
+  email: florian.lemarie@inria.fr
+  homepage: https://team.inria.fr/airsea/en/florian-lemarie
+
 lindquist_n:
   sur_name: Lindquist
   given_name: Neil
@@ -2498,6 +2533,15 @@ reis_v:
   email: 
   homepage: http://freux.fr
 
+remy_j:
+  sur_name: Remy
+  given_name: Julien
+  affiliation: University of Grenoble Alpes/ Inria
+  position: PhD
+  topics:
+  email: julien.remy@univ-grenoble-alpes.fr
+  homepage: 
+
 reverdy_v:
   sur_name: Reverdy
   given_name: Vincent
@@ -2767,6 +2811,15 @@ schoebel_r:
   topics: Numerical methods, parallel-in-time integration
   email: r.schoebel@fz-juelich.de
   homepage:
+
+schreiber_m:
+  sur_name: Schreiber
+  given_name: Martin
+  affiliation: University of Grenoble Alpes / Inria
+  position: Professor
+  topics: Partial Differential Equations and High-Performance Computing
+  email: martin.schreiber@univ-grenoble-alpes.fr
+  homepage: https://www.martin-schreiber.info/
 
 segovia_j:
   sur_name: Segovia
@@ -3262,6 +3315,15 @@ vazquez_m:
   topics: Alya System for Large Scale Computational Mechanics
   email: mariano.vazquez@bsc.es
   homepage: https://www.bsc.es/about-bsc/staff-directory/vazquez-mariano
+
+vidard_a:
+  sur_name: Vidard
+  given_name: Arthur
+  affiliation: Inria
+  position: Researcher
+  topics:
+  email: Arthur.Vidard@inria.fr
+  homepage: https://team.inria.fr/airsea/en/arthur-vidard/
 
 videau_b:
   sur_name: Videau
