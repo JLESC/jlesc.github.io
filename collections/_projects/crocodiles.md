@@ -52,8 +52,10 @@ We gratefully acknowledge funding provided by Inria under DRI-012415.
 
 
 ## Results for 2025/2026
-None yet.
+-
 
+## Results for 2026/2027
+-
 
 ## Visits and meetings
  * Julien Remy will visit ANL in 2025.
