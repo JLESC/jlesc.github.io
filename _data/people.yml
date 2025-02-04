@@ -443,7 +443,7 @@ bouvier_t:
 bremond_m:
   sur_name: Brémond
   given_name: Maurice
-  affiliation: Inria
+  affiliation: inria
   position: permanent
   topics:
   email: Maurice.Bremond@inria.fr
@@ -452,7 +452,7 @@ bremond_m:
 brunie_h:
   sur_name: Brunie
   given_name: Hugo
-  affiliation: University of Grenoble Alpes / Inria
+  affiliation: inria
   position: post_doc
   topics:
   email: hugo.brunie@univ-grenoble-alpes.fr
@@ -767,7 +767,7 @@ dawson_w:
 debreu_l:
   sur_name: Debreu
   given_name: Laurent
-  affiliation: Inria
+  affiliation: inria
   position: permanent
   topics:
   email: Laurent.Debreu@inria.fr
@@ -1735,8 +1735,8 @@ lehmkuhl_o:
 lemarie_f:
   sur_name: Lemarie
   given_name: Florian
-  affiliation: Inria
-  position: Researcher, INRIA
+  affiliation: inria
+  position: permanent
   topics:
   email: florian.lemarie@inria.fr
   homepage: https://team.inria.fr/airsea/en/florian-lemarie
@@ -2536,7 +2536,7 @@ reis_v:
 remy_j:
   sur_name: Remy
   given_name: Julien
-  affiliation: University of Grenoble Alpes/ Inria
+  affiliation: inria
   position: PhD
   topics:
   email: julien.remy@univ-grenoble-alpes.fr
@@ -2815,8 +2815,8 @@ schoebel_r:
 schreiber_m:
   sur_name: Schreiber
   given_name: Martin
-  affiliation: University of Grenoble Alpes / Inria
-  position: Professor
+  affiliation: inria
+  position: permanent
   topics: Partial Differential Equations and High-Performance Computing
   email: martin.schreiber@univ-grenoble-alpes.fr
   homepage: https://www.martin-schreiber.info/
@@ -3319,8 +3319,8 @@ vazquez_m:
 vidard_a:
   sur_name: Vidard
   given_name: Arthur
-  affiliation: Inria
-  position: Researcher
+  affiliation: inria
+  position: permanent
   topics:
   email: Arthur.Vidard@inria.fr
   homepage: https://team.inria.fr/airsea/en/arthur-vidard/
