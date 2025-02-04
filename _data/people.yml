@@ -444,7 +444,7 @@ bremond_m:
   sur_name: Brémond
   given_name: Maurice
   affiliation: Inria
-  position: Research engineer
+  position: permanent
   topics:
   email: Maurice.Bremond@inria.fr
   homepage: https://sed.inrialpes.fr/people/bremond/
@@ -453,7 +453,7 @@ brunie_h:
   sur_name: Brunie
   given_name: Hugo
   affiliation: University of Grenoble Alpes / Inria
-  position: PostDoc
+  position: post_doc
   topics:
   email: hugo.brunie@univ-grenoble-alpes.fr
   homepage: 
