@@ -28,23 +28,28 @@ members:
 
 ## Research topic and goals
 
-Optimization of PDE solvers is one of the big challenges in High-Performance Computing (HPC). This requires not only skills and a deeper understanding of HPC from all the hardware and software layers but also research on software solutions that are sustainable and accepted by the developers and users of these solvers.
 
-This associate team brings together members of ANL and the Inria Airsea team who are both currently working on the HPC modernization of models under the constraints above. This allows us to share, on the one hand, our experience and plans with the model developments. On the other hand, we can strongly benefit from the experience of all the current developments, which share many similarities.
+Optimization of PDE solvers is one of the big challenges in High-Performance Computing (HPC). It requires skills and a deeper understanding of HPC from all the hardware and software layers and research on sustainable software solutions that are sustainable and accepted by the developers and users of these solvers.
+
+This project brings together ANL and the Inria Airsea team members, who are both currently working on the HPC modernization of models under the above constraints. This allows us to share, on the one hand, our experience and plans with the model developments. On the other hand, we can strongly benefit from the experience of all the current developments, which share many similarities.
+
 
 ### Further information
 
-Running PDE simulations efficiently on supercomputers poses a significant challenge in High-Performance Computing (HPC). The intricacy lies in the fact that these simulations, crafted by numerics experts, must be tailored to enable highly efficient execution on supercomputer architectures, demanding optimal performance from both CPUs and GPUs, coupled with seamless communication in between.
 
-For the associate team, our current strategy currently revolves around the following fundamental axes:
+Running PDE simulations efficiently on supercomputers poses a significant challenge in High-Performance Computing (HPC). The intricacy lies in that these simulations, crafted by numerics experts, must be tailored to enable highly efficient execution on supercomputer architectures, demanding optimal performance from both CPUs and GPUs, coupled with seamless communication.
 
-- We are developing a specialized domain-specific language (DSL) embedded into the Fortran90 language for a step-by-step transition. This DSL not only enhances the portability of the simulations but also ensures a standardized approach, allowing for consistent execution across diverse platforms and opening up the two other axes as follows.
+For this project, our current strategy currently revolves around the following fundamental axes:
 
-- Secondly, building upon the foundation of the DSL, our focus is on achieving automatic distributed memory communication, including all standard optimizations for communication. This approach optimizes data exchange between different parts of the simulation, which is crucial for the accuracy and efficiency of the results.
+- We are developing an <b>uplifting approach</b> for PDE solvers on regular grids written in Fortran90 or Modern Fortran. Such an uplifting approach enriches again the development with a mathematical perspective that got lost during the discretization and extracts a holistic view of the computing and data flow. This lifts compiler restrictions and provides the fundamentals for enhancing the performance and portability of the simulations on different architectures. In addition, it ensures a standardized approach, allowing for consistent execution across diverse platforms and opening up the two other axes as follows.
 
-- Lastly, our approach lays the fundament for efficient automatic differentiation, a vital component for optimizing algorithms. By automatically computing derivatives, we can stay agnostic to all numerical changes, ensuring that the simulations evolve with the changing computational landscape.
+- Secondly, building upon the foundation of an uplifted representation, our focus is on achieving <b>automatic distributed memory communication</b>, including all standard optimizations for communication. This approach optimizes data exchange between different parts of the simulation, which is crucial for the accuracy and efficiency of the results.
 
-We aim not only to enhance the efficiency of PDE solvers on supercomputers but also to contribute significantly to the ongoing evolution of HPC software methodologies.
+- Lastly, our approach lays the fundament for efficient <b>automatic differentiation</b>, a vital component for optimizing algorithms. By automatically computing derivatives, we can stay agnostic to all numerical changes, ensuring that the simulations evolve with the changing computational landscape.
+
+We aim to enhance the efficiency of PDE solvers on supercomputers and contribute significantly to the ongoing evolution of HPC software methodologies.
+
+This project will make strong use of the Psyclone development, which, in addition to the project partners, also involves collaborations with the Psyclone developers Sergi Siso (STFC, UK), Andrew Porter (STFC, UK), and Jörg Heinrichs (BOM, AUS)
 
 ### Acknowledgment
 
