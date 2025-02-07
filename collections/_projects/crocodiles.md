@@ -49,7 +49,7 @@ For this project, our current strategy currently revolves around the following f
 
 We aim to enhance the efficiency of PDE solvers on supercomputers and contribute significantly to the ongoing evolution of HPC software methodologies.
 
-This project will make strong use of the Psyclone development, which, in addition to the project partners, also involves collaborations with the Psyclone developers Sergi Siso (STFC, UK), Andrew Porter (STFC, UK), and Jörg Heinrichs (BOM, AUS)
+This project will make strong use of the Psyclone development, which, in addition to the project partners, also involves collaborations with the Psyclone developers Sergi Siso (STFC, UK), Andrew Porter (STFC, UK), and Jörg Henrichs (BOM, AUS)
 
 ### Acknowledgment
 
