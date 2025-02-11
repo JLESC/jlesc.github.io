@@ -2,7 +2,7 @@
 layout: post
 title: Leverage Blue Waters I/O Traces to Size and Allocate Future Storage Systems
 date: 2023-04-26
-updated: 2024-11-29
+updated: 2025-01-31
 navbar: Research
 subnavbar: Projects
 project_url:
