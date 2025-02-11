@@ -2,7 +2,7 @@
 layout: post
 title: Advancing Chameleon and Grid'5000 testbeds II
 date: 2022-07-15
-updated: 2024-01-30
+updated: 2025-01-31
 navbar: Research
 subnavbar: Projects
 project_url:
