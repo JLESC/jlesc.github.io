@@ -7,8 +7,8 @@ navbar: Events
 event_location: ANL, USA
 event_start: 2025-05-13
 event_end: 2025-05-15
-event_short_url: 
-event_url: 
+event_short_url: https://events.cels.anl.gov/e/JLESC17
+event_url: https://events.cels.anl.gov/e/JLESC17
 wayback_url:
 logo:
 kind: workshop
