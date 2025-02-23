@@ -3248,10 +3248,10 @@ underwood_r:
   sur_name: Underwood
   given_name: Robert
   affiliation: anl
-  position: 
-  topics:
+  position: post_doc
+  topics: Data for AI, Data Management, Lossy Compression
   email: runderwood@anl.gov
-  homepage:
+  homepage: https://robertu94.github.io/about.html
 
 uno_a:
   sur_name: Uno
