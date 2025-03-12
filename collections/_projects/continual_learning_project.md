@@ -2,10 +2,10 @@
 layout: post
 title: Towards Continual Learning at Scale
 date: 2022-05-07
-updated: 2024-01-26
+updated: 2025-03-10
 navbar: Research
 subnavbar: Projects
-project_url:
+project_url: https://github.com/thomas-bouvier/neomem
 status: running
 topics:
   - architectures
@@ -99,11 +99,17 @@ Our first series of experiments focuses on evaluating the performance and scalab
 
 With a growing diversity of rehearsal techniques, it becomes important to decouple the rehearsal buffer from the learning task, such that it becomes a generic, reusable abstraction that can store additional state information as needed by more advanced rehearsal-based CL algorithms. To this end, we propose a generalization of rehearsal buffers to support both classification and generative learning tasks, as well as more advanced rehearsal strategies (notably Dark Experience Replay, leveraging knowledge distillation). We illustrate this approach with a real-life HPC streaming application from the domain of ptychographic image reconstruction, leveraging data acquired at ANL's Advanced Photon Source (APS) {% cite bouvierEtAl2024b --file jlesc.bib %}.
 
+## Results for 2024/2025
+
+We have started exploring the integration of rehearsal techniques in the context of LLM training using the Nanotron runtime (https://github.com/huggingface/nanotron).
+To this end, we have studied how the representation of the training samples and mini-batches used for LLM trainig is different from the representation we have implemented
+in our distributed rehearsal buffer solution. Based on this study, we are planning to extend our approach accordingly.
+
 ## Visits and meetings
 
 We schedule regular video meetings between the different members of the project.
 
-{% person bouvier_t %} visited ANL in the context of a 3-month appointment during summer 2022.
+{% person bouvier_t %} visited ANL in the context of a 3-month appointment during summer 2022. {% person bouvier_t %} graduated meanwhile, we are currently looking for new team members to join the project.
 
 ## Impact and publications
 
@@ -136,8 +142,8 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 
 ## Future plans
 
-- Apply rehearsal-based CL to LLM training, by integrating the distributed rehearsal buffer into training runtimes like DeepSpeed.
-- Use the distributed rehearsal buffer as a retriever for Retrieval Augmented Generation (RAG).
+- Apply rehearsal-based CL to LLM training, by integrating the distributed rehearsal buffer into training runtimes like DeepSpeed and Nanotron.
+- Use the distributed rehearsal buffer as a driver for Retrieval Augmented Generation (RAG).
 
 ## References
 
