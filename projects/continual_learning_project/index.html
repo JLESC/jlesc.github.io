@@ -306,6 +306,8 @@
           <ul class="event-meta mb-2">
               
               
+              <li><a href="https://github.com/thomas-bouvier/neomem" target="_blank">Homepage</a></li>
+              
               
               <li><b>Head</b></li>
               
@@ -374,11 +376,17 @@
 
 <p>With a growing diversity of rehearsal techniques, it becomes important to decouple the rehearsal buffer from the learning task, such that it becomes a generic, reusable abstraction that can store additional state information as needed by more advanced rehearsal-based CL algorithms. To this end, we propose a generalization of rehearsal buffers to support both classification and generative learning tasks, as well as more advanced rehearsal strategies (notably Dark Experience Replay, leveraging knowledge distillation). We illustrate this approach with a real-life HPC streaming application from the domain of ptychographic image reconstruction, leveraging data acquired at ANL’s Advanced Photon Source (APS) <a class="citation" href="#bouvierEtAl2024b">(Bouvier et al. 2024)</a>.</p>
 
+<h2 id="results-for-20242025">Results for 2024/2025</h2>
+
+<p>We have started exploring the integration of rehearsal techniques in the context of LLM training using the Nanotron runtime (https://github.com/huggingface/nanotron).
+To this end, we have studied how the representation of the training samples and mini-batches used for LLM trainig is different from the representation we have implemented
+in our distributed rehearsal buffer solution. Based on this study, we are planning to extend our approach accordingly.</p>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <p>We schedule regular video meetings between the different members of the project.</p>
 
-<p><span class="person given-name">Thomas</span> <span class="person sur-name">Bouvier</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited ANL in the context of a 3-month appointment during summer 2022.</p>
+<p><span class="person given-name">Thomas</span> <span class="person sur-name">Bouvier</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited ANL in the context of a 3-month appointment during summer 2022. <span class="person given-name">Thomas</span> <span class="person sur-name">Bouvier</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) graduated meanwhile, we are currently looking for new team members to join the project.</p>
 
 <h2 id="impact-and-publications">Impact and publications</h2>
 
@@ -493,8 +501,8 @@
 <h2 id="future-plans">Future plans</h2>
 
 <ul>
-  <li>Apply rehearsal-based CL to LLM training, by integrating the distributed rehearsal buffer into training runtimes like DeepSpeed.</li>
-  <li>Use the distributed rehearsal buffer as a retriever for Retrieval Augmented Generation (RAG).</li>
+  <li>Apply rehearsal-based CL to LLM training, by integrating the distributed rehearsal buffer into training runtimes like DeepSpeed and Nanotron.</li>
+  <li>Use the distributed rehearsal buffer as a driver for Retrieval Augmented Generation (RAG).</li>
 </ul>
 
 <h2 id="references">References</h2>
