@@ -173,6 +173,16 @@ anzt_h:
   email: hanzt@icl.utk.edu
   homepage: https://hartwiganzt.github.io/
 
+gruetzmacher_t:
+  sur_name: Grützmacher
+  given_name: Thomas
+  affiliation: utk
+  position: phd
+  topics: Numerical methods
+  email: 
+  homepage: 
+
+
 applencourt_t:
   sur_name: Applencourt
   given_name: Thomas
