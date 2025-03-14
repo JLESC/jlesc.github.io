@@ -1138,6 +1138,15 @@ gropp_b:
   email:  wgropp@illinois.edu
   homepage: http://wgropp.cs.illinois.edu/
 
+gruetzmacher_t:
+  sur_name: Grützmacher
+  given_name: Thomas
+  affiliation: utk
+  position: phd
+  topics: Numerical methods
+  email: 
+  homepage: 
+
 guemas_v:
   sur_name: Guemas
   given_name: Virginie

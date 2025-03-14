@@ -2,11 +2,11 @@
 layout: post
 title: Effective Use of Lossy Compression for Numerical Linear Algebra Resilience and Performance
 date: 2019-01-22
-updated: 2024-03-05
+updated: 2025-03-13
 navbar: Research
 subnavbar: Projects
 project_url:
-status: suspended
+status: running
 topics:
   - resilience
   - numerics
@@ -17,6 +17,8 @@ members:
   - baumann_t
   - speck_r
   - cappello_f
+  - anzt_h
+  - gruetzmacher_t
 ---
 
 ## Research topic and goals
@@ -98,8 +100,14 @@ Unfortunately, she was unable to significantly reduce the memory footprint and t
 We showed in some simple experiments that SDC can still converge to limited accuracy when using lossy compression.
 Continuing Sansriti's work with lossy compression is planned by Jon as this is more promising for reducing the memory requirements.
 
+Researchers at UTK (joint appointment with KIT now TUM) and ANL published their work on lossy compression for compressed basis GMRES (CB-GMRES) algorithm in the Ginkgo solver package.  This work presented a new compressor FRSZ-2 capable of achieving 99.6% of the available bandwidth on an Nvidia H100 GPU substantially faster than any existing losssy compressor.  This paper received the best paper at DRBSD in 2024.  While the results from this work are promising, a challenge remains to determine apriori which applications will benefit from this new approach over existing mixed-precision linear algebra techniques.
+
+Researchers at ANL and JSC mathematically modeled the throughput and speedup of performing compressed communication as part of FFT calculations in pySDC.  This work revealed that for strong-scaling applications, compression would become less and less effective at compressing data while further stressing the bandwidth requirements for the compressor necessary to achieve a speedup over not using compression; however, compression remains possible for weak scaling applications.
+
+
 ## Visits and meetings
 
+* Completed: Visit by Robert U to UTK for 1 week, 
 * Completed: Visit by Mirco Altenbernd to Clemson, Spring 2019 for 2 months.
 * Completed: Present talk at JLESC Meeting in Knoxville, April 2019.
 * Completed: Brief meetup and presented in progress work at SPPEXA workshop in Dresden, October 2019.
@@ -109,9 +117,11 @@ Continuing Sansriti's work with lossy compression is planned by Jon as this is m
 
 ## Impact and publications
 
+* The paper FRSZ2 was awarded the best paper of DRBSD 2024 {% cite Gruetzmacher:DRBSD2024:frsz2 --file external/lossy-compress-linear-algebra.bib %}
 * One ACM student research competition poster at Supercomputing 2019.
 * Publication at HPDC 2021 on Resilience of lossy compressed data {% cite Fulp:HPDC2021:ARC --file external/lossy-compress-linear-algebra.bib %}.
 * One ACM student research competition poster at Supercomputing 2021.
+
 
 {% bibliography --cited --file jlesc.bib %}
 
