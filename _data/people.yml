@@ -173,16 +173,6 @@ anzt_h:
   email: hanzt@icl.utk.edu
   homepage: https://hartwiganzt.github.io/
 
-gruetzmacher_t:
-  sur_name: Grützmacher
-  given_name: Thomas
-  affiliation: utk
-  position: phd
-  topics: Numerical methods
-  email: 
-  homepage: 
-
-
 applencourt_t:
   sur_name: Applencourt
   given_name: Thomas
@@ -1138,6 +1128,15 @@ gropp_b:
   topics: Scalable numerical algorithms, programming models, parallel I/O, performance tools
   email:  wgropp@illinois.edu
   homepage: http://wgropp.cs.illinois.edu/
+
+gruetzmacher_t:
+  sur_name: Grützmacher
+  given_name: Thomas
+  affiliation: utk
+  position: phd
+  topics: Numerical methods
+  email: 
+  homepage: 
 
 guemas_v:
   sur_name: Guemas
