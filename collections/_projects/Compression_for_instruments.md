@@ -2,7 +2,7 @@
 layout: post
 title: Compression for instruments
 date: 2020-02-25
-updated: 2024-01-01
+updated: 2025-03-13
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -13,12 +13,11 @@ keywords:
 head: cappello_f
 members:
   - di_s
-  - gok_a
   - sato_k
   - sano_k
   - ueno_t
-  - calhoun_j
   - underwood_r
+  - singh_a
 ---
 
 ## Research topic and goals
@@ -69,6 +68,16 @@ RoIBIN-SZ was successfully deployed and used at scale in the S3DM data reduction
 Additionally, there were efforts to port portions of the RoIBIN-SZ pipeline to the GPU -- these efforts show a end-to-end improvement over the CPU with only a potion of the current pipeline on the GPU indicating that even with transfers to/from the GPU it is possible to accelerate this workflow on the GPU.  In the next year, we hope to complete porting of ROIBIN-SZ to the GPU and evaluate its improved performance which should remove the needs to transfer to/from the GPU dramatically improving performance.
 An overview of RoIBIN-SZ was included as invited paper to Synchrotron Radiation News.
 
+## Results for 2024/2025
+
+Since the last report, researchers at ANL worked with researchers at RIKEN R-CCS on the following topics:
+
++ Integration of [LibPressio into GFarm](https://github.com/robertu94/libpressio_gfarm).  GFarm is a distributed data service used within RIKEN R-CCS, an integration of LibPressio allows the communication of large datasets to be compressed before communication saving bandwidth.  By integrating with LibPressio instead of any compressor directly, all supported compressors can be utilized including SZ3 and TEZip
++ Evaluation of SZ3 and TEZip for light source data.  Preliminary evaluation of TEZip and SZ3 demonstrated that TEZip could achieve higher compression ratios on some datasets but with extremely low throughput compared to SZ3.
++ Modernization of TEZip code.  TEZip was implemented using unsupported versions of Tensorflow and CUDA.  TEZip was modernized to use recent versions of Pytorch and CUDA resolving several bugs found during the comparison with SZ3. 
++ Evaluation of Spring-8 data with SZ3.  Researchers at ANL evaluate the use of SZ3 on Spring-8 data to find possible compression ratios on Spring-8 data.
+
+
 
 ## Visits and meetings
 
@@ -90,6 +99,10 @@ There was no visit in 2023.
 2024:
 
 * Robert Underwood will visit Riken in April advance of the JLESC workshop for 1 week.
+
+2025:
+
+* There have been no visits so far in 2025.
 
 ## Impact and publications
 
@@ -118,7 +131,7 @@ Robert Underwood from Clemson (Jon Calhoun's group) received a DOE funding for h
 
 The compression scheme (ROI-SZ) developed by Argonne is in extensive testing at LCLS for integration in the data reduction pipeline of the LCLS2. It will be also tested in Germany.
 This project has a direct impact on the APS (Argonne Photon Source) and Spring-8 instruments.
-This project has a broad impact on other photo sources. Results from this project are impacting the collaborations with the LCLS (Linac Coherent Light Source) instruments.
+This project has a broad impact on other photo sources. Results from this project are impacting the collaborations with the LCLS (Linac Coherent Light Source) instruments as part of the US DOE [Illumine project](https://lcls.slac.stanford.edu/depts/data-systems/projects/illumine).
 
 The implementation of Huffman variable length coding in SZ (part of ROI-S) is the first high performance implementation of Huffman coding on GPU. We will make it stand alone and available for the community, independently of SZ.
 

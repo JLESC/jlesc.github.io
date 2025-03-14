@@ -764,6 +764,15 @@ dawson_w:
   email: william.dawson@riken.jp
   homepage: http://william-dawson.github.io
 
+singh_a:
+  sur_name: Singh
+  given_name: Amarjit
+  affiliation: riken
+  position: post_doc
+  topics:
+  email: amarjitsingh@riken.jp
+  homepage: https://amarjitkalsy.github.io/amarjitsinghkalsy/
+
 debreu_l:
   sur_name: Debreu
   given_name: Laurent
@@ -3248,10 +3257,10 @@ underwood_r:
   sur_name: Underwood
   given_name: Robert
   affiliation: anl
-  position: 
-  topics:
+  position: permanent
+  topics: lossy compression, data management, and AI
   email: runderwood@anl.gov
-  homepage:
+  homepage: https://robertu94.github.io/about
 
 uno_a:
   sur_name: Uno
