@@ -102,7 +102,7 @@ Continuing Sansriti's work with lossy compression is planned by Jon as this is m
 
 Researchers at UTK (joint appointment with KIT now TUM) and ANL published their work on lossy compression for compressed basis GMRES (CB-GMRES) algorithm in the Ginkgo solver package.  This work presented a new compressor FRSZ-2 capable of achieving 99.6% of the available bandwidth on an Nvidia H100 GPU substantially faster than any existing losssy compressor.  This paper received the best paper at DRBSD in 2024.  While the results from this work are promising, a challenge remains to determine apriori which applications will benefit from this new approach over existing mixed-precision linear algebra techniques.
 
-Researchers at ANL and JSC mathematically modeled the throughput and speedup of performing compressed communication as part of FFT calculations in PySDC.  This work revealed that for strong-scaling applications, compression would become less and less effective at compressing data while further stressing the bandwidth requirements for the compressor necessary to achieve a speedup over not using compression; however, compression remains possible for weak scaling applications.
+Researchers at ANL and JSC mathematically modeled the throughput and speedup of performing compressed communication as part of FFT calculations in pySDC.  This work revealed that for strong-scaling applications, compression would become less and less effective at compressing data while further stressing the bandwidth requirements for the compressor necessary to achieve a speedup over not using compression; however, compression remains possible for weak scaling applications.
 
 
 ## Visits and meetings
@@ -117,7 +117,7 @@ Researchers at ANL and JSC mathematically modeled the throughput and speedup of 
 
 ## Impact and publications
 
-* The paper FRSZ2 was awarded the best paper of DRBSD 2024 {% cite Gruetzmacher:DRBSD2024:frsz2 --file external/lossy-compress-linear-algebra.bib }
+* The paper FRSZ2 was awarded the best paper of DRBSD 2024 {% cite Gruetzmacher:DRBSD2024:frsz2 --file external/lossy-compress-linear-algebra.bib %}
 * One ACM student research competition poster at Supercomputing 2019.
 * Publication at HPDC 2021 on Resilience of lossy compressed data {% cite Fulp:HPDC2021:ARC --file external/lossy-compress-linear-algebra.bib %}.
 * One ACM student research competition poster at Supercomputing 2021.
