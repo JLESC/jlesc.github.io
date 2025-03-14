@@ -6,7 +6,7 @@ updated: 2025-03-13
 navbar: Research
 subnavbar: Projects
 project_url:
-status: suspended
+status: running
 topics:
   - resilience
   - numerics
