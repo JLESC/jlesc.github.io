@@ -449,6 +449,8 @@ Unfortunately, she was unable to significantly reduce the memory footprint and t
 We showed in some simple experiments that SDC can still converge to limited accuracy when using lossy compression.
 Continuing Sansriti’s work with lossy compression is planned by Jon as this is more promising for reducing the memory requirements.</p>
 
+<h2 id="results-for-20242025">Results for 2024/2025</h2>
+
 <p>Researchers at UTK (joint appointment with KIT now TUM) and ANL published their work on lossy compression for compressed basis GMRES (CB-GMRES) algorithm in the Ginkgo solver package.  This work presented a new compressor FRSZ-2 capable of achieving 99.6% of the available bandwidth on an Nvidia H100 GPU substantially faster than any existing losssy compressor.  This paper received the best paper at DRBSD in 2024.  While the results from this work are promising, a challenge remains to determine apriori which applications will benefit from this new approach over existing mixed-precision linear algebra techniques.</p>
 
 <p>Researchers at ANL and JSC mathematically modeled the throughput and speedup of performing compressed communication as part of FFT calculations in pySDC.  This work revealed that for strong-scaling applications, compression would become less and less effective at compressing data while further stressing the bandwidth requirements for the compressor necessary to achieve a speedup over not using compression; however, compression remains possible for weak scaling applications.</p>
