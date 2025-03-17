@@ -53,7 +53,7 @@ We have added new profiling capability to Tapenade. Checkpointing is a cornersto
 We have differentiated HFBTHO using Tapenade. The HFBTHO code  implements a nuclear energy density functional solver useful for modeling the structure of atomic nuclei. HFBTHO has previously been used to calibrate energy functionals by using derivative-free optimization methods. To enable gradient-based optimization approaches, we must compute the derivatives of HFBTHO with respect to the parameters of the energy functional, which are a subset of all input parameters of the code. The derivatives obtained by using AD match well with those obtained by finite-difference approximation. 
 
 ## Visits and meetings
-requent e-mail exchanges and virtual meetings between the members of the project. 
+Frequent e-mail exchanges and virtual meetings between the members of the project. 
 
 ## Impact and publications
 
