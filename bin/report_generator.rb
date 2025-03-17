@@ -303,7 +303,7 @@ module Jekyll
       end
       # note: not appending double line break because member list is following in the same
       #       description list
-      @document.content.prepend("\n\n" + status_str)
+      @document.content.prepend("\n\n" + status_str + "\n\n" + "URL: https://jlesc.github.io/projects/"+ document.data['slug'].to_str)
     end
 
     private
