@@ -299,7 +299,7 @@ module Jekyll
           status_str += 'In Preparation'
         else
           status_str += @document.data['status'].to_s.capitalize
-          status_str += ' since' + @document.data['date'].year.to_s
+          status_str += ' since ' + @document.data['date'].year.to_s
       end
       # note: not appending double line break because member list is following in the same
       #       description list
