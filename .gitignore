@@ -83,3 +83,13 @@ Temporary Items
 ### IDEs ###
 .idea/
 .vscode/
+*.aux
+_templates/report/output/report.bcf
+_templates/report/output/report.fdb_latexmk
+_templates/report/output/report.fls
+_templates/report/output/report.log
+_templates/report/output/report.out
+_templates/report/output/report.run.xml
+_templates/report/output/report.synctex.gz
+_templates/report/output/report.toc
+*.bbl
