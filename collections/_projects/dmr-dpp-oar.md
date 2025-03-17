@@ -38,12 +38,11 @@ The Dynamic Management of Resources (DMR) framework {% cite iserte_dmrlib_2021 -
 Once provided with the DRM framework, several scientific applications and benchmarks will be updated with the dynamic resources paradigm and evaluated regarding coding usability and reconfiguration performance.
 
 This project aims to:
-<ul>
-<li>Integration of DPP and DMR in OAR.</li>
-<li>Provide a friendly programming layer for the DRM software stack.</li>
-<li>Create a collection of dynamic applications with a common interface.</li>
-<li>Evaluate coding usability and performance of the new dynamic resources management approach compared to the current state-of-the-art.</li>
-</ul>
+* Integration of DPP and DMR in OAR.
+* Provide a friendly programming layer for the DRM software stack.
+* Create a collection of dynamic applications with a common interface.
+* Evaluate coding usability and performance of the new dynamic resources management approach compared to the current state-of-the-art.
+
 
 ## Results for 2024/2025
 
