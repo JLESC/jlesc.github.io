@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Optimizing Checkpoint Restart Through Access Pattern Awareness
-date: 2024-02-05
+date: 2021-01-01
 updated: 2025-01-22
 navbar: Research
 subnavbar: Projects
