@@ -68,7 +68,7 @@ In Year 5 of this project, we will explore integrating our techniques into ADIOS
  * The team from UTK and ANL met in person at the ICPP 2023 in Salt Lake City in August 2023 and at SC23 in Denver, Colorado in November 2023.
 
 ## Impact and publications
- * **Publication:** {% cite TanEtAl2024 –file jlesc.bib %}
+ * **Publication:** {% cite TanEtAl2024 –-file jlesc.bib %}
  * **Talk:** Nigel Tan, Kevin Assogba, Jay Ashworth, Befikir Bogale, Franck Cappello, M. Mustafa Rafique, Michela Taufer, and Bogdan Nicolae, Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results. 25th International Middleware Conference, December 2024, Hong Kong.
  * **Poster:** Nigel Tan, Kevin Assogba, Jay Ashworth, Befikir Bogale, Franck Cappello, M. Mustafa Rafique, Michela Taufer, and Bogdan Nicolae, Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results. 25th International Middleware Conference, December 2024, Hong Kong.
  * **Talk:** Kevin Assogba, Bogdan Nicolae, M. Mustafa Rafique. Accelerating HPC Workflow Results and Performance Reproducibility Analytics. Supercomputing 2024 Doctoral Showcase, 2024.
