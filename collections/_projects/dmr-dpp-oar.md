@@ -18,6 +18,7 @@ head: iserte_s
 members:
   - huber_d
   - schreiber_m
+  - sandas_p
   - dutot_p
   - ricard_o
   - pena_a
@@ -52,7 +53,7 @@ This project aims to:
 
 ## Visits and meetings
 
-- May - July 2024: Dominiks - research stay at UGA.
+- May - July 2024: Dominik - research stay at UGA.
 - February 2025: Sergio - research stay at UGA.
 
 ## Funding
