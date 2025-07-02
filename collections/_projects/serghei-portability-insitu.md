@@ -14,9 +14,8 @@ keywords:
   - Performance-portability
   - In-situ visualization
   - flood modelling 
-head: iserte_s
+head: caviedes-voullieme_d
 members:
-  - caviedes-voullieme_d
   - rizzi_s
   - goebbert_j
   - villalobos_j
