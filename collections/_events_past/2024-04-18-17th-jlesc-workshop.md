@@ -1,23 +1,23 @@
 ---
 layout: post
-title: 18th JLESC Workshop
-date: 2025-09-30
-updated: 2025-09-30
+title: 17th JLESC Workshop
+date: 2024-04-18
+updated: 2024-11-18
 navbar: Events
-event_location: Forschungszentrum Jülich, Germany
-event_start: 2026-05-19
-event_end: 2026-05-21
-event_short_url: 
-event_url: 
+event_location: ANL, USA
+event_start: 2025-05-13
+event_end: 2025-05-15
+event_short_url: https://events.cels.anl.gov/e/JLESC17
+event_url: https://events.cels.anl.gov/e/JLESC17
 wayback_url:
 logo:
 kind: workshop
-institute: jsc
+institute: anl
 permalink:
 page_type: event_page
 ---
 
-The 18th JLESC Workshop gathers leading researchers in high-performance computing from the JLESC partners INRIA, the University of Illinois, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre, and RIKEN Center for Computational Science as well as the JLESC Fellows to explore the most recent and critical issues in advancing the field of HPC from petascale to the extreme scale and AI era.
+The 17th JLESC Workshop gathers leading researchers in high-performance computing from the JLESC partners INRIA, the University of Illinois, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre, and RIKEN Center for Computational Science as well as the JLESC Fellows to explore the most recent and critical issues in advancing the field of HPC from petascale to the extreme scale era.
 
 The workshop will feature short talk and break-out sessions on these seven central topics:
 
