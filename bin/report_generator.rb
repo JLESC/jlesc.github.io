@@ -299,10 +299,11 @@ module Jekyll
           status_str += 'In Preparation'
         else
           status_str += @document.data['status'].to_s.capitalize
+          status_str += ' since ' + @document.data['date'].year.to_s
       end
       # note: not appending double line break because member list is following in the same
       #       description list
-      @document.content.prepend("\n\n" + status_str)
+      @document.content.prepend("\n\n" + status_str + "\n\n" + "URL\n : https://jlesc.github.io/projects/"+ document.data['slug'].to_str)
     end
 
     private

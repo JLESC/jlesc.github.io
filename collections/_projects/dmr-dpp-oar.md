@@ -2,11 +2,11 @@
 layout: post
 title: A Comprehensive Software Stack for Dynamic Resources Management.
 date: 2024-06-08
-updated: 2024-06-10
+updated: 2025-01-31
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - prog_lang
 keywords:
@@ -18,6 +18,7 @@ head: iserte_s
 members:
   - huber_d
   - schreiber_m
+  - sandas_p
   - dutot_p
   - ricard_o
   - pena_a
@@ -38,12 +39,11 @@ The Dynamic Management of Resources (DMR) framework {% cite iserte_dmrlib_2021 -
 Once provided with the DRM framework, several scientific applications and benchmarks will be updated with the dynamic resources paradigm and evaluated regarding coding usability and reconfiguration performance.
 
 This project aims to:
-<ul>
-<li>Integration of DPP and DMR in OAR.</li>
-<li>Provide a friendly programming layer for the DRM software stack.</li>
-<li>Create a collection of dynamic applications with a common interface.</li>
-<li>Evaluate coding usability and performance of the new dynamic resources management approach compared to the current state-of-the-art.</li>
-</ul>
+* Integration of DPP and DMR in OAR.
+* Provide a friendly programming layer for the DRM software stack.
+* Create a collection of dynamic applications with a common interface.
+* Evaluate coding usability and performance of the new dynamic resources management approach compared to the current state-of-the-art.
+
 
 ## Results for 2024/2025
 
@@ -52,7 +52,7 @@ This project aims to:
 
 ## Visits and meetings
 
-- May - July 2024: Dominiks - research stay at UGA.
+- May - July 2024: Dominik - research stay at UGA.
 - February 2025: Sergio - research stay at UGA.
 
 ## Funding
@@ -64,6 +64,7 @@ This project aims to:
 
 {% cite tarraf_malleability_2024 --file external/dmr-dpp-oar.bib %}
 {% cite dutot_leveraging_2024 --file external/dmr-dpp-oar.bib %}
+{% cite huber_bridging_2025 --file external/dmr-dpp-oar.bib %}
 
 ## Future plans
 

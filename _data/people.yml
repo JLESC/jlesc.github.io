@@ -764,6 +764,15 @@ dawson_w:
   email: william.dawson@riken.jp
   homepage: http://william-dawson.github.io
 
+singh_a:
+  sur_name: Singh
+  given_name: Amarjit
+  affiliation: riken
+  position: post_doc
+  topics:
+  email: amarjitsingh@riken.jp
+  homepage: https://amarjitkalsy.github.io/amarjitsinghkalsy/
+
 debreu_l:
   sur_name: Debreu
   given_name: Laurent
@@ -1129,6 +1138,15 @@ gropp_b:
   email:  wgropp@illinois.edu
   homepage: http://wgropp.cs.illinois.edu/
 
+gruetzmacher_t:
+  sur_name: Grützmacher
+  given_name: Thomas
+  affiliation: utk
+  position: phd
+  topics: Numerical methods
+  email: 
+  homepage: 
+
 guemas_v:
   sur_name: Guemas
   given_name: Virginie
@@ -1361,6 +1379,15 @@ iserte_s:
   topics:
   email: sergio.iserte@bsc.es
   homepage: https://siserte.github.io
+
+sandas_p:
+  sur_name: Sandås
+  given_name: Petter
+  affiliation: bsc
+  position: permanent
+  topics:
+  email: petter.sandas@bsc.es
+  homepage: https://www.bsc.es/es/sandas-petter-erik-samuel
 
 ishikawa_y:
   sur_name: Ishikawa
@@ -2349,7 +2376,7 @@ pena_a:
   given_name: Antonio J.
   affiliation: bsc
   position: permanent
-  topics: Performance Tools
+  topics: 
   email:  antonio.pena@bsc.es
   homepage: https://www.bsc.es/es/about-bsc/staff-directory/pena-antonio
 
@@ -3248,10 +3275,10 @@ underwood_r:
   sur_name: Underwood
   given_name: Robert
   affiliation: anl
-  position: 
-  topics:
+  position: permanent
+  topics: lossy compression, data management, and AI
   email: runderwood@anl.gov
-  homepage:
+  homepage: https://robertu94.github.io/about
 
 uno_a:
   sur_name: Uno
@@ -3333,6 +3360,15 @@ videau_b:
   topics:
   email: brice.videau@imag.fr
   homepage:
+
+villalobos_j:
+  sur_name: Villalobos
+  given_name: Johansell
+  affiliation: external
+  position: 
+  topics:
+  email: 
+  homepage: 
 
 vishwanath_v:
   sur_name: Vishwanath
