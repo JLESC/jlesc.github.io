@@ -38,11 +38,11 @@ This project aims to:
 <li>Design efficient data redistribution strategies for dynamic resources in SERGHEI-SWE.</li>
 </ul>
 
-## Results for 2024
+## Results for 2024/2025
 
 During the Marenostrum hackathon, we studied data redistribution strategies for different dimensions of the domain.
 
-## Results for 2025
+## Results for 2025/2026
 
 A paper with the first integration is ready to be submitted. The paper presents a series of scenarios which are reconfigured on the fly and the results are not affected.
 
