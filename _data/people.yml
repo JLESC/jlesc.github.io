@@ -1380,6 +1380,15 @@ iserte_s:
   email: sergio.iserte@bsc.es
   homepage: https://siserte.github.io
 
+sandas_p:
+  sur_name: Sandås
+  given_name: Petter
+  affiliation: bsc
+  position: permanent
+  topics:
+  email: petter.sandas@bsc.es
+  homepage: https://www.bsc.es/es/sandas-petter-erik-samuel
+
 ishikawa_y:
   sur_name: Ishikawa
   given_name: Yukata
@@ -2367,7 +2376,7 @@ pena_a:
   given_name: Antonio J.
   affiliation: bsc
   position: permanent
-  topics: Performance Tools
+  topics: 
   email:  antonio.pena@bsc.es
   homepage: https://www.bsc.es/es/about-bsc/staff-directory/pena-antonio
 
@@ -3351,6 +3360,15 @@ videau_b:
   topics:
   email: brice.videau@imag.fr
   homepage:
+
+villalobos_j:
+  sur_name: Villalobos
+  given_name: Johansell
+  affiliation: external
+  position: 
+  topics:
+  email: 
+  homepage: 
 
 vishwanath_v:
   sur_name: Vishwanath

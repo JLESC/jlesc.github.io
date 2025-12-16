@@ -6,7 +6,7 @@ updated: 2025-01-31
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - prog_lang
 keywords:
@@ -18,6 +18,7 @@ head: iserte_s
 members:
   - huber_d
   - schreiber_m
+  - sandas_p
   - dutot_p
   - ricard_o
   - pena_a
@@ -51,7 +52,7 @@ This project aims to:
 
 ## Visits and meetings
 
-- May - July 2024: Dominiks - research stay at UGA.
+- May - July 2024: Dominik - research stay at UGA.
 - February 2025: Sergio - research stay at UGA.
 
 ## Funding
@@ -63,6 +64,7 @@ This project aims to:
 
 {% cite tarraf_malleability_2024 --file external/dmr-dpp-oar.bib %}
 {% cite dutot_leveraging_2024 --file external/dmr-dpp-oar.bib %}
+{% cite huber_bridging_2025 --file external/dmr-dpp-oar.bib %}
 
 ## Future plans
 

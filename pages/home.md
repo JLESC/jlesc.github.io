@@ -39,17 +39,9 @@ intro:
   enabled: true
   align: center
   heading: "JLESC"
-  sub_heading: "The purpose of the <strong>Joint Laboratory for Extreme Scale Computing (JLESC)</strong> is to
-      be an international, virtual organization whose goal is to enhance the ability of member
-      organizations and investigators to make the bridge between Petascale and Extreme computing.
-      The founding partners of the JLESC are <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Institut national de recherche en informatique et en automatique'>INRIA</abbr> and
-      <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='University of Illinois at Urbana-Champaign'>UIUC</abbr>.
-      Further members are <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Argonne National Laboratory'>ANL</abbr>, <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Centro Nacional de Supercomputación'>BSC</abbr>,
-      <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Jülich Supercomputing Centre'>JSC</abbr> and <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='RIKEN Center for Computational Science'>R-CCS</abbr>.
-      <br><br>JLESC involves computer scientists, engineers and scientists from other disciplines as well as
-      from industry, to ensure that the research facilitated by the Laboratory addresses science and
-      engineering's most critical needs and takes advantage of the continuing evolution of computing
-      technologies."
+  sub_heading: "The Joint Laboratory for Extreme Scale Computing (JLESC) is an international, virtual organization dedicated to fostering collaborative research in high-performance computing (HPC). Its mission is to empower member institutions and researchers to effectively address the growing challenges of extreme-scale computing by advancing HPC, hybrid HPC/quantum and HPC-driven AI technologies. Within the JLESC, researchers advance HPC hardware, software, and methods to improve the use, the performance and scalability of traditional HPC and hybrid QC workloads, as well as of emerging AI workloads on HPC systems.
+      <br><br>JLESC brings together computer scientists, engineers, domain scientists, and industry collaborators, ensuring that its research directly targets the most pressing scientific and engineering challenges while capitalizing on emerging developments in computing technologies. Founded by <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Institut national de recherche en informatique et en automatique'>INRIA</abbr> and the <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='University of Illinois at Urbana-Champaign'>UIUC</abbr>, JLESC also includes <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Argonne National Laboratory'>ANL</abbr>, <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Centro Nacional de Supercomputación'>BSC</abbr>,
+      <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='Jülich Supercomputing Centre'>JSC</abbr>, and <abbr class='initialism' data-toggle='tooltip' data-placement='top' title='RIKEN Center for Computational Science'>R-CCS</abbr>."
 
 partners:
   enabled: true
@@ -66,7 +58,7 @@ upcoming_events:
 
 # About
 
-The University of Illinois at Urbana-Champaign, INRIA, the French national computer science institute, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre and the RIKEN Center for Computational Science formed the Joint Laboratory on Extreme Scale Computing, a follow-up of the Inria-Illinois Joint Laboratory for Petascale Computing. The Joint Laboratory is based at Illinois and includes researchers from INRIA, and the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre, and RIKEN Center for Computational Science as well as JLESC Fellows. It focuses on software challenges found in extreme scale high-performance computers.
+The University of Illinois at Urbana-Champaign, INRIA, the French national computer science institute, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre and the RIKEN Center for Computational Science formed the Joint Laboratory on Extreme Scale Computing, a follow-up of the Inria-Illinois Joint Laboratory for Petascale Computing. The Joint Laboratory is based at Illinois and includes researchers from INRIA, and the National Center for Supercomputing Applications, Argonne National Laboratory, Barcelona Supercomputing Center, Jülich Supercomputing Centre, and RIKEN Center for Computational Science as well as JLESC Fellows. Its mission is to empower member institutions and researchers to effectively address the growing challenges of extreme-scale computing by advancing HPC, hybrid HPC/quantum and HPC-driven AI technologies. Within the JLESC, researchers advance HPC hardware, software, and methods to improve the use, the performance and scalability of traditional HPC and hybrid QC workloads, as well as of emerging AI workloads on HPC systems.
 
 ## Research areas include:
 

@@ -54,6 +54,17 @@ storage:
   desc: >
     Data communication and storage is becoming the main performance bottleneck for extreme scale systems. File system bandwidth for the largest systems seems plateauing around 1TB/s.  This raises several new problems concerning the I/O infrastructure, the software of the storage system, visualization, how to perform analytics before storing the data produced by the simulation. New research domains have emerged in HPC system the past 2-5 years: Burst buffers, in-situ data analytics, workflows and new abstractions for storage. This topic of the JLESC oversees all these questions considering performance (I/O overheads and interference for example), scalability and reliability as critical.  
 
+ai:
+  title: AI for HPC, HPC for AI
+  desc: >
+    The rapid advancement of artificial intelligence and machine learning is transforming the landscape of high-performance computing, creating a dynamic interplay between the two domains. On the one hand, AI techniques are increasingly used within traditional HPC fields to optimize simulations, improve numerical methods, accelerate data analysis, guide complex parameter simulations, increase the performance of system software and other improvements. On the other hand, large-scale AI models demand extreme-scale resources, driving the development of new system architectures, scheduling strategies, and scalable software frameworks. This dual relationship—AI for HPC and HPC for AI—raises important research questions. For example, how can we best integrate AI into scientific computing pipelines? And how should HPC systems evolve to meet the demands of AI workloads? Addressing these and other questions together within the JLESC will require coordinated innovation across hardware, software, algorithms, workflows and use cases, marking a new frontier for the HPC and AI communities.
+
+qc:
+  title: Hybrid HPC-Quantum Computing
+  desc: >
+    Hybrid quantum computing is emerging as a promising avenue to extend the capabilities of high-performance computing in the post-Moore era. The integration of quantum processors as accelerators within classical HPC systems offers a path toward solving certain classes of problems that are intractable for traditional architectures alone. The hybrid approach raises fundamental questions about how to design systems that effectively combine quantum and classical resources: what kind of hardware and software interfaces are needed, what programming models are effective, and how workloads can be partitioned between classical and quantum components. As quantum hardware matures and becomes increasingly accessible, hybrid quantum computing presents both a challenge and an opportunity for the researchers within the JLESC community—requiring coordinated advances in system architecture, programming models, runtime environments, algorithm design, and application development. These challenges are addressed by this topic.
+
+
 numerics:
   title: Numerical Methods
   desc: >
