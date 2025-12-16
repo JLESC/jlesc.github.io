@@ -38,21 +38,27 @@ This project aims to:
 <li>Design efficient data redistribution strategies for dynamic resources in SERGHEI-SWE.</li>
 </ul>
 
-## Results for 2024/2025
+## Results for 2024
 
-During the Marenostrum hackathon, we studied data redistribution strategies for different dimenssions of the domain.
+During the Marenostrum hackathon, we studied data redistribution strategies for different dimensions of the domain.
+
+## Results for 2025
+
+A paper with the first integration is ready to be submitted. The paper presents a series of scenarios which are reconfigured on the fly and the results are not affected.
 
 ## Visits and meetings
 
  * October 2024: Unizar researchers attend MNHack24 at BSC.
+ * October 2025: Unizar researchers attend MNHack25 at BSC.
 
 ## Impact and publications
 
-None yet.
+The project has been awarded with 1000K hours in MareNostrum5 ACC through the Spanish Supercomputing Network (RES) AECT-2025-3-0006.
 
 ## Future plans
 
-Study new reconfiguration strategies and evaluate them in a large workload.
+* Study new reconfiguration strategies and evaluate them in a large workload.
+* Using heuristics based on performance to have better reconfiguration decisions.
 
 ## References
 
