@@ -46,6 +46,9 @@ During the Marenostrum hackathon, we studied data redistribution strategies for 
 
 A paper with the first integration is ready to be submitted. The paper presents a series of scenarios which are reconfigured on the fly and the results are not affected.
 
+DMR has been fully released as Free and Open‑Source Software (FOSS), ensuring transparency, reproducibility, and community contribution (https://zenodo.org/records/17831722). The perfect example of it is its integration in SERGHEI.
+
+
 ## Visits and meetings
 
  * October 2024: Unizar researchers attend MNHack24 at BSC.
