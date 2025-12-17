@@ -9,6 +9,8 @@ project_url:
 status: running
 topics: 
   - architectures
+  - ai
+  - qc
 keywords: 
   - Reconfigurable computing
   - Hardware specialization
@@ -45,6 +47,13 @@ The end of transistor scaling encourages us to challenge innovative architectura
 * Organized a break-out session at the JLESC 16th workshop in Japan (Apr 2024)
 * Organized SC24 BoF session: Open-Source Hardware Tools: Advancing Architecture Research and Chip Prototyping (Nov 2024)
 * Held a technical meeting in Japan to discuss streaming data compressor algorithms and designs (Dec 2024)
+
+## Results for 2025/2026
+
+* Organized a break-out session at the JLESC 17th workshop at Argonne (May 2025)
+* Organized 2nd Workshop on Architecture Design Methodologies and Ecosystems for HPC and Scientific Edge Computing ARCHIDE at LBNL (Aug 2025)
+* Organized SC25 BoF session: Open-Source Hardware Tools: Advancing Architecture Research and Chip Prototyping (Nov 2025)
+* Co-authored one journal paper.
 
 ## Visits and meetings
 
