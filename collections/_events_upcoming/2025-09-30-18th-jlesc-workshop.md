@@ -8,7 +8,7 @@ event_location: Forschungszentrum Jülich, Germany
 event_start: 2026-05-19
 event_end: 2026-05-21
 event_short_url: 
-event_url: 
+event_url: https://www.fz-juelich.de/en/jsc/news/events/2026/18-jlesc-2026
 wayback_url:
 logo:
 kind: workshop
