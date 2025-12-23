@@ -65,7 +65,8 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 {% bibliography --cited --file jlesc.bib %}
 
 
-## Future plans
+## Working plan
+
 Running PDE simulations efficiently on supercomputers poses a significant challenge in High-Performance Computing (HPC). The intricacy lies in that these simulations, crafted by numerics experts, must be tailored to enable highly efficient execution on supercomputer architectures, demanding optimal performance from both CPUs and GPUs, coupled with seamless communication.
 
 For this project, our current strategy currently revolves around the following fundamental axes:
@@ -79,6 +80,29 @@ For this project, our current strategy currently revolves around the following f
 We aim to enhance the efficiency of PDE solvers on supercomputers and contribute significantly to the ongoing evolution of HPC software methodologies.
 
 This project will make strong use of the Psyclone development, which, in addition to the project partners, also involves collaborations with the Psyclone developers Sergi Siso (STFC, UK), Andrew Porter (STFC, UK), and Jörg Henrichs (BOM, AUS)
+
+
+## Results for 2025/2026
+
+Results are discussed with respect to the three previously mentioned axes:
+
+- We published our first paper on the core of the Poseidon development, discussing the uplifting approach.
+Here, we reobtain information that was lost during the discretization of the ocean model: e.g., which data in buffer arrays are not required later on to account only for the essential data flow, and that all loop iteration ranges are within a certain proximity.
+After uplifting it into the Poseidon internal intermediate representation, we can perform optimizations that are agnostic to the specific PDE solver, in particular optimizations that regular compilers cannot perform.
+Briefly stated, we first undo various existing optimizations, particularly loop-fusion optimizations.
+Although this is somewhat counterintuitive, as it initially worsens the performance for both CPU and GPU versions, it is a necessary step because such loop-fusion optimizations have led to a dead end in further optimizations.
+Poseidon then automatically applies deep kernel fusion and finally again loop fusion, but differently than before.
+It then automatically generates parallelized code for CPUs and GPUs, resulting in significant speedups of over 2 for the numerical components of the barotropic solver in the Croco ocean model. Finally, note that such kernel fusion optimizations cannot be performed manually due to the complexity of the generated code.
+More information can be found here https://hal.science/hal-05061001 .
+
+- The 2nd paper on automatic communication is currently under submission.
+
+- The work on automatic differentiation has been paused due to a recent publication with similar ideas.
+
+Julien Remy visited ANL and investigated Poseidon and PSyclone in the context of Flash-X where he identified the potential for kernel fusion in Flash-X.
+Another low occupancy investigation in specific parts of Flash-X showed this to be caused due to non-contiguous memory accesses (workers stall) and the high register use in there.
+Additionally, we were able to automatically generate GPU (OpenACC and OpenMP) versions of the call stacks and kernels using Psyclone.
+
 
 ## References
 
