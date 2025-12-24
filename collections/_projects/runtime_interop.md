@@ -26,7 +26,7 @@ members:
   - bhosale_a
   - maya_t
   - rao_r
-  - schuchart_j:
+  - schuchart_j
 ---
 
 ## Research topic and goals
