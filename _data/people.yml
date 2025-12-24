@@ -1988,7 +1988,7 @@ maya_t:
   sur_name: Taylor
   given_name: Maya
   affiliation: uiuc
-  position: PhD student
+  position: phd
   topics:
   email: mayat4@illinois.edu
   homepage:
@@ -2573,7 +2573,7 @@ rao_r:
   sur_name: Rao
   given_name: Ritvik
   affiliation: uiuc
-  position: PhD student
+  position: phd
   topics:
   email: rsrao2@illinois.edu
   homepage:
@@ -2879,7 +2879,7 @@ schuchart_j:
   sur_name: Schuchart
   given_name: Joseph
   affiliation: external
-  position: Researcher
+  position:
   topics:
   email: oseph.schuchart@stonybrook.edu
   homepage:
