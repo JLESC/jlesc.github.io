@@ -350,6 +350,15 @@ benoit_a:
   email: Anne.Benoit@ens-lyon.fr
   homepage: http://graal.ens-lyon.fr/~abenoit/
 
+bhosale_a:
+  sur_name: Bhosale
+  given_name: Aditya
+  affiliation: uiuc
+  position: 
+  topics:
+  email: adityapb@illinois.edu
+  homepage:
+
 bienz_a:
   sur_name: Bienz
   given_name: Amanda
@@ -1494,7 +1503,7 @@ herault_t:
   affiliation: inria
   position: permanent
   topics: HPC, Resilience
-  email: herault@icl.utk.edu
+  email: thomas.herault@inria.fr
   homepage: https://scholar.google.com/citations?user=tEPKoK0AAAAJ&hl=en
 
 kabadshow_i:
@@ -1974,6 +1983,15 @@ matsuoka_s:
   topics:
   email:
   homepage: http://www.r-ccs.riken.jp/en/
+
+maya_t:
+  sur_name: Taylor
+  given_name: Maya
+  affiliation: uiuc
+  position: phd
+  topics:
+  email: mayat4@illinois.edu
+  homepage:
 
 mehaut_j:
   sur_name: Mehaut
@@ -2551,6 +2569,15 @@ ramet_p:
   email: ramet@labri.fr
   homepage: http://www.labri.fr/perso/ramet/
 
+rao_r:
+  sur_name: Rao
+  given_name: Ritvik
+  affiliation: uiuc
+  position: phd
+  topics:
+  email: rsrao2@illinois.edu
+  homepage:
+  
 reis_v:
   sur_name: Reis
   given_name: Valentin
@@ -2847,6 +2874,15 @@ schreiber_m:
   topics: Partial Differential Equations and High-Performance Computing
   email: martin.schreiber@univ-grenoble-alpes.fr
   homepage: https://www.martin-schreiber.info/
+
+schuchart_j:
+  sur_name: Schuchart
+  given_name: Joseph
+  affiliation: external
+  position:
+  topics:
+  email: oseph.schuchart@stonybrook.edu
+  homepage:
 
 segovia_j:
   sur_name: Segovia
