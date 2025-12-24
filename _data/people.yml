@@ -353,7 +353,7 @@ benoit_a:
 bhosale_a:
   sur_name: Bhosale
   given_name: Aditya
-  affiliation: illinois
+  affiliation: UIUC
   position: 
   topics:
   email: adityapb@illinois.edu
@@ -1987,7 +1987,7 @@ matsuoka_s:
 maya_t:
   sur_name: Taylor
   given_name: Maya
-  affiliation: illinois
+  affiliation: UIUC
   position: PhD student
   topics:
   email: mayat4@illinois.edu
@@ -2572,7 +2572,7 @@ ramet_p:
 rao_r:
   sur_name: Rao
   given_name: Ritvik
-  affiliation: illinois
+  affiliation: UIUC
   position: PhD student
   topics:
   email: rsrao2@illinois.edu
@@ -2878,10 +2878,10 @@ schreiber_m:
 schuchart_j:
   sur_name: Schuchart
   given_name: Joseph
-  affiliation: stonybrook
+  affiliation: EXT
   position: Researcher
   topics:
-  email: m.aach@fz-juelich.de
+  email: oseph.schuchart@stonybrook.edu
   homepage:
 
 segovia_j:
