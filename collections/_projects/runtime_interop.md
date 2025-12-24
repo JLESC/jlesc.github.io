@@ -22,7 +22,11 @@ members:
   - alvarez_d
   - aumage_o
   - herault_t
-  - kale_s 
+  - kale_s
+  - bhosale_a
+  - maya_t
+  - rao_r
+  - schuchart_j
 ---
 
 ## Research topic and goals
@@ -46,6 +50,16 @@ interfaces to enhance interoperability among different runtime systems,
 optimizing performance and encouraging broader adoption of task-based
 programming models.
 
+
+## Results for 2025/2026
+
+We have continued the monthly video call to coordinate activities and ensure continuous progress.
+
+Main highlights for this period:
+* **StarPU and PaRSEC ported to nOS-V.** David Álvarez carried out a summer internship at Inria Bordeaux (hosted by Olivier Aumage and Thomas Hérault). During the internship, he completed the port of **StarPU** and **PaRSEC** to **nOS-V**, and evaluated their **interoperability with OpenMP** using **three applications**. This work was submitted as a full research paper to **IPDPS**, but it was not accepted.
+* **Charm++ reconvers discussions.** We discussed the new implementation of Charm++ runtime convers, called **reconvers**, aimed at reducing code-base complexity, addressing technical debt, and enabling a simpler design that can better leverage new high-performance communication libraries, especially in highly multithreaded environments. Charm++ already works with reconvers but there are some performance issues with large applications. 
+* **Community coordination.** We plan to organize another **BoF** at the next **JLESC workshop** to align on interoperability priorities and cross-runtime collaboration.
+
 ## Results for 2024/2025
 
 Since the project's inception in September 2024, we have established a monthly video call to coordinate activities and ensure continuous progress.
@@ -58,17 +72,23 @@ We have initiated work on adapting StarPU and PaRSEC to run on top of nOS-V. A w
 
 ## Visits and meetings
 
-* We had a BoF session in the Kobe 2024 workshop, where we decided to start this project.
-* We are organizing another BoF session at the upcoming Argonne 2025 workshop
-* We have planned a summer internship from June to August 2025, from BSC to Inria.
+* We had a BoF session in Kobe 2024 workshop, where we decided to start this project.
+* We had a BoF session in Argonne 2025 workshop, where we discussed interoperability challengues.
+* David Álvarez completed a summer internship at **Inria Bordeaux** (June–August 2025), hosted by **Olivier Aumage** and **Thomas Hérault**, focused on porting **StarPU** and **PaRSEC** to **nOS-V** and evaluating interoperability with **OpenMP**.
+* We plan to organize another BoF at the next **JLESC workshop**.
 
-## Impact and publications
+## Publications
 
+* David Álvarez, Olivier Aumage, Thomas Hérault, Vicenç Beltran. **Efficiently combining parallel libraries and programming models in HPC applications.** *(to be submitted in early 2026).*
+
+## Impact 
+* Port of StarPU to nOS-V completed in 2025 
+* Port of PaRSEC to nOS-V completed in 2025
 * Solve interoperability problems between task-based programming models
 * Increase software development productivity and reach of task-based
   programming models
 * Research and document needs from higher-level programming systems (Charm++,
-  HPX, Legion, OpenMP, OmpSs, ..) for the task-based execution systems
+  HPX, Legion, PaRSEC, OpenMP, OmpSs, ..) for the task-based execution systems
 * Explore possibility of creating a standard that allows for different use
   cases currently served,  either via a flexible design or allowing for
 extensions
