@@ -25,6 +25,7 @@ members:
   - sharma_r
   - calmet_h
   - puri_r
+  - krochak_o
 ---
 
 ## Research topic and goals
