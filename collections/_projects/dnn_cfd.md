@@ -133,7 +133,7 @@ In this period, a successful VSR compute time proposal was jointly granted to JS
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
-Future plans are discussed in regular meetings. Furthermore, Makoto Tsubokura intends to visit JSC in 03/2025 to further discuss the future project plan.
+Future plans are discussed in regular meetings.
 
 ## References
 
