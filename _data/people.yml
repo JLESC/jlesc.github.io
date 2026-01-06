@@ -1641,6 +1641,15 @@ krieg_s:
   email: s.krieg@fz-juelich.de
   homepage: http://www.fz-juelich.de/ias/jsc/EN/AboutUs/Staff/Krieg_S/_node.html
 
+krochak_o:
+  sur_name: Krochak
+  given_name: Oleksandr
+  affiliation: jsc
+  position: 
+  topics:
+  email: o.krochak@fz-juelich.de
+  homepage: https://www.fz-juelich.de/profile/krochak_o
+  
 kumahata_k:
   sur_name: Kumahata
   given_name: Kiyoshi
