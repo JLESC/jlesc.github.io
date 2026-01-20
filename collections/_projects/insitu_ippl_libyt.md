@@ -2,7 +2,7 @@
 layout: post
 title: In-situ visualization and analysis for large-scale particle-mesh simulations
 date: 2023-09-06
-updated: 2025-01-30
+updated: 2026-01-20
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -17,6 +17,7 @@ members:
   - goebbert_j
   - tsai_s
   - turk_m
+  - mateevitsi_v
 ---
 
 ## Research topic and goals
@@ -39,11 +40,17 @@ process of creating a libyt interface in IPPL.
 2) New steering functonality added and is in the phase of testing.
 3) An Ascent based in-situ interface for IPPL is created and is also in the testing phase.
 
+## Results for 2025/2026
+1) Severin Klapproth a Master's student from ETH Zürich/Paul Scherrer Institute did his Master's thesis on in-situ visualization in IPPL. He made the catalyst interface and the steering functionality more generic and reusable across applications. He will submit his thesis in early 2026.  
+2) A new web-based interface for in-situ visualization using Trame has been made by Severin.
+3) First in-situ results with OPAL-X, which is a particle accelerator library that uses IPPL, were obtained.
+4) Victor Mateevitsi from Argonne has been added as a new collaboration partner in this project. He and his collaborators made the ascent interface for IPPL.
+
 ## Visits and meetings
-None.
+1) Jens Henrik Goebbert and Victor Mateevitsi were part of the organizing committee in the ISAV25: In Situ AI, Analysis, and Visualization workshop in sc25. Andreas Adelmann from Paul Scherrer institute gave a keynote talk in that workshop on " In-Situ Visualization and Steering of Digital Twins for Particle Accelerators"  which used in-situ results from IPPL and OPAL-X. 
 
 ## Impact and publications
-None.
+1) Although not directly related to this JLESC project IPPL and it's ascent based in-situ interface were used in 
 
 {% bibliography --cited --file jlesc.bib %}
 
@@ -51,7 +58,7 @@ None.
 
 1) Do performance measurements on multiple systems.
 2) In-transit visualization taking advantage of both CPUs and GPUs using ADIOS catalyst.
-3) Use computational steering to modify external fields in particle accelerator simulations.
+3) Use computational steering for downstream AI applications using images.
 
 
 
