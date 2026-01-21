@@ -64,4 +64,4 @@ process of creating a libyt interface in IPPL.
 
 
 ## References
-<!-- {% bibliography --file external/activestorage_project.bib %} -->
+{% bibliography --file external/insitu_ippl_libyt.bib %}
