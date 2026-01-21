@@ -25,6 +25,8 @@ members:
   - sharma_r
   - calmet_h
   - puri_r
+  - krochak_o
+  - liu_x
 ---
 
 ## Research topic and goals
@@ -88,6 +90,24 @@ In this project period, Mario Rüttgers from JSC started working at the Data-Dri
 The work on AI-based reduced-order models between JSC and RIKEN is published in the JLESC special issue of *Future Generation Computer Systems* {% cite Higashida2024 --file jlesc.bib %}.
 The robustness of an artificial neural network for model order reduction of flow field data is studied, using large-scale distributed learning on up to 6259 nodes of the Fugaku supercomputer. Flow around two square cylinders with varying center distances is analyzed using simulation data for training and testing. The network's ability to reconstruct flow fields with 2, 12, and 24 modes is evaluated, showing that 2 modes fail to capture both low- and high-frequency structures, while 12 and 24 modes yield more accurate reconstructions, especially for high-frequency waves near the cylinders. With 24 modes, the network produces smooth velocity fields that reproduce all relevant flow features for all geometric variations. Comparisons with proper orthogonal decomposition (POD) using 24 modes reveal that the neural network achieves lower mean squared errors across all cases, highlighting its superiority over linear methods like POD for reconstructing non-linear flow fields.
 
+## Results for 2025/2026
+In this project period, Oleksandr Krochak from JSC and Rahul Bale from R-CCS started joining the JLESC meetings. Krochak is working in the HANAMI project, which already collaborates with R-CCS on CFD in bio-medical applications. His association to JLESC is hence useful to mutually benefit the two projects. Bale displayed interest in the JLESC project after a visit to R-CCS by Krochak in the context of the HANAMI project. 
+
+Krochak currently uses the previously mentioned m-AIA simulation framework. He works on simulations of particle inhalation, using a real nasal cavity geometry obtained through an ML-augmented computer tomography processing pipeline developed at JSC by Mario Rüttgers {% cite Ruttgers2025 --file jlesc.bib %}. With the combination of internal and external flow regions, particles initialized at rest outside the nostrils, and time-varying boundary conditions, a realistic study of particle inhalation can be performed to provide a qualitative assessment of viral transmission risks. 
+
+Krochak and Lintermann were responsible for the organization of the biomedical session at the 2nd HANAMI High Level Symposium in Chamonix, France, in December 2025. During this symposium, a number of presentations from JLESC partners and associated parties took place. Mario Rüttgers delivered a keynote presentation, while Rahul Bale, Hadriel Calmet and Oleksandr Krochak gave presentations during the parallel session. Additionally, some associated parties working on biomedical applications also presented: Andrea Schilacci (PostDoc at the Institute of Aerodynamics  - AIA, RWTH Aachen University), Matthias Meinke (head of the numerical group at AIA, RWTH Aachen), and as Beatriz Eguzkitza (BSC). This symposium brought researchers from different institutes together and led to productive knowledge exchange that can lead to future collaborations.  
+
+R-CCS continued their developments on PINNs by developing a PI-DeepONet. In PI-DeepONet, the idea is to achieve generalization across unseen conditions by learning functional mappings between the input and output parameters of the network. This has been demonstrated on a flow over a backward-facing step for an arbitrary inlet velocity profile and Reynolds number. The work, in collaboration with JSC and Inha University, was submitted to the journal Computers & Fluids and is currently under review. Furthermore, the effectiveness of PINNs in simulating unsteady flows, with a particular focus on the impact of the number of collocation points used during the training process were investigated {% cite Onishi2025 --file jlesc.bib %}. 
+
+R-CCS also continued their research on ML-based ROM. The proposed ROM was evaluated for its robustness in predicting turbulent flows around various vehicle body shapes.
+By training on instantaneous flow-field snapshots for six different body shapes, it was demonstrated that flows around five untrained body shapes could be successfully reproduced using 32 nonlinear modes with the proposed ROM.
+
+The work on GNNs is progressing across three different use cases. Hadrien Calmet from BSC continued his work on a GCNN applied to respiratory flows {% cite Calmet2025 --file jlesc.bib %}. A joint paper, in collaboration with JSC, was submitted to the journal Physics of Fluids, and is currently under review. Rishabh Puri from KIT is continuing development of a physics-aware GCNN applied to prediction of flow over arbitrary shapes. The work is in collaboration with Mario Rüttgers from Inha University (who continues to be associated to the JLESC project) and JSC. In the third use case, Rüttgers developed a GCNN for urban flows applied to drag aware-path planning for unmanned aerial vehicles. This work is currently under review for the journal Engineering Applications of Artificial Intelligence.  
+
+Lintermann also published the proceedings of the ParCFD 2024 conference, which was organized by JSC at Bonn, Germany {% cite Lintermann2025 --file jlesc.bib %}, with participation from many JLESC collaborators of this project. These proceedings included JLESC-associated contributions on reinforcement learning {% cite Lagemann2025 --file jlesc.bib %}, transformers for time marching of fluid flow fields {% cite Sarma2025 --file jlesc.bib %} and autoencoders for turbulent boundary layers {% cite Shao2025 --file jlesc.bib %}.
+
+In this period, a successful VSR compute time proposal was jointly granted to JSC, R-CCS, and Inha University. The proposal was submitted as an extension project, however R-CCS was included in a sub-project to enable progressing the JLESC efforts on the JURECA-DC system at JSC. A total of 1.3 million CPU and 1.57 million GPU core-hours were granted to the proposal, which runs until April 2026.  
+
 ## Visits and meetings
 
 * throughout 2020: discussions of hosting a JSC researcher at R-CCS (canceled due to the COVID-19 pandemic)
@@ -103,13 +123,17 @@ The robustness of an artificial neural network for model order reduction of flow
 * 16.04.2024 - 18.04.2024: Rakesh Sarma (JSC), Junya Onishi (R-CCS) and Hadrien Calmet (BSC) present the jointly developed results at the 16th JLESC workshop in Kobe, Japan.
 * 02.09.2024 - 04.09.2024: Mario Rüttgers (JSC), Rishabh Puri (KIT), Rakesh Sarma (JSC), Hadrien Calmet (BSC) and Junya Onishi (R-CCS) presented at the 35th Parallel Computational Fluid Dynamics (ParCFD) conference in Bonn, Germany.
 * 08.09.2024 - 11.09.2024: Makoto Tsubokura from R-CCS and Mario Rüttgers from JSC presented at the 15th International Conference on Parallel Processing and Applied Mathematics (PPAM), Ostrava, Czech Republic.
+* 13.05.2025 - 15.05.2025: Rakesh Sarma (JSC) presents the jointly developed results at the 17th JLESC workshop in Argonne, USA.
+* 27.05.2025 - 30.05.2025: Kazuto Ando (R-CCS), Rahul Bale (R-CCS) and Makoto Tsubokura (R-CCS) presented at the 1st international Symposium on AI and Fluid Mechanics, Chania, Greece
+* 24.11.2025 - 26.11.2025: Rakesh Sarma (JSC), Hadrien Calmet (BSC), Junya Onishi (R-CCS) and Andreas Lintermann (JSC) presented at the 36th Parallel Computational Fluid Dynamics (ParCFD) conference in Merida, Mexico.
+* 08.12.2025 - 11.12.2025: Mario Rüttgers (DDFE), Hadrien Calmet (BSC), Makoto Tsubokura (R-CCS), Oleksandr Krochak (JSC) and Andreas Lintermann (JSC) presented and hosted sessions at the 2nd HANAMI High-Level Symposium in Chamonix, France.
 
 ## Impact and publications
 
 {% bibliography --cited --file jlesc.bib %}
 
 ## Future plans
-Future plans are discussed in regular meetings. Furthermore, Makoto Tsubokura intends to visit JSC in 03/2025 to further discuss the future project plan.
+Future plans are discussed in regular meetings.
 
 ## References
 
