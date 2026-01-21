@@ -2,7 +2,7 @@
 layout: post
 title: Developer tools for porting and tuning parallel applications on extreme-scale parallel systems
 date: 2016-03-22
-updated: 2025-01-30
+updated: 2026-01-20
 navbar: Research
 subnavbar: Projects
 footer: true
@@ -127,6 +127,14 @@ and help direct development of new tool capabilities.
 * Installation of tools on EuroHPC computer systems, including MareNostrum5.
 * Extension of POP analysis methodology and metrics for GPU-accelerated application execution measurements.
 
+## Results for 2025/2026
+
+* Workshop article on Score-P support for Fugaku, JUPITER and other Arm-based systems.
+* Hands-on performance analysis/tools tutorial at ISC-HPC'25 (Hamburg).
+* Virtual tools training for U. Duisburg-Essen using their local HPC system.
+* Installation of tools on Fugaku, JUPITER, Deucalion and other EuroHPC HPC systems.
+* Improvement of POP analysis methodology and metrics for GPU-accelerated application execution measurements.
+
 ## Visits and meetings
 
 Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and ParCo conferences, and events hosted by project partners.  Meeting with MYX project {% cite MYXproject --file external/tool_pandt_project.bib %} members at ISC-HPC to discuss XMPT tools interface commonalities for correctness checking and performance analysis tools.
@@ -135,8 +143,7 @@ Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and 
 2016/02/24-26: BSC & JSC instructors visited RIKEN-AICS to deliver training as part of VI-HPS Tuning Workshop.
 2019/04/09-12: BSC & JSC instructors visited UTK-ICL to deliver training as part of VI-HPS Tuning Workshop.
 2022/10/01-2022/11/04: JSC visit to NCSA & UTK-ICL to prepare for training as part of VI-HPS Tuning Workshops.
-Visits planned for the next 12 months:
-Instructors to visit RIKEN-CCS to deliver tools training as part of workshop for Fugaku users.
+Visits planned for the next 12 months: none for now
 
 ## Impact and publications
 
