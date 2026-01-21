@@ -359,6 +359,18 @@
               
               
               
+              <li>
+                  Krochak Oleksandr (JSC)
+              </li>
+              
+              
+              
+              <li>
+                  Liu Xin (JSC)
+              </li>
+              
+              
+              
               
               
               
@@ -442,6 +454,24 @@ planned.</p>
 <p>The work on AI-based reduced-order models between JSC and RIKEN is published in the JLESC special issue of <em>Future Generation Computer Systems</em> <a class="citation" href="#Higashida2024">(Higashida et al. 2024)</a>.
 The robustness of an artificial neural network for model order reduction of flow field data is studied, using large-scale distributed learning on up to 6259 nodes of the Fugaku supercomputer. Flow around two square cylinders with varying center distances is analyzed using simulation data for training and testing. The network’s ability to reconstruct flow fields with 2, 12, and 24 modes is evaluated, showing that 2 modes fail to capture both low- and high-frequency structures, while 12 and 24 modes yield more accurate reconstructions, especially for high-frequency waves near the cylinders. With 24 modes, the network produces smooth velocity fields that reproduce all relevant flow features for all geometric variations. Comparisons with proper orthogonal decomposition (POD) using 24 modes reveal that the neural network achieves lower mean squared errors across all cases, highlighting its superiority over linear methods like POD for reconstructing non-linear flow fields.</p>
 
+<h2 id="results-for-20252026">Results for 2025/2026</h2>
+<p>In this project period, Oleksandr Krochak from JSC and Rahul Bale from R-CCS started joining the JLESC meetings. Krochak is working in the HANAMI project, which already collaborates with R-CCS on CFD in bio-medical applications. His association to JLESC is hence useful to mutually benefit the two projects. Bale displayed interest in the JLESC project after a visit to R-CCS by Krochak in the context of the HANAMI project.</p>
+
+<p>Krochak currently uses the previously mentioned m-AIA simulation framework. He works on simulations of particle inhalation, using a real nasal cavity geometry obtained through an ML-augmented computer tomography processing pipeline developed at JSC by Mario Rüttgers <a class="citation" href="#Ruttgers2025">(Rüttgers et al. 2025)</a>. With the combination of internal and external flow regions, particles initialized at rest outside the nostrils, and time-varying boundary conditions, a realistic study of particle inhalation can be performed to provide a qualitative assessment of viral transmission risks.</p>
+
+<p>Krochak and Lintermann were responsible for the organization of the biomedical session at the 2nd HANAMI High Level Symposium in Chamonix, France, in December 2025. During this symposium, a number of presentations from JLESC partners and associated parties took place. Mario Rüttgers delivered a keynote presentation, while Rahul Bale, Hadriel Calmet and Oleksandr Krochak gave presentations during the parallel session. Additionally, some associated parties working on biomedical applications also presented: Andrea Schilacci (PostDoc at the Institute of Aerodynamics  - AIA, RWTH Aachen University), Matthias Meinke (head of the numerical group at AIA, RWTH Aachen), and as Beatriz Eguzkitza (BSC). This symposium brought researchers from different institutes together and led to productive knowledge exchange that can lead to future collaborations.</p>
+
+<p>R-CCS continued their developments on PINNs by developing a PI-DeepONet. In PI-DeepONet, the idea is to achieve generalization across unseen conditions by learning functional mappings between the input and output parameters of the network. This has been demonstrated on a flow over a backward-facing step for an arbitrary inlet velocity profile and Reynolds number. The work, in collaboration with JSC and Inha University, was submitted to the journal Computers &amp; Fluids and is currently under review. Furthermore, the effectiveness of PINNs in simulating unsteady flows, with a particular focus on the impact of the number of collocation points used during the training process were investigated <a class="citation" href="#Onishi2025">(Onishi and Tsubokura 2025)</a>.</p>
+
+<p>R-CCS also continued their research on ML-based ROM. The proposed ROM was evaluated for its robustness in predicting turbulent flows around various vehicle body shapes.
+By training on instantaneous flow-field snapshots for six different body shapes, it was demonstrated that flows around five untrained body shapes could be successfully reproduced using 32 nonlinear modes with the proposed ROM.</p>
+
+<p>The work on GNNs is progressing across three different use cases. Hadrien Calmet from BSC continued his work on a GCNN applied to respiratory flows <a class="citation" href="#Calmet2025">(Calmet et al. 2025)</a>. A joint paper, in collaboration with JSC, was submitted to the journal Physics of Fluids, and is currently under review. Rishabh Puri from KIT is continuing development of a physics-aware GCNN applied to prediction of flow over arbitrary shapes. The work is in collaboration with Mario Rüttgers from Inha University (who continues to be associated to the JLESC project) and JSC. In the third use case, Rüttgers developed a GCNN for urban flows applied to drag aware-path planning for unmanned aerial vehicles. This work is currently under review for the journal Engineering Applications of Artificial Intelligence.</p>
+
+<p>Lintermann also published the proceedings of the ParCFD 2024 conference, which was organized by JSC at Bonn, Germany <a class="citation" href="#Lintermann2025">(Lintermann, Herff, and Göbbert 2025)</a>, with participation from many JLESC collaborators of this project. These proceedings included JLESC-associated contributions on reinforcement learning <a class="citation" href="#Lagemann2025">(Lagemann et al. 2025)</a>, transformers for time marching of fluid flow fields <a class="citation" href="#Sarma2025">(Sarma et al. 2025)</a> and autoencoders for turbulent boundary layers <a class="citation" href="#Shao2025">(Shao et al. 2025)</a>.</p>
+
+<p>In this period, a successful VSR compute time proposal was jointly granted to JSC, R-CCS, and Inha University. The proposal was submitted as an extension project, however R-CCS was included in a sub-project to enable progressing the JLESC efforts on the JURECA-DC system at JSC. A total of 1.3 million CPU and 1.57 million GPU core-hours were granted to the proposal, which runs until April 2026.</p>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <ul>
@@ -458,11 +488,322 @@ The robustness of an artificial neural network for model order reduction of flow
   <li>16.04.2024 - 18.04.2024: Rakesh Sarma (JSC), Junya Onishi (R-CCS) and Hadrien Calmet (BSC) present the jointly developed results at the 16th JLESC workshop in Kobe, Japan.</li>
   <li>02.09.2024 - 04.09.2024: Mario Rüttgers (JSC), Rishabh Puri (KIT), Rakesh Sarma (JSC), Hadrien Calmet (BSC) and Junya Onishi (R-CCS) presented at the 35th Parallel Computational Fluid Dynamics (ParCFD) conference in Bonn, Germany.</li>
   <li>08.09.2024 - 11.09.2024: Makoto Tsubokura from R-CCS and Mario Rüttgers from JSC presented at the 15th International Conference on Parallel Processing and Applied Mathematics (PPAM), Ostrava, Czech Republic.</li>
+  <li>13.05.2025 - 15.05.2025: Rakesh Sarma (JSC) presents the jointly developed results at the 17th JLESC workshop in Argonne, USA.</li>
+  <li>27.05.2025 - 30.05.2025: Kazuto Ando (R-CCS), Rahul Bale (R-CCS) and Makoto Tsubokura (R-CCS) presented at the 1st international Symposium on AI and Fluid Mechanics, Chania, Greece</li>
+  <li>24.11.2025 - 26.11.2025: Rakesh Sarma (JSC), Hadrien Calmet (BSC), Junya Onishi (R-CCS) and Andreas Lintermann (JSC) presented at the 36th Parallel Computational Fluid Dynamics (ParCFD) conference in Merida, Mexico.</li>
+  <li>08.12.2025 - 11.12.2025: Mario Rüttgers (DDFE), Hadrien Calmet (BSC), Makoto Tsubokura (R-CCS), Oleksandr Krochak (JSC) and Andreas Lintermann (JSC) presented and hosted sessions at the 2nd HANAMI High-Level Symposium in Chamonix, France.</li>
 </ul>
 
 <h2 id="impact-and-publications">Impact and publications</h2>
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Ruttgers2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseRuttgers2025Bibtex" aria-expanded="false" aria-controls="collapseRuttgers2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseRuttgers2025Abstract" aria-expanded="false" aria-controls="collapseRuttgers2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Ruttgers2025">Rüttgers, Mario, Fabian Hübenthal, Makoto Tsubokura, and Andreas Lintermann. 2025. “Parallel Reinforcement Learning and Gaussian Process Regression for Improved Physics-Based Nasal Surgery Planning.” In <i>Parallel Processing and Applied Mathematics (PPAM 2024). Lecture Notes in Computer Science (LNCS)</i>, edited by R. Wyrzykowski, J. Dongarra, E. Deelman, and K. Karczewski, 15581:79–96. Springer. https://doi.org/10.1007/978-3-031-85703-4_6.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseRuttgers2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@incollection{Ruttgers2025,
+  author = {R{\"{u}}ttgers, Mario and H{\"{u}}benthal, Fabian and Tsubokura, Makoto and Lintermann, Andreas},
+  booktitle = {Parallel Processing and Applied Mathematics (PPAM 2024). Lecture Notes in Computer Science (LNCS)},
+  doi = {10.1007/978-3-031-85703-4_6},
+  editor = {Wyrzykowski, R. and Dongarra, J. and Deelman, E. and Karczewski, K.},
+  pages = {79--96},
+  publisher = {Springer},
+  title = {{Parallel Reinforcement Learning and Gaussian Process Regression for Improved Physics-Based Nasal Surgery Planning}},
+  url = {https://link.springer.com/10.1007/978-3-031-85703-4_6},
+  volume = {15581},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Calmet2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCalmet2025Bibtex" aria-expanded="false" aria-controls="collapseCalmet2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCalmet2025Abstract" aria-expanded="false" aria-controls="collapseCalmet2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Calmet2025">Calmet, Hadrien, Joan Calafell, Rakesh Sarma, Mario Rüttgers, Andreas Lintermann, and Guillaume Houzeaux. 2025. “Creating a Virtual Population of the Human Nasal Cavity for Velocity-Based Predictions of Respiratory Flow Features Using Graph Convolutional Neural Networks.” In <i>Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften Des Forschungszentrums Jülich IAS Series 69</i>, edited by Andreas Lintermann, Sohel Sebastian Herff, and Jens Henrik Göbbert, 80–83. Jülich, Germany: Forschungszentrum Jülich GmbH Zentralbibliothek, Verlag. https://doi.org/10.34734/FZJ-2025-02460.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCalmet2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Calmet2025,
+  address = {J{\"{u}}lich, Germany},
+  author = {Calmet, Hadrien and Calafell, Joan and Sarma, Rakesh and R{\"{u}}ttgers, Mario and Lintermann, Andreas and Houzeaux, Guillaume},
+  booktitle = {Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften des Forschungszentrums J{\"{u}}lich IAS Series 69},
+  doi = {10.34734/FZJ-2025-02460},
+  editor = {Lintermann, Andreas and Herff, Sohel Sebastian and G{\"{o}}bbert, Jens Henrik},
+  pages = {80--83},
+  publisher = {Forschungszentrum J{\"{u}}lich GmbH Zentralbibliothek, Verlag},
+  title = {{Creating a Virtual Population of the Human Nasal Cavity for Velocity-Based Predictions of Respiratory Flow Features Using Graph Convolutional Neural Networks}},
+  url = {https://juser.fz-juelich.de/record/1041828},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Lintermann2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLintermann2025Bibtex" aria-expanded="false" aria-controls="collapseLintermann2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLintermann2025Abstract" aria-expanded="false" aria-controls="collapseLintermann2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Lintermann2025">Lintermann, Andreas, Sohel Sebastian Herff, and Jens Henrik Göbbert. 2025. <i>Proceedings of the 35th Parallel CFD International Conference 2024</i>. Edited by Andreas Lintermann, Sohel Sebastian Herff, and Jens Henrik Göbbert. Schriften. Jülich, Germany: Forschungszentrum Jülich GmbH Zentralbibliothek, Verlag. https://doi.org/10.34734/FZJ-2025-02175.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLintermann2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@book{Lintermann2025,
+  address = {J{\"{u}}lich, Germany},
+  author = {Lintermann, Andreas and Herff, Sohel Sebastian and G{\"{o}}bbert, Jens Henrik},
+  doi = {10.34734/FZJ-2025-02175},
+  edition = {Schriften},
+  editor = {Lintermann, Andreas and Herff, Sohel Sebastian and G{\"{o}}bbert, Jens Henrik},
+  publisher = {Forschungszentrum J{\"{u}}lich GmbH Zentralbibliothek, Verlag},
+  title = {{Proceedings of the 35th Parallel CFD International Conference 2024}},
+  url = {https://juser.fz-juelich.de/record/1041241},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Lagemann2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLagemann2025Bibtex" aria-expanded="false" aria-controls="collapseLagemann2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLagemann2025Abstract" aria-expanded="false" aria-controls="collapseLagemann2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Lagemann2025">Lagemann, Christian, Mario Rüttgers, Miro Gondrum, Matthias Meinke, Wolfgang Schröder, Andreas Lintermann, and Steven L. Brunton. 2025. “HydroGym-GPU: From 2D to 3D Benchmark Environments for Reinforcement Learning in Fluid Flows.” In <i>Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften Des Forschungszentrums Jülich IAS Series 69</i>, edited by Andreas Lintermann, Sohel Sebastian Herff, and Jens Henrik Göbbert, 57–63. Jülich, Germany: Forschungszentrum Jülich GmbH Zentralbibliothek, Verlag. https://doi.org/10.34734/FZJ-2025-02455.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLagemann2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Lagemann2025,
+  address = {J{\"{u}}lich, Germany},
+  author = {Lagemann, Christian and R{\"{u}}ttgers, Mario and Gondrum, Miro and Meinke, Matthias and Schr{\"{o}}der, Wolfgang and Lintermann, Andreas and Brunton, Steven L.},
+  booktitle = {Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften des Forschungszentrums J{\"{u}}lich IAS Series 69},
+  doi = {10.34734/FZJ-2025-02455},
+  editor = {Lintermann, Andreas and Herff, Sohel Sebastian and G{\"{o}}bbert, Jens Henrik},
+  pages = {57--63},
+  publisher = {Forschungszentrum J{\"{u}}lich GmbH Zentralbibliothek, Verlag},
+  title = {{HydroGym-GPU: From 2D to 3D Benchmark Environments for Reinforcement Learning in Fluid Flows}},
+  url = {https://juser.fz-juelich.de/record/1041823},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Sarma2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseSarma2025Bibtex" aria-expanded="false" aria-controls="collapseSarma2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseSarma2025Abstract" aria-expanded="false" aria-controls="collapseSarma2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Sarma2025">Sarma, Rakesh, Fabian Hübenthal, Fabian Orland, Christian Terboven, and Andreas Lintermann. 2025. “Predicting Turbulent Boundary Layer Flows Using Transformers Coupled to the Multi-Physics Simulation Tool m-AIA.” In <i>Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften Des Forschungszentrums Jülich IAS Series 69</i>, edited by Andreas Lintermann, Sohel Sebastian Herff, and Jens Henrik Göbbert, 76–79. Jülich, Germany: Forschungszentrum Jülich GmbH Zentralbibliothek, Verlag. https://doi.org/10.34734/FZJ-2025-02459.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseSarma2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Sarma2025,
+  address = {J{\"{u}}lich, Germany},
+  author = {Sarma, Rakesh and H{\"{u}}benthal, Fabian and Orland, Fabian and Terboven, Christian and Lintermann, Andreas},
+  booktitle = {Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften des Forschungszentrums J{\"{u}}lich IAS Series 69},
+  doi = {10.34734/FZJ-2025-02459},
+  editor = {Lintermann, Andreas and Herff, Sohel Sebastian and G{\"{o}}bbert, Jens Henrik},
+  pages = {76 -- 79},
+  publisher = {Forschungszentrum J{\"{u}}lich GmbH Zentralbibliothek, Verlag},
+  title = {{Predicting Turbulent Boundary Layer Flows Using Transformers Coupled to the Multi-Physics Simulation Tool m-AIA}},
+  url = {https://juser.fz-juelich.de/record/1041827},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Shao2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseShao2025Bibtex" aria-expanded="false" aria-controls="collapseShao2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseShao2025Abstract" aria-expanded="false" aria-controls="collapseShao2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Shao2025">Shao, Xiao, Hilmi Oguzhan Ayan, Fabian Hübenthal, Mario Rüttgers, Andreas Lintermann, and Wolfgang Schröder. 2025. “Investigating the Effects of Spanwise Transversal Traveling Waves on a Turbulent Compressible Flat Plate Flow With the Aid of a Deep Autoencoder Network.” In <i>Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften Des Forschungszentrums Jülich IAS Series 69</i>, edited by Andreas Lintermann, Sohel Sebastian Herff, and Jens Henrik Göbbert, 89–93. Jülich, Germany: Forschungszentrum Jülich GmbH Zentralbibliothek, Verlag. https://doi.org/10.34734/FZJ-2025-02462.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseShao2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Shao2025,
+  address = {J{\"{u}}lich, Germany},
+  author = {Shao, Xiao and Ayan, Hilmi Oguzhan and H{\"{u}}benthal, Fabian and R{\"{u}}ttgers, Mario and Lintermann, Andreas and Schr{\"{o}}der, Wolfgang},
+  booktitle = {Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften des Forschungszentrums J{\"{u}}lich IAS Series 69},
+  doi = {10.34734/FZJ-2025-02462},
+  editor = {Lintermann, Andreas and Herff, Sohel Sebastian and G{\"{o}}bbert, Jens Henrik},
+  pages = {89--93},
+  publisher = {Forschungszentrum J{\"{u}}lich GmbH Zentralbibliothek, Verlag},
+  title = {{Investigating the Effects of Spanwise Transversal Traveling Waves on a Turbulent Compressible Flat Plate Flow With the Aid of a Deep Autoencoder Network}},
+  url = {https://juser.fz-juelich.de/record/1041830},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Onishi2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseOnishi2025Bibtex" aria-expanded="false" aria-controls="collapseOnishi2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseOnishi2025Abstract" aria-expanded="false" aria-controls="collapseOnishi2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Onishi2025">Onishi, Junya, and Makoto Tsubokura. 2025. “A Study on the Effect of the Number of Collocation Points in the Training of Physics-Informed Neural Networks for Unsteady Flows.” In <i>Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften Des Forschungszentrums Jülich IAS Series 69</i>, edited by Andreas Lintermann, Sohel Sebastian Herff, and Jens Henrik Göbbert, 72–75. Jülich, Germany: Forschungszentrum Jülich GmbH Zentralbibliothek, Verlag. https://doi.org/10.34734/FZJ-2025-02458.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseOnishi2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{Onishi2025,
+  address = {J{\"{u}}lich, Germany},
+  author = {Onishi, Junya and Tsubokura, Makoto},
+  booktitle = {Proceedings of the 35th Parallel CFD International Conference 2024 (ParCFD 2024), Schriften des Forschungszentrums J{\"{u}}lich IAS Series 69},
+  doi = {10.34734/FZJ-2025-02458},
+  editor = {Lintermann, Andreas and Herff, Sohel Sebastian and G{\"{o}}bbert, Jens Henrik},
+  pages = {72--75},
+  publisher = {Forschungszentrum J{\"{u}}lich GmbH Zentralbibliothek, Verlag},
+  title = {{A Study on the Effect of the Number of Collocation Points in the Training of Physics-Informed Neural Networks for Unsteady Flows}},
+  url = {https://juser.fz-juelich.de/record/1041826},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
@@ -816,7 +1157,7 @@ The robustness of an artificial neural network for model order reduction of flow
 </li></ol>
 
 <h2 id="future-plans">Future plans</h2>
-<p>Future plans are discussed in regular meetings. Furthermore, Makoto Tsubokura intends to visit JSC in 03/2025 to further discuss the future project plan.</p>
+<p>Future plans are discussed in regular meetings.</p>
 
 <h2 id="references">References</h2>
 
