@@ -131,8 +131,8 @@ and help direct development of new tool capabilities.
 
 * Workshop article on Score-P support for Fugaku, JUPITER and other Arm-based systems.
 * Hands-on performance analysis/tools tutorial at ISC-HPC'25 (Hamburg).
-* Virtual tools training for U.Duisburg-Essen using local HPC system.
-* Installation of tools on Fugaku, JUPITER, Deucalion and other EuroHPC computer systems.
+* Virtual tools training for U. Duisburg-Essen using their local HPC system.
+* Installation of tools on Fugaku, JUPITER, Deucalion and other EuroHPC HPC systems.
 * Improvement of POP analysis methodology and metrics for GPU-accelerated application execution measurements.
 
 ## Visits and meetings
@@ -143,8 +143,7 @@ Face-to-face meetings at 3rd and subsequent JLESC Workshops, at ISC-HPC, SC and 
 2016/02/24-26: BSC & JSC instructors visited RIKEN-AICS to deliver training as part of VI-HPS Tuning Workshop.
 2019/04/09-12: BSC & JSC instructors visited UTK-ICL to deliver training as part of VI-HPS Tuning Workshop.
 2022/10/01-2022/11/04: JSC visit to NCSA & UTK-ICL to prepare for training as part of VI-HPS Tuning Workshops.
-Visits planned for the next 12 months:
-TBD
+Visits planned for the next 12 months: none for now
 
 ## Impact and publications
 
