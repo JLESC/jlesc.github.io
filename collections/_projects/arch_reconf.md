@@ -28,6 +28,7 @@ members:
   - miguel_j
   - cappello_f
   - applencourt_t
+  - bahannon_c
 
 ---
 
@@ -46,12 +47,19 @@ The end of transistor scaling encourages us to challenge innovative architectura
 * Organized SC24 BoF session: Open-Source Hardware Tools: Advancing Architecture Research and Chip Prototyping (Nov 2024)
 * Held a technical meeting in Japan to discuss streaming data compressor algorithms and designs (Dec 2024)
 
+## Results for 2025/2026
+
+* Organized a break-out session at the JLESC 17th workshop at Argonne (May 2025)
+* Organized SC25 BoF session: Open-Source Hardware Tools: Advancing Architecture Research and Chip Prototyping (Nov 2025)
+* Organized the ARCHIDE workshop (archide.org) at LBNL (2025)
+
 ## Visits and meetings
 
 * {% person yoshii_k %} visited RIKEN for two days in June 2023 to discuss the streaming hardware compressor design.
 * {% person miguel_j %} visited RIKEN as an intern in 2023 to port the OmpSs@FPGA infrastructure to ESSPER.
 * {% person alvarez_c %} visited RIKEN in June 2023 to discuss porting the OmpSs@FPGA infrastructure to ESSPER.
 * {% person ueno_t %} visited ANL in May 2023 to discuss hardware compressors and accelerator designs.
+* {% person yoshii_k %} visited RIKEN for two days in Jan 2025 to discuss the streaming hardware compressor design.
 
 
 ## Impact and publications
@@ -65,7 +73,7 @@ The end of transistor scaling encourages us to challenge innovative architectura
 
 ## Future plans
 
-We evaluate existing reconfigurable architectures and explore hardware designs to accelerate our target workloads. These include numerical algorithms, streaming data compression, and real-time AI at the edge. We will also investigate various architecture designs, the design workflow (including design, verification, layout, etc.), compiler technologies, architecture emulation/simulation, and emerging technologies such as Chiplets, structured ASICs, and FPGA/CGRA generators. Our goal is to demonstrate the enhanced computing efficiency of selected workloads on reconfigurable architectures and highlight the potential of custom hardware designs, even for extensive distributed resources.
+We evaluate existing reconfigurable architectures and explore hardware designs to accelerate our target workloads. These include numerical algorithms, streaming data compression, and real-time AI at the edge. We will also investigate various architecture designs, the design workflow (including design, verification, layout, etc.), compiler technologies, architecture emulation/simulation, and emerging technologies such as Chiplets, structured ASICs, and FPGA/CGRA generators as well as AI-assisted RTL code generation and simulation. Our goal is to demonstrate the enhanced computing efficiency of selected workloads on reconfigurable architectures and highlight the potential of custom hardware designs, even for extensive distributed resources.
 
 ## References
 
