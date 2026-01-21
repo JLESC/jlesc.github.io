@@ -2,7 +2,7 @@
 layout: post
 title: Crocodiles
 date: 2025-02-01
-updated: 2025-02-01
+updated: 2026-01-21
 navbar: Research
 subnavbar: Projects
 project_url: https://team.inria.fr/crocodiles/
