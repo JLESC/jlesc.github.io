@@ -41,7 +41,7 @@ process of creating a libyt interface in IPPL.
 3) An Ascent based in-situ interface for IPPL is created and is also in the testing phase.
 
 ## Results for 2025/2026
-1) Severin Klapproth a Master's student from ETH Zürich/Paul Scherrer Institute did his Master's thesis on in-situ visualization in IPPL. He made the catalyst interface and the steering functionality more generic and reusable across applications. He will submit his thesis in early 2026.  
+1) Severin Klapproth, a Master's student from ETH Zürich/Paul Scherrer Institute, did his Master's thesis on in-situ visualization in IPPL. He made the catalyst interface and the steering functionality more generic and reusable across applications. He will submit his thesis in early 2026.  
 2) A new web-based interface for in-situ visualization using Trame has been made by Severin.
 3) First in-situ results with OPAL-X, which is a particle accelerator library that uses IPPL, were obtained.
 4) Victor Mateevitsi from Argonne has been added as a new collaboration partner in this project. He and his collaborators made the ascent interface for IPPL.
