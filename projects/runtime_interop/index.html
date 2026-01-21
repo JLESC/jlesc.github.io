@@ -341,6 +341,30 @@
               
               
               
+              <li>
+                  Bhosale Aditya (UIUC)
+              </li>
+              
+              
+              
+              <li>
+                  Taylor Maya (UIUC)
+              </li>
+              
+              
+              
+              <li>
+                  Rao Ritvik (UIUC)
+              </li>
+              
+              
+              
+              <li>
+                  Schuchart Joseph (EXT)
+              </li>
+              
+              
+              
               
               
               
@@ -382,6 +406,17 @@ interfaces to enhance interoperability among different runtime systems,
 optimizing performance and encouraging broader adoption of task-based
 programming models.</p>
 
+<h2 id="results-for-20252026">Results for 2025/2026</h2>
+
+<p>We have continued the monthly video call to coordinate activities and ensure continuous progress.</p>
+
+<p>Main highlights for this period:</p>
+<ul>
+  <li><strong>StarPU and PaRSEC ported to nOS-V.</strong> David Álvarez carried out a summer internship at Inria Bordeaux (hosted by Olivier Aumage and Thomas Hérault). During the internship, he completed the port of <strong>StarPU</strong> and <strong>PaRSEC</strong> to <strong>nOS-V</strong>, and evaluated their <strong>interoperability with OpenMP</strong> using <strong>three applications</strong>. This work was submitted as a full research paper to <strong>IPDPS</strong>, but it was not accepted.</li>
+  <li><strong>Charm++ reconvers discussions.</strong> We discussed the new implementation of Charm++ runtime convers, called <strong>reconvers</strong>, aimed at reducing code-base complexity, addressing technical debt, and enabling a simpler design that can better leverage new high-performance communication libraries, especially in highly multithreaded environments. Charm++ already works with reconvers but there are some performance issues with large applications.</li>
+  <li><strong>Community coordination.</strong> We plan to organize another <strong>BoF</strong> at the next <strong>JLESC workshop</strong> to align on interoperability priorities and cross-runtime collaboration.</li>
+</ul>
+
 <h2 id="results-for-20242025">Results for 2024/2025</h2>
 
 <p>Since the project’s inception in September 2024, we have established a monthly video call to coordinate activities and ensure continuous progress.</p>
@@ -397,19 +432,27 @@ We have initiated work on adapting StarPU and PaRSEC to run on top of nOS-V. A w
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <ul>
-  <li>We had a BoF session in the Kobe 2024 workshop, where we decided to start this project.</li>
-  <li>We are organizing another BoF session at the upcoming Argonne 2025 workshop</li>
-  <li>We have planned a summer internship from June to August 2025, from BSC to Inria.</li>
+  <li>We had a BoF session in Kobe 2024 workshop, where we decided to start this project.</li>
+  <li>We had a BoF session in Argonne 2025 workshop, where we discussed interoperability challengues.</li>
+  <li>David Álvarez completed a summer internship at <strong>Inria Bordeaux</strong> (June–August 2025), hosted by <strong>Olivier Aumage</strong> and <strong>Thomas Hérault</strong>, focused on porting <strong>StarPU</strong> and <strong>PaRSEC</strong> to <strong>nOS-V</strong> and evaluating interoperability with <strong>OpenMP</strong>.</li>
+  <li>We plan to organize another BoF at the next <strong>JLESC workshop</strong>.</li>
 </ul>
 
-<h2 id="impact-and-publications">Impact and publications</h2>
+<h2 id="publications">Publications</h2>
 
 <ul>
+  <li>David Álvarez, Olivier Aumage, Thomas Hérault, Vicenç Beltran. <strong>Efficiently combining parallel libraries and programming models in HPC applications.</strong> <em>(to be submitted in early 2026).</em></li>
+</ul>
+
+<h2 id="impact">Impact</h2>
+<ul>
+  <li>Port of StarPU to nOS-V completed in 2025</li>
+  <li>Port of PaRSEC to nOS-V completed in 2025</li>
   <li>Solve interoperability problems between task-based programming models</li>
   <li>Increase software development productivity and reach of task-based
 programming models</li>
   <li>Research and document needs from higher-level programming systems (Charm++,
-HPX, Legion, OpenMP, OmpSs, ..) for the task-based execution systems</li>
+HPX, Legion, PaRSEC, OpenMP, OmpSs, ..) for the task-based execution systems</li>
   <li>Explore possibility of creating a standard that allows for different use
 cases currently served,  either via a flexible design or allowing for
 extensions</li>
