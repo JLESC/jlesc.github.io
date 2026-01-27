@@ -98,7 +98,7 @@ During the summer of 2023, Ria Patel (First-year graduate student in Taufer’s 
 Michela Taufer and Georgia Channing attended France's Joint Laboratory for Extreme Scale Computing (JLESC) meeting at INRIA Bordeaux from March 21 to 23, 2023.
 
 ## Impact and publications
-* Publication: {% cite ng2025a4nn --file jlesc.bib %}
+* Publication: {% cite NgEtAl2025 --file jlesc.bib %}
 * Talk: Kin NG presented a talk and a poster titled “Energy-Efficient Neural Network Training for Scientific Datasets with Advanced Similarity Analytics and Orchestration” at the 17th Joint Laboratory on Extreme-Scale Computing (JLESC) Workshop, held at Argonne National Laboratory
 * Kin NG was selected for the Early Career program at the Supercomputing 2024 conference
 * Michela Taufer was selected as a JLESC Fellow
