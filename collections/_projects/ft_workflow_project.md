@@ -2,7 +2,7 @@
 layout: post
 title: Optimization of Fault-Tolerance Strategies for Workflow Applications
 date: 2016-03-16
-updated: 2025-01-16
+updated: 2026-01-28
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -348,6 +348,12 @@ see {% cite BautistaEtAl2024 --file jlesc.bib %}. The Young/Daly formula provide
 
 As a follow-up of our work published the previous year at FTXS'2023, a workshop co-located with SC’2023 {% cite BarbutEtAl2023 --file jlesc.bib %}, we have considered checkpointing strategies for a parallel application executing on a large-scale platform whose nodes are subject to failures. The application executes for a fixed duration, namely the length of the reservation that it has been granted. We have shown the difficulty of the problem with small examples: it turns out that the optimal checkpointing strategy neither always uses periodic checkpoints nor always takes its last checkpoint exactly at the end of the reservation. Then, we have introduced a dynamic heuristic that is periodic and decides for the checkpointing frequency based upon thresholds for the time left; we have determined threshold times Tn such that it is best to plan for exactly n checkpoints if the time left (or initially the length of the reservation) is between Tn and Tn+1. Next, we have used time discretization and designed a (complicated) dynamic programming algorithm that computes the optimal solution, without any restriction on the checkpointing strategy. Finally, we have reported the results of an extensive simulation campaign that shows that the optimal solution is far more efficient than the Young/Daly periodic approach for short or mid-size reservations. These results have been published at FTXS'2024, see {% cite BenoitEtAl2024 --file jlesc.bib %}. 
 
+## Results for 2025/2026
+
+This year, we have investigated how to protect numerical iterative algorithms from all types of errors that can strike at scale: fail-stop errors (a.k.a. failures) and silent errors, striking both as computation errors and memory bit-flips. We have combined various techniques: detectors for computation errors, checksums for memory errors, and checkpoint/restart for failures. The objective is to minimize the expected time per iteration of the algorithm. We designed a hierarchical pattern that combines and interleaves all these fault-tolerance mechanisms, and we determined the optimal periodic pattern that achieves this objective. We instantiated these results for the performance analysis of the Preconditioned Conjugate Gradient (PCG) algorithm, reporting several scenarios where the optimal pattern dramatically decreases the overhead due to error mitigation. These results have been published in IJHPCA, see {% cite TremodeuxEtAl2025 --file jlesc.bib %}. 
+
+While the previous work considered perfect detectors that detect all errors, we have also investigated what happens when the verification mechanism is not perfect, i.e., it fails to detect some errors. In this setting, we consider that silent errors strike at each iteration with some probability. An error striking at iteration I will be detected only after iteration (I-1)+X, where X is a random variable obeying a probability distribution with bounded support [1, D] such as a truncated geometric distribution. Intuitively, the error silently amplifies during some iterations before it can be detected at distance X or higher. As a consequence, when taking a verification before a checkpoint, there is the risk of missing an error that has struck recently but cannot be detected yet. The simplest solution is to keep two checkpoints in memory, and to use two segments of D-1 iterations, each followed by a verification and a checkpoint: in steady state, perform D-1 iterations after the last checkpoint and take a verification; (i) if successful, we can safely erase the oldest checkpoint, because the most recent checkpoint is necessarily verified. We take a new checkpoint to replace the old one, which is not verified yet; (ii) otherwise, we need to rollback to the oldest checkpoint, not to the last one which may not be verified. Can this simple scheme perform better than replication? What is the optimal number of segments (hence of checkpoints) to keep in memory, and what is the length of these segments? We have answered these questions, both theoretically and through Monte Carlo simulations, and reported these results in a publication at EuroPar'25, see {% cite BenoitEtAl2025 --file jlesc.bib %}. 
+
 
 ## Visits and meetings
 
@@ -371,6 +377,8 @@ Due to the Covid-19 sanitary situation, we have not had any visits for two years
 {% person robert_y %} made four visits to Univ. Tenn. Knoxville in 2023, for a total of approximately one month and a half. 
 
 {% person robert_y %} made one visit to Univ. Tenn. Knoxville in 2024 for 9 days. The partners have attended SC'24 in Atlanta, USA, and had project discussions during the conference. 
+
+The partners met at the 17th JLESC workshop at Argonne National Lab, USA, in May 2025. 
 
 
 ## Impact and publications
@@ -400,6 +408,7 @@ In 2023, we have published one joint publication {% cite BarbutEtAl2023 --file j
 In 2024, we have published  a survey on the FGCS special issue focusing on JLESC collaboration results 
 {% cite BautistaEtAl2024 --file jlesc.bib %}, and a publication on checkpointing strategies for a fixed-length execution {% cite BenoitEtAl2024 --file jlesc.bib %}.
 
+In 2025, we have published two results on resilience for iterative applications: a journal {% cite TremodeuxEtAl2025 --file jlesc.bib %} where several types of errors are considered, and a conference {% cite BenoitEtAl2025 --file jlesc.bib %} focusing on silent errors with non-perfect detectors. 
 
 {% comment %}
 =============================
