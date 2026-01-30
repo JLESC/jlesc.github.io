@@ -408,8 +408,16 @@ VeloC addresses these resilience challenges: it takes advantage of the different
 
 <p>In Year 5 of this project, we will explore integrating our techniques into ADIOS2 for rapidly creating and storing metadata for later efficient retrieval. We will extend our techniques to the online analysis of application reproducibility, introducing optimizations for efficient IO pipelining and minimum interference with running applications in a journal paper. We will also improve our incremental diff restore implementation and investigate using dynamic chunk sizes and error tolerances for greater deduplication efficiency and data analysis.</p>
 
+<h2 id="results-for-20252026">Results for 2025/2026</h2>
+<p>In Year 5 of this project, we developed a new Merkle-tree–based checkpoint restoration method that leverages Liburing and io-uring to improve restore performance for incremental checkpoints. Our approach combines compact Merkle tree representations with asynchronous I/O to efficiently retrieve small, scattered data regions from many files. By coalescing contiguous data chunks up to a size proportional to the parallel file system stripe size, the method reduces I/O overhead and improves read efficiency during restart.</p>
+
+<p>We evaluated the method against five established checkpoint restoration techniques using twelve checkpointed datasets with varying data characteristics, including first occurrences, fixed duplicates, and shifted duplicates, and across multiple chunk sizes. Experiments were conducted on a leadership-class HPC system to assess restoration time and memory footprint. Across all datasets, the Tree Liburing method consistently achieved the best balance between restore performance and memory usage, outperforming existing Merkle-tree and POSIX-based approaches.</p>
+
+<p>Our results show that while the method can incur higher restore-time overhead in worst-case scenarios with highly shifted duplicates (up to 4.8x compared to full checkpoints), it closely matches or improves upon full checkpoint restore times for datasets dominated by first occurrences or fixed duplicates. Importantly, the method reduces memory usage by 40–50% compared to all evaluated alternatives. These results demonstrate that the proposed approach is an effective and memory-efficient solution for incremental checkpoint restoration in HPC applications.</p>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 <ul>
+  <li>Michela Taufer attended the 2025 JLESC workshop in Argonne National Lab</li>
   <li>Michela Taufer and Nigel Tan attended the 2024 JLESC workshop in Kobe Japan</li>
   <li>Nigel Tan spent the summer of 2022 at ANL working on the project</li>
   <li>The team meets weekly during the entire year</li>
@@ -418,6 +426,7 @@ VeloC addresses these resilience challenges: it takes advantage of the different
 
 <h2 id="impact-and-publications">Impact and publications</h2>
 <ul>
+  <li><strong>Short Paper:</strong> Zackary Malkmus, Nigel Tan, Ian Lumsden, Kevin Assogba, M. Mustafa Rafique,Bogdan Nicolae, and Michela Taufer. On Optimizing Checkpoint Restoration for HPC Applications: Leveraging Merkle Trees and Asynchronous I/O. In Proceedings of the 34th International Symposium on High-Performance Parallel and Distributed Computing (HPDC), pages 1–2, Notre Dame, IN, USA, July 20–23 2025. ACM. (Short paper and poster, see <a class="citation" href="#MalkmusEtAl2025">(Malkmus et al. 2025)</a>)</li>
   <li><strong>Publication:</strong> <a class="citation" href="#TanEtAl2024">(Tan et al. 2024)</a></li>
   <li><strong>Talk:</strong> Nigel Tan, Kevin Assogba, Jay Ashworth, Befikir Bogale, Franck Cappello, M. Mustafa Rafique, Michela Taufer, and Bogdan Nicolae, Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results. 25th International Middleware Conference, December 2024, Hong Kong.</li>
   <li><strong>Poster:</strong> Nigel Tan, Kevin Assogba, Jay Ashworth, Befikir Bogale, Franck Cappello, M. Mustafa Rafique, Michela Taufer, and Bogdan Nicolae, Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results. 25th International Middleware Conference, December 2024, Hong Kong.</li>
@@ -442,6 +451,53 @@ VeloC addresses these resilience challenges: it takes advantage of the different
 </ul>
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          MalkmusEtAl2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseMalkmusEtAl2025Bibtex" aria-expanded="false" aria-controls="collapseMalkmusEtAl2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseMalkmusEtAl2025Abstract" aria-expanded="false" aria-controls="collapseMalkmusEtAl2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="MalkmusEtAl2025">Malkmus, Zackary, Nigel Tan, Ian Lumsden, Kevin Assogba, M. Mustafa Rafique, Bogdan Nicolae, and Michela Michela Taufer. 2025. “On Optimizing Checkpoint Restoration for HPC Applications: Leveraging Merkle Trees and Asynchronous I/O.” In <i>Proceedings of the 34th International Symposium on High-Performance Parallel and Distributed Computing</i>. HPDC ’25. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3731545.3735116.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseMalkmusEtAl2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{MalkmusEtAl2025,
+  author = {Malkmus, Zackary and Tan, Nigel and Lumsden, Ian and Assogba, Kevin and Rafique, M. Mustafa and Nicolae, Bogdan and Michela Taufer, Michela},
+  title = {On Optimizing Checkpoint Restoration for HPC Applications: Leveraging Merkle Trees and Asynchronous I/O},
+  year = {2025},
+  isbn = {9798400718694},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3731545.3735116},
+  doi = {10.1145/3731545.3735116},
+  booktitle = {Proceedings of the 34th International Symposium on High-Performance Parallel and Distributed Computing},
+  articleno = {27},
+  numpages = {2},
+  location = {University of Notre Dame Conference Facilities, Notre Dame, IN, USA},
+  series = {HPDC '25}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
