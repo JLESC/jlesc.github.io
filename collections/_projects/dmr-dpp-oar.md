@@ -50,15 +50,21 @@ This project aims to:
 - The integration of DMR and DPP has been improved as part of a collaboration between UGA and BSC.
 - We plan to work on the common API during this term.
 
+## Results for 2025/2026
+
+- Subsystems are evolving rapidly and independently, so the next integration has been postponed until each component reaches a reasonably stable version.
+
 ## Visits and meetings
 
 - May - July 2024: Dominik - research stay at UGA.
 - February 2025: Sergio - research stay at UGA.
+- February 2026: DynResHPC'26 Workshop at UGA.
 
 ## Funding
 
-- Sergio Iserte from BSC received the BSC's Severo Ochoa Mobility Grant for his 1 month stay at UGA.
+- Sergio Iserte from BSC received the BSC's Severo Ochoa Mobility Grant for his 1-month stay at UGA.
 - Martin Schreiber received travel support from Inria to attend JLESC meetings.
+- Sergio Iserte and Petter Sandas received travel support from BSC's BZL project to attend DynResHPC'26 Workshop.
 
 ## Impact and publications
 
