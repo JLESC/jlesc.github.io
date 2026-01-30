@@ -2,7 +2,7 @@
 layout: post
 title: Optimizing Checkpoint Restart Through Access Pattern Awareness
 date: 2021-01-01
-updated: 2025-01-22
+updated: 2026-01-27
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -61,13 +61,22 @@ At the 16th JLESC workshop, UTK presented a tutorial on LLNL's Flux resource man
 
 In Year 5 of this project, we will explore integrating our techniques into ADIOS2 for rapidly creating and storing metadata for later efficient retrieval. We will extend our techniques to the online analysis of application reproducibility, introducing optimizations for efficient IO pipelining and minimum interference with running applications in a journal paper. We will also improve our incremental diff restore implementation and investigate using dynamic chunk sizes and error tolerances for greater deduplication efficiency and data analysis.
 
+## Results for 2025/2026
+In Year 5 of this project, we developed a new Merkle-tree–based checkpoint restoration method that leverages Liburing and io-uring to improve restore performance for incremental checkpoints. Our approach combines compact Merkle tree representations with asynchronous I/O to efficiently retrieve small, scattered data regions from many files. By coalescing contiguous data chunks up to a size proportional to the parallel file system stripe size, the method reduces I/O overhead and improves read efficiency during restart. 
+
+We evaluated the method against five established checkpoint restoration techniques using twelve checkpointed datasets with varying data characteristics, including first occurrences, fixed duplicates, and shifted duplicates, and across multiple chunk sizes. Experiments were conducted on a leadership-class HPC system to assess restoration time and memory footprint. Across all datasets, the Tree Liburing method consistently achieved the best balance between restore performance and memory usage, outperforming existing Merkle-tree and POSIX-based approaches. 
+
+Our results show that while the method can incur higher restore-time overhead in worst-case scenarios with highly shifted duplicates (up to 4.8x compared to full checkpoints), it closely matches or improves upon full checkpoint restore times for datasets dominated by first occurrences or fixed duplicates. Importantly, the method reduces memory usage by 40–50% compared to all evaluated alternatives. These results demonstrate that the proposed approach is an effective and memory-efficient solution for incremental checkpoint restoration in HPC applications.
+
 ## Visits and meetings
+ * Michela Taufer attended the 2025 JLESC workshop in Argonne National Lab
  * Michela Taufer and Nigel Tan attended the 2024 JLESC workshop in Kobe Japan
  * Nigel Tan spent the summer of 2022 at ANL working on the project
  * The team meets weekly during the entire year
  * The team from UTK and ANL met in person at the ICPP 2023 in Salt Lake City in August 2023 and at SC23 in Denver, Colorado in November 2023.
 
 ## Impact and publications
+ * **Short Paper:** Zackary Malkmus, Nigel Tan, Ian Lumsden, Kevin Assogba, M. Mustafa Rafique,Bogdan Nicolae, and Michela Taufer. On Optimizing Checkpoint Restoration for HPC Applications: Leveraging Merkle Trees and Asynchronous I/O. In Proceedings of the 34th International Symposium on High-Performance Parallel and Distributed Computing (HPDC), pages 1–2, Notre Dame, IN, USA, July 20–23 2025. ACM. (Short paper and poster, see {% cite MalkmusEtAl2025 --file jlesc.bib %})
  * **Publication:** {% cite TanEtAl2024 --file jlesc.bib %}
  * **Talk:** Nigel Tan, Kevin Assogba, Jay Ashworth, Befikir Bogale, Franck Cappello, M. Mustafa Rafique, Michela Taufer, and Bogdan Nicolae, Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results. 25th International Middleware Conference, December 2024, Hong Kong.
  * **Poster:** Nigel Tan, Kevin Assogba, Jay Ashworth, Befikir Bogale, Franck Cappello, M. Mustafa Rafique, Michela Taufer, and Bogdan Nicolae, Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results. 25th International Middleware Conference, December 2024, Hong Kong.
