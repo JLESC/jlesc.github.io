@@ -69,7 +69,7 @@ We evaluated the method against five established checkpoint restoration techniqu
 Our results show that while the method can incur higher restore-time overhead in worst-case scenarios with highly shifted duplicates (up to 4.8x compared to full checkpoints), it closely matches or improves upon full checkpoint restore times for datasets dominated by first occurrences or fixed duplicates. Importantly, the method reduces memory usage by 40–50% compared to all evaluated alternatives. These results demonstrate that the proposed approach is an effective and memory-efficient solution for incremental checkpoint restoration in HPC applications.
 
 ## Visits and meetings
- *Michela Taufer attended the 2025 JLESC workshop in Argonne National Lab
+ * Michela Taufer attended the 2025 JLESC workshop in Argonne National Lab
  * Michela Taufer and Nigel Tan attended the 2024 JLESC workshop in Kobe Japan
  * Nigel Tan spent the summer of 2022 at ANL working on the project
  * The team meets weekly during the entire year
