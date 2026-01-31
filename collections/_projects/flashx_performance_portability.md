@@ -2,7 +2,7 @@
 layout: post
 title: Performance Portability in Flash-X
 date: 2023-01-25
-updated: 2025-01-16
+updated: 2026-01-31
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -55,4 +55,5 @@ Convert more physics units in Flash-X to become compatible with ORCHA.
 ## References
 
 {% bibliography --file external/flashx.bib %}
+
 
