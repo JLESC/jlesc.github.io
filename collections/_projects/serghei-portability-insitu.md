@@ -2,11 +2,11 @@
 layout: post
 title: Performance-portability and in-situ visualisation with SERGHEIi - HPC solutions
 date: 2025-06-04
-updated: 2025-07-01
+updated: 2026-01-31
 navbar: Research
 subnavbar: Projects
 project_url:
-status: starting
+status: running
 topics:
   - apps
   - prog_lang
@@ -33,7 +33,7 @@ This project aims to:
 <li> exploring multi-site, M-to-N workflows coupling geographically distant HPC resources</li>
 </ul>
 
-## Results for 2025
+## Results for 2025/2026
 
 Achieved performance-portability on all thre GPU vendors on pre- and exascale machines (JUWELS, JEDI, Aurora, Forntier).
 
