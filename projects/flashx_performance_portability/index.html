@@ -370,6 +370,9 @@
 <h2 id="results-for-20242025">Results for 2024/2025</h2>
 <p>The paper on CGKit was published in FGCS special issue <a class="citation" href="#RUDI2025107511">(Rudi et al. 2025)</a>. We built code generators for patching recipe translation with the runtime and used it to experiment with variations in configurations for two different applications. The first was a hydrodynamics only application, while the second use a specialized equation of state and nuclear burning also. In both cases we varied the disctribution of work between the CPU and the GPU by simply changing the recipe with no modification in the source code. Some of the results from these experiments were presented in a poster at SC24 <a class="citation" href="#Lee2024">(Lee et al. 2024)</a>. A paper using these results will be submitted shortly.</p>
 
+<h2 id="results-for-20252026">Results for 2025/2026</h2>
+<p>A paper on end-to-end deployment of ORCHA, the full performance portability system was submitted to IJHPCA. The reviewers asked for revision, which was recently submitted. The paper is available on arXiv <a class="citation" href="#Lee2025">(Lee et al. 2025)</a>.</p>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <p><span class="person given-name">Anshu</span> <span class="person sur-name">Dubey</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) visited Riken in Feburary 2023. We continued to meet online on a regular basis and when personnel are at the same conferences.</p>
@@ -377,6 +380,47 @@
 <h2 id="impact-and-publications">Impact and publications</h2>
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Lee2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseLee2025Bibtex" aria-expanded="false" aria-controls="collapseLee2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseLee2025Abstract" aria-expanded="false" aria-controls="collapseLee2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Lee2025">Lee, Youngjun, Klaus Weide, Wesley Kwiecinski, Jared O’Neal, Johann Rudi, and Anshu Dubey. 2025. “ORCHA – A Performance Portability System for Post-Exascale Systems.” <a href="https://arxiv.org/abs/2507.09337" target="_blank">https://arxiv.org/abs/2507.09337</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseLee2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{Lee2025,
+  title = {ORCHA -- A Performance Portability System for Post-Exascale Systems},
+  author = {Lee, Youngjun and Weide, Klaus and Kwiecinski, Wesley and O'Neal, Jared and Rudi, Johann and Dubey, Anshu},
+  year = {2025},
+  eprint = {2507.09337},
+  archiveprefix = {arXiv},
+  primaryclass = {math.NA},
+  url = {https://arxiv.org/abs/2507.09337}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
@@ -582,7 +626,7 @@
 
 <h2 id="future-plans">Future plans</h2>
 
-<p>Continue to integrate Milhoja and CGKit with more complex physics in Flash-X and continue to explore performance.</p>
+<p>Convert more physics units in Flash-X to become compatible with ORCHA.</p>
 
 <h2 id="references">References</h2>
 
@@ -826,6 +870,7 @@
   
 </div>
 </li></ol>
+
 </div>
         
         
