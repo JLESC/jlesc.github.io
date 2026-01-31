@@ -35,6 +35,9 @@ This year we worked on various code generation tools that each focus on one aspe
 ## Results for 2024/2025
 The paper on CGKit was published in FGCS special issue {% cite RUDI2025107511 --file jlesc.bib %}. We built code generators for patching recipe translation with the runtime and used it to experiment with variations in configurations for two different applications. The first was a hydrodynamics only application, while the second use a specialized equation of state and nuclear burning also. In both cases we varied the disctribution of work between the CPU and the GPU by simply changing the recipe with no modification in the source code. Some of the results from these experiments were presented in a poster at SC24 {% cite Lee2024 --file jlesc.bib %}. A paper using these results will be submitted shortly.
 
+## Results for 2025/2026
+A paper on end-to-end deployment of ORCHA, the full performance portability system was submitted to IJHPCA. The reviewers asked for revision, which was recently submitted. The paper is available on arXiv {% cite Lee2025 --file jlesc.bib %}.
+
 ## Visits and meetings
 
 {% person dubey_a %} visited Riken in Feburary 2023. We continued to meet online on a regular basis and when personnel are at the same conferences.
@@ -46,9 +49,10 @@ The paper on CGKit was published in FGCS special issue {% cite RUDI2025107511 --
 
 ## Future plans
 
-Continue to integrate Milhoja and CGKit with more complex physics in Flash-X and continue to explore performance.
+Convert more physics units in Flash-X to become compatible with ORCHA.
 
 
 ## References
 
 {% bibliography --file external/flashx.bib %}
+
