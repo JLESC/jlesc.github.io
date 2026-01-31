@@ -272,6 +272,16 @@ We have published our results in the Elsevier FGCS Journal {% cite yildiz2024ext
 
 Finding accurate neural networks for specific scientific datasets or problems often involves searching through thousands of architectures, resulting in high computational costs. To address this, the Global Computing Lab (GCL) at UTK and Argonne National Laboratory (ANL) have collaborated to advance neural architecture search (NAS) algorithms by integrating two tools: Analytics for Neural Networks (A4NN), developed by GCL, and Wilkins, developed by ANL. The A4NN workflow is designed to significantly reduce the time and resources required to identify accurate and efficient neural network (NN) architectures. Wilkins is a workflow orchestrator that enhances A4NN by providing a flexible interface for workflow specification, a high-performance HDF5-based data transport layer, and flow control mechanisms for tasks with varying data rates. This integration simplifies the execution of decoupled tasks in A4NN, including early stopping of NN training through parametric modeling or identifying redundant networks based on structural similarity. Preliminary results on baseline datasets demonstrated minimal overhead while significantly improving flexibility and time savings compared to the previous A4NN version. For future work, we plan to rigorously evaluate the enhanced workflow on diverse scientific datasets and incorporate additional decoupled tasks, such as incremental checkpointing strategies, to optimize storage utilization and further enhance the efficiency of NAS processes.
 
+## Results for 2025/2026
+
+### Energy-Efficient Neural Network Training for Scientific Datasets with Advanced Similarity Analytics and Orchestration
+
+* Orcun Yildiz and Tom Peterka of ANL, Kin Wai Ng and Michela Taufer of UTK
+
+Scientific computing increasingly depends on neural architecture search (NAS) to identify accurate neural networks (NNs) that facilitate breakthroughs in various fields, from protein classification to material discovery. However, conventional NAS workflows face challenges due to excessive training times and inefficient energy consumption resulting from redundant computations and inflexible orchestration. Building on our collaborative work from 2024 between UTK and ANL, we present A4NN.2, the next generation of the Analytics for Neural Network (A4NN) workflow, which overcomes these challenges by introducing a structural similarity engine and advanced orchestration using the Wilkins framework. These enhancements eliminate redundant training and enable modular high-performance workflow executions. A4NN.2 accelerates NN training, reduces energy consumption, and demonstrates broad applicability across benchmark datasets and scientific domains. When used to train NNs to classify protein configurations from X-ray images, A4NN.2 achieves significant efficiency gains by reducing computational costs while maintaining high accuracy, thus accelerating scientific discovery in structural biology.
+
+We have published our results in the 25th International Conference on Computational Science (ICCS'25) {% cite ng2025energy --file jlesc.bib %}.
+
 ## Visits and meetings
 
  * Pierre-Louis Guhur of ENS 9 months at ANL in 2016
