@@ -35,19 +35,19 @@ This project aims to:
 
 ## Results for 2025
 
-None yet.
+Achieved performance-portability on all thre GPU vendors on pre- and exascale machines (JUWELS, JEDI, Aurora, Forntier).
 
 ## Visits and meetings
 
  * May 2025: JLESC Workshop lead to establishing the project
 
 ## Impact and publications
+Contributed a paper to SBAC-PAD (Towards Portability at Scale: A Cross-Architecture Performance Evaluation of a GPU-enabled Shallow Water Solver){% cite Villalobos2025 --file external/serghei-pp-iv.bib %}.
 
-None yet.
 
 ## Future plans
-
+Performance optimisations. Re-take in-situ visualisation
 
 ## References
-
 {% bibliography --file external/serghei-pp-iv.bib %}
+
