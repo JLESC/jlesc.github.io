@@ -280,7 +280,7 @@ Finding accurate neural networks for specific scientific datasets or problems of
 
 Scientific computing increasingly depends on neural architecture search (NAS) to identify accurate neural networks (NNs) that facilitate breakthroughs in various fields, from protein classification to material discovery. However, conventional NAS workflows face challenges due to excessive training times and inefficient energy consumption resulting from redundant computations and inflexible orchestration. Building on our collaborative work from 2024 between UTK and ANL, we present A4NN.2, the next generation of the Analytics for Neural Network (A4NN) workflow, which overcomes these challenges by introducing a structural similarity engine and advanced orchestration using the Wilkins framework. These enhancements eliminate redundant training and enable modular high-performance workflow executions. A4NN.2 accelerates NN training, reduces energy consumption, and demonstrates broad applicability across benchmark datasets and scientific domains. When used to train NNs to classify protein configurations from X-ray images, A4NN.2 achieves significant efficiency gains by reducing computational costs while maintaining high accuracy, thus accelerating scientific discovery in structural biology.
 
-We have published our results in the 25th International Conference on Computational Science (ICCS'25) {% cite ng2025energy --file jlesc.bib %}.
+We have published our results in the 25th International Conference on Computational Science (ICCS'25) {% cite NgEtAl2025 --file jlesc.bib %}.
 
 ## Visits and meetings
 
