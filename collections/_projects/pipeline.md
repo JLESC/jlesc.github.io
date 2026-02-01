@@ -2,7 +2,7 @@
 layout: post
 title: Advanced data and visualization pipelines on the example of nekRS
 date: 2023-05-20
-updated: 2025-01-27
+updated: 2026-02-01
 navbar: Research
 subnavbar: Projects
 project_url:
