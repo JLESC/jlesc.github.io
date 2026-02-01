@@ -106,6 +106,9 @@ We have examined the developments in relation to different visualization strateg
 ## Results for 2024/2025
 We have continued our in situ work with nekRS and, building on the publication of ISAV23, extended the workflow towards ASCENT. We tested the nekRS-ASCENT coupled workflow on JUWELS Booster, Polaris and Leonardo Booster and successfully used it in a simulation to analyze the boundary layer structures in Rayleigh-B\'enard convection (RBC) at high Rayleigh numbers. We summarized the results in a paper {% cite bodeEtAl2025 --file jlesc.bib %}. The JuMonC tool was successfully developed to better monitor the coupled workflows. It was published as a paper in the JLESC Special Issue {% cite witzlerEtAl2025 --file jlesc.bib %}.
 
+## Results for 2025/2026
+We have continued our in situ work with nekRS and, building on the publication of ISAV23, extended the workflow towards better utilization of CPU ressources. The idea was to use idling CPU cores for visualization while the GPUs were used for large-scale simulations. The results were published at the LDAV25 {% cite MateevitsiEtAl2025 --file jlesc.bib %}. Further work was on evaluating JUPITER and Aurora for in-situ/in-transit workflows.
+
 ## Visits and meetings
  * Mathis Bode visited ANL in April 2023 to coordinate better on the visualization strategies.
  * JSC organized the NEK User Meeting 2024 in J\"ulich; the meeting was used for further in-person discussions on this project.
