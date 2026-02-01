@@ -55,6 +55,10 @@ We have differentiated HFBTHO using Tapenade. The HFBTHO code  implements a nucl
 ## Results for 2025/2026
 We have published the paper on HFBTHO-AD {% cite HascoetEtAl2025 --file jlesc.bib %}. We are differentiating the reference BLAS code using Tapenade. We have used AI tools to generate the invocations of Tapenade and the testing code.
 
+We are developing a sparsity pattern detection feature in Tapenade. This feature is designed to exploit Boolean AD formulas (using either bit-vectors or integer sets) and can be combined with coloring packages such as ColPack or SparseMatrixColorings.jl to efficiently compute sparse derivatives. This capability is especially relevant for solving nonlinear least-squares problems where sparse Jacobians are needed, such as those tackled with the Gauss-Newton or Levenberg-Marquardt methods.
+
+We are working on improving the integration of OptimalControl.jl with our optimization solvers from MadSuite, with a particular focus on our automatic differentiation tool ExaModels.jl. In this project, we are exploring ways to vectorize the code efficiently using generators, aiming to accelerate computations and improve performance when solving optimal control problems.
+
 ## Visits and meetings
 Frequent e-mail exchanges and virtual meetings between the members of the project.
 
