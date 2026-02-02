@@ -2,7 +2,7 @@
 layout: post
 title: Toward taming large and complex data flows in data-centric supercomputing
 date: 2016-03-21
-updated: 2018-01-01
+updated: 2026-02-02
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -48,6 +48,9 @@ We have showed improvements up to 15x faster for I/O operations compared to a st
 ## Results for 2017/2018
 We have developed TAPIOCA, an MPI-based library implementing an efficient topology-aware two-phase I/O algorithm. TAPIOCA can take advantage of double-buffering and one-sided communication to reduce as much as possible the idle time during data aggregation. We validate our approach at large scale on two leadership-class supercomputers: Mira (IBM BG/Q) and Theta (Cray XC40). On both architectures, we show a substantial improvement of I/O performance compared with the default MPI I/O implementation.
 
+## Results for 2024/2025
+In 2024, as part of a JLESC Special Issue for the Future Generation Computer Systems (FGCS) journal, we have summarized in a paper {%cite tessierEtAl2024 --file jlesc.bib %} the work achieved over the years and discuss the results in light of recent architectures in the Exascale era.
+
 ## Visits and meetings
 
 * Emmanuel Jeannot visited ANL on March 2015
@@ -61,6 +64,7 @@ We have developed TAPIOCA, an MPI-based library implementing an efficient topolo
 François Tessier moved from Inria to ANL in February 2016. A part of his work is focused on this project.
 Results have been published in the 1st Workshop on Optimization of Communication in HPC runtime systems (IEEE COM-HPC16), in conjunction with SuperComputing 2016 {% cite tmv+16 --file jlesc.bib %}.
 We have published our work on Tapioca in Cluster 2017 {%cite tvj17 --file jlesc.bib %}.
+A summary of all our work on this JLESC project has been published in FGCS {%cite tessierEtAl2024 --file jlesc.bib %}.
 
 {% bibliography --cited --file jlesc.bib %}
 
