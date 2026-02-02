@@ -372,7 +372,7 @@
 
 <p>This profusion of different technologies and architectures makes the use of these resources complex and their sizing at the machine design stage risky. One approach to partially solving these problems is to model supercomputers equipped with several levels of storage, coupled with the simulation of the scheduling of an execution history of large-scale I/O intensive applications. This type of simulation allows us to observe the behavior of storage tiers in the face of real-world workloads. Recently, following the decommissioning of the machine, several years of execution traces (including I/O traces) of applications that ran on Blue Waters have been made public. This mass of information is invaluable to feed simulations and study the architecture of modern storage systems.</p>
 
-<p>In this JLESC project, we propose to analyze Darshan traces and Lustre metrics from several years of Blue Waters production to feed StorAlloc <a class="citation" href="#monniot:hal-03683568">(Monniot et al. 2022)</a>, a simulator of a storage-aware job scheduler developed within the Inria KerData’s team. The goal of work is twofold: to provide a post-mortem study on the sizing of Blue Waters’ storage system and to explore the design of future highly storage-disaggregated HPC systems.</p>
+<p>In this JLESC project, we propose to analyze Darshan traces and Lustre metrics from several years of Blue Waters production to feed StorAlloc <a class="citation" href="#monniot:hal-03683568">(Monniot et al. 2022)</a> and FIVES <a class="citation" href="#monniotEtAl2024">(Monniot et al. 2024)</a>, two simulators of a storage systems developed within the Inria KerData’s team. The goal of work is twofold: to provide a post-mortem study on the sizing of Blue Waters’ storage system and to explore the design of future highly storage-disaggregated HPC systems.</p>
 
 <h2 id="results-for-20232024">Results for 2023/2024</h2>
 <p>We introduce Fives, a storage system simulator based on WRENCH and SimGrid, two simulation frameworks in the field. Fives, currently under development, is capable of reproducing the behavior of a Lustre file system. Using Darshan execution traces to both calibrate and validate the simulator, Fives can extract a number of metrics and correlation indices demonstrating a reasonable level of accuracy between real and simulated I/O times. The traces currently used in Fives come from machines for which only aggregated Darshan traces are publicly available. We are currently working on using Blue Waters traces to feed our simulator.</p>
@@ -388,8 +388,59 @@
 
 <p>Finally, still using Blue Waters traces among others, we proposed an in-depth study of access temporality on large-scale storage systems. This work has been accepted at IPDPS 2025 <a class="citation" href="#boitoEtAl2025">(Boito et al. 2025)</a>.</p>
 
+<h2 id="results-for-20252026">Results for 2025/2026</h2>
+
+<p>We presented the work accepted at IPDPS 2025 on the study of I/O temporality in datasets of I/O traces, including Blue Waters’ <a class="citation" href="#boitoEtAl2025">(Boito et al. 2025)</a>. A follow-up to this work is in preparation.</p>
+
+<p>We continued work on MOSAIC to extend I/O pattern detection, in particular through improved periodicity detection, a reinforced clustering algorithm, and the consideration of file temperature (as a function of access frequency). This work has been submitted <a class="citation" href="#jolivelEtAl2025">(Jolivel et al. 2025)</a>.</p>
+
+<p>Work on Blue Waters traces was presented several times in 2025. This dataset is now also being used to feed into a pattern-driven I/O benchmark project.</p>
+
 <h2 id="references">References</h2>
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          jolivelEtAl2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsejolivelEtAl2025Bibtex" aria-expanded="false" aria-controls="collapsejolivelEtAl2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsejolivelEtAl2025Abstract" aria-expanded="false" aria-controls="collapsejolivelEtAl2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="jolivelEtAl2025">Jolivel, Théo, François Tessier, Jakob Luettgau, Gabriel Antoniu, and Philippe Deniel. 2025. “A Methodology for System-Scale I/O Pattern Taxonomy for HPC Workloads.” <a href="https://hal.science/hal-05448514" target="_blank">https://hal.science/hal-05448514</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsejolivelEtAl2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@unpublished{jolivelEtAl2025,
+  title = {{A Methodology for System-Scale I/O Pattern Taxonomy for HPC Workloads}},
+  author = {Jolivel, Th{\'e}o and Tessier, Fran{\c c}ois and Luettgau, Jakob and Antoniu, Gabriel and Deniel, Philippe},
+  url = {https://hal.science/hal-05448514},
+  note = {working paper or preprint},
+  year = {2025},
+  keywords = {HPC ; I/O ; taxonomy ; categorization ; pattern},
+  pdf = {https://hal.science/hal-05448514v1/file/ISC_26_HAL.pdf},
+  hal_id = {hal-05448514},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
