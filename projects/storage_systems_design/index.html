@@ -386,7 +386,7 @@
 
 <p>We also introduced MOSAIC <a class="citation" href="#jolivelEtAl2024">(Jolivel et al. 2024)</a>, an approach to categorize execution traces and give information about the general behavior of applications from an I/O perspective. we analyze a full year of I/O execution traces of Blue Waters from which, we determine a set of non-exclusive categories to describe the I/O behavior of jobs, including the temporality and the periodicity of the accesses and the metadata overhead. This paper has been accepted in the SC’24 PDSW workshop. This work is currently being pursued, with several lines of research focusing in particular on automating the clustering of I/O operations.</p>
 
-<p>Finally, still using Blue Waters traces among others, we proposed an in-depth study of access temporality on large-scale storage systems. This work has been accepted at IPDPS 2025 <a class="citation" href="#boitoEtAl2024">(Boito et al. 2025)</a>.</p>
+<p>Finally, still using Blue Waters traces among others, we proposed an in-depth study of access temporality on large-scale storage systems. This work has been accepted at IPDPS 2025 <a class="citation" href="#boitoEtAl2025">(Boito et al. 2025)</a>.</p>
 
 <h2 id="references">References</h2>
 <ol class="bibliography"><li><div class="bibtex-entry-container">
@@ -394,33 +394,35 @@
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
         <div class="col-md-12 ref-label tag tag-default">
-          boitoEtAl2024
+          boitoEtAl2025
         </div>
       </div>
       <div class="row">
-        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseboitoEtAl2024Bibtex" aria-expanded="false" aria-controls="collapseboitoEtAl2024Bibtex">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseboitoEtAl2025Bibtex" aria-expanded="false" aria-controls="collapseboitoEtAl2025Bibtex">
           BibTeX
         </button>
-        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseboitoEtAl2024Abstract" aria-expanded="false" aria-controls="collapseboitoEtAl2024Abstract">
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseboitoEtAl2025Abstract" aria-expanded="false" aria-controls="collapseboitoEtAl2025Abstract">
           Abstract
         </button>
       </div>
     </div>
 
     <div class="bibtex-ref-entry col-md-9 col-sm-12">
-      <span id="boitoEtAl2024">Boito, Francieli, Luan Teylo, Mihail Popov, Théo Jolivel, François Tessier, Jakob Luettgau, Julien Monniot, Ahmad Tarraf, André Carneiro, and Carla Osthoff. 2025. “A Deep Look Into the Temporal I/O Behavior of HPC Applications.” <a href="https://inria.hal.science/hal-04887809" target="_blank">https://inria.hal.science/hal-04887809</a>.</span>
+      <span id="boitoEtAl2025">Boito, Francieli, Luan Teylo, Mihail Popov, Théo Jolivel, François Tessier, Jakob Luettgau, Julien Monniot, Ahmad Tarraf, André Carneiro, and Carla Osthoff. 2025. “A Deep Look Into the Temporal I/O Behavior of HPC Applications.” In <i>39th IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS)</i>. Milan, Italy. https://doi.org/10.1109/IPDPS64566.2025.00072.</span>
     </div>
   </div>
-  <div class="collapse" id="collapseboitoEtAl2024Bibtex">
+  <div class="collapse" id="collapseboitoEtAl2025Bibtex">
     <div class="row bibtex-ref-raw">
       <div class="col-sm-10 offset-sm-1">
-        <pre><code>@unpublished{boitoEtAl2024,
+        <pre><code>@inproceedings{boitoEtAl2025,
   title = {{A Deep Look Into the Temporal I/O Behavior of HPC Applications}},
   author = {Boito, Francieli and Teylo, Luan and Popov, Mihail and Jolivel, Th{\'e}o and Tessier, Fran{\c c}ois and Luettgau, Jakob and Monniot, Julien and Tarraf, Ahmad and Carneiro, Andr{\'e} and Osthoff, Carla},
   url = {https://inria.hal.science/hal-04887809},
-  note = {working paper or preprint},
+  booktitle = {{39th IEEE International Parallel \&amp; Distributed Processing Symposium (IPDPS)}},
+  address = {Milan, Italy},
   year = {2025},
-  month = jan,
+  month = jun,
+  doi = {10.1109/IPDPS64566.2025.00072},
   keywords = {high-performance computing ; parallel file systems ; workload characterization ; temporal I/O behavior},
   pdf = {https://inria.hal.science/hal-04887809v1/file/main.pdf},
   hal_id = {hal-04887809},
