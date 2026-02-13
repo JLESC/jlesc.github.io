@@ -77,6 +77,12 @@ Since the last report, researchers at ANL worked with researchers at RIKEN R-CCS
 + Modernization of TEZip code.  TEZip was implemented using unsupported versions of Tensorflow and CUDA.  TEZip was modernized to use recent versions of Pytorch and CUDA resolving several bugs found during the comparison with SZ3. 
 + Evaluation of Spring-8 data with SZ3.  Researchers at ANL evaluate the use of SZ3 on Spring-8 data to find possible compression ratios on Spring-8 data.
 
+## Results for 2025/2026
+
++ Integration of [LibPressio into Globus](https://github.com/robertu94/libpressio-globus).  Riken-RCCs and Spring-8 are exploring Globus as a more modern data transfer alternative.  This integration allows sites to save on communication costs by compression before sending similar to last year's support of GFARM.
++ Modernization of TEZIP code.  TEZip was ported to C/C++ with dramatic improvments in compression performance.  An integration of this C++ version of TEZip into LibPressio was performed to enable easier comparisions and advancements in compression
++ Starting of integration of TEZip into FZ -- the next generation of the SZ compressor -- as a module.  This enables more modular use of compression technologies in TEZIP other compressor modules to explore its suitablity for other domains.
+
 
 
 ## Visits and meetings
@@ -102,7 +108,11 @@ There was no visit in 2023.
 
 2025:
 
-* There have been no visits so far in 2025.
+* There have been no visits in 2025.
+
+2026:
+
+* Robert met with the team at RIKEN around the DOE-MEXT meeting and at SCAsia.
 
 ## Impact and publications
 
@@ -112,6 +122,7 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
 
 ### Papers
 
+* A section of a paper at SC25 describing tezip compared to other compressors {% cite cappello2025support --file jlesc.bib %}
 * A paper at Synchrotron Radiation News providing an overview RoIBIN-SZ {% cite UnderwoodEtAl2023 --file jlesc.bib %}
 * A poster at SC23 discussing preliminary evaluation of TEZip against other leading lossy compressors {% cite TalukdarEtAl2023 --file jlesc.bib %}
 * A paper at IPDPS on fix ratio compression using control loop {% cite Underwood20 --file jlesc.bib %}
@@ -131,7 +142,7 @@ Robert Underwood from Clemson (Jon Calhoun's group) received a DOE funding for h
 
 The compression scheme (ROI-SZ) developed by Argonne is in extensive testing at LCLS for integration in the data reduction pipeline of the LCLS2. It will be also tested in Germany.
 This project has a direct impact on the APS (Argonne Photon Source) and Spring-8 instruments.
-This project has a broad impact on other photo sources. Results from this project are impacting the collaborations with the LCLS (Linac Coherent Light Source) instruments as part of the US DOE [Illumine project](https://lcls.slac.stanford.edu/depts/data-systems/projects/illumine).
+This project has a broad impact on other light sources. Results from this project are impacting the collaborations with the LCLS (Linac Coherent Light Source) instruments as part of the US DOE [Illumine project](https://lcls.slac.stanford.edu/depts/data-systems/projects/illumine).
 
 The implementation of Huffman variable length coding in SZ (part of ROI-S) is the first high performance implementation of Huffman coding on GPU. We will make it stand alone and available for the community, independently of SZ.
 
