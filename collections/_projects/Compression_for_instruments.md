@@ -2,7 +2,7 @@
 layout: post
 title: Compression for instruments
 date: 2020-02-25
-updated: 2025-03-13
+updated: 2026-02-13
 navbar: Research
 subnavbar: Projects
 project_url:
