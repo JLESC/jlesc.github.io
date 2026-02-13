@@ -433,6 +433,14 @@ An overview of RoIBIN-SZ was included as invited paper to Synchrotron Radiation 
   <li>Evaluation of Spring-8 data with SZ3.  Researchers at ANL evaluate the use of SZ3 on Spring-8 data to find possible compression ratios on Spring-8 data.</li>
 </ul>
 
+<h2 id="results-for-20252026">Results for 2025/2026</h2>
+
+<ul>
+  <li>Integration of <a href="https://github.com/robertu94/libpressio-globus">LibPressio into Globus</a>.  Riken-RCCs and Spring-8 are exploring Globus as a more modern data transfer alternative.  This integration allows sites to save on communication costs by compression before sending similar to last year’s support of GFARM.</li>
+  <li>Modernization of TEZIP code.  TEZip was ported to C/C++ with dramatic improvments in compression performance.  An integration of this C++ version of TEZip into LibPressio was performed to enable easier comparisions and advancements in compression</li>
+  <li>Starting of integration of TEZip into FZ – the next generation of the SZ compressor – as a module.  This enables more modular use of compression technologies in TEZIP other compressor modules to explore its suitablity for other domains.</li>
+</ul>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <p>2020:</p>
@@ -461,7 +469,13 @@ There was no visit in 2023.</p>
 <p>2025:</p>
 
 <ul>
-  <li>There have been no visits so far in 2025.</li>
+  <li>There have been no visits in 2025.</li>
+</ul>
+
+<p>2026:</p>
+
+<ul>
+  <li>Robert met with the team at RIKEN around the DOE-MEXT meeting and at SCAsia.</li>
 </ul>
 
 <h2 id="impact-and-publications">Impact and publications</h2>
@@ -472,6 +486,7 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
 <h3 id="papers">Papers</h3>
 
 <ul>
+  <li>A section of a paper at SC25 describing tezip compared to other compressors <a class="citation" href="#cappello2025support">(Cappello et al. 2025)</a></li>
   <li>A paper at Synchrotron Radiation News providing an overview RoIBIN-SZ <a class="citation" href="#UnderwoodEtAl2023">(“ROIBIN-SZ: Fast and Science-Preserving Compression for Serial Crystallography” 2023)</a></li>
   <li>A poster at SC23 discussing preliminary evaluation of TEZip against other leading lossy compressors <a class="citation" href="#TalukdarEtAl2023">(“Integrating TEZip into LibPressio: A Acase Study of Integrating a Dynamic Application into a Static C Envionment” 2023)</a></li>
   <li>A paper at IPDPS on fix ratio compression using control loop <a class="citation" href="#Underwood20">(Underwood et al. 2020)</a></li>
@@ -483,6 +498,45 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
 </ul>
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          cappello2025support
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsecappello2025supportBibtex" aria-expanded="false" aria-controls="collapsecappello2025supportBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsecappello2025supportAbstract" aria-expanded="false" aria-controls="collapsecappello2025supportAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="cappello2025support">Cappello, Franck, Robert Underwood, Yuri Alexeev, Alison Baker, Ebru Bozdağ, Martin Burtscher, Kyle Chard, et al. 2025. “What to Support When You’Re Compressing: The State of Practice Gaps and Opportunities for Scientific Data Compression.” In <i>Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis</i>, 1966–79.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsecappello2025supportBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{cappello2025support,
+  title = {What to Support When You’re Compressing: The State of Practice Gaps and Opportunities for Scientific Data Compression},
+  author = {Cappello, Franck and Underwood, Robert and Alexeev, Yuri and Baker, Alison and Bozda{\u{g}}, Ebru and Burtscher, Martin and Chard, Kyle and Di, Sheng and Felker, Kyle Gerard and O'Grady, Paul Christopher and others},
+  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  pages = {1966--1979},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
@@ -806,7 +860,7 @@ Franck Cappello presentation of lossy compression for photon source at the Inter
 
 <p>The compression scheme (ROI-SZ) developed by Argonne is in extensive testing at LCLS for integration in the data reduction pipeline of the LCLS2. It will be also tested in Germany.
 This project has a direct impact on the APS (Argonne Photon Source) and Spring-8 instruments.
-This project has a broad impact on other photo sources. Results from this project are impacting the collaborations with the LCLS (Linac Coherent Light Source) instruments as part of the US DOE <a href="https://lcls.slac.stanford.edu/depts/data-systems/projects/illumine">Illumine project</a>.</p>
+This project has a broad impact on other light sources. Results from this project are impacting the collaborations with the LCLS (Linac Coherent Light Source) instruments as part of the US DOE <a href="https://lcls.slac.stanford.edu/depts/data-systems/projects/illumine">Illumine project</a>.</p>
 
 <p>The implementation of Huffman variable length coding in SZ (part of ROI-S) is the first high performance implementation of Huffman coding on GPU. We will make it stand alone and available for the community, independently of SZ.</p>
 
