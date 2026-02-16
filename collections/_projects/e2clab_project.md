@@ -2,7 +2,7 @@
 layout: post
 title: Advancing Chameleon and Grid'5000 testbeds II
 date: 2022-07-15
-updated: 2025-01-31
+updated: 2026-02-16
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -176,7 +176,17 @@ This research work started during the summer internship of Cédric Prigent (INRI
 
 We started this project with the objective of deploying and studying the behavior of Federated Learning (FL) systems on real-world edge devices. For this purpose, our target was to deploy air-quality stations across the UChicago campus. The first step was to effectively design such air-quality stations. We built a set of prototypes based on Raspberry Pis and air-quality sensors (monitoring particulate matter concentrations, temperature, humidity and air pressure), and developed a set of micro-services to collect air quality measurements, pre-process air-quality data, and perform FL local training tasks. Then, with the help of technical staff from UChicago, we identified suitable locations and deployed our devices in 8 fresh air intakes from the university buildings.
 
-After deployments of our air-quality stations, our objective was to study the behaviour of FL systems at the Edge. More specifically, we were interested in investigating the differences between simulation, emulation and real-world deployments with regard to performance and reproducibility of experiments. We deployed the same training tasks in different settings i.e., real-world air-quality stations, emulation on distributed testbeds (Grid’5000 and Chameleon), and simulation on a single compute node, and drew several conclusions regarding the type of infrastructure that could be used to validate different experimental aspects, as well as the advantages and shortcomings of such real-world deployments. Simulation provides good results for reproducing model based performance metrics (e.g., model convergence, accuracy), whereas emulation on distributed testbeds can more accurately reproduce system related metrics (e.g., execution time, CPU and memory usage). The results of this work were put in a paper submitted to the IEEE CCGrid’2025 conference.
+After deployments of our air-quality stations, our objective was to study the behaviour of FL systems at the Edge. More specifically, we were interested in investigating the differences between simulation, emulation and real-world deployments with regard to performance and reproducibility of experiments. We deployed the same training tasks in different settings i.e., real-world air-quality stations, emulation on distributed testbeds (Grid'5000 and Chameleon), and simulation on a single compute node, and drew several conclusions regarding the type of infrastructure that could be used to validate different experimental aspects, as well as the advantages and shortcomings of such real-world deployments. Simulation provides good results for reproducing model based performance metrics (e.g., model convergence, accuracy), whereas emulation on distributed testbeds can more accurately reproduce system related metrics (e.g., execution time, CPU and memory usage). The results of this work were put in a paper submitted to the IEEE CCGrid'2025 conference.
+
+## Results for 2025/2026
+
+In 2025, the collaboration between Inria and ANL continued to deepen across multiple fronts, focusing on edge-to-cloud infrastructure, practical reproducibility, and community building.
+
+To advance the collaboration on edge-to-cloud infrastructure and build community around the computing continuum, Christian Perez, Gabriel Antoniu, and Kate Keahey organized the ContinuumRI workshop on May 19th, 2025, co-located with CCGRID2025. The workshop brought together around 40 attendees from Europe and the USA and fostered lively discussion on challenges and solutions facing this research community {% cite ContinuumRI2025 --file external/e2clab_project.bib %}. Workshop pictures can be seen online {% cite ContinuumRIPhotos2025 --file external/e2clab_project.bib %}. Given the success of the first workshop, the organizers will follow up with a 2026 edition co-located with CCGRID2026, for which the call for papers is currently out.
+
+On the reproducibility front, Kate Keahey and Christian Perez co-organized a workshop on practical reproducibility in systems science and co-authored a report resulting from the workshop {% cite keahey_2025_15306610 --file jlesc.bib %}. The report characterizes reproducibility challenges and potential solutions, including suggestions on how to use AI to advance the practice of reproducibility. The report is publicly available at reproduciblehpc.org.
+
+As a follow-up activity to Cédric Prigent's work reported last year, interoperability tests were realized at Inria in the KerData team in the context of the STEEL project of the PEPR Cloud program. These tests enabled the use of E2Clab for the deployment of federated learning workflows across a hybrid infrastructure combining Grid'5000 and the Scaleway commercial cloud. Similar experiments are planned with another cloud provider (OVHcloud), further demonstrating the versatility and interoperability of the E2Clab platform across diverse cloud environments.
 
 ## Visits and meetings
 
