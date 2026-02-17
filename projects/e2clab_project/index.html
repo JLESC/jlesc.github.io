@@ -453,6 +453,16 @@ data, environment, and results shared easily.</p>
 
 <p>After deployments of our air-quality stations, our objective was to study the behaviour of FL systems at the Edge. More specifically, we were interested in investigating the differences between simulation, emulation and real-world deployments with regard to performance and reproducibility of experiments. We deployed the same training tasks in different settings i.e., real-world air-quality stations, emulation on distributed testbeds (Grid’5000 and Chameleon), and simulation on a single compute node, and drew several conclusions regarding the type of infrastructure that could be used to validate different experimental aspects, as well as the advantages and shortcomings of such real-world deployments. Simulation provides good results for reproducing model based performance metrics (e.g., model convergence, accuracy), whereas emulation on distributed testbeds can more accurately reproduce system related metrics (e.g., execution time, CPU and memory usage). The results of this work were put in a paper submitted to the IEEE CCGrid’2025 conference.</p>
 
+<h2 id="results-for-20252026">Results for 2025/2026</h2>
+
+<p>In 2025, the collaboration between Inria and ANL continued to deepen across multiple fronts, focusing on edge-to-cloud infrastructure, practical reproducibility, and community building.</p>
+
+<p>To advance the collaboration on edge-to-cloud infrastructure and build community around the computing continuum, Christian Perez, Gabriel Antoniu, and Kate Keahey organized the ContinuumRI workshop on May 19th, 2025, co-located with CCGRID2025. The workshop brought together around 40 attendees from Europe and the USA and fostered lively discussion on challenges and solutions facing this research community <a class="citation" href="#ContinuumRI2025">(“ContinuumRI Workshop 2025” 2025)</a>. Workshop pictures can be seen online <a class="citation" href="#ContinuumRIPhotos2025">(“ContinuumRI Workshop 2025 - Photos” 2025)</a>. Given the success of the first workshop, the organizers will follow up with a 2026 edition co-located with CCGRID2026, for which the call for papers is currently out.</p>
+
+<p>On the reproducibility front, Kate Keahey and Christian Perez co-organized a workshop on practical reproducibility in systems science and co-authored a report resulting from the workshop <a class="citation" href="#keahey_2025_15306610">(Keahey et al. 2025)</a>. The report characterizes reproducibility challenges and potential solutions, including suggestions on how to use AI to advance the practice of reproducibility. The report is publicly available at reproduciblehpc.org.</p>
+
+<p>As a follow-up activity to Cédric Prigent’s work reported last year, interoperability tests were realized at Inria in the KerData team in the context of the STEEL project of the PEPR Cloud program. These tests enabled the use of E2Clab for the deployment of federated learning workflows across a hybrid infrastructure combining Grid’5000 and the Scaleway commercial cloud. Similar experiments are planned with another cloud provider (OVHcloud), further demonstrating the versatility and interoperability of the E2Clab platform across diverse cloud environments.</p>
+
 <h2 id="visits-and-meetings">Visits and meetings</h2>
 
 <p>We schedule regular meetings between the members of the project.</p>
@@ -473,6 +483,47 @@ data, environment, and results shared easily.</p>
 -->
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          keahey_2025_15306610
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsekeahey_2025_15306610Bibtex" aria-expanded="false" aria-controls="collapsekeahey_2025_15306610Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsekeahey_2025_15306610Abstract" aria-expanded="false" aria-controls="collapsekeahey_2025_15306610Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="keahey_2025_15306610">Keahey, Kate, Marc Richardson, Rafael Tolosana Calasanz, Sascha Hunold, Jay Lofstead, Tanu Malik, and Christian Perez. 2025. “On Challenges of Practical Reproducibility for Systems and HPC Computer Science.” Zenodo. https://doi.org/10.5281/zenodo.15306610.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsekeahey_2025_15306610Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{keahey_2025_15306610,
+  author = {Keahey, Kate and Richardson, Marc and Tolosana Calasanz, Rafael and Hunold, Sascha and Lofstead, Jay and Malik, Tanu and Perez, Christian},
+  doi = {10.5281/zenodo.15306610},
+  month = apr,
+  publisher = {Zenodo},
+  title = {{On Challenges of Practical Reproducibility for Systems and HPC Computer Science}},
+  url = {https://doi.org/10.5281/zenodo.15306610},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
@@ -669,6 +720,82 @@ different testbeds, such as the Grid5000 + FIT IoT LAB.</p>
 <h2 id="references">References</h2>
 
 <ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ContinuumRI2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseContinuumRI2025Bibtex" aria-expanded="false" aria-controls="collapseContinuumRI2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseContinuumRI2025Abstract" aria-expanded="false" aria-controls="collapseContinuumRI2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="ContinuumRI2025">“ContinuumRI Workshop 2025.” 2025. <a href="https://sites.google.com/view/continuumri2025" target="_blank">https://sites.google.com/view/continuumri2025</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseContinuumRI2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@online{ContinuumRI2025,
+  addendum = {(accessed: 02.16.2026)},
+  title = {{ContinuumRI Workshop 2025}},
+  url = {https://sites.google.com/view/continuumri2025},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ContinuumRIPhotos2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseContinuumRIPhotos2025Bibtex" aria-expanded="false" aria-controls="collapseContinuumRIPhotos2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseContinuumRIPhotos2025Abstract" aria-expanded="false" aria-controls="collapseContinuumRIPhotos2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="ContinuumRIPhotos2025">“ContinuumRI Workshop 2025 - Photos.” 2025. <a href="https://photos.google.com/share/AF1QipMVDV6AStZ1iFAJYIAHOYhinylXhXQyZvPyGiMIbH7LzFzK8zvAqVeHb_hs6YyT-g?key=NHl1dnFVWm1fSzE3MmxjVURRZmVtQUQ2UFg5UEtR" target="_blank">https://photos.google.com/share/AF1QipMVDV6AStZ1iFAJYIAHOYhinylXhXQyZvPyGiMIbH7LzFzK8zvAqVeHb_hs6YyT-g?key=NHl1dnFVWm1fSzE3MmxjVURRZmVtQUQ2UFg5UEtR</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseContinuumRIPhotos2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@online{ContinuumRIPhotos2025,
+  addendum = {(accessed: 02.16.2026)},
+  title = {{ContinuumRI Workshop 2025 - Photos}},
+  url = {https://photos.google.com/share/AF1QipMVDV6AStZ1iFAJYIAHOYhinylXhXQyZvPyGiMIbH7LzFzK8zvAqVeHb_hs6YyT-g?key=NHl1dnFVWm1fSzE3MmxjVURRZmVtQUQ2UFg5UEtR},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
       <div class="row">
