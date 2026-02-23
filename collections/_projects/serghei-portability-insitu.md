@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Performance-portability and in-situ visualisation with SERGHEIi - HPC solutions
+title: Performance-portability and in-situ visualisation with SERGHEI - HPC solutions
 date: 2025-06-04
 updated: 2026-01-31
 navbar: Research
