@@ -9,6 +9,7 @@ project_url:
 status: running
 topics:
   - apps
+  - ai
   - numerics
 keywords:
   - CFD
