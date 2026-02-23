@@ -9,6 +9,7 @@ project_url: https://github.com/thomas-bouvier/neomem
 status: running
 topics:
   - architectures
+  - ai
 keywords:
   - continual learning
   - rehearsal buffer
