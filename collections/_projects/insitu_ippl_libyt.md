@@ -47,7 +47,7 @@ process of creating a libyt interface in IPPL.
 4) Victor Mateevitsi from Argonne has been added as a new collaboration partner in this project. He and his collaborators made the ascent interface for IPPL.
 
 ## Visits and meetings
-Jens Henrik Goebbert and Victor Mateevitsi were part of the organizing committee in the ISAV25: In Situ AI, Analysis, and Visualization workshop in sc25. Andreas Adelmann from Paul Scherrer institute gave a keynote talk in that workshop on " In-Situ Visualization and Steering of Digital Twins for Particle Accelerators"  which used in-situ results from IPPL and OPAL-X. 
+Jens Henrik Goebbert and Victor Mateevitsi were part of the organizing committee in the ISAV25: In Situ AI, Analysis, and Visualization workshop in sc25. Andreas Adelmann from Paul Scherrer institute gave a keynote talk in that workshop on "In-Situ Visualization and Steering of Digital Twins for Particle Accelerators"  which used in-situ results from IPPL and OPAL-X. 
 
 ## Impact and publications
 Although not directly related to this JLESC project, IPPL and it's ascent based in-situ interface are used in {% cite marrinan2025intuitive --file external/insitu_ippl_libyt %} and {% cite marrinan2025real --file external/insitu_ippl_libyt %}.  
