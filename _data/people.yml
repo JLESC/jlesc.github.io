@@ -359,6 +359,15 @@ bhosale_a:
   email: adityapb@illinois.edu
   homepage:
 
+bohannon_c:
+  sur_name: Bohannon
+  given_name: Connor
+  affiliation: anl
+  position: postbac
+  topics: architecture research
+  email: cbohannon@anl.gov
+  homepage:
+
 bienz_a:
   sur_name: Bienz
   given_name: Amanda
