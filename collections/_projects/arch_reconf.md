@@ -69,6 +69,7 @@ The end of transistor scaling encourages us to challenge innovative architectura
 * A paper at IEEE ASAP 2021 on virtualization of networks of FPGA clusters {% cite ueno2021virtual --file jlesc.bib %}
 * A paper at SC23 PMBS workshop {% cite yoshii2023hardware --file jlesc.bib %}
 * A paper at SC23 DRBS workshop {% cite yoshii2023streaming --file jlesc.bib %}
+* A Journal paper in Elsevier's Parallel Computing {% cite yoshii2025case --file jlesc.bib %}
 
 {% bibliography --cited --file jlesc.bib %}
 
