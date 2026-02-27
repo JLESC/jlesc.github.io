@@ -2,7 +2,7 @@
 layout: post
 title: Towards Continual Learning at Scale
 date: 2022-05-07
-updated: 2025-03-10
+updated: 2026-02-27
 navbar: Research
 subnavbar: Projects
 project_url: https://github.com/thomas-bouvier/neomem
@@ -14,11 +14,14 @@ keywords:
   - continual learning
   - rehearsal buffer
   - catastrophic forgetting
+  - inference serving
 head: nicolae_b
 members:
   - bouvier_t
   - costan_a
   - antoniu_g
+  - jeannot_e
+  - wahib_m
 ---
 {% comment %}
 ================================
@@ -86,9 +89,9 @@ Read the comments carefully!
 
 During the past decade, Deep learning (DL) supported the shift from rule-based systems towards statistical models. Deep Neural Networks (DNNs) revolutionized how we address problems in a wide range of applications by extracting patterns from complex yet labelled datasets. In the same way that more-powerful computers made it possible to design networks with vastly more neurons, ever-growing volumes of data act as a driving force for advancements in this field. Bigger models and larger centralized datasets demand for distributed strategies to leverage multiple compute nodes.
 
-Most existing supervised learning algorithms operate under the assumptions that the data is (1) independent and identically distributed (i.i.d.); and (2) available before the training process. However, these constraints stand in the way of many real-life scenarios where the aforementioned datasets are replaced by high volume, high velocity data streams generated over time by distributed (sometimes geographically) devices. It is unfeasible to keep training the models in an offline fashion from scratch every time new data arrives, as this would lead to prohibitive time and/or resource constraints. Also, typical DNNs suffer from catastrophic forgetting in this context, a phenomenon causing them to reinforce new patterns at the expense of previously acquired knowledge (i.e., a bias towards new samples). Some authors have shown that memory replay methods are effective in mitigating accuracy degradation in such settings. However, their performance is still far from that of oracles with full access to the static dataset. The problem of Continual Learning (CL) remains an open research question.
+Most existing supervised learning algorithms operate under the assumptions that the data is (1) independent and identically distributed (i.i.d.); and (2) available before the training process. However, these constraints stand in the way of many real-life scenarios where the aforementioned datasets are replaced by high volume, high velocity data streams generated over time by distributed (sometimes geographically) devices. It is unfeasible to keep training the models in an offline fashion from scratch every time new data arrives, as this would lead to prohibitive time and/or resource constraints. Also, typical DNNs suffer from catastrophic forgetting in this context, a phenomenon causing them to reinforce new patterns at the expense of previously acquired knowledge (i.e., a bias towards new samples). Some authors have shown that memory replay methods are effective in mitigating accuracy degradation in such settings. However, their performance is still far from that of oracles with full access to the static dataset. The problem of Continual Learning (CL) remains an open research question. In the context of modern LLMs and transformer models is especially relevant, since training from scratch is very expensive at largely unfeasible at this point, with most efforts focuing on distilling previous models and/or fine-tuning. Complementary to CL is the problem of inference serving, which becomes especially challenging when considering constraints such as deadlines, in which case simple scheduling approaches (such as FIFO) adopted by state of art inference runtimes (such as vLLM) underperform.
 
-Existing research typically addresses distributed DL and CL separately. At INRIA, we are interested in how CL methods can take advantage of data parallelization across nodes, which is one of the main techniques to achieve training scalability on HPC systems. The aggregated memory could benefit the accuracy achieved by such algorithms by instantiating distributed replay buffers. The main research goals of this project are the (1) design and implementation of a distributed replay buffer leveraging distributed systems effectively and the (2) study of trade-offs introduced by large-scale CL in terms of training time, accuracy and memory usage.
+Existing research typically addresses distributed DL and CL separately. The team is interested in how CL methods can take advantage of modern parallelization (e.g. data/tensor/pipeline) and quantization techniques (e.g. LoRA adapters), which are key drivers in achieving scalability on HPC systems. Furthermore, the team is interested in scheduling algorithms and system-level optimizations for inference serving runtimes that can handle strict constraints such as deadlines.
 
 ## Results for 2021/2022
 
@@ -106,11 +109,15 @@ We have started exploring the integration of rehearsal techniques in the context
 To this end, we have studied how the representation of the training samples and mini-batches used for LLM trainig is different from the representation we have implemented
 in our distributed rehearsal buffer solution. Based on this study, we are planning to extend our approach accordingly.
 
+## Results for 2025/2026
+
+We have explored how LoRA adapters behave during training and inferences when they applied statically from the beginning (distilled into an LLM) vs. applied dynamically at runtime and kept on a separate computational path. We have found several computational and data patterns (especially related to KV cache management during inferences) that are interesting to pursue in follow-up optimizations. Furthermore, we have explored novel deadline-driven scheduling startegies for online inference serving. A key contribution was an algorithm that reprioritizes and/or drops existing requests on the fly as new requests are added to a waiting queue in order to minimize deadline violations while maximizing throughput. This effort has led to a submission (currently under review) at ICS. 
+
 ## Visits and meetings
 
 We schedule regular video meetings between the different members of the project.
 
-{% person bouvier_t %} visited ANL in the context of a 3-month appointment during summer 2022. {% person bouvier_t %} graduated meanwhile, we are currently looking for new team members to join the project.
+{% person bouvier_t %} visited ANL in the context of a 3-month appointment during summer 2022. {% person bouvier_t %} graduated meanwhile, we are currently looking for new team members to join the project. {% person jeannot_e %} visited RIKEN for 12-month sabbatical during 2025/2026.
 
 ## Impact and publications
 
@@ -144,7 +151,8 @@ Remember to use the `--file jlesc.bib` with the `cite` tag.
 ## Future plans
 
 - Apply rehearsal-based CL to LLM training, by integrating the distributed rehearsal buffer into training runtimes like DeepSpeed and Nanotron.
-- Use the distributed rehearsal buffer as a driver for Retrieval Augmented Generation (RAG).
+- Use the distributed rehearsal buffer as a driver for Retrieval Augmented Generation (RAG)
+- Design and develop novel inference serving techniques that consider strict constraints and are adapted to continual learning
 
 ## References
 
