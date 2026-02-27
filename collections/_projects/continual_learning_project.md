@@ -2,7 +2,7 @@
 layout: post
 title: Towards Continual Learning at Scale
 date: 2022-05-07
-updated: 2025-03-10
+updated: 2026-02-27
 navbar: Research
 subnavbar: Projects
 project_url: https://github.com/thomas-bouvier/neomem
