@@ -30,6 +30,7 @@ members:
   - miguel_j
   - cappello_f
   - applencourt_t
+  - bohannon_c
 
 ---
 
