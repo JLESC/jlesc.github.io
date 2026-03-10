@@ -69,8 +69,10 @@ This project aims to:
 ## Impact and publications
 
 {% cite tarraf_malleability_2024 --file external/dmr-dpp-oar.bib %}
-{% cite dutot_leveraging_2024 --file external/dmr-dpp-oar.bib %}
-{% cite huber_bridging_2025 --file external/dmr-dpp-oar.bib %}
+{% cite Dutot2024ISC --file external/dmr-dpp-oar.bib %}
+{% cite Dutot2024EuroPar --file external/dmr-dpp-oar.bib %}
+{% cite Huber2025ISC --file external/dmr-dpp-oar.bib %}
+{% cite Huber2025HiPC --file external/dmr-dpp-oar.bib %}
 
 ## Future plans
 
