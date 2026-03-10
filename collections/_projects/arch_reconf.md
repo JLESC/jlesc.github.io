@@ -2,13 +2,15 @@
 layout: post
 title: "Exploring the Future of Computing: Evaluating and Enhancing Reconfigurable Architectures for HPC, AI, and Edge Computing"
 date: 2024-01-01
-updated: 2025-01-16
+updated: 2026-01-21
 navbar: Research
 subnavbar: Projects
 project_url: 
 status: running
 topics: 
   - architectures
+  - ai
+  - qc
 keywords: 
   - Reconfigurable computing
   - Hardware specialization
@@ -28,6 +30,7 @@ members:
   - miguel_j
   - cappello_f
   - applencourt_t
+  - bohannon_c
 
 ---
 
@@ -46,6 +49,13 @@ The end of transistor scaling encourages us to challenge innovative architectura
 * Organized SC24 BoF session: Open-Source Hardware Tools: Advancing Architecture Research and Chip Prototyping (Nov 2024)
 * Held a technical meeting in Japan to discuss streaming data compressor algorithms and designs (Dec 2024)
 
+## Results for 2025/2026
+
+* Organized a break-out session at the JLESC 17th workshop at Argonne (May 2025)
+* Organized 2nd Workshop on Architecture Design Methodologies and Ecosystems for HPC and Scientific Edge Computing ARCHIDE at LBNL (Aug 2025)
+* Organized SC25 BoF session: Open-Source Hardware Tools: Advancing Architecture Research and Chip Prototyping (Nov 2025)
+* Co-authored one journal paper.
+
 ## Visits and meetings
 
 * {% person yoshii_k %} visited RIKEN for two days in June 2023 to discuss the streaming hardware compressor design.
@@ -60,6 +70,7 @@ The end of transistor scaling encourages us to challenge innovative architectura
 * A paper at IEEE ASAP 2021 on virtualization of networks of FPGA clusters {% cite ueno2021virtual --file jlesc.bib %}
 * A paper at SC23 PMBS workshop {% cite yoshii2023hardware --file jlesc.bib %}
 * A paper at SC23 DRBS workshop {% cite yoshii2023streaming --file jlesc.bib %}
+* A Journal paper in Elsevier's Parallel Computing {% cite yoshii2025case --file jlesc.bib %}
 
 {% bibliography --cited --file jlesc.bib %}
 

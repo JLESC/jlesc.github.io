@@ -9,6 +9,7 @@ project_url:
 status: running
 topics:
   - apps
+  - ai
 keywords:
   - machine learning, protein folding
 head: taufer_m
