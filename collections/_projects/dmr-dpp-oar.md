@@ -2,7 +2,7 @@
 layout: post
 title: A Comprehensive Software Stack for Dynamic Resources Management.
 date: 2024-06-08
-updated: 2025-01-31
+updated: 2026-01-30
 navbar: Research
 subnavbar: Projects
 project_url:
