@@ -2425,6 +2425,15 @@ perarnau_s:
   email: swann@anl.gov
   homepage: http://www.mcs.anl.gov/~perarnau/
 
+pereira_r:
+  sur_name: Pereira
+  given_name: Romain
+  affiliation: anl
+  position:
+  topics:
+  email: rpereira@anl.gov
+  homepage:
+
 perez_c:
   sur_name: Perez
   given_name: Christian
@@ -3631,6 +3640,5 @@ dutot_p:
   email:
   homepage:
   
-
 
 
