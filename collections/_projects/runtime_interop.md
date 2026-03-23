@@ -2,7 +2,7 @@
 layout: post
 title: Enhancing Interoperability in Task-based Programming Models through Common Low-Level Interfaces
 date: 2024-09-11
-updated: 2026-01-21
+updated: 2026-03-23
 navbar: Research
 subnavbar: Projects
 project_url:
@@ -27,6 +27,7 @@ members:
   - maya_t
   - rao_r
   - schuchart_j
+  - pereira_r
 ---
 
 ## Research topic and goals
