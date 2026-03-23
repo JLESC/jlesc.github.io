@@ -281,7 +281,7 @@ def summarize_network(label, proj_to_affs, edge_weights, inst_project_count):
         log(f"       Top institution pairs by joint projects: {top_edges}")
 
 
-def draw_network(edge_weights, inst_project_count, out_png: Path, title: str):
+def draw_network(edge_weights, inst_project_count, out_png: Path):
     G = nx.Graph()
 
     for inst, count in inst_project_count.items():
@@ -360,7 +360,7 @@ def draw_network(edge_weights, inst_project_count, out_png: Path, title: str):
             ax=ax,
         )
 
-    ax.set_title(title, fontsize=12, pad=10)
+    # ax.set_title(title, fontsize=12, pad=10)
     ax.axis("off")
     fig.tight_layout(pad=0.3)
     fig.savefig(out_png, bbox_inches="tight")
@@ -439,7 +439,6 @@ def main():
         edge_weights_all,
         inst_project_count_all,
         out4,
-        "Institution Collaboration Network\n(edge weight = number of joint projects)",
     )
 
     partner_set = set(canonical_affiliation(a) for a in args.jlesc_partners)
@@ -457,7 +456,6 @@ def main():
         edge_weights_j,
         inst_project_count_j,
         out6,
-        "JLESC Partner Collaboration Network\n(edge weight = number of joint projects)",
     )
 
     log("[INFO] Analysis complete")
