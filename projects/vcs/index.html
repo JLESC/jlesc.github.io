@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Variable Capacity Scheduling - Jekyll Advance</title>
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/vcs/"/>
+
+  <meta property="og:title" content="Variable Capacity Scheduling"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/fellows.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Fellows</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/early_career.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Early Career</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
+    
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Variable Capacity Scheduling</h1>
+          </div>
+          
+
+          
+
+          <ul class="event-meta mb-2">
+              
+              
+              
+              <li><b>Head</b></li>
+              
+              
+              <li>Robert Yves ()</li>
+              
+              
+              <li><b>Members</b></li>
+              
+              
+              
+              <li>
+                  Benoit Anne ()
+              </li>
+              
+              
+              
+              <li>
+                  Cendrier Joachim (INRIA)
+              </li>
+              
+              
+              
+              <li>
+                  Chien Andrew A. ()
+              </li>
+              
+              
+              
+              <li>
+                  Herault Thomas (INRIA)
+              </li>
+              
+              
+              
+              <li>
+                  Wijayawardana Rajini. (ANL)
+              </li>
+              
+              
+              
+              
+              
+              
+          </ul>
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content">
+<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>This project focuses on managing and allocating resources in the new age of renewable power generation, where variation in weather and solar radiation drives the carbon-intensity of power, and efforts to reduce environmental damage then create variation in compute capacity.
+From a computing perspective, 
+the goal is to optimize resource utilization and minimize disruptions by dynamically adjusting job scheduling and resource allocation strategies in response to these capacity variations. Workloads are changing as well, with growing understanding of how computing can be malleable, delay flexible, or even acceptably approximate. 
+From a societal perspective, the opportunity is to
+enhance sustainability efforts and to minimize the environmental impact of 
+High Performance Computing.</p>
+
+<p>Part of the difficulty of scheduling on variable resources comes from the many conflicting optimization objectives or metrics.
+Platform-oriented objectives include platform throughput or goodput (defined as the fraction of time resources are involved in productively executing jobs – not idle or computing jobs that will be interrupted). User-oriented objectives include minimization of response time. For fairness, the flow is often scaled by the base execution time (without interruption nor checkpoints). 
+In addition to these traditional metrics of efficiency and responsiveness, one must now take into account environmental issues (also known as non-performance attributes) such as e-waste, data-center water use, power, energy consumption and carbon emissions, as well as network congestion and system heterogeneity.
+Capping and reducing brown energy consumption are becoming increasingly important, which involves lowering the power level bought on the fixed annual contract and intermittently increasing the power level using green energy and daily contracts. Furthermore, there is a growing need to shift from <code class="language-plaintext highlighter-rouge">fast" to</code>green” computing, which emphasizes energy efficiency and sustainability in addition to performance.</p>
+
+<p>This project aims at developing new models and algorithms for variable capacity scheduling.</p>
+
+<ol class="bibliography"></ol>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HanEtAl2018b
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHanEtAl2018bBibtex" aria-expanded="false" aria-controls="collapseHanEtAl2018bBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseHanEtAl2018bAbstract" aria-expanded="false" aria-controls="collapseHanEtAl2018bAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="HanEtAl2018b">Han, Li, Louis-Claude Canon, Henri Casanova, Yves Robert, and Frédéric Vivien. 2018. “Checkpointing Workflows for Fail-Stop Errors.” <i>IEEE Trans. Computers</i> 67 (8): 1105–20.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHanEtAl2018bBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{HanEtAl2018b,
+  author = {Han, Li and Canon, Louis-Claude and Casanova, Henri and Robert, Yves and Vivien, Frédéric},
+  journal = {IEEE Trans. Computers},
+  volume = {67},
+  pages = {1105-1120},
+  title = {Checkpointing workflows for fail-stop errors},
+  number = {8},
+  year = {2018}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HanEtAl2018
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHanEtAl2018Bibtex" aria-expanded="false" aria-controls="collapseHanEtAl2018Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseHanEtAl2018Abstract" aria-expanded="false" aria-controls="collapseHanEtAl2018Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="HanEtAl2018">Han, Li, Valentin Le Fèvre, Louis-Claude Canon, Yves Robert, and Frédéric Vivien. 2018. “A Generic Approach to  Scheduling and Checkpointing Workflows.” In <i>ICPP2018, The 47th Int. Conf. on Parallel Processing</i>. IEEE Computer Society Press.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHanEtAl2018Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{HanEtAl2018,
+  author = {Han, Li and Fèvre, Valentin Le and Canon, Louis-Claude and Robert, Yves and Vivien, Frédéric},
+  booktitle = {ICPP2018, the 47th Int. Conf. on Parallel Processing},
+  title = {A Generic Approach to  Scheduling and Checkpointing Workflows},
+  publisher = {{IEEE} Computer Society Press},
+  year = {2018}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          CasanovaEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCasanovaEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseCasanovaEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCasanovaEtAl2015Abstract" aria-expanded="false" aria-controls="collapseCasanovaEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="CasanovaEtAl2015">Casanova, Henri, Yves Robert, Frédéric Vivien, and Dounia Zaidouni. 2015. “On the Impact of Process Replication on Executions of Large-Scale
+               Parallel Applications with Coordinated Checkpointing.” <i>Future Generation Comp. Syst.</i> 51: 7–19. https://doi.org/10.1016/j.future.2015.04.003.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCasanovaEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{CasanovaEtAl2015,
+  author = {Casanova, Henri and Robert, Yves and Vivien, Fr{\'{e}}d{\'{e}}ric and Zaidouni, Dounia},
+  title = {On the impact of process replication on executions of large-scale
+                 parallel applications with coordinated checkpointing},
+  journal = {Future Generation Comp. Syst.},
+  volume = {51},
+  pages = {7--19},
+  year = {2015},
+  url = {http://dx.doi.org/10.1016/j.future.2015.04.003},
+  doi = {10.1016/j.future.2015.04.003},
+  timestamp = {Thu, 31 Mar 2016 15:45:29 +0200},
+  biburl = {http://dblp.uni-trier.de/rec/bib/journals/fgcs/CasanovaRVZ15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          HeraultEtAl2015
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseHeraultEtAl2015Bibtex" aria-expanded="false" aria-controls="collapseHeraultEtAl2015Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseHeraultEtAl2015Abstract" aria-expanded="false" aria-controls="collapseHeraultEtAl2015Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="HeraultEtAl2015">Herault, Thomas, and Yves Robert. 2015. <i>Fault-Tolerance Techniques for High-Performance Computing</i>. 1st ed. Springer Publishing Company, Incorporated.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseHeraultEtAl2015Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@book{HeraultEtAl2015,
+  author = {Herault, Thomas and Robert, Yves},
+  title = {Fault-Tolerance Techniques for High-Performance Computing},
+  year = {2015},
+  isbn = {3319209426, 9783319209425},
+  edition = {1st},
+  publisher = {Springer Publishing Company, Incorporated}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          BougeretEtAl2014
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseBougeretEtAl2014Bibtex" aria-expanded="false" aria-controls="collapseBougeretEtAl2014Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseBougeretEtAl2014Abstract" aria-expanded="false" aria-controls="collapseBougeretEtAl2014Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="BougeretEtAl2014">Bougeret, Marin, Henri Casanova, Yves Robert, Frédéric Vivien, and Dounia Zaidouni. 2014. “Using Group Replication for Resilience on Exascale Systems.” <i>IJHPCA</i> 28 (2): 210–24. https://doi.org/10.1177/1094342013505348.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseBougeretEtAl2014Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{BougeretEtAl2014,
+  author = {Bougeret, Marin and Casanova, Henri and Robert, Yves and Vivien, Fr{\'{e}}d{\'{e}}ric and Zaidouni, Dounia},
+  title = {Using group replication for resilience on exascale systems},
+  journal = {{IJHPCA}},
+  volume = {28},
+  number = {2},
+  pages = {210--224},
+  year = {2014},
+  url = {http://dx.doi.org/10.1177/1094342013505348},
+  doi = {10.1177/1094342013505348},
+  timestamp = {Mon, 02 Jun 2014 09:36:01 +0200},
+  biburl = {http://dblp.uni-trier.de/rec/bib/journals/ijhpca/BougeretCRVZ14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          FerreiraEtAl2011
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseFerreiraEtAl2011Bibtex" aria-expanded="false" aria-controls="collapseFerreiraEtAl2011Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseFerreiraEtAl2011Abstract" aria-expanded="false" aria-controls="collapseFerreiraEtAl2011Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="FerreiraEtAl2011">Ferreira, Kurt B., Jon Stearley, James H. Laros III, Ron Oldfield, Kevin T. Pedretti, Ron Brightwell, Rolf Riesen, Patrick G. Bridges, and Dorian C. Arnold. 2011. “Evaluating the Viability of Process Replication Reliability for Exascale
+               Systems.” In <i>Conference on High Performance Computing Networking, Storage and Analysis,
+               SC 2011, Seattle, WA, USA, November 12-18, 2011</i>, 44:1–44:12. https://doi.org/10.1145/2063384.2063443.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseFerreiraEtAl2011Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{FerreiraEtAl2011,
+  author = {Ferreira, Kurt B. and Stearley, Jon and III, James H. Laros and Oldfield, Ron and Pedretti, Kevin T. and Brightwell, Ron and Riesen, Rolf and Bridges, Patrick G. and Arnold, Dorian C.},
+  title = {Evaluating the viability of process replication reliability for exascale
+                 systems},
+  booktitle = {Conference on High Performance Computing Networking, Storage and Analysis,
+                 {SC} 2011, Seattle, WA, USA, November 12-18, 2011},
+  pages = {44:1--44:12},
+  year = {2011},
+  crossref = {DBLP:conf/sc/2011},
+  url = {http://doi.acm.org/10.1145/2063384.2063443},
+  doi = {10.1145/2063384.2063443},
+  timestamp = {Tue, 30 Jun 2015 16:34:04 +0200},
+  biburl = {http://dblp.uni-trier.de/rec/bib/conf/sc/FerreiraSLOPBRBA11},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+</div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/vcs/';
+      this.page.identifier = '/projects/vcs/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
+</html>
