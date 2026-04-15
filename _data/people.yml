@@ -346,7 +346,7 @@ benoit_a:
   given_name: Anne
   affiliation: inria
   position: permanent
-  topics: Resilience
+  topics: 
   email: Anne.Benoit@ens-lyon.fr
   homepage: http://graal.ens-lyon.fr/~abenoit/
 
@@ -611,6 +611,15 @@ cela_j:
   email: josem.cela@bsc.es
   homepage: https://www.bsc.es/cela-espin-jose-maria
 
+cendrier_j:
+  sur_name: Cendrier
+  given_name: Joachim
+  affiliation: inria
+  position: phd
+  topics: 
+  email: Joachim.Cendrier@ens-lyon.fr
+  homepage: 
+  
 cerf_s:
   sur_name: Cerf
   given_name: Sophie
@@ -2709,7 +2718,7 @@ robert_y:
   given_name: Yves
   affiliation: inria
   position: permanent
-  topics: Resilience
+  topics: 
   email: Yves.Robert@inria.fr
   homepage: http://graal.ens-lyon.fr/~yrobert/
 
@@ -3496,6 +3505,15 @@ white_s:
   email: white67@illinois.edu
   homepage:
 
+wijayawardana_r:
+  sur_name: Wijayawardana
+  given_name: Rajini.
+  affiliation: anl
+  position: phd
+  topics:  
+  email: rajini@uchicago.edu
+  homepage: https://www.computerscience.uchicago.edu/people/rajini-wijayawardana/
+  
 wilde_m:
   sur_name: Wilde
   given_name: Michael J.
