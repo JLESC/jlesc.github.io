@@ -95,7 +95,7 @@ High Performance Computing.
 Part of the difficulty of scheduling on variable resources comes from the many conflicting optimization objectives or metrics.
 Platform-oriented objectives include platform throughput or goodput (defined as the fraction of time resources are involved in productively executing jobs -- not idle or computing jobs that will be interrupted). User-oriented objectives include minimization of response time. For fairness, the flow is often scaled by the base execution time (without interruption nor checkpoints). 
 In addition to these traditional metrics of efficiency and responsiveness, one must now take into account environmental issues (also known as non-performance attributes) such as e-waste, data\-center water use, power, energy consumption and carbon emissions, as well as network congestion and system heterogeneity.
-Capping and reducing brown energy consumption are becoming increasingly important, which involves lowering the power level bought on the fixed annual contract and intermittently increasing the power level using green energy and daily contracts. Furthermore, there is a growing need to shift from ``fast" to ``green" computing, which emphasizes energy efficiency and sustainability in addition to performance.
+Capping and reducing brown energy consumption are becoming increasingly important, which involves lowering the power level bought on the fixed annual contract and intermittently increasing the power level using green energy and daily contracts. Furthermore, there is a growing need to shift from "fast" to "green" computing, which emphasizes energy efficiency and sustainability in addition to performance.
 
 This project aims at developing new models and algorithms for variable capacity scheduling.
 
