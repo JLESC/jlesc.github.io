@@ -224,6 +224,13 @@ aupy_g:
   email: guillaume.pallez@inria.fr
   homepage: https://gaupy.org
 
+baboulin_m:
+  sur_name: Baboulin
+  given_name: Marc
+  affiliation: inria
+  position: permanent
+  email: marc.baboulin@inria.fr
+
 badia_r:
   sur_name: Badia
   given_name: Rosa M.
@@ -506,10 +513,10 @@ burbano_m:
 cainolores_s:
   sur_name: Caino-Lores
   given_name: Silvina
-  affiliation: utk
-  position:
+  affiliation: inria
+  position: permanent
   topics:
-  email: scainolo@utk.edu
+  email: silvina.caino-lores@inria.fr
   homepage:
 
 caillau_j:
@@ -2632,6 +2639,14 @@ remy_j:
   email: julien.remy@univ-grenoble-alpes.fr
   homepage: 
 
+renard_s:
+  sur_name: Renard
+  given_name: Simon   
+  affiliation: inria
+  position: phd 
+  topics:
+  email: simon.renard@inria.fr
+
 reverdy_v:
   sur_name: Reverdy
   given_name: Vincent
@@ -3225,6 +3240,14 @@ taylor_v:
   topics:
   email: vtaylor@anl.gov
   homepage: http://www.mcs.anl.gov/person/valerie-taylor
+
+tejedor_m:
+  sur_name: Tejedor
+  given_name: Mar
+  affiliation: bsc
+  position: phd
+  topics:
+  email: mar.tejedor@bsc.es
 
 terai_m:
   sur_name: Terai
