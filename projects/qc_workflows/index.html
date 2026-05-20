@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Quantum-Classical Workflows in HPC Environments - Jekyll Advance</title>
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/qc_workflows/"/>
+
+  <meta property="og:title" content="Quantum-Classical Workflows in HPC Environments"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/fellows.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Fellows</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/early_career.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Early Career</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
+    
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Quantum-Classical Workflows in HPC Environments</h1>
+          </div>
+          
+
+          
+
+          <ul class="event-meta mb-2">
+              
+              
+              
+              <li><b>Head</b></li>
+              
+              
+              <li>Caino-Lores Silvina (INRIA)</li>
+              
+              
+              <li><b>Members</b></li>
+              
+              
+              
+              <li>
+                  Antoniu Gabriel (INRIA)
+              </li>
+              
+              
+              
+              <li>
+                  Baboulin Marc (INRIA)
+              </li>
+              
+              
+              
+              <li>
+                  Badia Rosa M. (BSC)
+              </li>
+              
+              
+              
+              <li>
+                  Conejero Francisco Javier (BSC)
+              </li>
+              
+              
+              
+              <li>
+                  Renard Simon ()
+              </li>
+              
+              
+              
+              <li>
+                  Tejedor Mar (BSC)
+              </li>
+              
+              
+              
+              
+              
+              
+          </ul>
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content">
+<h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>Quantum Computing (QC) systems are being increasingly explored as the next high-impact extension to the computing spectrum, particularly in terms of their integration into supercomputers as QC-HPC couplings. The successful interoperability between classical and quantum systems depends on middleware that can interact with heterogeneous hardware technologies and their associated software stacks and data management methods. However, approaches to high-level hybrid programming remain limited today.</p>
+
+<p>Workflow abstractions and workflow management tools have proved successful in overcoming the challenge of heterogeneity in tasks, data, and computational resources across multiple scientific domains. This opens up an exciting new area at the intersection of workflow research and the integration of QC into classical environments. However, adopting workflow abstractions and workflow management tools in hybrid use cases leads to significant challenges. This collaboration explores pathways for profiling, characterizing, modeling and analyzing dataflow and task control patterns in hybrid quantum-classical applications with the overarching goal of facilitating workflow management in QC-HPC environments. We aim to contribute to the following outcomes:</p>
+
+<p><strong>Insights into the applicability of task-based abstractions and execution models for QC-HPC applications.</strong> To date, few studies have attempted to systematically represent QC-HPC workflow motifs, mainly due to the limited availability of use cases and practical application scenarios. We aim to identify hybrid QC-HPC use cases in the scope of this collaboration in order to inform the design of methodologies and tools for workflow management.</p>
+
+<p><strong>Composition, deployment, and monitoring of hybrid workflows on QC-HPC resources.</strong> A major issue when it comes to practical analysis of hybrid workflows is the limited availability of telemetry data, especially for inbound and outbound data transfers to QPUs. We will address this by developing methods to systematically collect telemetry data from hybrid workflows deployed and executed on QC-HPC systems.</p>
+
+<p><strong>Methodologies and tools for studying QC-HPC workflows.</strong> Breakthroughs in hybrid workflow profiling, modeling, characterization and analysis are required to assess the effectiveness of software integration for hybrid workflows in QC-HPC environments. We aim to develop and share methodologies and tools to support further research in interoperability between QC and HPC systems, and to facilitate the assessment of different QC-HPC environments.</p>
+
+<h2 id="results-for-20252026">Results for 2025/2026</h2>
+
+<ul>
+  <li>Co-organized Birds-of-a-Feather session on <em>Scientific Computational Workflows in Hybrid Quantum-Classical Environments</em> (ISC High Performance 2025; Hamburg, Germany)</li>
+  <li>Co-organized Birds-of-a-Feather session on <em>Bridging the Gap: Making Quantum-Classical Hybridization Work in HPC</em> (SC25; St. Louis, USA)</li>
+  <li>Started a dedicated working group within the Workflows Community Initiative: <a href="https://workflows.community/groups/quantum/">https://workflows.community/groups/quantum/</a></li>
+  <li>The Inria side is working on the refinement of data collection and analysis methodologies on simulated QC-HPC environments running on existing classical resources, in particular for Qdislib workflows on PyCOMPSs <a class="citation" href="#TejedorEtAl2025">(Tejedor et al. 2025)</a>. Preliminary results will be presented at the 18th JLESC Workshop (Juelich, Germany) as <em>A Case Study on Hybrid Quantum-Classical Workflow Modeling</em> by <span class="person given-name">Simon</span> <span class="person sur-name">Renard</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>).</li>
+</ul>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<ol class="bibliography"></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>We are planning for a visit of Inria researchers to BSC for collection of telemetry data from BSC’s on-premises QC-HPC system onsite for validation of emulated results against on-premises measurements. A subsequent visit of BSC researchers to Inria will be dedicated to the exploration of additional use cases that could be suitable for implementation and deployment as a PyCOMPSs application, and replication of experimental protocols on CEA’s TGCC QC-HPC system.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          TejedorEtAl2025
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseTejedorEtAl2025Bibtex" aria-expanded="false" aria-controls="collapseTejedorEtAl2025Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseTejedorEtAl2025Abstract" aria-expanded="false" aria-controls="collapseTejedorEtAl2025Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="TejedorEtAl2025">Tejedor, Mar, Berta Casas, Javier Conejero, Alba Cervera-Lierta, and Rosa M Badia. 2025. “Orchestrating Quantum-HPC Workflows with Distributed Quantum Circuit Cutting.” In <i>Proceedings of the SC’25 Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis</i>, 1898–1906.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseTejedorEtAl2025Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{TejedorEtAl2025,
+  title = {Orchestrating Quantum-HPC Workflows with Distributed Quantum Circuit Cutting},
+  author = {Tejedor, Mar and Casas, Berta and Conejero, Javier and Cervera-Lierta, Alba and Badia, Rosa M},
+  booktitle = {Proceedings of the SC'25 Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  pages = {1898--1906},
+  year = {2025}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+</div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/qc_workflows/';
+      this.page.identifier = '/projects/qc_workflows/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
+</html>
