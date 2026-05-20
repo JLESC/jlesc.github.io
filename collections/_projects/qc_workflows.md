@@ -105,7 +105,7 @@ Workflow abstractions and workflow management tools have proved successful in ov
 * Co-organized Birds-of-a-Feather session on *Scientific Computational Workflows in Hybrid Quantum-Classical Environments* (ISC High Performance 2025; Hamburg, Germany)
 * Co-organized Birds-of-a-Feather session on *Bridging the Gap: Making Quantum-Classical Hybridization Work in HPC* (SC25; St. Louis, USA)
 * Started a dedicated working group within the Workflows Community Initiative: <https://workflows.community/groups/quantum/>
-* The Inria side is working on the refinement of data collection and analysis methodologies on simulated QC-HPC environments running on existing classical resources, in particular for Qdislib workflows on PyCOMPSs {% cite TejedorEtAl2025 --file qc_workflows.bib %}. Preliminary results will be presented at the 18th JLESC Workshop (Juelich, Germany) as *A Case Study on Hybrid Quantum-Classical Workflow Modeling* by {% person renard_s %}.
+* The Inria side is working on the refinement of data collection and analysis methodologies on simulated QC-HPC environments running on existing classical resources, in particular for Qdislib workflows on PyCOMPSs {% cite TejedorEtAl2025 --file external/qc_workflows.bib %}. Preliminary results will be presented at the 18th JLESC Workshop (Juelich, Germany) as *A Case Study on Hybrid Quantum-Classical Workflow Modeling* by {% person renard_s %}.
 
 ## Visits and meetings
 
