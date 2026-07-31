@@ -14,7 +14,7 @@ executive_directors:
     image: "/assets/images/people/Executive_Directors/JSC.jpg"
     #categories: "Director"
   - name: "UIUC, NCSA"
-    description: <a href="https://siebelschool.illinois.edu/about/people/faculty/wtkramer">Bill Kramer</a>, <a href="https://newfrontiers.illinois.edu/about/leadership">Kjellrun Olson</a> 
+    description: <a href="https://siebelschool.illinois.edu/about/people/faculty/wtkramer">Bill Kramer</a>, <a href="https://experts.illinois.edu/en/persons/phuong-minh-cao/">Phuong Cao</a> 
     image: "/assets/images/people/Executive_Directors/UIUC.jpg"
   - name: "INRIA"
     description: <a href="https://team.inria.fr/kerdata/gabriel-antoniu">Gabriel Antoniu</a>, <a href="https://www.labri.fr/perso/ejeannot">Emmanuel Jeannot</a>
