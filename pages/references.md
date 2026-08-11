@@ -9,7 +9,7 @@ This is a list of publications closely related to the JLESC. Please feel free to
 <br>
 <br>
 
-If you publish something during your work within JLESC, please acknowledge JLESC support e.g. via "**This research is partially supported by the NCSA-Inria-ANL-BSC-JSC-Riken-UTK Joint-Laboratory for Extreme Scale Computing (JLESC, https://jlesc.github.io/).**"
+If you publish something during your work within JLESC, please acknowledge JLESC support e.g. via "**This research is partially supported by the NCSA-Inria-ANL-BSC-Riken- Joint-Laboratory for Extreme Scale Computing (JLESC, https://jlesc.github.io/).**"
 
 <a style="color: #FFFFFF;" class="btn btn-primary" title="download BibTeX file" href="https://raw.githubusercontent.com/JLESC/jlesc.github.io/source/_bibliography/jlesc.bib"
   data-toggle="tooltip">

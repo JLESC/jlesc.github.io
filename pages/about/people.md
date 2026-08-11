@@ -9,10 +9,6 @@ hero:
 executive_directors:
   enabled: true
   list:
-  - name: "JSC"
-    description: <a href="https://www.fz-juelich.de/profile/speck_r">Robert Speck</a>, <a href="https://www.fz-juelich.de/profile/partzsch_r">Ruth Partzsch</a> 
-    image: "/assets/images/people/Executive_Directors/JSC.jpg"
-    #categories: "Director"
   - name: "UIUC, NCSA"
     description: <a href="https://siebelschool.illinois.edu/about/people/faculty/wtkramer">Bill Kramer</a>, <a href="https://experts.illinois.edu/en/persons/phuong-minh-cao/">Phuong Cao</a> 
     image: "/assets/images/people/Executive_Directors/UIUC.jpg"
@@ -46,22 +42,13 @@ steering_committee:
   - name: "BSC"
     description: <a href="https://www.bsc.es/valero-cortes-mateo">Mateo Valero</a>
     image: "/assets/images/people/Steering_Committee/BSC.jpg"
-  - name: "JSC"
-    description: <a href="https://www.fz-juelich.de/profile/lippert_th">Thomas Lippert</a>
-    image: "/assets/images/people/Steering_Committee/JSC.jpg"
   - name: "R-CCS"
     description: <a href="https://www.r-ccs.riken.jp/en/about/leadership/">Satoshi Matsuoka</a>
     image: "/assets/images/people/Steering_Committee/RIKEN.jpg"
-  #- name: "Hartwig Anzt"
-  #  description: "UTK"
 
 early_career_committee:
   enabled: true
   list:
-  - name: "JSC"
-    description: <a href="https://www.fz-juelich.de/profile/mattfeldt_s">Sina Mattfeldt</a>, <a href="https://www.fz-juelich.de/profile/fritz_j"> Jakob Fritz</a> 
-    image: "/assets/images/people/Early_Career_Committee/JSC.jpg"
-    #categories: "Leader"
   - name: "UIUC"
     description: "Colleen Heinemann"
   - name: "INRIA"
@@ -75,6 +62,5 @@ early_career_committee:
   - name: "R-CCS"
     description: "Akira Jinguji"
     image: "/assets/images/people/Early_Career_Committee/Riken.jpg"
-  #- name: "Daniel Barry"
-  #  description: "UTK"
+  
 ---

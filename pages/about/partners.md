@@ -140,7 +140,7 @@ service our society.
 Taken from
 <a href="https://www.bsc.es/about-bsc" target="_blank">BSC "About page"</a>
 
-<br><br>
+<!-- <br><br>
 
 {% include framework/blocks/sections/info.html
   heading="JSC"
@@ -161,7 +161,7 @@ Taken from
 <a href="https://www.fz-juelich.de/en/ias/jsc/about-us/"
    target="_blank">
   JSC "About page"
-</a>
+</a> -->
 
 <br><br>
 
