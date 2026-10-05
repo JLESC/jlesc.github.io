@@ -2162,6 +2162,15 @@ morin_c:
   email: Christine.Morin@inria.fr
   homepage: http://people.rennes.inria.fr/Christine.Morin/
 
+moses_w:
+  sur_name: Moses
+  given_name: William
+  affiliation: uiuc
+  position: permanent
+  topics: Compilers, automatic differentiation, floating-point, performance engineering
+  email: wsmoses@illinois.edu
+  homepage: https://wsmoses.com
+
 mouton_c:
   sur_name: Mouton
   given_name: Claire
